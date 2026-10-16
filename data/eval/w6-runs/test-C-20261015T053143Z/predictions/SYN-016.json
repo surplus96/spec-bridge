@@ -1,0 +1,333 @@
+{
+  "prediction": {
+    "document_id": "SYN-016",
+    "class_id": "AirCompressor",
+    "class_candidates": [
+      "AirCompressor"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-C Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "product_manufacturer",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-016",
+            "raw_text": "SGDW-20261007-C Synthetic Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                467.6191063841906,
+                204.27343200000007,
+                475.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX011-116",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "specific_model_identifier",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-016",
+            "raw_text": "VX011-116",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                449.6191063841906,
+                155.41015040000002,
+                457.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "cooling_type",
+        "value": "air",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "method_of_cooling",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-016",
+            "raw_text": "air",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                370.6191063841906,
+                103.8085912,
+                378.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "air",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "working_medium",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-016",
+            "raw_text": "air",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                352.6191063841906,
+                87.78906079999999,
+                360.0060688
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [
+      {
+        "attribute": "capacity",
+        "value_text": "130.46",
+        "unit_text": "m3/h",
+        "reason": "condition",
+        "occurrence": {
+          "source_document_id": "SYN-016",
+          "raw_text": "130.46",
+          "label_text": null,
+          "unit_text": "m3/h",
+          "location": {
+            "section": "Main particulars",
+            "pdf_page": 1,
+            "bbox": [
+              38.0,
+              406.6191063841906,
+              241.64061440000015,
+              414.0060688
+            ]
+          }
+        }
+      },
+      {
+        "attribute": "working_pressure",
+        "value_text": "25",
+        "unit_text": "bar (gauge)",
+        "reason": "unknown_unit",
+        "occurrence": {
+          "source_document_id": "SYN-016",
+          "raw_text": "25",
+          "label_text": null,
+          "unit_text": "bar (gauge)",
+          "location": {
+            "section": "Main particulars",
+            "pdf_page": 1,
+            "bbox": [
+              38.0,
+              388.6191063841906,
+              309.2265488000001,
+              396.0060688
+            ]
+          }
+        }
+      },
+      {
+        "attribute": "motor_power",
+        "value_text": "34.43",
+        "unit_text": "kW",
+        "reason": "condition",
+        "occurrence": {
+          "source_document_id": "SYN-016",
+          "raw_text": "34.43",
+          "label_text": null,
+          "unit_text": "kW",
+          "location": {
+            "section": "Main particulars",
+            "pdf_page": 1,
+            "bbox": [
+              38.0,
+              334.6191063841906,
+              234.96483200000011,
+              342.0060688
+            ]
+          }
+        }
+      },
+      {
+        "attribute": "dimensions",
+        "value_text": "1280 × 760 × 940",
+        "unit_text": "mm",
+        "reason": "condition",
+        "occurrence": {
+          "source_document_id": "SYN-016",
+          "raw_text": "1280 × 760 × 940",
+          "label_text": null,
+          "unit_text": "mm",
+          "location": {
+            "section": "Main particulars",
+            "pdf_page": 1,
+            "bbox": [
+              38.0,
+              316.6191063841906,
+              407.04685839999996,
+              324.0060688
+            ]
+          }
+        }
+      },
+      {
+        "attribute": "reported_weight",
+        "value_text": "779.16",
+        "unit_text": "kg",
+        "reason": "condition",
+        "occurrence": {
+          "source_document_id": "SYN-016",
+          "raw_text": "779.16",
+          "label_text": null,
+          "unit_text": "kg",
+          "location": {
+            "section": "Main particulars",
+            "pdf_page": 1,
+            "bbox": [
+              38.0,
+              298.6191063841906,
+              348.37107680000014,
+              306.0060688
+            ]
+          }
+        }
+      }
+    ],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "basis": {},
+        "condition": {},
+        "scope": "Product manufacturer",
+        "line": "L5",
+        "value_text": "SGDW-20261007-C Synthetic Works",
+        "unit_text": null
+      },
+      {
+        "attribute": "model_designation",
+        "basis": {},
+        "condition": {},
+        "scope": "Specific model identifier",
+        "line": "L6",
+        "value_text": "VX011-116",
+        "unit_text": null
+      },
+      {
+        "attribute": "capacity",
+        "basis": {},
+        "condition": {
+          "basis": "per_turbocharger",
+          "frequency": "charging",
+          "absolute_pressure": "main compressor"
+        },
+        "scope": "Air volume per hour",
+        "line": "L8",
+        "value_text": "130.46",
+        "unit_text": "m3/h"
+      },
+      {
+        "attribute": "working_pressure",
+        "basis": {},
+        "condition": {
+          "basis": "per_turbocharger",
+          "frequency": "working condition",
+          "absolute_pressure": "main compressor"
+        },
+        "scope": "Operating pressure",
+        "line": "L9",
+        "value_text": "25",
+        "unit_text": "bar (gauge)"
+      },
+      {
+        "attribute": "cooling_type",
+        "basis": {},
+        "condition": {},
+        "scope": "Method of cooling",
+        "line": "L10",
+        "value_text": "air",
+        "unit_text": null
+      },
+      {
+        "attribute": "medium",
+        "basis": {},
+        "condition": {},
+        "scope": "Working medium",
+        "line": "L11",
+        "value_text": "air",
+        "unit_text": null
+      },
+      {
+        "attribute": "motor_power",
+        "basis": {},
+        "condition": {
+          "basis": "per_turbocharger",
+          "frequency": "rated output",
+          "absolute_pressure": "drive motor"
+        },
+        "scope": "Power output of motor",
+        "line": "L12",
+        "value_text": "34.43",
+        "unit_text": "kW"
+      },
+      {
+        "attribute": "dimensions",
+        "basis": {},
+        "condition": {
+          "basis": "per_turbocharger",
+          "frequency": "complete compressor unit with motor and mountings"
+        },
+        "scope": "Physical size",
+        "line": "L13",
+        "value_text": "1280 × 760 × 940",
+        "unit_text": "mm"
+      },
+      {
+        "attribute": "reported_weight",
+        "basis": {},
+        "condition": {
+          "basis": "per_turbocharger",
+          "frequency": "complete compressor unit with motor and mountings"
+        },
+        "scope": "Weight of complete unit",
+        "line": "L14",
+        "value_text": "779.16",
+        "unit_text": "kg"
+      }
+    ]
+  },
+  "qualifiers": []
+}

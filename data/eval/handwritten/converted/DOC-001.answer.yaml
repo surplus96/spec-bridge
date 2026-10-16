@@ -1,0 +1,280 @@
+schema_version: 3
+input_id: DOC-001
+origin: synthetic
+status: converted_from_v2_helper_draft
+expected_class: Pump
+facts:
+- fact_id: F001
+  attribute_id: maker
+  value: Brekkhaug Marine AS
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O001
+  - O002
+  admissibility: supported
+- fact_id: F002
+  attribute_id: model_designation
+  value: BMH-150/30
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O003
+  - O004
+  admissibility: supported
+- fact_id: F003
+  attribute_id: pump_type
+  value: centrifugal
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O005
+  - O006
+  admissibility: supported
+- fact_id: F004
+  attribute_id: capacity
+  value: 300
+  unit: m3/h
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O007
+  - O008
+  admissibility: supported
+- fact_id: F005
+  attribute_id: head
+  value: 30
+  unit: m
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O009
+  admissibility: supported
+- fact_id: F006
+  attribute_id: medium
+  value: seawater
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O010
+  - O011
+  - O012
+  admissibility: supported
+- fact_id: F007
+  attribute_id: motor_power
+  value: 37
+  unit: kW
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O013
+  - O014
+  admissibility: supported
+- fact_id: F008
+  attribute_id: dimensions
+  value:
+    length: 1450
+    width: 560
+    height: 720
+  unit: mm
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O015
+  admissibility: supported
+- fact_id: F009
+  attribute_id: dry_weight
+  value: 520
+  unit: kg
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O016
+  admissibility: supported
+observations:
+- observation_id: O001
+  attribute_id: maker
+  raw_text: Brekkhaug Marine AS
+  label_text: Issued by
+  unit_text: null
+  location:
+    paragraph: 3
+    line: 3
+    section: null
+  interpretation: normalized
+- observation_id: O002
+  attribute_id: maker
+  raw_text: Brekkhaug Marine AS
+  label_text: Maker
+  unit_text: null
+  location:
+    paragraph: 7
+    line: 7
+    section: 1. General
+  interpretation: normalized
+- observation_id: O003
+  attribute_id: model_designation
+  raw_text: BMH-150/30
+  label_text: Model designation
+  unit_text: null
+  location:
+    paragraph: 8
+    line: 8
+    section: 1. General
+  interpretation: normalized
+- observation_id: O004
+  attribute_id: model_designation
+  raw_text: BMH 150/30
+  label_text: type
+  unit_text: null
+  location:
+    paragraph: 32
+    line: 32
+    section: 5. Scope of Supply
+  interpretation: normalized
+- observation_id: O005
+  attribute_id: pump_type
+  raw_text: Horizontal centrifugal, single stage
+  label_text: Pump type
+  unit_text: null
+  location:
+    table: 1
+    row: 2
+    cell: 2
+    line: 17
+  interpretation: normalized
+- observation_id: O006
+  attribute_id: pump_type
+  raw_text: centrifugal pump
+  label_text: Product description
+  unit_text: null
+  location:
+    paragraph: 9
+    line: 9
+    section: 1. General
+  interpretation: normalized
+- observation_id: O007
+  attribute_id: capacity
+  raw_text: '300'
+  label_text: Flow rate
+  unit_text: m³/h
+  location:
+    table: 1
+    row: 3
+    cell: 2
+    line: 18
+  interpretation: normalized
+- observation_id: O008
+  attribute_id: capacity
+  raw_text: 300 m3/h
+  label_text: rated capacity
+  unit_text: null
+  location:
+    paragraph: 32
+    line: 32
+    section: 5. Scope of Supply
+  interpretation: normalized
+- observation_id: O009
+  attribute_id: head
+  raw_text: '30'
+  label_text: Total head
+  unit_text: m
+  location:
+    table: 1
+    row: 4
+    cell: 2
+    line: 19
+  interpretation: normalized
+- observation_id: O010
+  attribute_id: medium
+  raw_text: Seawater
+  label_text: Medium
+  unit_text: null
+  location:
+    table: 1
+    row: 5
+    cell: 2
+    line: 20
+  interpretation: normalized
+- observation_id: O011
+  attribute_id: medium
+  raw_text: seawater
+  label_text: Product description
+  unit_text: null
+  location:
+    paragraph: 9
+    line: 9
+    section: 1. General
+  interpretation: normalized
+- observation_id: O012
+  attribute_id: medium
+  raw_text: seawater
+  label_text: Application
+  unit_text: null
+  location:
+    paragraph: 10
+    line: 10
+    section: 1. General
+  interpretation: normalized
+- observation_id: O013
+  attribute_id: motor_power
+  raw_text: '37'
+  label_text: Motor power
+  unit_text: kW
+  location:
+    table: 1
+    row: 6
+    cell: 2
+    line: 21
+  interpretation: normalized
+- observation_id: O014
+  attribute_id: motor_power
+  raw_text: 37 kW
+  label_text: electric motor rated at
+  unit_text: null
+  location:
+    paragraph: 24
+    line: 24
+    section: 3. Drive and Construction
+  interpretation: normalized
+- observation_id: O015
+  attribute_id: dimensions
+  raw_text: 1,450 × 560 × 720 mm
+  label_text: Overall dimensions (L × W × H)
+  unit_text: null
+  location:
+    paragraph: 28
+    line: 28
+    section: 4. Dimensions and Weight
+  interpretation: normalized
+- observation_id: O016
+  attribute_id: dry_weight
+  raw_text: 520 kg
+  label_text: Dry weight
+  unit_text: null
+  location:
+    paragraph: 29
+    line: 29
+    section: 4. Dimensions and Weight
+  interpretation: normalized
+issues: []
+missing_required: []
+conversion:
+  source: data/eval/handwritten/HW-PUMP-001.answer.yaml
+  doc_id: HW-PUMP-001
+  author: Claude (draft)
+  reviewed_by: null
+  notes: []

@@ -1,0 +1,377 @@
+schema_version: 3
+input_id: SYN-026
+origin: synthetic
+expected_class: FourStrokeEngine
+status: final_v1; frozen by user decision D-019 (2026-10-08); reviewed_by awaits user signature
+artifact:
+  path: data/synth/inputs/SYN-026.pdf
+  sha256: 9b1abc809a4f06b36dc0a66a99a6ba1a2ac26b36eb08e60a5c73f847c006ce23
+  file_format: pdf
+  location_verified: true
+  source_path: data/synth/dev/sources/SYN-026.md
+  source_sha256: 6f1a5b70b8c00520a902281e10f59da718e14ea271507267fa1bacbfa97a2cd9
+  verification_method: independent file-content audit
+observations:
+- observation_id: O001
+  attribute_id: maker
+  raw_text: SGDW-20261007-A Synthetic Works
+  label_text: Manufacturer
+  unit_text: null
+  location:
+    source_line: 9
+    source_section: Identification
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 466.28
+    - 803.89
+    - 477.28
+    bbox_unit: pt
+    region_or_section: Identification
+  interpretation: normalized
+  parsed_value: SGDW-20261007-A Synthetic Works
+  parsed_unit: null
+- observation_id: O002
+  attribute_id: model_designation
+  raw_text: VX005-126
+  label_text: Model designation
+  unit_text: null
+  location:
+    source_line: 11
+    source_section: Identification
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 448.28
+    - 803.89
+    - 459.28
+    bbox_unit: pt
+    region_or_section: Identification
+  interpretation: normalized
+  parsed_value: VX005-126
+  parsed_unit: null
+- observation_id: O003
+  attribute_id: bore
+  raw_text: '210'
+  label_text: Bore
+  unit_text: mm
+  location:
+    source_line: 15
+    source_section: Specifications
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 405.28
+    - 803.89
+    - 416.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value: 210
+  parsed_unit: mm
+- observation_id: O004
+  attribute_id: stroke
+  raw_text: '290'
+  label_text: Stroke
+  unit_text: mm
+  location:
+    source_line: 17
+    source_section: Specifications
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 387.28
+    - 803.89
+    - 398.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value: 290
+  parsed_unit: mm
+- observation_id: O005
+  attribute_id: application
+  raw_text: generating-set
+  label_text: Service
+  unit_text: null
+  location:
+    source_line: 19
+    source_section: Specifications
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 369.28
+    - 803.89
+    - 380.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value: genset
+  parsed_unit: null
+- observation_id: O006
+  attribute_id: rated_power
+  raw_text: '2352.5'
+  label_text: Engine (kWm)
+  unit_text: kW
+  location:
+    source_line: 21
+    source_section: Specifications
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 351.28
+    - 803.89
+    - 362.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value: 2352.5
+  parsed_unit: kW
+- observation_id: O007
+  attribute_id: rated_speed
+  raw_text: '900'
+  label_text: Engine speed
+  unit_text: rpm
+  location:
+    source_line: 23
+    source_section: Specifications
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 333.28
+    - 803.89
+    - 344.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value: 900
+  parsed_unit: rpm
+- observation_id: O008
+  attribute_id: fuel_types
+  raw_text: MDO, MGO
+  label_text: Fuel
+  unit_text: null
+  location:
+    source_line: 25
+    source_section: Specifications
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 315.28
+    - 803.89
+    - 326.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value:
+  - MDO
+  - MGO
+  parsed_unit: null
+- observation_id: O009
+  attribute_id: dimensions
+  raw_text: 4400 × 1900 × 2600
+  label_text: Dimensions (L × W × H)
+  unit_text: mm
+  location:
+    source_line: 27
+    source_section: Specifications
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 297.28
+    - 803.89
+    - 308.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value:
+    length: 4400
+    width: 1900
+    height: 2600
+  parsed_unit: mm
+- observation_id: O010
+  attribute_id: dry_weight
+  raw_text: '23525.0'
+  label_text: Dry mass
+  unit_text: kg
+  location:
+    source_line: 29
+    source_section: Specifications
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 279.28
+    - 803.89
+    - 290.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value: 23525.0
+  parsed_unit: kg
+- observation_id: O011
+  attribute_id: fuel_types
+  raw_text: MDO, MGO
+  label_text: Fuel
+  unit_text: null
+  location:
+    source_line: 34
+    source_section: Operating notes
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 236.28
+    - 803.89
+    - 247.28
+    bbox_unit: pt
+    region_or_section: Operating notes
+  interpretation: normalized
+  parsed_value:
+  - MDO
+  - MGO
+  parsed_unit: null
+facts:
+- fact_id: F001
+  attribute_id: maker
+  value: SGDW-20261007-A Synthetic Works
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O001
+  admissibility: supported
+- fact_id: F002
+  attribute_id: model_designation
+  value: VX005-126
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O002
+  admissibility: supported
+- fact_id: F003
+  attribute_id: bore
+  value: 210
+  unit: mm
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O003
+  admissibility: supported
+- fact_id: F004
+  attribute_id: stroke
+  value: 290
+  unit: mm
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O004
+  admissibility: supported
+- fact_id: F005
+  attribute_id: application
+  value: genset
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O005
+  admissibility: supported
+- fact_id: F006
+  attribute_id: rated_power
+  value: 2352.5
+  unit: kW
+  basis:
+    rating: continuous_engine_shaft
+  condition:
+    rating_point: R1
+    frequency:
+      value: 50
+      unit: Hz
+  scope: engine_shaft
+  observation_ids:
+  - O006
+  admissibility: supported
+- fact_id: F007
+  attribute_id: rated_speed
+  value: 900
+  unit: rpm
+  basis: {}
+  condition:
+    rating_point: R1
+    frequency:
+      value: 50
+      unit: Hz
+  scope: engine_crankshaft
+  observation_ids:
+  - O007
+  admissibility: supported
+- fact_id: F008
+  attribute_id: fuel_types
+  value:
+  - MDO
+  - MGO
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O008
+  - O011
+  admissibility: supported
+- fact_id: F009
+  attribute_id: dimensions
+  value:
+    length: 4400
+    width: 1900
+    height: 2600
+  unit: mm
+  basis: {}
+  condition: {}
+  scope: engine_without_generator
+  observation_ids:
+  - O009
+  admissibility: supported
+- fact_id: F010
+  attribute_id: dry_weight
+  value: 23525.0
+  unit: kg
+  basis:
+    weight: dry
+  condition: {}
+  scope: engine_without_generator
+  observation_ids:
+  - O010
+  admissibility: supported
+issues:
+- issue_id: I001
+  code: E1
+  attribute_ids:
+  - number_of_cylinders
+  observation_ids: []
+  rule_ref: data/ontology/dataset-contract.yaml#classes/FourStrokeEngine/required_all
+  reason: Required value is absent from the authored document.
+  missing_evidence:
+    inspected_artifact_sha256: 9b1abc809a4f06b36dc0a66a99a6ba1a2ac26b36eb08e60a5c73f847c006ce23
+    searched_attribute_id: number_of_cylinders
+    inspected_locations:
+    - coverage: entire rendered document
+      source_lines:
+      - 1
+      - 40
+    applied_requirement: data/ontology/dataset-contract.yaml#classes/FourStrokeEngine/required_all
+missing_required:
+- number_of_cylinders
+comparison:
+  label_scope: nominated_pairs_only
+  pairs: []
+relations: []
+reference_variants:
+- observation_id: O006
+  notation: Engine (kWm)
+  document_id: REF-4S-02
+  pdf_page: 18
+  context_suffix_origin: synthetic
+reviewed_by: null

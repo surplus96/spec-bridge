@@ -1,0 +1,52 @@
+{
+  "dataset": {
+    "differ": [],
+    "files": 167,
+    "sums_file": "54f0cecf27cba6c5b23a381254afaa927433c36d2536d094f8b465f2bc664768"
+  },
+  "freeze_commit": "5494f33",
+  "guard": {
+    "changed_since_freeze": [],
+    "hashes": {
+      "spec_bridge/extract/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "spec_bridge/extract/classifier.py": "f73e5c158a88c2020046cb890ffdaa741b48594cee16636d2f22ab1bc3711587",
+      "spec_bridge/extract/extractor.py": "505c08113c8a5bbe7dcdf7f8b0c5169292ddd4858e756d03200a244f49c770e9",
+      "spec_bridge/extract/prompt_input.py": "9fbf5ed1147ca3c303cbd3f1bff66e4c9df02952bcca541ad7ddf5686b8ff3b3",
+      "spec_bridge/extract/rules.py": "1b223cfc481a0c0454a710a0beabde0590e683d5ec3b48ec0fb80ad38e3b254c",
+      "spec_bridge/extract/schemas.py": "66174afe790f6bdb09b67081e66ea52b74667d390f3ba3fad917883e34eaec34",
+      "spec_bridge/normalize/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "spec_bridge/normalize/dictionary.py": "a779082c07a3f180789c8d3b1baef19c9c983cbdea9b2e05298376632cf548b8",
+      "spec_bridge/normalize/values.py": "20b6149d4e746139d3d9cf9afa99c5d6a68a25d246032790ee75b394e2ec41b2",
+      "spec_bridge/parse/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "spec_bridge/parse/blocks.py": "b1bec5bbf1f893b416097f9973285a9d9e5329d685146a7f87223e0a8d066089",
+      "spec_bridge/parse/dispatch.py": "e69bb1073e702b72631eb1a05e5b29ca52d3b3dec826f10afa1cb1003a1090bd",
+      "spec_bridge/parse/docx_parser.py": "fd8365bf7a3b17d39f8eab47e92f3e24b3b0db60bf53f79d7eb75a847cb86157",
+      "spec_bridge/parse/md_parser.py": "409bb11391f2a907c6e7a4011b5f853ed86543b59b8984c4b9da7b6b79d460ef",
+      "spec_bridge/parse/pdf_parser.py": "b93a67a82745ee065afbf013b825e7c78ec7b65836a35684f5885253a78cd9c0",
+      "spec_bridge/parse/run.py": "a65a9b768011893a23817accd0fde3ec42892b5b2017296d14d92eedee84dd1a",
+      "spec_bridge/parse/settings.py": "08f1947cf382c80d9a712644103b9ef44e2d2d060e6eab58044a9054b3de6dfd",
+      "spec_bridge/parse/xlsx_parser.py": "3ba3c248bd3b1cdfc0498d65b478f83f1cb85780c2aa850f93b1d35f54febaaa",
+      "spec_bridge/pipeline.py": "5197b62c530032244f60a3c18e193f5c726410d2c5a6f9af5930ccff6bbbccd0",
+      "spec_bridge/rag/settings.py": "afa9be9430013180fe21081c97e854c5c276e0596e7f5bfbb328774eea0e1ed3",
+      "spec_bridge/service.py": "aa26096f88ed8f67e6b2834334cbebc2066f320b8feb33254df81b47881df418",
+      "uv.lock": "19f71885b077dbb9feafa685fb049d7ce2b347f54911e0d8c854a060ecc39a3d"
+    }
+  },
+  "model_digest": "c7c4e3d1ca22fe9225f18b35eb719f67e2ca96a42e7fd17294a45b83ba8fbf03",
+  "parsed": {
+    "dev": "ddc64c18aa81b71a61807798ecf0abd4e50504596e472bb1945b519a3eddf86d",
+    "handwritten": "43d098f8229c68cae0ba3b18d2c538e02f08e0fdb78c4402a5b0e731ff727808",
+    "test": "fd0a2e146c0dc8a639865f99a2bfbcd8297844c20a1db0128f77a3b1be0948ef"
+  },
+  "record_only": {
+    "changed_since_freeze": [
+      "spec_bridge/eval/experiment.py",
+      "spec_bridge/llm/provider.py"
+    ],
+    "hashes": {
+      "spec_bridge/eval/experiment.py": "9a8dbaf1e474c7a22ae3cd0f71181a6cc6af097990e238bfc3c7a1ab0b8a3279",
+      "spec_bridge/llm/provider.py": "4877f888217982eb734e87797b67a6cf9ce29caa3485297181794f3a48d7adb6"
+    }
+  },
+  "written_at": "2026-10-16T02:28:16.136831+00:00"
+}

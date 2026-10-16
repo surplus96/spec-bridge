@@ -1,0 +1,109 @@
+origin: synthetic
+source:
+  split: dev
+  documents:
+  - SYN-003
+  - SYN-004
+  - SYN-005
+  - SYN-008
+  - SYN-010
+  - SYN-011
+  - SYN-012
+  - SYN-015
+  - SYN-017
+  - SYN-019
+  - SYN-023
+  - SYN-024
+  - SYN-026
+  - SYN-027
+  - SYN-029
+  - SYN-030
+  - SYN-031
+  - SYN-032
+  - SYN-033
+  - SYN-034
+  - SYN-035
+  - SYN-036
+  - SYN-037
+  - SYN-038
+enums:
+  application:
+    fuel oil: fuel_oil
+    fuel oil treatment: fuel_oil
+    generating-set: genset
+    genset: genset
+    lubricating oil: lube_oil
+    propulsion: propulsion
+  bearing_type:
+    plain: plain
+    plain bearings: plain
+  cooling_type:
+    air: air
+    air-cooled: air
+    water-cooled: water
+  fuel_types:
+    mdo: MDO
+    mgo: MGO
+    natural gas: natural_gas
+  medium:
+    air: air
+    heavy fuel oil: heavy_fuel_oil
+    lube oil: lubricating_oil
+    lubricating oil: lubricating_oil
+    sea water: seawater
+  pump_type:
+    centrifugal: centrifugal
+    three-screw: three_screw
+  turbocharger_type:
+    axial: axial
+labels:
+  application: application
+  bearing type: bearing_type
+  bearings: bearing_type
+  bore: bore
+  cooling: cooling_type
+  cooling type: cooling_type
+  cylinder bore mm: bore
+  cylinders: number_of_cylinders
+  differential pressure: differential_pressure
+  dimensions (l × w × h): dimensions
+  dry mass: dry_weight
+  dry weight: dry_weight
+  engine (kwm): rated_power
+  engine output range per turbocharger: applicable_engine_power
+  engine speed: rated_speed
+  fad*: capacity
+  flow: capacity
+  fluid: medium
+  four-stroke (kw): applicable_engine_power
+  fuel: fuel_types
+  fuel types: fuel_types
+  head: head
+  maker: maker
+  manufacturer: maker
+  max pressure: max_pressure
+  max. recommended capacity: rated_throughput
+  maximum pressure: max_pressure
+  medium: medium
+  model: model_designation
+  model designation: model_designation
+  motor power: motor_power
+  motor rating: motor_power
+  number of cylinder: number_of_cylinders
+  number of cylinders: number_of_cylinders
+  overall dimensions (l × w × h): dimensions
+  piston stroke mm: stroke
+  power [kw]: rated_power
+  pump type: pump_type
+  rated power: rated_power
+  rated speed: rated_speed
+  rated throughput: rated_throughput
+  self cleaning: self_cleaning
+  self-cleaning: self_cleaning
+  service: application
+  speed [rpm]: rated_speed
+  stroke: stroke
+  throughput: rated_throughput
+  turbine flow type: turbocharger_type
+  two-stroke (kw): applicable_engine_power
+  weight (kg) - dry condition stated: dry_weight

@@ -1,0 +1,176 @@
+{
+  "prediction": {
+    "document_id": "SYN-016",
+    "class_id": "AirCompressor",
+    "class_candidates": [
+      "AirCompressor"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-C Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-016",
+            "raw_text": "SGDW-20261007-C Synthetic Works",
+            "label_text": "Maker",
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                467.6191063841906,
+                204.27343200000007,
+                475.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX011-116",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-016",
+            "raw_text": "VX011-116",
+            "label_text": "Model designation",
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                449.6191063841906,
+                155.41015040000002,
+                457.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "cooling_type",
+        "value": "air",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-016",
+            "raw_text": "air",
+            "label_text": "Cooling type",
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                370.6191063841906,
+                103.8085912,
+                378.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "air",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-016",
+            "raw_text": "air",
+            "label_text": "Medium",
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                352.6191063841906,
+                87.78906079999999,
+                360.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "motor_power",
+        "value": 34.43,
+        "unit": "kW",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-016",
+            "raw_text": "34.43",
+            "label_text": "Motor power",
+            "unit_text": "kW",
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                334.6191063841906,
+                234.96483200000011,
+                342.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 1280,
+          "width": 760,
+          "height": 940
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-016",
+            "raw_text": "1280 × 760 × 940",
+            "label_text": "Dimensions (L × W × H)",
+            "unit_text": "mm",
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                316.6191063841906,
+                407.04685839999996,
+                324.0060688
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": null,
+  "qualifiers": []
+}

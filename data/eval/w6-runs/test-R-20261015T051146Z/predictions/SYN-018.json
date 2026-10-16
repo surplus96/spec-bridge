@@ -1,0 +1,188 @@
+{
+  "prediction": {
+    "document_id": "SYN-018",
+    "class_id": "Pump",
+    "class_candidates": [
+      "Pump"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-D Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-018",
+            "raw_text": "SGDW-20261007-D Synthetic Works",
+            "label_text": "Manufacturer",
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "sheet": "Specification",
+              "cell_ref": "A5"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX016-118",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-018",
+            "raw_text": "VX016-118",
+            "label_text": "Model designation",
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "sheet": "Specification",
+              "cell_ref": "A6"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "pump_type",
+        "value": "centrifugal",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-018",
+            "raw_text": "Centrifugal",
+            "label_text": "Pump type",
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B9"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "head",
+        "value": 36,
+        "unit": "m",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-018",
+            "raw_text": "36",
+            "label_text": "Head",
+            "unit_text": "m",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B11"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "seawater",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-018",
+            "raw_text": "seawater",
+            "label_text": "Medium",
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B12"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "motor_power",
+        "value": 82.17,
+        "unit": "kW",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-018",
+            "raw_text": "82.17",
+            "label_text": "Motor power",
+            "unit_text": "kW",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B13"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 1580,
+          "width": 570,
+          "height": 760
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-018",
+            "raw_text": "1580 × 570 × 760",
+            "label_text": "Dimensions (L × W × H)",
+            "unit_text": "mm",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B14"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 1113.86,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-018",
+            "raw_text": "1113.86",
+            "label_text": "Dry mass",
+            "unit_text": "kg",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B15"
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": null,
+  "qualifiers": []
+}

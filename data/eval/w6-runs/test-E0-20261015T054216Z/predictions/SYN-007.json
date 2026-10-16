@@ -1,0 +1,585 @@
+{
+  "prediction": {
+    "document_id": "SYN-007",
+    "class_id": "Pump",
+    "class_candidates": [
+      "Pump"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-C Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-007",
+            "raw_text": "SGDW-20261007-C Synthetic Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "paragraph": 5
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX015-107",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-007",
+            "raw_text": "VX015-107",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "paragraph": 6
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "pump_type",
+        "value": "three_screw",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-007",
+            "raw_text": "three-screw",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "paragraph": 8
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "capacity",
+        "value": 218.62,
+        "unit": "m3/h",
+        "basis": {},
+        "condition": {
+          "frequency": {
+            "value": 50,
+            "unit": "Hz"
+          }
+        },
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-007",
+            "raw_text": "218.62",
+            "label_text": null,
+            "unit_text": "m3/h",
+            "location": {
+              "section": "Main particulars",
+              "paragraph": 9
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "capacity",
+        "value": 251.42,
+        "unit": "m3/h",
+        "basis": {},
+        "condition": {
+          "frequency": {
+            "value": 60,
+            "unit": "Hz"
+          }
+        },
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-007",
+            "raw_text": "251.42",
+            "label_text": null,
+            "unit_text": "m3/h",
+            "location": {
+              "section": "Main particulars",
+              "paragraph": 10
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "differential_pressure",
+        "value": 7,
+        "unit": "bar",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-007",
+            "raw_text": "7",
+            "label_text": null,
+            "unit_text": "bar",
+            "location": {
+              "section": "Main particulars",
+              "paragraph": 11
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "lubricating_oil",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-007",
+            "raw_text": "lube oil",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "paragraph": 12
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "motor_power",
+        "value": 26.24,
+        "unit": "kW",
+        "basis": {},
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-007",
+            "raw_text": "26.24",
+            "label_text": null,
+            "unit_text": "kW",
+            "location": {
+              "section": "Main particulars",
+              "paragraph": 13
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 1440,
+          "width": 540,
+          "height": 720
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-007",
+            "raw_text": "1440 × 540 × 720",
+            "label_text": null,
+            "unit_text": "mm",
+            "location": {
+              "section": "Main particulars",
+              "paragraph": 14
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 507.21,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-007",
+            "raw_text": "507.21",
+            "label_text": null,
+            "unit_text": "kg",
+            "location": {
+              "section": "Main particulars",
+              "paragraph": 15
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "reported_weight",
+        "value": 507.21,
+        "unit": "kg",
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-007",
+            "raw_text": "507.21",
+            "label_text": null,
+            "unit_text": "kg",
+            "location": {
+              "section": "Main particulars",
+              "paragraph": 15
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "line": "L5",
+        "value_text": "SGDW-20261007-C Synthetic Works",
+        "unit_text": null
+      },
+      {
+        "attribute": "model_designation",
+        "line": "L6",
+        "value_text": "VX015-107",
+        "unit_text": null
+      },
+      {
+        "attribute": "pump_type",
+        "line": "L8",
+        "value_text": "three-screw",
+        "unit_text": null
+      },
+      {
+        "attribute": "capacity",
+        "line": "L9",
+        "value_text": "218.62",
+        "unit_text": "m3/h"
+      },
+      {
+        "attribute": "capacity",
+        "line": "L10",
+        "value_text": "251.42",
+        "unit_text": "m3/h"
+      },
+      {
+        "attribute": "differential_pressure",
+        "line": "L11",
+        "value_text": "7",
+        "unit_text": "bar"
+      },
+      {
+        "attribute": "medium",
+        "line": "L12",
+        "value_text": "lube oil",
+        "unit_text": null
+      },
+      {
+        "attribute": "motor_power",
+        "line": "L13",
+        "value_text": "26.24",
+        "unit_text": "kW"
+      },
+      {
+        "attribute": "dimensions",
+        "line": "L14",
+        "value_text": "1440 × 540 × 720",
+        "unit_text": "mm"
+      },
+      {
+        "attribute": "dry_weight",
+        "line": "L15",
+        "value_text": "507.21",
+        "unit_text": "kg"
+      },
+      {
+        "attribute": "reported_weight",
+        "line": "L15",
+        "value_text": "507.21",
+        "unit_text": "kg"
+      }
+    ]
+  },
+  "qualifiers": [
+    {
+      "kind": "value",
+      "attribute": "maker",
+      "value_text": "SGDW-20261007-C Synthetic Works",
+      "location": {
+        "section": "Product data",
+        "paragraph": 5
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.medium: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "model_designation",
+      "value_text": "VX015-107",
+      "location": {
+        "section": "Product data",
+        "paragraph": 6
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.medium: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "pump_type",
+      "value_text": "three-screw",
+      "location": {
+        "section": "Main particulars",
+        "paragraph": 8
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.frequency: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "capacity",
+      "value_text": "218.62",
+      "location": {
+        "section": "Main particulars",
+        "paragraph": 9
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {
+          "frequency": "50 Hz"
+        },
+        "scope": ""
+      },
+      "evidence": {
+        "condition.frequency": "at 50 Hz"
+      },
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.temperature: number not in the line",
+        "condition.viscosity: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "capacity",
+      "value_text": "251.42",
+      "location": {
+        "section": "Main particulars",
+        "paragraph": 10
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {
+          "frequency": "60 Hz"
+        },
+        "scope": ""
+      },
+      "evidence": {
+        "condition.frequency": "at 60 Hz"
+      },
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.temperature: number not in the line",
+        "condition.viscosity: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "differential_pressure",
+      "value_text": "7",
+      "location": {
+        "section": "Main particulars",
+        "paragraph": 11
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.medium: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "medium",
+      "value_text": "lube oil",
+      "location": {
+        "section": "Main particulars",
+        "paragraph": 12
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.temperature: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "motor_power",
+      "value_text": "26.24",
+      "location": {
+        "section": "Main particulars",
+        "paragraph": 13
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": ""
+      },
+      "evidence": {
+        "condition.rating_point": "rated output"
+      },
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.engine_type: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "dimensions",
+      "value_text": "1440 × 540 × 720",
+      "location": {
+        "section": "Main particulars",
+        "paragraph": 14
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.medium: evidence not in the line",
+        "condition.temperature: number not in the line",
+        "scope: evidence not in the line"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "dry_weight",
+      "value_text": "507.21",
+      "location": {
+        "section": "Main particulars",
+        "paragraph": 15
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.medium: evidence not in the line",
+        "condition.basis: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "reported_weight",
+      "value_text": "507.21",
+      "location": {
+        "section": "Main particulars",
+        "paragraph": 15
+      },
+      "qualifiers": {
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {
+        "basis.weight": "dry"
+      },
+      "rejected": [
+        "condition.medium: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    }
+  ]
+}

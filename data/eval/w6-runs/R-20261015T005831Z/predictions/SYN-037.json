@@ -1,0 +1,195 @@
+{
+  "prediction": {
+    "document_id": "SYN-037",
+    "class_id": "Turbocharger",
+    "class_candidates": [
+      "Turbocharger",
+      "FourStrokeEngine"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-B Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-037",
+            "raw_text": "SGDW-20261007-B Synthetic Works",
+            "label_text": "Manufacturer",
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "sheet": "Specification",
+              "cell_ref": "A5"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX022-137",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-037",
+            "raw_text": "VX022-137",
+            "label_text": "Model designation",
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "sheet": "Specification",
+              "cell_ref": "A6"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "turbocharger_type",
+        "value": "axial",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-037",
+            "raw_text": "axial",
+            "label_text": "Turbine flow type",
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B9"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "applicable_engine_power",
+        "value": {
+          "min": 8815.5,
+          "max": 22136.7
+        },
+        "unit": "kW",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-037",
+            "raw_text": "8815.5 to 22136.7",
+            "label_text": "Engine Output Range per Turbocharger",
+            "unit_text": "kW",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B10"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "bearing_type",
+        "value": "plain",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-037",
+            "raw_text": "plain",
+            "label_text": "Bearing type",
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B11"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 2280,
+          "width": 1910,
+          "height": 2460
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-037",
+            "raw_text": "2280 × 1910 × 2460",
+            "label_text": "Dimensions (L × W × H)",
+            "unit_text": "mm",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B12"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 5583.15,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-037",
+            "raw_text": "5583.15",
+            "label_text": "Dry mass",
+            "unit_text": "kg",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B13"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "applicable_engine_power",
+        "value": {
+          "min": 9697.05,
+          "max": 24350.37
+        },
+        "unit": "kW",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-037",
+            "raw_text": "9697.05 to 24350.37",
+            "label_text": "Engine Output Range per Turbocharger",
+            "unit_text": "kW",
+            "location": {
+              "section": "Notes",
+              "sheet": "Specification",
+              "cell_ref": "A15"
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": null,
+  "qualifiers": []
+}

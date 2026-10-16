@@ -1,0 +1,289 @@
+{
+  "prediction": {
+    "document_id": "SYN-018",
+    "class_id": "Pump",
+    "class_candidates": [
+      "Pump"
+    ],
+    "facts": [
+      {
+        "attribute": "pump_type",
+        "value": "Centrifugal",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_pump_specification",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-018",
+            "raw_text": "Centrifugal",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B9"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "capacity",
+        "value": 438.24,
+        "unit": "m3/h",
+        "basis": {},
+        "condition": {
+          "frequency": {
+            "value": 50,
+            "unit": "Hz"
+          },
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          }
+        },
+        "scope": "nominal_rating",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-018",
+            "raw_text": "438.24",
+            "label_text": "nominal flow rate",
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B10"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "head",
+        "value": 36,
+        "unit": "m",
+        "basis": {},
+        "condition": {},
+        "scope": "main_pump_specification",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-018",
+            "raw_text": "36",
+            "label_text": "Head",
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B11"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "seawater",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "operating_medium",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-018",
+            "raw_text": "seawater",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B12"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "motor_power",
+        "value": 82.17,
+        "unit": "kW",
+        "basis": {},
+        "condition": {
+          "frequency": {
+            "value": 50,
+            "unit": "Hz"
+          }
+        },
+        "scope": "nameplate_rating_for_drive_motor",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-018",
+            "raw_text": "82.17",
+            "label_text": "Motor power",
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B13"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 1580,
+          "width": 570,
+          "height": 760
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "complete_pump_unit_dimensions_including_motor_and_base",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-018",
+            "raw_text": "1580 × 570 × 760",
+            "label_text": "Dimensions (L × W × H)",
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B14"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 1113.86,
+        "unit": "kg",
+        "basis": {},
+        "condition": {
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          }
+        },
+        "scope": "dry_mass_of_complete_pump_unit_with_motor_and_base",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-018",
+            "raw_text": "1113.86",
+            "label_text": "Dry mass",
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B15"
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "pump_type",
+        "basis": {},
+        "condition": {},
+        "scope": "main pump specification",
+        "line": "L9",
+        "value": "Centrifugal",
+        "unit": null,
+        "raw_text": "Centrifugal"
+      },
+      {
+        "attribute": "capacity",
+        "basis": {},
+        "condition": {
+          "frequency": {
+            "value": 50,
+            "unit": "Hz"
+          },
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          }
+        },
+        "scope": "nominal rating",
+        "line": "L10",
+        "value": 438.24,
+        "unit": "m3/h",
+        "raw_text": "438.24",
+        "label": "nominal flow rate"
+      },
+      {
+        "attribute": "head",
+        "basis": {},
+        "condition": {},
+        "scope": "main pump specification",
+        "line": "L11",
+        "value": 36,
+        "unit": "m",
+        "raw_text": "36",
+        "label": "Head"
+      },
+      {
+        "attribute": "medium",
+        "basis": {},
+        "condition": {},
+        "scope": "operating medium",
+        "line": "L12",
+        "value": "seawater",
+        "unit": null,
+        "raw_text": "seawater"
+      },
+      {
+        "attribute": "motor_power",
+        "basis": {},
+        "condition": {
+          "rating_point": "none",
+          "frequency": {
+            "value": 50,
+            "unit": "Hz"
+          }
+        },
+        "scope": "nameplate rating for drive motor",
+        "line": "L13",
+        "value": 82.17,
+        "unit": "kW",
+        "raw_text": "82.17",
+        "label": "Motor power"
+      },
+      {
+        "attribute": "dimensions",
+        "basis": {},
+        "condition": {},
+        "scope": "complete pump unit dimensions including motor and base",
+        "line": "L14",
+        "value": {
+          "length": 1580,
+          "width": 570,
+          "height": 760
+        },
+        "unit": "mm",
+        "raw_text": "1580 × 570 × 760",
+        "label": "Dimensions (L × W × H)"
+      },
+      {
+        "attribute": "dry_weight",
+        "basis": {},
+        "condition": {
+          "basis": "none",
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          }
+        },
+        "scope": "dry mass of complete pump unit with motor and base",
+        "line": "L15",
+        "value": 1113.86,
+        "unit": "kg",
+        "raw_text": "1113.86",
+        "label": "Dry mass"
+      }
+    ]
+  },
+  "qualifiers": []
+}

@@ -1,0 +1,715 @@
+{
+  "prediction": {
+    "document_id": "SYN-019",
+    "class_id": "Pump",
+    "class_candidates": [
+      "Pump"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-B Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-019",
+            "raw_text": "SGDW-20261007-B Synthetic Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                467.6191063841906,
+                228.73827360000007,
+                475.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX014-119",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-019",
+            "raw_text": "VX014-119",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                449.6191063841906,
+                155.41015040000002,
+                457.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "pump_type",
+        "value": "three_screw",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-019",
+            "raw_text": "Three-screw",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                380.6190801146593,
+                222.8980032,
+                388.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "capacity",
+        "value": 164.97,
+        "unit": "m3/h",
+        "basis": {},
+        "condition": {
+          "frequency": {
+            "value": 50,
+            "unit": "Hz"
+          }
+        },
+        "scope": "nominal_rating",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-019",
+            "raw_text": "164.97",
+            "label_text": null,
+            "unit_text": "m3/h",
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                359.6190801146593,
+                202.91362800000002,
+                367.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "differential_pressure",
+        "value": 8,
+        "unit": "bar",
+        "basis": {},
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-019",
+            "raw_text": "8",
+            "label_text": null,
+            "unit_text": "bar",
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                338.6190801146593,
+                182.89409840000002,
+                346.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "lubricating_oil",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-019",
+            "raw_text": "lubricating oil",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                317.6190801146593,
+                225.1362848,
+                325.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "motor_power",
+        "value": 32.99,
+        "unit": "kW",
+        "basis": {},
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": "drive_motor",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-019",
+            "raw_text": "32.99",
+            "label_text": null,
+            "unit_text": "kW",
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                296.6190801146593,
+                198.4644096,
+                304.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 1300,
+          "width": 510,
+          "height": 680
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-019",
+            "raw_text": "1300 × 510 × 680 mm",
+            "label_text": null,
+            "unit_text": "(mm)",
+            "location": {
+              "section": "Installation data",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                245.61910638419056,
+                391.9413896,
+                253.00606879999998
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 604.89,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-019",
+            "raw_text": "604.89",
+            "label_text": null,
+            "unit_text": "kg",
+            "location": {
+              "section": "Installation data",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                227.61910638419056,
+                302.12107920000017,
+                235.00606879999998
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "reported_weight",
+        "value": 604.89,
+        "unit": "kg",
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-019",
+            "raw_text": "604.89",
+            "label_text": null,
+            "unit_text": "kg",
+            "location": {
+              "section": "Installation data",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                227.61910638419056,
+                302.12107920000017,
+                235.00606879999998
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [
+      {
+        "attribute": "discharge_pressure",
+        "value_text": "164.97",
+        "unit_text": "m3/h",
+        "reason": "dimension",
+        "occurrence": {
+          "source_document_id": "SYN-019",
+          "raw_text": "164.97",
+          "label_text": null,
+          "unit_text": "m3/h",
+          "location": {
+            "section": "Operating notes",
+            "pdf_page": 1,
+            "bbox": [
+              38.0,
+              184.61910638419056,
+              259.42967520000013,
+              192.00606879999998
+            ]
+          }
+        }
+      }
+    ],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "line": "L5",
+        "value_text": "SGDW-20261007-B Synthetic Works"
+      },
+      {
+        "attribute": "model_designation",
+        "line": "L6",
+        "value_text": "VX014-119"
+      },
+      {
+        "attribute": "pump_type",
+        "line": "L9",
+        "value_text": "Three-screw",
+        "unit_text": null
+      },
+      {
+        "attribute": "capacity",
+        "line": "L10",
+        "value_text": "164.97",
+        "unit_text": "m3/h"
+      },
+      {
+        "attribute": "differential_pressure",
+        "line": "L11",
+        "value_text": "8",
+        "unit_text": "bar"
+      },
+      {
+        "attribute": "medium",
+        "line": "L12",
+        "value_text": "lubricating oil",
+        "unit_text": null
+      },
+      {
+        "attribute": "motor_power",
+        "line": "L13",
+        "value_text": "32.99",
+        "unit_text": "kW"
+      },
+      {
+        "attribute": "dimensions",
+        "line": "L15",
+        "value_text": "1300 × 510 × 680 mm",
+        "unit_text": "(mm)"
+      },
+      {
+        "attribute": "dry_weight",
+        "line": "L16",
+        "value_text": "604.89",
+        "unit_text": "kg"
+      },
+      {
+        "attribute": "reported_weight",
+        "line": "L16",
+        "value_text": "604.89",
+        "unit_text": "kg"
+      },
+      {
+        "attribute": "discharge_pressure",
+        "line": "L18",
+        "value_text": "164.97",
+        "unit_text": "m3/h"
+      }
+    ]
+  },
+  "qualifiers": [
+    {
+      "kind": "value",
+      "attribute": "maker",
+      "value_text": "SGDW-20261007-B Synthetic Works",
+      "location": {
+        "section": "Identification",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          467.6191063841906,
+          228.73827360000007,
+          475.0060688
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.medium: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "model_designation",
+      "value_text": "VX014-119",
+      "location": {
+        "section": "Identification",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          449.6191063841906,
+          155.41015040000002,
+          457.0060688
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.medium: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "pump_type",
+      "value_text": "Three-screw",
+      "location": {
+        "section": "Specifications",
+        "pdf_page": 1,
+        "bbox": [
+          178.44488,
+          380.6190801146593,
+          222.8980032,
+          388.0060425304687
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.rating_point: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "capacity",
+      "value_text": "164.97",
+      "location": {
+        "section": "Specifications",
+        "pdf_page": 1,
+        "bbox": [
+          178.44488,
+          359.6190801146593,
+          202.91362800000002,
+          367.0060425304687
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {
+          "frequency": "50 Hz"
+        },
+        "scope": "nominal rating"
+      },
+      "evidence": {
+        "condition.frequency": "at 50 Hz",
+        "scope": "nominal rating"
+      },
+      "rejected": [
+        "basis.capacity: evidence not in the line"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "differential_pressure",
+      "value_text": "8",
+      "location": {
+        "section": "Specifications",
+        "pdf_page": 1,
+        "bbox": [
+          178.44488,
+          338.6190801146593,
+          182.89409840000002,
+          346.0060425304687
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": ""
+      },
+      "evidence": {
+        "condition.rating_point": "for main pump"
+      },
+      "rejected": [
+        "basis.capacity: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "medium",
+      "value_text": "lubricating oil",
+      "location": {
+        "section": "Specifications",
+        "pdf_page": 1,
+        "bbox": [
+          178.44488,
+          317.6190801146593,
+          225.1362848,
+          325.0060425304687
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "basis.rating: evidence not in the line",
+        "basis.pressure: evidence not in the line",
+        "basis.weight: evidence not in the line",
+        "condition.temperature: number not in the line",
+        "condition.viscosity: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "motor_power",
+      "value_text": "32.99",
+      "location": {
+        "section": "Specifications",
+        "pdf_page": 1,
+        "bbox": [
+          178.44488,
+          296.6190801146593,
+          198.4644096,
+          304.0060425304687
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": "drive motor"
+      },
+      "evidence": {
+        "condition.rating_point": "rated output",
+        "scope": "for drive motor"
+      },
+      "rejected": [
+        "basis.capacity: no evidence"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "dimensions",
+      "value_text": "1300 × 510 × 680 mm",
+      "location": {
+        "section": "Installation data",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          245.61910638419056,
+          391.9413896,
+          253.00606879999998
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.basis: no evidence",
+        "condition.frequency: number not in the line",
+        "scope: evidence not in the line"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "dry_weight",
+      "value_text": "604.89",
+      "location": {
+        "section": "Installation data",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          227.61910638419056,
+          302.12107920000017,
+          235.00606879999998
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.temperature: number not in the line",
+        "condition.absolute_pressure: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "reported_weight",
+      "value_text": "604.89",
+      "location": {
+        "section": "Installation data",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          227.61910638419056,
+          302.12107920000017,
+          235.00606879999998
+        ]
+      },
+      "qualifiers": {
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {
+        "basis.weight": "Dry weight —"
+      },
+      "rejected": [
+        "condition.medium: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "discharge_pressure",
+      "value_text": "164.97",
+      "location": {
+        "section": "Operating notes",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          184.61910638419056,
+          259.42967520000013,
+          192.00606879999998
+        ]
+      },
+      "qualifiers": {
+        "basis": {
+          "capacity": "charging_capacity"
+        },
+        "condition": {
+          "frequency": "50 Hz"
+        },
+        "scope": ""
+      },
+      "evidence": {
+        "basis.capacity": "Flow — 164.97 m3/h",
+        "condition.frequency": "at 50 Hz"
+      },
+      "rejected": [
+        "condition.temperature: number not in the line",
+        "condition.viscosity: number not in the line",
+        "scope: evidence not in the line"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    }
+  ]
+}

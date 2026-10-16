@@ -1,0 +1,333 @@
+{
+  "prediction": {
+    "document_id": "SYN-018",
+    "class_id": "Pump",
+    "class_candidates": [
+      "Pump"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-D Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "manufacturer",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-018",
+            "raw_text": "SGDW-20261007-D Synthetic Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "sheet": "Specification",
+              "cell_ref": "A5"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX016-118",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "model_designation",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-018",
+            "raw_text": "VX016-118",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "sheet": "Specification",
+              "cell_ref": "A6"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "pump_type",
+        "value": "centrifugal",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "pump_type",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-018",
+            "raw_text": "Centrifugal",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B9"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "seawater",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "operating_medium",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-018",
+            "raw_text": "seawater",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B12"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "motor_power",
+        "value": 82.17,
+        "unit": "kW",
+        "basis": {},
+        "condition": {
+          "frequency": {
+            "value": 50,
+            "unit": "Hz"
+          }
+        },
+        "scope": "motor_power_for_drive_motor",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-018",
+            "raw_text": "82.17",
+            "label_text": null,
+            "unit_text": "kW",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B13"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "head",
+        "value": 36,
+        "unit": "m",
+        "basis": {},
+        "condition": {},
+        "scope": "main_pump_head",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-018",
+            "raw_text": "36",
+            "label_text": null,
+            "unit_text": "m",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B11"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 1580,
+          "width": 570,
+          "height": 760
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "dimensions_of_complete_pump_unit_with_motor_and_base",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-018",
+            "raw_text": "1580 × 570 × 760",
+            "label_text": null,
+            "unit_text": "mm",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B14"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 1113.86,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "dry_mass_of_complete_pump_unit_with_motor_and_base",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-018",
+            "raw_text": "1113.86",
+            "label_text": null,
+            "unit_text": "kg",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B15"
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "reported_weight",
+      "text": "",
+      "line": "none",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "capacity",
+      "text": "",
+      "line": "none",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "differential_pressure",
+      "text": "",
+      "line": "none",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "discharge_pressure",
+      "text": "",
+      "line": "none",
+      "reason": "unknown_line"
+    }
+  ],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "basis": {},
+        "condition": {},
+        "scope": "Manufacturer",
+        "line": "L5",
+        "value_text": "SGDW-20261007-D Synthetic Works",
+        "unit_text": null
+      },
+      {
+        "attribute": "model_designation",
+        "basis": {},
+        "condition": {},
+        "scope": "Model designation",
+        "line": "L6",
+        "value_text": "VX016-118",
+        "unit_text": null
+      },
+      {
+        "attribute": "pump_type",
+        "basis": {},
+        "condition": {},
+        "scope": "Pump type",
+        "line": "L9",
+        "value_text": "Centrifugal",
+        "unit_text": null
+      },
+      {
+        "attribute": "medium",
+        "basis": {},
+        "condition": {},
+        "scope": "Operating medium",
+        "line": "L12",
+        "value_text": "seawater",
+        "unit_text": null
+      },
+      {
+        "attribute": "motor_power",
+        "basis": {},
+        "condition": {
+          "rating_point": "none",
+          "frequency": "50 Hz",
+          "absolute_pressure": "none"
+        },
+        "scope": "Motor power for drive motor",
+        "line": "L13",
+        "value_text": "82.17",
+        "unit_text": "kW"
+      },
+      {
+        "attribute": "head",
+        "basis": {},
+        "condition": {},
+        "scope": "Main pump head",
+        "line": "L11",
+        "value_text": "36",
+        "unit_text": "m"
+      },
+      {
+        "attribute": "dimensions",
+        "basis": {},
+        "condition": {},
+        "scope": "Dimensions of complete pump unit with motor and base",
+        "line": "L14",
+        "value_text": "1580 × 570 × 760",
+        "unit_text": "mm"
+      },
+      {
+        "attribute": "dry_weight",
+        "basis": {},
+        "condition": {},
+        "scope": "Dry mass of complete pump unit with motor and base",
+        "line": "L15",
+        "value_text": "1113.86",
+        "unit_text": "kg"
+      },
+      {
+        "attribute": "reported_weight",
+        "basis": {},
+        "condition": {},
+        "scope": "none",
+        "line": "none",
+        "value_text": "",
+        "unit_text": null
+      },
+      {
+        "attribute": "capacity",
+        "basis": {},
+        "condition": {},
+        "scope": "none",
+        "line": "none",
+        "value_text": "",
+        "unit_text": null
+      },
+      {
+        "attribute": "differential_pressure",
+        "basis": {},
+        "condition": {},
+        "scope": "none",
+        "line": "none",
+        "value_text": "",
+        "unit_text": null
+      },
+      {
+        "attribute": "discharge_pressure",
+        "basis": {},
+        "condition": {},
+        "scope": "none",
+        "line": "none",
+        "value_text": "",
+        "unit_text": null
+      }
+    ]
+  },
+  "qualifiers": []
+}

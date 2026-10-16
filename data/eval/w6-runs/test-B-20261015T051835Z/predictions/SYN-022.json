@@ -1,0 +1,435 @@
+{
+  "prediction": {
+    "document_id": "SYN-022",
+    "class_id": "Separator",
+    "class_candidates": [
+      "Separator",
+      "Pump"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-D Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "product_identification",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-022",
+            "raw_text": "SGDW-20261007-D Synthetic Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "General",
+              "sheet": "Specification",
+              "cell_ref": "A5"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX020-122",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "product_identification",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-022",
+            "raw_text": "VX020-122",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "General",
+              "sheet": "Specification",
+              "cell_ref": "A6"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 2240,
+          "width": 1185,
+          "height": 1930
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "physical_size_of_the_separator_module_including_additional_components",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-022",
+            "raw_text": "2240 × 1185 × 1930",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B15"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 1371.96,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "weight_of_the_separator_module_without_fluid",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-022",
+            "raw_text": "1371.96",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B16"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "reported_weight",
+        "value": 1371.96,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "not_explicitly_stated_but_inferred_from_dry_weight_specification",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-022",
+            "raw_text": "1371.96",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B16"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "fresh water",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "fluid_handled_by_the_separator",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-022",
+            "raw_text": "fresh water",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B9"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "lube oil",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "fluid_handled_by_the_separator",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-022",
+            "raw_text": "lube oil",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B10"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "motor_power",
+        "value": 12.98,
+        "unit": "kW",
+        "basis": {},
+        "condition": {},
+        "scope": "power_rating_for_the_separator_drive_motor",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-022",
+            "raw_text": "12.98",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B14"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "application",
+        "value": "Marine centrifugal oil separator",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "primary_use_case_of_the_separator",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-022",
+            "raw_text": "Marine centrifugal oil separator",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "sheet": "Specification",
+              "cell_ref": "A3"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_throughput",
+        "value": 3893.4,
+        "unit": "l/h",
+        "basis": {},
+        "condition": {
+          "temperature": {
+            "value": 380,
+            "unit": "degC"
+          },
+          "viscosity": {
+            "value": 380,
+            "unit": "cSt"
+          }
+        },
+        "scope": "maximum_recommended_throughput_for_specified_fluid_conditions",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-022",
+            "raw_text": "3893.4",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B11"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_throughput",
+        "value": 2530.71,
+        "unit": "l/h",
+        "basis": {},
+        "condition": {
+          "temperature": {
+            "value": 700,
+            "unit": "degC"
+          },
+          "viscosity": {
+            "value": 700,
+            "unit": "cSt"
+          }
+        },
+        "scope": "maximum_recommended_throughput_for_specified_fluid_conditions",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-022",
+            "raw_text": "2530.71",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B12"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "self_cleaning",
+        "value": true,
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "self_cleaning_capability_of_the_separator",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-022",
+            "raw_text": "Yes",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B13"
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "basis": {},
+        "condition": {},
+        "scope": "Product identification",
+        "line": "L5",
+        "value": "SGDW-20261007-D Synthetic Works",
+        "unit": null,
+        "raw_text": "SGDW-20261007-D Synthetic Works"
+      },
+      {
+        "attribute": "model_designation",
+        "basis": {},
+        "condition": {},
+        "scope": "Product identification",
+        "line": "L6",
+        "value": "VX020-122",
+        "unit": null,
+        "raw_text": "VX020-122"
+      },
+      {
+        "attribute": "dimensions",
+        "basis": {},
+        "condition": {},
+        "scope": "Physical size of the separator module including additional components",
+        "line": "L15",
+        "value": {
+          "length": 2240,
+          "width": 1185,
+          "height": 1930
+        },
+        "unit": "mm",
+        "raw_text": "2240 × 1185 × 1930"
+      },
+      {
+        "attribute": "dry_weight",
+        "basis": {},
+        "condition": {},
+        "scope": "Weight of the separator module without fluid",
+        "line": "L16",
+        "value": 1371.96,
+        "unit": "kg",
+        "raw_text": "1371.96"
+      },
+      {
+        "attribute": "reported_weight",
+        "basis": {},
+        "condition": {},
+        "scope": "Not explicitly stated, but inferred from dry weight specification",
+        "line": "L16",
+        "value": 1371.96,
+        "unit": "kg",
+        "raw_text": "1371.96"
+      },
+      {
+        "attribute": "medium",
+        "basis": {},
+        "condition": {},
+        "scope": "Fluid handled by the separator",
+        "line": "L9",
+        "value": "fresh water",
+        "unit": null,
+        "raw_text": "fresh water"
+      },
+      {
+        "attribute": "medium",
+        "basis": {},
+        "condition": {},
+        "scope": "Fluid handled by the separator",
+        "line": "L10",
+        "value": "lube oil",
+        "unit": null,
+        "raw_text": "lube oil"
+      },
+      {
+        "attribute": "motor_power",
+        "basis": {},
+        "condition": {},
+        "scope": "Power rating for the separator drive motor",
+        "line": "L14",
+        "value": 12.98,
+        "unit": "kW",
+        "raw_text": "12.98"
+      },
+      {
+        "attribute": "application",
+        "basis": {},
+        "condition": {},
+        "scope": "Primary use case of the separator",
+        "line": "L3",
+        "value": "Marine centrifugal oil separator",
+        "unit": null,
+        "raw_text": "Marine centrifugal oil separator"
+      },
+      {
+        "attribute": "rated_throughput",
+        "basis": {},
+        "condition": {
+          "temperature": {
+            "value": 380,
+            "unit": "degC"
+          },
+          "viscosity": {
+            "value": 380,
+            "unit": "cSt"
+          }
+        },
+        "scope": "Maximum recommended throughput for specified fluid conditions",
+        "line": "L11",
+        "value": 3893.4,
+        "unit": "l/h",
+        "raw_text": "3893.4"
+      },
+      {
+        "attribute": "rated_throughput",
+        "basis": {},
+        "condition": {
+          "temperature": {
+            "value": 700,
+            "unit": "degC"
+          },
+          "viscosity": {
+            "value": 700,
+            "unit": "cSt"
+          }
+        },
+        "scope": "Maximum recommended throughput for specified fluid conditions",
+        "line": "L12",
+        "value": 2530.71,
+        "unit": "l/h",
+        "raw_text": "2530.71"
+      },
+      {
+        "attribute": "self_cleaning",
+        "basis": {},
+        "condition": {},
+        "scope": "Self-cleaning capability of the separator",
+        "line": "L13",
+        "value": true,
+        "unit": null,
+        "raw_text": "Yes"
+      }
+    ]
+  },
+  "qualifiers": []
+}

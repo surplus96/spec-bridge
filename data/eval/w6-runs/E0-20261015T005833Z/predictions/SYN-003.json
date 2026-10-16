@@ -1,0 +1,529 @@
+{
+  "prediction": {
+    "document_id": "SYN-003",
+    "class_id": "Turbocharger",
+    "class_candidates": [
+      "Turbocharger",
+      "FourStrokeEngine"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-B Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-003",
+            "raw_text": "SGDW-20261007-B Synthetic Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                467.6191063841906,
+                228.73827360000007,
+                475.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX022-009",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-003",
+            "raw_text": "VX022 009",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                449.6191063841906,
+                154.96874400000002,
+                457.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 2280,
+          "width": 1910,
+          "height": 2460
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-003",
+            "raw_text": "2280 × 1910 × 2460 mm",
+            "label_text": null,
+            "unit_text": "(mm)",
+            "location": {
+              "section": "Installation",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                287.6191063841906,
+                394.6015464000001,
+                295.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 3029.55,
+        "unit": "kg",
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-003",
+            "raw_text": "3029.55",
+            "label_text": null,
+            "unit_text": "kg",
+            "location": {
+              "section": "Installation",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                269.6191063841906,
+                356.8085768000002,
+                277.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "turbocharger_type",
+        "value": "axial",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-003",
+            "raw_text": "axial",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                380.6190801146593,
+                194.89800480000002,
+                388.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "applicable_engine_power",
+        "value": {
+          "min": 4783.5,
+          "max": 12011.9
+        },
+        "unit": "kW",
+        "basis": {
+          "capacity": "free_air_delivery"
+        },
+        "condition": {
+          "engine_type": "four-stroke",
+          "basis": "per_turbocharger"
+        },
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-003",
+            "raw_text": "4783.5 to 12011.9",
+            "label_text": null,
+            "unit_text": "kW",
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                359.6190801146593,
+                242.9487808,
+                367.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "bearing_type",
+        "value": "plain",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-003",
+            "raw_text": "plain",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                338.6190801146593,
+                195.3472232,
+                346.0060425304687
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [
+      {
+        "attribute": "reported_weight",
+        "value_text": "3029.55",
+        "unit_text": "kg (dry, complete turbocharger with silencer)",
+        "reason": "unknown_unit",
+        "occurrence": {
+          "source_document_id": "SYN-003",
+          "raw_text": "3029.55",
+          "label_text": null,
+          "unit_text": "kg (dry, complete turbocharger with silencer)",
+          "location": {
+            "section": "Installation",
+            "pdf_page": 1,
+            "bbox": [
+              38.0,
+              269.6191063841906,
+              356.8085768000002,
+              277.0060688
+            ]
+          }
+        }
+      }
+    ],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "line": "L5",
+        "value_text": "SGDW-20261007-B Synthetic Works",
+        "unit_text": null
+      },
+      {
+        "attribute": "model_designation",
+        "line": "L6",
+        "value_text": "VX022 009",
+        "unit_text": null
+      },
+      {
+        "attribute": "dimensions",
+        "line": "L13",
+        "value_text": "2280 × 1910 × 2460 mm",
+        "unit_text": "(mm)"
+      },
+      {
+        "attribute": "dry_weight",
+        "line": "L14",
+        "value_text": "3029.55",
+        "unit_text": "kg"
+      },
+      {
+        "attribute": "reported_weight",
+        "line": "L14",
+        "value_text": "3029.55",
+        "unit_text": "kg (dry, complete turbocharger with silencer)"
+      },
+      {
+        "attribute": "turbocharger_type",
+        "line": "L9",
+        "value_text": "axial",
+        "unit_text": null
+      },
+      {
+        "attribute": "applicable_engine_power",
+        "line": "L10",
+        "value_text": "4783.5 to 12011.9",
+        "unit_text": "kW"
+      },
+      {
+        "attribute": "bearing_type",
+        "line": "L11",
+        "value_text": "plain",
+        "unit_text": null
+      }
+    ]
+  },
+  "qualifiers": [
+    {
+      "kind": "value",
+      "attribute": "maker",
+      "value_text": "SGDW-20261007-B Synthetic Works",
+      "location": {
+        "section": "Product data",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          467.6191063841906,
+          228.73827360000007,
+          475.0060688
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.medium: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "model_designation",
+      "value_text": "VX022 009",
+      "location": {
+        "section": "Product data",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          449.6191063841906,
+          154.96874400000002,
+          457.0060688
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "dimensions",
+      "value_text": "2280 × 1910 × 2460 mm",
+      "location": {
+        "section": "Installation",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          287.6191063841906,
+          394.6015464000001,
+          295.0060688
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.medium: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "dry_weight",
+      "value_text": "3029.55",
+      "location": {
+        "section": "Installation",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          269.6191063841906,
+          356.8085768000002,
+          277.0060688
+        ]
+      },
+      "qualifiers": {
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {
+        "basis.weight": "dry condition stated"
+      },
+      "rejected": [
+        "condition.temperature: number not in the line",
+        "condition.absolute_pressure: number not in the line",
+        "condition.viscosity: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "reported_weight",
+      "value_text": "3029.55",
+      "location": {
+        "section": "Installation",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          269.6191063841906,
+          356.8085768000002,
+          277.0060688
+        ]
+      },
+      "qualifiers": {
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {
+        "basis.weight": "dry condition stated"
+      },
+      "rejected": [
+        "condition.temperature: number not in the line",
+        "condition.absolute_pressure: number not in the line",
+        "condition.viscosity: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "turbocharger_type",
+      "value_text": "axial",
+      "location": {
+        "section": "Main particulars",
+        "pdf_page": 1,
+        "bbox": [
+          178.44488,
+          380.6190801146593,
+          194.89800480000002,
+          388.0060425304687
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.basis: no evidence",
+        "condition.frequency: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "applicable_engine_power",
+      "value_text": "4783.5 to 12011.9",
+      "location": {
+        "section": "Main particulars",
+        "pdf_page": 1,
+        "bbox": [
+          178.44488,
+          359.6190801146593,
+          242.9487808,
+          367.0060425304687
+        ]
+      },
+      "qualifiers": {
+        "basis": {
+          "capacity": "free_air_delivery"
+        },
+        "condition": {
+          "engine_type": "four-stroke",
+          "basis": "per_turbocharger"
+        },
+        "scope": ""
+      },
+      "evidence": {
+        "basis.capacity": "Four-stroke (kW)",
+        "condition.engine_type": "4-stroke",
+        "condition.basis": "per TC unit"
+      },
+      "rejected": [
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "bearing_type",
+      "value_text": "plain",
+      "location": {
+        "section": "Main particulars",
+        "pdf_page": 1,
+        "bbox": [
+          178.44488,
+          338.6190801146593,
+          195.3472232,
+          346.0060425304687
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.medium: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    }
+  ]
+}

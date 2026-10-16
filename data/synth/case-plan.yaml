@@ -1,0 +1,1654 @@
+plan_version: 1
+created_at: '2026-10-07'
+task: DATA-CASE-PLAN
+origin: synthetic
+status: final_v1; frozen by user decision D-019 (2026-10-08); reviewed_by awaits user signature
+seed: 20261007
+seed_scope: neutral input ID assignment only; future values/templates must record their own deterministic generation
+  procedure
+contract: data/ontology/dataset-contract.yaml
+contract_version: 2
+targets:
+  documents: 40
+  classes:
+    Pump: 7
+    AirCompressor: 7
+    Separator: 7
+    FourStrokeEngine: 7
+    TwoStrokeMainEngine: 6
+    Turbocharger: 6
+  formats:
+    pdf: 20
+    xlsx: 12
+    docx: 8
+  splits:
+    dev: 24
+    test: 16
+  primary_cases:
+    normal: 10
+    E1: 6
+    E2: 4
+    E3: 4
+    E4: 4
+    E5: 2
+    E6: 6
+    E7: 4
+  registry_records: 150
+  comparison_pairs: 10
+  boms: 4
+split_policy:
+  key: family_id
+  family_shared_across_splits: false
+  shared_identity: all renderings/revisions of one product remain in one family and split
+  registry: dev/test separate snapshots; test family records not used to build dev aliases/prompts/thresholds
+  bom: root and component records must belong to same split
+  existing_handwritten: six design-exposed candidates remain supplemental; no reuse of their maker/model/family
+    or body in main test
+  held_out_status: family-disjoint evaluation only; agent authored both partitions and plan, not human independent
+    or externally blinded
+  freeze: hash actual documents, answers, registry, rules and split map before model experiment; plan is not
+    a frozen dataset
+case_definitions:
+  normal: no E1-E5 or comparison-positive requirement; V1/context variations permitted
+  E1: required value absent under dataset contract
+  E2: explicit wrong unit dimension; preserve raw observation and do not invent a normalized number
+  E3: declared value shape violated; no manufacturer pattern rules from memory
+  E4: explicit application outside synthetic allowed categories; no unverified physical ranges
+  E5: inconsistent values under explicitly identical condition/basis/scope; record both locations
+  E6: same synthetic registry product; preserved identity and facts after declared normalization
+  E7: different product in explicitly same synthetic family; not an inferred industry similarity threshold
+documents:
+- input_id: SYN-001
+  origin: synthetic
+  expected_class: AirCompressor
+  split: test
+  family_id: FAM-COMP-TEST-02
+  product_id: PRODUCT-SYN-001
+  file_format: xlsx
+  layout: table
+  primary_case: E1
+  authoring_focus: capacity 전체 미기재; 작동압은 정상 유지
+  reference_documents:
+  - REF-COMP-01
+  - REF-COMP-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-001.xlsx
+  answer_path: data/synth/answers/SYN-001.answer.yaml
+- input_id: SYN-002
+  origin: synthetic
+  expected_class: TwoStrokeMainEngine
+  split: test
+  family_id: FAM-2S-TEST-02
+  product_id: PRODUCT-SYN-002
+  file_format: xlsx
+  layout: table
+  primary_case: E1
+  authoring_focus: rated_speed 전체 미기재; 출력값으로 추정하지 않음
+  reference_documents:
+  - REF-2S-01
+  - REF-2S-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-002.xlsx
+  answer_path: data/synth/answers/SYN-002.answer.yaml
+- input_id: SYN-003
+  origin: synthetic
+  expected_class: Turbocharger
+  split: dev
+  family_id: FAM-TC-DEV-02
+  product_id: REG-TC-009
+  file_format: pdf
+  layout: mixed
+  primary_case: E6
+  authoring_focus: 동일 등록 제품; 단품 중량과 모듈 부가 정보 구별
+  reference_documents:
+  - REF-TC-01
+  - REF-TC-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-003.pdf
+  answer_path: data/synth/answers/SYN-003.answer.yaml
+  comparison_target: REG-TC-009
+- input_id: SYN-004
+  origin: synthetic
+  expected_class: AirCompressor
+  split: dev
+  family_id: FAM-COMP-DEV-02
+  product_id: REG-COMP-009
+  file_format: docx
+  layout: mixed
+  primary_case: E6
+  authoring_focus: 동일 등록 제품; FAD 반복 출현을 한 사실로 라벨링
+  reference_documents:
+  - REF-COMP-01
+  - REF-COMP-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-004.docx
+  answer_path: data/synth/answers/SYN-004.answer.yaml
+  comparison_target: REG-COMP-009
+- input_id: SYN-005
+  origin: synthetic
+  expected_class: Pump
+  split: dev
+  family_id: FAM-PUMP-DEV-02
+  product_id: REG-PUMP-009
+  file_format: docx
+  layout: table
+  primary_case: E6
+  authoring_focus: 같은 등록 제품을 관찰된 단위·표기 변형으로 재표현
+  reference_documents:
+  - REF-PUMP-01
+  - REF-PUMP-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-005.docx
+  answer_path: data/synth/answers/SYN-005.answer.yaml
+  comparison_target: REG-PUMP-009
+- input_id: SYN-006
+  origin: synthetic
+  expected_class: Separator
+  split: test
+  family_id: FAM-SEP-TEST-01
+  product_id: PRODUCT-SYN-006
+  file_format: pdf
+  layout: narrative
+  primary_case: E1
+  authoring_focus: rated_throughput 전체 미기재; 용도는 정상
+  reference_documents:
+  - REF-SEP-01
+  - REF-SEP-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-006.pdf
+  answer_path: data/synth/answers/SYN-006.answer.yaml
+- input_id: SYN-007
+  origin: synthetic
+  expected_class: Pump
+  split: test
+  family_id: FAM-PUMP-TEST-01
+  product_id: PRODUCT-SYN-007
+  file_format: docx
+  layout: narrative
+  primary_case: normal
+  authoring_focus: 스크루식 유량 두 개를 서로 다른 주파수 조건으로 기재
+  reference_documents:
+  - REF-PUMP-01
+  - REF-PUMP-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-007.docx
+  answer_path: data/synth/answers/SYN-007.answer.yaml
+- input_id: SYN-008
+  origin: synthetic
+  expected_class: Turbocharger
+  split: dev
+  family_id: FAM-TC-DEV-01
+  product_id: PRODUCT-SYN-008
+  file_format: docx
+  layout: narrative
+  primary_case: E1
+  authoring_focus: applicable_engine_power 전체 미기재
+  reference_documents:
+  - REF-TC-01
+  - REF-TC-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-008.docx
+  answer_path: data/synth/answers/SYN-008.answer.yaml
+- input_id: SYN-009
+  origin: synthetic
+  expected_class: Pump
+  split: test
+  family_id: FAM-PUMP-TEST-02
+  product_id: PRODUCT-SYN-009
+  file_format: pdf
+  layout: mixed
+  primary_case: E5
+  authoring_focus: 같은 조건의 capacity를 표와 서술에 서로 다르게 기재
+  reference_documents:
+  - REF-PUMP-01
+  - REF-PUMP-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-009.pdf
+  answer_path: data/synth/answers/SYN-009.answer.yaml
+- input_id: SYN-010
+  origin: synthetic
+  expected_class: TwoStrokeMainEngine
+  split: dev
+  family_id: FAM-2S-DEV-01
+  product_id: PRODUCT-SYN-010
+  file_format: pdf
+  layout: mixed
+  primary_case: normal
+  authoring_focus: 같은 정격점의 전체 출력·회전수, 식별된 과급기 관계
+  reference_documents:
+  - REF-2S-01
+  - REF-2S-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-010.pdf
+  answer_path: data/synth/answers/SYN-010.answer.yaml
+- input_id: SYN-011
+  origin: synthetic
+  expected_class: FourStrokeEngine
+  split: dev
+  family_id: FAM-4S-DEV-01
+  product_id: PRODUCT-SYN-011
+  file_format: docx
+  layout: mixed
+  primary_case: normal
+  authoring_focus: 발전 용도; 엔진 축출력과 발전기 전기출력 대상 구별
+  reference_documents:
+  - REF-4S-01
+  - REF-4S-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-011.docx
+  answer_path: data/synth/answers/SYN-011.answer.yaml
+- input_id: SYN-012
+  origin: synthetic
+  expected_class: FourStrokeEngine
+  split: dev
+  family_id: FAM-4S-DEV-02
+  product_id: PRODUCT-SYN-012
+  file_format: xlsx
+  layout: table
+  primary_case: E3
+  authoring_focus: number_of_cylinders에 비정수 기통 수; 시리즈 구성 범위는 정상 문맥(D-014), 범위에서 정수 추정 금지
+  reference_documents:
+  - REF-4S-01
+  - REF-4S-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-012.xlsx
+  answer_path: data/synth/answers/SYN-012.answer.yaml
+- input_id: SYN-013
+  origin: synthetic
+  expected_class: TwoStrokeMainEngine
+  split: test
+  family_id: FAM-2S-TEST-01
+  product_id: PRODUCT-SYN-013
+  file_format: pdf
+  layout: narrative
+  primary_case: normal
+  authoring_focus: 별도 정격점 두 개는 정상 복수 사실; 과급기 rpm은 비대상 정보
+  reference_documents:
+  - REF-2S-01
+  - REF-2S-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-013.pdf
+  answer_path: data/synth/answers/SYN-013.answer.yaml
+- input_id: SYN-014
+  origin: synthetic
+  expected_class: Turbocharger
+  split: test
+  family_id: FAM-TC-TEST-01
+  product_id: PRODUCT-SYN-014
+  file_format: xlsx
+  layout: table
+  primary_case: normal
+  authoring_focus: 적용 출력 단일값; 일반 중량 dry 추정 금지
+  reference_documents:
+  - REF-TC-01
+  - REF-TC-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-014.xlsx
+  answer_path: data/synth/answers/SYN-014.answer.yaml
+- input_id: SYN-015
+  origin: synthetic
+  expected_class: Pump
+  split: dev
+  family_id: FAM-PUMP-DEV-01
+  product_id: PRODUCT-SYN-015
+  file_format: pdf
+  layout: mixed
+  primary_case: normal
+  authoring_focus: 원심식 성능점, 완전 유닛 치수·건조 중량
+  reference_documents:
+  - REF-PUMP-01
+  - REF-PUMP-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-015.pdf
+  answer_path: data/synth/answers/SYN-015.answer.yaml
+- input_id: SYN-016
+  origin: synthetic
+  expected_class: AirCompressor
+  split: test
+  family_id: FAM-COMP-TEST-01
+  product_id: PRODUCT-SYN-016
+  file_format: pdf
+  layout: narrative
+  primary_case: normal
+  authoring_focus: charging capacity, 일반 Weight와 dry 미확정
+  reference_documents:
+  - REF-COMP-01
+  - REF-COMP-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-016.pdf
+  answer_path: data/synth/answers/SYN-016.answer.yaml
+- input_id: SYN-017
+  origin: synthetic
+  expected_class: Turbocharger
+  split: dev
+  family_id: FAM-TC-DEV-01
+  product_id: PRODUCT-SYN-017
+  file_format: pdf
+  layout: mixed
+  primary_case: normal
+  authoring_focus: 적용 출력 범위·엔진 사이클·per-unit 기준 보존
+  reference_documents:
+  - REF-TC-01
+  - REF-TC-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-017.pdf
+  answer_path: data/synth/answers/SYN-017.answer.yaml
+- input_id: SYN-018
+  origin: synthetic
+  expected_class: Pump
+  split: test
+  family_id: FAM-PUMP-TEST-02
+  product_id: PRODUCT-SYN-018
+  file_format: xlsx
+  layout: table
+  primary_case: E2
+  authoring_focus: capacity 값에 출력 단위를 명시; 원문 유지
+  reference_documents:
+  - REF-PUMP-01
+  - REF-PUMP-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-018.xlsx
+  answer_path: data/synth/answers/SYN-018.answer.yaml
+- input_id: SYN-019
+  origin: synthetic
+  expected_class: Pump
+  split: dev
+  family_id: FAM-PUMP-DEV-02
+  product_id: PRODUCT-SYN-019
+  file_format: pdf
+  layout: mixed
+  primary_case: E7
+  authoring_focus: 같은 스크루 계열의 다른 모델; 명시 차압 보존
+  reference_documents:
+  - REF-PUMP-01
+  - REF-PUMP-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-019.pdf
+  answer_path: data/synth/answers/SYN-019.answer.yaml
+  comparison_target: REG-PUMP-009
+- input_id: SYN-020
+  origin: synthetic
+  expected_class: FourStrokeEngine
+  split: test
+  family_id: FAM-4S-TEST-02
+  product_id: REG-4S-021
+  file_format: docx
+  layout: table
+  primary_case: E6
+  authoring_focus: 동일 등록 제품; 연료 목록 순서·표기 반복 유지
+  reference_documents:
+  - REF-4S-01
+  - REF-4S-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-020.docx
+  answer_path: data/synth/answers/SYN-020.answer.yaml
+  comparison_target: REG-4S-021
+- input_id: SYN-021
+  origin: synthetic
+  expected_class: AirCompressor
+  split: test
+  family_id: FAM-COMP-TEST-02
+  product_id: PRODUCT-SYN-021
+  file_format: pdf
+  layout: mixed
+  primary_case: E7
+  authoring_focus: 같은 제품 계열의 다른 모델·용량; working/max 구별
+  reference_documents:
+  - REF-COMP-01
+  - REF-COMP-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-021.pdf
+  answer_path: data/synth/answers/SYN-021.answer.yaml
+  comparison_target: REG-COMP-021
+- input_id: SYN-022
+  origin: synthetic
+  expected_class: Separator
+  split: test
+  family_id: FAM-SEP-TEST-02
+  product_id: PRODUCT-SYN-022
+  file_format: xlsx
+  layout: table
+  primary_case: E4
+  authoring_focus: application에 합성 허용 목록 밖 experimental_service 명시
+  reference_documents:
+  - REF-SEP-01
+  - REF-SEP-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-022.xlsx
+  answer_path: data/synth/answers/SYN-022.answer.yaml
+- input_id: SYN-023
+  origin: synthetic
+  expected_class: Pump
+  split: dev
+  family_id: FAM-PUMP-DEV-01
+  product_id: PRODUCT-SYN-023
+  file_format: xlsx
+  layout: table
+  primary_case: E1
+  authoring_focus: 원심식임을 명시하고 head 항목만 미기재
+  reference_documents:
+  - REF-PUMP-01
+  - REF-PUMP-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-023.xlsx
+  answer_path: data/synth/answers/SYN-023.answer.yaml
+- input_id: SYN-024
+  origin: synthetic
+  expected_class: Separator
+  split: dev
+  family_id: FAM-SEP-DEV-01
+  product_id: PRODUCT-SYN-024
+  file_format: pdf
+  layout: narrative
+  primary_case: E2
+  authoring_focus: rated_throughput 값에 질량 단위 명시
+  reference_documents:
+  - REF-SEP-01
+  - REF-SEP-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-024.pdf
+  answer_path: data/synth/answers/SYN-024.answer.yaml
+- input_id: SYN-025
+  origin: synthetic
+  expected_class: Separator
+  split: test
+  family_id: FAM-SEP-TEST-02
+  product_id: REG-SEP-021
+  file_format: pdf
+  layout: mixed
+  primary_case: E6
+  authoring_focus: 동일 등록 제품; 공급 펌프/히터의 정상 부가 정보 유지
+  reference_documents:
+  - REF-SEP-01
+  - REF-SEP-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-025.pdf
+  answer_path: data/synth/answers/SYN-025.answer.yaml
+  comparison_target: REG-SEP-021
+- input_id: SYN-026
+  origin: synthetic
+  expected_class: FourStrokeEngine
+  split: dev
+  family_id: FAM-4S-DEV-01
+  product_id: PRODUCT-SYN-026
+  file_format: pdf
+  layout: narrative
+  primary_case: E1
+  authoring_focus: number_of_cylinders 항목만 미기재
+  reference_documents:
+  - REF-4S-01
+  - REF-4S-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-026.pdf
+  answer_path: data/synth/answers/SYN-026.answer.yaml
+- input_id: SYN-027
+  origin: synthetic
+  expected_class: AirCompressor
+  split: dev
+  family_id: FAM-COMP-DEV-02
+  product_id: PRODUCT-SYN-027
+  file_format: pdf
+  layout: table
+  primary_case: E3
+  authoring_focus: capacity 자리에 숫자가 아닌 명시 문자열 기재
+  reference_documents:
+  - REF-COMP-01
+  - REF-COMP-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-027.pdf
+  answer_path: data/synth/answers/SYN-027.answer.yaml
+- input_id: SYN-028
+  origin: synthetic
+  expected_class: FourStrokeEngine
+  split: test
+  family_id: FAM-4S-TEST-02
+  product_id: PRODUCT-SYN-028
+  file_format: pdf
+  layout: mixed
+  primary_case: E7
+  authoring_focus: 같은 계열 다른 모델; 주파수별 정격점 복수 출력
+  reference_documents:
+  - REF-4S-01
+  - REF-4S-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-028.pdf
+  answer_path: data/synth/answers/SYN-028.answer.yaml
+  comparison_target: REG-4S-021
+- input_id: SYN-029
+  origin: synthetic
+  expected_class: FourStrokeEngine
+  split: dev
+  family_id: FAM-4S-DEV-02
+  product_id: PRODUCT-SYN-029
+  file_format: pdf
+  layout: mixed
+  primary_case: E4
+  authoring_focus: application에 합성 허용 목록 밖 experimental_service 명시
+  reference_documents:
+  - REF-4S-01
+  - REF-4S-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-029.pdf
+  answer_path: data/synth/answers/SYN-029.answer.yaml
+- input_id: SYN-030
+  origin: synthetic
+  expected_class: Separator
+  split: dev
+  family_id: FAM-SEP-DEV-02
+  product_id: PRODUCT-SYN-030
+  file_format: docx
+  layout: table
+  primary_case: E4
+  authoring_focus: application에 합성 허용 목록 밖 experimental_service 명시
+  reference_documents:
+  - REF-SEP-01
+  - REF-SEP-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-030.docx
+  answer_path: data/synth/answers/SYN-030.answer.yaml
+- input_id: SYN-031
+  origin: synthetic
+  expected_class: TwoStrokeMainEngine
+  split: dev
+  family_id: FAM-2S-DEV-01
+  product_id: PRODUCT-SYN-031
+  file_format: xlsx
+  layout: table
+  primary_case: E2
+  authoring_focus: rated_power 값에 회전수 단위 명시
+  reference_documents:
+  - REF-2S-01
+  - REF-2S-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-031.xlsx
+  answer_path: data/synth/answers/SYN-031.answer.yaml
+- input_id: SYN-032
+  origin: synthetic
+  expected_class: Separator
+  split: dev
+  family_id: FAM-SEP-DEV-01
+  product_id: PRODUCT-SYN-032
+  file_format: xlsx
+  layout: table
+  primary_case: normal
+  authoring_focus: 조건별 처리량 두 개; 연료 기준 점도와 투입 조건 구별
+  reference_documents:
+  - REF-SEP-01
+  - REF-SEP-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-032.xlsx
+  answer_path: data/synth/answers/SYN-032.answer.yaml
+- input_id: SYN-033
+  origin: synthetic
+  expected_class: AirCompressor
+  split: dev
+  family_id: FAM-COMP-DEV-01
+  product_id: PRODUCT-SYN-033
+  file_format: pdf
+  layout: mixed
+  primary_case: normal
+  authoring_focus: FAD와 기준 온도·절대압; 작동압과 분리
+  reference_documents:
+  - REF-COMP-01
+  - REF-COMP-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-033.pdf
+  answer_path: data/synth/answers/SYN-033.answer.yaml
+- input_id: SYN-034
+  origin: synthetic
+  expected_class: TwoStrokeMainEngine
+  split: dev
+  family_id: FAM-2S-DEV-02
+  product_id: REG-2S-009
+  file_format: pdf
+  layout: mixed
+  primary_case: E6
+  authoring_focus: 동일 등록 제품; 문서 자체의 bhp 정의를 명시
+  reference_documents:
+  - REF-2S-01
+  - REF-2S-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-034.pdf
+  answer_path: data/synth/answers/SYN-034.answer.yaml
+  comparison_target: REG-2S-009
+- input_id: SYN-035
+  origin: synthetic
+  expected_class: Separator
+  split: dev
+  family_id: FAM-SEP-DEV-02
+  product_id: PRODUCT-SYN-035
+  file_format: pdf
+  layout: mixed
+  primary_case: E7
+  authoring_focus: 같은 계열 다른 모델; 모듈 중량 포함 범위 명시
+  reference_documents:
+  - REF-SEP-01
+  - REF-SEP-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-035.pdf
+  answer_path: data/synth/answers/SYN-035.answer.yaml
+  comparison_target: REG-SEP-009
+- input_id: SYN-036
+  origin: synthetic
+  expected_class: AirCompressor
+  split: dev
+  family_id: FAM-COMP-DEV-01
+  product_id: PRODUCT-SYN-036
+  file_format: xlsx
+  layout: table
+  primary_case: E2
+  authoring_focus: motor_power 값에 압력 단위 명시
+  reference_documents:
+  - REF-COMP-01
+  - REF-COMP-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-036.xlsx
+  answer_path: data/synth/answers/SYN-036.answer.yaml
+- input_id: SYN-037
+  origin: synthetic
+  expected_class: Turbocharger
+  split: dev
+  family_id: FAM-TC-DEV-02
+  product_id: PRODUCT-SYN-037
+  file_format: xlsx
+  layout: table
+  primary_case: E5
+  authoring_focus: 같은 적용 조건의 엔진 출력 범위를 두 위치에 다르게 기재
+  reference_documents:
+  - REF-TC-01
+  - REF-TC-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-037.xlsx
+  answer_path: data/synth/answers/SYN-037.answer.yaml
+- input_id: SYN-038
+  origin: synthetic
+  expected_class: TwoStrokeMainEngine
+  split: dev
+  family_id: FAM-2S-DEV-02
+  product_id: PRODUCT-SYN-038
+  file_format: docx
+  layout: table
+  primary_case: E3
+  authoring_focus: number_of_cylinders에 비정수 기통 수; 시리즈 구성 범위는 정상 문맥(D-014), 범위에서 정수 추정 금지
+  reference_documents:
+  - REF-2S-01
+  - REF-2S-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-038.docx
+  answer_path: data/synth/answers/SYN-038.answer.yaml
+- input_id: SYN-039
+  origin: synthetic
+  expected_class: Turbocharger
+  split: test
+  family_id: FAM-TC-TEST-02
+  product_id: PRODUCT-SYN-039
+  file_format: pdf
+  layout: table
+  primary_case: E3
+  authoring_focus: 적용 출력 범위의 min > max를 명시; 임의 정렬 금지
+  reference_documents:
+  - REF-TC-01
+  - REF-TC-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-039.pdf
+  answer_path: data/synth/answers/SYN-039.answer.yaml
+- input_id: SYN-040
+  origin: synthetic
+  expected_class: FourStrokeEngine
+  split: test
+  family_id: FAM-4S-TEST-01
+  product_id: PRODUCT-SYN-040
+  file_format: xlsx
+  layout: table
+  primary_case: E4
+  authoring_focus: application에 합성 허용 목록 밖 experimental_service 명시
+  reference_documents:
+  - REF-4S-01
+  - REF-4S-02
+  variant_policy: V1 only from cited reference observations; record exact notation/page at authoring
+  generation_status: artifact_checked_candidate
+  reviewed_by: null
+  input_path: data/synth/inputs/SYN-040.xlsx
+  answer_path: data/synth/answers/SYN-040.answer.yaml
+registry_reservations:
+- registry_id: REG-PUMP-001
+  expected_class: Pump
+  split: dev
+  family_id: FAM-PUMP-DEV-01
+  status: planned
+- registry_id: REG-PUMP-002
+  expected_class: Pump
+  split: dev
+  family_id: FAM-PUMP-DEV-01
+  status: planned
+- registry_id: REG-PUMP-003
+  expected_class: Pump
+  split: dev
+  family_id: FAM-PUMP-DEV-01
+  status: planned
+- registry_id: REG-PUMP-004
+  expected_class: Pump
+  split: dev
+  family_id: FAM-PUMP-DEV-01
+  status: planned
+- registry_id: REG-PUMP-005
+  expected_class: Pump
+  split: dev
+  family_id: FAM-PUMP-DEV-01
+  status: planned
+- registry_id: REG-PUMP-006
+  expected_class: Pump
+  split: dev
+  family_id: FAM-PUMP-DEV-01
+  status: planned
+- registry_id: REG-PUMP-007
+  expected_class: Pump
+  split: dev
+  family_id: FAM-PUMP-DEV-01
+  status: planned
+- registry_id: REG-PUMP-008
+  expected_class: Pump
+  split: dev
+  family_id: FAM-PUMP-DEV-01
+  status: planned
+- registry_id: REG-PUMP-009
+  expected_class: Pump
+  split: dev
+  family_id: FAM-PUMP-DEV-02
+  status: planned
+- registry_id: REG-PUMP-010
+  expected_class: Pump
+  split: dev
+  family_id: FAM-PUMP-DEV-02
+  status: planned
+- registry_id: REG-PUMP-011
+  expected_class: Pump
+  split: dev
+  family_id: FAM-PUMP-DEV-02
+  status: planned
+- registry_id: REG-PUMP-012
+  expected_class: Pump
+  split: dev
+  family_id: FAM-PUMP-DEV-02
+  status: planned
+- registry_id: REG-PUMP-013
+  expected_class: Pump
+  split: dev
+  family_id: FAM-PUMP-DEV-02
+  status: planned
+- registry_id: REG-PUMP-014
+  expected_class: Pump
+  split: dev
+  family_id: FAM-PUMP-DEV-02
+  status: planned
+- registry_id: REG-PUMP-015
+  expected_class: Pump
+  split: dev
+  family_id: FAM-PUMP-DEV-02
+  status: planned
+- registry_id: REG-PUMP-016
+  expected_class: Pump
+  split: test
+  family_id: FAM-PUMP-TEST-01
+  status: planned
+- registry_id: REG-PUMP-017
+  expected_class: Pump
+  split: test
+  family_id: FAM-PUMP-TEST-01
+  status: planned
+- registry_id: REG-PUMP-018
+  expected_class: Pump
+  split: test
+  family_id: FAM-PUMP-TEST-01
+  status: planned
+- registry_id: REG-PUMP-019
+  expected_class: Pump
+  split: test
+  family_id: FAM-PUMP-TEST-01
+  status: planned
+- registry_id: REG-PUMP-020
+  expected_class: Pump
+  split: test
+  family_id: FAM-PUMP-TEST-01
+  status: planned
+- registry_id: REG-PUMP-021
+  expected_class: Pump
+  split: test
+  family_id: FAM-PUMP-TEST-02
+  status: planned
+- registry_id: REG-PUMP-022
+  expected_class: Pump
+  split: test
+  family_id: FAM-PUMP-TEST-02
+  status: planned
+- registry_id: REG-PUMP-023
+  expected_class: Pump
+  split: test
+  family_id: FAM-PUMP-TEST-02
+  status: planned
+- registry_id: REG-PUMP-024
+  expected_class: Pump
+  split: test
+  family_id: FAM-PUMP-TEST-02
+  status: planned
+- registry_id: REG-PUMP-025
+  expected_class: Pump
+  split: test
+  family_id: FAM-PUMP-TEST-02
+  status: planned
+- registry_id: REG-COMP-001
+  expected_class: AirCompressor
+  split: dev
+  family_id: FAM-COMP-DEV-01
+  status: planned
+- registry_id: REG-COMP-002
+  expected_class: AirCompressor
+  split: dev
+  family_id: FAM-COMP-DEV-01
+  status: planned
+- registry_id: REG-COMP-003
+  expected_class: AirCompressor
+  split: dev
+  family_id: FAM-COMP-DEV-01
+  status: planned
+- registry_id: REG-COMP-004
+  expected_class: AirCompressor
+  split: dev
+  family_id: FAM-COMP-DEV-01
+  status: planned
+- registry_id: REG-COMP-005
+  expected_class: AirCompressor
+  split: dev
+  family_id: FAM-COMP-DEV-01
+  status: planned
+- registry_id: REG-COMP-006
+  expected_class: AirCompressor
+  split: dev
+  family_id: FAM-COMP-DEV-01
+  status: planned
+- registry_id: REG-COMP-007
+  expected_class: AirCompressor
+  split: dev
+  family_id: FAM-COMP-DEV-01
+  status: planned
+- registry_id: REG-COMP-008
+  expected_class: AirCompressor
+  split: dev
+  family_id: FAM-COMP-DEV-01
+  status: planned
+- registry_id: REG-COMP-009
+  expected_class: AirCompressor
+  split: dev
+  family_id: FAM-COMP-DEV-02
+  status: planned
+- registry_id: REG-COMP-010
+  expected_class: AirCompressor
+  split: dev
+  family_id: FAM-COMP-DEV-02
+  status: planned
+- registry_id: REG-COMP-011
+  expected_class: AirCompressor
+  split: dev
+  family_id: FAM-COMP-DEV-02
+  status: planned
+- registry_id: REG-COMP-012
+  expected_class: AirCompressor
+  split: dev
+  family_id: FAM-COMP-DEV-02
+  status: planned
+- registry_id: REG-COMP-013
+  expected_class: AirCompressor
+  split: dev
+  family_id: FAM-COMP-DEV-02
+  status: planned
+- registry_id: REG-COMP-014
+  expected_class: AirCompressor
+  split: dev
+  family_id: FAM-COMP-DEV-02
+  status: planned
+- registry_id: REG-COMP-015
+  expected_class: AirCompressor
+  split: dev
+  family_id: FAM-COMP-DEV-02
+  status: planned
+- registry_id: REG-COMP-016
+  expected_class: AirCompressor
+  split: test
+  family_id: FAM-COMP-TEST-01
+  status: planned
+- registry_id: REG-COMP-017
+  expected_class: AirCompressor
+  split: test
+  family_id: FAM-COMP-TEST-01
+  status: planned
+- registry_id: REG-COMP-018
+  expected_class: AirCompressor
+  split: test
+  family_id: FAM-COMP-TEST-01
+  status: planned
+- registry_id: REG-COMP-019
+  expected_class: AirCompressor
+  split: test
+  family_id: FAM-COMP-TEST-01
+  status: planned
+- registry_id: REG-COMP-020
+  expected_class: AirCompressor
+  split: test
+  family_id: FAM-COMP-TEST-01
+  status: planned
+- registry_id: REG-COMP-021
+  expected_class: AirCompressor
+  split: test
+  family_id: FAM-COMP-TEST-02
+  status: planned
+- registry_id: REG-COMP-022
+  expected_class: AirCompressor
+  split: test
+  family_id: FAM-COMP-TEST-02
+  status: planned
+- registry_id: REG-COMP-023
+  expected_class: AirCompressor
+  split: test
+  family_id: FAM-COMP-TEST-02
+  status: planned
+- registry_id: REG-COMP-024
+  expected_class: AirCompressor
+  split: test
+  family_id: FAM-COMP-TEST-02
+  status: planned
+- registry_id: REG-COMP-025
+  expected_class: AirCompressor
+  split: test
+  family_id: FAM-COMP-TEST-02
+  status: planned
+- registry_id: REG-SEP-001
+  expected_class: Separator
+  split: dev
+  family_id: FAM-SEP-DEV-01
+  status: planned
+- registry_id: REG-SEP-002
+  expected_class: Separator
+  split: dev
+  family_id: FAM-SEP-DEV-01
+  status: planned
+- registry_id: REG-SEP-003
+  expected_class: Separator
+  split: dev
+  family_id: FAM-SEP-DEV-01
+  status: planned
+- registry_id: REG-SEP-004
+  expected_class: Separator
+  split: dev
+  family_id: FAM-SEP-DEV-01
+  status: planned
+- registry_id: REG-SEP-005
+  expected_class: Separator
+  split: dev
+  family_id: FAM-SEP-DEV-01
+  status: planned
+- registry_id: REG-SEP-006
+  expected_class: Separator
+  split: dev
+  family_id: FAM-SEP-DEV-01
+  status: planned
+- registry_id: REG-SEP-007
+  expected_class: Separator
+  split: dev
+  family_id: FAM-SEP-DEV-01
+  status: planned
+- registry_id: REG-SEP-008
+  expected_class: Separator
+  split: dev
+  family_id: FAM-SEP-DEV-01
+  status: planned
+- registry_id: REG-SEP-009
+  expected_class: Separator
+  split: dev
+  family_id: FAM-SEP-DEV-02
+  status: planned
+- registry_id: REG-SEP-010
+  expected_class: Separator
+  split: dev
+  family_id: FAM-SEP-DEV-02
+  status: planned
+- registry_id: REG-SEP-011
+  expected_class: Separator
+  split: dev
+  family_id: FAM-SEP-DEV-02
+  status: planned
+- registry_id: REG-SEP-012
+  expected_class: Separator
+  split: dev
+  family_id: FAM-SEP-DEV-02
+  status: planned
+- registry_id: REG-SEP-013
+  expected_class: Separator
+  split: dev
+  family_id: FAM-SEP-DEV-02
+  status: planned
+- registry_id: REG-SEP-014
+  expected_class: Separator
+  split: dev
+  family_id: FAM-SEP-DEV-02
+  status: planned
+- registry_id: REG-SEP-015
+  expected_class: Separator
+  split: dev
+  family_id: FAM-SEP-DEV-02
+  status: planned
+- registry_id: REG-SEP-016
+  expected_class: Separator
+  split: test
+  family_id: FAM-SEP-TEST-01
+  status: planned
+- registry_id: REG-SEP-017
+  expected_class: Separator
+  split: test
+  family_id: FAM-SEP-TEST-01
+  status: planned
+- registry_id: REG-SEP-018
+  expected_class: Separator
+  split: test
+  family_id: FAM-SEP-TEST-01
+  status: planned
+- registry_id: REG-SEP-019
+  expected_class: Separator
+  split: test
+  family_id: FAM-SEP-TEST-01
+  status: planned
+- registry_id: REG-SEP-020
+  expected_class: Separator
+  split: test
+  family_id: FAM-SEP-TEST-01
+  status: planned
+- registry_id: REG-SEP-021
+  expected_class: Separator
+  split: test
+  family_id: FAM-SEP-TEST-02
+  status: planned
+- registry_id: REG-SEP-022
+  expected_class: Separator
+  split: test
+  family_id: FAM-SEP-TEST-02
+  status: planned
+- registry_id: REG-SEP-023
+  expected_class: Separator
+  split: test
+  family_id: FAM-SEP-TEST-02
+  status: planned
+- registry_id: REG-SEP-024
+  expected_class: Separator
+  split: test
+  family_id: FAM-SEP-TEST-02
+  status: planned
+- registry_id: REG-SEP-025
+  expected_class: Separator
+  split: test
+  family_id: FAM-SEP-TEST-02
+  status: planned
+- registry_id: REG-4S-001
+  expected_class: FourStrokeEngine
+  split: dev
+  family_id: FAM-4S-DEV-01
+  status: planned
+- registry_id: REG-4S-002
+  expected_class: FourStrokeEngine
+  split: dev
+  family_id: FAM-4S-DEV-01
+  status: planned
+- registry_id: REG-4S-003
+  expected_class: FourStrokeEngine
+  split: dev
+  family_id: FAM-4S-DEV-01
+  status: planned
+- registry_id: REG-4S-004
+  expected_class: FourStrokeEngine
+  split: dev
+  family_id: FAM-4S-DEV-01
+  status: planned
+- registry_id: REG-4S-005
+  expected_class: FourStrokeEngine
+  split: dev
+  family_id: FAM-4S-DEV-01
+  status: planned
+- registry_id: REG-4S-006
+  expected_class: FourStrokeEngine
+  split: dev
+  family_id: FAM-4S-DEV-01
+  status: planned
+- registry_id: REG-4S-007
+  expected_class: FourStrokeEngine
+  split: dev
+  family_id: FAM-4S-DEV-01
+  status: planned
+- registry_id: REG-4S-008
+  expected_class: FourStrokeEngine
+  split: dev
+  family_id: FAM-4S-DEV-01
+  status: planned
+- registry_id: REG-4S-009
+  expected_class: FourStrokeEngine
+  split: dev
+  family_id: FAM-4S-DEV-02
+  status: planned
+- registry_id: REG-4S-010
+  expected_class: FourStrokeEngine
+  split: dev
+  family_id: FAM-4S-DEV-02
+  status: planned
+- registry_id: REG-4S-011
+  expected_class: FourStrokeEngine
+  split: dev
+  family_id: FAM-4S-DEV-02
+  status: planned
+- registry_id: REG-4S-012
+  expected_class: FourStrokeEngine
+  split: dev
+  family_id: FAM-4S-DEV-02
+  status: planned
+- registry_id: REG-4S-013
+  expected_class: FourStrokeEngine
+  split: dev
+  family_id: FAM-4S-DEV-02
+  status: planned
+- registry_id: REG-4S-014
+  expected_class: FourStrokeEngine
+  split: dev
+  family_id: FAM-4S-DEV-02
+  status: planned
+- registry_id: REG-4S-015
+  expected_class: FourStrokeEngine
+  split: dev
+  family_id: FAM-4S-DEV-02
+  status: planned
+- registry_id: REG-4S-016
+  expected_class: FourStrokeEngine
+  split: test
+  family_id: FAM-4S-TEST-01
+  status: planned
+- registry_id: REG-4S-017
+  expected_class: FourStrokeEngine
+  split: test
+  family_id: FAM-4S-TEST-01
+  status: planned
+- registry_id: REG-4S-018
+  expected_class: FourStrokeEngine
+  split: test
+  family_id: FAM-4S-TEST-01
+  status: planned
+- registry_id: REG-4S-019
+  expected_class: FourStrokeEngine
+  split: test
+  family_id: FAM-4S-TEST-01
+  status: planned
+- registry_id: REG-4S-020
+  expected_class: FourStrokeEngine
+  split: test
+  family_id: FAM-4S-TEST-01
+  status: planned
+- registry_id: REG-4S-021
+  expected_class: FourStrokeEngine
+  split: test
+  family_id: FAM-4S-TEST-02
+  status: planned
+- registry_id: REG-4S-022
+  expected_class: FourStrokeEngine
+  split: test
+  family_id: FAM-4S-TEST-02
+  status: planned
+- registry_id: REG-4S-023
+  expected_class: FourStrokeEngine
+  split: test
+  family_id: FAM-4S-TEST-02
+  status: planned
+- registry_id: REG-4S-024
+  expected_class: FourStrokeEngine
+  split: test
+  family_id: FAM-4S-TEST-02
+  status: planned
+- registry_id: REG-4S-025
+  expected_class: FourStrokeEngine
+  split: test
+  family_id: FAM-4S-TEST-02
+  status: planned
+- registry_id: REG-2S-001
+  expected_class: TwoStrokeMainEngine
+  split: dev
+  family_id: FAM-2S-DEV-01
+  status: planned
+- registry_id: REG-2S-002
+  expected_class: TwoStrokeMainEngine
+  split: dev
+  family_id: FAM-2S-DEV-01
+  status: planned
+- registry_id: REG-2S-003
+  expected_class: TwoStrokeMainEngine
+  split: dev
+  family_id: FAM-2S-DEV-01
+  status: planned
+- registry_id: REG-2S-004
+  expected_class: TwoStrokeMainEngine
+  split: dev
+  family_id: FAM-2S-DEV-01
+  status: planned
+- registry_id: REG-2S-005
+  expected_class: TwoStrokeMainEngine
+  split: dev
+  family_id: FAM-2S-DEV-01
+  status: planned
+- registry_id: REG-2S-006
+  expected_class: TwoStrokeMainEngine
+  split: dev
+  family_id: FAM-2S-DEV-01
+  status: planned
+- registry_id: REG-2S-007
+  expected_class: TwoStrokeMainEngine
+  split: dev
+  family_id: FAM-2S-DEV-01
+  status: planned
+- registry_id: REG-2S-008
+  expected_class: TwoStrokeMainEngine
+  split: dev
+  family_id: FAM-2S-DEV-01
+  status: planned
+- registry_id: REG-2S-009
+  expected_class: TwoStrokeMainEngine
+  split: dev
+  family_id: FAM-2S-DEV-02
+  status: planned
+- registry_id: REG-2S-010
+  expected_class: TwoStrokeMainEngine
+  split: dev
+  family_id: FAM-2S-DEV-02
+  status: planned
+- registry_id: REG-2S-011
+  expected_class: TwoStrokeMainEngine
+  split: dev
+  family_id: FAM-2S-DEV-02
+  status: planned
+- registry_id: REG-2S-012
+  expected_class: TwoStrokeMainEngine
+  split: dev
+  family_id: FAM-2S-DEV-02
+  status: planned
+- registry_id: REG-2S-013
+  expected_class: TwoStrokeMainEngine
+  split: dev
+  family_id: FAM-2S-DEV-02
+  status: planned
+- registry_id: REG-2S-014
+  expected_class: TwoStrokeMainEngine
+  split: dev
+  family_id: FAM-2S-DEV-02
+  status: planned
+- registry_id: REG-2S-015
+  expected_class: TwoStrokeMainEngine
+  split: dev
+  family_id: FAM-2S-DEV-02
+  status: planned
+- registry_id: REG-2S-016
+  expected_class: TwoStrokeMainEngine
+  split: test
+  family_id: FAM-2S-TEST-01
+  status: planned
+- registry_id: REG-2S-017
+  expected_class: TwoStrokeMainEngine
+  split: test
+  family_id: FAM-2S-TEST-01
+  status: planned
+- registry_id: REG-2S-018
+  expected_class: TwoStrokeMainEngine
+  split: test
+  family_id: FAM-2S-TEST-01
+  status: planned
+- registry_id: REG-2S-019
+  expected_class: TwoStrokeMainEngine
+  split: test
+  family_id: FAM-2S-TEST-01
+  status: planned
+- registry_id: REG-2S-020
+  expected_class: TwoStrokeMainEngine
+  split: test
+  family_id: FAM-2S-TEST-01
+  status: planned
+- registry_id: REG-2S-021
+  expected_class: TwoStrokeMainEngine
+  split: test
+  family_id: FAM-2S-TEST-02
+  status: planned
+- registry_id: REG-2S-022
+  expected_class: TwoStrokeMainEngine
+  split: test
+  family_id: FAM-2S-TEST-02
+  status: planned
+- registry_id: REG-2S-023
+  expected_class: TwoStrokeMainEngine
+  split: test
+  family_id: FAM-2S-TEST-02
+  status: planned
+- registry_id: REG-2S-024
+  expected_class: TwoStrokeMainEngine
+  split: test
+  family_id: FAM-2S-TEST-02
+  status: planned
+- registry_id: REG-2S-025
+  expected_class: TwoStrokeMainEngine
+  split: test
+  family_id: FAM-2S-TEST-02
+  status: planned
+- registry_id: REG-TC-001
+  expected_class: Turbocharger
+  split: dev
+  family_id: FAM-TC-DEV-01
+  status: planned
+- registry_id: REG-TC-002
+  expected_class: Turbocharger
+  split: dev
+  family_id: FAM-TC-DEV-01
+  status: planned
+- registry_id: REG-TC-003
+  expected_class: Turbocharger
+  split: dev
+  family_id: FAM-TC-DEV-01
+  status: planned
+- registry_id: REG-TC-004
+  expected_class: Turbocharger
+  split: dev
+  family_id: FAM-TC-DEV-01
+  status: planned
+- registry_id: REG-TC-005
+  expected_class: Turbocharger
+  split: dev
+  family_id: FAM-TC-DEV-01
+  status: planned
+- registry_id: REG-TC-006
+  expected_class: Turbocharger
+  split: dev
+  family_id: FAM-TC-DEV-01
+  status: planned
+- registry_id: REG-TC-007
+  expected_class: Turbocharger
+  split: dev
+  family_id: FAM-TC-DEV-01
+  status: planned
+- registry_id: REG-TC-008
+  expected_class: Turbocharger
+  split: dev
+  family_id: FAM-TC-DEV-01
+  status: planned
+- registry_id: REG-TC-009
+  expected_class: Turbocharger
+  split: dev
+  family_id: FAM-TC-DEV-02
+  status: planned
+- registry_id: REG-TC-010
+  expected_class: Turbocharger
+  split: dev
+  family_id: FAM-TC-DEV-02
+  status: planned
+- registry_id: REG-TC-011
+  expected_class: Turbocharger
+  split: dev
+  family_id: FAM-TC-DEV-02
+  status: planned
+- registry_id: REG-TC-012
+  expected_class: Turbocharger
+  split: dev
+  family_id: FAM-TC-DEV-02
+  status: planned
+- registry_id: REG-TC-013
+  expected_class: Turbocharger
+  split: dev
+  family_id: FAM-TC-DEV-02
+  status: planned
+- registry_id: REG-TC-014
+  expected_class: Turbocharger
+  split: dev
+  family_id: FAM-TC-DEV-02
+  status: planned
+- registry_id: REG-TC-015
+  expected_class: Turbocharger
+  split: dev
+  family_id: FAM-TC-DEV-02
+  status: planned
+- registry_id: REG-TC-016
+  expected_class: Turbocharger
+  split: test
+  family_id: FAM-TC-TEST-01
+  status: planned
+- registry_id: REG-TC-017
+  expected_class: Turbocharger
+  split: test
+  family_id: FAM-TC-TEST-01
+  status: planned
+- registry_id: REG-TC-018
+  expected_class: Turbocharger
+  split: test
+  family_id: FAM-TC-TEST-01
+  status: planned
+- registry_id: REG-TC-019
+  expected_class: Turbocharger
+  split: test
+  family_id: FAM-TC-TEST-01
+  status: planned
+- registry_id: REG-TC-020
+  expected_class: Turbocharger
+  split: test
+  family_id: FAM-TC-TEST-01
+  status: planned
+- registry_id: REG-TC-021
+  expected_class: Turbocharger
+  split: test
+  family_id: FAM-TC-TEST-02
+  status: planned
+- registry_id: REG-TC-022
+  expected_class: Turbocharger
+  split: test
+  family_id: FAM-TC-TEST-02
+  status: planned
+- registry_id: REG-TC-023
+  expected_class: Turbocharger
+  split: test
+  family_id: FAM-TC-TEST-02
+  status: planned
+- registry_id: REG-TC-024
+  expected_class: Turbocharger
+  split: test
+  family_id: FAM-TC-TEST-02
+  status: planned
+- registry_id: REG-TC-025
+  expected_class: Turbocharger
+  split: test
+  family_id: FAM-TC-TEST-02
+  status: planned
+comparison_pairs:
+- input_id: SYN-005
+  registry_id: REG-PUMP-009
+  family_id: FAM-PUMP-DEV-02
+  split: dev
+  expected_relation: duplicate
+  status: planned
+- input_id: SYN-019
+  registry_id: REG-PUMP-009
+  family_id: FAM-PUMP-DEV-02
+  split: dev
+  expected_relation: similar
+  status: planned
+- input_id: SYN-004
+  registry_id: REG-COMP-009
+  family_id: FAM-COMP-DEV-02
+  split: dev
+  expected_relation: duplicate
+  status: planned
+- input_id: SYN-021
+  registry_id: REG-COMP-021
+  family_id: FAM-COMP-TEST-02
+  split: test
+  expected_relation: similar
+  status: planned
+- input_id: SYN-035
+  registry_id: REG-SEP-009
+  family_id: FAM-SEP-DEV-02
+  split: dev
+  expected_relation: similar
+  status: planned
+- input_id: SYN-025
+  registry_id: REG-SEP-021
+  family_id: FAM-SEP-TEST-02
+  split: test
+  expected_relation: duplicate
+  status: planned
+- input_id: SYN-020
+  registry_id: REG-4S-021
+  family_id: FAM-4S-TEST-02
+  split: test
+  expected_relation: duplicate
+  status: planned
+- input_id: SYN-028
+  registry_id: REG-4S-021
+  family_id: FAM-4S-TEST-02
+  split: test
+  expected_relation: similar
+  status: planned
+- input_id: SYN-034
+  registry_id: REG-2S-009
+  family_id: FAM-2S-DEV-02
+  split: dev
+  expected_relation: duplicate
+  status: planned
+- input_id: SYN-003
+  registry_id: REG-TC-009
+  family_id: FAM-TC-DEV-02
+  split: dev
+  expected_relation: duplicate
+  status: planned
+bom_reservations:
+- bom_id: BOM-001
+  split: dev
+  root_registry_id: REG-2S-001
+  root_class: TwoStrokeMainEngine
+  component_registry_ids:
+  - REG-TC-002
+  - REG-PUMP-001
+  - REG-SEP-001
+  status: planned
+  origin: synthetic
+  note: synthetic assembly association; no real equipment compatibility claim
+- bom_id: BOM-002
+  split: test
+  root_registry_id: REG-2S-016
+  root_class: TwoStrokeMainEngine
+  component_registry_ids:
+  - REG-TC-017
+  - REG-PUMP-016
+  - REG-SEP-016
+  status: planned
+  origin: synthetic
+  note: synthetic assembly association; no real equipment compatibility claim
+- bom_id: BOM-003
+  split: dev
+  root_registry_id: REG-4S-001
+  root_class: FourStrokeEngine
+  component_registry_ids:
+  - REG-TC-010
+  - REG-PUMP-001
+  - REG-SEP-001
+  status: planned
+  origin: synthetic
+  note: synthetic assembly association; no real equipment compatibility claim
+- bom_id: BOM-004
+  split: test
+  root_registry_id: REG-4S-016
+  root_class: FourStrokeEngine
+  component_registry_ids:
+  - REG-TC-022
+  - REG-PUMP-016
+  - REG-SEP-016
+  status: planned
+  origin: synthetic
+  note: synthetic assembly association; no real equipment compatibility claim
+pending:
+- write document bodies and independent evidence-based answer annotations
+- create synthetic maker/model catalogue and check real-name collision
+- record V1 notation and source pages from reference observations
+- finalize main-set scoring including invalid raw observations and relation labels
+- render PDF/Excel/DOCX and annotate real source locations
+- manually review artifacts, hash/freeze split and create dataset review package

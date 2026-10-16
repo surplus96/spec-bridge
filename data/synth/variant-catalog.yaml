@@ -1,0 +1,480 @@
+version: 2
+origin: synthetic
+policy: exact notation occurrence references; no general verified semantic aliases
+  asserted
+reviewed_by: null
+occurrences:
+- input_id: SYN-001
+  observation_id: O007
+  notation: Dimensions
+  document_id: REF-COMP-01
+  pdf_page: 10
+  context_suffix_origin: synthetic
+- input_id: SYN-002
+  observation_id: O004
+  notation: 'Bore:'
+  document_id: REF-2S-02
+  pdf_page: 26
+  context_suffix_origin: synthetic
+- input_id: SYN-002
+  observation_id: O005
+  notation: 'Stroke:'
+  document_id: REF-2S-02
+  pdf_page: 26
+  context_suffix_origin: synthetic
+- input_id: SYN-002
+  observation_id: O006
+  notation: Power [kW]
+  document_id: REF-2S-02
+  pdf_page: 29
+  context_suffix_origin: synthetic
+- input_id: SYN-002
+  observation_id: O010
+  notation: Power [kW]
+  document_id: REF-2S-02
+  pdf_page: 29
+  context_suffix_origin: synthetic
+- input_id: SYN-003
+  observation_id: O004
+  notation: Four-stroke (kW)
+  document_id: REF-TC-01
+  pdf_page: 2
+  context_suffix_origin: synthetic
+- input_id: SYN-003
+  observation_id: O007
+  notation: Weight (kg)
+  document_id: REF-TC-01
+  pdf_page: 2
+  context_suffix_origin: synthetic
+- input_id: SYN-003
+  observation_id: O008
+  notation: Four-stroke (kW)
+  document_id: REF-TC-01
+  pdf_page: 2
+  context_suffix_origin: synthetic
+- input_id: SYN-004
+  observation_id: O003
+  notation: FAD*
+  document_id: REF-COMP-01
+  pdf_page: 10
+  context_suffix_origin: synthetic
+- input_id: SYN-004
+  observation_id: O008
+  notation: Dimensions
+  document_id: REF-COMP-01
+  pdf_page: 10
+  context_suffix_origin: synthetic
+- input_id: SYN-004
+  observation_id: O010
+  notation: FAD*
+  document_id: REF-COMP-01
+  pdf_page: 10
+  context_suffix_origin: synthetic
+- input_id: SYN-008
+  observation_id: O006
+  notation: Weight (kg)
+  document_id: REF-TC-01
+  pdf_page: 2
+  context_suffix_origin: synthetic
+- input_id: SYN-009
+  observation_id: O005
+  notation: Head
+  document_id: REF-PUMP-02
+  pdf_page: 3
+  context_suffix_origin: synthetic
+- input_id: SYN-010
+  observation_id: O003
+  notation: 'Number of cylinders:'
+  document_id: REF-2S-02
+  pdf_page: 26
+  context_suffix_origin: synthetic
+- input_id: SYN-010
+  observation_id: O004
+  notation: 'Bore:'
+  document_id: REF-2S-02
+  pdf_page: 26
+  context_suffix_origin: synthetic
+- input_id: SYN-010
+  observation_id: O005
+  notation: 'Stroke:'
+  document_id: REF-2S-02
+  pdf_page: 26
+  context_suffix_origin: synthetic
+- input_id: SYN-010
+  observation_id: O006
+  notation: Power [kW]
+  document_id: REF-2S-02
+  pdf_page: 29
+  context_suffix_origin: synthetic
+- input_id: SYN-010
+  observation_id: O007
+  notation: Speed [rpm]
+  document_id: REF-2S-02
+  pdf_page: 29
+  context_suffix_origin: synthetic
+- input_id: SYN-010
+  observation_id: O011
+  notation: Power [kW]
+  document_id: REF-2S-02
+  pdf_page: 29
+  context_suffix_origin: synthetic
+- input_id: SYN-011
+  observation_id: O003
+  notation: Number of cylinder
+  document_id: REF-4S-02
+  pdf_page: 10
+  context_suffix_origin: synthetic
+- input_id: SYN-011
+  observation_id: O004
+  notation: Cylinder bore mm
+  document_id: REF-4S-02
+  pdf_page: 10
+  context_suffix_origin: synthetic
+- input_id: SYN-011
+  observation_id: O007
+  notation: Engine (kWm)
+  document_id: REF-4S-02
+  pdf_page: 18
+  context_suffix_origin: synthetic
+- input_id: SYN-012
+  observation_id: O004
+  notation: Cylinder bore mm
+  document_id: REF-4S-02
+  pdf_page: 10
+  context_suffix_origin: synthetic
+- input_id: SYN-012
+  observation_id: O005
+  notation: Piston stroke mm
+  document_id: REF-4S-02
+  pdf_page: 10
+  context_suffix_origin: synthetic
+- input_id: SYN-012
+  observation_id: O007
+  notation: Engine (kWm)
+  document_id: REF-4S-02
+  pdf_page: 18
+  context_suffix_origin: synthetic
+- input_id: SYN-013
+  observation_id: O004
+  notation: 'Bore:'
+  document_id: REF-2S-02
+  pdf_page: 26
+  context_suffix_origin: synthetic
+- input_id: SYN-013
+  observation_id: O005
+  notation: 'Stroke:'
+  document_id: REF-2S-02
+  pdf_page: 26
+  context_suffix_origin: synthetic
+- input_id: SYN-014
+  observation_id: O004
+  notation: Engine Output Range per Turbocharger
+  document_id: REF-TC-02
+  pdf_page: 8
+  context_suffix_origin: synthetic
+- input_id: SYN-014
+  observation_id: O008
+  notation: Engine Output Range per Turbocharger
+  document_id: REF-TC-02
+  pdf_page: 8
+  context_suffix_origin: synthetic
+- input_id: SYN-015
+  observation_id: O005
+  notation: Head
+  document_id: REF-PUMP-02
+  pdf_page: 3
+  context_suffix_origin: synthetic
+- input_id: SYN-016
+  observation_id: O008
+  notation: Dimensions
+  document_id: REF-COMP-01
+  pdf_page: 10
+  context_suffix_origin: synthetic
+- input_id: SYN-017
+  observation_id: O004
+  notation: Two-stroke (kW)
+  document_id: REF-TC-01
+  pdf_page: 2
+  context_suffix_origin: synthetic
+- input_id: SYN-017
+  observation_id: O007
+  notation: Weight (kg)
+  document_id: REF-TC-01
+  pdf_page: 2
+  context_suffix_origin: synthetic
+- input_id: SYN-017
+  observation_id: O008
+  notation: Two-stroke (kW)
+  document_id: REF-TC-01
+  pdf_page: 2
+  context_suffix_origin: synthetic
+- input_id: SYN-018
+  observation_id: O004
+  notation: nominal flow rate
+  document_id: REF-PUMP-01
+  pdf_page: 3
+  context_suffix_origin: synthetic
+- input_id: SYN-018
+  observation_id: O005
+  notation: Head
+  document_id: REF-PUMP-02
+  pdf_page: 3
+  context_suffix_origin: synthetic
+- input_id: SYN-020
+  observation_id: O003
+  notation: Number of cylinder
+  document_id: REF-4S-02
+  pdf_page: 10
+  context_suffix_origin: synthetic
+- input_id: SYN-020
+  observation_id: O004
+  notation: Cylinder bore mm
+  document_id: REF-4S-02
+  pdf_page: 10
+  context_suffix_origin: synthetic
+- input_id: SYN-020
+  observation_id: O005
+  notation: Piston stroke mm
+  document_id: REF-4S-02
+  pdf_page: 10
+  context_suffix_origin: synthetic
+- input_id: SYN-020
+  observation_id: O007
+  notation: Engine (kWm)
+  document_id: REF-4S-02
+  pdf_page: 18
+  context_suffix_origin: synthetic
+- input_id: SYN-020
+  observation_id: O008
+  notation: Engine (kWm)
+  document_id: REF-4S-02
+  pdf_page: 18
+  context_suffix_origin: synthetic
+- input_id: SYN-025
+  observation_id: O005
+  notation: Max. recommended capacity
+  document_id: REF-SEP-01
+  pdf_page: 4
+  context_suffix_origin: synthetic
+- input_id: SYN-025
+  observation_id: O006
+  notation: Max. recommended capacity
+  document_id: REF-SEP-01
+  pdf_page: 4
+  context_suffix_origin: synthetic
+- input_id: SYN-025
+  observation_id: O011
+  notation: Max. recommended capacity
+  document_id: REF-SEP-01
+  pdf_page: 4
+  context_suffix_origin: synthetic
+- input_id: SYN-026
+  observation_id: O006
+  notation: Engine (kWm)
+  document_id: REF-4S-02
+  pdf_page: 18
+  context_suffix_origin: synthetic
+- input_id: SYN-027
+  observation_id: O003
+  notation: FAD*
+  document_id: REF-COMP-01
+  pdf_page: 10
+  context_suffix_origin: synthetic
+- input_id: SYN-028
+  observation_id: O003
+  notation: Number of cylinder
+  document_id: REF-4S-02
+  pdf_page: 10
+  context_suffix_origin: synthetic
+- input_id: SYN-028
+  observation_id: O007
+  notation: Engine (kWm)
+  document_id: REF-4S-02
+  pdf_page: 18
+  context_suffix_origin: synthetic
+- input_id: SYN-028
+  observation_id: O008
+  notation: Engine (kWm)
+  document_id: REF-4S-02
+  pdf_page: 18
+  context_suffix_origin: synthetic
+- input_id: SYN-029
+  observation_id: O003
+  notation: Number of cylinder
+  document_id: REF-4S-02
+  pdf_page: 10
+  context_suffix_origin: synthetic
+- input_id: SYN-029
+  observation_id: O004
+  notation: Cylinder bore mm
+  document_id: REF-4S-02
+  pdf_page: 10
+  context_suffix_origin: synthetic
+- input_id: SYN-029
+  observation_id: O007
+  notation: Engine (kWm)
+  document_id: REF-4S-02
+  pdf_page: 18
+  context_suffix_origin: synthetic
+- input_id: SYN-031
+  observation_id: O003
+  notation: 'Number of cylinders:'
+  document_id: REF-2S-02
+  pdf_page: 26
+  context_suffix_origin: synthetic
+- input_id: SYN-031
+  observation_id: O004
+  notation: 'Bore:'
+  document_id: REF-2S-02
+  pdf_page: 26
+  context_suffix_origin: synthetic
+- input_id: SYN-031
+  observation_id: O005
+  notation: 'Stroke:'
+  document_id: REF-2S-02
+  pdf_page: 26
+  context_suffix_origin: synthetic
+- input_id: SYN-032
+  observation_id: O005
+  notation: Max. recommended capacity
+  document_id: REF-SEP-01
+  pdf_page: 4
+  context_suffix_origin: synthetic
+- input_id: SYN-032
+  observation_id: O006
+  notation: Max. recommended capacity
+  document_id: REF-SEP-01
+  pdf_page: 4
+  context_suffix_origin: synthetic
+- input_id: SYN-032
+  observation_id: O011
+  notation: Max. recommended capacity
+  document_id: REF-SEP-01
+  pdf_page: 4
+  context_suffix_origin: synthetic
+- input_id: SYN-033
+  observation_id: O003
+  notation: FAD*
+  document_id: REF-COMP-01
+  pdf_page: 10
+  context_suffix_origin: synthetic
+- input_id: SYN-033
+  observation_id: O010
+  notation: FAD*
+  document_id: REF-COMP-01
+  pdf_page: 10
+  context_suffix_origin: synthetic
+- input_id: SYN-034
+  observation_id: O004
+  notation: 'Bore:'
+  document_id: REF-2S-02
+  pdf_page: 26
+  context_suffix_origin: synthetic
+- input_id: SYN-034
+  observation_id: O005
+  notation: 'Stroke:'
+  document_id: REF-2S-02
+  pdf_page: 26
+  context_suffix_origin: synthetic
+- input_id: SYN-034
+  observation_id: O006
+  notation: Power [kW]
+  document_id: REF-2S-02
+  pdf_page: 29
+  context_suffix_origin: synthetic
+- input_id: SYN-034
+  observation_id: O011
+  notation: Power [kW]
+  document_id: REF-2S-02
+  pdf_page: 29
+  context_suffix_origin: synthetic
+- input_id: SYN-035
+  observation_id: O005
+  notation: Max. recommended capacity
+  document_id: REF-SEP-01
+  pdf_page: 4
+  context_suffix_origin: synthetic
+- input_id: SYN-035
+  observation_id: O006
+  notation: Max. recommended capacity
+  document_id: REF-SEP-01
+  pdf_page: 4
+  context_suffix_origin: synthetic
+- input_id: SYN-035
+  observation_id: O011
+  notation: Max. recommended capacity
+  document_id: REF-SEP-01
+  pdf_page: 4
+  context_suffix_origin: synthetic
+- input_id: SYN-036
+  observation_id: O003
+  notation: FAD*
+  document_id: REF-COMP-01
+  pdf_page: 10
+  context_suffix_origin: synthetic
+- input_id: SYN-036
+  observation_id: O010
+  notation: FAD*
+  document_id: REF-COMP-01
+  pdf_page: 10
+  context_suffix_origin: synthetic
+- input_id: SYN-037
+  observation_id: O004
+  notation: Engine Output Range per Turbocharger
+  document_id: REF-TC-02
+  pdf_page: 8
+  context_suffix_origin: synthetic
+- input_id: SYN-037
+  observation_id: O008
+  notation: Engine Output Range per Turbocharger
+  document_id: REF-TC-02
+  pdf_page: 8
+  context_suffix_origin: synthetic
+- input_id: SYN-038
+  observation_id: O003
+  notation: 'Number of cylinders:'
+  document_id: REF-2S-02
+  pdf_page: 26
+  context_suffix_origin: synthetic
+- input_id: SYN-038
+  observation_id: O004
+  notation: 'Bore:'
+  document_id: REF-2S-02
+  pdf_page: 26
+  context_suffix_origin: synthetic
+- input_id: SYN-038
+  observation_id: O005
+  notation: 'Stroke:'
+  document_id: REF-2S-02
+  pdf_page: 26
+  context_suffix_origin: synthetic
+- input_id: SYN-039
+  observation_id: O004
+  notation: Four-stroke (kW)
+  document_id: REF-TC-01
+  pdf_page: 2
+  context_suffix_origin: synthetic
+- input_id: SYN-040
+  observation_id: O003
+  notation: Number of cylinder
+  document_id: REF-4S-02
+  pdf_page: 10
+  context_suffix_origin: synthetic
+- input_id: SYN-040
+  observation_id: O004
+  notation: Cylinder bore mm
+  document_id: REF-4S-02
+  pdf_page: 10
+  context_suffix_origin: synthetic
+- input_id: SYN-040
+  observation_id: O005
+  notation: Piston stroke mm
+  document_id: REF-4S-02
+  pdf_page: 10
+  context_suffix_origin: synthetic
+- input_id: SYN-040
+  observation_id: O007
+  notation: Engine (kWm)
+  document_id: REF-4S-02
+  pdf_page: 18
+  context_suffix_origin: synthetic

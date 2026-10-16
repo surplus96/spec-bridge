@@ -1,0 +1,554 @@
+{
+  "prediction": {
+    "document_id": "DOC-002",
+    "class_id": "AirCompressor",
+    "class_candidates": [],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "Brekkhaug Marine AS",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-002",
+            "raw_text": "Brekkhaug Marine AS",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "1. General",
+              "paragraph": 7,
+              "line": 7
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "BKA-85/30",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-002",
+            "raw_text": "BKA-85/30",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "1. General",
+              "paragraph": 8,
+              "line": 8
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "cooling_type",
+        "value": "air",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-002",
+            "raw_text": "Air",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "2. Main Technical Data",
+              "table": 1,
+              "row": 5,
+              "column": 2,
+              "line": 20
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "air",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-002",
+            "raw_text": "Air",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "2. Main Technical Data",
+              "table": 1,
+              "row": 6,
+              "column": 2,
+              "line": 21
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "motor_power",
+        "value": 22,
+        "unit": "kW",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-002",
+            "raw_text": "22",
+            "label_text": null,
+            "unit_text": "kW",
+            "location": {
+              "section": "2. Main Technical Data",
+              "table": 1,
+              "row": 7,
+              "column": 2,
+              "line": 22
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "capacity",
+        "value": 85,
+        "unit": "m3/h",
+        "basis": {
+          "capacity": "free_air_delivery"
+        },
+        "condition": {
+          "absolute_pressure": {
+            "value": 1013,
+            "unit": "mbar"
+          }
+        },
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-002",
+            "raw_text": "85",
+            "label_text": null,
+            "unit_text": "m3/h",
+            "location": {
+              "section": "2. Main Technical Data",
+              "table": 1,
+              "row": 3,
+              "column": 2,
+              "line": 18
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 610,
+        "unit": "kg",
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-002",
+            "raw_text": "610",
+            "label_text": null,
+            "unit_text": "kg",
+            "location": {
+              "section": "4. Dimensions and Weight",
+              "paragraph": 30,
+              "line": 30
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [
+      {
+        "attribute": "max_pressure",
+        "value_text": "30",
+        "unit_text": "barg",
+        "reason": "unknown_unit",
+        "occurrence": {
+          "source_document_id": "DOC-002",
+          "raw_text": "30",
+          "label_text": null,
+          "unit_text": "barg",
+          "location": {
+            "section": "2. Main Technical Data",
+            "table": 1,
+            "row": 4,
+            "column": 2,
+            "line": 19
+          }
+        }
+      },
+      {
+        "attribute": "working_pressure",
+        "value_text": "30",
+        "unit_text": "barg",
+        "reason": "unknown_unit",
+        "occurrence": {
+          "source_document_id": "DOC-002",
+          "raw_text": "30",
+          "label_text": null,
+          "unit_text": "barg",
+          "location": {
+            "section": "2. Main Technical Data",
+            "table": 1,
+            "row": 4,
+            "column": 2,
+            "line": 19
+          }
+        }
+      },
+      {
+        "attribute": "dimensions",
+        "value_text": "1,350 × 850 × 1,050 mm",
+        "unit_text": null,
+        "reason": "missing_unit",
+        "occurrence": {
+          "source_document_id": "DOC-002",
+          "raw_text": "1,350 × 850 × 1,050 mm",
+          "label_text": null,
+          "unit_text": null,
+          "location": {
+            "section": "4. Dimensions and Weight",
+            "paragraph": 29,
+            "line": 29
+          }
+        }
+      }
+    ],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "line": "L6",
+        "value_text": "Brekkhaug Marine AS",
+        "unit_text": null
+      },
+      {
+        "attribute": "model_designation",
+        "line": "L7",
+        "value_text": "BKA-85/30",
+        "unit_text": null
+      },
+      {
+        "attribute": "max_pressure",
+        "line": "L15",
+        "value_text": "30",
+        "unit_text": "barg"
+      },
+      {
+        "attribute": "working_pressure",
+        "line": "L15",
+        "value_text": "30",
+        "unit_text": "barg"
+      },
+      {
+        "attribute": "cooling_type",
+        "line": "L16",
+        "value_text": "Air",
+        "unit_text": null
+      },
+      {
+        "attribute": "medium",
+        "line": "L17",
+        "value_text": "Air",
+        "unit_text": null
+      },
+      {
+        "attribute": "motor_power",
+        "line": "L18",
+        "value_text": "22",
+        "unit_text": "kW"
+      },
+      {
+        "attribute": "capacity",
+        "line": "L14",
+        "value_text": "85",
+        "unit_text": "m3/h"
+      },
+      {
+        "attribute": "dimensions",
+        "line": "L23",
+        "value_text": "1,350 × 850 × 1,050 mm",
+        "unit_text": null
+      },
+      {
+        "attribute": "dry_weight",
+        "line": "L24",
+        "value_text": "610",
+        "unit_text": "kg"
+      }
+    ]
+  },
+  "qualifiers": [
+    {
+      "kind": "value",
+      "attribute": "maker",
+      "value_text": "Brekkhaug Marine AS",
+      "location": {
+        "section": "1. General",
+        "paragraph": 7,
+        "line": 7
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.temperature: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "model_designation",
+      "value_text": "BKA-85/30",
+      "location": {
+        "section": "1. General",
+        "paragraph": 8,
+        "line": 8
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.pressure: evidence not in the line",
+        "condition.medium: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "max_pressure",
+      "value_text": "30",
+      "location": {
+        "section": "2. Main Technical Data",
+        "table": 1,
+        "row": 4,
+        "column": 2,
+        "line": 19
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.temperature: number not in the line",
+        "condition.viscosity: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "working_pressure",
+      "value_text": "30",
+      "location": {
+        "section": "2. Main Technical Data",
+        "table": 1,
+        "row": 4,
+        "column": 2,
+        "line": 19
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.temperature: number not in the line",
+        "condition.viscosity: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "cooling_type",
+      "value_text": "Air",
+      "location": {
+        "section": "2. Main Technical Data",
+        "table": 1,
+        "row": 5,
+        "column": 2,
+        "line": 20
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.temperature: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "medium",
+      "value_text": "Air",
+      "location": {
+        "section": "2. Main Technical Data",
+        "table": 1,
+        "row": 6,
+        "column": 2,
+        "line": 21
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.temperature: number not in the line",
+        "condition.viscosity: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "motor_power",
+      "value_text": "22",
+      "location": {
+        "section": "2. Main Technical Data",
+        "table": 1,
+        "row": 7,
+        "column": 2,
+        "line": 22
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.temperature: number not in the line",
+        "condition.viscosity: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "capacity",
+      "value_text": "85",
+      "location": {
+        "section": "2. Main Technical Data",
+        "table": 1,
+        "row": 3,
+        "column": 2,
+        "line": 18
+      },
+      "qualifiers": {
+        "basis": {
+          "capacity": "free_air_delivery"
+        },
+        "condition": {
+          "absolute_pressure": "1,013 mbar(a)"
+        },
+        "scope": ""
+      },
+      "evidence": {
+        "basis.capacity": "Free air delivery (FAD)",
+        "condition.absolute_pressure": "1,013 mbar(a)"
+      },
+      "rejected": [
+        "condition.temperature: wrong unit or form",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "dimensions",
+      "value_text": "1,350 × 850 × 1,050 mm",
+      "location": {
+        "section": "4. Dimensions and Weight",
+        "paragraph": 29,
+        "line": 29
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.basis: no evidence",
+        "condition.frequency: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "dry_weight",
+      "value_text": "610",
+      "location": {
+        "section": "4. Dimensions and Weight",
+        "paragraph": 30,
+        "line": 30
+      },
+      "qualifiers": {
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {
+        "basis.weight": "dry"
+      },
+      "rejected": [
+        "condition.basis: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    }
+  ]
+}

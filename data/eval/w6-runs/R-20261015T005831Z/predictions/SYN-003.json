@@ -1,0 +1,222 @@
+{
+  "prediction": {
+    "document_id": "SYN-003",
+    "class_id": "Turbocharger",
+    "class_candidates": [
+      "Turbocharger",
+      "FourStrokeEngine"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-B Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-003",
+            "raw_text": "SGDW-20261007-B Synthetic Works",
+            "label_text": "Manufacturer",
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                467.6191063841906,
+                228.73827360000007,
+                475.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX022-009",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-003",
+            "raw_text": "VX022 009",
+            "label_text": "Model designation",
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                449.6191063841906,
+                154.96874400000002,
+                457.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "turbocharger_type",
+        "value": "axial",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-003",
+            "raw_text": "axial",
+            "label_text": "Turbine flow type",
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                380.6190801146593,
+                194.89800480000002,
+                388.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "applicable_engine_power",
+        "value": {
+          "min": 4783.5,
+          "max": 12011.9
+        },
+        "unit": "kW",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-003",
+            "raw_text": "4783.5 to 12011.9",
+            "label_text": "Four-stroke (kW)",
+            "unit_text": "kW",
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                359.6190801146593,
+                242.9487808,
+                367.0060425304687
+              ]
+            }
+          },
+          {
+            "source_document_id": "SYN-003",
+            "raw_text": "4783.5 to 12011.9",
+            "label_text": "Four-stroke (kW)",
+            "unit_text": "kW",
+            "location": {
+              "section": "Notes",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                226.61910638419056,
+                347.4648264000003,
+                234.00606879999998
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "bearing_type",
+        "value": "plain",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-003",
+            "raw_text": "plain",
+            "label_text": "Bearing type",
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                338.6190801146593,
+                195.3472232,
+                346.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 2280,
+          "width": 1910,
+          "height": 2460
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-003",
+            "raw_text": "2280 × 1910 × 2460",
+            "label_text": "Overall dimensions (L × W × H)",
+            "unit_text": "mm",
+            "location": {
+              "section": "Installation",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                287.6191063841906,
+                394.6015464000001,
+                295.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 3029.55,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-003",
+            "raw_text": "3029.55",
+            "label_text": "Weight (kg) - dry condition stated",
+            "unit_text": "kg",
+            "location": {
+              "section": "Installation",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                269.6191063841906,
+                356.8085768000002,
+                277.0060688
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": null,
+  "qualifiers": []
+}

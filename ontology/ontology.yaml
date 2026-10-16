@@ -1,0 +1,216 @@
+version: 0
+origin: synthetic
+dimensions:                      
+  dimensionless: "dimensionless"
+  length: "[length]"
+  mass: "[mass]"
+  power: "[length] ** 2 * [mass] / [time] ** 3"
+  pressure: "[mass] / [length] / [time] ** 2"
+  volume_flow: "[length] ** 3 / [time]"
+  rotational_frequency: "1 / [time]"
+  frequency: "1 / [time]"
+  temperature: "[temperature]"
+  kinematic_viscosity: "[length] ** 2 / [time]"
+units:                           
+  mm: {pint: millimeter}
+  m: {pint: meter}
+  kg: {pint: kilogram}
+  kW: {pint: kilowatt}
+  bar: {pint: bar}
+  m3/h: {pint: "meter**3/hour"}
+  rpm: {pint: revolutions_per_minute}
+  l/h: {pint: "liter/hour"}
+  Hz: {pint: hertz}
+  degC: {pint: degree_Celsius}
+  mbar: {pint: millibar}
+  cSt: {pint: centistokes}
+attributes:
+  maker: {datatype: string, dimension: dimensionless, canonical_unit: null}
+  model_designation: {datatype: string, dimension: dimensionless, canonical_unit: null}
+  dimensions: {datatype: dimensions, dimension: length, canonical_unit: mm}
+  dry_weight: {datatype: number, dimension: mass, canonical_unit: kg}
+  reported_weight: {datatype: number, dimension: mass, canonical_unit: kg}
+  medium: {datatype: string, dimension: dimensionless, canonical_unit: null}
+  motor_power: {datatype: number, dimension: power, canonical_unit: kW}
+  pump_type: {datatype: string, dimension: dimensionless, canonical_unit: null}
+  capacity: {datatype: number, dimension: volume_flow, canonical_unit: m3/h}
+  head: {datatype: number, dimension: length, canonical_unit: m}
+  differential_pressure: {datatype: number, dimension: pressure, canonical_unit: bar}
+  discharge_pressure: {datatype: number, dimension: pressure, canonical_unit: bar}
+  cooling_type: {datatype: string, dimension: dimensionless, canonical_unit: null}
+  max_pressure: {datatype: number, dimension: pressure, canonical_unit: bar}
+  working_pressure: {datatype: number, dimension: pressure, canonical_unit: bar}
+  application: {datatype: string, dimension: dimensionless, canonical_unit: null}
+  rated_throughput: {datatype: number, dimension: volume_flow, canonical_unit: l/h}
+  self_cleaning: {datatype: boolean, dimension: dimensionless, canonical_unit: null}
+  rated_power: {datatype: number, dimension: power, canonical_unit: kW}
+  rated_speed: {datatype: number, dimension: rotational_frequency, canonical_unit: rpm}
+  number_of_cylinders: {datatype: integer, dimension: dimensionless, canonical_unit: null}
+  fuel_types: {datatype: string_set, dimension: dimensionless, canonical_unit: null}
+  bore: {datatype: number, dimension: length, canonical_unit: mm}
+  stroke: {datatype: number, dimension: length, canonical_unit: mm}
+  turbocharger_type: {datatype: string, dimension: dimensionless, canonical_unit: null}
+  applicable_engine_power: {datatype: [number, range], dimension: power, canonical_unit: kW}
+  bearing_type: {datatype: string, dimension: dimensionless, canonical_unit: null}
+
+classes:
+  Equipment:
+    abstract: true
+    parent: null
+    attributes: [maker, model_designation, dimensions, dry_weight, reported_weight]
+  FluidMachinery:
+    abstract: true
+    parent: Equipment
+    attributes: [medium, motor_power]
+  Pump:
+    abstract: false
+    parent: FluidMachinery
+    label: Pump
+    keywords: [pump]
+    attributes: [pump_type, capacity, head, differential_pressure, discharge_pressure]
+    required_all: [maker, model_designation, pump_type, capacity]
+    required_any_groups: []
+    conditional_required:
+      - when: {pump_type: centrifugal}
+        required_all: [head]
+      - when: {pump_type: three_screw}
+        required_any_groups: [[differential_pressure, discharge_pressure]]
+  Engine:
+    abstract: true
+    parent: Equipment
+    attributes: [rated_power, rated_speed, number_of_cylinders, fuel_types]
+  EngineComponent:
+    abstract: true
+    parent: Equipment
+    attributes: []
+  AirCompressor:
+    abstract: false
+    parent: FluidMachinery
+    label: Air compressor
+    keywords: [air compressor]
+    attributes: [capacity, max_pressure, working_pressure, cooling_type]
+    required_all: [maker, model_designation, capacity]
+    required_any_groups: [[max_pressure, working_pressure]]
+  Separator:
+    abstract: false
+    parent: FluidMachinery
+    label: Separator
+    keywords: [separator]
+    attributes: [application, rated_throughput, self_cleaning]
+    required_all: [maker, model_designation, application, rated_throughput]
+    allowed_values: {application: [fuel_oil, lube_oil]}
+  TwoStrokeMainEngine:
+    abstract: false
+    parent: Engine
+    label: Two-stroke main engine
+    keywords: [two-stroke]
+    attributes: [bore, stroke]
+    required_all: [maker, model_designation, rated_power, rated_speed, number_of_cylinders]
+  FourStrokeEngine:
+    abstract: false
+    parent: Engine
+    label: Four-stroke engine
+    keywords: [four-stroke]
+    attributes: [application, bore, stroke]
+    required_all: [maker, model_designation, application, rated_power, rated_speed, number_of_cylinders]
+    allowed_values: {application: [propulsion, genset]}
+  Turbocharger:
+    abstract: false
+    parent: EngineComponent
+    label: Turbocharger
+    keywords: [turbocharger]
+    attributes: [turbocharger_type, applicable_engine_power, bearing_type]
+    required_all: [maker, model_designation, turbocharger_type, applicable_engine_power]
+label_aliases:
+  - {label: nominal flow rate, attribute: capacity, origin: synthetic, source: REF-PUMP-01, location: {pdf_page: 3}, verified_by: null}
+  - {label: Head, attribute: head, origin: synthetic, source: REF-PUMP-02, location: {pdf_page: 3}, verified_by: null}
+  - {label: Dimensions, attribute: dimensions, origin: synthetic, source: REF-PUMP-01, location: {pdf_page: 5}, verified_by: null}
+  - {label: FAD*, attribute: capacity, origin: synthetic, source: REF-COMP-01, location: {pdf_page: 10}, verified_by: null}
+  - {label: Charging capacity, attribute: capacity, origin: synthetic, source: REF-COMP-02, location: {pdf_page: 5}, verified_by: null}
+  - {label: Nominal working pressure, attribute: working_pressure, origin: synthetic, source: REF-COMP-01, location: {pdf_page: 10}, verified_by: null}
+  - {label: Final pressure, attribute: working_pressure, origin: synthetic, source: REF-COMP-02, location: {pdf_page: 5}, verified_by: null}
+  - {label: Max. recommended capacity, attribute: rated_throughput, origin: synthetic, source: REF-SEP-01, location: {pdf_page: 4}, verified_by: null}
+  - {label: "Bore:", attribute: bore, origin: synthetic, source: REF-2S-02, location: {pdf_page: 26}, verified_by: null}
+  - {label: "Stroke:", attribute: stroke, origin: synthetic, source: REF-2S-02, location: {pdf_page: 26}, verified_by: null}
+  - {label: "Number of cylinders:", attribute: number_of_cylinders, origin: synthetic, source: REF-2S-02, location: {pdf_page: 26}, verified_by: null}
+  - {label: "Power [kW]", attribute: rated_power, origin: synthetic, source: REF-2S-02, location: {pdf_page: 29}, verified_by: null}
+  - {label: "Speed [rpm]", attribute: rated_speed, origin: synthetic, source: REF-2S-02, location: {pdf_page: 29}, verified_by: null}
+  - {label: Number of cylinder, attribute: number_of_cylinders, origin: synthetic, source: REF-4S-02, location: {pdf_page: 10}, verified_by: null}
+  - {label: Cylinder bore mm, attribute: bore, origin: synthetic, source: REF-4S-02, location: {pdf_page: 10}, verified_by: null}
+  - {label: Piston stroke mm, attribute: stroke, origin: synthetic, source: REF-4S-02, location: {pdf_page: 10}, verified_by: null}
+  - {label: Engine (kWm), attribute: rated_power, origin: synthetic, source: REF-4S-02, location: {pdf_page: 18}, verified_by: null}
+  - {label: Engine Output Range per Turbocharger, attribute: applicable_engine_power, origin: synthetic, source: REF-TC-02, location: {pdf_page: 8}, verified_by: null}
+  - {label: Two-stroke (kW), attribute: applicable_engine_power, origin: synthetic, source: REF-TC-01, location: {pdf_page: 2}, verified_by: null}
+  - {label: Four-stroke (kW), attribute: applicable_engine_power, origin: synthetic, source: REF-TC-01, location: {pdf_page: 2}, verified_by: null}
+  - {label: Weight (kg), attribute: reported_weight, origin: synthetic, source: REF-TC-01, location: {pdf_page: 2}, verified_by: null}
+vocabularies:
+  basis:
+    capacity: [free_air_delivery, charging_capacity, unknown]
+    rating: [nominal, motor_rated, maximum_capacity, continuous_engine_shaft, MCR, maximum, working, unknown]
+    pressure: [gauge, absolute, not_applicable, unknown]
+    weight: [dry, unknown]
+  condition:
+    medium: {kind: token, values: [HFO, lubricating_oil]}
+    viscosity_basis: {kind: token, values: [fuel_reference, fluid_reference]}
+    rating_point: {kind: token, values: [R1, R2]}
+    engine_type: {kind: token, values: [two-stroke, four-stroke]}
+    basis: {kind: token, values: [per_turbocharger]}
+    frequency: {kind: quantity, dimension: frequency}
+    temperature: {kind: quantity, dimension: temperature}
+    absolute_pressure: {kind: quantity, dimension: pressure}
+    viscosity: {kind: reference_quantity, dimension: kinematic_viscosity}
+  descriptions:
+    origin: synthetic
+    verified_by: null
+    basis:
+      capacity:
+        _: How the stated capacity is defined.
+        free_air_delivery: Capacity stated as free air delivery.
+        charging_capacity: Capacity stated as charging capacity.
+      rating:
+        _: Which rating the stated value refers to.
+        nominal: Nominal rating.
+        motor_rated: Rating stated as motor rated.
+        maximum_capacity: Rating at maximum capacity.
+        continuous_engine_shaft: Continuous rating at the engine shaft.
+        maximum: Maximum rating.
+        working: Working rating.
+      pressure:
+        _: Whether a stated pressure is gauge or absolute.
+        gauge: Pressure stated as gauge pressure.
+        absolute: Pressure stated as absolute pressure.
+      weight:
+        _: Which weight condition the stated value refers to.
+        dry: Weight stated for the dry condition.
+    condition:
+      medium:
+        _: The medium the value applies to.
+        lubricating_oil: The value applies when handling lubricating oil.
+      viscosity_basis:
+        _: How the viscosity condition is referenced.
+        fuel_reference: The viscosity condition is stated as a fuel reference.
+        fluid_reference: The viscosity condition is stated as a fluid reference.
+      rating_point:
+        _: The rating point the value is stated at, as labelled in the document.
+      engine_type:
+        _: The engine type the value applies to.
+        two-stroke: The value applies to two-stroke engines.
+        four-stroke: The value applies to four-stroke engines.
+      basis:
+        _: The unit the value is counted per.
+        per_turbocharger: The value is stated per turbocharger.
+      frequency:
+        _: The frequency at which the value is stated.
+      temperature:
+        _: The temperature at which the value is stated.
+      absolute_pressure:
+        _: The absolute pressure at which the value is stated.
+      viscosity:
+        _: The viscosity at which the value is stated, with its reference temperature.
+    scope:
+      optional: >-
+        The part of the equipment or supply that the value refers to, as written in the
+        document. Leave it empty when the value refers to the main product itself.
+      required_none: >-
+        The part of the equipment or supply that the value refers to, as written in the
+        document. Use "none" when the value refers to the main product itself.

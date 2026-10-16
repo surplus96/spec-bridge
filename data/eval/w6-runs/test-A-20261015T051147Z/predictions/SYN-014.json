@@ -1,0 +1,144 @@
+{
+  "prediction": {
+    "document_id": "SYN-014",
+    "class_id": "Turbocharger",
+    "class_candidates": [
+      "Turbocharger"
+    ],
+    "facts": [],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "name",
+      "text": "Marine exhaust-gas turbocharger",
+      "line": "{'name': 'Marine exhaust-gas turbocharger', 'line': 'L3'}",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "manufacturer",
+      "text": "SGDW-20261007-C Synthetic Works",
+      "line": "{'value': 'SGDW-20261007-C Synthetic Works', 'line': 'L5'}",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "model",
+      "text": "VX023-114",
+      "line": "{'value': 'VX023-114', 'line': 'L6'}",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "turbocharger_type",
+      "text": "axial",
+      "line": "{'value': 'axial', 'line': 'L9'}",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "engine_output_range",
+      "text": "{'value': 12945.6, 'unit': 'kW', 'conditions': '2-stroke, per TC unit, applicable engine'}",
+      "line": "{'value': '12945.6', 'unit': 'kW', 'conditions': '2-stroke, per TC unit, applicable engine', 'line': 'L10'}",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "bearing_type",
+      "text": "plain",
+      "line": "{'value': 'plain', 'line': 'L11'}",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "overall_dimensions",
+      "text": "{'length': 2480, 'width': 2060, 'height': 2640, 'unit': 'mm', 'scope': 'for complete turbocharger with silencer'}",
+      "line": "{'length': {'value': '2480', 'unit': 'mm', 'line': 'L12'}, 'width': {'value': '2060', 'unit': 'mm', 'line': 'L12'}, 'height': {'value': '2640', 'unit': 'mm', 'line': 'L12'}, 'scope': {'value': 'for complete turbocharger with silencer', 'line': 'L12'}}",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "reported_weight",
+      "text": "{'value': 3236.4, 'unit': 'kg', 'scope': 'complete turbocharger with silencer'}",
+      "line": "{'value': '3236.4', 'unit': 'kg', 'scope': 'complete turbocharger with silencer', 'line': 'L13'}",
+      "reason": "unknown_line"
+    }
+  ],
+  "reply": {
+    "attributes": {
+      "name": "Marine exhaust-gas turbocharger",
+      "manufacturer": "SGDW-20261007-C Synthetic Works",
+      "model": "VX023-114",
+      "turbocharger_type": "axial",
+      "engine_output_range": {
+        "value": 12945.6,
+        "unit": "kW",
+        "conditions": "2-stroke, per TC unit, applicable engine"
+      },
+      "bearing_type": "plain",
+      "overall_dimensions": {
+        "length": 2480,
+        "width": 2060,
+        "height": 2640,
+        "unit": "mm",
+        "scope": "for complete turbocharger with silencer"
+      },
+      "reported_weight": {
+        "value": 3236.4,
+        "unit": "kg",
+        "scope": "complete turbocharger with silencer"
+      }
+    },
+    "lines": {
+      "name": {
+        "name": "Marine exhaust-gas turbocharger",
+        "line": "L3"
+      },
+      "manufacturer": {
+        "value": "SGDW-20261007-C Synthetic Works",
+        "line": "L5"
+      },
+      "model": {
+        "value": "VX023-114",
+        "line": "L6"
+      },
+      "turbocharger_type": {
+        "value": "axial",
+        "line": "L9"
+      },
+      "engine_output_range": {
+        "value": "12945.6",
+        "unit": "kW",
+        "conditions": "2-stroke, per TC unit, applicable engine",
+        "line": "L10"
+      },
+      "bearing_type": {
+        "value": "plain",
+        "line": "L11"
+      },
+      "overall_dimensions": {
+        "length": {
+          "value": "2480",
+          "unit": "mm",
+          "line": "L12"
+        },
+        "width": {
+          "value": "2060",
+          "unit": "mm",
+          "line": "L12"
+        },
+        "height": {
+          "value": "2640",
+          "unit": "mm",
+          "line": "L12"
+        },
+        "scope": {
+          "value": "for complete turbocharger with silencer",
+          "line": "L12"
+        }
+      },
+      "reported_weight": {
+        "value": "3236.4",
+        "unit": "kg",
+        "scope": "complete turbocharger with silencer",
+        "line": "L13"
+      }
+    }
+  },
+  "qualifiers": []
+}

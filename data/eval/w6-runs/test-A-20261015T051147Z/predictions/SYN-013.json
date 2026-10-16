@@ -1,0 +1,144 @@
+{
+  "prediction": {
+    "document_id": "SYN-013",
+    "class_id": "TwoStrokeMainEngine",
+    "class_candidates": [
+      "TwoStrokeMainEngine",
+      "Turbocharger"
+    ],
+    "facts": [],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "Name",
+      "text": "Marine two-stroke main engine",
+      "line": "{'Marine two-stroke main engine': 'L3', 'Manufacturer': 'L5', 'Model Designation': 'L6', 'Cylinders': 'L8', 'Bore': 'L9', 'Stroke': 'L10', 'Rated Output (R1)': 'L11', 'Rated Output (R2)': 'L12', 'Engine Speed (R1)': 'L13', 'Engine Speed (R2)': 'L14', 'Fuel Type': 'L15', 'Dimensions (L × W × H)': 'L16', 'Dry Mass': 'L17', 'Included Component': 'L20', 'Included Component Manufacturer': 'L20'}",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Manufacturer",
+      "text": "SGDW-20261007-C Synthetic Works",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Model Designation",
+      "text": "VX003-113",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Cylinders",
+      "text": "7",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "bore",
+      "text": "600 mm",
+      "line": "",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "stroke",
+      "text": "2320 mm",
+      "line": "",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "Rated Output (R1)",
+      "text": "24894.9 kW",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Rated Output (R2)",
+      "text": "21907.51 kW",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Engine Speed (R1)",
+      "text": "88 rpm",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Engine Speed (R2)",
+      "text": "79 rpm",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Fuel Type",
+      "text": "natural gas, MDO",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Dimensions (L × W × H)",
+      "text": "11600 × 5160 × 12000 mm",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Dry Mass",
+      "text": "483570.0 kg",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Included Component",
+      "text": "VX023-017 Marine exhaust-gas turbocharger",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Included Component Manufacturer",
+      "text": "SGDW-20261007-C Synthetic Works",
+      "line": "",
+      "reason": "unknown_attribute"
+    }
+  ],
+  "reply": {
+    "attributes": {
+      "Name": "Marine two-stroke main engine",
+      "Manufacturer": "SGDW-20261007-C Synthetic Works",
+      "Model Designation": "VX003-113",
+      "Cylinders": "7",
+      "Bore": "600 mm",
+      "Stroke": "2320 mm",
+      "Rated Output (R1)": "24894.9 kW",
+      "Rated Output (R2)": "21907.51 kW",
+      "Engine Speed (R1)": "88 rpm",
+      "Engine Speed (R2)": "79 rpm",
+      "Fuel Type": "natural gas, MDO",
+      "Dimensions (L × W × H)": "11600 × 5160 × 12000 mm",
+      "Dry Mass": "483570.0 kg",
+      "Included Component": "VX023-017 Marine exhaust-gas turbocharger",
+      "Included Component Manufacturer": "SGDW-20261007-C Synthetic Works"
+    },
+    "lines": {
+      "Name": {
+        "Marine two-stroke main engine": "L3",
+        "Manufacturer": "L5",
+        "Model Designation": "L6",
+        "Cylinders": "L8",
+        "Bore": "L9",
+        "Stroke": "L10",
+        "Rated Output (R1)": "L11",
+        "Rated Output (R2)": "L12",
+        "Engine Speed (R1)": "L13",
+        "Engine Speed (R2)": "L14",
+        "Fuel Type": "L15",
+        "Dimensions (L × W × H)": "L16",
+        "Dry Mass": "L17",
+        "Included Component": "L20",
+        "Included Component Manufacturer": "L20"
+      }
+    }
+  },
+  "qualifiers": []
+}

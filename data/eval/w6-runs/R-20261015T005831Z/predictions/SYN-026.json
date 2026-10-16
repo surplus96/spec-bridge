@@ -1,0 +1,299 @@
+{
+  "prediction": {
+    "document_id": "SYN-026",
+    "class_id": "FourStrokeEngine",
+    "class_candidates": [
+      "FourStrokeEngine"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-A Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-026",
+            "raw_text": "SGDW-20261007-A Synthetic Works",
+            "label_text": "Manufacturer",
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                467.6191063841906,
+                228.73827360000007,
+                475.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX005-126",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-026",
+            "raw_text": "VX005-126",
+            "label_text": "Model designation",
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                449.6191063841906,
+                155.41015040000002,
+                457.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "bore",
+        "value": 210,
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-026",
+            "raw_text": "210",
+            "label_text": "Bore",
+            "unit_text": "mm",
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                406.6191063841906,
+                96.24218479999999,
+                414.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "stroke",
+        "value": 290,
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-026",
+            "raw_text": "290",
+            "label_text": "Stroke",
+            "unit_text": "mm",
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                388.6191063841906,
+                102.4648408,
+                396.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "application",
+        "value": "genset",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-026",
+            "raw_text": "generating-set",
+            "label_text": "Service",
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                370.6191063841906,
+                128.26562080000002,
+                378.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_power",
+        "value": 2352.5,
+        "unit": "kW",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-026",
+            "raw_text": "2352.5",
+            "label_text": "Engine (kWm)",
+            "unit_text": "kW",
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                352.6191063841906,
+                339.9296712000001,
+                360.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_speed",
+        "value": 900,
+        "unit": "rpm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-026",
+            "raw_text": "900",
+            "label_text": "Engine speed",
+            "unit_text": "rpm",
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                334.6191063841906,
+                292.80467280000016,
+                342.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "fuel_types",
+        "value": [
+          "MDO",
+          "MGO"
+        ],
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-026",
+            "raw_text": "MDO, MGO",
+            "label_text": "Fuel",
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                316.6191063841906,
+                108.22655999999999,
+                324.0060688
+              ]
+            }
+          },
+          {
+            "source_document_id": "SYN-026",
+            "raw_text": "MDO, MGO",
+            "label_text": "Fuel",
+            "unit_text": null,
+            "location": {
+              "section": "Operating notes",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                237.61910638419056,
+                108.22655999999999,
+                245.00606879999998
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 4400,
+          "width": 1900,
+          "height": 2600
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-026",
+            "raw_text": "4400 × 1900 × 2600",
+            "label_text": "Dimensions (L × W × H)",
+            "unit_text": "mm",
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                298.6191063841906,
+                330.1484232000001,
+                306.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 23525.0,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-026",
+            "raw_text": "23525.0",
+            "label_text": "Dry mass",
+            "unit_text": "kg",
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                280.6191063841906,
+                269.2304560000002,
+                288.0060688
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": null,
+  "qualifiers": []
+}

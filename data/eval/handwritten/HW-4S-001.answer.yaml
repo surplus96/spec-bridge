@@ -1,0 +1,251 @@
+# 평가기 전용: 입력 모델에 전달하지 않는다.
+# schema_version 2: 별도 함정 목록 제거, 미확정 검증 상태는 null.
+schema_version: 2
+doc_id: HW-4S-001
+origin: synthetic
+author: Claude (draft)
+reviewed_by: null
+created_at: 2026-10-06
+files:
+  spec_source: data/eval/handwritten/HW-4S-001.spec.md
+  docx: null
+  pdf: null
+  input_text: data/eval/handwritten/inputs/DOC-005.md
+expected_class: FourStrokeEngine
+class_path:
+- Equipment
+- Engine
+- FourStrokeEngine
+attributes:
+  maker:
+    value: Torvane Engine Works
+    unit: null
+    expected_status: null
+    occurrences:
+    - raw_text: Torvane Engine Works
+      label_text: Issued by
+      location:
+        section: header
+        line: 3
+        pdf_page: null
+        printed_page: null
+    - raw_text: Torvane Engine Works
+      label_text: Maker
+      location:
+        section: '1.1'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+  model_designation:
+    value: TMG-6A
+    unit: null
+    expected_status: null
+    occurrences:
+    - raw_text: TMG-6A
+      label_text: Model designation
+      location:
+        section: '1.2'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+  application:
+    value: genset
+    unit: null
+    expected_status: null
+    occurrences:
+    - raw_text: Generating set (auxiliary)
+      label_text: Application
+      location:
+        section: '1.4'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+    - raw_text: Generating set
+      label_text: Application
+      location:
+        section: '2'
+        table: 1
+        row: 1
+        pdf_page: null
+        printed_page: null
+    - raw_text: auxiliary generating sets
+      label_text: Product description
+      location:
+        section: '1.3'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+    - raw_text: drives an 8-pole alternator for a 60 Hz ship's network
+      label_text: Application details
+      location:
+        section: '3.1'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+  number_of_cylinders:
+    value: 6
+    unit: null
+    expected_status: null
+    occurrences:
+    - raw_text: '6'
+      label_text: Number of cylinders
+      location:
+        section: '2'
+        table: 1
+        row: 2
+        pdf_page: null
+        printed_page: null
+  bore:
+    value: 210
+    unit: mm
+    expected_status: null
+    occurrences:
+    - raw_text: '21'
+      label_text: Bore
+      unit_text: cm
+      location:
+        section: '2'
+        table: 1
+        row: 3
+        pdf_page: null
+        printed_page: null
+  stroke:
+    value: 300
+    unit: mm
+    expected_status: null
+    occurrences:
+    - raw_text: '300'
+      label_text: Stroke
+      unit_text: mm
+      location:
+        section: '2'
+        table: 1
+        row: 4
+        pdf_page: null
+        printed_page: null
+  rated_power:
+    value: 1020
+    unit: kW
+    expected_status: null
+    occurrences:
+    - raw_text: 1,020
+      label_text: Rated output
+      unit_text: kW
+      location:
+        section: '2'
+        table: 1
+        row: 5
+        pdf_page: null
+        printed_page: null
+    - raw_text: 1,020 kW
+      label_text: Rated output is
+      location:
+        section: '3.1'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+    rating_basis: continuous_engine_shaft
+  rated_speed:
+    value: 900
+    unit: rpm
+    expected_status: null
+    occurrences:
+    - raw_text: '900'
+      label_text: Rated speed
+      unit_text: rpm
+      location:
+        section: '2'
+        table: 1
+        row: 6
+        pdf_page: null
+        printed_page: null
+    - raw_text: 900 rpm
+      label_text: at
+      location:
+        section: '3.1'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+  fuel_types:
+    value:
+    - MDO
+    - MGO
+    unit: null
+    expected_status: null
+    occurrences:
+    - raw_text: MDO / MGO
+      label_text: Fuel
+      location:
+        section: '2'
+        table: 1
+        row: 7
+        pdf_page: null
+        printed_page: null
+  dimensions:
+    value:
+      length: 4150
+      width: 1650
+      height: 2350
+    unit: mm
+    expected_status: null
+    occurrences:
+    - raw_text: 4,150 × 1,650 × 2,350 mm
+      label_text: Overall dimensions (L × W × H)
+      location:
+        section: '4.1'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+  dry_weight:
+    value: 11200
+    unit: kg
+    expected_status: null
+    occurrences:
+    - raw_text: 11.2 ton
+      label_text: Dry weight
+      location:
+        section: '4.2'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+missing_required: null
+relations:
+  manufactured_by: Torvane Engine Works
+  has_component: []
+  variant_of: null
+injections:
+- type: V1
+  attribute: rated_power
+  detail: 속성명 별칭 'Rated output'
+  origin: synthetic
+  source_observations:
+  - document_id: REF-4S-02
+    pdf_page: 18
+  source_usage: 표기 관찰 참고; 합성 별칭·단위 정의는 본문과 SCORING-POLICY를 따름
+- type: V1
+  attribute: bore
+  detail: 보어 단위 'cm' (정규 mm)
+  origin: synthetic
+  source_observations:
+  - document_id: REF-4S-02
+    pdf_page: 8
+  - document_id: REF-4S-02
+    pdf_page: 10
+  source_usage: 표기 관찰 참고; 합성 별칭·단위 정의는 본문과 SCORING-POLICY를 따름
+- type: V1
+  attribute: dry_weight
+  detail: 중량 단위 'ton' (정규 kg, 미터톤 가정)
+  origin: synthetic
+  source_observations:
+  - document_id: REF-4S-02
+    pdf_page: 15
+  source_usage: 표기 관찰 참고; 합성 별칭·단위 정의는 본문과 SCORING-POLICY를 따름
+duplicate_of: null
+open_issues:
+- W1에서 continuous_engine_shaft 정격 기준을 온톨로지에 연결; ton은 본문의 metric tonnes 정의를 사용
+notes: 6 × 170 kW = 1,020 kW. MEP 약 21.8 bar(계산값, 4행정). 900 rpm × 8극 / 120 = 60 Hz. 참고 문서는 표기 방식만 참고(REF-4S-01,
+  REF-4S-02)
+dataset_revision: 2
+revised_by: Codex
+validation_status: ontology_pending
+scoring_policy: data/eval/handwritten/SCORING-POLICY.md

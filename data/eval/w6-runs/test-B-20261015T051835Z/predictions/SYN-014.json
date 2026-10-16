@@ -1,0 +1,240 @@
+{
+  "prediction": {
+    "document_id": "SYN-014",
+    "class_id": "Turbocharger",
+    "class_candidates": [
+      "Turbocharger"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-C Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "identification",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-014",
+            "raw_text": "SGDW-20261007-C Synthetic Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "sheet": "Specification",
+              "cell_ref": "A5"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX023-114",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "identification",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-014",
+            "raw_text": "VX023-114",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "sheet": "Specification",
+              "cell_ref": "A6"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "turbocharger_type",
+        "value": "axial",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "specifications",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-014",
+            "raw_text": "axial",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "sheet": "Specification",
+              "cell_ref": "B9"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "bearing_type",
+        "value": "plain",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "specifications",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-014",
+            "raw_text": "plain",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "sheet": "Specification",
+              "cell_ref": "B11"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 2480,
+          "width": 2060,
+          "height": 2640
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "specifications",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-014",
+            "raw_text": "2480 × 2060 × 2640",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "sheet": "Specification",
+              "cell_ref": "B12"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "reported_weight",
+        "value": 3236.4,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "specifications",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-014",
+            "raw_text": "3236.4",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "sheet": "Specification",
+              "cell_ref": "B13"
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "applicable_engine_power",
+      "text": "12945.6 kW",
+      "line": "L10",
+      "reason": "not_in_line"
+    }
+  ],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "basis": {},
+        "condition": {},
+        "scope": "Identification",
+        "line": "L5",
+        "value": "SGDW-20261007-C Synthetic Works",
+        "unit": null,
+        "raw_text": "SGDW-20261007-C Synthetic Works"
+      },
+      {
+        "attribute": "model_designation",
+        "basis": {},
+        "condition": {},
+        "scope": "Identification",
+        "line": "L6",
+        "value": "VX023-114",
+        "unit": null,
+        "raw_text": "VX023-114"
+      },
+      {
+        "attribute": "turbocharger_type",
+        "basis": {},
+        "condition": {},
+        "scope": "Specifications",
+        "line": "L9",
+        "value": "axial",
+        "unit": null,
+        "raw_text": "axial"
+      },
+      {
+        "attribute": "applicable_engine_power",
+        "basis": {},
+        "condition": {
+          "engine_type": "two-stroke",
+          "basis": "per_turbocharger",
+          "frequency": {
+            "value": 12945.6,
+            "unit": "rpm"
+          }
+        },
+        "scope": "Specifications",
+        "line": "L10",
+        "value": {
+          "min": 12945.6,
+          "max": 12945.6
+        },
+        "unit": "kW",
+        "raw_text": "12945.6 kW"
+      },
+      {
+        "attribute": "bearing_type",
+        "basis": {},
+        "condition": {},
+        "scope": "Specifications",
+        "line": "L11",
+        "value": "plain",
+        "unit": null,
+        "raw_text": "plain"
+      },
+      {
+        "attribute": "dimensions",
+        "basis": {},
+        "condition": {},
+        "scope": "Specifications",
+        "line": "L12",
+        "value": {
+          "length": 2480,
+          "width": 2060,
+          "height": 2640
+        },
+        "unit": "mm",
+        "raw_text": "2480 × 2060 × 2640"
+      },
+      {
+        "attribute": "reported_weight",
+        "basis": {},
+        "condition": {},
+        "scope": "Specifications",
+        "line": "L13",
+        "value": 3236.4,
+        "unit": "kg",
+        "raw_text": "3236.4"
+      }
+    ]
+  },
+  "qualifiers": []
+}

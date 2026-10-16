@@ -1,0 +1,683 @@
+{
+  "prediction": {
+    "document_id": "SYN-033",
+    "class_id": "AirCompressor",
+    "class_candidates": [
+      "AirCompressor"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-A Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-033",
+            "raw_text": "SGDW-20261007-A Synthetic Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                467.6191063841906,
+                203.83202560000007,
+                475.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX009-133",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-033",
+            "raw_text": "VX009-133",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                449.6191063841906,
+                155.41015040000002,
+                457.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 1040,
+          "width": 690,
+          "height": 810
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "complete_compressor_unit_with_motor_and_mountings",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-033",
+            "raw_text": "1040 × 690 × 810 mm",
+            "label_text": null,
+            "unit_text": "(mm)",
+            "location": {
+              "section": "Installation",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                245.61910638419056,
+                433.28123199999993,
+                253.00606879999998
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 753.09,
+        "unit": "kg",
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {},
+        "scope": "complete_compressor_unit_with_motor_and_mountings",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-033",
+            "raw_text": "753.09",
+            "label_text": null,
+            "unit_text": "kg",
+            "location": {
+              "section": "Installation",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                227.61910638419056,
+                377.70701360000004,
+                235.00606879999998
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "air",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-033",
+            "raw_text": "air",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                317.6190801146593,
+                187.33550480000002,
+                325.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "motor_power",
+        "value": 30.9,
+        "unit": "kW",
+        "basis": {
+          "rating": "motor_rated"
+        },
+        "condition": {},
+        "scope": "drive_motor",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-033",
+            "raw_text": "30.9",
+            "label_text": null,
+            "unit_text": "kW",
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                296.6190801146593,
+                194.0151912,
+                304.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "capacity",
+        "value": 125.52,
+        "unit": "m3/h",
+        "basis": {
+          "capacity": "free_air_delivery"
+        },
+        "condition": {
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          },
+          "absolute_pressure": {
+            "value": 1013,
+            "unit": "mbar"
+          }
+        },
+        "scope": "main_compressor",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-033",
+            "raw_text": "125.52",
+            "label_text": null,
+            "unit_text": "m3/h",
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                380.6190801146593,
+                202.91362800000002,
+                388.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "max_pressure",
+        "value": 28,
+        "unit": "bar",
+        "basis": {
+          "pressure": "gauge"
+        },
+        "condition": {},
+        "scope": "main_compressor",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-033",
+            "raw_text": "28",
+            "label_text": null,
+            "unit_text": "bar",
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                359.6190801146593,
+                187.34331680000003,
+                367.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "cooling_type",
+        "value": "air",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-033",
+            "raw_text": "air",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                338.6190801146593,
+                187.33550480000002,
+                346.0060425304687
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "working_pressure",
+      "text": "",
+      "line": "null",
+      "reason": "unknown_line"
+    }
+  ],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "line": "L5",
+        "value_text": "SGDW-20261007-A Synthetic Works",
+        "unit_text": null
+      },
+      {
+        "attribute": "model_designation",
+        "line": "L6",
+        "value_text": "VX009-133",
+        "unit_text": null
+      },
+      {
+        "attribute": "dimensions",
+        "line": "L15",
+        "value_text": "1040 × 690 × 810 mm",
+        "unit_text": "(mm)"
+      },
+      {
+        "attribute": "dry_weight",
+        "line": "L16",
+        "value_text": "753.09",
+        "unit_text": "kg"
+      },
+      {
+        "attribute": "medium",
+        "line": "L12",
+        "value_text": "air",
+        "unit_text": null
+      },
+      {
+        "attribute": "motor_power",
+        "line": "L13",
+        "value_text": "30.9",
+        "unit_text": "kW"
+      },
+      {
+        "attribute": "capacity",
+        "line": "L9",
+        "value_text": "125.52",
+        "unit_text": "m3/h"
+      },
+      {
+        "attribute": "max_pressure",
+        "line": "L10",
+        "value_text": "28",
+        "unit_text": "bar"
+      },
+      {
+        "attribute": "working_pressure",
+        "line": "null",
+        "value_text": "",
+        "unit_text": null
+      },
+      {
+        "attribute": "cooling_type",
+        "line": "L11",
+        "value_text": "air",
+        "unit_text": null
+      }
+    ]
+  },
+  "qualifiers": [
+    {
+      "kind": "value",
+      "attribute": "maker",
+      "value_text": "SGDW-20261007-A Synthetic Works",
+      "location": {
+        "section": "Product data",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          467.6191063841906,
+          203.83202560000007,
+          475.0060688
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.temperature: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [
+        "SYN-010:O001",
+        "SYN-011:O001",
+        "SYN-029:O001"
+      ],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "model_designation",
+      "value_text": "VX009-133",
+      "location": {
+        "section": "Product data",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          449.6191063841906,
+          155.41015040000002,
+          457.0060688
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.temperature: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [
+        "SYN-019:O002",
+        "SYN-017:O002",
+        "SYN-008:O002"
+      ],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "dimensions",
+      "value_text": "1040 × 690 × 810 mm",
+      "location": {
+        "section": "Installation",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          245.61910638419056,
+          433.28123199999993,
+          253.00606879999998
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": "complete compressor unit with motor and mountings"
+      },
+      "evidence": {
+        "scope": "complete compressor unit with motor and mountings"
+      },
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.medium: no evidence"
+      ],
+      "retrieved_ids": [
+        "SYN-027:O008",
+        "SYN-004:O008",
+        "SYN-005:O008"
+      ],
+      "before_check": {
+        "basis": {},
+        "condition": {},
+        "scope": "complete compressor unit with motor and mountings"
+      }
+    },
+    {
+      "kind": "value",
+      "attribute": "dry_weight",
+      "value_text": "753.09",
+      "location": {
+        "section": "Installation",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          227.61910638419056,
+          377.70701360000004,
+          235.00606879999998
+        ]
+      },
+      "qualifiers": {
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {},
+        "scope": "complete compressor unit with motor and mountings"
+      },
+      "evidence": {
+        "basis.weight": "Dry",
+        "scope": "complete compressor unit with motor and mountings"
+      },
+      "rejected": [],
+      "retrieved_ids": [
+        "SYN-027:O009",
+        "SYN-004:O009",
+        "SYN-005:O009"
+      ],
+      "before_check": {
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {},
+        "scope": "complete compressor unit with motor and mountings"
+      }
+    },
+    {
+      "kind": "value",
+      "attribute": "medium",
+      "value_text": "air",
+      "location": {
+        "section": "Main particulars",
+        "pdf_page": 1,
+        "bbox": [
+          178.44488,
+          317.6190801146593,
+          187.33550480000002,
+          325.0060425304687
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.weight: evidence not in the line",
+        "condition.rating_point: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [
+        "SYN-004:O006",
+        "SYN-005:O006",
+        "SYN-024:O004"
+      ],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "motor_power",
+      "value_text": "30.9",
+      "location": {
+        "section": "Main particulars",
+        "pdf_page": 1,
+        "bbox": [
+          178.44488,
+          296.6190801146593,
+          194.0151912,
+          304.0060425304687
+        ]
+      },
+      "qualifiers": {
+        "basis": {
+          "rating": "motor_rated"
+        },
+        "condition": {},
+        "scope": "drive motor"
+      },
+      "evidence": {
+        "basis.rating": "nameplate rating",
+        "scope": "for drive motor"
+      },
+      "rejected": [],
+      "retrieved_ids": [
+        "SYN-005:O007",
+        "SYN-023:O006",
+        "SYN-030:O008"
+      ],
+      "before_check": {
+        "basis": {
+          "rating": "motor_rated"
+        },
+        "condition": {},
+        "scope": "drive motor"
+      }
+    },
+    {
+      "kind": "value",
+      "attribute": "capacity",
+      "value_text": "125.52",
+      "location": {
+        "section": "Main particulars",
+        "pdf_page": 1,
+        "bbox": [
+          178.44488,
+          380.6190801146593,
+          202.91362800000002,
+          388.0060425304687
+        ]
+      },
+      "qualifiers": {
+        "basis": {
+          "capacity": "free_air_delivery"
+        },
+        "condition": {
+          "temperature": "20 degC",
+          "absolute_pressure": "1013 mbar(a)"
+        },
+        "scope": "main compressor"
+      },
+      "evidence": {
+        "basis.capacity": "free air delivery",
+        "condition.temperature": "20 degC",
+        "condition.absolute_pressure": "1013 mbar(a)",
+        "scope": "main compressor"
+      },
+      "rejected": [],
+      "retrieved_ids": [
+        "SYN-004:O003",
+        "SYN-004:O010",
+        "SYN-030:O006"
+      ],
+      "before_check": {
+        "basis": {
+          "capacity": "free_air_delivery"
+        },
+        "condition": {
+          "temperature": "20 degC",
+          "absolute_pressure": "1013 mbar(a)"
+        },
+        "scope": "main compressor"
+      }
+    },
+    {
+      "kind": "value",
+      "attribute": "max_pressure",
+      "value_text": "28",
+      "location": {
+        "section": "Main particulars",
+        "pdf_page": 1,
+        "bbox": [
+          178.44488,
+          359.6190801146593,
+          187.34331680000003,
+          367.0060425304687
+        ]
+      },
+      "qualifiers": {
+        "basis": {
+          "pressure": "gauge"
+        },
+        "condition": {},
+        "scope": "main compressor"
+      },
+      "evidence": {
+        "basis.pressure": "gauge",
+        "scope": "main compressor"
+      },
+      "rejected": [
+        "basis.weight: not supported (self-check)",
+        "condition.rating_point: not supported (self-check)"
+      ],
+      "retrieved_ids": [
+        "SYN-004:O004",
+        "SYN-027:O004",
+        "SYN-005:O004"
+      ],
+      "before_check": {
+        "basis": {
+          "pressure": "gauge",
+          "weight": "dry"
+        },
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": "main compressor"
+      }
+    },
+    {
+      "kind": "value",
+      "attribute": "cooling_type",
+      "value_text": "air",
+      "location": {
+        "section": "Main particulars",
+        "pdf_page": 1,
+        "bbox": [
+          178.44488,
+          338.6190801146593,
+          187.33550480000002,
+          346.0060425304687
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "condition.temperature: number not in the line",
+        "scope: phrase not in the remarks",
+        "basis.pressure: not supported (self-check)"
+      ],
+      "retrieved_ids": [
+        "SYN-004:O005",
+        "SYN-027:O005",
+        "SYN-003:O005"
+      ],
+      "before_check": {
+        "basis": {
+          "pressure": "absolute"
+        },
+        "condition": {},
+        "scope": ""
+      }
+    }
+  ]
+}

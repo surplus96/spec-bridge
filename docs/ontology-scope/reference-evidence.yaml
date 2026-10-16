@@ -1,0 +1,460 @@
+# 범위 정의 근거 목록 초안; 실행용 온톨로지가 아니다.
+schema_version: 1
+created_at: '2026-10-06'
+status: observation_draft_user_verification_pending
+note: 문서 식별 검증과 속성 관찰 검증을 구별한다. 페이지의 짧은 표기 존재만 검사했으며 도메인 규칙을 확정하지 않았다.
+documents:
+- id: REF-2S-01
+  class: TwoStrokeMainEngine
+  source: Everllence B&W G80ME-C10.5-GI Project guide
+  edition: Document No. 7020-0273-14ppr, July 2026, Revision 1.0
+  sha256: 86babe1a81696da8bb8606c538d00d0e2dd55e7ac8f73fc0b58f65557f95989e
+  local_path: data/reference/two_stroke_main_engine/REF-2S-01.pdf
+  source_url: https://www.everllence.com/applications/projectguides/2stroke/content/printed/G80ME-C10_5-GI.pdf
+  document_identity_status: verified
+  observations:
+  - location:
+      pdf_page: 23
+    notation: metric horsepower
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 23
+    notation: nominal MCR
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 51
+    notation: SMCR
+    verification_status: user_verification_pending
+    verified_by: null
+- id: REF-2S-02
+  class: TwoStrokeMainEngine
+  source: Marine Installation Manual X62DF
+  edition: Issue 2021-08
+  sha256: b87cda203214b2cbfb4c7e4ddf8d4fd5a4f2c5951da126ec6a3937b4eb667ace
+  local_path: data/reference/two_stroke_main_engine/REF-2S-02.pdf
+  source_url: https://wingd.com/media/y4eijz3k/mim_wingd_x62df_20210830.pdf
+  document_identity_status: verified
+  observations:
+  - location:
+      pdf_page: 26
+    notation: two-stroke
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 26
+    notation: 'Bore:'
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 26
+    notation: 'Stroke:'
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 26
+    notation: 'Number of cylinders:'
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 26
+    notation: kW/cyl
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 26
+    notation: MGO
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 29
+    notation: Power [kW]
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 29
+    notation: Speed [rpm]
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 30
+    notation: Dry weight [t]
+    verification_status: user_verification_pending
+    verified_by: null
+- id: REF-4S-01
+  class: FourStrokeEngine
+  source: Everllence V28/33D STC Project Guide – Marine
+  edition: Revision 06.2025/9.2
+  sha256: 0fd47a73569b6539e2faca654d950a5b5690eaa6d6f4cc1b9b7ee50e6d1ab1db
+  local_path: data/reference/four_stroke_engine/REF-4S-01.pdf
+  source_url: https://www.everllence.com/applications/projectguides/4stroke/Propulsion/PG_P-II_V2833D%20STC.pdf
+  document_identity_status: verified
+  observations:
+  - location:
+      pdf_page: 33
+    notation: propulsion
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 33
+    notation: kW/cyl
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 35
+    notation: ICFN
+    verification_status: user_verification_pending
+    verified_by: null
+- id: REF-4S-02
+  class: FourStrokeEngine
+  source: HiMSEN H17/28 Project Guide for Marine
+  edition: 2nd Edition, Dec. 2022
+  sha256: e3b48ee4d0caf934e8832163c0b984b35d5ed5ecf75f932dc0ba6768cbfe1f15
+  local_path: data/reference/four_stroke_engine/REF-4S-02.pdf
+  source_url: https://www.maritimeinformed.com/datasheets/hyundai-heavy-industries-5h17-28m-prime-mover/co-1623926422-ga/h1728-project-guide-for-marine-dec-2022.pdf
+  document_identity_status: verified
+  observations:
+  - location:
+      pdf_page: 8
+    notation: generating-set
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 8
+    notation: Cylinder bore in cm
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 10
+    notation: 4-stroke
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 10
+    notation: Number of cylinder
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 10
+    notation: Cylinder bore mm
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 10
+    notation: Piston stroke mm
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 15
+    notation: Dry weight (ton)
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 18
+    notation: Engine (kWm)
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 18
+    notation: Generator (kWe)
+    verification_status: user_verification_pending
+    verified_by: null
+- id: REF-PUMP-01
+  class: Pump
+  source: Alfa Laval Three-screw pump – Alfa Laval ALP pump range
+  edition: 200008926-2-EN-GB (PDF 수정일 2023-09-12)
+  sha256: f111a023b58d2eef139c5363ffc1e0897128a67589efca0fa371e47bb2329ae8
+  local_path: data/reference/pump/REF-PUMP-01.pdf
+  source_url: https://www.alfalaval.com/globalassets/documents/products/fluid-handling/pumps/three-screw-pumps/product_leaflet_alp_three-screw_pumps.pdf
+  document_identity_status: verified
+  observations:
+  - location:
+      pdf_page: 1
+    notation: Three-screw
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 1
+    notation: mineral oil
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 3
+    notation: nominal flow rate
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 3
+    notation: Max. discharge pressure
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 3
+    notation: Max. differential pressure
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 5
+    notation: Dimensions
+    verification_status: user_verification_pending
+    verified_by: null
+- id: REF-PUMP-02
+  class: Pump
+  source: Marine & Offshore Pump Solutions
+  edition: 표기 없음 (PDF 수정일 2025-06-18)
+  sha256: 4ad5ffa448b7a0de121b4425f173fd96b8d1edbbd40b353129ccb8103d8f4e29
+  local_path: data/reference/pump/REF-PUMP-02.pdf
+  source_url: https://www.desmi.com/media/5mwm24kq/desmi-marine-pump-solutions-web.pdf
+  document_identity_status: verified
+  observations:
+  - location:
+      pdf_page: 2
+    notation: Centrifugal
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 2
+    notation: seawater
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 3
+    notation: Flow rate - 50 Hz
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 3
+    notation: Head
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 3
+    notation: Pressure
+    verification_status: user_verification_pending
+    verified_by: null
+- id: REF-COMP-01
+  class: AirCompressor
+  source: Atlas Copco Marine Air Solutions – Setting the standard in marine compressed air
+  edition: 표기 없음 (PDF 수정일 2018-09-13)
+  sha256: 475a541043b952999c0a1b33532447427443f1a3685c3455cfd4ea2b91e62f99
+  local_path: data/reference/air_compressor/REF-COMP-01.pdf
+  source_url: https://www.atlascopco.com/content/dam/atlas-copco/compressor-technique/industrial-air/documents/brochures/air-compressors/marine-compressors/Marine_solutions.pdf
+  document_identity_status: verified
+  observations:
+  - location:
+      pdf_page: 8
+    notation: AIR-COOLED
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 10
+    notation: FAD*
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 10
+    notation: Charging capacity**
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 10
+    notation: Nominal working pressure
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 10
+    notation: Power
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 10
+    notation: Dimensions
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 10
+    notation: Weight
+    verification_status: user_verification_pending
+    verified_by: null
+- id: REF-COMP-02
+  class: AirCompressor
+  source: Sauer Compressors for Commercial Shipping
+  edition: 표기 없음 (파일명 2025, PDF 수정일 2025-05-05)
+  sha256: f9795e0dbc46e99ba8bc2ea639fae17428a770a2a74f4611bc4b9a3b5cfcd116
+  local_path: data/reference/air_compressor/REF-COMP-02.pdf
+  source_url: https://www.sauercompressors.com/assets/Downloads/Sauer_Commercial_shipping_global_en_2025.pdf
+  document_identity_status: verified
+  observations:
+  - location:
+      pdf_page: 5
+    notation: Final pressure
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 5
+    notation: barg
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 5
+    notation: Charging capacity
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 5
+    notation: Power consumption
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 5
+    notation: Weight
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 7
+    notation: mbara
+    verification_status: user_verification_pending
+    verified_by: null
+- id: REF-SEP-01
+  class: Separator
+  source: Alfa Laval P separators 626/636/646 – Cleaning systems for lubricating, diesel and hydraulic
+    oil applications
+  edition: 200006015-3-EN-GB (PDF 수정일 2023-05-02)
+  sha256: 3403175b4c4fa14d15bcb6a33bc532b00569a8997c6213a51fd82593f2c53e57
+  local_path: data/reference/separator/REF-SEP-01.pdf
+  source_url: https://www.alfalaval.com/globalassets/documents/products/separation/centrifugal-separators/separators/s-and-p-flex/product_leaflet_p_626_636_646_separator_and_system_-product-leaflets_en.pdf
+  document_identity_status: verified
+  observations:
+  - location:
+      pdf_page: 1
+    notation: lubricating
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 1
+    notation: fuel
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 3
+    notation: discharged
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 4
+    notation: Max. recommended capacity
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 5
+    notation: H1 x W1 x W2
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 5
+    notation: Net weight
+    verification_status: user_verification_pending
+    verified_by: null
+- id: REF-SEP-02
+  class: Separator
+  source: GEA marine Separator – Pushing the limits
+  edition: February 2026
+  sha256: 3c86c789afcea0edbc7b641e4547d5b8461b2562d1b5ca4c58e2ba173846a04a
+  local_path: data/reference/separator/REF-SEP-02.pdf
+  source_url: https://www.gea.com/assets/322211/
+  document_identity_status: verified
+  observations:
+  - location:
+      pdf_page: 7
+    notation: IF 380
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 7
+    notation: IF 700
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 7
+    notation: Footprint
+    verification_status: user_verification_pending
+    verified_by: null
+- id: REF-TC-01
+  class: Turbocharger
+  source: Turbochargers TCA – Turbocharger power systems
+  edition: EVR 000073EN-250400
+  sha256: c37f94ab35cfda011d5537093dac35e8df2e898914aa06ce68cc9a408f61dd96
+  local_path: data/reference/turbocharger/REF-TC-01.pdf
+  source_url: https://www.everllence.com/docs/default-source/marine-documents/turbocharger/evr-000073en_l3_tca_preview.pdf?sfvrsn=ec468fb7_3
+  document_identity_status: verified
+  observations:
+  - location:
+      pdf_page: 1
+    notation: axial
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 2
+    notation: plain bearings
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 2
+    notation: Two-stroke (kW)
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 2
+    notation: Four-stroke (kW)
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 2
+    notation: Speed (rpm)
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 2
+    notation: L (mm)
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 2
+    notation: B (mm)
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 2
+    notation: Weight (kg)
+    verification_status: user_verification_pending
+    verified_by: null
+- id: REF-TC-02
+  class: Turbocharger
+  source: Marine Machinery – Company Profile / Product Information
+  edition: CP-003E (24-03)
+  sha256: e5d835e933714180d46d7bfce90d5f32e169b4708baca227cabf168d8c40ddc5
+  local_path: data/reference/turbocharger/REF-TC-02.pdf
+  source_url: https://www.mhi.com/group/mhimme/company/lib/cp_catalogue_e.pdf
+  document_identity_status: verified
+  observations:
+  - location:
+      pdf_page: 8
+    notation: axial
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 8
+    notation: Engine Output Range per Turbocharger
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 8
+    notation: Max. Pressure Ratio
+    verification_status: user_verification_pending
+    verified_by: null
+  - location:
+      pdf_page: 9
+    notation: radial
+    verification_status: user_verification_pending
+    verified_by: null

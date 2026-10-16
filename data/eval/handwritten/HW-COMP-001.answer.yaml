@@ -1,0 +1,268 @@
+# 평가기 전용: 입력 모델에 전달하지 않는다.
+# schema_version 2: 별도 함정 목록 제거, 미확정 검증 상태는 null.
+schema_version: 2
+doc_id: HW-COMP-001
+origin: synthetic
+author: Claude (draft)
+reviewed_by: null
+created_at: 2026-10-06
+files:
+  spec_source: data/eval/handwritten/HW-COMP-001.spec.md
+  docx: null
+  pdf: null
+  input_text: data/eval/handwritten/inputs/DOC-002.md
+expected_class: AirCompressor
+class_path:
+- Equipment
+- FluidMachinery
+- AirCompressor
+attributes:
+  maker:
+    value: Brekkhaug Marine AS
+    unit: null
+    expected_status: null
+    occurrences:
+    - raw_text: Brekkhaug Marine AS
+      label_text: Issued by
+      location:
+        section: header
+        line: 3
+        pdf_page: null
+        printed_page: null
+    - raw_text: Brekkhaug Marine AS
+      label_text: Maker
+      location:
+        section: '1.1'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+  model_designation:
+    value: BKA-85/30
+    unit: null
+    expected_status: null
+    occurrences:
+    - raw_text: BKA-85/30
+      label_text: Model designation
+      location:
+        section: '1.2'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+  capacity:
+    value: 85
+    unit: m3/h
+    capacity_basis: free_air_delivery
+    expected_status: null
+    occurrences:
+    - raw_text: '85'
+      label_text: Free air delivery (FAD)
+      unit_text: m³/h
+      location:
+        section: '2'
+        table: 1
+        row: 2
+        pdf_page: null
+        printed_page: null
+    - raw_text: 85 m³/h free air
+      label_text: delivers
+      location:
+        section: '3.2'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+    reference_conditions:
+      temperature:
+        value: 20
+        unit: degC
+      absolute_pressure:
+        value: 1013
+        unit: mbar
+  max_pressure:
+    value: 30
+    unit: bar
+    pressure_basis: gauge
+    expected_status: null
+    occurrences:
+    - raw_text: '30'
+      label_text: Max. working pressure
+      unit_text: barg
+      location:
+        section: '2'
+        table: 1
+        row: 3
+        pdf_page: null
+        printed_page: null
+    - raw_text: 30 bar g
+      label_text: final pressure
+      location:
+        section: '3.2'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+  cooling_type:
+    value: air
+    unit: null
+    expected_status: null
+    occurrences:
+    - raw_text: Air
+      label_text: Cooling
+      location:
+        section: '2'
+        table: 1
+        row: 4
+        pdf_page: null
+        printed_page: null
+    - raw_text: Air cooling by a motor-driven fan
+      label_text: Cooling arrangement
+      location:
+        section: '3.2'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+    - raw_text: Air-cooled
+      label_text: Product description
+      location:
+        section: '1.3'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+    - raw_text: air-cooled
+      label_text: Compressor type
+      location:
+        section: '2'
+        table: 1
+        row: 1
+        pdf_page: null
+        printed_page: null
+  medium:
+    value: air
+    unit: null
+    expected_status: null
+    occurrences:
+    - raw_text: Air
+      label_text: Medium
+      location:
+        section: '2'
+        table: 1
+        row: 5
+        pdf_page: null
+        printed_page: null
+    - raw_text: starting air service
+      label_text: Product description
+      location:
+        section: '1.3'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+    - raw_text: starting air system
+      label_text: Application
+      location:
+        section: '1.4'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+    - raw_text: free air
+      label_text: delivers
+      location:
+        section: '3.2'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+  motor_power:
+    value: 22
+    unit: kW
+    expected_status: null
+    occurrences:
+    - raw_text: '22'
+      label_text: Motor power
+      unit_text: kW
+      location:
+        section: '2'
+        table: 1
+        row: 6
+        pdf_page: null
+        printed_page: null
+    - raw_text: 22 kW
+      label_text: Direct-coupled electric motor
+      location:
+        section: '3.1'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+  dimensions:
+    value:
+      length: 1350
+      width: 850
+      height: 1050
+    unit: mm
+    expected_status: null
+    occurrences:
+    - raw_text: 1,350 × 850 × 1,050 mm
+      label_text: Overall dimensions (L × W × H)
+      location:
+        section: '4.1'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+    scope: complete_compressor_unit_with_motor_and_mountings
+  dry_weight:
+    value: 610
+    unit: kg
+    expected_status: null
+    occurrences:
+    - raw_text: 610 kg
+      label_text: Weight
+      location:
+        section: '4.2'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+    weight_basis: dry
+    scope: complete_compressor_unit_with_motor_and_mountings
+missing_required: null
+relations:
+  manufactured_by: Brekkhaug Marine AS
+  has_component: []
+  variant_of: null
+injections:
+- type: V1
+  attribute: capacity
+  detail: 속성명 별칭 'Free air delivery (FAD)'
+  origin: synthetic
+  source_observations:
+  - document_id: REF-COMP-01
+    pdf_page: 10
+  source_usage: 표기 관찰 참고; 합성 별칭·단위 정의는 본문과 SCORING-POLICY를 따름
+- type: V1
+  attribute: max_pressure
+  detail: 속성명 별칭 'Max. working pressure', 서술은 'final pressure'
+  origin: synthetic
+  source_observations:
+  - document_id: REF-COMP-02
+    pdf_page: 5
+  source_usage: 표기 관찰 참고; 합성 별칭·단위 정의는 본문과 SCORING-POLICY를 따름
+- type: V1
+  attribute: max_pressure
+  detail: '게이지압 표기 차이: 표 ''barg'', 3.2 ''bar g'''
+  origin: synthetic
+  source_observations:
+  - document_id: REF-COMP-02
+    pdf_page: 5
+  source_usage: 표기 관찰 참고; 합성 별칭·단위 정의는 본문과 SCORING-POLICY를 따름
+- type: V1
+  attribute: dry_weight
+  detail: 속성명 'Weight' (Dry 생략); 본문에 dry와 포함 범위를 명시
+  origin: synthetic
+  source_observations:
+  - document_id: REF-COMP-01
+    pdf_page: 10
+  source_usage: 표기 관찰 참고; 합성 별칭·단위 정의는 본문과 SCORING-POLICY를 따름
+duplicate_of: null
+open_issues:
+- capacity를 FAD로 정의할지 charging capacity로 정의할지 W1에서 결정 (reference-observations.md AirCompressor)
+- max_pressure의 압력 기준(gauge/absolute)을 온톨로지에 어떻게 표현할지 W1에서 결정
+notes: 참고 문서는 표기 방식만 참고(REF-COMP-01, REF-COMP-02)
+dataset_revision: 2
+revised_by: Codex
+validation_status: ontology_pending
+scoring_policy: data/eval/handwritten/SCORING-POLICY.md

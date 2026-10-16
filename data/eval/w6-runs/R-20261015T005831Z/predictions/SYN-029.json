@@ -1,0 +1,326 @@
+{
+  "prediction": {
+    "document_id": "SYN-029",
+    "class_id": "FourStrokeEngine",
+    "class_candidates": [
+      "FourStrokeEngine",
+      "Pump"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-B Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-029",
+            "raw_text": "SGDW-20261007-B Synthetic Works",
+            "label_text": "Maker",
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                467.6191063841906,
+                203.83202560000007,
+                475.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX006-129",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-029",
+            "raw_text": "VX006-129",
+            "label_text": "Model designation",
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                449.6191063841906,
+                155.41015040000002,
+                457.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "number_of_cylinders",
+        "value": 8,
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-029",
+            "raw_text": "8",
+            "label_text": "Number of cylinder",
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                380.6190801146593,
+                182.89409840000002,
+                388.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "bore",
+        "value": 240,
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-029",
+            "raw_text": "240",
+            "label_text": "Cylinder bore mm",
+            "unit_text": "mm",
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                359.6190801146593,
+                191.7925352,
+                367.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "stroke",
+        "value": 310,
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-029",
+            "raw_text": "310",
+            "label_text": "Stroke",
+            "unit_text": "mm",
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                338.6190801146593,
+                191.7925352,
+                346.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "application",
+        "value": "fire pump drive",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-029",
+            "raw_text": "fire pump drive",
+            "label_text": "Application",
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                317.6190801146593,
+                231.3550336,
+                325.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_power",
+        "value": 3996.3,
+        "unit": "kW",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-029",
+            "raw_text": "3996.3",
+            "label_text": "Engine (kWm)",
+            "unit_text": "kW",
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                296.6190801146593,
+                202.91362800000002,
+                304.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_speed",
+        "value": 720,
+        "unit": "rpm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-029",
+            "raw_text": "720",
+            "label_text": "Rated speed",
+            "unit_text": "rpm",
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                275.6190801146593,
+                191.7925352,
+                283.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "fuel_types",
+        "value": [
+          "MDO",
+          "MGO"
+        ],
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-029",
+            "raw_text": "MDO, MGO",
+            "label_text": "Fuel types",
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                254.61908011465925,
+                220.66362880000003,
+                262.0060425304687
+              ]
+            }
+          },
+          {
+            "source_document_id": "SYN-029",
+            "raw_text": "MDO, MGO",
+            "label_text": "Fuel types",
+            "unit_text": null,
+            "location": {
+              "section": "Operating notes",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                142.61910638419056,
+                129.57030880000002,
+                150.00606879999998
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 4700,
+          "width": 2000,
+          "height": 2760
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-029",
+            "raw_text": "4700 × 2000 × 2760",
+            "label_text": "Overall dimensions (L × W × H)",
+            "unit_text": "mm",
+            "location": {
+              "section": "Installation data",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                203.61910638419056,
+                356.38279680000005,
+                211.00606879999998
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 33873.4,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-029",
+            "raw_text": "33873.4",
+            "label_text": "Dry weight",
+            "unit_text": "kg",
+            "location": {
+              "section": "Installation data",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                185.61910638419056,
+                238.99608240000015,
+                193.00606879999998
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": null,
+  "qualifiers": []
+}

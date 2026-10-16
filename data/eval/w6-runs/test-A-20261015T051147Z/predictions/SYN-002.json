@@ -1,0 +1,140 @@
+{
+  "prediction": {
+    "document_id": "SYN-002",
+    "class_id": "TwoStrokeMainEngine",
+    "class_candidates": [
+      "TwoStrokeMainEngine"
+    ],
+    "facts": [],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "Name",
+      "text": "Marine two-stroke main engine",
+      "line": "{'Name': ['L3', 'L5', 'L6', 'L9', 'L10', 'L11', 'L12', 'L13', 'L14', 'L15', 'L17'], 'Value': ['Marine two-stroke main engine', 'SGDW-20261007-D Synthetic Works', 'VX004-102', '6', '680 mm', '2530 mm', '31023.4 kW', 'natural gas, MDO', '12250 × 5390 × 12550 mm', '591330.0 kg', '31023.4 kW']}",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Manufacturer",
+      "text": "SGDW-20261007-D Synthetic Works",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Model Designation",
+      "text": "VX004-102",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Cylinders",
+      "text": "6",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "bore",
+      "text": "680 mm",
+      "line": "",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "stroke",
+      "text": "2530 mm",
+      "line": "",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "Power",
+      "text": "31023.4 kW",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Fuel Types",
+      "text": "natural gas, MDO",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "dimensions",
+      "text": "12250 × 5390 × 12550 mm",
+      "line": "['L14']",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "Dry Mass",
+      "text": "591330.0 kg",
+      "line": "['L15']",
+      "reason": "unknown_attribute"
+    }
+  ],
+  "reply": {
+    "attributes": {
+      "Name": "Marine two-stroke main engine",
+      "Manufacturer": "SGDW-20261007-D Synthetic Works",
+      "Model Designation": "VX004-102",
+      "Cylinders": "6",
+      "Bore": "680 mm",
+      "Stroke": "2530 mm",
+      "Power": "31023.4 kW",
+      "Fuel Types": "natural gas, MDO",
+      "Dimensions": "12250 × 5390 × 12550 mm",
+      "Dry Mass": "591330.0 kg"
+    },
+    "lines": {
+      "Name": {
+        "Name": [
+          "L3",
+          "L5",
+          "L6",
+          "L9",
+          "L10",
+          "L11",
+          "L12",
+          "L13",
+          "L14",
+          "L15",
+          "L17"
+        ],
+        "Value": [
+          "Marine two-stroke main engine",
+          "SGDW-20261007-D Synthetic Works",
+          "VX004-102",
+          "6",
+          "680 mm",
+          "2530 mm",
+          "31023.4 kW",
+          "natural gas, MDO",
+          "12250 × 5390 × 12550 mm",
+          "591330.0 kg",
+          "31023.4 kW"
+        ]
+      },
+      "Parameter": {
+        "Cylinders": [
+          "L9"
+        ],
+        "Bore": [
+          "L10"
+        ],
+        "Stroke": [
+          "L11"
+        ],
+        "Power": [
+          "L12",
+          "L17"
+        ]
+      },
+      "Dimensions": [
+        "L14"
+      ],
+      "Dry Mass": [
+        "L15"
+      ]
+    }
+  },
+  "qualifiers": []
+}

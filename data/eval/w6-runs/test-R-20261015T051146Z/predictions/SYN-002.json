@@ -1,0 +1,223 @@
+{
+  "prediction": {
+    "document_id": "SYN-002",
+    "class_id": "TwoStrokeMainEngine",
+    "class_candidates": [
+      "TwoStrokeMainEngine"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-D Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-002",
+            "raw_text": "SGDW-20261007-D Synthetic Works",
+            "label_text": "Manufacturer",
+            "unit_text": null,
+            "location": {
+              "section": "General",
+              "sheet": "Specification",
+              "cell_ref": "A5"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX004-102",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-002",
+            "raw_text": "VX004-102",
+            "label_text": "Model designation",
+            "unit_text": null,
+            "location": {
+              "section": "General",
+              "sheet": "Specification",
+              "cell_ref": "A6"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "number_of_cylinders",
+        "value": 6,
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-002",
+            "raw_text": "6",
+            "label_text": "Cylinders",
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B9"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "bore",
+        "value": 680,
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-002",
+            "raw_text": "680",
+            "label_text": "Bore:",
+            "unit_text": "mm",
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B10"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "stroke",
+        "value": 2530,
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-002",
+            "raw_text": "2530",
+            "label_text": "Stroke:",
+            "unit_text": "mm",
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B11"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_power",
+        "value": 31023.4,
+        "unit": "kW",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-002",
+            "raw_text": "31023.4",
+            "label_text": "Power [kW]",
+            "unit_text": "kW",
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B12"
+            }
+          },
+          {
+            "source_document_id": "SYN-002",
+            "raw_text": "31023.4",
+            "label_text": "Power [kW]",
+            "unit_text": "kW",
+            "location": {
+              "section": "Remarks",
+              "sheet": "Specification",
+              "cell_ref": "A17"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "fuel_types",
+        "value": [
+          "natural_gas",
+          "MDO"
+        ],
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-002",
+            "raw_text": "natural gas, MDO",
+            "label_text": "Fuel",
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B13"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 12250,
+          "width": 5390,
+          "height": 12550
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-002",
+            "raw_text": "12250 × 5390 × 12550",
+            "label_text": "Dimensions (L × W × H)",
+            "unit_text": "mm",
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B14"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 591330.0,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-002",
+            "raw_text": "591330.0",
+            "label_text": "Dry mass",
+            "unit_text": "kg",
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B15"
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": null,
+  "qualifiers": []
+}

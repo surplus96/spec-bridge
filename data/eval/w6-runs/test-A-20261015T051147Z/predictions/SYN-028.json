@@ -1,0 +1,139 @@
+{
+  "prediction": {
+    "document_id": "SYN-028",
+    "class_id": "FourStrokeEngine",
+    "class_candidates": [
+      "FourStrokeEngine"
+    ],
+    "facts": [],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "name",
+      "text": "Marine four-stroke engine",
+      "line": "{'name': {'L3': 'Product: Marine four-stroke engine', 'L5': 'Maker — SGDW-20261007-D Synthetic Works', 'L6': 'Model designation — VX008-128', 'L9': 'Number of cylinder | 8 | — | —', 'L10': 'Bore | 260 | mm | —', 'L11': 'Stroke | 330 | mm | —', 'L12': 'Service | generating-set | — | —', 'L13': 'Engine (kWm) | 4929.6 | kW | continuous rating, rating point R1, at 50 Hz, engine shaft', 'L14': 'Engine (kWm) | 4338.05 | kW | continuous rating, rating point R2, at 60 Hz, engine shaft', 'L15': 'Engine speed | 750 | rpm | rating point R1, at 50 Hz, for engine crankshaft', 'L16': 'Engine speed | 900 | rpm | rating point R2, at 60 Hz, for engine crankshaft', 'L17': 'Fuel | MDO, MGO | — | —', 'L19': 'Dimensions (L × W × H) — 5300 × 2200 × 3080 mm (engine without generator)', 'L20': 'Dry mass — 38678.4 kg (dry, for engine without generator)', 'L22': 'Fuel — MDO, MGO', 'L23': 'The engine-shaft output above is a mechanical rating; generator electrical output is not specified in this sheet.'}}",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "maker",
+      "text": "SGDW-20261007-D Synthetic Works",
+      "line": "",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "model_designation",
+      "text": "VX008-128",
+      "line": "",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "number_of_cylinder",
+      "text": "8",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "bore",
+      "text": "260 mm",
+      "line": "",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "stroke",
+      "text": "330 mm",
+      "line": "",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "service",
+      "text": "generating-set",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "engine_kw_rating_point_r1",
+      "text": "4929.6 kW",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "engine_kw_rating_point_r2",
+      "text": "4338.05 kW",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "engine_speed_rating_point_r1",
+      "text": "750 rpm",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "engine_speed_rating_point_r2",
+      "text": "900 rpm",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "fuel",
+      "text": "MDO, MGO",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "dimensions",
+      "text": "5300 × 2200 × 3080 mm (engine without generator)",
+      "line": "",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "dry_mass",
+      "text": "38678.4 kg (dry, for engine without generator)",
+      "line": "",
+      "reason": "unknown_attribute"
+    }
+  ],
+  "reply": {
+    "attributes": {
+      "name": "Marine four-stroke engine",
+      "maker": "SGDW-20261007-D Synthetic Works",
+      "model_designation": "VX008-128",
+      "number_of_cylinder": "8",
+      "bore": "260 mm",
+      "stroke": "330 mm",
+      "service": "generating-set",
+      "engine_kw_rating_point_r1": "4929.6 kW",
+      "engine_kw_rating_point_r2": "4338.05 kW",
+      "engine_speed_rating_point_r1": "750 rpm",
+      "engine_speed_rating_point_r2": "900 rpm",
+      "fuel": "MDO, MGO",
+      "dimensions": "5300 × 2200 × 3080 mm (engine without generator)",
+      "dry_mass": "38678.4 kg (dry, for engine without generator)"
+    },
+    "lines": {
+      "name": {
+        "name": {
+          "L3": "Product: Marine four-stroke engine",
+          "L5": "Maker — SGDW-20261007-D Synthetic Works",
+          "L6": "Model designation — VX008-128",
+          "L9": "Number of cylinder | 8 | — | —",
+          "L10": "Bore | 260 | mm | —",
+          "L11": "Stroke | 330 | mm | —",
+          "L12": "Service | generating-set | — | —",
+          "L13": "Engine (kWm) | 4929.6 | kW | continuous rating, rating point R1, at 50 Hz, engine shaft",
+          "L14": "Engine (kWm) | 4338.05 | kW | continuous rating, rating point R2, at 60 Hz, engine shaft",
+          "L15": "Engine speed | 750 | rpm | rating point R1, at 50 Hz, for engine crankshaft",
+          "L16": "Engine speed | 900 | rpm | rating point R2, at 60 Hz, for engine crankshaft",
+          "L17": "Fuel | MDO, MGO | — | —",
+          "L19": "Dimensions (L × W × H) — 5300 × 2200 × 3080 mm (engine without generator)",
+          "L20": "Dry mass — 38678.4 kg (dry, for engine without generator)",
+          "L22": "Fuel — MDO, MGO",
+          "L23": "The engine-shaft output above is a mechanical rating; generator electrical output is not specified in this sheet."
+        }
+      }
+    }
+  },
+  "qualifiers": []
+}

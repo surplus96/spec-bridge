@@ -1,0 +1,251 @@
+{
+  "prediction": {
+    "document_id": "SYN-027",
+    "class_id": "AirCompressor",
+    "class_candidates": [
+      "AirCompressor"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-B Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-027",
+            "raw_text": "SGDW-20261007-B Synthetic Works",
+            "label_text": "Manufacturer",
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                467.6191063841906,
+                228.73827360000007,
+                475.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX010-127",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-027",
+            "raw_text": "VX010-127",
+            "label_text": "Model designation",
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                449.6191063841906,
+                155.41015040000002,
+                457.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "max_pressure",
+        "value": 32,
+        "unit": "bar",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-027",
+            "raw_text": "32",
+            "label_text": "Max pressure",
+            "unit_text": "bar",
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                359.6190801146593,
+                187.34331680000003,
+                367.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "cooling_type",
+        "value": "water",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-027",
+            "raw_text": "water-cooled",
+            "label_text": "Cooling",
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                338.6190801146593,
+                224.2456592,
+                346.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "air",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-027",
+            "raw_text": "air",
+            "label_text": "Fluid",
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                317.6190801146593,
+                187.33550480000002,
+                325.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "motor_power",
+        "value": 45.34,
+        "unit": "kW",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-027",
+            "raw_text": "45.34",
+            "label_text": "Motor power",
+            "unit_text": "kW",
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                296.6190801146593,
+                198.4644096,
+                304.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 1160,
+          "width": 725,
+          "height": 875
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-027",
+            "raw_text": "1160 × 725 × 875",
+            "label_text": "Overall dimensions (L × W × H)",
+            "unit_text": "mm",
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                275.6190801146593,
+                241.1714384,
+                283.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 982.28,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-027",
+            "raw_text": "982.28",
+            "label_text": "Dry weight",
+            "unit_text": "kg",
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                254.61908011465925,
+                202.91362800000002,
+                262.0060425304687
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [
+      {
+        "attribute": "capacity",
+        "value_text": "179.46.0",
+        "unit_text": "m3/h",
+        "reason": "not_a_number",
+        "occurrence": {
+          "source_document_id": "SYN-027",
+          "raw_text": "179.46.0",
+          "label_text": "FAD*",
+          "unit_text": "m3/h",
+          "location": {
+            "section": "Main particulars",
+            "pdf_page": 1,
+            "bbox": [
+              178.44488,
+              380.6190801146593,
+              209.5855024,
+              388.0060425304687
+            ]
+          }
+        }
+      }
+    ],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": null,
+  "qualifiers": []
+}

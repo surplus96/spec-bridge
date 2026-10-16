@@ -1,0 +1,612 @@
+{
+  "prediction": {
+    "document_id": "SYN-032",
+    "class_id": "Separator",
+    "class_candidates": [
+      "Separator",
+      "Pump"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-A Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-032",
+            "raw_text": "SGDW-20261007-A Synthetic Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "sheet": "Specification",
+              "cell_ref": "A5"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX017-132",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-032",
+            "raw_text": "VX017-132",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "sheet": "Specification",
+              "cell_ref": "A6"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 1850,
+          "width": 990,
+          "height": 1690
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-032",
+            "raw_text": "1850 × 990 × 1690",
+            "label_text": null,
+            "unit_text": "mm",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B15"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 1500.72,
+        "unit": "kg",
+        "basis": {},
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": "complete_separator_module_with_feed_pump_heater_control",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-032",
+            "raw_text": "1500.72",
+            "label_text": null,
+            "unit_text": "kg",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B16"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "heavy_fuel_oil",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-032",
+            "raw_text": "heavy fuel oil",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B10"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "motor_power",
+        "value": 11.54,
+        "unit": "kW",
+        "basis": {},
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": "separator_drive_motor",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-032",
+            "raw_text": "11.54",
+            "label_text": null,
+            "unit_text": "kW",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B14"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "application",
+        "value": "fuel_oil",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-032",
+            "raw_text": "fuel oil treatment",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B9"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_throughput",
+        "value": 5387.2,
+        "unit": "l/h",
+        "basis": {
+          "rating": "maximum"
+        },
+        "condition": {
+          "temperature": {
+            "value": 50,
+            "unit": "degC"
+          }
+        },
+        "scope": "main_separator",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-032",
+            "raw_text": "5387.2",
+            "label_text": null,
+            "unit_text": "l/h",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B11"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_throughput",
+        "value": 3501.68,
+        "unit": "l/h",
+        "basis": {
+          "rating": "maximum"
+        },
+        "condition": {
+          "temperature": {
+            "value": 50,
+            "unit": "degC"
+          }
+        },
+        "scope": "main_separator",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-032",
+            "raw_text": "3501.68",
+            "label_text": null,
+            "unit_text": "l/h",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B12"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "self_cleaning",
+        "value": true,
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-032",
+            "raw_text": "Yes",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B13"
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [
+      {
+        "attribute": "reported_weight",
+        "value_text": "1500.72",
+        "unit_text": null,
+        "reason": "missing_unit",
+        "occurrence": {
+          "source_document_id": "SYN-032",
+          "raw_text": "1500.72",
+          "label_text": null,
+          "unit_text": null,
+          "location": {
+            "section": "Main particulars",
+            "sheet": "Specification",
+            "cell_ref": "B16"
+          }
+        }
+      }
+    ],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "line": "L5",
+        "value_text": "SGDW-20261007-A Synthetic Works"
+      },
+      {
+        "attribute": "model_designation",
+        "line": "L6",
+        "value_text": "VX017-132"
+      },
+      {
+        "attribute": "dimensions",
+        "line": "L15",
+        "value_text": "1850 × 990 × 1690",
+        "unit_text": "mm"
+      },
+      {
+        "attribute": "dry_weight",
+        "line": "L16",
+        "value_text": "1500.72",
+        "unit_text": "kg"
+      },
+      {
+        "attribute": "reported_weight",
+        "line": "L16",
+        "value_text": "1500.72"
+      },
+      {
+        "attribute": "medium",
+        "line": "L10",
+        "value_text": "heavy fuel oil"
+      },
+      {
+        "attribute": "motor_power",
+        "line": "L14",
+        "value_text": "11.54",
+        "unit_text": "kW"
+      },
+      {
+        "attribute": "application",
+        "line": "L9",
+        "value_text": "fuel oil treatment"
+      },
+      {
+        "attribute": "rated_throughput",
+        "line": "L11",
+        "value_text": "5387.2",
+        "unit_text": "l/h"
+      },
+      {
+        "attribute": "rated_throughput",
+        "line": "L12",
+        "value_text": "3501.68",
+        "unit_text": "l/h"
+      },
+      {
+        "attribute": "self_cleaning",
+        "line": "L13",
+        "value_text": "Yes"
+      }
+    ]
+  },
+  "qualifiers": [
+    {
+      "kind": "value",
+      "attribute": "maker",
+      "value_text": "SGDW-20261007-A Synthetic Works",
+      "location": {
+        "section": "Product data",
+        "sheet": "Specification",
+        "cell_ref": "A5"
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.medium: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "model_designation",
+      "value_text": "VX017-132",
+      "location": {
+        "section": "Product data",
+        "sheet": "Specification",
+        "cell_ref": "A6"
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.medium: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "dimensions",
+      "value_text": "1850 × 990 × 1690",
+      "location": {
+        "section": "Main particulars",
+        "sheet": "Specification",
+        "cell_ref": "B15"
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": ""
+      },
+      "evidence": {
+        "condition.rating_point": "for complete separator module with feed pump heater control"
+      },
+      "rejected": [
+        "basis.capacity: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "dry_weight",
+      "value_text": "1500.72",
+      "location": {
+        "section": "Main particulars",
+        "sheet": "Specification",
+        "cell_ref": "B16"
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": "complete separator module with feed pump heater control"
+      },
+      "evidence": {
+        "condition.rating_point": "dry condition",
+        "scope": "complete separator module with feed pump heater control"
+      },
+      "rejected": [
+        "basis.capacity: no evidence"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "reported_weight",
+      "value_text": "1500.72",
+      "location": {
+        "section": "Main particulars",
+        "sheet": "Specification",
+        "cell_ref": "B16"
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": "complete separator module with feed pump heater control"
+      },
+      "evidence": {
+        "condition.rating_point": "dry condition",
+        "scope": "complete separator module with feed pump heater control"
+      },
+      "rejected": [
+        "basis.capacity: no evidence"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "medium",
+      "value_text": "heavy fuel oil",
+      "location": {
+        "section": "Main particulars",
+        "sheet": "Specification",
+        "cell_ref": "B10"
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.rating_point: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "motor_power",
+      "value_text": "11.54",
+      "location": {
+        "section": "Main particulars",
+        "sheet": "Specification",
+        "cell_ref": "B14"
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": "separator drive motor"
+      },
+      "evidence": {
+        "condition.rating_point": "rated output",
+        "scope": "for separator drive motor"
+      },
+      "rejected": [
+        "basis.capacity: no evidence"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "application",
+      "value_text": "fuel oil treatment",
+      "location": {
+        "section": "Main particulars",
+        "sheet": "Specification",
+        "cell_ref": "B9"
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.rating_point: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "rated_throughput",
+      "value_text": "5387.2",
+      "location": {
+        "section": "Main particulars",
+        "sheet": "Specification",
+        "cell_ref": "B11"
+      },
+      "qualifiers": {
+        "basis": {
+          "rating": "maximum"
+        },
+        "condition": {
+          "temperature": "50 degC"
+        },
+        "scope": "for main separator"
+      },
+      "evidence": {
+        "basis.rating": "maximum capacity",
+        "condition.temperature": "50 degC",
+        "scope": "for main separator"
+      },
+      "rejected": [
+        "condition.frequency: number not in the line",
+        "condition.viscosity: wrong unit or form"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "rated_throughput",
+      "value_text": "3501.68",
+      "location": {
+        "section": "Main particulars",
+        "sheet": "Specification",
+        "cell_ref": "B12"
+      },
+      "qualifiers": {
+        "basis": {
+          "rating": "maximum"
+        },
+        "condition": {
+          "temperature": "50 degC"
+        },
+        "scope": "for main separator"
+      },
+      "evidence": {
+        "basis.rating": "maximum capacity",
+        "condition.temperature": "50 degC",
+        "scope": "for main separator"
+      },
+      "rejected": [
+        "condition.frequency: number not in the line",
+        "condition.viscosity: wrong unit or form"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "self_cleaning",
+      "value_text": "Yes",
+      "location": {
+        "section": "Main particulars",
+        "sheet": "Specification",
+        "cell_ref": "B13"
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.rating_point: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "prediction": {
+    "document_id": "SYN-038",
+    "class_id": "TwoStrokeMainEngine",
+    "class_candidates": [
+      "TwoStrokeMainEngine"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-B Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-038",
+            "raw_text": "SGDW-20261007-B Synthetic Works",
+            "label_text": "Maker",
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "paragraph": 5
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX002-138",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-038",
+            "raw_text": "VX002-138",
+            "label_text": "Model designation",
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "paragraph": 6
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "bore",
+        "value": 650,
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-038",
+            "raw_text": "650",
+            "label_text": "Bore:",
+            "unit_text": "mm",
+            "location": {
+              "section": "Main particulars",
+              "table": 1,
+              "row": 3,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "stroke",
+        "value": 2450,
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-038",
+            "raw_text": "2450",
+            "label_text": "Stroke:",
+            "unit_text": "mm",
+            "location": {
+              "section": "Main particulars",
+              "table": 1,
+              "row": 4,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_power",
+        "value": 31849.2,
+        "unit": "kW",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-038",
+            "raw_text": "31849.2",
+            "label_text": "Rated power",
+            "unit_text": "kW",
+            "location": {
+              "section": "Main particulars",
+              "table": 1,
+              "row": 5,
+              "column": 2
+            }
+          },
+          {
+            "source_document_id": "SYN-038",
+            "raw_text": "31849.2",
+            "label_text": "Rated power",
+            "unit_text": "kW",
+            "location": {
+              "section": "Notes",
+              "paragraph": 10
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_speed",
+        "value": 84,
+        "unit": "rpm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-038",
+            "raw_text": "84",
+            "label_text": "Rated speed",
+            "unit_text": "rpm",
+            "location": {
+              "section": "Main particulars",
+              "table": 1,
+              "row": 6,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "fuel_types",
+        "value": [
+          "natural_gas",
+          "MDO"
+        ],
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-038",
+            "raw_text": "natural gas, MDO",
+            "label_text": "Fuel types",
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "table": 1,
+              "row": 7,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 10950,
+          "width": 4930,
+          "height": 11450
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-038",
+            "raw_text": "10950 × 4930 × 11450",
+            "label_text": "Overall dimensions (L × W × H)",
+            "unit_text": "mm",
+            "location": {
+              "section": "Main particulars",
+              "table": 1,
+              "row": 8,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 619290.0,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-038",
+            "raw_text": "619290.0",
+            "label_text": "Dry weight",
+            "unit_text": "kg",
+            "location": {
+              "section": "Main particulars",
+              "table": 1,
+              "row": 9,
+              "column": 2
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [
+      {
+        "attribute": "number_of_cylinders",
+        "value_text": "6.5",
+        "unit_text": null,
+        "reason": "not_integer",
+        "occurrence": {
+          "source_document_id": "SYN-038",
+          "raw_text": "6.5",
+          "label_text": "Number of cylinders:",
+          "unit_text": null,
+          "location": {
+            "section": "Main particulars",
+            "table": 1,
+            "row": 2,
+            "column": 2
+          }
+        }
+      }
+    ],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": null,
+  "qualifiers": []
+}

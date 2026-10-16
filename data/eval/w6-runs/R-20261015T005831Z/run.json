@@ -1,0 +1,110 @@
+{
+  "config": "R",
+  "environment": {
+    "git_commit": "5494f33743bddf1f41d7d75c102f68491739b9ca",
+    "git_dirty": false,
+    "models_sha256": "1ce23c82391ada096d865f3bea3a0f81bef9cca4abc3b5165022effc8f78a1c9",
+    "pdf_options": {
+      "do_ocr": false,
+      "do_table_structure": true
+    },
+    "uv_lock_sha256": "19f71885b077dbb9feafa685fb049d7ce2b347f54911e0d8c854a060ecc39a3d",
+    "versions": {
+      "docling": "2.137.0",
+      "docling-core": "2.101.1",
+      "docling-ibm-models": "4.0.3",
+      "openpyxl": "3.1.5",
+      "pypdfium2": "5.14.0",
+      "python-docx": "1.2.0"
+    }
+  },
+  "extraction": {
+    "context": "required_none"
+  },
+  "failures": {},
+  "finished_at": "2026-10-15T00:58:32.322352+00:00",
+  "freeze": null,
+  "hashes": {
+    "dev_dictionary": "1d3aa91bbc452f4f14506f7f99f89213bfb790d5105bc9073f14e1953f76ea8c",
+    "evaluation": {
+      "SHA256SUMS": "54f0cecf27cba6c5b23a381254afaa927433c36d2536d094f8b465f2bc664768",
+      "dataset-manifest.yaml": "5efe8772f47923bcaf4cf7e453905af1abcfad9fd7dd8ece235db6c0d3a060a5",
+      "spec_bridge.dedup.matcher": "fd31b393dda39f1b39eed2218e95d957431fdedc892de8eb5d007d31f148d22f",
+      "spec_bridge.eval.dedup_scoring": "d18bb37270cd581aee3348f1edcb455f748deb7bcc8bb8a64e1ad3b077ab5e48",
+      "spec_bridge.eval.locations": "d87796729758ba70cf964115eb56854de5993baca2e2cb37bdb8c132ee20dfe7",
+      "spec_bridge.eval.scoring": "b00aa222a4b12d129cb7be71b7ac68472a2c1f2d6f4a42bbd2cdaeff5efb6e62",
+      "spec_bridge.eval.validation_scoring": "00feb03ed0d5f935c71cd6ef35247cc3aa569566c9a9bae0a259f167917a8da1",
+      "spec_bridge.validate.findings": "6e09c7bd581a412cb118a04b0438d4afea4a4234eda0dd7ab0592e474d9e9a33",
+      "spec_bridge.validate.validator": "537abc2de90273f441216703e4bd9e45222f9c2f9bb7e6bbda0440fd04bc5949"
+    },
+    "ontology": "78d3fea6309d1c8a98f4fc8d3f0a241e18ec6110c12f6ac8d53626fa1a158b69",
+    "prompt_modules": {
+      "spec_bridge.extract.classifier": "f73e5c158a88c2020046cb890ffdaa741b48594cee16636d2f22ab1bc3711587",
+      "spec_bridge.extract.extractor": "505c08113c8a5bbe7dcdf7f8b0c5169292ddd4858e756d03200a244f49c770e9",
+      "spec_bridge.extract.prompt_input": "9fbf5ed1147ca3c303cbd3f1bff66e4c9df02952bcca541ad7ddf5686b8ff3b3",
+      "spec_bridge.extract.rules": "1b223cfc481a0c0454a710a0beabde0590e683d5ec3b48ec0fb80ad38e3b254c",
+      "spec_bridge.extract.schemas": "66174afe790f6bdb09b67081e66ea52b74667d390f3ba3fad917883e34eaec34"
+    },
+    "scorer_id": "f9b6e223cb15"
+  },
+  "latency_s": {
+    "first": 0.003,
+    "per_document": {
+      "SYN-003": 0.003,
+      "SYN-004": 0.003,
+      "SYN-005": 0.004,
+      "SYN-008": 0.003,
+      "SYN-010": 0.003,
+      "SYN-011": 0.004,
+      "SYN-012": 0.004,
+      "SYN-015": 0.003,
+      "SYN-017": 0.003,
+      "SYN-019": 0.004,
+      "SYN-023": 0.004,
+      "SYN-024": 0.003,
+      "SYN-026": 0.003,
+      "SYN-027": 0.004,
+      "SYN-029": 0.004,
+      "SYN-030": 0.003,
+      "SYN-031": 0.003,
+      "SYN-032": 0.003,
+      "SYN-033": 0.004,
+      "SYN-034": 0.003,
+      "SYN-035": 0.003,
+      "SYN-036": 0.003,
+      "SYN-037": 0.003,
+      "SYN-038": 0.003
+    },
+    "rest_mean": 0.003
+  },
+  "model": null,
+  "parse": {
+    "git_commit": "2d994d018ae14d0522186badbf9fced81973fa6e",
+    "git_dirty": true,
+    "models_sha256": "1ce23c82391ada096d865f3bea3a0f81bef9cca4abc3b5165022effc8f78a1c9",
+    "pdf_options": {
+      "do_ocr": false,
+      "do_table_structure": true
+    },
+    "summary": "var/parsed/dev/_summary.json",
+    "uv_lock_sha256": "c93feac67236df106a01279d5a3d3498fa84c92a96b4e44c3ca25526946b5699",
+    "versions": {
+      "docling": "2.137.0",
+      "docling-core": "2.101.1",
+      "docling-ibm-models": "4.0.3",
+      "openpyxl": "3.1.5",
+      "pypdfium2": "5.14.0",
+      "python-docx": "1.2.0"
+    }
+  },
+  "rag": null,
+  "run_id": "R-20261015T005831Z",
+  "served_by": [],
+  "split": "dev",
+  "tokens": {
+    "calls": 0,
+    "completion": 0,
+    "errors": 0,
+    "prompt": 0
+  }
+}

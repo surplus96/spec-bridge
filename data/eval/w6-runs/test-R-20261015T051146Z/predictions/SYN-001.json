@@ -1,0 +1,188 @@
+{
+  "prediction": {
+    "document_id": "SYN-001",
+    "class_id": "AirCompressor",
+    "class_candidates": [
+      "AirCompressor"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-D Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-001",
+            "raw_text": "SGDW-20261007-D Synthetic Works",
+            "label_text": "Maker",
+            "unit_text": null,
+            "location": {
+              "section": "General",
+              "sheet": "Specification",
+              "cell_ref": "A5"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX012-101",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-001",
+            "raw_text": "VX012-101",
+            "label_text": "Model",
+            "unit_text": null,
+            "location": {
+              "section": "General",
+              "sheet": "Specification",
+              "cell_ref": "A6"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "max_pressure",
+        "value": 30,
+        "unit": "bar",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-001",
+            "raw_text": "30",
+            "label_text": "Maximum pressure",
+            "unit_text": "bar",
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B9"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "cooling_type",
+        "value": "water",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-001",
+            "raw_text": "water",
+            "label_text": "Cooling type",
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B10"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "air",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-001",
+            "raw_text": "air",
+            "label_text": "Medium",
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B11"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "motor_power",
+        "value": 49.5,
+        "unit": "kW",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-001",
+            "raw_text": "49.5",
+            "label_text": "Motor power",
+            "unit_text": "kW",
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B12"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 1400,
+          "width": 795,
+          "height": 1005
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-001",
+            "raw_text": "1400 × 795 × 1005",
+            "label_text": "Dimensions (L × W × H)",
+            "unit_text": "mm",
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B13"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 1109.55,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-001",
+            "raw_text": "1109.55",
+            "label_text": "Dry mass",
+            "unit_text": "kg",
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B14"
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": null,
+  "qualifiers": []
+}

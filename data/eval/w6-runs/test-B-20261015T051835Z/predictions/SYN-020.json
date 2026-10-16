@@ -1,0 +1,557 @@
+{
+  "prediction": {
+    "document_id": "SYN-020",
+    "class_id": "FourStrokeEngine",
+    "class_candidates": [
+      "FourStrokeEngine"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-D Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "manufacturer_identification",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-020",
+            "raw_text": "SGDW-20261007-D Synthetic Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "General",
+              "paragraph": 5
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX008021",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "specific_model_identification",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-020",
+            "raw_text": "VX008021",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "General",
+              "paragraph": 6
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "number_of_cylinders",
+        "value": 8,
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "engine_configuration",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-020",
+            "raw_text": "8",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "table": 1,
+              "row": 2,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "bore",
+        "value": 260,
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "cylinder_diameter",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-020",
+            "raw_text": "260",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "table": 1,
+              "row": 3,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "stroke",
+        "value": 330,
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "piston_stroke_length",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-020",
+            "raw_text": "330",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "table": 1,
+              "row": 4,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "application",
+        "value": "genset",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "engine_usage_context",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-020",
+            "raw_text": "genset",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "table": 1,
+              "row": 5,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_power",
+        "value": 2982.2,
+        "unit": "kW",
+        "basis": {},
+        "condition": {
+          "rating_point": "R1",
+          "frequency": {
+            "value": 50,
+            "unit": "Hz"
+          },
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          },
+          "viscosity": {
+            "value": 32,
+            "unit": "cSt"
+          }
+        },
+        "scope": "engine_power_output_at_specified_conditions",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-020",
+            "raw_text": "2982.2",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "table": 1,
+              "row": 6,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_power",
+        "value": 2624.34,
+        "unit": "kW",
+        "basis": {},
+        "condition": {
+          "rating_point": "R2",
+          "frequency": {
+            "value": 60,
+            "unit": "Hz"
+          },
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          },
+          "viscosity": {
+            "value": 32,
+            "unit": "cSt"
+          }
+        },
+        "scope": "engine_power_output_at_specified_conditions",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-020",
+            "raw_text": "2624.34",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "table": 1,
+              "row": 7,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_speed",
+        "value": 750,
+        "unit": "rpm",
+        "basis": {},
+        "condition": {
+          "rating_point": "R1",
+          "frequency": {
+            "value": 50,
+            "unit": "Hz"
+          },
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          },
+          "viscosity": {
+            "value": 32,
+            "unit": "cSt"
+          }
+        },
+        "scope": "engine_speed_at_specified_conditions",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-020",
+            "raw_text": "750",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "table": 1,
+              "row": 8,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_speed",
+        "value": 900,
+        "unit": "rpm",
+        "basis": {},
+        "condition": {
+          "rating_point": "R2",
+          "frequency": {
+            "value": 60,
+            "unit": "Hz"
+          },
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          },
+          "viscosity": {
+            "value": 32,
+            "unit": "cSt"
+          }
+        },
+        "scope": "engine_speed_at_specified_conditions",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-020",
+            "raw_text": "900",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "table": 1,
+              "row": 9,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "fuel_types",
+        "value": [
+          "MDO",
+          "MGO"
+        ],
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "engine_fuel_compatibility",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-020",
+            "raw_text": "MDO, MGO",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "table": 1,
+              "row": 10,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 5300,
+          "width": 2200,
+          "height": 3080
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "engine_physical_dimensions",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-020",
+            "raw_text": "5300 × 2200 × 3080",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "table": 1,
+              "row": 11,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 23398.8,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "engine_weight_without_additional_components",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-020",
+            "raw_text": "23398.8",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "table": 1,
+              "row": 12,
+              "column": 2
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "basis": {},
+        "condition": {},
+        "scope": "Manufacturer identification",
+        "line": "L5",
+        "value": "SGDW-20261007-D Synthetic Works",
+        "unit": null,
+        "raw_text": "SGDW-20261007-D Synthetic Works"
+      },
+      {
+        "attribute": "model_designation",
+        "basis": {},
+        "condition": {},
+        "scope": "Specific model identification",
+        "line": "L6",
+        "value": "VX008021",
+        "unit": null,
+        "raw_text": "VX008021"
+      },
+      {
+        "attribute": "number_of_cylinders",
+        "basis": {},
+        "condition": {},
+        "scope": "Engine configuration",
+        "line": "L9",
+        "value": 8,
+        "unit": null,
+        "raw_text": "8"
+      },
+      {
+        "attribute": "bore",
+        "basis": {},
+        "condition": {},
+        "scope": "Cylinder diameter",
+        "line": "L10",
+        "value": 260,
+        "unit": "mm",
+        "raw_text": "260"
+      },
+      {
+        "attribute": "stroke",
+        "basis": {},
+        "condition": {},
+        "scope": "Piston stroke length",
+        "line": "L11",
+        "value": 330,
+        "unit": "mm",
+        "raw_text": "330"
+      },
+      {
+        "attribute": "application",
+        "basis": {},
+        "condition": {},
+        "scope": "Engine usage context",
+        "line": "L12",
+        "value": "genset",
+        "unit": null,
+        "raw_text": "genset"
+      },
+      {
+        "attribute": "rated_power",
+        "basis": {},
+        "condition": {
+          "rating_point": "R1",
+          "frequency": {
+            "value": 50,
+            "unit": "Hz"
+          },
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          },
+          "viscosity": {
+            "value": 32,
+            "unit": "cSt"
+          }
+        },
+        "scope": "Engine power output at specified conditions",
+        "line": "L13",
+        "value": 2982.2,
+        "unit": "kW",
+        "raw_text": "2982.2"
+      },
+      {
+        "attribute": "rated_power",
+        "basis": {},
+        "condition": {
+          "rating_point": "R2",
+          "frequency": {
+            "value": 60,
+            "unit": "Hz"
+          },
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          },
+          "viscosity": {
+            "value": 32,
+            "unit": "cSt"
+          }
+        },
+        "scope": "Engine power output at specified conditions",
+        "line": "L14",
+        "value": 2624.34,
+        "unit": "kW",
+        "raw_text": "2624.34"
+      },
+      {
+        "attribute": "rated_speed",
+        "basis": {},
+        "condition": {
+          "rating_point": "R1",
+          "frequency": {
+            "value": 50,
+            "unit": "Hz"
+          },
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          },
+          "viscosity": {
+            "value": 32,
+            "unit": "cSt"
+          }
+        },
+        "scope": "Engine speed at specified conditions",
+        "line": "L15",
+        "value": 750,
+        "unit": "rpm",
+        "raw_text": "750"
+      },
+      {
+        "attribute": "rated_speed",
+        "basis": {},
+        "condition": {
+          "rating_point": "R2",
+          "frequency": {
+            "value": 60,
+            "unit": "Hz"
+          },
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          },
+          "viscosity": {
+            "value": 32,
+            "unit": "cSt"
+          }
+        },
+        "scope": "Engine speed at specified conditions",
+        "line": "L16",
+        "value": 900,
+        "unit": "rpm",
+        "raw_text": "900"
+      },
+      {
+        "attribute": "fuel_types",
+        "basis": {},
+        "condition": {},
+        "scope": "Engine fuel compatibility",
+        "line": "L17",
+        "value": [
+          "MDO",
+          "MGO"
+        ],
+        "unit": null,
+        "raw_text": "MDO, MGO"
+      },
+      {
+        "attribute": "dimensions",
+        "basis": {},
+        "condition": {},
+        "scope": "Engine physical dimensions",
+        "line": "L18",
+        "value": {
+          "length": 5300,
+          "width": 2200,
+          "height": 3080
+        },
+        "unit": "mm",
+        "raw_text": "5300 × 2200 × 3080"
+      },
+      {
+        "attribute": "dry_weight",
+        "basis": {},
+        "condition": {},
+        "scope": "Engine weight without additional components",
+        "line": "L19",
+        "value": 23398.8,
+        "unit": "kg",
+        "raw_text": "23398.8"
+      }
+    ]
+  },
+  "qualifiers": []
+}

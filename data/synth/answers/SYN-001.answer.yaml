@@ -1,0 +1,267 @@
+schema_version: 3
+input_id: SYN-001
+origin: synthetic
+expected_class: AirCompressor
+status: final_v1; frozen by user decision D-019 (2026-10-08); reviewed_by awaits user signature
+artifact:
+  path: data/synth/inputs/SYN-001.xlsx
+  sha256: dacb631194c1b0d27e27fd1ae9f93e2643d68f887358431d655f40b5797c599b
+  file_format: xlsx
+  location_verified: true
+  source_path: data/synth/test/sources/SYN-001.md
+  source_sha256: 53293c10c03d56a8a2e29b7c649d56f59779a2465bd5793b03700f8db8d85ffc
+  verification_method: independent file-content audit
+observations:
+- observation_id: O001
+  attribute_id: maker
+  raw_text: SGDW-20261007-D Synthetic Works
+  label_text: Maker
+  unit_text: null
+  location:
+    source_line: 9
+    source_section: General
+    pdf_page: null
+    sheet: Specification
+    cell_or_range: A5
+    value_cell: A5
+  interpretation: normalized
+  parsed_value: SGDW-20261007-D Synthetic Works
+  parsed_unit: null
+- observation_id: O002
+  attribute_id: model_designation
+  raw_text: VX012-101
+  label_text: Model
+  unit_text: null
+  location:
+    source_line: 11
+    source_section: General
+    pdf_page: null
+    sheet: Specification
+    cell_or_range: A6
+    value_cell: A6
+  interpretation: normalized
+  parsed_value: VX012-101
+  parsed_unit: null
+- observation_id: O003
+  attribute_id: max_pressure
+  raw_text: '30'
+  label_text: Maximum pressure
+  unit_text: bar
+  location:
+    source_line: 17
+    source_section: Technical data
+    pdf_page: null
+    source_table: 1
+    source_row: 1
+    sheet: Specification
+    cell_or_range: A9:D9
+    value_cell: B9
+  interpretation: normalized
+  parsed_value: 30
+  parsed_unit: bar
+- observation_id: O004
+  attribute_id: cooling_type
+  raw_text: water
+  label_text: Cooling type
+  unit_text: null
+  location:
+    source_line: 18
+    source_section: Technical data
+    pdf_page: null
+    source_table: 1
+    source_row: 2
+    sheet: Specification
+    cell_or_range: A10:D10
+    value_cell: B10
+  interpretation: normalized
+  parsed_value: water
+  parsed_unit: null
+- observation_id: O005
+  attribute_id: medium
+  raw_text: air
+  label_text: Medium
+  unit_text: null
+  location:
+    source_line: 19
+    source_section: Technical data
+    pdf_page: null
+    source_table: 1
+    source_row: 3
+    sheet: Specification
+    cell_or_range: A11:D11
+    value_cell: B11
+  interpretation: normalized
+  parsed_value: air
+  parsed_unit: null
+- observation_id: O006
+  attribute_id: motor_power
+  raw_text: '49.5'
+  label_text: Motor power
+  unit_text: kW
+  location:
+    source_line: 20
+    source_section: Technical data
+    pdf_page: null
+    source_table: 1
+    source_row: 4
+    sheet: Specification
+    cell_or_range: A12:D12
+    value_cell: B12
+  interpretation: normalized
+  parsed_value: 49.5
+  parsed_unit: kW
+- observation_id: O007
+  attribute_id: dimensions
+  raw_text: 1400 × 795 × 1005
+  label_text: Dimensions (L × W × H)
+  unit_text: mm
+  location:
+    source_line: 21
+    source_section: Technical data
+    pdf_page: null
+    source_table: 1
+    source_row: 5
+    sheet: Specification
+    cell_or_range: A13:D13
+    value_cell: B13
+  interpretation: normalized
+  parsed_value:
+    length: 1400
+    width: 795
+    height: 1005
+  parsed_unit: mm
+- observation_id: O008
+  attribute_id: dry_weight
+  raw_text: '1109.55'
+  label_text: Dry mass
+  unit_text: kg
+  location:
+    source_line: 22
+    source_section: Technical data
+    pdf_page: null
+    source_table: 1
+    source_row: 6
+    sheet: Specification
+    cell_or_range: A14:D14
+    value_cell: B14
+  interpretation: normalized
+  parsed_value: 1109.55
+  parsed_unit: kg
+facts:
+- fact_id: F001
+  attribute_id: maker
+  value: SGDW-20261007-D Synthetic Works
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O001
+  admissibility: supported
+- fact_id: F002
+  attribute_id: model_designation
+  value: VX012-101
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O002
+  admissibility: supported
+- fact_id: F003
+  attribute_id: max_pressure
+  value: 30
+  unit: bar
+  basis:
+    pressure: gauge
+    rating: maximum
+  condition: {}
+  scope: main_compressor
+  observation_ids:
+  - O003
+  admissibility: supported
+- fact_id: F004
+  attribute_id: cooling_type
+  value: water
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O004
+  admissibility: supported
+- fact_id: F005
+  attribute_id: medium
+  value: air
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O005
+  admissibility: supported
+- fact_id: F006
+  attribute_id: motor_power
+  value: 49.5
+  unit: kW
+  basis:
+    rating: motor_rated
+  condition: {}
+  scope: drive_motor
+  observation_ids:
+  - O006
+  admissibility: supported
+- fact_id: F007
+  attribute_id: dimensions
+  value:
+    length: 1400
+    width: 795
+    height: 1005
+  unit: mm
+  basis: {}
+  condition: {}
+  scope: complete_compressor_unit_with_motor_and_mountings
+  observation_ids:
+  - O007
+  admissibility: supported
+- fact_id: F008
+  attribute_id: dry_weight
+  value: 1109.55
+  unit: kg
+  basis:
+    weight: dry
+  condition: {}
+  scope: complete_compressor_unit_with_motor_and_mountings
+  observation_ids:
+  - O008
+  admissibility: supported
+issues:
+- issue_id: I001
+  code: E1
+  attribute_ids:
+  - capacity
+  observation_ids: []
+  rule_ref: data/ontology/dataset-contract.yaml#classes/AirCompressor/required_all
+  reason: Required value is absent from the authored document.
+  missing_evidence:
+    inspected_artifact_sha256: dacb631194c1b0d27e27fd1ae9f93e2643d68f887358431d655f40b5797c599b
+    searched_attribute_id: capacity
+    inspected_locations:
+    - coverage: entire rendered document
+      source_lines:
+      - 1
+      - 30
+    applied_requirement: data/ontology/dataset-contract.yaml#classes/AirCompressor/required_all
+missing_required:
+- capacity
+comparison:
+  label_scope: nominated_pairs_only
+  pairs: []
+relations: []
+reference_variants:
+- observation_id: O007
+  notation: Dimensions
+  document_id: REF-COMP-01
+  pdf_page: 10
+  context_suffix_origin: synthetic
+reviewed_by: null

@@ -1,0 +1,748 @@
+{
+  "prediction": {
+    "document_id": "SYN-011",
+    "class_id": "FourStrokeEngine",
+    "class_candidates": [
+      "FourStrokeEngine"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-A Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-011",
+            "raw_text": "SGDW-20261007-A Synthetic Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "paragraph": 5
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX005-111",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-011",
+            "raw_text": "VX005-111",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "paragraph": 6
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "number_of_cylinders",
+        "value": 6,
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-011",
+            "raw_text": "6",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "table": 1,
+              "row": 2,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "bore",
+        "value": 210,
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-011",
+            "raw_text": "210",
+            "label_text": null,
+            "unit_text": "mm",
+            "location": {
+              "section": "Specifications",
+              "table": 1,
+              "row": 3,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "stroke",
+        "value": 290,
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-011",
+            "raw_text": "290",
+            "label_text": null,
+            "unit_text": "mm",
+            "location": {
+              "section": "Specifications",
+              "table": 1,
+              "row": 4,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "application",
+        "value": "genset",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-011",
+            "raw_text": "genset",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "table": 1,
+              "row": 5,
+              "column": 2
+            }
+          },
+          {
+            "source_document_id": "SYN-011",
+            "raw_text": "genset",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "table": 1,
+              "row": 5,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_power",
+        "value": 2221.25,
+        "unit": "kW",
+        "basis": {},
+        "condition": {
+          "frequency": {
+            "value": 50,
+            "unit": "Hz"
+          }
+        },
+        "scope": "engine_shaft",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-011",
+            "raw_text": "2221.25",
+            "label_text": null,
+            "unit_text": "kW",
+            "location": {
+              "section": "Specifications",
+              "table": 1,
+              "row": 6,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_speed",
+        "value": 900,
+        "unit": "rpm",
+        "basis": {
+          "rating": "continuous_engine_shaft"
+        },
+        "condition": {
+          "frequency": {
+            "value": 50,
+            "unit": "Hz"
+          }
+        },
+        "scope": "engine_crankshaft",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-011",
+            "raw_text": "900",
+            "label_text": null,
+            "unit_text": "rpm",
+            "location": {
+              "section": "Specifications",
+              "table": 1,
+              "row": 7,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "fuel_types",
+        "value": [
+          "MDO",
+          "MGO"
+        ],
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-011",
+            "raw_text": "MDO, MGO",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "table": 1,
+              "row": 8,
+              "column": 2
+            }
+          },
+          {
+            "source_document_id": "SYN-011",
+            "raw_text": "MDO, MGO",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Operating notes",
+              "paragraph": 12
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 4400,
+          "width": 1900,
+          "height": 2600
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {
+          "engine_type": "four-stroke"
+        },
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-011",
+            "raw_text": "4400 × 1900 × 2600",
+            "label_text": null,
+            "unit_text": "mm",
+            "location": {
+              "section": "Installation data",
+              "paragraph": 9
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 22212.5,
+        "unit": "kg",
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {
+          "engine_type": "four-stroke"
+        },
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-011",
+            "raw_text": "22212.5",
+            "label_text": null,
+            "unit_text": "kg",
+            "location": {
+              "section": "Installation data",
+              "paragraph": 10
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "reported_weight",
+        "value": 22212.5,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-011",
+            "raw_text": "22212.5",
+            "label_text": null,
+            "unit_text": "kg",
+            "location": {
+              "section": "Installation data",
+              "paragraph": 10
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "line": "L5",
+        "value_text": "SGDW-20261007-A Synthetic Works",
+        "unit_text": null
+      },
+      {
+        "attribute": "model_designation",
+        "line": "L6",
+        "value_text": "VX005-111",
+        "unit_text": null
+      },
+      {
+        "attribute": "number_of_cylinders",
+        "line": "L9",
+        "value_text": "6",
+        "unit_text": null
+      },
+      {
+        "attribute": "bore",
+        "line": "L10",
+        "value_text": "210",
+        "unit_text": "mm"
+      },
+      {
+        "attribute": "stroke",
+        "line": "L11",
+        "value_text": "290",
+        "unit_text": "mm"
+      },
+      {
+        "attribute": "application",
+        "line": "L12",
+        "value_text": "genset",
+        "unit_text": null
+      },
+      {
+        "attribute": "rated_power",
+        "line": "L13",
+        "value_text": "2221.25",
+        "unit_text": "kW"
+      },
+      {
+        "attribute": "rated_speed",
+        "line": "L14",
+        "value_text": "900",
+        "unit_text": "rpm"
+      },
+      {
+        "attribute": "fuel_types",
+        "line": "L15",
+        "value_text": "MDO, MGO",
+        "unit_text": null
+      },
+      {
+        "attribute": "fuel_types",
+        "line": "L20",
+        "value_text": "MDO, MGO",
+        "unit_text": null
+      },
+      {
+        "attribute": "dimensions",
+        "line": "L17",
+        "value_text": "4400 × 1900 × 2600",
+        "unit_text": "mm"
+      },
+      {
+        "attribute": "dry_weight",
+        "line": "L18",
+        "value_text": "22212.5",
+        "unit_text": "kg"
+      },
+      {
+        "attribute": "reported_weight",
+        "line": "L18",
+        "value_text": "22212.5",
+        "unit_text": "kg"
+      },
+      {
+        "attribute": "application",
+        "line": "L12",
+        "value_text": "genset",
+        "unit_text": null
+      }
+    ]
+  },
+  "qualifiers": [
+    {
+      "kind": "value",
+      "attribute": "maker",
+      "value_text": "SGDW-20261007-A Synthetic Works",
+      "location": {
+        "section": "Identification",
+        "paragraph": 5
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.medium: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "model_designation",
+      "value_text": "VX005-111",
+      "location": {
+        "section": "Identification",
+        "paragraph": 6
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.temperature: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "number_of_cylinders",
+      "value_text": "6",
+      "location": {
+        "section": "Specifications",
+        "table": 1,
+        "row": 2,
+        "column": 2
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.rating_point: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "bore",
+      "value_text": "210",
+      "location": {
+        "section": "Specifications",
+        "table": 1,
+        "row": 3,
+        "column": 2
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.rating_point: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "stroke",
+      "value_text": "290",
+      "location": {
+        "section": "Specifications",
+        "table": 1,
+        "row": 4,
+        "column": 2
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.rating_point: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "application",
+      "value_text": "genset",
+      "location": {
+        "section": "Specifications",
+        "table": 1,
+        "row": 5,
+        "column": 2
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.rating_point: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "rated_power",
+      "value_text": "2221.25",
+      "location": {
+        "section": "Specifications",
+        "table": 1,
+        "row": 6,
+        "column": 2
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {
+          "frequency": "50 Hz"
+        },
+        "scope": "engine shaft"
+      },
+      "evidence": {
+        "condition.frequency": "at 50 Hz",
+        "scope": "for engine shaft"
+      },
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.temperature: number not in the line",
+        "condition.viscosity: number not in the line"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "rated_speed",
+      "value_text": "900",
+      "location": {
+        "section": "Specifications",
+        "table": 1,
+        "row": 7,
+        "column": 2
+      },
+      "qualifiers": {
+        "basis": {
+          "rating": "continuous_engine_shaft"
+        },
+        "condition": {
+          "frequency": "50 Hz"
+        },
+        "scope": "engine crankshaft"
+      },
+      "evidence": {
+        "basis.rating": "at R1; at 50 Hz",
+        "condition.frequency": "at 50 Hz",
+        "scope": "engine crankshaft"
+      },
+      "rejected": [],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "fuel_types",
+      "value_text": "MDO, MGO",
+      "location": {
+        "section": "Specifications",
+        "table": 1,
+        "row": 8,
+        "column": 2
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.rating_point: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "fuel_types",
+      "value_text": "MDO, MGO",
+      "location": {
+        "section": "Operating notes",
+        "paragraph": 12
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.engine_type: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "dimensions",
+      "value_text": "4400 × 1900 × 2600",
+      "location": {
+        "section": "Installation data",
+        "paragraph": 9
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {
+          "engine_type": "four-stroke"
+        },
+        "scope": ""
+      },
+      "evidence": {
+        "condition.engine_type": "engine without generator"
+      },
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.basis: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "dry_weight",
+      "value_text": "22212.5",
+      "location": {
+        "section": "Installation data",
+        "paragraph": 10
+      },
+      "qualifiers": {
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {
+          "engine_type": "four-stroke"
+        },
+        "scope": ""
+      },
+      "evidence": {
+        "basis.weight": "dry condition",
+        "condition.engine_type": "for engine without generator"
+      },
+      "rejected": [
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "reported_weight",
+      "value_text": "22212.5",
+      "location": {
+        "section": "Installation data",
+        "paragraph": 10
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.temperature: number not in the line",
+        "condition.absolute_pressure: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "application",
+      "value_text": "genset",
+      "location": {
+        "section": "Specifications",
+        "table": 1,
+        "row": 5,
+        "column": 2
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.rating_point: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    }
+  ]
+}

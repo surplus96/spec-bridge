@@ -1,0 +1,135 @@
+{
+  "prediction": {
+    "document_id": "SYN-006",
+    "class_id": "Separator",
+    "class_candidates": [
+      "Separator",
+      "Pump"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-C Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-006",
+            "raw_text": "SGDW-20261007-C Synthetic Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                449.6191063841906,
+                204.27343200000007,
+                475.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "application",
+        "value": "fuel oil",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-006",
+            "raw_text": "fuel oil",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                370.6191063841906,
+                112.70702879999999,
+                414.0060688
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "Product Name",
+      "text": "Marine centrifugal oil separator",
+      "line": "L3",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Model Designation",
+      "text": "VX019-106",
+      "line": "L5",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Fluid Type",
+      "text": "HFO",
+      "line": "L7",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Self-cleaning",
+      "text": "Yes",
+      "line": "L7",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Motor Power",
+      "text": "13.94 kW",
+      "line": "L8",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Overall Dimensions",
+      "text": "2110 × 1120 × 1850 mm",
+      "line": "L9",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Dry Weight",
+      "text": "1602.64 kg",
+      "line": "L10",
+      "reason": "unknown_attribute"
+    }
+  ],
+  "reply": {
+    "attributes": {
+      "Product Name": "Marine centrifugal oil separator",
+      "Maker": "SGDW-20261007-C Synthetic Works",
+      "Model Designation": "VX019-106",
+      "Application": "fuel oil",
+      "Fluid Type": "HFO",
+      "Self-cleaning": "Yes",
+      "Motor Power": "13.94 kW",
+      "Overall Dimensions": "2110 × 1120 × 1850 mm",
+      "Dry Weight": "1602.64 kg"
+    },
+    "lines": {
+      "Product Name": "L3",
+      "Maker": "L5",
+      "Model Designation": "L5",
+      "Application": "L7",
+      "Fluid Type": "L7",
+      "Self-cleaning": "L7",
+      "Motor Power": "L8",
+      "Overall Dimensions": "L9",
+      "Dry Weight": "L10"
+    }
+  },
+  "qualifiers": []
+}

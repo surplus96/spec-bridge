@@ -1,0 +1,291 @@
+{
+  "prediction": {
+    "document_id": "SYN-002",
+    "class_id": "TwoStrokeMainEngine",
+    "class_candidates": [
+      "TwoStrokeMainEngine"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-D Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "manufacturer_identification",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-002",
+            "raw_text": "SGDW-20261007-D Synthetic Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "General",
+              "sheet": "Specification",
+              "cell_ref": "A5"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX004-102",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "specific_model_identification",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-002",
+            "raw_text": "VX004-102",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "General",
+              "sheet": "Specification",
+              "cell_ref": "A6"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "number_of_cylinders",
+        "value": 6,
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "engine_configuration",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-002",
+            "raw_text": "6",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B9"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_power",
+        "value": 31.0234,
+        "unit": "kW",
+        "basis": {},
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": "reiteration_of_power_output_specification",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-002",
+            "raw_text": "31023.4 kW",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Remarks",
+              "sheet": "Specification",
+              "cell_ref": "A17"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "fuel_types",
+        "value": [
+          "natural gas",
+          "MDO"
+        ],
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "engine_fuel_compatibility",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-002",
+            "raw_text": "natural gas, MDO",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B13"
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "bore",
+      "text": "680 mm",
+      "line": "L10",
+      "reason": "not_in_line"
+    },
+    {
+      "attribute": "stroke",
+      "text": "2530 mm",
+      "line": "L11",
+      "reason": "not_in_line"
+    },
+    {
+      "attribute": "rated_power",
+      "text": "31023.4 kW",
+      "line": "L12",
+      "reason": "not_in_line"
+    },
+    {
+      "attribute": "dimensions",
+      "text": "12250 × 5390 × 12550 mm",
+      "line": "L14",
+      "reason": "not_in_line"
+    },
+    {
+      "attribute": "dry_weight",
+      "text": "591330.0 kg",
+      "line": "L15",
+      "reason": "not_in_line"
+    },
+    {
+      "attribute": "reported_weight",
+      "text": "591330.0 kg",
+      "line": "L15",
+      "reason": "not_in_line"
+    }
+  ],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "basis": {},
+        "condition": {},
+        "scope": "Manufacturer identification",
+        "line": "L5",
+        "value": "SGDW-20261007-D Synthetic Works",
+        "unit": null,
+        "raw_text": "SGDW-20261007-D Synthetic Works"
+      },
+      {
+        "attribute": "model_designation",
+        "basis": {},
+        "condition": {},
+        "scope": "Specific model identification",
+        "line": "L6",
+        "value": "VX004-102",
+        "unit": null,
+        "raw_text": "VX004-102"
+      },
+      {
+        "attribute": "number_of_cylinders",
+        "basis": {},
+        "condition": {},
+        "scope": "Engine configuration",
+        "line": "L9",
+        "value": 6,
+        "unit": null,
+        "raw_text": "6"
+      },
+      {
+        "attribute": "bore",
+        "basis": {},
+        "condition": {},
+        "scope": "Cylinder diameter",
+        "line": "L10",
+        "value": 680,
+        "unit": "mm",
+        "raw_text": "680 mm"
+      },
+      {
+        "attribute": "stroke",
+        "basis": {},
+        "condition": {},
+        "scope": "Cylinder stroke length",
+        "line": "L11",
+        "value": 2530,
+        "unit": "mm",
+        "raw_text": "2530 mm"
+      },
+      {
+        "attribute": "rated_power",
+        "basis": {},
+        "condition": {
+          "rating_point": "R1",
+          "engine_type": "none",
+          "basis": "none"
+        },
+        "scope": "Engine power output at maximum continuous revolutions",
+        "line": "L12",
+        "value": 31.0234,
+        "unit": "kW",
+        "raw_text": "31023.4 kW"
+      },
+      {
+        "attribute": "rated_power",
+        "basis": {},
+        "condition": {
+          "rating_point": "R1",
+          "engine_type": "none",
+          "basis": "none"
+        },
+        "scope": "Reiteration of power output specification",
+        "line": "L17",
+        "value": 31.0234,
+        "unit": "kW",
+        "raw_text": "31023.4 kW"
+      },
+      {
+        "attribute": "fuel_types",
+        "basis": {},
+        "condition": {},
+        "scope": "Engine fuel compatibility",
+        "line": "L13",
+        "value": [
+          "natural gas",
+          "MDO"
+        ],
+        "unit": null,
+        "raw_text": "natural gas, MDO"
+      },
+      {
+        "attribute": "dimensions",
+        "basis": {},
+        "condition": {},
+        "scope": "Physical size of the engine",
+        "line": "L14",
+        "value": {
+          "length": 12250,
+          "width": 5390,
+          "height": 12550
+        },
+        "unit": "mm",
+        "raw_text": "12250 × 5390 × 12550 mm"
+      },
+      {
+        "attribute": "dry_weight",
+        "basis": {},
+        "condition": {},
+        "scope": "Weight of the engine without fluids",
+        "line": "L15",
+        "value": 591.33,
+        "unit": "kg",
+        "raw_text": "591330.0 kg"
+      },
+      {
+        "attribute": "reported_weight",
+        "basis": {},
+        "condition": {},
+        "scope": "Weight reported for informational purposes",
+        "line": "L15",
+        "value": 591.33,
+        "unit": "kg",
+        "raw_text": "591330.0 kg"
+      }
+    ]
+  },
+  "qualifiers": []
+}

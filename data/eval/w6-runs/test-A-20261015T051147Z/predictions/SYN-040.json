@@ -1,0 +1,163 @@
+{
+  "prediction": {
+    "document_id": "SYN-040",
+    "class_id": "FourStrokeEngine",
+    "class_candidates": [
+      "FourStrokeEngine",
+      "Pump"
+    ],
+    "facts": [],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "name",
+      "text": "Marine four-stroke engine",
+      "line": "{'name': 'Product: Marine four-stroke engine', 'line': 'L3'}",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "maker",
+      "text": "SGDW-20261007-C Synthetic Works",
+      "line": "{'value': 'SGDW-20261007-C Synthetic Works', 'line': 'L5'}",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "model",
+      "text": "VX007-140",
+      "line": "{'value': 'VX007-140', 'line': 'L6'}",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "number_of_cylinders",
+      "text": "6",
+      "line": "{'value': 6, 'line': 'L9'}",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "cylinder_bore_mm",
+      "text": "230",
+      "line": "{'value': 230, 'line': 'L10'}",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "piston_stroke_mm",
+      "text": "300",
+      "line": "{'value': 300, 'line': 'L11'}",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "application",
+      "text": "cargo pump drive",
+      "line": "{'value': 'cargo pump drive', 'line': 'L12'}",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "engine_kwm",
+      "text": "3267.0",
+      "line": "{'value': 3267.0, 'line': 'L13'}",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "rated_speed_rpm",
+      "text": "1000",
+      "line": "{'value': 1000, 'line': 'L14'}",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "fuel_types",
+      "text": "['MDO', 'MGO']",
+      "line": "{'value': ['MDO', 'MGO'], 'line': ['L15', 'L19']}",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "overall_dimensions_mm",
+      "text": "5000 × 2100 × 2920",
+      "line": "{'value': '5000 × 2100 × 2920', 'line': 'L16'}",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "dry_weight_kg",
+      "text": "29304.0",
+      "line": "{'value': 29304.0, 'line': 'L17'}",
+      "reason": "unknown_attribute"
+    }
+  ],
+  "reply": {
+    "attributes": {
+      "name": "Marine four-stroke engine",
+      "maker": "SGDW-20261007-C Synthetic Works",
+      "model": "VX007-140",
+      "number_of_cylinders": 6,
+      "cylinder_bore_mm": 230,
+      "piston_stroke_mm": 300,
+      "application": "cargo pump drive",
+      "engine_kwm": 3267.0,
+      "rated_speed_rpm": 1000,
+      "fuel_types": [
+        "MDO",
+        "MGO"
+      ],
+      "overall_dimensions_mm": "5000 × 2100 × 2920",
+      "dry_weight_kg": 29304.0
+    },
+    "lines": {
+      "name": {
+        "name": "Product: Marine four-stroke engine",
+        "line": "L3"
+      },
+      "maker": {
+        "value": "SGDW-20261007-C Synthetic Works",
+        "line": "L5"
+      },
+      "model": {
+        "value": "VX007-140",
+        "line": "L6"
+      },
+      "number_of_cylinders": {
+        "value": 6,
+        "line": "L9"
+      },
+      "cylinder_bore_mm": {
+        "value": 230,
+        "line": "L10"
+      },
+      "piston_stroke_mm": {
+        "value": 300,
+        "line": "L11"
+      },
+      "application": {
+        "value": "cargo pump drive",
+        "line": "L12"
+      },
+      "engine_kwm": {
+        "value": 3267.0,
+        "line": "L13"
+      },
+      "rated_speed_rpm": {
+        "value": 1000,
+        "line": "L14"
+      },
+      "fuel_types": {
+        "value": [
+          "MDO",
+          "MGO"
+        ],
+        "line": [
+          "L15",
+          "L19"
+        ]
+      },
+      "overall_dimensions_mm": {
+        "value": "5000 × 2100 × 2920",
+        "line": "L16"
+      },
+      "dry_weight_kg": {
+        "value": 29304.0,
+        "line": "L17"
+      }
+    }
+  },
+  "qualifiers": []
+}

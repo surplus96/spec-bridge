@@ -1,0 +1,145 @@
+{
+  "prediction": {
+    "document_id": "SYN-020",
+    "class_id": "FourStrokeEngine",
+    "class_candidates": [
+      "FourStrokeEngine"
+    ],
+    "facts": [],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "name",
+      "text": "Marine four-stroke engine",
+      "line": "{'name': {'L3': 'Product: Marine four-stroke engine', 'L5': 'Manufacturer — SGDW-20261007-D Synthetic Works', 'L6': 'Model — VX008021', 'L9': 'Number of cylinder | 8 | — | —', 'L10': 'Cylinder bore mm | 260 | mm | —', 'L11': 'Piston stroke mm | 330 | mm | —', 'L12': 'Application | genset | — | —', 'L13': 'Engine (kWm) | 2982.2 | kW | continuous rating, rating point R1, 50 Hz, for engine shaft', 'L14': 'Engine (kWm) | 2624.34 | kW | continuous rating, rating point R2, 60 Hz, for engine shaft', 'L15': 'Rated speed | 750 | rpm | rating point R1, 50 Hz, engine crankshaft', 'L16': 'Rated speed | 900 | rpm | rating point R2, 60 Hz, engine crankshaft', 'L17': 'Fuel | MDO, MGO | — | —', 'L18': 'Dimensions (L × W × H) | 5300 × 2200 × 3080 | mm | engine without generator', 'L19': 'Dry mass | 23398.8 | kg | dry condition, for engine without generator', 'L21': 'Fuel — MDO, MGO', 'L28': 'Dimensions (L × W × H) | 5300 × 2200 × 3080 | mm | engine without generator'}, 'remarks': {'L2': 'Synthetic product specification for demonstration use.', 'L20': 'Remarks', 'L22': 'The engine-shaft output above is a mechanical rating; generator electrical output is not specified in this sheet.', 'L24': 'Scope of supply notes — The item names, ratings and supply-scope associations in this sheet are fictional. No physical acceptance range or real equipment compatibility is asserted.'}}",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "manufacturer",
+      "text": "SGDW-20261007-D Synthetic Works",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "model",
+      "text": "VX008021",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "number_of_cylinders",
+      "text": "8",
+      "line": "",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "cylinder_bore_mm",
+      "text": "260",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "piston_stroke_mm",
+      "text": "330",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "application",
+      "text": "genset",
+      "line": "",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "engine_kwm_rating_point_R1",
+      "text": "2982.2",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "engine_kwm_rating_point_R2",
+      "text": "2624.34",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "rated_speed_rpm_point_R1",
+      "text": "750",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "rated_speed_rpm_point_R2",
+      "text": "900",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "fuel",
+      "text": "MDO, MGO",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "dimensions_LxWxH_mm",
+      "text": "5300 × 2200 × 3080",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "dry_mass_kg",
+      "text": "23398.8",
+      "line": "",
+      "reason": "unknown_attribute"
+    }
+  ],
+  "reply": {
+    "attributes": {
+      "name": "Marine four-stroke engine",
+      "manufacturer": "SGDW-20261007-D Synthetic Works",
+      "model": "VX008021",
+      "number_of_cylinders": "8",
+      "cylinder_bore_mm": "260",
+      "piston_stroke_mm": "330",
+      "application": "genset",
+      "engine_kwm_rating_point_R1": "2982.2",
+      "engine_kwm_rating_point_R2": "2624.34",
+      "rated_speed_rpm_point_R1": "750",
+      "rated_speed_rpm_point_R2": "900",
+      "fuel": "MDO, MGO",
+      "dimensions_LxWxH_mm": "5300 × 2200 × 3080",
+      "dry_mass_kg": "23398.8"
+    },
+    "lines": {
+      "name": {
+        "name": {
+          "L3": "Product: Marine four-stroke engine",
+          "L5": "Manufacturer — SGDW-20261007-D Synthetic Works",
+          "L6": "Model — VX008021",
+          "L9": "Number of cylinder | 8 | — | —",
+          "L10": "Cylinder bore mm | 260 | mm | —",
+          "L11": "Piston stroke mm | 330 | mm | —",
+          "L12": "Application | genset | — | —",
+          "L13": "Engine (kWm) | 2982.2 | kW | continuous rating, rating point R1, 50 Hz, for engine shaft",
+          "L14": "Engine (kWm) | 2624.34 | kW | continuous rating, rating point R2, 60 Hz, for engine shaft",
+          "L15": "Rated speed | 750 | rpm | rating point R1, 50 Hz, engine crankshaft",
+          "L16": "Rated speed | 900 | rpm | rating point R2, 60 Hz, engine crankshaft",
+          "L17": "Fuel | MDO, MGO | — | —",
+          "L18": "Dimensions (L × W × H) | 5300 × 2200 × 3080 | mm | engine without generator",
+          "L19": "Dry mass | 23398.8 | kg | dry condition, for engine without generator",
+          "L21": "Fuel — MDO, MGO",
+          "L28": "Dimensions (L × W × H) | 5300 × 2200 × 3080 | mm | engine without generator"
+        },
+        "remarks": {
+          "L2": "Synthetic product specification for demonstration use.",
+          "L20": "Remarks",
+          "L22": "The engine-shaft output above is a mechanical rating; generator electrical output is not specified in this sheet.",
+          "L24": "Scope of supply notes — The item names, ratings and supply-scope associations in this sheet are fictional. No physical acceptance range or real equipment compatibility is asserted."
+        }
+      }
+    }
+  },
+  "qualifiers": []
+}

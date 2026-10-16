@@ -1,0 +1,85 @@
+{
+  "prediction": {
+    "document_id": "DOC-001",
+    "class_id": "Pump",
+    "class_candidates": [
+      "Pump"
+    ],
+    "facts": [
+      {
+        "attribute": "pump_type",
+        "value": "Horizontal centrifugal, single stage",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-001",
+            "raw_text": "Horizontal centrifugal, single stage",
+            "label_text": "Pump type",
+            "unit_text": null,
+            "location": {
+              "section": "2. Main Technical Data",
+              "table": 1,
+              "row": 2,
+              "column": 2,
+              "line": 17
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "Seawater",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-001",
+            "raw_text": "Seawater",
+            "label_text": "Medium",
+            "unit_text": null,
+            "location": {
+              "section": "2. Main Technical Data",
+              "table": 1,
+              "row": 5,
+              "column": 2,
+              "line": 20
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "motor_power",
+        "value": 37,
+        "unit": "kW",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-001",
+            "raw_text": "37",
+            "label_text": "Motor power",
+            "unit_text": "kW",
+            "location": {
+              "section": "2. Main Technical Data",
+              "table": 1,
+              "row": 6,
+              "column": 2,
+              "line": 21
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": null,
+  "qualifiers": []
+}

@@ -1,0 +1,789 @@
+{
+  "prediction": {
+    "document_id": "SYN-013",
+    "class_id": "TwoStrokeMainEngine",
+    "class_candidates": [
+      "TwoStrokeMainEngine",
+      "Turbocharger"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-C Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-013",
+            "raw_text": "SGDW-20261007-C Synthetic Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                467.6191063841906,
+                229.17968000000008,
+                475.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX003-113",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-013",
+            "raw_text": "VX003-113",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                449.6191063841906,
+                155.41015040000002,
+                457.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "number_of_cylinders",
+        "value": 7,
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-013",
+            "raw_text": "7",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                406.6191063841906,
+                88.23828,
+                414.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "bore",
+        "value": 600,
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-013",
+            "raw_text": "600 mm",
+            "label_text": null,
+            "unit_text": "mm",
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                388.6191063841906,
+                98.46484079999999,
+                396.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "stroke",
+        "value": 2320,
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-013",
+            "raw_text": "2320 mm",
+            "label_text": null,
+            "unit_text": "mm",
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                370.6191063841906,
+                109.13671520000001,
+                378.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_power",
+        "value": 24894.9,
+        "unit": "kW",
+        "basis": {
+          "rating": "MCR"
+        },
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": "engine_shaft",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-013",
+            "raw_text": "24894.9 kW",
+            "label_text": null,
+            "unit_text": "kW",
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                352.6191063841906,
+                278.1249864000001,
+                360.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_power",
+        "value": 21907.51,
+        "unit": "kW",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-013",
+            "raw_text": "21907.51 kW",
+            "label_text": null,
+            "unit_text": "kW",
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                334.6191063841906,
+                282.5742048000002,
+                342.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_speed",
+        "value": 88,
+        "unit": "rpm",
+        "basis": {
+          "rating": "maximum"
+        },
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-013",
+            "raw_text": "88 rpm",
+            "label_text": null,
+            "unit_text": "rpm",
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                316.6191063841906,
+                263.01170560000014,
+                324.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_speed",
+        "value": 79,
+        "unit": "rpm",
+        "basis": {},
+        "condition": {
+          "rating_point": "R2"
+        },
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-013",
+            "raw_text": "79 rpm",
+            "label_text": null,
+            "unit_text": "rpm",
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                298.6191063841906,
+                263.01170560000014,
+                306.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "fuel_types",
+        "value": [
+          "natural_gas",
+          "MDO"
+        ],
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-013",
+            "raw_text": "natural gas, MDO",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                280.6191063841906,
+                128.69921440000002,
+                288.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 11600,
+          "width": 5160,
+          "height": 12000
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {
+          "engine_type": "four-stroke"
+        },
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-013",
+            "raw_text": "11600 × 5160 × 12000 mm",
+            "label_text": null,
+            "unit_text": "mm",
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                262.6191063841906,
+                294.57030080000015,
+                270.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 483570.0,
+        "unit": "kg",
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {
+          "engine_type": "four-stroke"
+        },
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-013",
+            "raw_text": "483570.0 kg",
+            "label_text": null,
+            "unit_text": "kg",
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                244.61910638419056,
+                194.9570232000001,
+                252.00606879999998
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "line": "L5",
+        "value_text": "SGDW-20261007-C Synthetic Works",
+        "unit_text": null
+      },
+      {
+        "attribute": "model_designation",
+        "line": "L6",
+        "value_text": "VX003-113",
+        "unit_text": null
+      },
+      {
+        "attribute": "number_of_cylinders",
+        "line": "L8",
+        "value_text": "7",
+        "unit_text": null
+      },
+      {
+        "attribute": "bore",
+        "line": "L9",
+        "value_text": "600 mm",
+        "unit_text": "mm"
+      },
+      {
+        "attribute": "stroke",
+        "line": "L10",
+        "value_text": "2320 mm",
+        "unit_text": "mm"
+      },
+      {
+        "attribute": "rated_power",
+        "line": "L11",
+        "value_text": "24894.9 kW",
+        "unit_text": "kW"
+      },
+      {
+        "attribute": "rated_power",
+        "line": "L12",
+        "value_text": "21907.51 kW",
+        "unit_text": "kW"
+      },
+      {
+        "attribute": "rated_speed",
+        "line": "L13",
+        "value_text": "88 rpm",
+        "unit_text": "rpm"
+      },
+      {
+        "attribute": "rated_speed",
+        "line": "L14",
+        "value_text": "79 rpm",
+        "unit_text": "rpm"
+      },
+      {
+        "attribute": "fuel_types",
+        "line": "L15",
+        "value_text": "natural gas, MDO",
+        "unit_text": null
+      },
+      {
+        "attribute": "dimensions",
+        "line": "L16",
+        "value_text": "11600 × 5160 × 12000 mm",
+        "unit_text": "mm"
+      },
+      {
+        "attribute": "dry_weight",
+        "line": "L17",
+        "value_text": "483570.0 kg",
+        "unit_text": "kg"
+      }
+    ]
+  },
+  "qualifiers": [
+    {
+      "kind": "value",
+      "attribute": "maker",
+      "value_text": "SGDW-20261007-C Synthetic Works",
+      "location": {
+        "section": "Identification",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          467.6191063841906,
+          229.17968000000008,
+          475.0060688
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.medium: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "model_designation",
+      "value_text": "VX003-113",
+      "location": {
+        "section": "Identification",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          449.6191063841906,
+          155.41015040000002,
+          457.0060688
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.temperature: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "number_of_cylinders",
+      "value_text": "7",
+      "location": {
+        "section": "Specifications",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          406.6191063841906,
+          88.23828,
+          414.0060688
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.medium: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "bore",
+      "value_text": "600 mm",
+      "location": {
+        "section": "Specifications",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          388.6191063841906,
+          98.46484079999999,
+          396.0060688
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.medium: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "stroke",
+      "value_text": "2320 mm",
+      "location": {
+        "section": "Specifications",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          370.6191063841906,
+          109.13671520000001,
+          378.0060688
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.medium: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "rated_power",
+      "value_text": "24894.9 kW",
+      "location": {
+        "section": "Specifications",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          352.6191063841906,
+          278.1249864000001,
+          360.0060688
+        ]
+      },
+      "qualifiers": {
+        "basis": {
+          "rating": "MCR"
+        },
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": "engine shaft"
+      },
+      "evidence": {
+        "basis.rating": "at MCR",
+        "condition.rating_point": "rating point R1",
+        "scope": "engine shaft"
+      },
+      "rejected": [],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "rated_power",
+      "value_text": "21907.51 kW",
+      "location": {
+        "section": "Specifications",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          334.6191063841906,
+          282.5742048000002,
+          342.0060688
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.engine_type: evidence not in the line",
+        "condition.frequency: number not in the line",
+        "condition.temperature: number not in the line",
+        "condition.viscosity: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "rated_speed",
+      "value_text": "88 rpm",
+      "location": {
+        "section": "Specifications",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          316.6191063841906,
+          263.01170560000014,
+          324.0060688
+        ]
+      },
+      "qualifiers": {
+        "basis": {
+          "rating": "maximum"
+        },
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": ""
+      },
+      "evidence": {
+        "basis.rating": "Engine speed — 88 rpm",
+        "condition.rating_point": "(rating point R1; for engine crankshaft)"
+      },
+      "rejected": [
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "rated_speed",
+      "value_text": "79 rpm",
+      "location": {
+        "section": "Specifications",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          298.6191063841906,
+          263.01170560000014,
+          306.0060688
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {
+          "rating_point": "R2"
+        },
+        "scope": ""
+      },
+      "evidence": {
+        "condition.rating_point": "Engine speed — 79 rpm (rating point R2; for engine crankshaft)"
+      },
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "fuel_types",
+      "value_text": "natural gas, MDO",
+      "location": {
+        "section": "Specifications",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          280.6191063841906,
+          128.69921440000002,
+          288.0060688
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.engine_type: evidence not in the line",
+        "condition.temperature: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "dimensions",
+      "value_text": "11600 × 5160 × 12000 mm",
+      "location": {
+        "section": "Specifications",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          262.6191063841906,
+          294.57030080000015,
+          270.0060688
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {
+          "engine_type": "four-stroke"
+        },
+        "scope": ""
+      },
+      "evidence": {
+        "condition.engine_type": "for main engine"
+      },
+      "rejected": [
+        "basis.capacity: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "dry_weight",
+      "value_text": "483570.0 kg",
+      "location": {
+        "section": "Specifications",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          244.61910638419056,
+          194.9570232000001,
+          252.00606879999998
+        ]
+      },
+      "qualifiers": {
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {
+          "engine_type": "four-stroke"
+        },
+        "scope": ""
+      },
+      "evidence": {
+        "basis.weight": "Dry mass — 483570.0 kg (dry; main engine)",
+        "condition.engine_type": "main engine"
+      },
+      "rejected": [
+        "condition.basis: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    }
+  ]
+}

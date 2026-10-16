@@ -1,0 +1,447 @@
+schema_version: 3
+input_id: SYN-020
+origin: synthetic
+expected_class: FourStrokeEngine
+status: final_v1; frozen by user decision D-019 (2026-10-08); reviewed_by awaits user signature
+artifact:
+  path: data/synth/inputs/SYN-020.docx
+  sha256: f2a8a8a7994d25dd484fce205affb3f30bd11c3c50d3908afcdbad78917b93a5
+  file_format: docx
+  location_verified: true
+  source_path: data/synth/test/sources/SYN-020.md
+  source_sha256: 8ad79f46b1e82a67003261157654623d9e2e6a30f5de1c3edd50d90dc5790bce
+  verification_method: independent file-content audit
+observations:
+- observation_id: O001
+  attribute_id: maker
+  raw_text: SGDW-20261007-D Synthetic Works
+  label_text: Manufacturer
+  unit_text: null
+  location:
+    source_line: 9
+    source_section: General
+    pdf_page: null
+    paragraph: 5
+    paragraph_index_basis: top_level_body_paragraphs
+  interpretation: normalized
+  parsed_value: SGDW-20261007-D Synthetic Works
+  parsed_unit: null
+- observation_id: O002
+  attribute_id: model_designation
+  raw_text: VX008021
+  label_text: Model
+  unit_text: null
+  location:
+    source_line: 11
+    source_section: General
+    pdf_page: null
+    paragraph: 6
+    paragraph_index_basis: top_level_body_paragraphs
+  interpretation: normalized
+  parsed_value: VX008-021
+  parsed_unit: null
+- observation_id: O003
+  attribute_id: number_of_cylinders
+  raw_text: '8'
+  label_text: Number of cylinder
+  unit_text: null
+  location:
+    source_line: 17
+    source_section: Technical data
+    pdf_page: null
+    source_table: 1
+    source_row: 1
+    table: 1
+    row: 2
+    cell: 2
+  interpretation: normalized
+  parsed_value: 8
+  parsed_unit: null
+- observation_id: O004
+  attribute_id: bore
+  raw_text: '260'
+  label_text: Cylinder bore mm
+  unit_text: mm
+  location:
+    source_line: 18
+    source_section: Technical data
+    pdf_page: null
+    source_table: 1
+    source_row: 2
+    table: 1
+    row: 3
+    cell: 2
+  interpretation: normalized
+  parsed_value: 260
+  parsed_unit: mm
+- observation_id: O005
+  attribute_id: stroke
+  raw_text: '330'
+  label_text: Piston stroke mm
+  unit_text: mm
+  location:
+    source_line: 19
+    source_section: Technical data
+    pdf_page: null
+    source_table: 1
+    source_row: 3
+    table: 1
+    row: 4
+    cell: 2
+  interpretation: normalized
+  parsed_value: 330
+  parsed_unit: mm
+- observation_id: O006
+  attribute_id: application
+  raw_text: genset
+  label_text: Application
+  unit_text: null
+  location:
+    source_line: 20
+    source_section: Technical data
+    pdf_page: null
+    source_table: 1
+    source_row: 4
+    table: 1
+    row: 5
+    cell: 2
+  interpretation: normalized
+  parsed_value: genset
+  parsed_unit: null
+- observation_id: O007
+  attribute_id: rated_power
+  raw_text: '2982.2'
+  label_text: Engine (kWm)
+  unit_text: kW
+  location:
+    source_line: 21
+    source_section: Technical data
+    pdf_page: null
+    source_table: 1
+    source_row: 5
+    table: 1
+    row: 6
+    cell: 2
+  interpretation: normalized
+  parsed_value: 2982.2
+  parsed_unit: kW
+- observation_id: O008
+  attribute_id: rated_power
+  raw_text: '2624.34'
+  label_text: Engine (kWm)
+  unit_text: kW
+  location:
+    source_line: 22
+    source_section: Technical data
+    pdf_page: null
+    source_table: 1
+    source_row: 6
+    table: 1
+    row: 7
+    cell: 2
+  interpretation: normalized
+  parsed_value: 2624.34
+  parsed_unit: kW
+- observation_id: O009
+  attribute_id: rated_speed
+  raw_text: '750'
+  label_text: Rated speed
+  unit_text: rpm
+  location:
+    source_line: 23
+    source_section: Technical data
+    pdf_page: null
+    source_table: 1
+    source_row: 7
+    table: 1
+    row: 8
+    cell: 2
+  interpretation: normalized
+  parsed_value: 750
+  parsed_unit: rpm
+- observation_id: O010
+  attribute_id: rated_speed
+  raw_text: '900'
+  label_text: Rated speed
+  unit_text: rpm
+  location:
+    source_line: 24
+    source_section: Technical data
+    pdf_page: null
+    source_table: 1
+    source_row: 8
+    table: 1
+    row: 9
+    cell: 2
+  interpretation: normalized
+  parsed_value: 900
+  parsed_unit: rpm
+- observation_id: O011
+  attribute_id: fuel_types
+  raw_text: MDO, MGO
+  label_text: Fuel
+  unit_text: null
+  location:
+    source_line: 25
+    source_section: Technical data
+    pdf_page: null
+    source_table: 1
+    source_row: 9
+    table: 1
+    row: 10
+    cell: 2
+  interpretation: normalized
+  parsed_value:
+  - MDO
+  - MGO
+  parsed_unit: null
+- observation_id: O012
+  attribute_id: dimensions
+  raw_text: 5300 × 2200 × 3080
+  label_text: Dimensions (L × W × H)
+  unit_text: mm
+  location:
+    source_line: 26
+    source_section: Technical data
+    pdf_page: null
+    source_table: 1
+    source_row: 10
+    table: 1
+    row: 11
+    cell: 2
+  interpretation: normalized
+  parsed_value:
+    length: 5300
+    width: 2200
+    height: 3080
+  parsed_unit: mm
+- observation_id: O013
+  attribute_id: dry_weight
+  raw_text: '23398.8'
+  label_text: Dry mass
+  unit_text: kg
+  location:
+    source_line: 27
+    source_section: Technical data
+    pdf_page: null
+    source_table: 1
+    source_row: 11
+    table: 1
+    row: 12
+    cell: 2
+  interpretation: normalized
+  parsed_value: 23398.8
+  parsed_unit: kg
+- observation_id: O014
+  attribute_id: fuel_types
+  raw_text: MDO, MGO
+  label_text: Fuel
+  unit_text: null
+  location:
+    source_line: 31
+    source_section: Remarks
+    pdf_page: null
+    paragraph: 9
+    paragraph_index_basis: top_level_body_paragraphs
+  interpretation: normalized
+  parsed_value:
+  - MDO
+  - MGO
+  parsed_unit: null
+facts:
+- fact_id: F001
+  attribute_id: maker
+  value: SGDW-20261007-D Synthetic Works
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O001
+  admissibility: supported
+- fact_id: F002
+  attribute_id: model_designation
+  value: VX008-021
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O002
+  admissibility: supported
+- fact_id: F003
+  attribute_id: number_of_cylinders
+  value: 8
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O003
+  admissibility: supported
+- fact_id: F004
+  attribute_id: bore
+  value: 260
+  unit: mm
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O004
+  admissibility: supported
+- fact_id: F005
+  attribute_id: stroke
+  value: 330
+  unit: mm
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O005
+  admissibility: supported
+- fact_id: F006
+  attribute_id: application
+  value: genset
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O006
+  admissibility: supported
+- fact_id: F007
+  attribute_id: rated_power
+  value: 2982.2
+  unit: kW
+  basis:
+    rating: continuous_engine_shaft
+  condition:
+    rating_point: R1
+    frequency:
+      value: 50
+      unit: Hz
+  scope: engine_shaft
+  observation_ids:
+  - O007
+  admissibility: supported
+- fact_id: F008
+  attribute_id: rated_power
+  value: 2624.34
+  unit: kW
+  basis:
+    rating: continuous_engine_shaft
+  condition:
+    rating_point: R2
+    frequency:
+      value: 60
+      unit: Hz
+  scope: engine_shaft
+  observation_ids:
+  - O008
+  admissibility: supported
+- fact_id: F009
+  attribute_id: rated_speed
+  value: 750
+  unit: rpm
+  basis: {}
+  condition:
+    rating_point: R1
+    frequency:
+      value: 50
+      unit: Hz
+  scope: engine_crankshaft
+  observation_ids:
+  - O009
+  admissibility: supported
+- fact_id: F010
+  attribute_id: rated_speed
+  value: 900
+  unit: rpm
+  basis: {}
+  condition:
+    rating_point: R2
+    frequency:
+      value: 60
+      unit: Hz
+  scope: engine_crankshaft
+  observation_ids:
+  - O010
+  admissibility: supported
+- fact_id: F011
+  attribute_id: fuel_types
+  value:
+  - MDO
+  - MGO
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O011
+  - O014
+  admissibility: supported
+- fact_id: F012
+  attribute_id: dimensions
+  value:
+    length: 5300
+    width: 2200
+    height: 3080
+  unit: mm
+  basis: {}
+  condition: {}
+  scope: engine_without_generator
+  observation_ids:
+  - O012
+  admissibility: supported
+- fact_id: F013
+  attribute_id: dry_weight
+  value: 23398.8
+  unit: kg
+  basis:
+    weight: dry
+  condition: {}
+  scope: engine_without_generator
+  observation_ids:
+  - O013
+  admissibility: supported
+issues: []
+missing_required: []
+comparison:
+  label_scope: nominated_pairs_only
+  pairs:
+  - registry_id: REG-4S-021
+    expected_relation: duplicate
+    identity_evidence:
+    - O001
+    - O002
+    differing_attribute_ids: []
+    label_provenance: explicit synthetic product/family mapping; family ID not given, but the model-designation
+      series prefix is visible
+relations: []
+reference_variants:
+- observation_id: O003
+  notation: Number of cylinder
+  document_id: REF-4S-02
+  pdf_page: 10
+  context_suffix_origin: synthetic
+- observation_id: O004
+  notation: Cylinder bore mm
+  document_id: REF-4S-02
+  pdf_page: 10
+  context_suffix_origin: synthetic
+- observation_id: O005
+  notation: Piston stroke mm
+  document_id: REF-4S-02
+  pdf_page: 10
+  context_suffix_origin: synthetic
+- observation_id: O007
+  notation: Engine (kWm)
+  document_id: REF-4S-02
+  pdf_page: 18
+  context_suffix_origin: synthetic
+- observation_id: O008
+  notation: Engine (kWm)
+  document_id: REF-4S-02
+  pdf_page: 18
+  context_suffix_origin: synthetic
+reviewed_by: null

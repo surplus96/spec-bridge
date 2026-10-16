@@ -1,0 +1,397 @@
+schema_version: 3
+input_id: SYN-035
+origin: synthetic
+expected_class: Separator
+status: final_v1; frozen by user decision D-019 (2026-10-08); reviewed_by awaits user signature
+artifact:
+  path: data/synth/inputs/SYN-035.pdf
+  sha256: d2b7c39c6985982f00a7f900a18cd314b8c90fbfd2d597098a43dbca24f9c1cf
+  file_format: pdf
+  location_verified: true
+  source_path: data/synth/dev/sources/SYN-035.md
+  source_sha256: 61d647b54c120dd86058275a2fadee32801f17aa9fce96cf42ccebf11335d373
+  verification_method: independent file-content audit
+observations:
+- observation_id: O001
+  attribute_id: maker
+  raw_text: SGDW-20261007-B Synthetic Works
+  label_text: Maker
+  unit_text: null
+  location:
+    source_line: 9
+    source_section: Product data
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 466.28
+    - 803.89
+    - 477.28
+    bbox_unit: pt
+    region_or_section: Product data
+  interpretation: normalized
+  parsed_value: SGDW-20261007-B Synthetic Works
+  parsed_unit: null
+- observation_id: O002
+  attribute_id: model_designation
+  raw_text: VX018-135
+  label_text: Model
+  unit_text: null
+  location:
+    source_line: 11
+    source_section: Product data
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 448.28
+    - 803.89
+    - 459.28
+    bbox_unit: pt
+    region_or_section: Product data
+  interpretation: normalized
+  parsed_value: VX018-135
+  parsed_unit: null
+- observation_id: O003
+  attribute_id: application
+  raw_text: lubricating oil
+  label_text: Service
+  unit_text: null
+  location:
+    source_line: 17
+    source_section: Main particulars
+    pdf_page: 1
+    source_table: 1
+    source_row: 1
+    bbox:
+    - 178.44
+    - 379.28
+    - 271.44
+    - 390.28
+    bbox_unit: pt
+    region_or_section: Main particulars
+  interpretation: normalized
+  parsed_value: lube_oil
+  parsed_unit: null
+- observation_id: O004
+  attribute_id: medium
+  raw_text: lube oil
+  label_text: Fluid
+  unit_text: null
+  location:
+    source_line: 18
+    source_section: Main particulars
+    pdf_page: 1
+    source_table: 1
+    source_row: 2
+    bbox:
+    - 178.44
+    - 358.28
+    - 271.44
+    - 369.28
+    bbox_unit: pt
+    region_or_section: Main particulars
+  interpretation: normalized
+  parsed_value: lubricating_oil
+  parsed_unit: null
+- observation_id: O005
+  attribute_id: rated_throughput
+  raw_text: '3306.5'
+  label_text: Max. recommended capacity
+  unit_text: l/h
+  location:
+    source_line: 19
+    source_section: Main particulars
+    pdf_page: 1
+    source_table: 1
+    source_row: 3
+    bbox:
+    - 178.44
+    - 337.28
+    - 271.44
+    - 348.28
+    bbox_unit: pt
+    region_or_section: Main particulars
+  interpretation: normalized
+  parsed_value: 3306.5
+  parsed_unit: l/h
+- observation_id: O006
+  attribute_id: rated_throughput
+  raw_text: '2149.22'
+  label_text: Max. recommended capacity
+  unit_text: l/h
+  location:
+    source_line: 20
+    source_section: Main particulars
+    pdf_page: 1
+    source_table: 1
+    source_row: 4
+    bbox:
+    - 178.44
+    - 316.28
+    - 271.44
+    - 327.28
+    bbox_unit: pt
+    region_or_section: Main particulars
+  interpretation: normalized
+  parsed_value: 2149.22
+  parsed_unit: l/h
+- observation_id: O007
+  attribute_id: self_cleaning
+  raw_text: 'Yes'
+  label_text: Self cleaning
+  unit_text: null
+  location:
+    source_line: 21
+    source_section: Main particulars
+    pdf_page: 1
+    source_table: 1
+    source_row: 5
+    bbox:
+    - 178.44
+    - 295.28
+    - 271.44
+    - 306.28
+    bbox_unit: pt
+    region_or_section: Main particulars
+  interpretation: normalized
+  parsed_value: true
+  parsed_unit: null
+- observation_id: O008
+  attribute_id: motor_power
+  raw_text: '9.72'
+  label_text: Motor rating
+  unit_text: kW
+  location:
+    source_line: 22
+    source_section: Main particulars
+    pdf_page: 1
+    source_table: 1
+    source_row: 6
+    bbox:
+    - 178.44
+    - 274.28
+    - 271.44
+    - 285.28
+    bbox_unit: pt
+    region_or_section: Main particulars
+  interpretation: normalized
+  parsed_value: 9.72
+  parsed_unit: kW
+- observation_id: O009
+  attribute_id: dimensions
+  raw_text: 1980 × 1055 × 1770
+  label_text: Overall dimensions (L × W × H)
+  unit_text: mm
+  location:
+    source_line: 26
+    source_section: Installation
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 223.28
+    - 803.89
+    - 234.28
+    bbox_unit: pt
+    region_or_section: Installation
+  interpretation: normalized
+  parsed_value:
+    length: 1980
+    width: 1055
+    height: 1770
+  parsed_unit: mm
+- observation_id: O010
+  attribute_id: dry_weight
+  raw_text: '1186.45'
+  label_text: Dry weight
+  unit_text: kg
+  location:
+    source_line: 28
+    source_section: Installation
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 205.28
+    - 803.89
+    - 216.28
+    bbox_unit: pt
+    region_or_section: Installation
+  interpretation: normalized
+  parsed_value: 1186.45
+  parsed_unit: kg
+- observation_id: O011
+  attribute_id: rated_throughput
+  raw_text: '3306.5'
+  label_text: Max. recommended capacity
+  unit_text: l/h
+  location:
+    source_line: 33
+    source_section: Notes
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 162.28
+    - 803.89
+    - 173.28
+    bbox_unit: pt
+    region_or_section: Notes
+  interpretation: normalized
+  parsed_value: 3306.5
+  parsed_unit: l/h
+facts:
+- fact_id: F001
+  attribute_id: maker
+  value: SGDW-20261007-B Synthetic Works
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O001
+  admissibility: supported
+- fact_id: F002
+  attribute_id: model_designation
+  value: VX018-135
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O002
+  admissibility: supported
+- fact_id: F003
+  attribute_id: application
+  value: lube_oil
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O003
+  admissibility: supported
+- fact_id: F004
+  attribute_id: medium
+  value: lubricating_oil
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O004
+  admissibility: supported
+- fact_id: F005
+  attribute_id: rated_throughput
+  value: 3306.5
+  unit: l/h
+  basis:
+    rating: maximum_capacity
+  condition:
+    medium: lubricating_oil
+    viscosity:
+      value: 380
+      unit: cSt
+      reference_temperature:
+        value: 50
+        unit: degC
+    viscosity_basis: fluid_reference
+  scope: main_separator
+  observation_ids:
+  - O005
+  - O011
+  admissibility: supported
+- fact_id: F006
+  attribute_id: rated_throughput
+  value: 2149.22
+  unit: l/h
+  basis:
+    rating: maximum_capacity
+  condition:
+    medium: lubricating_oil
+    viscosity:
+      value: 700
+      unit: cSt
+      reference_temperature:
+        value: 50
+        unit: degC
+    viscosity_basis: fluid_reference
+  scope: main_separator
+  observation_ids:
+  - O006
+  admissibility: supported
+- fact_id: F007
+  attribute_id: self_cleaning
+  value: true
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O007
+  admissibility: supported
+- fact_id: F008
+  attribute_id: motor_power
+  value: 9.72
+  unit: kW
+  basis:
+    rating: motor_rated
+  condition: {}
+  scope: separator_drive_motor
+  observation_ids:
+  - O008
+  admissibility: supported
+- fact_id: F009
+  attribute_id: dimensions
+  value:
+    length: 1980
+    width: 1055
+    height: 1770
+  unit: mm
+  basis: {}
+  condition: {}
+  scope: complete_separator_module_with_feed_pump_heater_control
+  observation_ids:
+  - O009
+  admissibility: supported
+- fact_id: F010
+  attribute_id: dry_weight
+  value: 1186.45
+  unit: kg
+  basis:
+    weight: dry
+  condition: {}
+  scope: complete_separator_module_with_feed_pump_heater_control
+  observation_ids:
+  - O010
+  admissibility: supported
+issues: []
+missing_required: []
+comparison:
+  label_scope: nominated_pairs_only
+  pairs:
+  - registry_id: REG-SEP-009
+    expected_relation: similar
+    identity_evidence:
+    - O001
+    - O002
+    differing_attribute_ids:
+    - rated_throughput
+    - motor_power
+    - dry_weight
+    label_provenance: explicit synthetic product/family mapping; family ID not given, but the model-designation
+      series prefix is visible
+relations: []
+reference_variants:
+- observation_id: O005
+  notation: Max. recommended capacity
+  document_id: REF-SEP-01
+  pdf_page: 4
+  context_suffix_origin: synthetic
+- observation_id: O006
+  notation: Max. recommended capacity
+  document_id: REF-SEP-01
+  pdf_page: 4
+  context_suffix_origin: synthetic
+- observation_id: O011
+  notation: Max. recommended capacity
+  document_id: REF-SEP-01
+  pdf_page: 4
+  context_suffix_origin: synthetic
+reviewed_by: null

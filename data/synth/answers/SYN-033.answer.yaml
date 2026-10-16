@@ -1,0 +1,341 @@
+schema_version: 3
+input_id: SYN-033
+origin: synthetic
+expected_class: AirCompressor
+status: final_v1; frozen by user decision D-019 (2026-10-08); reviewed_by awaits user signature
+artifact:
+  path: data/synth/inputs/SYN-033.pdf
+  sha256: a6c9e70e52de9a77d382f8c335af5d99ce3dfd5f2029187030582b5accc10de3
+  file_format: pdf
+  location_verified: true
+  source_path: data/synth/dev/sources/SYN-033.md
+  source_sha256: 5693a678135c2e129100078a5a7027bbace2d1fc9a82c900e9a4a19f37c52848
+  verification_method: independent file-content audit
+observations:
+- observation_id: O001
+  attribute_id: maker
+  raw_text: SGDW-20261007-A Synthetic Works
+  label_text: Maker
+  unit_text: null
+  location:
+    source_line: 9
+    source_section: Product data
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 466.28
+    - 803.89
+    - 477.28
+    bbox_unit: pt
+    region_or_section: Product data
+  interpretation: normalized
+  parsed_value: SGDW-20261007-A Synthetic Works
+  parsed_unit: null
+- observation_id: O002
+  attribute_id: model_designation
+  raw_text: VX009-133
+  label_text: Model designation
+  unit_text: null
+  location:
+    source_line: 11
+    source_section: Product data
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 448.28
+    - 803.89
+    - 459.28
+    bbox_unit: pt
+    region_or_section: Product data
+  interpretation: normalized
+  parsed_value: VX009-133
+  parsed_unit: null
+- observation_id: O003
+  attribute_id: capacity
+  raw_text: '125.52'
+  label_text: FAD*
+  unit_text: m3/h
+  location:
+    source_line: 17
+    source_section: Main particulars
+    pdf_page: 1
+    source_table: 1
+    source_row: 1
+    bbox:
+    - 178.44
+    - 379.28
+    - 271.44
+    - 390.28
+    bbox_unit: pt
+    region_or_section: Main particulars
+  interpretation: normalized
+  parsed_value: 125.52
+  parsed_unit: m3/h
+- observation_id: O004
+  attribute_id: max_pressure
+  raw_text: '28'
+  label_text: Maximum pressure
+  unit_text: bar
+  location:
+    source_line: 18
+    source_section: Main particulars
+    pdf_page: 1
+    source_table: 1
+    source_row: 2
+    bbox:
+    - 178.44
+    - 358.28
+    - 271.44
+    - 369.28
+    bbox_unit: pt
+    region_or_section: Main particulars
+  interpretation: normalized
+  parsed_value: 28
+  parsed_unit: bar
+- observation_id: O005
+  attribute_id: cooling_type
+  raw_text: air
+  label_text: Cooling type
+  unit_text: null
+  location:
+    source_line: 19
+    source_section: Main particulars
+    pdf_page: 1
+    source_table: 1
+    source_row: 3
+    bbox:
+    - 178.44
+    - 337.28
+    - 271.44
+    - 348.28
+    bbox_unit: pt
+    region_or_section: Main particulars
+  interpretation: normalized
+  parsed_value: air
+  parsed_unit: null
+- observation_id: O006
+  attribute_id: medium
+  raw_text: air
+  label_text: Medium
+  unit_text: null
+  location:
+    source_line: 20
+    source_section: Main particulars
+    pdf_page: 1
+    source_table: 1
+    source_row: 4
+    bbox:
+    - 178.44
+    - 316.28
+    - 271.44
+    - 327.28
+    bbox_unit: pt
+    region_or_section: Main particulars
+  interpretation: normalized
+  parsed_value: air
+  parsed_unit: null
+- observation_id: O007
+  attribute_id: motor_power
+  raw_text: '30.9'
+  label_text: Motor power
+  unit_text: kW
+  location:
+    source_line: 21
+    source_section: Main particulars
+    pdf_page: 1
+    source_table: 1
+    source_row: 5
+    bbox:
+    - 178.44
+    - 295.28
+    - 271.44
+    - 306.28
+    bbox_unit: pt
+    region_or_section: Main particulars
+  interpretation: normalized
+  parsed_value: 30.9
+  parsed_unit: kW
+- observation_id: O008
+  attribute_id: dimensions
+  raw_text: 1040 × 690 × 810
+  label_text: Overall dimensions (L × W × H)
+  unit_text: mm
+  location:
+    source_line: 25
+    source_section: Installation
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 244.28
+    - 803.89
+    - 255.28
+    bbox_unit: pt
+    region_or_section: Installation
+  interpretation: normalized
+  parsed_value:
+    length: 1040
+    width: 690
+    height: 810
+  parsed_unit: mm
+- observation_id: O009
+  attribute_id: dry_weight
+  raw_text: '753.09'
+  label_text: Dry weight
+  unit_text: kg
+  location:
+    source_line: 27
+    source_section: Installation
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 226.28
+    - 803.89
+    - 237.28
+    bbox_unit: pt
+    region_or_section: Installation
+  interpretation: normalized
+  parsed_value: 753.09
+  parsed_unit: kg
+- observation_id: O010
+  attribute_id: capacity
+  raw_text: '125.52'
+  label_text: FAD*
+  unit_text: m3/h
+  location:
+    source_line: 34
+    source_section: Notes
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 165.28
+    - 803.89
+    - 176.28
+    bbox_unit: pt
+    region_or_section: Notes
+  interpretation: normalized
+  parsed_value: 125.52
+  parsed_unit: m3/h
+facts:
+- fact_id: F001
+  attribute_id: maker
+  value: SGDW-20261007-A Synthetic Works
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O001
+  admissibility: supported
+- fact_id: F002
+  attribute_id: model_designation
+  value: VX009-133
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O002
+  admissibility: supported
+- fact_id: F003
+  attribute_id: capacity
+  value: 125.52
+  unit: m3/h
+  basis:
+    capacity: free_air_delivery
+  condition:
+    temperature:
+      value: 20
+      unit: degC
+    absolute_pressure:
+      value: 1013
+      unit: mbar
+  scope: main_compressor
+  observation_ids:
+  - O003
+  - O010
+  admissibility: supported
+- fact_id: F004
+  attribute_id: max_pressure
+  value: 28
+  unit: bar
+  basis:
+    pressure: gauge
+    rating: maximum
+  condition: {}
+  scope: main_compressor
+  observation_ids:
+  - O004
+  admissibility: supported
+- fact_id: F005
+  attribute_id: cooling_type
+  value: air
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O005
+  admissibility: supported
+- fact_id: F006
+  attribute_id: medium
+  value: air
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O006
+  admissibility: supported
+- fact_id: F007
+  attribute_id: motor_power
+  value: 30.9
+  unit: kW
+  basis:
+    rating: motor_rated
+  condition: {}
+  scope: drive_motor
+  observation_ids:
+  - O007
+  admissibility: supported
+- fact_id: F008
+  attribute_id: dimensions
+  value:
+    length: 1040
+    width: 690
+    height: 810
+  unit: mm
+  basis: {}
+  condition: {}
+  scope: complete_compressor_unit_with_motor_and_mountings
+  observation_ids:
+  - O008
+  admissibility: supported
+- fact_id: F009
+  attribute_id: dry_weight
+  value: 753.09
+  unit: kg
+  basis:
+    weight: dry
+  condition: {}
+  scope: complete_compressor_unit_with_motor_and_mountings
+  observation_ids:
+  - O009
+  admissibility: supported
+issues: []
+missing_required: []
+comparison:
+  label_scope: nominated_pairs_only
+  pairs: []
+relations: []
+reference_variants:
+- observation_id: O003
+  notation: FAD*
+  document_id: REF-COMP-01
+  pdf_page: 10
+  context_suffix_origin: synthetic
+- observation_id: O010
+  notation: FAD*
+  document_id: REF-COMP-01
+  pdf_page: 10
+  context_suffix_origin: synthetic
+reviewed_by: null

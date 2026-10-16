@@ -1,0 +1,16 @@
+{
+  "prediction": {
+    "document_id": "DOC-004",
+    "class_id": "Turbocharger",
+    "class_candidates": [
+      "Turbocharger",
+      "TwoStrokeMainEngine"
+    ],
+    "facts": [],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": null,
+  "qualifiers": []
+}

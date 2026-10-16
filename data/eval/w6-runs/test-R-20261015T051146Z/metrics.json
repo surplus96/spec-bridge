@@ -1,0 +1,291 @@
+{
+  "class_top1": 1.0,
+  "class_top3": 1.0,
+  "class_unknown": 0,
+  "context_fp": 0,
+  "context_keys": 72,
+  "context_tp": 0,
+  "documents": 16,
+  "facts_by_attribute": {
+    "applicable_engine_power": {
+      "f1": 0.0,
+      "fn": 1,
+      "fp": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+    },
+    "application": {
+      "f1": 0.8333333333333334,
+      "fn": 1,
+      "fp": 1,
+      "precision": 0.8333333333333334,
+      "recall": 0.8333333333333334,
+      "tp": 5
+    },
+    "bearing_type": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 2
+    },
+    "bore": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 5
+    },
+    "capacity": {
+      "f1": 0.0,
+      "fn": 5,
+      "fp": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+    },
+    "cooling_type": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 3
+    },
+    "differential_pressure": {
+      "f1": 0.0,
+      "fn": 1,
+      "fp": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+    },
+    "dimensions": {
+      "f1": 0.0,
+      "fn": 16,
+      "fp": 16,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+    },
+    "dry_weight": {
+      "f1": 0.0,
+      "fn": 14,
+      "fp": 14,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+    },
+    "fuel_types": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 5
+    },
+    "head": {
+      "f1": 0.0,
+      "fn": 2,
+      "fp": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+    },
+    "maker": {
+      "f1": 0.9375,
+      "fn": 1,
+      "fp": 1,
+      "precision": 0.9375,
+      "recall": 0.9375,
+      "tp": 15
+    },
+    "max_pressure": {
+      "f1": 0.0,
+      "fn": 2,
+      "fp": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+    },
+    "medium": {
+      "f1": 0.9411764705882353,
+      "fn": 1,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.8888888888888888,
+      "tp": 8
+    },
+    "model_designation": {
+      "f1": 0.967741935483871,
+      "fn": 1,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.9375,
+      "tp": 15
+    },
+    "motor_power": {
+      "f1": 0.0,
+      "fn": 9,
+      "fp": 9,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+    },
+    "number_of_cylinders": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 5
+    },
+    "pump_type": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 3
+    },
+    "rated_power": {
+      "f1": 0.0,
+      "fn": 8,
+      "fp": 4,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+    },
+    "rated_speed": {
+      "f1": 0.0,
+      "fn": 7,
+      "fp": 4,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+    },
+    "rated_throughput": {
+      "f1": 0.0,
+      "fn": 4,
+      "fp": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+    },
+    "reported_weight": {
+      "f1": 0.0,
+      "fn": 2,
+      "fp": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+    },
+    "self_cleaning": {
+      "f1": 0.8,
+      "fn": 1,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "tp": 2
+    },
+    "stroke": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 5
+    },
+    "turbocharger_type": {
+      "f1": 0.6666666666666666,
+      "fn": 1,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.5,
+      "tp": 1
+    },
+    "working_pressure": {
+      "f1": 0.0,
+      "fn": 1,
+      "fp": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+    }
+  },
+  "facts_by_class": {
+    "AirCompressor": {
+      "f1": 0.4999999999999999,
+      "fn": 14,
+      "fp": 10,
+      "precision": 0.5454545454545454,
+      "recall": 0.46153846153846156,
+      "tp": 12
+    },
+    "FourStrokeEngine": {
+      "f1": 0.6000000000000001,
+      "fn": 16,
+      "fp": 12,
+      "precision": 0.6363636363636364,
+      "recall": 0.5675675675675675,
+      "tp": 21
+    },
+    "Pump": {
+      "f1": 0.4615384615384615,
+      "fn": 15,
+      "fp": 13,
+      "precision": 0.48,
+      "recall": 0.4444444444444444,
+      "tp": 12
+    },
+    "Separator": {
+      "f1": 0.39215686274509803,
+      "fn": 18,
+      "fp": 13,
+      "precision": 0.43478260869565216,
+      "recall": 0.35714285714285715,
+      "tp": 10
+    },
+    "Turbocharger": {
+      "f1": 0.5833333333333334,
+      "fn": 6,
+      "fp": 4,
+      "precision": 0.6363636363636364,
+      "recall": 0.5384615384615384,
+      "tp": 7
+    },
+    "TwoStrokeMainEngine": {
+      "f1": 0.6153846153846153,
+      "fn": 9,
+      "fp": 6,
+      "precision": 0.6666666666666666,
+      "recall": 0.5714285714285714,
+      "tp": 12
+    }
+  },
+  "facts_fp_outside_gold": 0,
+  "facts_macro_f1_attribute": 0.467169938695081,
+  "facts_macro_f1_class": 0.5254022121669181,
+  "facts_micro": {
+    "f1": 0.5211267605633803,
+    "fn": 78,
+    "fp": 58,
+    "precision": 0.5606060606060606,
+    "recall": 0.4868421052631579,
+    "tp": 74
+  },
+  "failed_documents": [],
+  "observation_recall": 0.8855421686746988,
+  "observations_found": 147,
+  "observations_invalid": 2,
+  "observations_total": 166,
+  "observations_unattributed": 1,
+  "occurrence_precision": 0.9865771812080537,
+  "occurrences_matched": 147,
+  "occurrences_predicted": 149,
+  "plain_keys": 80,
+  "plain_tp": 74
+}

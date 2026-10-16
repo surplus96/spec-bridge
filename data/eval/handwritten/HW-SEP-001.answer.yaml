@@ -1,0 +1,282 @@
+# 평가기 전용: 입력 모델에 전달하지 않는다.
+# schema_version 2: 별도 함정 목록 제거, 미확정 검증 상태는 null.
+schema_version: 2
+doc_id: HW-SEP-001
+origin: synthetic
+author: Claude (draft)
+reviewed_by: null
+created_at: 2026-10-06
+files:
+  spec_source: data/eval/handwritten/HW-SEP-001.spec.md
+  docx: null
+  pdf: null
+  input_text: data/eval/handwritten/inputs/DOC-003.md
+expected_class: Separator
+class_path:
+- Equipment
+- FluidMachinery
+- Separator
+attributes:
+  maker:
+    value: Hallmar Separation AB
+    unit: null
+    expected_status: null
+    occurrences:
+    - raw_text: Hallmar Separation AB
+      label_text: Issued by
+      location:
+        section: header
+        line: 3
+        pdf_page: null
+        printed_page: null
+    - raw_text: Hallmar Separation AB
+      label_text: Maker
+      location:
+        section: '1.1'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+  model_designation:
+    value: HSX 40
+    unit: null
+    expected_status: null
+    occurrences:
+    - raw_text: HSX 40
+      label_text: Model designation
+      location:
+        section: '1.2'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+  application:
+    value: fuel_oil
+    unit: null
+    expected_status: null
+    occurrences:
+    - raw_text: Heavy fuel oil purification
+      label_text: Application
+      location:
+        section: '1.4'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+    - raw_text: Heavy fuel oil purification
+      label_text: Application
+      location:
+        section: '2'
+        table: 1
+        row: 1
+        pdf_page: null
+        printed_page: null
+    - raw_text: heavy fuel oil treatment
+      label_text: Product description
+      location:
+        section: '1.3'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+  rated_throughput:
+    value: 3600
+    unit: l/h
+    condition:
+      medium: HFO
+      viscosity: 380 cSt at 50 °C
+      viscosity_basis: fuel_reference
+    expected_status: null
+    occurrences:
+    - raw_text: 3,600
+      label_text: Max. capacity, HFO 380 cSt at 50 °C
+      unit_text: l/h
+      location:
+        section: '2'
+        table: 1
+        row: 2
+        pdf_page: null
+        printed_page: null
+    - raw_text: 3,600 l/h
+      label_text: handles up to
+      location:
+        section: '3.1'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+    conditional_values:
+    - value: 2100
+      unit: l/h
+      condition:
+        medium: HFO
+        viscosity: 700 cSt at 50 °C
+        viscosity_basis: fuel_reference
+      occurrences:
+      - raw_text: 2,100
+        label_text: Max. capacity, HFO 700 cSt at 50 °C
+        unit_text: l/h
+        location:
+          section: '2'
+          table: 1
+          row: 3
+          pdf_page: null
+          printed_page: null
+    rating_basis: maximum_capacity
+  self_cleaning:
+    value: true
+    unit: null
+    expected_status: null
+    occurrences:
+    - raw_text: Self-cleaning disc stack
+      label_text: Bowl type
+      location:
+        section: '2'
+        table: 1
+        row: 4
+        pdf_page: null
+        printed_page: null
+    - raw_text: self-cleaning disc stack bowl
+      label_text: Product description
+      location:
+        section: '1.3'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+    - raw_text: discharged automatically
+      label_text: Sludge discharge
+      location:
+        section: '3.2'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+  medium:
+    value: heavy_fuel_oil
+    unit: null
+    expected_status: null
+    occurrences:
+    - raw_text: Heavy fuel oil
+      label_text: Process medium
+      location:
+        section: '3.1'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+    - raw_text: heavy fuel oil
+      label_text: Product description
+      location:
+        section: '1.3'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+    - raw_text: Heavy fuel oil
+      label_text: Application
+      location:
+        section: '1.4'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+    - raw_text: Heavy fuel oil
+      label_text: Application
+      location:
+        section: '2'
+        table: 1
+        row: 1
+        pdf_page: null
+        printed_page: null
+    - raw_text: HFO
+      label_text: Max. capacity
+      location:
+        section: '2'
+        table: 1
+        row: 2
+        pdf_page: null
+        printed_page: null
+    - raw_text: HFO
+      label_text: Max. capacity
+      location:
+        section: '2'
+        table: 1
+        row: 3
+        pdf_page: null
+        printed_page: null
+  motor_power:
+    value: 7.5
+    unit: kW
+    expected_status: null
+    occurrences:
+    - raw_text: '7.5'
+      label_text: Motor power
+      unit_text: kW
+      location:
+        section: '2'
+        table: 1
+        row: 5
+        pdf_page: null
+        printed_page: null
+  dimensions:
+    value:
+      length: 1100
+      width: 1050
+      height: 1550
+    unit: mm
+    expected_status: null
+    occurrences:
+    - raw_text: 1,550 × 1,100 × 1,050 mm
+      label_text: Size (H × L × W)
+      location:
+        section: '4.1'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+    scope: complete_separator_module_with_feed_pump_heater_control
+  dry_weight:
+    value: 790
+    unit: kg
+    expected_status: null
+    occurrences:
+    - raw_text: 790 kg
+      label_text: Net weight
+      location:
+        section: '4.2'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+    weight_basis: dry
+    scope: complete_separator_module_with_feed_pump_heater_control
+missing_required: null
+relations:
+  manufactured_by: Hallmar Separation AB
+  has_component: []
+  variant_of: null
+injections:
+- type: V1
+  attribute: dimensions
+  detail: 치수 순서 H × L × W (높이 먼저)
+  origin: synthetic
+  source_observations:
+  - document_id: REF-SEP-01
+    pdf_page: 5
+  source_usage: 표기 관찰 참고; 합성 별칭·단위 정의는 본문과 SCORING-POLICY를 따름
+- type: V1
+  attribute: dry_weight
+  detail: 속성명 'Net weight'; 본문에 dry와 포함 범위를 명시
+  origin: synthetic
+  source_observations:
+  - document_id: REF-SEP-01
+    pdf_page: 5
+  source_usage: 표기 관찰 참고; 합성 별칭·단위 정의는 본문과 SCORING-POLICY를 따름
+- type: V1
+  attribute: rated_throughput
+  detail: 속성명 'Max. capacity' + 조건이 이름 안에 포함
+  origin: synthetic
+  source_observations:
+  - document_id: REF-SEP-02
+    pdf_page: 7
+  - document_id: REF-SEP-01
+    pdf_page: 1
+  source_usage: 표기 관찰 참고; 합성 별칭·단위 정의는 본문과 SCORING-POLICY를 따름
+duplicate_of: null
+open_issues:
+- W1에서 maximum_capacity 및 fuel_reference 조건을 스키마에 연결; 대표 조건은 이 평가셋에서 380 cSt at 50 °C로 고정
+- self_cleaning bool과 bowl_type 표현의 W1 스키마 연결
+notes: 참고 문서는 표기 방식만 참고(REF-SEP-01, REF-SEP-02)
+dataset_revision: 2
+revised_by: Codex
+validation_status: ontology_pending
+scoring_policy: data/eval/handwritten/SCORING-POLICY.md

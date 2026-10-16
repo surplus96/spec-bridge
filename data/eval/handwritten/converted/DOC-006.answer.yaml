@@ -1,0 +1,203 @@
+schema_version: 3
+input_id: DOC-006
+origin: synthetic
+status: converted_from_v2_helper_draft
+expected_class: Turbocharger
+facts:
+- fact_id: F001
+  attribute_id: maker
+  value: Torvane Engine Works
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O001
+  - O002
+  admissibility: supported
+- fact_id: F002
+  attribute_id: model_designation
+  value: TTA-70
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O003
+  admissibility: supported
+- fact_id: F003
+  attribute_id: turbocharger_type
+  value: axial
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O004
+  - O005
+  admissibility: supported
+- fact_id: F004
+  attribute_id: applicable_engine_power
+  value:
+    min: 9000
+    max: 16500
+  unit: kW
+  basis: {}
+  condition:
+    engine_type: two-stroke
+    basis: per_turbocharger
+  scope: main_equipment
+  observation_ids:
+  - O006
+  - O007
+  admissibility: supported
+- fact_id: F005
+  attribute_id: bearing_type
+  value: plain
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O008
+  admissibility: supported
+- fact_id: F006
+  attribute_id: dimensions
+  value:
+    length: 2450
+    width: 1500
+    height: 2150
+  unit: mm
+  basis: {}
+  condition: {}
+  scope: complete_turbocharger_including_air_inlet_silencer_and_gas_outlet_diffuser
+  observation_ids:
+  - O009
+  admissibility: supported
+- fact_id: F007
+  attribute_id: dry_weight
+  value: 6500
+  unit: kg
+  basis:
+    weight: dry
+  condition: {}
+  scope: complete_turbocharger_including_air_inlet_silencer_and_gas_outlet_diffuser
+  observation_ids:
+  - O010
+  admissibility: supported
+observations:
+- observation_id: O001
+  attribute_id: maker
+  raw_text: Torvane Engine Works
+  label_text: Issued by
+  unit_text: null
+  location:
+    paragraph: 3
+    line: 3
+    section: null
+  interpretation: normalized
+- observation_id: O002
+  attribute_id: maker
+  raw_text: Torvane Engine Works
+  label_text: Maker
+  unit_text: null
+  location:
+    paragraph: 7
+    line: 7
+    section: 1. General
+  interpretation: normalized
+- observation_id: O003
+  attribute_id: model_designation
+  raw_text: TTA-70
+  label_text: Model designation
+  unit_text: null
+  location:
+    paragraph: 8
+    line: 8
+    section: 1. General
+  interpretation: normalized
+- observation_id: O004
+  attribute_id: turbocharger_type
+  raw_text: Axial-flow turbine
+  label_text: Turbocharger type
+  unit_text: null
+  location:
+    table: 1
+    row: 2
+    cell: 2
+    line: 17
+  interpretation: normalized
+- observation_id: O005
+  attribute_id: turbocharger_type
+  raw_text: axial-flow turbine
+  label_text: Product description
+  unit_text: null
+  location:
+    paragraph: 9
+    line: 9
+    section: 1. General
+  interpretation: normalized
+- observation_id: O006
+  attribute_id: applicable_engine_power
+  raw_text: 9,000 – 16,500
+  label_text: Applicable engine power
+  unit_text: kW
+  location:
+    table: 1
+    row: 3
+    cell: 2
+    line: 18
+  interpretation: normalized
+- observation_id: O007
+  attribute_id: applicable_engine_power
+  raw_text: 9,000 to 16,500 kW
+  label_text: with an output of
+  unit_text: null
+  location:
+    paragraph: 23
+    line: 23
+    section: 3. Application
+  interpretation: normalized
+- observation_id: O008
+  attribute_id: bearing_type
+  raw_text: Plain bearings
+  label_text: Bearing type
+  unit_text: null
+  location:
+    table: 1
+    row: 5
+    cell: 2
+    line: 20
+  interpretation: normalized
+- observation_id: O009
+  attribute_id: dimensions
+  raw_text: 2,450 × 1,500 × 2,150 mm
+  label_text: Dimensions (L × B × H)
+  unit_text: null
+  location:
+    paragraph: 27
+    line: 27
+    section: 4. Dimensions and Weight
+  interpretation: normalized
+- observation_id: O010
+  attribute_id: dry_weight
+  raw_text: 6,500 kg
+  label_text: Weight
+  unit_text: null
+  location:
+    paragraph: 28
+    line: 28
+    section: 4. Dimensions and Weight
+  interpretation: normalized
+issues: []
+missing_required: []
+conversion:
+  source: data/eval/handwritten/HW-TC-001.answer.yaml
+  doc_id: HW-TC-001
+  author: Claude (draft)
+  reviewed_by: null
+  notes:
+  - 'dimensions: scope ''complete_turbocharger_with_silencer_and_diffuser'' -> ''complete_turbocharger_including_air_inlet_silencer_and_gas_outlet_diffuser''
+    (document phrase)'
+  - 'dry_weight: scope ''complete_turbocharger_with_silencer_and_diffuser'' -> ''complete_turbocharger_including_air_inlet_silencer_and_gas_outlet_diffuser''
+    (document phrase)'

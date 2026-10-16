@@ -1,0 +1,679 @@
+{
+  "prediction": {
+    "document_id": "DOC-005",
+    "class_id": "FourStrokeEngine",
+    "class_candidates": [
+      "Turbocharger",
+      "FourStrokeEngine"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "Torvane Engine Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-005",
+            "raw_text": "Torvane Engine Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "1. General",
+              "paragraph": 7,
+              "line": 7
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "TMG-6A",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-005",
+            "raw_text": "TMG-6A",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "1. General",
+              "paragraph": 8,
+              "line": 8
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 4150,
+          "width": 1650,
+          "height": 2350
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-005",
+            "raw_text": "4,150 × 1,650 × 2,350 mm",
+            "label_text": null,
+            "unit_text": "mm",
+            "location": {
+              "section": "4. Dimensions and Weight",
+              "paragraph": 30,
+              "line": 30
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_power",
+        "value": 1020,
+        "unit": "kW",
+        "basis": {
+          "rating": "continuous_engine_shaft"
+        },
+        "condition": {},
+        "scope": "engine_shaft",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-005",
+            "raw_text": "1,020",
+            "label_text": null,
+            "unit_text": "kW",
+            "location": {
+              "section": "2. Main Technical Data",
+              "table": 1,
+              "row": 6,
+              "column": 2,
+              "line": 21
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_speed",
+        "value": 900,
+        "unit": "rpm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-005",
+            "raw_text": "900",
+            "label_text": null,
+            "unit_text": "rpm",
+            "location": {
+              "section": "2. Main Technical Data",
+              "table": 1,
+              "row": 7,
+              "column": 2,
+              "line": 22
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "number_of_cylinders",
+        "value": 6,
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-005",
+            "raw_text": "6",
+            "label_text": null,
+            "unit_text": "in-line",
+            "location": {
+              "section": "2. Main Technical Data",
+              "table": 1,
+              "row": 3,
+              "column": 2,
+              "line": 18
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "fuel_types",
+        "value": [
+          "MDO / MGO"
+        ],
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-005",
+            "raw_text": "MDO / MGO",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "2. Main Technical Data",
+              "table": 1,
+              "row": 8,
+              "column": 2,
+              "line": 23
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "application",
+        "value": "Generating set (auxiliary)",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-005",
+            "raw_text": "Generating set (auxiliary)",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "1. General",
+              "paragraph": 10,
+              "line": 10
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "stroke",
+        "value": 300,
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-005",
+            "raw_text": "300",
+            "label_text": null,
+            "unit_text": "mm",
+            "location": {
+              "section": "2. Main Technical Data",
+              "table": 1,
+              "row": 5,
+              "column": 2,
+              "line": 20
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [
+      {
+        "attribute": "dry_weight",
+        "value_text": "11.2 ton",
+        "unit_text": "ton (metric tonnes)",
+        "reason": "not_a_number",
+        "occurrence": {
+          "source_document_id": "DOC-005",
+          "raw_text": "11.2 ton",
+          "label_text": null,
+          "unit_text": "ton (metric tonnes)",
+          "location": {
+            "section": "4. Dimensions and Weight",
+            "paragraph": 31,
+            "line": 31
+          }
+        }
+      },
+      {
+        "attribute": "bore",
+        "value_text": "21",
+        "unit_text": "cm",
+        "reason": "unknown_unit",
+        "occurrence": {
+          "source_document_id": "DOC-005",
+          "raw_text": "21",
+          "label_text": null,
+          "unit_text": "cm",
+          "location": {
+            "section": "2. Main Technical Data",
+            "table": 1,
+            "row": 4,
+            "column": 2,
+            "line": 19
+          }
+        }
+      }
+    ],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "line": "L6",
+        "value_text": "Torvane Engine Works"
+      },
+      {
+        "attribute": "model_designation",
+        "line": "L7",
+        "value_text": "TMG-6A"
+      },
+      {
+        "attribute": "dimensions",
+        "line": "L24",
+        "value_text": "4,150 × 1,650 × 2,350 mm",
+        "unit_text": "mm"
+      },
+      {
+        "attribute": "dry_weight",
+        "line": "L25",
+        "value_text": "11.2 ton",
+        "unit_text": "ton (metric tonnes)"
+      },
+      {
+        "attribute": "reported_weight",
+        "line": "L25",
+        "value_text": "11.2 ton",
+        "unit_text": "ton (metric tonnes)"
+      },
+      {
+        "attribute": "rated_power",
+        "line": "L17",
+        "value_text": "1,020",
+        "unit_text": "kW"
+      },
+      {
+        "attribute": "rated_speed",
+        "line": "L18",
+        "value_text": "900",
+        "unit_text": "rpm"
+      },
+      {
+        "attribute": "number_of_cylinders",
+        "line": "L14",
+        "value_text": "6",
+        "unit_text": "in-line"
+      },
+      {
+        "attribute": "fuel_types",
+        "line": "L19",
+        "value_text": "MDO / MGO"
+      },
+      {
+        "attribute": "application",
+        "line": "L9",
+        "value_text": "Generating set (auxiliary)"
+      },
+      {
+        "attribute": "bore",
+        "line": "L15",
+        "value_text": "21",
+        "unit_text": "cm"
+      },
+      {
+        "attribute": "stroke",
+        "line": "L16",
+        "value_text": "300",
+        "unit_text": "mm"
+      }
+    ]
+  },
+  "qualifiers": [
+    {
+      "kind": "conflict",
+      "line": "4.2 Dry weight: 11.2 ton (metric tonnes; 1 ton = 1,000 kg)",
+      "candidates": [
+        "dry_weight",
+        "reported_weight"
+      ],
+      "votes": {
+        "dry_weight": 3
+      },
+      "kept": "dry_weight",
+      "retrieved_ids": [
+        "SYN-029:O011",
+        "SYN-011:O011",
+        "SYN-019:O009"
+      ]
+    },
+    {
+      "kind": "value",
+      "attribute": "maker",
+      "value_text": "Torvane Engine Works",
+      "location": {
+        "section": "1. General",
+        "paragraph": 7,
+        "line": 7
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.rating_point: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [
+        "SYN-029:O001",
+        "SYN-010:O001",
+        "SYN-034:O001"
+      ],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "model_designation",
+      "value_text": "TMG-6A",
+      "location": {
+        "section": "1. General",
+        "paragraph": 8,
+        "line": 8
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.temperature: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [
+        "SYN-012:O002",
+        "SYN-026:O002",
+        "SYN-019:O002"
+      ],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "dimensions",
+      "value_text": "4,150 × 1,650 × 2,350 mm",
+      "location": {
+        "section": "4. Dimensions and Weight",
+        "paragraph": 30,
+        "line": 30
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.rating: evidence not in the line",
+        "condition.rating_point: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [
+        "SYN-011:O010",
+        "SYN-038:O009",
+        "SYN-029:O010"
+      ],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "dry_weight",
+      "value_text": "11.2 ton",
+      "location": {
+        "section": "4. Dimensions and Weight",
+        "paragraph": 31,
+        "line": 31
+      },
+      "qualifiers": {
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {
+        "basis.weight": "Dry weight"
+      },
+      "rejected": [
+        "condition.medium: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [
+        "SYN-029:O011",
+        "SYN-011:O011",
+        "SYN-019:O009"
+      ],
+      "before_check": {
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {},
+        "scope": ""
+      }
+    },
+    {
+      "kind": "value",
+      "attribute": "rated_power",
+      "value_text": "1,020",
+      "location": {
+        "section": "2. Main Technical Data",
+        "table": 1,
+        "row": 6,
+        "column": 2,
+        "line": 21
+      },
+      "qualifiers": {
+        "basis": {
+          "rating": "continuous_engine_shaft"
+        },
+        "condition": {},
+        "scope": "engine shaft"
+      },
+      "evidence": {
+        "basis.rating": "continuous engine shaft output",
+        "scope": "engine shaft"
+      },
+      "rejected": [
+        "condition.rating_point: no evidence"
+      ],
+      "retrieved_ids": [
+        "SYN-026:O006",
+        "SYN-029:O007",
+        "SYN-012:O007"
+      ],
+      "before_check": {
+        "basis": {
+          "rating": "continuous_engine_shaft"
+        },
+        "condition": {},
+        "scope": "engine shaft"
+      }
+    },
+    {
+      "kind": "value",
+      "attribute": "rated_speed",
+      "value_text": "900",
+      "location": {
+        "section": "2. Main Technical Data",
+        "table": 1,
+        "row": 7,
+        "column": 2,
+        "line": 22
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.rating: evidence not in the line",
+        "condition.rating_point: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [
+        "SYN-012:O008",
+        "SYN-029:O008",
+        "SYN-031:O007"
+      ],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "number_of_cylinders",
+      "value_text": "6",
+      "location": {
+        "section": "2. Main Technical Data",
+        "table": 1,
+        "row": 3,
+        "column": 2,
+        "line": 18
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "basis.pressure: no evidence",
+        "condition.rating_point: no evidence",
+        "condition.temperature: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [
+        "SYN-010:O003",
+        "SYN-029:O003",
+        "SYN-011:O003"
+      ],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "fuel_types",
+      "value_text": "MDO / MGO",
+      "location": {
+        "section": "2. Main Technical Data",
+        "table": 1,
+        "row": 8,
+        "column": 2,
+        "line": 23
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.engine_type: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [
+        "SYN-026:O008",
+        "SYN-024:O003",
+        "SYN-026:O011"
+      ],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "application",
+      "value_text": "Generating set (auxiliary)",
+      "location": {
+        "section": "1. General",
+        "paragraph": 10,
+        "line": 10
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.basis: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [
+        "SYN-011:O006",
+        "SYN-012:O006",
+        "SYN-024:O003"
+      ],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "bore",
+      "value_text": "21",
+      "location": {
+        "section": "2. Main Technical Data",
+        "table": 1,
+        "row": 4,
+        "column": 2,
+        "line": 19
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.rating_point: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [
+        "SYN-010:O004",
+        "SYN-026:O003",
+        "SYN-031:O004"
+      ],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "stroke",
+      "value_text": "300",
+      "location": {
+        "section": "2. Main Technical Data",
+        "table": 1,
+        "row": 5,
+        "column": 2,
+        "line": 20
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.rating_point: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [
+        "SYN-026:O004",
+        "SYN-011:O005",
+        "SYN-010:O005"
+      ],
+      "before_check": null
+    }
+  ]
+}

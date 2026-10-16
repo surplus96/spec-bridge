@@ -1,0 +1,601 @@
+{
+  "prediction": {
+    "document_id": "SYN-009",
+    "class_id": "Pump",
+    "class_candidates": [
+      "Pump"
+    ],
+    "facts": [
+      {
+        "attribute": "pump_type",
+        "value": "centrifugal",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-009",
+            "raw_text": "centrifugal",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                380.6190801146593,
+                215.35503440000002,
+                388.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "capacity",
+        "value": 423.12,
+        "unit": "m3/h",
+        "basis": {
+          "rating": "nominal"
+        },
+        "condition": {
+          "frequency": {
+            "value": 50,
+            "unit": "Hz"
+          }
+        },
+        "scope": "main_pump",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-009",
+            "raw_text": "423.12",
+            "label_text": null,
+            "unit_text": "m3/h",
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                359.6190801146593,
+                202.91362800000002,
+                367.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "capacity",
+        "value": 465.43,
+        "unit": "m3/h",
+        "basis": {
+          "rating": "nominal"
+        },
+        "condition": {
+          "frequency": {
+            "value": 50,
+            "unit": "Hz"
+          }
+        },
+        "scope": "main_pump",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-009",
+            "raw_text": "465.43",
+            "label_text": null,
+            "unit_text": "m3/h",
+            "location": {
+              "section": "Notes",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                184.61910638419056,
+                230.97655280000012,
+                192.00606879999998
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "head",
+        "value": 36,
+        "unit": "m",
+        "basis": {},
+        "condition": {},
+        "scope": "main_pump",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-009",
+            "raw_text": "36",
+            "label_text": null,
+            "unit_text": "m",
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                338.6190801146593,
+                187.34331680000003,
+                346.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "seawater",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-009",
+            "raw_text": "sea water",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                317.6190801146593,
+                213.12847200000002,
+                325.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "motor_power",
+        "value": 79.33,
+        "unit": "kW",
+        "basis": {
+          "rating": "motor_rated"
+        },
+        "condition": {},
+        "scope": "drive_motor",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-009",
+            "raw_text": "79.33",
+            "label_text": null,
+            "unit_text": "kW",
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                296.6190801146593,
+                198.4644096,
+                304.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 1580,
+          "width": 570,
+          "height": 760
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "complete_pump_unit_with_motor_and_base",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-009",
+            "raw_text": "1580 × 570 × 760 mm",
+            "label_text": null,
+            "unit_text": "(mm)",
+            "location": {
+              "section": "Installation",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                245.61910638419056,
+                365.707016,
+                253.00606879999998
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 1075.43,
+        "unit": "kg",
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {},
+        "scope": "complete_pump_unit_with_motor_and_base",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-009",
+            "raw_text": "1075.43",
+            "label_text": null,
+            "unit_text": "kg",
+            "location": {
+              "section": "Installation",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                227.61910638419056,
+                336.8046712000001,
+                235.00606879999998
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "pump_type",
+        "line": "L9",
+        "value_text": "centrifugal",
+        "unit_text": null
+      },
+      {
+        "attribute": "capacity",
+        "line": "L10",
+        "value_text": "423.12",
+        "unit_text": "m3/h"
+      },
+      {
+        "attribute": "capacity",
+        "line": "L18",
+        "value_text": "465.43",
+        "unit_text": "m3/h"
+      },
+      {
+        "attribute": "head",
+        "line": "L11",
+        "value_text": "36",
+        "unit_text": "m"
+      },
+      {
+        "attribute": "medium",
+        "line": "L12",
+        "value_text": "sea water",
+        "unit_text": null
+      },
+      {
+        "attribute": "motor_power",
+        "line": "L13",
+        "value_text": "79.33",
+        "unit_text": "kW"
+      },
+      {
+        "attribute": "dimensions",
+        "line": "L15",
+        "value_text": "1580 × 570 × 760 mm",
+        "unit_text": "(mm)"
+      },
+      {
+        "attribute": "dry_weight",
+        "line": "L16",
+        "value_text": "1075.43",
+        "unit_text": "kg"
+      }
+    ]
+  },
+  "qualifiers": [
+    {
+      "kind": "value",
+      "attribute": "pump_type",
+      "value_text": "centrifugal",
+      "location": {
+        "section": "Main particulars",
+        "pdf_page": 1,
+        "bbox": [
+          178.44488,
+          380.6190801146593,
+          215.35503440000002,
+          388.0060425304687
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.pressure: evidence not in the line",
+        "condition.temperature: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [
+        "SYN-015:O003",
+        "SYN-005:O003",
+        "SYN-023:O003"
+      ],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "capacity",
+      "value_text": "423.12",
+      "location": {
+        "section": "Main particulars",
+        "pdf_page": 1,
+        "bbox": [
+          178.44488,
+          359.6190801146593,
+          202.91362800000002,
+          367.0060425304687
+        ]
+      },
+      "qualifiers": {
+        "basis": {
+          "rating": "nominal"
+        },
+        "condition": {
+          "frequency": "50 Hz"
+        },
+        "scope": "main pump"
+      },
+      "evidence": {
+        "basis.rating": "nominal",
+        "condition.frequency": "50 Hz",
+        "scope": "main pump"
+      },
+      "rejected": [],
+      "retrieved_ids": [
+        "SYN-015:O010",
+        "SYN-015:O004",
+        "SYN-023:O009"
+      ],
+      "before_check": {
+        "basis": {
+          "rating": "nominal"
+        },
+        "condition": {
+          "frequency": "50 Hz"
+        },
+        "scope": "main pump"
+      }
+    },
+    {
+      "kind": "value",
+      "attribute": "capacity",
+      "value_text": "465.43",
+      "location": {
+        "section": "Notes",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          184.61910638419056,
+          230.97655280000012,
+          192.00606879999998
+        ]
+      },
+      "qualifiers": {
+        "basis": {
+          "rating": "nominal"
+        },
+        "condition": {
+          "frequency": "50 Hz"
+        },
+        "scope": "main pump"
+      },
+      "evidence": {
+        "basis.rating": "nominal",
+        "condition.frequency": "50 Hz",
+        "scope": "main pump"
+      },
+      "rejected": [],
+      "retrieved_ids": [
+        "SYN-015:O010",
+        "SYN-015:O004",
+        "SYN-023:O009"
+      ],
+      "before_check": {
+        "basis": {
+          "rating": "nominal"
+        },
+        "condition": {
+          "frequency": "50 Hz"
+        },
+        "scope": "main pump"
+      }
+    },
+    {
+      "kind": "value",
+      "attribute": "head",
+      "value_text": "36",
+      "location": {
+        "section": "Main particulars",
+        "pdf_page": 1,
+        "bbox": [
+          178.44488,
+          338.6190801146593,
+          187.34331680000003,
+          346.0060425304687
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": "main pump"
+      },
+      "evidence": {
+        "scope": "main pump"
+      },
+      "rejected": [
+        "basis.rating: no evidence"
+      ],
+      "retrieved_ids": [
+        "SYN-015:O005",
+        "SYN-015:O010",
+        "SYN-005:O004"
+      ],
+      "before_check": {
+        "basis": {},
+        "condition": {},
+        "scope": "main pump"
+      }
+    },
+    {
+      "kind": "value",
+      "attribute": "medium",
+      "value_text": "sea water",
+      "location": {
+        "section": "Main particulars",
+        "pdf_page": 1,
+        "bbox": [
+          178.44488,
+          317.6190801146593,
+          213.12847200000002,
+          325.0060425304687
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.temperature: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [
+        "SYN-027:O006",
+        "SYN-015:O006",
+        "SYN-030:O004"
+      ],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "motor_power",
+      "value_text": "79.33",
+      "location": {
+        "section": "Main particulars",
+        "pdf_page": 1,
+        "bbox": [
+          178.44488,
+          296.6190801146593,
+          198.4644096,
+          304.0060425304687
+        ]
+      },
+      "qualifiers": {
+        "basis": {
+          "rating": "motor_rated"
+        },
+        "condition": {},
+        "scope": "drive motor"
+      },
+      "evidence": {
+        "basis.rating": "rated output",
+        "scope": "for drive motor"
+      },
+      "rejected": [],
+      "retrieved_ids": [
+        "SYN-019:O007",
+        "SYN-004:O007",
+        "SYN-023:O006"
+      ],
+      "before_check": {
+        "basis": {
+          "rating": "motor_rated"
+        },
+        "condition": {},
+        "scope": "drive motor"
+      }
+    },
+    {
+      "kind": "value",
+      "attribute": "dimensions",
+      "value_text": "1580 × 570 × 760 mm",
+      "location": {
+        "section": "Installation",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          245.61910638419056,
+          365.707016,
+          253.00606879999998
+        ]
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": "complete pump unit with motor and base"
+      },
+      "evidence": {
+        "scope": "complete pump unit with motor and base"
+      },
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.medium: no evidence"
+      ],
+      "retrieved_ids": [
+        "SYN-015:O008",
+        "SYN-023:O007",
+        "SYN-005:O008"
+      ],
+      "before_check": {
+        "basis": {},
+        "condition": {},
+        "scope": "complete pump unit with motor and base"
+      }
+    },
+    {
+      "kind": "value",
+      "attribute": "dry_weight",
+      "value_text": "1075.43",
+      "location": {
+        "section": "Installation",
+        "pdf_page": 1,
+        "bbox": [
+          38.0,
+          227.61910638419056,
+          336.8046712000001,
+          235.00606879999998
+        ]
+      },
+      "qualifiers": {
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {},
+        "scope": "complete pump unit with motor and base"
+      },
+      "evidence": {
+        "basis.weight": "dry condition",
+        "scope": "complete pump unit with motor and base"
+      },
+      "rejected": [],
+      "retrieved_ids": [
+        "SYN-023:O008",
+        "SYN-015:O009",
+        "SYN-005:O009"
+      ],
+      "before_check": {
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {},
+        "scope": "complete pump unit with motor and base"
+      }
+    }
+  ]
+}

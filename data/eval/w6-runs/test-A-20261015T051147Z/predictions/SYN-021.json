@@ -1,0 +1,106 @@
+{
+  "prediction": {
+    "document_id": "SYN-021",
+    "class_id": "AirCompressor",
+    "class_candidates": [
+      "AirCompressor"
+    ],
+    "facts": [],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "Name",
+      "text": "Marine air compressor",
+      "line": "{'Marine air compressor': 'L3', 'Manufacturer': 'L5', 'Model': 'L6', 'Capacity': ['L9', 'L19'], 'Max Pressure': 'L10', 'Cooling Method': 'L11', 'Operating Medium': 'L12', 'Motor Rating': 'L13', 'Overall Dimensions': 'L15', 'Dry Weight': 'L16'}",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Manufacturer",
+      "text": "SGDW-20261007-D Synthetic Works",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Model",
+      "text": "VX012-121",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "capacity",
+      "text": "212.41 m3/h",
+      "line": "",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "Max Pressure",
+      "text": "30 bar",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Cooling Method",
+      "text": "water-cooled",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Operating Medium",
+      "text": "air",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Motor Rating",
+      "text": "53.56 kW",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Overall Dimensions",
+      "text": "1400 × 795 × 1005 mm",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Dry Weight",
+      "text": "1200.55 kg",
+      "line": "",
+      "reason": "unknown_attribute"
+    }
+  ],
+  "reply": {
+    "attributes": {
+      "Name": "Marine air compressor",
+      "Manufacturer": "SGDW-20261007-D Synthetic Works",
+      "Model": "VX012-121",
+      "Capacity": "212.41 m3/h",
+      "Max Pressure": "30 bar",
+      "Cooling Method": "water-cooled",
+      "Operating Medium": "air",
+      "Motor Rating": "53.56 kW",
+      "Overall Dimensions": "1400 × 795 × 1005 mm",
+      "Dry Weight": "1200.55 kg"
+    },
+    "lines": {
+      "Name": {
+        "Marine air compressor": "L3",
+        "Manufacturer": "L5",
+        "Model": "L6",
+        "Capacity": [
+          "L9",
+          "L19"
+        ],
+        "Max Pressure": "L10",
+        "Cooling Method": "L11",
+        "Operating Medium": "L12",
+        "Motor Rating": "L13",
+        "Overall Dimensions": "L15",
+        "Dry Weight": "L16"
+      }
+    }
+  },
+  "qualifiers": []
+}

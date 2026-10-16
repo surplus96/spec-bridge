@@ -1,0 +1,196 @@
+schema_version: 3
+input_id: SYN-008
+origin: synthetic
+expected_class: Turbocharger
+status: final_v1; frozen by user decision D-019 (2026-10-08); reviewed_by awaits user signature
+artifact:
+  path: data/synth/inputs/SYN-008.docx
+  sha256: 9fa4985c76bd01be992e7984dcc6abc031724496f34e53e15df010f4d46cba68
+  file_format: docx
+  location_verified: true
+  source_path: data/synth/dev/sources/SYN-008.md
+  source_sha256: 304f5bbf4b1d973c8031fdb22fff1a7841c6ac870808b825a7b6820a8f1e9aa5
+  verification_method: independent file-content audit
+observations:
+- observation_id: O001
+  attribute_id: maker
+  raw_text: SGDW-20261007-A Synthetic Works
+  label_text: Manufacturer
+  unit_text: null
+  location:
+    source_line: 9
+    source_section: Identification
+    pdf_page: null
+    paragraph: 5
+    paragraph_index_basis: top_level_body_paragraphs
+  interpretation: normalized
+  parsed_value: SGDW-20261007-A Synthetic Works
+  parsed_unit: null
+- observation_id: O002
+  attribute_id: model_designation
+  raw_text: VX021-108
+  label_text: Model designation
+  unit_text: null
+  location:
+    source_line: 11
+    source_section: Identification
+    pdf_page: null
+    paragraph: 6
+    paragraph_index_basis: top_level_body_paragraphs
+  interpretation: normalized
+  parsed_value: VX021-108
+  parsed_unit: null
+- observation_id: O003
+  attribute_id: turbocharger_type
+  raw_text: axial
+  label_text: Turbine flow type
+  unit_text: null
+  location:
+    source_line: 15
+    source_section: Specifications
+    pdf_page: null
+    paragraph: 8
+    paragraph_index_basis: top_level_body_paragraphs
+  interpretation: normalized
+  parsed_value: axial
+  parsed_unit: null
+- observation_id: O004
+  attribute_id: bearing_type
+  raw_text: plain bearings
+  label_text: Bearings
+  unit_text: null
+  location:
+    source_line: 17
+    source_section: Specifications
+    pdf_page: null
+    paragraph: 9
+    paragraph_index_basis: top_level_body_paragraphs
+  interpretation: normalized
+  parsed_value: plain
+  parsed_unit: null
+- observation_id: O005
+  attribute_id: dimensions
+  raw_text: 2080 × 1760 × 2280
+  label_text: Overall dimensions (L × W × H)
+  unit_text: mm
+  location:
+    source_line: 19
+    source_section: Specifications
+    pdf_page: null
+    paragraph: 10
+    paragraph_index_basis: top_level_body_paragraphs
+  interpretation: normalized
+  parsed_value:
+    length: 2080
+    width: 1760
+    height: 2280
+  parsed_unit: mm
+- observation_id: O006
+  attribute_id: dry_weight
+  raw_text: '3687.6'
+  label_text: Weight (kg) - dry condition stated
+  unit_text: kg
+  location:
+    source_line: 21
+    source_section: Specifications
+    pdf_page: null
+    paragraph: 11
+    paragraph_index_basis: top_level_body_paragraphs
+  interpretation: normalized
+  parsed_value: 3687.6
+  parsed_unit: kg
+facts:
+- fact_id: F001
+  attribute_id: maker
+  value: SGDW-20261007-A Synthetic Works
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O001
+  admissibility: supported
+- fact_id: F002
+  attribute_id: model_designation
+  value: VX021-108
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O002
+  admissibility: supported
+- fact_id: F003
+  attribute_id: turbocharger_type
+  value: axial
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O003
+  admissibility: supported
+- fact_id: F004
+  attribute_id: bearing_type
+  value: plain
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O004
+  admissibility: supported
+- fact_id: F005
+  attribute_id: dimensions
+  value:
+    length: 2080
+    width: 1760
+    height: 2280
+  unit: mm
+  basis: {}
+  condition: {}
+  scope: complete_turbocharger_with_silencer
+  observation_ids:
+  - O005
+  admissibility: supported
+- fact_id: F006
+  attribute_id: dry_weight
+  value: 3687.6
+  unit: kg
+  basis:
+    weight: dry
+  condition: {}
+  scope: complete_turbocharger_with_silencer
+  observation_ids:
+  - O006
+  admissibility: supported
+issues:
+- issue_id: I001
+  code: E1
+  attribute_ids:
+  - applicable_engine_power
+  observation_ids: []
+  rule_ref: data/ontology/dataset-contract.yaml#classes/Turbocharger/required_all
+  reason: Required value is absent from the authored document.
+  missing_evidence:
+    inspected_artifact_sha256: 9fa4985c76bd01be992e7984dcc6abc031724496f34e53e15df010f4d46cba68
+    searched_attribute_id: applicable_engine_power
+    inspected_locations:
+    - coverage: entire rendered document
+      source_lines:
+      - 1
+      - 28
+    applied_requirement: data/ontology/dataset-contract.yaml#classes/Turbocharger/required_all
+missing_required:
+- applicable_engine_power
+comparison:
+  label_scope: nominated_pairs_only
+  pairs: []
+relations: []
+reference_variants:
+- observation_id: O006
+  notation: Weight (kg)
+  document_id: REF-TC-01
+  pdf_page: 2
+  context_suffix_origin: synthetic
+reviewed_by: null

@@ -1,0 +1,122 @@
+{
+  "prediction": {
+    "document_id": "SYN-016",
+    "class_id": "AirCompressor",
+    "class_candidates": [
+      "AirCompressor"
+    ],
+    "facts": [],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "Product Name",
+      "text": "Marine air compressor",
+      "line": "['L3']",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "maker",
+      "text": "SGDW-20261007-C Synthetic Works",
+      "line": "['L5']",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "Model Designation",
+      "text": "VX011-116",
+      "line": "['L6']",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "capacity",
+      "text": "130.46 m3/h (charging, for main compressor)",
+      "line": "['L8', 'L16']",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "Working Pressure",
+      "text": "25 bar (gauge, working condition, for main compressor)",
+      "line": "['L9']",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Cooling Type",
+      "text": "air",
+      "line": "['L10']",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "medium",
+      "text": "air",
+      "line": "['L11']",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "Motor Power",
+      "text": "34.43 kW (rated output, for drive motor)",
+      "line": "['L12']",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "dimensions",
+      "text": "1280 × 760 × 940 mm (complete compressor unit with motor and mountings)",
+      "line": "['L13']",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "Reported Weight",
+      "text": "779.16 kg (for complete compressor unit with motor and mountings)",
+      "line": "['L14']",
+      "reason": "unknown_attribute"
+    }
+  ],
+  "reply": {
+    "attributes": {
+      "Product Name": "Marine air compressor",
+      "Maker": "SGDW-20261007-C Synthetic Works",
+      "Model Designation": "VX011-116",
+      "Capacity": "130.46 m3/h (charging, for main compressor)",
+      "Working Pressure": "25 bar (gauge, working condition, for main compressor)",
+      "Cooling Type": "air",
+      "Medium": "air",
+      "Motor Power": "34.43 kW (rated output, for drive motor)",
+      "Dimensions": "1280 × 760 × 940 mm (complete compressor unit with motor and mountings)",
+      "Reported Weight": "779.16 kg (for complete compressor unit with motor and mountings)"
+    },
+    "lines": {
+      "Product Name": [
+        "L3"
+      ],
+      "Maker": [
+        "L5"
+      ],
+      "Model Designation": [
+        "L6"
+      ],
+      "Capacity": [
+        "L8",
+        "L16"
+      ],
+      "Working Pressure": [
+        "L9"
+      ],
+      "Cooling Type": [
+        "L10"
+      ],
+      "Medium": [
+        "L11"
+      ],
+      "Motor Power": [
+        "L12"
+      ],
+      "Dimensions": [
+        "L13"
+      ],
+      "Reported Weight": [
+        "L14"
+      ]
+    }
+  },
+  "qualifiers": []
+}

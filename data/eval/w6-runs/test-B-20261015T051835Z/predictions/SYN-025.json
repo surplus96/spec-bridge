@@ -1,0 +1,363 @@
+{
+  "prediction": {
+    "document_id": "SYN-025",
+    "class_id": "Separator",
+    "class_candidates": [
+      "Separator",
+      "Pump"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-D Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "identification",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-025",
+            "raw_text": "SGDW-20261007-D Synthetic Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                467.6191063841906,
+                204.27343200000007,
+                475.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX020-021",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "identification",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-025",
+            "raw_text": "VX020-021",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                449.6191063841906,
+                112.2656216,
+                457.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 2240,
+          "width": 1185,
+          "height": 1930
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "installation_data",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-025",
+            "raw_text": "2240 × 1185 × 1930 mm",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Installation data",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                224.61910638419056,
+                446.64451039999994,
+                232.00606879999998
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 848.78,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "installation_data",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-025",
+            "raw_text": "848.78 kg",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Installation data",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                206.61910638419056,
+                347.0312328000001,
+                214.00606879999998
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "lubricating oil",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "service",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-025",
+            "raw_text": "lubricating oil",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                380.6190801146593,
+                225.1362848,
+                388.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "lubricating oil",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "specifications",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-025",
+            "raw_text": "lubricating oil",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                359.6190801146593,
+                225.1362848,
+                367.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "self_cleaning",
+        "value": true,
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "service",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-025",
+            "raw_text": "Yes",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                296.6190801146593,
+                192.230036,
+                304.0060425304687
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "rated_throughput",
+      "text": "2408.7 l/h",
+      "line": "L11",
+      "reason": "not_in_line"
+    },
+    {
+      "attribute": "rated_throughput",
+      "text": "1565.65 l/h",
+      "line": "L12",
+      "reason": "not_in_line"
+    },
+    {
+      "attribute": "motor_power",
+      "text": "8.03 kW",
+      "line": "L14",
+      "reason": "not_in_line"
+    },
+    {
+      "attribute": "application",
+      "text": "Marine centrifugal oil separator",
+      "line": "none",
+      "reason": "unknown_line"
+    }
+  ],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "basis": {},
+        "condition": {},
+        "scope": "Identification",
+        "line": "L5",
+        "value": "SGDW-20261007-D Synthetic Works",
+        "unit": null,
+        "raw_text": "SGDW-20261007-D Synthetic Works"
+      },
+      {
+        "attribute": "model_designation",
+        "basis": {},
+        "condition": {},
+        "scope": "Identification",
+        "line": "L6",
+        "value": "VX020-021",
+        "unit": null,
+        "raw_text": "VX020-021"
+      },
+      {
+        "attribute": "dimensions",
+        "basis": {},
+        "condition": {},
+        "scope": "Installation data",
+        "line": "L16",
+        "value": {
+          "length": 2240,
+          "width": 1185,
+          "height": 1930
+        },
+        "unit": "mm",
+        "raw_text": "2240 × 1185 × 1930 mm"
+      },
+      {
+        "attribute": "dry_weight",
+        "basis": {},
+        "condition": {},
+        "scope": "Installation data",
+        "line": "L17",
+        "value": 848.78,
+        "unit": "kg",
+        "raw_text": "848.78 kg"
+      },
+      {
+        "attribute": "medium",
+        "basis": {},
+        "condition": {},
+        "scope": "Service",
+        "line": "L9",
+        "value": "lubricating oil",
+        "unit": null,
+        "raw_text": "lubricating oil"
+      },
+      {
+        "attribute": "medium",
+        "basis": {},
+        "condition": {},
+        "scope": "Specifications",
+        "line": "L10",
+        "value": "lubricating oil",
+        "unit": null,
+        "raw_text": "lubricating oil"
+      },
+      {
+        "attribute": "rated_throughput",
+        "basis": {},
+        "condition": {
+          "temperature": {
+            "value": 50,
+            "unit": "degC"
+          },
+          "viscosity": {
+            "value": 380,
+            "unit": "cSt"
+          }
+        },
+        "scope": "Specifications",
+        "line": "L11",
+        "value": 2408.7,
+        "unit": "l/h",
+        "raw_text": "2408.7 l/h"
+      },
+      {
+        "attribute": "rated_throughput",
+        "basis": {},
+        "condition": {
+          "temperature": {
+            "value": 50,
+            "unit": "degC"
+          },
+          "viscosity": {
+            "value": 700,
+            "unit": "cSt"
+          }
+        },
+        "scope": "Specifications",
+        "line": "L12",
+        "value": 1565.65,
+        "unit": "l/h",
+        "raw_text": "1565.65 l/h"
+      },
+      {
+        "attribute": "self_cleaning",
+        "basis": {},
+        "condition": {},
+        "scope": "Service",
+        "line": "L13",
+        "value": true,
+        "unit": null,
+        "raw_text": "Yes"
+      },
+      {
+        "attribute": "motor_power",
+        "basis": {},
+        "condition": {},
+        "scope": "Service",
+        "line": "L14",
+        "value": 8.03,
+        "unit": "kW",
+        "raw_text": "8.03 kW"
+      },
+      {
+        "attribute": "application",
+        "basis": {},
+        "condition": {},
+        "scope": "none",
+        "line": "none",
+        "value": "marine centrifugal oil separator",
+        "unit": null,
+        "raw_text": "Marine centrifugal oil separator"
+      }
+    ]
+  },
+  "qualifiers": []
+}

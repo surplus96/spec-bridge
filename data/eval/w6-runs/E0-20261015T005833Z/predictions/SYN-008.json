@@ -1,0 +1,379 @@
+{
+  "prediction": {
+    "document_id": "SYN-008",
+    "class_id": "Turbocharger",
+    "class_candidates": [
+      "Turbocharger"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-A Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-008",
+            "raw_text": "SGDW-20261007-A Synthetic Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "paragraph": 5
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX021-108",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-008",
+            "raw_text": "VX021-108",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "paragraph": 6
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 2080,
+          "width": 1760,
+          "height": 2280
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {
+          "basis": "per_turbocharger"
+        },
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-008",
+            "raw_text": "2080 × 1760 × 2280 mm",
+            "label_text": null,
+            "unit_text": "(mm)",
+            "location": {
+              "section": "Specifications",
+              "paragraph": 10
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 3687.6,
+        "unit": "kg",
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-008",
+            "raw_text": "3687.6",
+            "label_text": null,
+            "unit_text": "kg",
+            "location": {
+              "section": "Specifications",
+              "paragraph": 11
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "reported_weight",
+        "value": 3687.6,
+        "unit": "kg",
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-008",
+            "raw_text": "3687.6",
+            "label_text": null,
+            "unit_text": "kg",
+            "location": {
+              "section": "Specifications",
+              "paragraph": 11
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "turbocharger_type",
+        "value": "axial",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-008",
+            "raw_text": "axial",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "paragraph": 8
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "bearing_type",
+        "value": "plain",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-008",
+            "raw_text": "plain bearings",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "paragraph": 9
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "line": "L5",
+        "value_text": "SGDW-20261007-A Synthetic Works",
+        "unit_text": null
+      },
+      {
+        "attribute": "model_designation",
+        "line": "L6",
+        "value_text": "VX021-108",
+        "unit_text": null
+      },
+      {
+        "attribute": "dimensions",
+        "line": "L10",
+        "value_text": "2080 × 1760 × 2280 mm",
+        "unit_text": "(mm)"
+      },
+      {
+        "attribute": "dry_weight",
+        "line": "L11",
+        "value_text": "3687.6",
+        "unit_text": "kg"
+      },
+      {
+        "attribute": "reported_weight",
+        "line": "L11",
+        "value_text": "3687.6",
+        "unit_text": "kg"
+      },
+      {
+        "attribute": "turbocharger_type",
+        "line": "L8",
+        "value_text": "axial",
+        "unit_text": null
+      },
+      {
+        "attribute": "bearing_type",
+        "line": "L9",
+        "value_text": "plain bearings",
+        "unit_text": null
+      }
+    ]
+  },
+  "qualifiers": [
+    {
+      "kind": "value",
+      "attribute": "maker",
+      "value_text": "SGDW-20261007-A Synthetic Works",
+      "location": {
+        "section": "Identification",
+        "paragraph": 5
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.medium: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "model_designation",
+      "value_text": "VX021-108",
+      "location": {
+        "section": "Identification",
+        "paragraph": 6
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.temperature: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "dimensions",
+      "value_text": "2080 × 1760 × 2280 mm",
+      "location": {
+        "section": "Specifications",
+        "paragraph": 10
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {
+          "basis": "per_turbocharger"
+        },
+        "scope": ""
+      },
+      "evidence": {
+        "condition.basis": "with silencer"
+      },
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.temperature: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "dry_weight",
+      "value_text": "3687.6",
+      "location": {
+        "section": "Specifications",
+        "paragraph": 11
+      },
+      "qualifiers": {
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {
+        "basis.weight": "Weight (kg) - dry condition stated"
+      },
+      "rejected": [
+        "condition.temperature: number not in the line",
+        "condition.absolute_pressure: number not in the line",
+        "condition.viscosity: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "reported_weight",
+      "value_text": "3687.6",
+      "location": {
+        "section": "Specifications",
+        "paragraph": 11
+      },
+      "qualifiers": {
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {
+        "basis.weight": "dry condition stated"
+      },
+      "rejected": [
+        "condition.temperature: number not in the line",
+        "condition.absolute_pressure: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "turbocharger_type",
+      "value_text": "axial",
+      "location": {
+        "section": "Specifications",
+        "paragraph": 8
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.engine_type: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "bearing_type",
+      "value_text": "plain bearings",
+      "location": {
+        "section": "Specifications",
+        "paragraph": 9
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.medium: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    }
+  ]
+}

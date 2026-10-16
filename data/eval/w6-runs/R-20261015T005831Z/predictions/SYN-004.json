@@ -1,0 +1,220 @@
+{
+  "prediction": {
+    "document_id": "SYN-004",
+    "class_id": "AirCompressor",
+    "class_candidates": [
+      "AirCompressor"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-B Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-004",
+            "raw_text": "SGDW-20261007-B Synthetic Works",
+            "label_text": "Manufacturer",
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "paragraph": 5
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX010-009",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-004",
+            "raw_text": "VX010-009",
+            "label_text": "Model",
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "paragraph": 6
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "capacity",
+        "value": 100.98,
+        "unit": "m3/h",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-004",
+            "raw_text": "100.98",
+            "label_text": "FAD*",
+            "unit_text": "m3/h",
+            "location": {
+              "section": "Specifications",
+              "table": 1,
+              "row": 2,
+              "column": 2
+            }
+          },
+          {
+            "source_document_id": "SYN-004",
+            "raw_text": "100.98",
+            "label_text": "FAD*",
+            "unit_text": "m3/h",
+            "location": {
+              "section": "Operating notes",
+              "paragraph": 13
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "max_pressure",
+        "value": 32,
+        "unit": "bar",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-004",
+            "raw_text": "32",
+            "label_text": "Max pressure",
+            "unit_text": "bar",
+            "location": {
+              "section": "Specifications",
+              "table": 1,
+              "row": 3,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "cooling_type",
+        "value": "water",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-004",
+            "raw_text": "water-cooled",
+            "label_text": "Cooling",
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "table": 1,
+              "row": 4,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "air",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-004",
+            "raw_text": "air",
+            "label_text": "Medium",
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "table": 1,
+              "row": 5,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "motor_power",
+        "value": 25.51,
+        "unit": "kW",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-004",
+            "raw_text": "25.51",
+            "label_text": "Motor rating",
+            "unit_text": "kW",
+            "location": {
+              "section": "Specifications",
+              "table": 1,
+              "row": 6,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 1160,
+          "width": 725,
+          "height": 875
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-004",
+            "raw_text": "1160 × 725 × 875",
+            "label_text": "Dimensions (L × W × H)",
+            "unit_text": "mm",
+            "location": {
+              "section": "Installation data",
+              "paragraph": 9
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 552.76,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-004",
+            "raw_text": "552.76",
+            "label_text": "Dry mass",
+            "unit_text": "kg",
+            "location": {
+              "section": "Installation data",
+              "paragraph": 10
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": null,
+  "qualifiers": []
+}

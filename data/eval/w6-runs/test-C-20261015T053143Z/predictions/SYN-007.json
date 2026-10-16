@@ -1,0 +1,368 @@
+{
+  "prediction": {
+    "document_id": "SYN-007",
+    "class_id": "Pump",
+    "class_candidates": [
+      "Pump"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-C Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "complete_pump_unit_with_motor_and_base",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-007",
+            "raw_text": "SGDW-20261007-C Synthetic Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "paragraph": 5
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX015-107",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "complete_pump_unit_with_motor_and_base",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-007",
+            "raw_text": "VX015-107",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "paragraph": 6
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "pump_type",
+        "value": "three_screw",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "complete_pump_unit_with_motor_and_base",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-007",
+            "raw_text": "three-screw",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "paragraph": 8
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "lubricating_oil",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "complete_pump_unit_with_motor_and_base",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-007",
+            "raw_text": "lube oil",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "paragraph": 12
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "motor_power",
+        "value": 26.24,
+        "unit": "kW",
+        "basis": {},
+        "condition": {},
+        "scope": "drive_motor",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-007",
+            "raw_text": "26.24 kW",
+            "label_text": null,
+            "unit_text": "kW",
+            "location": {
+              "section": "Main particulars",
+              "paragraph": 13
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "differential_pressure",
+        "value": 7,
+        "unit": "bar",
+        "basis": {},
+        "condition": {},
+        "scope": "main_pump",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-007",
+            "raw_text": "7 bar",
+            "label_text": null,
+            "unit_text": "bar",
+            "location": {
+              "section": "Main particulars",
+              "paragraph": 11
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 1440,
+          "width": 540,
+          "height": 720
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "complete_pump_unit_with_motor_and_base",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-007",
+            "raw_text": "1440 × 540 × 720 mm",
+            "label_text": null,
+            "unit_text": "mm",
+            "location": {
+              "section": "Main particulars",
+              "paragraph": 14
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 507.21,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "complete_pump_unit_with_motor_and_base",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-007",
+            "raw_text": "507.21 kg",
+            "label_text": null,
+            "unit_text": "kg",
+            "location": {
+              "section": "Main particulars",
+              "paragraph": 15
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [
+      {
+        "attribute": "capacity",
+        "value_text": "218.62 m3/h",
+        "unit_text": "m3/h",
+        "reason": "condition",
+        "occurrence": {
+          "source_document_id": "SYN-007",
+          "raw_text": "218.62 m3/h",
+          "label_text": null,
+          "unit_text": "m3/h",
+          "location": {
+            "section": "Main particulars",
+            "paragraph": 9
+          }
+        }
+      },
+      {
+        "attribute": "capacity",
+        "value_text": "251.42 m3/h",
+        "unit_text": "m3/h",
+        "reason": "condition",
+        "occurrence": {
+          "source_document_id": "SYN-007",
+          "raw_text": "251.42 m3/h",
+          "label_text": null,
+          "unit_text": "m3/h",
+          "location": {
+            "section": "Main particulars",
+            "paragraph": 10
+          }
+        }
+      },
+      {
+        "attribute": "head",
+        "value_text": "7 bar",
+        "unit_text": "bar",
+        "reason": "dimension",
+        "occurrence": {
+          "source_document_id": "SYN-007",
+          "raw_text": "7 bar",
+          "label_text": null,
+          "unit_text": "bar",
+          "location": {
+            "section": "Main particulars",
+            "paragraph": 11
+          }
+        }
+      }
+    ],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "discharge_pressure",
+      "text": "none",
+      "line": "none",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "reported_weight",
+      "text": "none",
+      "line": "none",
+      "reason": "unknown_line"
+    }
+  ],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "basis": {},
+        "condition": {},
+        "scope": "Complete pump unit with motor and base",
+        "line": "L5",
+        "value_text": "SGDW-20261007-C Synthetic Works",
+        "unit_text": null
+      },
+      {
+        "attribute": "model_designation",
+        "basis": {},
+        "condition": {},
+        "scope": "Complete pump unit with motor and base",
+        "line": "L6",
+        "value_text": "VX015-107",
+        "unit_text": null
+      },
+      {
+        "attribute": "pump_type",
+        "basis": {},
+        "condition": {},
+        "scope": "Complete pump unit with motor and base",
+        "line": "L8",
+        "value_text": "three-screw",
+        "unit_text": null
+      },
+      {
+        "attribute": "medium",
+        "basis": {},
+        "condition": {},
+        "scope": "Complete pump unit with motor and base",
+        "line": "L12",
+        "value_text": "lube oil",
+        "unit_text": null
+      },
+      {
+        "attribute": "motor_power",
+        "basis": {},
+        "condition": {},
+        "scope": "Drive motor",
+        "line": "L13",
+        "value_text": "26.24 kW",
+        "unit_text": "kW"
+      },
+      {
+        "attribute": "capacity",
+        "basis": {},
+        "condition": {
+          "frequency": "50 Hz",
+          "temperature": "nominal"
+        },
+        "scope": "Main pump",
+        "line": "L9",
+        "value_text": "218.62 m3/h",
+        "unit_text": "m3/h"
+      },
+      {
+        "attribute": "capacity",
+        "basis": {},
+        "condition": {
+          "frequency": "60 Hz",
+          "temperature": "nominal"
+        },
+        "scope": "Main pump",
+        "line": "L10",
+        "value_text": "251.42 m3/h",
+        "unit_text": "m3/h"
+      },
+      {
+        "attribute": "head",
+        "basis": {},
+        "condition": {},
+        "scope": "Main pump",
+        "line": "L11",
+        "value_text": "7 bar",
+        "unit_text": "bar"
+      },
+      {
+        "attribute": "differential_pressure",
+        "basis": {},
+        "condition": {},
+        "scope": "Main pump",
+        "line": "L11",
+        "value_text": "7 bar",
+        "unit_text": "bar"
+      },
+      {
+        "attribute": "discharge_pressure",
+        "basis": {},
+        "condition": {},
+        "scope": "Not explicitly stated",
+        "line": "none",
+        "value_text": "none",
+        "unit_text": null
+      },
+      {
+        "attribute": "dimensions",
+        "basis": {},
+        "condition": {},
+        "scope": "Complete pump unit with motor and base",
+        "line": "L14",
+        "value_text": "1440 × 540 × 720 mm",
+        "unit_text": "mm"
+      },
+      {
+        "attribute": "dry_weight",
+        "basis": {},
+        "condition": {},
+        "scope": "Complete pump unit with motor and base",
+        "line": "L15",
+        "value_text": "507.21 kg",
+        "unit_text": "kg"
+      },
+      {
+        "attribute": "reported_weight",
+        "basis": {},
+        "condition": {},
+        "scope": "None explicitly stated",
+        "line": "none",
+        "value_text": "none",
+        "unit_text": null
+      }
+    ]
+  },
+  "qualifiers": []
+}

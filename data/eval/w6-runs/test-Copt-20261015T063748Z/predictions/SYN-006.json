@@ -1,0 +1,293 @@
+{
+  "prediction": {
+    "document_id": "SYN-006",
+    "class_id": "Separator",
+    "class_candidates": [
+      "Separator",
+      "Pump"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-C Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-006",
+            "raw_text": "SGDW-20261007-C Synthetic Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                449.6191063841906,
+                204.27343200000007,
+                475.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX019-106",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-006",
+            "raw_text": "VX019-106",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                449.6191063841906,
+                204.27343200000007,
+                475.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 2110,
+          "width": 1120,
+          "height": 1850
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-006",
+            "raw_text": "2110 × 1120 × 1850 mm",
+            "label_text": null,
+            "unit_text": "mm",
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                334.6191063841906,
+                461.32029119999993,
+                342.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 1602.64,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-006",
+            "raw_text": "1602.64 kg",
+            "label_text": null,
+            "unit_text": "kg",
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                316.6191063841906,
+                367.05076240000005,
+                324.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "HFO",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-006",
+            "raw_text": "HFO",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                370.6191063841906,
+                112.70702879999999,
+                414.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "motor_power",
+        "value": 13.94,
+        "unit": "kW",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-006",
+            "raw_text": "13.94 kW",
+            "label_text": null,
+            "unit_text": "kW",
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                352.6191063841906,
+                287.8788920000002,
+                360.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "application",
+        "value": "fuel_oil",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-006",
+            "raw_text": "fuel oil",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                370.6191063841906,
+                112.70702879999999,
+                414.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "self_cleaning",
+        "value": true,
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-006",
+            "raw_text": "Yes",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                370.6191063841906,
+                112.70702879999999,
+                414.0060688
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "rated_throughput",
+      "text": "",
+      "line": "null",
+      "reason": "unknown_line"
+    }
+  ],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "line": "L5",
+        "value_text": "SGDW-20261007-C Synthetic Works",
+        "unit_text": null
+      },
+      {
+        "attribute": "model_designation",
+        "line": "L5",
+        "value_text": "VX019-106",
+        "unit_text": null
+      },
+      {
+        "attribute": "dimensions",
+        "line": "L9",
+        "value_text": "2110 × 1120 × 1850 mm",
+        "unit_text": "mm"
+      },
+      {
+        "attribute": "dry_weight",
+        "line": "L10",
+        "value_text": "1602.64 kg",
+        "unit_text": "kg"
+      },
+      {
+        "attribute": "medium",
+        "line": "L7",
+        "value_text": "HFO",
+        "unit_text": null
+      },
+      {
+        "attribute": "motor_power",
+        "line": "L8",
+        "value_text": "13.94 kW",
+        "unit_text": "kW"
+      },
+      {
+        "attribute": "application",
+        "line": "L7",
+        "value_text": "fuel oil",
+        "unit_text": null
+      },
+      {
+        "attribute": "rated_throughput",
+        "line": "null",
+        "value_text": "",
+        "unit_text": null
+      },
+      {
+        "attribute": "self_cleaning",
+        "line": "L7",
+        "value_text": "Yes",
+        "unit_text": null
+      }
+    ]
+  },
+  "qualifiers": []
+}

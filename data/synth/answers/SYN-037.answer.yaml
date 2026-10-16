@@ -1,0 +1,271 @@
+schema_version: 3
+input_id: SYN-037
+origin: synthetic
+expected_class: Turbocharger
+status: final_v1; frozen by user decision D-019 (2026-10-08); reviewed_by awaits user signature
+artifact:
+  path: data/synth/inputs/SYN-037.xlsx
+  sha256: 95d72976ed5500cfaf0cda730d59ad03c8bc72e7d2e5bc0293aa06defb2c0942
+  file_format: xlsx
+  location_verified: true
+  source_path: data/synth/dev/sources/SYN-037.md
+  source_sha256: e4becc1e19c96054131daac22593e951e98b649d99704099adc8eff16736de13
+  verification_method: independent file-content audit
+observations:
+- observation_id: O001
+  attribute_id: maker
+  raw_text: SGDW-20261007-B Synthetic Works
+  label_text: Manufacturer
+  unit_text: null
+  location:
+    source_line: 9
+    source_section: Product data
+    pdf_page: null
+    sheet: Specification
+    cell_or_range: A5
+    value_cell: A5
+  interpretation: normalized
+  parsed_value: SGDW-20261007-B Synthetic Works
+  parsed_unit: null
+- observation_id: O002
+  attribute_id: model_designation
+  raw_text: VX022-137
+  label_text: Model designation
+  unit_text: null
+  location:
+    source_line: 11
+    source_section: Product data
+    pdf_page: null
+    sheet: Specification
+    cell_or_range: A6
+    value_cell: A6
+  interpretation: normalized
+  parsed_value: VX022-137
+  parsed_unit: null
+- observation_id: O003
+  attribute_id: turbocharger_type
+  raw_text: axial
+  label_text: Turbine flow type
+  unit_text: null
+  location:
+    source_line: 17
+    source_section: Main particulars
+    pdf_page: null
+    source_table: 1
+    source_row: 1
+    sheet: Specification
+    cell_or_range: A9:D9
+    value_cell: B9
+  interpretation: normalized
+  parsed_value: axial
+  parsed_unit: null
+- observation_id: O004
+  attribute_id: applicable_engine_power
+  raw_text: 8815.5 to 22136.7
+  label_text: Engine Output Range per Turbocharger
+  unit_text: kW
+  location:
+    source_line: 18
+    source_section: Main particulars
+    pdf_page: null
+    source_table: 1
+    source_row: 2
+    sheet: Specification
+    cell_or_range: A10:D10
+    value_cell: B10
+  interpretation: normalized
+  parsed_value:
+    min: 8815.5
+    max: 22136.7
+  parsed_unit: kW
+- observation_id: O005
+  attribute_id: bearing_type
+  raw_text: plain
+  label_text: Bearing type
+  unit_text: null
+  location:
+    source_line: 19
+    source_section: Main particulars
+    pdf_page: null
+    source_table: 1
+    source_row: 3
+    sheet: Specification
+    cell_or_range: A11:D11
+    value_cell: B11
+  interpretation: normalized
+  parsed_value: plain
+  parsed_unit: null
+- observation_id: O006
+  attribute_id: dimensions
+  raw_text: 2280 × 1910 × 2460
+  label_text: Dimensions (L × W × H)
+  unit_text: mm
+  location:
+    source_line: 20
+    source_section: Main particulars
+    pdf_page: null
+    source_table: 1
+    source_row: 4
+    sheet: Specification
+    cell_or_range: A12:D12
+    value_cell: B12
+  interpretation: normalized
+  parsed_value:
+    length: 2280
+    width: 1910
+    height: 2460
+  parsed_unit: mm
+- observation_id: O007
+  attribute_id: dry_weight
+  raw_text: '5583.15'
+  label_text: Dry mass
+  unit_text: kg
+  location:
+    source_line: 21
+    source_section: Main particulars
+    pdf_page: null
+    source_table: 1
+    source_row: 5
+    sheet: Specification
+    cell_or_range: A13:D13
+    value_cell: B13
+  interpretation: normalized
+  parsed_value: 5583.15
+  parsed_unit: kg
+- observation_id: O008
+  attribute_id: applicable_engine_power
+  raw_text: 9697.05 to 24350.37
+  label_text: Engine Output Range per Turbocharger
+  unit_text: kW
+  location:
+    source_line: 25
+    source_section: Notes
+    pdf_page: null
+    sheet: Specification
+    cell_or_range: A15
+    value_cell: A15
+  interpretation: normalized
+  parsed_value:
+    min: 9697.05
+    max: 24350.37
+  parsed_unit: kW
+facts:
+- fact_id: F001
+  attribute_id: maker
+  value: SGDW-20261007-B Synthetic Works
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O001
+  admissibility: supported
+- fact_id: F002
+  attribute_id: model_designation
+  value: VX022-137
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O002
+  admissibility: supported
+- fact_id: F003
+  attribute_id: turbocharger_type
+  value: axial
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O003
+  admissibility: supported
+- fact_id: F004
+  attribute_id: applicable_engine_power
+  value:
+    min: 8815.5
+    max: 22136.7
+  unit: kW
+  basis: {}
+  condition:
+    engine_type: four-stroke
+    basis: per_turbocharger
+  scope: applicable_engine
+  observation_ids:
+  - O004
+  admissibility: supported
+- fact_id: F005
+  attribute_id: bearing_type
+  value: plain
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O005
+  admissibility: supported
+- fact_id: F006
+  attribute_id: dimensions
+  value:
+    length: 2280
+    width: 1910
+    height: 2460
+  unit: mm
+  basis: {}
+  condition: {}
+  scope: complete_turbocharger_with_silencer
+  observation_ids:
+  - O006
+  admissibility: supported
+- fact_id: F007
+  attribute_id: dry_weight
+  value: 5583.15
+  unit: kg
+  basis:
+    weight: dry
+  condition: {}
+  scope: complete_turbocharger_with_silencer
+  observation_ids:
+  - O007
+  admissibility: supported
+- fact_id: F008
+  attribute_id: applicable_engine_power
+  value:
+    min: 9697.05
+    max: 24350.37
+  unit: kW
+  basis: {}
+  condition:
+    engine_type: four-stroke
+    basis: per_turbocharger
+  scope: applicable_engine
+  observation_ids:
+  - O008
+  admissibility: supported
+issues:
+- issue_id: I001
+  code: E5
+  attribute_ids:
+  - applicable_engine_power
+  observation_ids:
+  - O004
+  - O008
+  rule_ref: data/synth/answer-contract.yaml#issue/E5
+  reason: All conflicting occurrences state identical basis, condition and scope.
+missing_required: []
+comparison:
+  label_scope: nominated_pairs_only
+  pairs: []
+relations: []
+reference_variants:
+- observation_id: O004
+  notation: Engine Output Range per Turbocharger
+  document_id: REF-TC-02
+  pdf_page: 8
+  context_suffix_origin: synthetic
+- observation_id: O008
+  notation: Engine Output Range per Turbocharger
+  document_id: REF-TC-02
+  pdf_page: 8
+  context_suffix_origin: synthetic
+reviewed_by: null

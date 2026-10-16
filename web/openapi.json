@@ -1,0 +1,2120 @@
+{
+  "components": {
+    "schemas": {
+      "Acknowledge": {
+        "additionalProperties": false,
+        "properties": {
+          "action": {
+            "const": "acknowledge",
+            "title": "Action",
+            "type": "string"
+          },
+          "keys": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Keys",
+            "type": "array"
+          },
+          "revision": {
+            "title": "Revision",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "action",
+          "revision",
+          "keys"
+        ],
+        "title": "Acknowledge",
+        "type": "object"
+      },
+      "BlockView": {
+        "additionalProperties": false,
+        "properties": {
+          "index": {
+            "title": "Index",
+            "type": "integer"
+          },
+          "kind": {
+            "title": "Kind",
+            "type": "string"
+          },
+          "location": {
+            "$ref": "#/components/schemas/Location"
+          },
+          "section": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Section"
+          },
+          "text": {
+            "title": "Text",
+            "type": "string"
+          }
+        },
+        "required": [
+          "index",
+          "kind",
+          "text",
+          "section",
+          "location"
+        ],
+        "title": "BlockView",
+        "type": "object"
+      },
+      "Body_create_job_api_jobs_post": {
+        "properties": {
+          "file": {
+            "contentMediaType": "application/octet-stream",
+            "title": "File",
+            "type": "string"
+          }
+        },
+        "required": [
+          "file"
+        ],
+        "title": "Body_create_job_api_jobs_post",
+        "type": "object"
+      },
+      "Body_upload_documents_post": {
+        "properties": {
+          "file": {
+            "contentMediaType": "application/octet-stream",
+            "title": "File",
+            "type": "string"
+          }
+        },
+        "required": [
+          "file"
+        ],
+        "title": "Body_upload_documents_post",
+        "type": "object"
+      },
+      "Cancel": {
+        "additionalProperties": false,
+        "properties": {
+          "action": {
+            "const": "cancel",
+            "title": "Action",
+            "type": "string"
+          },
+          "reason": {
+            "default": "",
+            "title": "Reason",
+            "type": "string"
+          }
+        },
+        "required": [
+          "action"
+        ],
+        "title": "Cancel",
+        "type": "object"
+      },
+      "ChooseClass": {
+        "additionalProperties": false,
+        "properties": {
+          "action": {
+            "const": "choose_class",
+            "title": "Action",
+            "type": "string"
+          },
+          "class_id": {
+            "title": "Class Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "action",
+          "class_id"
+        ],
+        "title": "ChooseClass",
+        "type": "object"
+      },
+      "ClassPrompt": {
+        "additionalProperties": false,
+        "properties": {
+          "candidates": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Candidates",
+            "type": "array"
+          },
+          "classes": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Classes",
+            "type": "array"
+          },
+          "kind": {
+            "const": "choose_class",
+            "default": "choose_class",
+            "title": "Kind",
+            "type": "string"
+          },
+          "notice": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Notice"
+          }
+        },
+        "required": [
+          "candidates",
+          "classes"
+        ],
+        "title": "ClassPrompt",
+        "type": "object"
+      },
+      "ContextHint": {
+        "additionalProperties": false,
+        "description": "A fact whose basis / condition / scope the reviewer should check (D-069).",
+        "properties": {
+          "attribute": {
+            "title": "Attribute",
+            "type": "string"
+          },
+          "fact_index": {
+            "title": "Fact Index",
+            "type": "integer"
+          },
+          "messages": {
+            "default": [],
+            "items": {
+              "type": "string"
+            },
+            "title": "Messages",
+            "type": "array"
+          },
+          "reasons": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Reasons",
+            "type": "array"
+          }
+        },
+        "required": [
+          "fact_index",
+          "attribute",
+          "reasons"
+        ],
+        "title": "ContextHint",
+        "type": "object"
+      },
+      "DisplayLabels": {
+        "additionalProperties": false,
+        "properties": {
+          "attributes": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "title": "Attributes",
+            "type": "object"
+          },
+          "basis": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "title": "Basis",
+            "type": "object"
+          },
+          "classes": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "title": "Classes",
+            "type": "object"
+          },
+          "condition": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "title": "Condition",
+            "type": "object"
+          },
+          "origin": {
+            "title": "Origin",
+            "type": "string"
+          },
+          "verified_by": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Verified By"
+          }
+        },
+        "required": [
+          "origin",
+          "classes",
+          "attributes",
+          "basis",
+          "condition"
+        ],
+        "title": "DisplayLabels",
+        "type": "object"
+      },
+      "Edit": {
+        "additionalProperties": false,
+        "properties": {
+          "action": {
+            "const": "edit",
+            "title": "Action",
+            "type": "string"
+          },
+          "edit": {
+            "$ref": "#/components/schemas/FactEdit"
+          },
+          "revision": {
+            "title": "Revision",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "action",
+          "revision",
+          "edit"
+        ],
+        "title": "Edit",
+        "type": "object"
+      },
+      "Expected": {
+        "additionalProperties": false,
+        "properties": {
+          "allowed_values": {
+            "default": [],
+            "items": {
+              "type": "string"
+            },
+            "title": "Allowed Values",
+            "type": "array"
+          },
+          "datatype": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Datatype",
+            "type": "array"
+          },
+          "dimension": {
+            "title": "Dimension",
+            "type": "string"
+          },
+          "unit": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Unit"
+          }
+        },
+        "required": [
+          "datatype",
+          "dimension",
+          "unit"
+        ],
+        "title": "Expected",
+        "type": "object"
+      },
+      "FactEdit": {
+        "additionalProperties": false,
+        "properties": {
+          "attribute": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Attribute"
+          },
+          "block": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Block"
+          },
+          "index": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Index"
+          },
+          "op": {
+            "enum": [
+              "set",
+              "add",
+              "remove"
+            ],
+            "title": "Op",
+            "type": "string"
+          },
+          "reason": {
+            "minLength": 1,
+            "title": "Reason",
+            "type": "string"
+          },
+          "target": {
+            "anyOf": [
+              {
+                "enum": [
+                  "fact",
+                  "unresolved"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Target"
+          },
+          "unit_text": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Unit Text"
+          },
+          "value_text": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Value Text"
+          }
+        },
+        "required": [
+          "op",
+          "reason"
+        ],
+        "title": "FactEdit",
+        "type": "object"
+      },
+      "Finding": {
+        "additionalProperties": false,
+        "properties": {
+          "attribute_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Attribute Ids",
+            "type": "array"
+          },
+          "code": {
+            "enum": [
+              "E1",
+              "E2",
+              "E3",
+              "E4",
+              "E5",
+              "REVIEW"
+            ],
+            "title": "Code",
+            "type": "string"
+          },
+          "occurrences": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Occurrences",
+            "type": "array"
+          },
+          "reason": {
+            "title": "Reason",
+            "type": "string"
+          },
+          "rule_ref": {
+            "title": "Rule Ref",
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "attribute_ids",
+          "occurrences",
+          "rule_ref",
+          "reason"
+        ],
+        "title": "Finding",
+        "type": "object"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "title": "Detail",
+            "type": "array"
+          }
+        },
+        "title": "HTTPValidationError",
+        "type": "object"
+      },
+      "JobSummary": {
+        "additionalProperties": false,
+        "properties": {
+          "class_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Class Id"
+          },
+          "document_id": {
+            "title": "Document Id",
+            "type": "string"
+          },
+          "file_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "File Name"
+          },
+          "job_id": {
+            "title": "Job Id",
+            "type": "string"
+          },
+          "product_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Product Id"
+          },
+          "status": {
+            "enum": [
+              "running",
+              "awaiting_class",
+              "awaiting_review",
+              "registered",
+              "linked",
+              "cancelled",
+              "failed",
+              "stalled"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "uploaded_at": {
+            "title": "Uploaded At",
+            "type": "string"
+          }
+        },
+        "required": [
+          "job_id",
+          "file_name",
+          "document_id",
+          "uploaded_at",
+          "status"
+        ],
+        "title": "JobSummary",
+        "type": "object"
+      },
+      "JobView": {
+        "additionalProperties": false,
+        "properties": {
+          "class_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Class Id"
+          },
+          "document_id": {
+            "title": "Document Id",
+            "type": "string"
+          },
+          "error": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error"
+          },
+          "file_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "File Name"
+          },
+          "job_id": {
+            "title": "Job Id",
+            "type": "string"
+          },
+          "product_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Product Id"
+          },
+          "prompt": {
+            "anyOf": [
+              {
+                "discriminator": {
+                  "mapping": {
+                    "choose_class": "#/components/schemas/ClassPrompt",
+                    "review": "#/components/schemas/ReviewPrompt"
+                  },
+                  "propertyName": "kind"
+                },
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/ClassPrompt"
+                  },
+                  {
+                    "$ref": "#/components/schemas/ReviewPrompt"
+                  }
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Prompt"
+          },
+          "status": {
+            "enum": [
+              "running",
+              "awaiting_class",
+              "awaiting_review",
+              "registered",
+              "linked",
+              "cancelled",
+              "failed",
+              "stalled"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "uploaded_at": {
+            "title": "Uploaded At",
+            "type": "string"
+          }
+        },
+        "required": [
+          "job_id",
+          "file_name",
+          "document_id",
+          "uploaded_at",
+          "status"
+        ],
+        "title": "JobView",
+        "type": "object"
+      },
+      "Link": {
+        "additionalProperties": false,
+        "properties": {
+          "action": {
+            "const": "link",
+            "title": "Action",
+            "type": "string"
+          },
+          "revision": {
+            "title": "Revision",
+            "type": "integer"
+          },
+          "target_id": {
+            "title": "Target Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "action",
+          "revision",
+          "target_id"
+        ],
+        "title": "Link",
+        "type": "object"
+      },
+      "Location": {
+        "additionalProperties": false,
+        "description": "Where a value was read: PDF page/box, sheet cell, or DOCX paragraph/table cell.",
+        "properties": {
+          "bbox": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "number"
+                },
+                "maxItems": 4,
+                "minItems": 4,
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Bbox"
+          },
+          "cell_ref": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cell Ref"
+          },
+          "column": {
+            "anyOf": [
+              {
+                "minimum": 1.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Column"
+          },
+          "line": {
+            "anyOf": [
+              {
+                "minimum": 1.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Line"
+          },
+          "paragraph": {
+            "anyOf": [
+              {
+                "minimum": 1.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Paragraph"
+          },
+          "pdf_page": {
+            "anyOf": [
+              {
+                "minimum": 1.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Pdf Page"
+          },
+          "row": {
+            "anyOf": [
+              {
+                "minimum": 1.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Row"
+          },
+          "section": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Section"
+          },
+          "sheet": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sheet"
+          },
+          "table": {
+            "anyOf": [
+              {
+                "minimum": 1.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Table"
+          }
+        },
+        "title": "Location",
+        "type": "object"
+      },
+      "Match": {
+        "additionalProperties": false,
+        "properties": {
+          "evidence": {
+            "additionalProperties": true,
+            "title": "Evidence",
+            "type": "object"
+          },
+          "registry_id": {
+            "title": "Registry Id",
+            "type": "string"
+          },
+          "relation": {
+            "enum": [
+              "duplicate",
+              "similar"
+            ],
+            "title": "Relation",
+            "type": "string"
+          }
+        },
+        "required": [
+          "registry_id",
+          "relation",
+          "evidence"
+        ],
+        "title": "Match",
+        "type": "object"
+      },
+      "MissingItem": {
+        "additionalProperties": false,
+        "properties": {
+          "attribute": {
+            "title": "Attribute",
+            "type": "string"
+          },
+          "expected": {
+            "$ref": "#/components/schemas/Expected"
+          },
+          "rule_ref": {
+            "title": "Rule Ref",
+            "type": "string"
+          }
+        },
+        "required": [
+          "attribute",
+          "rule_ref",
+          "expected"
+        ],
+        "title": "MissingItem",
+        "type": "object"
+      },
+      "ProductEdit": {
+        "additionalProperties": false,
+        "properties": {
+          "actor": {
+            "title": "Actor",
+            "type": "string"
+          },
+          "after": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "After"
+          },
+          "at": {
+            "title": "At",
+            "type": "string"
+          },
+          "attribute": {
+            "title": "Attribute",
+            "type": "string"
+          },
+          "before": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Before"
+          },
+          "edit_id": {
+            "title": "Edit Id",
+            "type": "string"
+          },
+          "job_id": {
+            "title": "Job Id",
+            "type": "string"
+          },
+          "op": {
+            "enum": [
+              "set",
+              "add",
+              "remove"
+            ],
+            "title": "Op",
+            "type": "string"
+          },
+          "outcome": {
+            "title": "Outcome",
+            "type": "string"
+          },
+          "reason": {
+            "title": "Reason",
+            "type": "string"
+          }
+        },
+        "required": [
+          "edit_id",
+          "job_id",
+          "attribute",
+          "op",
+          "before",
+          "after",
+          "outcome",
+          "reason",
+          "actor",
+          "at"
+        ],
+        "title": "ProductEdit",
+        "type": "object"
+      },
+      "ProductEvent": {
+        "additionalProperties": false,
+        "properties": {
+          "actor": {
+            "title": "Actor",
+            "type": "string"
+          },
+          "at": {
+            "title": "At",
+            "type": "string"
+          },
+          "event_type": {
+            "title": "Event Type",
+            "type": "string"
+          },
+          "payload": {
+            "additionalProperties": true,
+            "title": "Payload",
+            "type": "object"
+          }
+        },
+        "required": [
+          "event_type",
+          "actor",
+          "at",
+          "payload"
+        ],
+        "title": "ProductEvent",
+        "type": "object"
+      },
+      "ProductFact": {
+        "additionalProperties": false,
+        "properties": {
+          "attribute": {
+            "title": "Attribute",
+            "type": "string"
+          },
+          "basis": {
+            "additionalProperties": true,
+            "title": "Basis",
+            "type": "object"
+          },
+          "condition": {
+            "additionalProperties": true,
+            "title": "Condition",
+            "type": "object"
+          },
+          "evidence_kind": {
+            "enum": [
+              "registry_seed",
+              "observed",
+              "human_edit"
+            ],
+            "title": "Evidence Kind",
+            "type": "string"
+          },
+          "evidence_ref": {
+            "title": "Evidence Ref",
+            "type": "string"
+          },
+          "evidence_text": {
+            "default": "",
+            "title": "Evidence Text",
+            "type": "string"
+          },
+          "scope": {
+            "title": "Scope",
+            "type": "string"
+          },
+          "unit": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Unit"
+          },
+          "value": {
+            "title": "Value"
+          }
+        },
+        "required": [
+          "attribute",
+          "value",
+          "unit",
+          "basis",
+          "condition",
+          "scope",
+          "evidence_kind",
+          "evidence_ref"
+        ],
+        "title": "ProductFact",
+        "type": "object"
+      },
+      "ProductView": {
+        "additionalProperties": false,
+        "properties": {
+          "class_id": {
+            "title": "Class Id",
+            "type": "string"
+          },
+          "created_at": {
+            "title": "Created At",
+            "type": "string"
+          },
+          "edits": {
+            "items": {
+              "$ref": "#/components/schemas/ProductEdit"
+            },
+            "title": "Edits",
+            "type": "array"
+          },
+          "events": {
+            "items": {
+              "$ref": "#/components/schemas/ProductEvent"
+            },
+            "title": "Events",
+            "type": "array"
+          },
+          "facts": {
+            "items": {
+              "$ref": "#/components/schemas/ProductFact"
+            },
+            "title": "Facts",
+            "type": "array"
+          },
+          "maker_id": {
+            "title": "Maker Id",
+            "type": "string"
+          },
+          "maker_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Maker Name"
+          },
+          "model_designation": {
+            "title": "Model Designation",
+            "type": "string"
+          },
+          "origin": {
+            "title": "Origin",
+            "type": "string"
+          },
+          "product_id": {
+            "title": "Product Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "product_id",
+          "class_id",
+          "maker_id",
+          "model_designation",
+          "origin",
+          "created_at",
+          "facts",
+          "edits",
+          "events"
+        ],
+        "title": "ProductView",
+        "type": "object"
+      },
+      "RegisterNew": {
+        "additionalProperties": false,
+        "properties": {
+          "action": {
+            "const": "register_new",
+            "title": "Action",
+            "type": "string"
+          },
+          "revision": {
+            "title": "Revision",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "action",
+          "revision"
+        ],
+        "title": "RegisterNew",
+        "type": "object"
+      },
+      "RegistrationResult": {
+        "additionalProperties": false,
+        "properties": {
+          "class_candidates": {
+            "default": [],
+            "items": {
+              "type": "string"
+            },
+            "title": "Class Candidates",
+            "type": "array"
+          },
+          "class_id": {
+            "title": "Class Id",
+            "type": "string"
+          },
+          "document_id": {
+            "title": "Document Id",
+            "type": "string"
+          },
+          "facts": {
+            "default": [],
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Facts",
+            "type": "array"
+          },
+          "failure": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Failure"
+          },
+          "file_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "File Name"
+          },
+          "matches": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/Match"
+            },
+            "title": "Matches",
+            "type": "array"
+          },
+          "provenance": {
+            "additionalProperties": true,
+            "default": {},
+            "title": "Provenance",
+            "type": "object"
+          },
+          "schema_version": {
+            "const": 1,
+            "default": 1,
+            "title": "Schema Version",
+            "type": "integer"
+          },
+          "status": {
+            "enum": [
+              "ready",
+              "needs_review"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "unresolved": {
+            "default": [],
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Unresolved",
+            "type": "array"
+          },
+          "validation": {
+            "$ref": "#/components/schemas/Validation"
+          }
+        },
+        "required": [
+          "document_id",
+          "class_id",
+          "validation",
+          "status"
+        ],
+        "title": "RegistrationResult",
+        "type": "object"
+      },
+      "ResumeRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "command": {
+            "discriminator": {
+              "mapping": {
+                "acknowledge": "#/components/schemas/Acknowledge",
+                "cancel": "#/components/schemas/Cancel",
+                "choose_class": "#/components/schemas/ChooseClass",
+                "edit": "#/components/schemas/Edit",
+                "link": "#/components/schemas/Link",
+                "register_new": "#/components/schemas/RegisterNew"
+              },
+              "propertyName": "action"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ChooseClass"
+              },
+              {
+                "$ref": "#/components/schemas/Edit"
+              },
+              {
+                "$ref": "#/components/schemas/Acknowledge"
+              },
+              {
+                "$ref": "#/components/schemas/RegisterNew"
+              },
+              {
+                "$ref": "#/components/schemas/Link"
+              },
+              {
+                "$ref": "#/components/schemas/Cancel"
+              }
+            ],
+            "title": "Command"
+          },
+          "request_id": {
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Request Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "request_id",
+          "command"
+        ],
+        "title": "ResumeRequest",
+        "type": "object"
+      },
+      "ReviewPrompt": {
+        "additionalProperties": false,
+        "properties": {
+          "acknowledged": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Acknowledged",
+            "type": "array"
+          },
+          "allowed": {
+            "items": {
+              "enum": [
+                "choose_class",
+                "edit",
+                "acknowledge",
+                "register_new",
+                "link",
+                "cancel"
+              ],
+              "type": "string"
+            },
+            "title": "Allowed",
+            "type": "array"
+          },
+          "attributes": {
+            "default": [],
+            "items": {
+              "type": "string"
+            },
+            "title": "Attributes",
+            "type": "array"
+          },
+          "blockers": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Blockers",
+            "type": "array"
+          },
+          "context_hints": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/ContextHint"
+            },
+            "title": "Context Hints",
+            "type": "array"
+          },
+          "edited": {
+            "default": [],
+            "items": {
+              "type": "integer"
+            },
+            "title": "Edited",
+            "type": "array"
+          },
+          "edits": {
+            "default": [],
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Edits",
+            "type": "array"
+          },
+          "finding_notes": {
+            "default": [],
+            "items": {
+              "type": "string"
+            },
+            "title": "Finding Notes",
+            "type": "array"
+          },
+          "kind": {
+            "const": "review",
+            "default": "review",
+            "title": "Kind",
+            "type": "string"
+          },
+          "link_targets": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Link Targets",
+            "type": "array"
+          },
+          "notice": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Notice"
+          },
+          "result": {
+            "$ref": "#/components/schemas/RegistrationResult"
+          },
+          "review_keys": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Review Keys",
+            "type": "array"
+          },
+          "revision": {
+            "title": "Revision",
+            "type": "integer"
+          },
+          "term_notes": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/TermNote"
+            },
+            "title": "Term Notes",
+            "type": "array"
+          },
+          "unresolved_notes": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/UnresolvedNote"
+            },
+            "title": "Unresolved Notes",
+            "type": "array"
+          }
+        },
+        "required": [
+          "revision",
+          "result",
+          "allowed",
+          "blockers",
+          "link_targets",
+          "review_keys",
+          "acknowledged"
+        ],
+        "title": "ReviewPrompt",
+        "type": "object"
+      },
+      "SupplementRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "class_id": {
+            "title": "Class Id",
+            "type": "string"
+          },
+          "document_id": {
+            "title": "Document Id",
+            "type": "string"
+          },
+          "file_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "File Name"
+          },
+          "missing": {
+            "items": {
+              "$ref": "#/components/schemas/MissingItem"
+            },
+            "title": "Missing",
+            "type": "array"
+          },
+          "text": {
+            "title": "Text",
+            "type": "string"
+          },
+          "unreadable": {
+            "items": {
+              "$ref": "#/components/schemas/UnreadableItem"
+            },
+            "title": "Unreadable",
+            "type": "array"
+          }
+        },
+        "required": [
+          "document_id",
+          "file_name",
+          "class_id",
+          "missing",
+          "unreadable",
+          "text"
+        ],
+        "title": "SupplementRequest",
+        "type": "object"
+      },
+      "TermNote": {
+        "additionalProperties": false,
+        "properties": {
+          "attribute": {
+            "title": "Attribute",
+            "type": "string"
+          },
+          "fact_index": {
+            "title": "Fact Index",
+            "type": "integer"
+          },
+          "key": {
+            "title": "Key",
+            "type": "string"
+          },
+          "known": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Known",
+            "type": "array"
+          },
+          "message": {
+            "title": "Message",
+            "type": "string"
+          },
+          "value": {
+            "title": "Value",
+            "type": "string"
+          }
+        },
+        "required": [
+          "key",
+          "fact_index",
+          "attribute",
+          "value",
+          "known",
+          "message"
+        ],
+        "title": "TermNote",
+        "type": "object"
+      },
+      "UnreadableItem": {
+        "additionalProperties": false,
+        "properties": {
+          "attribute": {
+            "title": "Attribute",
+            "type": "string"
+          },
+          "code": {
+            "title": "Code",
+            "type": "string"
+          },
+          "explanation": {
+            "title": "Explanation",
+            "type": "string"
+          },
+          "location": {
+            "additionalProperties": true,
+            "title": "Location",
+            "type": "object"
+          },
+          "place": {
+            "title": "Place",
+            "type": "string"
+          },
+          "reason": {
+            "title": "Reason",
+            "type": "string"
+          },
+          "shown": {
+            "title": "Shown",
+            "type": "string"
+          },
+          "unit_text": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Unit Text"
+          },
+          "value_text": {
+            "title": "Value Text",
+            "type": "string"
+          }
+        },
+        "required": [
+          "attribute",
+          "code",
+          "value_text",
+          "unit_text",
+          "reason",
+          "location",
+          "shown",
+          "explanation",
+          "place"
+        ],
+        "title": "UnreadableItem",
+        "type": "object"
+      },
+      "UnresolvedNote": {
+        "additionalProperties": false,
+        "description": "One unread value in words (parallel to result.unresolved).",
+        "properties": {
+          "explanation": {
+            "title": "Explanation",
+            "type": "string"
+          },
+          "place": {
+            "title": "Place",
+            "type": "string"
+          },
+          "shown": {
+            "title": "Shown",
+            "type": "string"
+          }
+        },
+        "required": [
+          "shown",
+          "explanation",
+          "place"
+        ],
+        "title": "UnresolvedNote",
+        "type": "object"
+      },
+      "Validation": {
+        "additionalProperties": false,
+        "properties": {
+          "findings": {
+            "items": {
+              "$ref": "#/components/schemas/Finding"
+            },
+            "title": "Findings",
+            "type": "array"
+          },
+          "missing_required": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Missing Required",
+            "type": "array"
+          },
+          "presence": {
+            "anyOf": [
+              {
+                "enum": [
+                  "present",
+                  "missing",
+                  "undetermined"
+                ],
+                "type": "string"
+              },
+              {
+                "const": "unknown_class",
+                "type": "string"
+              }
+            ],
+            "title": "Presence"
+          },
+          "status": {
+            "enum": [
+              "ready",
+              "needs_review"
+            ],
+            "title": "Status",
+            "type": "string"
+          }
+        },
+        "required": [
+          "findings",
+          "missing_required",
+          "presence",
+          "status"
+        ],
+        "title": "Validation",
+        "type": "object"
+      },
+      "ValidationError": {
+        "properties": {
+          "ctx": {
+            "title": "Context",
+            "type": "object"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "title": "Location",
+            "type": "array"
+          },
+          "msg": {
+            "title": "Message",
+            "type": "string"
+          },
+          "type": {
+            "title": "Error Type",
+            "type": "string"
+          }
+        },
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError",
+        "type": "object"
+      }
+    }
+  },
+  "info": {
+    "title": "spec-bridge",
+    "version": "0.1.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/api/display": {
+      "get": {
+        "description": "Screen names for ontology ids (D-074); the UI falls back to the id.",
+        "operationId": "display_labels_api_display_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DisplayLabels"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Display Labels"
+      }
+    },
+    "/api/jobs": {
+      "get": {
+        "operationId": "list_jobs_api_jobs_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/JobSummary"
+                  },
+                  "title": "Response List Jobs Api Jobs Get",
+                  "type": "array"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "List Jobs"
+      },
+      "post": {
+        "description": "Unsupported type: 415. Empty file: 400. Otherwise the job starts in the background.",
+        "operationId": "create_job_api_jobs_post",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_create_job_api_jobs_post"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "202": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobView"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Create Job"
+      }
+    },
+    "/api/jobs/{job_id}": {
+      "get": {
+        "operationId": "get_job_api_jobs__job_id__get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "job_id",
+            "required": true,
+            "schema": {
+              "title": "Job Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobView"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Get Job"
+      }
+    },
+    "/api/jobs/{job_id}/blocks": {
+      "get": {
+        "operationId": "job_blocks_api_jobs__job_id__blocks_get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "job_id",
+            "required": true,
+            "schema": {
+              "title": "Job Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/BlockView"
+                  },
+                  "title": "Response Job Blocks Api Jobs  Job Id  Blocks Get",
+                  "type": "array"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Job Blocks"
+      }
+    },
+    "/api/jobs/{job_id}/resume": {
+      "post": {
+        "operationId": "resume_job_api_jobs__job_id__resume_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "job_id",
+            "required": true,
+            "schema": {
+              "title": "Job Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResumeRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "202": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobView"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Resume Job"
+      }
+    },
+    "/api/jobs/{job_id}/source": {
+      "get": {
+        "operationId": "job_source_api_jobs__job_id__source_get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "job_id",
+            "required": true,
+            "schema": {
+              "title": "Job Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Job Source"
+      }
+    },
+    "/api/jobs/{job_id}/supplement": {
+      "get": {
+        "operationId": "job_supplement_api_jobs__job_id__supplement_get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "job_id",
+            "required": true,
+            "schema": {
+              "title": "Job Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SupplementRequest"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Job Supplement"
+      }
+    },
+    "/api/products/{product_id}": {
+      "get": {
+        "operationId": "get_product_api_products__product_id__get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "product_id",
+            "required": true,
+            "schema": {
+              "title": "Product Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductView"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Get Product"
+      }
+    },
+    "/documents": {
+      "post": {
+        "description": "Unsupported type: 415. Empty file: 400. Anything else: 200 with the result JSON,\nwhose status is needs_review when the file could not be parsed or understood.",
+        "operationId": "upload_documents_post",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_upload_documents_post"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "title": "Response Upload Documents Post",
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Upload"
+      }
+    },
+    "/health": {
+      "get": {
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "title": "Response Health Health Get",
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Health"
+      }
+    }
+  }
+}

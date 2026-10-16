@@ -1,0 +1,217 @@
+{
+  "prediction": {
+    "document_id": "SYN-036",
+    "class_id": "AirCompressor",
+    "class_candidates": [
+      "AirCompressor"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-A Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-036",
+            "raw_text": "SGDW-20261007-A Synthetic Works",
+            "label_text": "Manufacturer",
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "sheet": "Specification",
+              "cell_ref": "A5"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX009-136",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-036",
+            "raw_text": "VX009-136",
+            "label_text": "Model designation",
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "sheet": "Specification",
+              "cell_ref": "A6"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "capacity",
+        "value": 126.88,
+        "unit": "m3/h",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-036",
+            "raw_text": "126.88",
+            "label_text": "FAD*",
+            "unit_text": "m3/h",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B9"
+            }
+          },
+          {
+            "source_document_id": "SYN-036",
+            "raw_text": "126.88",
+            "label_text": "FAD*",
+            "unit_text": "m3/h",
+            "location": {
+              "section": "Notes",
+              "sheet": "Specification",
+              "cell_ref": "A18"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "max_pressure",
+        "value": 28,
+        "unit": "bar",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-036",
+            "raw_text": "28",
+            "label_text": "Max pressure",
+            "unit_text": "bar",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B10"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "cooling_type",
+        "value": "air",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-036",
+            "raw_text": "air-cooled",
+            "label_text": "Cooling",
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B11"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "air",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-036",
+            "raw_text": "air",
+            "label_text": "Medium",
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B12"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 1040,
+          "width": 690,
+          "height": 810
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-036",
+            "raw_text": "1040 × 690 × 810",
+            "label_text": "Overall dimensions (L × W × H)",
+            "unit_text": "mm",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B14"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 761.28,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-036",
+            "raw_text": "761.28",
+            "label_text": "Dry weight",
+            "unit_text": "kg",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B15"
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [
+      {
+        "attribute": "motor_power",
+        "value_text": "31.23",
+        "unit_text": "bar",
+        "reason": "dimension",
+        "occurrence": {
+          "source_document_id": "SYN-036",
+          "raw_text": "31.23",
+          "label_text": "Motor rating",
+          "unit_text": "bar",
+          "location": {
+            "section": "Main particulars",
+            "sheet": "Specification",
+            "cell_ref": "B13"
+          }
+        }
+      }
+    ],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": null,
+  "qualifiers": []
+}

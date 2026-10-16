@@ -1,0 +1,249 @@
+schema_version: 3
+input_id: SYN-039
+origin: synthetic
+expected_class: Turbocharger
+status: final_v1; frozen by user decision D-019 (2026-10-08); reviewed_by awaits user signature
+artifact:
+  path: data/synth/inputs/SYN-039.pdf
+  sha256: 1ba22355be5c4b664268aba38c2f4ded9bf6625aed84ee8bb5f43c08f5f60f3c
+  file_format: pdf
+  location_verified: true
+  source_path: data/synth/test/sources/SYN-039.md
+  source_sha256: 40c921fabb2d78859a50736e46124b3eb04acb1ac3f9e9bc409c9fa07d22d3ee
+  verification_method: independent file-content audit
+observations:
+- observation_id: O001
+  attribute_id: maker
+  raw_text: SGDW-20261007-D Synthetic Works
+  label_text: Maker
+  unit_text: null
+  location:
+    source_line: 9
+    source_section: Identification
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 466.28
+    - 803.89
+    - 477.28
+    bbox_unit: pt
+    region_or_section: Identification
+  interpretation: normalized
+  parsed_value: SGDW-20261007-D Synthetic Works
+  parsed_unit: null
+- observation_id: O002
+  attribute_id: model_designation
+  raw_text: VX024-139
+  label_text: Model designation
+  unit_text: null
+  location:
+    source_line: 11
+    source_section: Identification
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 448.28
+    - 803.89
+    - 459.28
+    bbox_unit: pt
+    region_or_section: Identification
+  interpretation: normalized
+  parsed_value: VX024-139
+  parsed_unit: null
+- observation_id: O003
+  attribute_id: turbocharger_type
+  raw_text: axial
+  label_text: Turbine flow type
+  unit_text: null
+  location:
+    source_line: 17
+    source_section: Specifications
+    pdf_page: 1
+    source_table: 1
+    source_row: 1
+    bbox:
+    - 178.44
+    - 379.28
+    - 271.44
+    - 390.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value: axial
+  parsed_unit: null
+- observation_id: O004
+  attribute_id: applicable_engine_power
+  raw_text: 25254.4 to 10654.2
+  label_text: Four-stroke (kW)
+  unit_text: kW
+  location:
+    source_line: 18
+    source_section: Specifications
+    pdf_page: 1
+    source_table: 1
+    source_row: 2
+    bbox:
+    - 178.44
+    - 358.28
+    - 271.44
+    - 369.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: invalid_shape
+  parsed_value:
+    min: 25254.4
+    max: 10654.2
+  parsed_unit: kW
+- observation_id: O005
+  attribute_id: bearing_type
+  raw_text: plain
+  label_text: Bearing type
+  unit_text: null
+  location:
+    source_line: 19
+    source_section: Specifications
+    pdf_page: 1
+    source_table: 1
+    source_row: 3
+    bbox:
+    - 178.44
+    - 337.28
+    - 271.44
+    - 348.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value: plain
+  parsed_unit: null
+- observation_id: O006
+  attribute_id: dimensions
+  raw_text: 2680 × 2210 × 2820
+  label_text: Dimensions (L × W × H)
+  unit_text: mm
+  location:
+    source_line: 20
+    source_section: Specifications
+    pdf_page: 1
+    source_table: 1
+    source_row: 4
+    bbox:
+    - 178.44
+    - 316.28
+    - 271.44
+    - 327.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value:
+    length: 2680
+    width: 2210
+    height: 2820
+  parsed_unit: mm
+- observation_id: O007
+  attribute_id: dry_weight
+  raw_text: '6412.25'
+  label_text: Dry mass
+  unit_text: kg
+  location:
+    source_line: 21
+    source_section: Specifications
+    pdf_page: 1
+    source_table: 1
+    source_row: 5
+    bbox:
+    - 178.44
+    - 295.28
+    - 271.44
+    - 306.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value: 6412.25
+  parsed_unit: kg
+facts:
+- fact_id: F001
+  attribute_id: maker
+  value: SGDW-20261007-D Synthetic Works
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O001
+  admissibility: supported
+- fact_id: F002
+  attribute_id: model_designation
+  value: VX024-139
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O002
+  admissibility: supported
+- fact_id: F003
+  attribute_id: turbocharger_type
+  value: axial
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O003
+  admissibility: supported
+- fact_id: F004
+  attribute_id: bearing_type
+  value: plain
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O005
+  admissibility: supported
+- fact_id: F005
+  attribute_id: dimensions
+  value:
+    length: 2680
+    width: 2210
+    height: 2820
+  unit: mm
+  basis: {}
+  condition: {}
+  scope: complete_turbocharger_with_silencer
+  observation_ids:
+  - O006
+  admissibility: supported
+- fact_id: F006
+  attribute_id: dry_weight
+  value: 6412.25
+  unit: kg
+  basis:
+    weight: dry
+  condition: {}
+  scope: complete_turbocharger_with_silencer
+  observation_ids:
+  - O007
+  admissibility: supported
+issues:
+- issue_id: I001
+  code: E3
+  attribute_ids:
+  - applicable_engine_power
+  observation_ids:
+  - O004
+  rule_ref: data/ontology/dataset-contract.yaml#attributes/applicable_engine_power/value_types
+  reason: Explicit value violates the declared value shape.
+missing_required:
+- applicable_engine_power
+comparison:
+  label_scope: nominated_pairs_only
+  pairs: []
+relations: []
+reference_variants:
+- observation_id: O004
+  notation: Four-stroke (kW)
+  document_id: REF-TC-01
+  pdf_page: 2
+  context_suffix_origin: synthetic
+reviewed_by: null

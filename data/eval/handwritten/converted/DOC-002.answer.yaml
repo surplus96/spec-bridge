@@ -1,0 +1,327 @@
+schema_version: 3
+input_id: DOC-002
+origin: synthetic
+status: converted_from_v2_helper_draft
+expected_class: AirCompressor
+facts:
+- fact_id: F001
+  attribute_id: maker
+  value: Brekkhaug Marine AS
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O001
+  - O002
+  admissibility: supported
+- fact_id: F002
+  attribute_id: model_designation
+  value: BKA-85/30
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O003
+  admissibility: supported
+- fact_id: F003
+  attribute_id: capacity
+  value: 85
+  unit: m3/h
+  basis:
+    capacity: free_air_delivery
+  condition:
+    temperature:
+      value: 20
+      unit: degC
+    absolute_pressure:
+      value: 1013
+      unit: mbar
+  scope: main_equipment
+  observation_ids:
+  - O004
+  - O005
+  admissibility: supported
+- fact_id: F004
+  attribute_id: max_pressure
+  value: 30
+  unit: bar
+  basis:
+    pressure: gauge
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O006
+  - O007
+  admissibility: supported
+- fact_id: F005
+  attribute_id: cooling_type
+  value: air
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O008
+  - O009
+  - O010
+  - O011
+  admissibility: supported
+- fact_id: F006
+  attribute_id: medium
+  value: air
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O012
+  - O013
+  - O014
+  - O015
+  admissibility: supported
+- fact_id: F007
+  attribute_id: motor_power
+  value: 22
+  unit: kW
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O016
+  - O017
+  admissibility: supported
+- fact_id: F008
+  attribute_id: dimensions
+  value:
+    length: 1350
+    width: 850
+    height: 1050
+  unit: mm
+  basis: {}
+  condition: {}
+  scope: complete_compressor_unit_including_electric_motor_and_flexible_mountings
+  observation_ids:
+  - O018
+  admissibility: supported
+- fact_id: F009
+  attribute_id: dry_weight
+  value: 610
+  unit: kg
+  basis:
+    weight: dry
+  condition: {}
+  scope: complete_compressor_unit_including_electric_motor_and_flexible_mountings
+  observation_ids:
+  - O019
+  admissibility: supported
+observations:
+- observation_id: O001
+  attribute_id: maker
+  raw_text: Brekkhaug Marine AS
+  label_text: Issued by
+  unit_text: null
+  location:
+    paragraph: 3
+    line: 3
+    section: null
+  interpretation: normalized
+- observation_id: O002
+  attribute_id: maker
+  raw_text: Brekkhaug Marine AS
+  label_text: Maker
+  unit_text: null
+  location:
+    paragraph: 7
+    line: 7
+    section: 1. General
+  interpretation: normalized
+- observation_id: O003
+  attribute_id: model_designation
+  raw_text: BKA-85/30
+  label_text: Model designation
+  unit_text: null
+  location:
+    paragraph: 8
+    line: 8
+    section: 1. General
+  interpretation: normalized
+- observation_id: O004
+  attribute_id: capacity
+  raw_text: '85'
+  label_text: Free air delivery (FAD)
+  unit_text: m³/h
+  location:
+    table: 1
+    row: 3
+    cell: 2
+    line: 18
+  interpretation: normalized
+- observation_id: O005
+  attribute_id: capacity
+  raw_text: 85 m³/h free air
+  label_text: delivers
+  unit_text: null
+  location:
+    paragraph: 26
+    line: 26
+    section: 3. Drive and Cooling
+  interpretation: normalized
+- observation_id: O006
+  attribute_id: max_pressure
+  raw_text: '30'
+  label_text: Max. working pressure
+  unit_text: barg
+  location:
+    table: 1
+    row: 4
+    cell: 2
+    line: 19
+  interpretation: normalized
+- observation_id: O007
+  attribute_id: max_pressure
+  raw_text: 30 bar g
+  label_text: final pressure
+  unit_text: null
+  location:
+    paragraph: 26
+    line: 26
+    section: 3. Drive and Cooling
+  interpretation: normalized
+- observation_id: O008
+  attribute_id: cooling_type
+  raw_text: Air
+  label_text: Cooling
+  unit_text: null
+  location:
+    table: 1
+    row: 5
+    cell: 2
+    line: 20
+  interpretation: normalized
+- observation_id: O009
+  attribute_id: cooling_type
+  raw_text: Air cooling by a motor-driven fan
+  label_text: Cooling arrangement
+  unit_text: null
+  location:
+    paragraph: 26
+    line: 26
+    section: 3. Drive and Cooling
+  interpretation: normalized
+- observation_id: O010
+  attribute_id: cooling_type
+  raw_text: Air-cooled
+  label_text: Product description
+  unit_text: null
+  location:
+    paragraph: 9
+    line: 9
+    section: 1. General
+  interpretation: normalized
+- observation_id: O011
+  attribute_id: cooling_type
+  raw_text: air-cooled
+  label_text: Compressor type
+  unit_text: null
+  location:
+    table: 1
+    row: 2
+    cell: 2
+    line: 17
+  interpretation: normalized
+- observation_id: O012
+  attribute_id: medium
+  raw_text: Air
+  label_text: Medium
+  unit_text: null
+  location:
+    table: 1
+    row: 6
+    cell: 2
+    line: 21
+  interpretation: normalized
+- observation_id: O013
+  attribute_id: medium
+  raw_text: starting air service
+  label_text: Product description
+  unit_text: null
+  location:
+    paragraph: 9
+    line: 9
+    section: 1. General
+  interpretation: normalized
+- observation_id: O014
+  attribute_id: medium
+  raw_text: starting air system
+  label_text: Application
+  unit_text: null
+  location:
+    paragraph: 10
+    line: 10
+    section: 1. General
+  interpretation: normalized
+- observation_id: O015
+  attribute_id: medium
+  raw_text: free air
+  label_text: delivers
+  unit_text: null
+  location:
+    paragraph: 26
+    line: 26
+    section: 3. Drive and Cooling
+  interpretation: normalized
+- observation_id: O016
+  attribute_id: motor_power
+  raw_text: '22'
+  label_text: Motor power
+  unit_text: kW
+  location:
+    table: 1
+    row: 7
+    cell: 2
+    line: 22
+  interpretation: normalized
+- observation_id: O017
+  attribute_id: motor_power
+  raw_text: 22 kW
+  label_text: Direct-coupled electric motor
+  unit_text: null
+  location:
+    paragraph: 25
+    line: 25
+    section: 3. Drive and Cooling
+  interpretation: normalized
+- observation_id: O018
+  attribute_id: dimensions
+  raw_text: 1,350 × 850 × 1,050 mm
+  label_text: Overall dimensions (L × W × H)
+  unit_text: null
+  location:
+    paragraph: 29
+    line: 29
+    section: 4. Dimensions and Weight
+  interpretation: normalized
+- observation_id: O019
+  attribute_id: dry_weight
+  raw_text: 610 kg
+  label_text: Weight
+  unit_text: null
+  location:
+    paragraph: 30
+    line: 30
+    section: 4. Dimensions and Weight
+  interpretation: normalized
+issues: []
+missing_required: []
+conversion:
+  source: data/eval/handwritten/HW-COMP-001.answer.yaml
+  doc_id: HW-COMP-001
+  author: Claude (draft)
+  reviewed_by: null
+  notes:
+  - 'dimensions: scope ''complete_compressor_unit_with_motor_and_mountings'' -> ''complete_compressor_unit_including_electric_motor_and_flexible_mountings''
+    (document phrase)'
+  - 'dry_weight: scope ''complete_compressor_unit_with_motor_and_mountings'' -> ''complete_compressor_unit_including_electric_motor_and_flexible_mountings''
+    (document phrase)'

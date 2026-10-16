@@ -1,0 +1,280 @@
+schema_version: 3
+input_id: SYN-023
+origin: synthetic
+expected_class: Pump
+status: final_v1; frozen by user decision D-019 (2026-10-08); reviewed_by awaits user signature
+artifact:
+  path: data/synth/inputs/SYN-023.xlsx
+  sha256: 3b1cf258fc91d7de659b77b8fb4f670239c2e5ad718900a9f920041ff2f52ef3
+  file_format: xlsx
+  location_verified: true
+  source_path: data/synth/dev/sources/SYN-023.md
+  source_sha256: bcb605c2ac8a25b296144b14c360f00ec699b7d4555279a7d9a7c0a166b51ba5
+  verification_method: independent file-content audit
+observations:
+- observation_id: O001
+  attribute_id: maker
+  raw_text: SGDW-20261007-A Synthetic Works
+  label_text: Maker
+  unit_text: null
+  location:
+    source_line: 9
+    source_section: Product data
+    pdf_page: null
+    sheet: Specification
+    cell_or_range: A5
+    value_cell: A5
+  interpretation: normalized
+  parsed_value: SGDW-20261007-A Synthetic Works
+  parsed_unit: null
+- observation_id: O002
+  attribute_id: model_designation
+  raw_text: VX013-123
+  label_text: Model designation
+  unit_text: null
+  location:
+    source_line: 11
+    source_section: Product data
+    pdf_page: null
+    sheet: Specification
+    cell_or_range: A6
+    value_cell: A6
+  interpretation: normalized
+  parsed_value: VX013-123
+  parsed_unit: null
+- observation_id: O003
+  attribute_id: pump_type
+  raw_text: Centrifugal
+  label_text: Pump type
+  unit_text: null
+  location:
+    source_line: 17
+    source_section: Main particulars
+    pdf_page: null
+    source_table: 1
+    source_row: 1
+    sheet: Specification
+    cell_or_range: A9:D9
+    value_cell: B9
+  interpretation: normalized
+  parsed_value: centrifugal
+  parsed_unit: null
+- observation_id: O004
+  attribute_id: capacity
+  raw_text: '334.98'
+  label_text: Flow
+  unit_text: m3/h
+  location:
+    source_line: 18
+    source_section: Main particulars
+    pdf_page: null
+    source_table: 1
+    source_row: 2
+    sheet: Specification
+    cell_or_range: A10:D10
+    value_cell: B10
+  interpretation: normalized
+  parsed_value: 334.98
+  parsed_unit: m3/h
+- observation_id: O005
+  attribute_id: medium
+  raw_text: sea water
+  label_text: Fluid
+  unit_text: null
+  location:
+    source_line: 19
+    source_section: Main particulars
+    pdf_page: null
+    source_table: 1
+    source_row: 3
+    sheet: Specification
+    cell_or_range: A11:D11
+    value_cell: B11
+  interpretation: normalized
+  parsed_value: seawater
+  parsed_unit: null
+- observation_id: O006
+  attribute_id: motor_power
+  raw_text: '40.94'
+  label_text: Motor power
+  unit_text: kW
+  location:
+    source_line: 20
+    source_section: Main particulars
+    pdf_page: null
+    source_table: 1
+    source_row: 4
+    sheet: Specification
+    cell_or_range: A12:D12
+    value_cell: B12
+  interpretation: normalized
+  parsed_value: 40.94
+  parsed_unit: kW
+- observation_id: O007
+  attribute_id: dimensions
+  raw_text: 1160 × 480 × 640
+  label_text: Dimensions (L × W × H)
+  unit_text: mm
+  location:
+    source_line: 21
+    source_section: Main particulars
+    pdf_page: null
+    source_table: 1
+    source_row: 5
+    sheet: Specification
+    cell_or_range: A13:D13
+    value_cell: B13
+  interpretation: normalized
+  parsed_value:
+    length: 1160
+    width: 480
+    height: 640
+  parsed_unit: mm
+- observation_id: O008
+  attribute_id: dry_weight
+  raw_text: '763.01'
+  label_text: Dry mass
+  unit_text: kg
+  location:
+    source_line: 22
+    source_section: Main particulars
+    pdf_page: null
+    source_table: 1
+    source_row: 6
+    sheet: Specification
+    cell_or_range: A14:D14
+    value_cell: B14
+  interpretation: normalized
+  parsed_value: 763.01
+  parsed_unit: kg
+- observation_id: O009
+  attribute_id: capacity
+  raw_text: '334.98'
+  label_text: Flow
+  unit_text: m3/h
+  location:
+    source_line: 26
+    source_section: Notes
+    pdf_page: null
+    sheet: Specification
+    cell_or_range: A16
+    value_cell: A16
+  interpretation: normalized
+  parsed_value: 334.98
+  parsed_unit: m3/h
+facts:
+- fact_id: F001
+  attribute_id: maker
+  value: SGDW-20261007-A Synthetic Works
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O001
+  admissibility: supported
+- fact_id: F002
+  attribute_id: model_designation
+  value: VX013-123
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O002
+  admissibility: supported
+- fact_id: F003
+  attribute_id: pump_type
+  value: centrifugal
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O003
+  admissibility: supported
+- fact_id: F004
+  attribute_id: capacity
+  value: 334.98
+  unit: m3/h
+  basis:
+    rating: nominal
+  condition:
+    frequency:
+      value: 50
+      unit: Hz
+  scope: main_pump
+  observation_ids:
+  - O004
+  - O009
+  admissibility: supported
+- fact_id: F005
+  attribute_id: medium
+  value: seawater
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O005
+  admissibility: supported
+- fact_id: F006
+  attribute_id: motor_power
+  value: 40.94
+  unit: kW
+  basis:
+    rating: motor_rated
+  condition: {}
+  scope: drive_motor
+  observation_ids:
+  - O006
+  admissibility: supported
+- fact_id: F007
+  attribute_id: dimensions
+  value:
+    length: 1160
+    width: 480
+    height: 640
+  unit: mm
+  basis: {}
+  condition: {}
+  scope: complete_pump_unit_with_motor_and_base
+  observation_ids:
+  - O007
+  admissibility: supported
+- fact_id: F008
+  attribute_id: dry_weight
+  value: 763.01
+  unit: kg
+  basis:
+    weight: dry
+  condition: {}
+  scope: complete_pump_unit_with_motor_and_base
+  observation_ids:
+  - O008
+  admissibility: supported
+issues:
+- issue_id: I001
+  code: E1
+  attribute_ids:
+  - head
+  observation_ids: []
+  rule_ref: data/ontology/dataset-contract.yaml#classes/Pump/conditional_required
+  reason: Required value is absent from the authored document.
+  missing_evidence:
+    inspected_artifact_sha256: 3b1cf258fc91d7de659b77b8fb4f670239c2e5ad718900a9f920041ff2f52ef3
+    searched_attribute_id: head
+    inspected_locations:
+    - coverage: entire rendered document
+      source_lines:
+      - 1
+      - 30
+    applied_requirement: data/ontology/dataset-contract.yaml#classes/Pump/conditional_required
+missing_required:
+- head
+comparison:
+  label_scope: nominated_pairs_only
+  pairs: []
+relations: []
+reference_variants: []
+reviewed_by: null

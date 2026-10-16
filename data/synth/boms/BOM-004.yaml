@@ -1,0 +1,33 @@
+bom_id: BOM-004
+origin: synthetic
+status: final_v1; frozen by user decision D-019 (2026-10-08); reviewed_by awaits user signature
+reviewed_by: null
+root_product_id: REG-4S-016
+root_model: VX007-016
+rating_context:
+  rating_point: R1
+  basis:
+    rating: continuous_engine_shaft
+  scope: engine_shaft
+  power:
+    value: 1834.8
+    unit: kW
+items:
+- product_id: REG-TC-022
+  model_designation: VX024-022
+  class: Turbocharger
+  quantity: 1
+  origin: synthetic
+- product_id: REG-PUMP-016
+  model_designation: VX015-016
+  class: Pump
+  quantity: 1
+  origin: synthetic
+- product_id: REG-SEP-016
+  model_designation: VX019-016
+  class: Separator
+  quantity: 1
+  origin: synthetic
+relation_meaning: has_component = supply-scope (BOM) inclusion; not physical attachment
+interpretation: explicit fictional shaft/R1 rating association; no actual physical
+  compatibility approval

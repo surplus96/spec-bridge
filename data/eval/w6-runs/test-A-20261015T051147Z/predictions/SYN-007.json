@@ -1,0 +1,133 @@
+{
+  "prediction": {
+    "document_id": "SYN-007",
+    "class_id": "Pump",
+    "class_candidates": [
+      "Pump"
+    ],
+    "facts": [],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "Product Name",
+      "text": "Marine liquid transfer pump",
+      "line": "['L3', 'L7']",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "maker",
+      "text": "SGDW-20261007-C Synthetic Works",
+      "line": "['L5']",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "Model Designation",
+      "text": "VX015-107",
+      "line": "['L6']",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Pump Type",
+      "text": "three-screw",
+      "line": "['L8']",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Fluid",
+      "text": "lube oil",
+      "line": "['L12']",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Motor Rating",
+      "text": "26.24 kW",
+      "line": "['L13']",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Flow (50 Hz)",
+      "text": "218.62 m3/h",
+      "line": "['L9', 'L17']",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Flow (60 Hz)",
+      "text": "251.42 m3/h",
+      "line": "['L10']",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Differential Pressure",
+      "text": "7 bar",
+      "line": "['L11']",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Dimensions (L × W × H)",
+      "text": "1440 × 540 × 720 mm",
+      "line": "['L14']",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Dry Mass",
+      "text": "507.21 kg",
+      "line": "['L15']",
+      "reason": "unknown_attribute"
+    }
+  ],
+  "reply": {
+    "attributes": {
+      "Product Name": "Marine liquid transfer pump",
+      "Maker": "SGDW-20261007-C Synthetic Works",
+      "Model Designation": "VX015-107",
+      "Pump Type": "three-screw",
+      "Fluid": "lube oil",
+      "Motor Rating": "26.24 kW",
+      "Flow (50 Hz)": "218.62 m3/h",
+      "Flow (60 Hz)": "251.42 m3/h",
+      "Differential Pressure": "7 bar",
+      "Dimensions (L × W × H)": "1440 × 540 × 720 mm",
+      "Dry Mass": "507.21 kg"
+    },
+    "lines": {
+      "Product Name": [
+        "L3",
+        "L7"
+      ],
+      "Maker": [
+        "L5"
+      ],
+      "Model Designation": [
+        "L6"
+      ],
+      "Pump Type": [
+        "L8"
+      ],
+      "Fluid": [
+        "L12"
+      ],
+      "Motor Rating": [
+        "L13"
+      ],
+      "Flow (50 Hz)": [
+        "L9",
+        "L17"
+      ],
+      "Flow (60 Hz)": [
+        "L10"
+      ],
+      "Differential Pressure": [
+        "L11"
+      ],
+      "Dimensions (L × W × H)": [
+        "L14"
+      ],
+      "Dry Mass": [
+        "L15"
+      ]
+    }
+  },
+  "qualifiers": []
+}

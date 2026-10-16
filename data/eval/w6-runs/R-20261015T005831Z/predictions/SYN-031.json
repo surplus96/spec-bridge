@@ -1,0 +1,230 @@
+{
+  "prediction": {
+    "document_id": "SYN-031",
+    "class_id": "TwoStrokeMainEngine",
+    "class_candidates": [
+      "TwoStrokeMainEngine"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-A Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-031",
+            "raw_text": "SGDW-20261007-A Synthetic Works",
+            "label_text": "Manufacturer",
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "sheet": "Specification",
+              "cell_ref": "A5"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX001-131",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-031",
+            "raw_text": "VX001-131",
+            "label_text": "Model",
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "sheet": "Specification",
+              "cell_ref": "A6"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "number_of_cylinders",
+        "value": 5,
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-031",
+            "raw_text": "5",
+            "label_text": "Number of cylinders:",
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "sheet": "Specification",
+              "cell_ref": "B9"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "bore",
+        "value": 570,
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-031",
+            "raw_text": "570",
+            "label_text": "Bore:",
+            "unit_text": "mm",
+            "location": {
+              "section": "Specifications",
+              "sheet": "Specification",
+              "cell_ref": "B10"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "stroke",
+        "value": 2240,
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-031",
+            "raw_text": "2240",
+            "label_text": "Stroke:",
+            "unit_text": "mm",
+            "location": {
+              "section": "Specifications",
+              "sheet": "Specification",
+              "cell_ref": "B11"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_speed",
+        "value": 92,
+        "unit": "rpm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-031",
+            "raw_text": "92",
+            "label_text": "Rated speed",
+            "unit_text": "rpm",
+            "location": {
+              "section": "Specifications",
+              "sheet": "Specification",
+              "cell_ref": "B13"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "fuel_types",
+        "value": [
+          "natural_gas",
+          "MDO"
+        ],
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-031",
+            "raw_text": "natural gas, MDO",
+            "label_text": "Fuel",
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "sheet": "Specification",
+              "cell_ref": "B14"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 10300,
+          "width": 4700,
+          "height": 10900
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-031",
+            "raw_text": "10300 × 4700 × 10900",
+            "label_text": "Dimensions (L × W × H)",
+            "unit_text": "mm",
+            "location": {
+              "section": "Specifications",
+              "sheet": "Specification",
+              "cell_ref": "B15"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 421740.0,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-031",
+            "raw_text": "421740.0",
+            "label_text": "Dry mass",
+            "unit_text": "kg",
+            "location": {
+              "section": "Specifications",
+              "sheet": "Specification",
+              "cell_ref": "B16"
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [
+      {
+        "attribute": "rated_power",
+        "value_text": "18786.6",
+        "unit_text": "rpm",
+        "reason": "dimension",
+        "occurrence": {
+          "source_document_id": "SYN-031",
+          "raw_text": "18786.6",
+          "label_text": "Rated power",
+          "unit_text": "rpm",
+          "location": {
+            "section": "Specifications",
+            "sheet": "Specification",
+            "cell_ref": "B12"
+          }
+        }
+      }
+    ],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": null,
+  "qualifiers": []
+}

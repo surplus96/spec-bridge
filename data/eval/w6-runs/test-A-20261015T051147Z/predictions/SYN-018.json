@@ -1,0 +1,139 @@
+{
+  "prediction": {
+    "document_id": "SYN-018",
+    "class_id": "Pump",
+    "class_candidates": [
+      "Pump"
+    ],
+    "facts": [
+      {
+        "attribute": "medium",
+        "value": "seawater",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-018",
+            "raw_text": "seawater",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B12"
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "Product Name",
+      "text": "Marine liquid transfer pump",
+      "line": "L3",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Manufacturer",
+      "text": "SGDW-20261007-D Synthetic Works",
+      "line": "L5",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Model Designation",
+      "text": "VX016-118",
+      "line": "L6",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Pump Type",
+      "text": "Centrifugal",
+      "line": "L9",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Nominal Flow Rate",
+      "text": "{'Value': '438.24', 'Unit': 'kW', 'Conditions': 'nominal rating; at 50 Hz; main pump'}",
+      "line": "L10",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "head",
+      "text": "{'Value': '36', 'Unit': 'm', 'Conditions': 'main pump'}",
+      "line": "L11",
+      "reason": "not_in_line"
+    },
+    {
+      "attribute": "Motor Power",
+      "text": "{'Value': '82.17', 'Unit': 'kW', 'Conditions': 'nameplate rating; for drive motor'}",
+      "line": "L13",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "dimensions",
+      "text": "{'Length': '1580', 'Width': '570', 'Height': '760', 'Unit': 'mm', 'Description': 'for complete pump unit with motor and base'}",
+      "line": "L14",
+      "reason": "not_in_line"
+    },
+    {
+      "attribute": "Dry Mass",
+      "text": "{'Value': '1113.86', 'Unit': 'kg', 'Conditions': 'dry; complete pump unit with motor and base'}",
+      "line": "L15",
+      "reason": "unknown_attribute"
+    }
+  ],
+  "reply": {
+    "attributes": {
+      "Product Name": "Marine liquid transfer pump",
+      "Manufacturer": "SGDW-20261007-D Synthetic Works",
+      "Model Designation": "VX016-118",
+      "Pump Type": "Centrifugal",
+      "Nominal Flow Rate": {
+        "Value": "438.24",
+        "Unit": "kW",
+        "Conditions": "nominal rating; at 50 Hz; main pump"
+      },
+      "Head": {
+        "Value": "36",
+        "Unit": "m",
+        "Conditions": "main pump"
+      },
+      "Medium": "seawater",
+      "Motor Power": {
+        "Value": "82.17",
+        "Unit": "kW",
+        "Conditions": "nameplate rating; for drive motor"
+      },
+      "Dimensions": {
+        "Length": "1580",
+        "Width": "570",
+        "Height": "760",
+        "Unit": "mm",
+        "Description": "for complete pump unit with motor and base"
+      },
+      "Dry Mass": {
+        "Value": "1113.86",
+        "Unit": "kg",
+        "Conditions": "dry; complete pump unit with motor and base"
+      }
+    },
+    "lines": {
+      "Product Name": "L3",
+      "Manufacturer": "L5",
+      "Model Designation": "L6",
+      "Pump Type": "L9",
+      "Nominal Flow Rate": "L10",
+      "Head": "L11",
+      "Medium": "L12",
+      "Motor Power": "L13",
+      "Dimensions": "L14",
+      "Dry Mass": "L15"
+    }
+  },
+  "qualifiers": []
+}

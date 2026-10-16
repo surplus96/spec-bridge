@@ -1,0 +1,13 @@
+{
+  "prediction": {
+    "document_id": "DOC-002",
+    "class_id": "unknown",
+    "class_candidates": [],
+    "facts": [],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": null,
+  "qualifiers": []
+}

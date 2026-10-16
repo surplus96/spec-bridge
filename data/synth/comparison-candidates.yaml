@@ -1,0 +1,431 @@
+version: 1
+origin: synthetic
+status: final_v1; frozen by user decision D-019 (2026-10-08); reviewed_by awaits user signature
+label_scope: complete within the query split registry; every unlisted registry product
+  is new/negative
+duplicate_rule: same maker_id and same model designation under the synthetic identity
+  policy
+similar_rule: same synthetic product family (series) with a different identity; the
+  series prefix is visible in model designations
+reviewed_by: null
+queries:
+- input_id: SYN-001
+  split: test
+  duplicate: []
+  similar:
+  - REG-COMP-021
+  - REG-COMP-022
+  - REG-COMP-023
+  - REG-COMP-024
+  - REG-COMP-025
+- input_id: SYN-002
+  split: test
+  duplicate: []
+  similar:
+  - REG-2S-021
+  - REG-2S-022
+  - REG-2S-023
+  - REG-2S-024
+  - REG-2S-025
+- input_id: SYN-003
+  split: dev
+  duplicate:
+  - REG-TC-009
+  similar:
+  - REG-TC-010
+  - REG-TC-011
+  - REG-TC-012
+  - REG-TC-013
+  - REG-TC-014
+  - REG-TC-015
+- input_id: SYN-004
+  split: dev
+  duplicate:
+  - REG-COMP-009
+  similar:
+  - REG-COMP-010
+  - REG-COMP-011
+  - REG-COMP-012
+  - REG-COMP-013
+  - REG-COMP-014
+  - REG-COMP-015
+- input_id: SYN-005
+  split: dev
+  duplicate:
+  - REG-PUMP-009
+  similar:
+  - REG-PUMP-010
+  - REG-PUMP-011
+  - REG-PUMP-012
+  - REG-PUMP-013
+  - REG-PUMP-014
+  - REG-PUMP-015
+- input_id: SYN-006
+  split: test
+  duplicate: []
+  similar:
+  - REG-SEP-016
+  - REG-SEP-017
+  - REG-SEP-018
+  - REG-SEP-019
+  - REG-SEP-020
+- input_id: SYN-007
+  split: test
+  duplicate: []
+  similar:
+  - REG-PUMP-016
+  - REG-PUMP-017
+  - REG-PUMP-018
+  - REG-PUMP-019
+  - REG-PUMP-020
+- input_id: SYN-008
+  split: dev
+  duplicate: []
+  similar:
+  - REG-TC-001
+  - REG-TC-002
+  - REG-TC-003
+  - REG-TC-004
+  - REG-TC-005
+  - REG-TC-006
+  - REG-TC-007
+  - REG-TC-008
+- input_id: SYN-009
+  split: test
+  duplicate: []
+  similar:
+  - REG-PUMP-021
+  - REG-PUMP-022
+  - REG-PUMP-023
+  - REG-PUMP-024
+  - REG-PUMP-025
+- input_id: SYN-010
+  split: dev
+  duplicate: []
+  similar:
+  - REG-2S-001
+  - REG-2S-002
+  - REG-2S-003
+  - REG-2S-004
+  - REG-2S-005
+  - REG-2S-006
+  - REG-2S-007
+  - REG-2S-008
+- input_id: SYN-011
+  split: dev
+  duplicate: []
+  similar:
+  - REG-4S-001
+  - REG-4S-002
+  - REG-4S-003
+  - REG-4S-004
+  - REG-4S-005
+  - REG-4S-006
+  - REG-4S-007
+  - REG-4S-008
+- input_id: SYN-012
+  split: dev
+  duplicate: []
+  similar:
+  - REG-4S-009
+  - REG-4S-010
+  - REG-4S-011
+  - REG-4S-012
+  - REG-4S-013
+  - REG-4S-014
+  - REG-4S-015
+- input_id: SYN-013
+  split: test
+  duplicate: []
+  similar:
+  - REG-2S-016
+  - REG-2S-017
+  - REG-2S-018
+  - REG-2S-019
+  - REG-2S-020
+- input_id: SYN-014
+  split: test
+  duplicate: []
+  similar:
+  - REG-TC-016
+  - REG-TC-017
+  - REG-TC-018
+  - REG-TC-019
+  - REG-TC-020
+- input_id: SYN-015
+  split: dev
+  duplicate: []
+  similar:
+  - REG-PUMP-001
+  - REG-PUMP-002
+  - REG-PUMP-003
+  - REG-PUMP-004
+  - REG-PUMP-005
+  - REG-PUMP-006
+  - REG-PUMP-007
+  - REG-PUMP-008
+- input_id: SYN-016
+  split: test
+  duplicate: []
+  similar:
+  - REG-COMP-016
+  - REG-COMP-017
+  - REG-COMP-018
+  - REG-COMP-019
+  - REG-COMP-020
+- input_id: SYN-017
+  split: dev
+  duplicate: []
+  similar:
+  - REG-TC-001
+  - REG-TC-002
+  - REG-TC-003
+  - REG-TC-004
+  - REG-TC-005
+  - REG-TC-006
+  - REG-TC-007
+  - REG-TC-008
+- input_id: SYN-018
+  split: test
+  duplicate: []
+  similar:
+  - REG-PUMP-021
+  - REG-PUMP-022
+  - REG-PUMP-023
+  - REG-PUMP-024
+  - REG-PUMP-025
+- input_id: SYN-019
+  split: dev
+  duplicate: []
+  similar:
+  - REG-PUMP-009
+  - REG-PUMP-010
+  - REG-PUMP-011
+  - REG-PUMP-012
+  - REG-PUMP-013
+  - REG-PUMP-014
+  - REG-PUMP-015
+- input_id: SYN-020
+  split: test
+  duplicate:
+  - REG-4S-021
+  similar:
+  - REG-4S-022
+  - REG-4S-023
+  - REG-4S-024
+  - REG-4S-025
+- input_id: SYN-021
+  split: test
+  duplicate: []
+  similar:
+  - REG-COMP-021
+  - REG-COMP-022
+  - REG-COMP-023
+  - REG-COMP-024
+  - REG-COMP-025
+- input_id: SYN-022
+  split: test
+  duplicate: []
+  similar:
+  - REG-SEP-021
+  - REG-SEP-022
+  - REG-SEP-023
+  - REG-SEP-024
+  - REG-SEP-025
+- input_id: SYN-023
+  split: dev
+  duplicate: []
+  similar:
+  - REG-PUMP-001
+  - REG-PUMP-002
+  - REG-PUMP-003
+  - REG-PUMP-004
+  - REG-PUMP-005
+  - REG-PUMP-006
+  - REG-PUMP-007
+  - REG-PUMP-008
+- input_id: SYN-024
+  split: dev
+  duplicate: []
+  similar:
+  - REG-SEP-001
+  - REG-SEP-002
+  - REG-SEP-003
+  - REG-SEP-004
+  - REG-SEP-005
+  - REG-SEP-006
+  - REG-SEP-007
+  - REG-SEP-008
+- input_id: SYN-025
+  split: test
+  duplicate:
+  - REG-SEP-021
+  similar:
+  - REG-SEP-022
+  - REG-SEP-023
+  - REG-SEP-024
+  - REG-SEP-025
+- input_id: SYN-026
+  split: dev
+  duplicate: []
+  similar:
+  - REG-4S-001
+  - REG-4S-002
+  - REG-4S-003
+  - REG-4S-004
+  - REG-4S-005
+  - REG-4S-006
+  - REG-4S-007
+  - REG-4S-008
+- input_id: SYN-027
+  split: dev
+  duplicate: []
+  similar:
+  - REG-COMP-009
+  - REG-COMP-010
+  - REG-COMP-011
+  - REG-COMP-012
+  - REG-COMP-013
+  - REG-COMP-014
+  - REG-COMP-015
+- input_id: SYN-028
+  split: test
+  duplicate: []
+  similar:
+  - REG-4S-021
+  - REG-4S-022
+  - REG-4S-023
+  - REG-4S-024
+  - REG-4S-025
+- input_id: SYN-029
+  split: dev
+  duplicate: []
+  similar:
+  - REG-4S-009
+  - REG-4S-010
+  - REG-4S-011
+  - REG-4S-012
+  - REG-4S-013
+  - REG-4S-014
+  - REG-4S-015
+- input_id: SYN-030
+  split: dev
+  duplicate: []
+  similar:
+  - REG-SEP-009
+  - REG-SEP-010
+  - REG-SEP-011
+  - REG-SEP-012
+  - REG-SEP-013
+  - REG-SEP-014
+  - REG-SEP-015
+- input_id: SYN-031
+  split: dev
+  duplicate: []
+  similar:
+  - REG-2S-001
+  - REG-2S-002
+  - REG-2S-003
+  - REG-2S-004
+  - REG-2S-005
+  - REG-2S-006
+  - REG-2S-007
+  - REG-2S-008
+- input_id: SYN-032
+  split: dev
+  duplicate: []
+  similar:
+  - REG-SEP-001
+  - REG-SEP-002
+  - REG-SEP-003
+  - REG-SEP-004
+  - REG-SEP-005
+  - REG-SEP-006
+  - REG-SEP-007
+  - REG-SEP-008
+- input_id: SYN-033
+  split: dev
+  duplicate: []
+  similar:
+  - REG-COMP-001
+  - REG-COMP-002
+  - REG-COMP-003
+  - REG-COMP-004
+  - REG-COMP-005
+  - REG-COMP-006
+  - REG-COMP-007
+  - REG-COMP-008
+- input_id: SYN-034
+  split: dev
+  duplicate:
+  - REG-2S-009
+  similar:
+  - REG-2S-010
+  - REG-2S-011
+  - REG-2S-012
+  - REG-2S-013
+  - REG-2S-014
+  - REG-2S-015
+- input_id: SYN-035
+  split: dev
+  duplicate: []
+  similar:
+  - REG-SEP-009
+  - REG-SEP-010
+  - REG-SEP-011
+  - REG-SEP-012
+  - REG-SEP-013
+  - REG-SEP-014
+  - REG-SEP-015
+- input_id: SYN-036
+  split: dev
+  duplicate: []
+  similar:
+  - REG-COMP-001
+  - REG-COMP-002
+  - REG-COMP-003
+  - REG-COMP-004
+  - REG-COMP-005
+  - REG-COMP-006
+  - REG-COMP-007
+  - REG-COMP-008
+- input_id: SYN-037
+  split: dev
+  duplicate: []
+  similar:
+  - REG-TC-009
+  - REG-TC-010
+  - REG-TC-011
+  - REG-TC-012
+  - REG-TC-013
+  - REG-TC-014
+  - REG-TC-015
+- input_id: SYN-038
+  split: dev
+  duplicate: []
+  similar:
+  - REG-2S-009
+  - REG-2S-010
+  - REG-2S-011
+  - REG-2S-012
+  - REG-2S-013
+  - REG-2S-014
+  - REG-2S-015
+- input_id: SYN-039
+  split: test
+  duplicate: []
+  similar:
+  - REG-TC-021
+  - REG-TC-022
+  - REG-TC-023
+  - REG-TC-024
+  - REG-TC-025
+- input_id: SYN-040
+  split: test
+  duplicate: []
+  similar:
+  - REG-4S-016
+  - REG-4S-017
+  - REG-4S-018
+  - REG-4S-019
+  - REG-4S-020

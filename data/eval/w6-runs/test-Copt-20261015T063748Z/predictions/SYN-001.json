@@ -1,0 +1,291 @@
+{
+  "prediction": {
+    "document_id": "SYN-001",
+    "class_id": "AirCompressor",
+    "class_candidates": [
+      "AirCompressor"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-D Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-001",
+            "raw_text": "SGDW-20261007-D Synthetic Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "General",
+              "sheet": "Specification",
+              "cell_ref": "A5"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX012-101",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-001",
+            "raw_text": "VX012-101",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "General",
+              "sheet": "Specification",
+              "cell_ref": "A6"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "max_pressure",
+        "value": 30,
+        "unit": "bar",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-001",
+            "raw_text": "30",
+            "label_text": null,
+            "unit_text": "bar",
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B9"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "cooling_type",
+        "value": "water",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-001",
+            "raw_text": "water",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B10"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "air",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-001",
+            "raw_text": "air",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B11"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "motor_power",
+        "value": 49.5,
+        "unit": "kW",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-001",
+            "raw_text": "49.5",
+            "label_text": null,
+            "unit_text": "kW",
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B12"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 1400,
+          "width": 795,
+          "height": 1005
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-001",
+            "raw_text": "1400 × 795 × 1005",
+            "label_text": null,
+            "unit_text": "mm",
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B13"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 1109.55,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-001",
+            "raw_text": "1109.55",
+            "label_text": null,
+            "unit_text": "kg",
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B14"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "reported_weight",
+        "value": 1109.55,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-001",
+            "raw_text": "1109.55",
+            "label_text": null,
+            "unit_text": "kg",
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B14"
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "capacity",
+      "text": "not explicitly stated",
+      "line": "L16",
+      "reason": "not_in_line"
+    },
+    {
+      "attribute": "working_pressure",
+      "text": "not explicitly stated",
+      "line": "L16",
+      "reason": "not_in_line"
+    }
+  ],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "line": "L5",
+        "value_text": "SGDW-20261007-D Synthetic Works",
+        "unit_text": null
+      },
+      {
+        "attribute": "model_designation",
+        "line": "L6",
+        "value_text": "VX012-101",
+        "unit_text": null
+      },
+      {
+        "attribute": "max_pressure",
+        "line": "L9",
+        "value_text": "30",
+        "unit_text": "bar"
+      },
+      {
+        "attribute": "cooling_type",
+        "line": "L10",
+        "value_text": "water",
+        "unit_text": null
+      },
+      {
+        "attribute": "medium",
+        "line": "L11",
+        "value_text": "air",
+        "unit_text": null
+      },
+      {
+        "attribute": "motor_power",
+        "line": "L12",
+        "value_text": "49.5",
+        "unit_text": "kW"
+      },
+      {
+        "attribute": "dimensions",
+        "line": "L13",
+        "value_text": "1400 × 795 × 1005",
+        "unit_text": "mm"
+      },
+      {
+        "attribute": "dry_weight",
+        "line": "L14",
+        "value_text": "1109.55",
+        "unit_text": "kg"
+      },
+      {
+        "attribute": "reported_weight",
+        "line": "L14",
+        "value_text": "1109.55",
+        "unit_text": "kg"
+      },
+      {
+        "attribute": "capacity",
+        "line": "L16",
+        "value_text": "not explicitly stated",
+        "unit_text": null
+      },
+      {
+        "attribute": "working_pressure",
+        "line": "L16",
+        "value_text": "not explicitly stated",
+        "unit_text": null
+      }
+    ]
+  },
+  "qualifiers": []
+}

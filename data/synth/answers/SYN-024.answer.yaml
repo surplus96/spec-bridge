@@ -1,0 +1,311 @@
+schema_version: 3
+input_id: SYN-024
+origin: synthetic
+expected_class: Separator
+status: final_v1; frozen by user decision D-019 (2026-10-08); reviewed_by awaits user signature
+artifact:
+  path: data/synth/inputs/SYN-024.pdf
+  sha256: 85c23bc402328d89541d7a5c82a7223dde76b9d4c9dc3c5b6b21af8d4a9ea92f
+  file_format: pdf
+  location_verified: true
+  source_path: data/synth/dev/sources/SYN-024.md
+  source_sha256: de5b7ae79fbadad0a910165ee153bea52f1d7054e180719abd655937cc680f8c
+  verification_method: independent file-content audit
+observations:
+- observation_id: O001
+  attribute_id: maker
+  raw_text: SGDW-20261007-A Synthetic Works
+  label_text: Maker
+  unit_text: null
+  location:
+    source_line: 9
+    source_section: Identification
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 466.28
+    - 803.89
+    - 477.28
+    bbox_unit: pt
+    region_or_section: Identification
+  interpretation: normalized
+  parsed_value: SGDW-20261007-A Synthetic Works
+  parsed_unit: null
+- observation_id: O002
+  attribute_id: model_designation
+  raw_text: VX017-124
+  label_text: Model
+  unit_text: null
+  location:
+    source_line: 11
+    source_section: Identification
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 448.28
+    - 803.89
+    - 459.28
+    bbox_unit: pt
+    region_or_section: Identification
+  interpretation: normalized
+  parsed_value: VX017-124
+  parsed_unit: null
+- observation_id: O003
+  attribute_id: application
+  raw_text: fuel oil
+  label_text: Application
+  unit_text: null
+  location:
+    source_line: 15
+    source_section: Specifications
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 405.28
+    - 803.89
+    - 416.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value: fuel_oil
+  parsed_unit: null
+- observation_id: O004
+  attribute_id: medium
+  raw_text: heavy fuel oil
+  label_text: Medium
+  unit_text: null
+  location:
+    source_line: 17
+    source_section: Specifications
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 387.28
+    - 803.89
+    - 398.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value: heavy_fuel_oil
+  parsed_unit: null
+- observation_id: O005
+  attribute_id: rated_throughput
+  raw_text: '5230.4'
+  label_text: Throughput
+  unit_text: kg
+  location:
+    source_line: 19
+    source_section: Specifications
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 369.28
+    - 803.89
+    - 380.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: invalid_unit
+  parsed_value: 5230.4
+  parsed_unit: kg
+- observation_id: O006
+  attribute_id: rated_throughput
+  raw_text: '3399.76'
+  label_text: Throughput
+  unit_text: kg
+  location:
+    source_line: 21
+    source_section: Specifications
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 351.28
+    - 803.89
+    - 362.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: invalid_unit
+  parsed_value: 3399.76
+  parsed_unit: kg
+- observation_id: O007
+  attribute_id: self_cleaning
+  raw_text: 'Yes'
+  label_text: Self-cleaning
+  unit_text: null
+  location:
+    source_line: 23
+    source_section: Specifications
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 333.28
+    - 803.89
+    - 344.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value: true
+  parsed_unit: null
+- observation_id: O008
+  attribute_id: motor_power
+  raw_text: '11.21'
+  label_text: Motor power
+  unit_text: kW
+  location:
+    source_line: 25
+    source_section: Specifications
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 315.28
+    - 803.89
+    - 326.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value: 11.21
+  parsed_unit: kW
+- observation_id: O009
+  attribute_id: dimensions
+  raw_text: 1850 × 990 × 1690
+  label_text: Overall dimensions (L × W × H)
+  unit_text: mm
+  location:
+    source_line: 27
+    source_section: Specifications
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 297.28
+    - 803.89
+    - 308.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value:
+    length: 1850
+    width: 990
+    height: 1690
+  parsed_unit: mm
+- observation_id: O010
+  attribute_id: dry_weight
+  raw_text: '1457.04'
+  label_text: Dry weight
+  unit_text: kg
+  location:
+    source_line: 29
+    source_section: Specifications
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 279.28
+    - 803.89
+    - 290.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value: 1457.04
+  parsed_unit: kg
+facts:
+- fact_id: F001
+  attribute_id: maker
+  value: SGDW-20261007-A Synthetic Works
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O001
+  admissibility: supported
+- fact_id: F002
+  attribute_id: model_designation
+  value: VX017-124
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O002
+  admissibility: supported
+- fact_id: F003
+  attribute_id: application
+  value: fuel_oil
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O003
+  admissibility: supported
+- fact_id: F004
+  attribute_id: medium
+  value: heavy_fuel_oil
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O004
+  admissibility: supported
+- fact_id: F005
+  attribute_id: self_cleaning
+  value: true
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O007
+  admissibility: supported
+- fact_id: F006
+  attribute_id: motor_power
+  value: 11.21
+  unit: kW
+  basis:
+    rating: motor_rated
+  condition: {}
+  scope: separator_drive_motor
+  observation_ids:
+  - O008
+  admissibility: supported
+- fact_id: F007
+  attribute_id: dimensions
+  value:
+    length: 1850
+    width: 990
+    height: 1690
+  unit: mm
+  basis: {}
+  condition: {}
+  scope: complete_separator_module_with_feed_pump_heater_control
+  observation_ids:
+  - O009
+  admissibility: supported
+- fact_id: F008
+  attribute_id: dry_weight
+  value: 1457.04
+  unit: kg
+  basis:
+    weight: dry
+  condition: {}
+  scope: complete_separator_module_with_feed_pump_heater_control
+  observation_ids:
+  - O010
+  admissibility: supported
+issues:
+- issue_id: I001
+  code: E2
+  attribute_ids:
+  - rated_throughput
+  observation_ids:
+  - O005
+  - O006
+  rule_ref: data/ontology/dataset-contract.yaml#attributes/rated_throughput/dimension
+  reason: Explicit unit dimension differs from the attribute contract.
+missing_required:
+- rated_throughput
+comparison:
+  label_scope: nominated_pairs_only
+  pairs: []
+relations: []
+reference_variants: []
+reviewed_by: null

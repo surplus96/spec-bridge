@@ -1,0 +1,224 @@
+{
+  "prediction": {
+    "document_id": "SYN-005",
+    "class_id": "Pump",
+    "class_candidates": [
+      "Pump"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-B Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-005",
+            "raw_text": "SGDW-B Synthetic Works",
+            "label_text": "Manufacturer",
+            "unit_text": null,
+            "location": {
+              "section": "General",
+              "paragraph": 5
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX014-009",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-005",
+            "raw_text": "VX014-009",
+            "label_text": "Model",
+            "unit_text": null,
+            "location": {
+              "section": "General",
+              "paragraph": 6
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "pump_type",
+        "value": "three_screw",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-005",
+            "raw_text": "Three-screw",
+            "label_text": "Pump type",
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "table": 1,
+              "row": 2,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "capacity",
+        "value": 95.67,
+        "unit": "m3/h",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-005",
+            "raw_text": "95.67",
+            "label_text": "Flow",
+            "unit_text": "m3/h",
+            "location": {
+              "section": "Technical data",
+              "table": 1,
+              "row": 3,
+              "column": 2
+            }
+          },
+          {
+            "source_document_id": "SYN-005",
+            "raw_text": "95.67",
+            "label_text": "Flow",
+            "unit_text": "m3/h",
+            "location": {
+              "section": "Remarks",
+              "paragraph": 9
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "differential_pressure",
+        "value": 8,
+        "unit": "bar",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-005",
+            "raw_text": "8",
+            "label_text": "Differential pressure",
+            "unit_text": "bar",
+            "location": {
+              "section": "Technical data",
+              "table": 1,
+              "row": 4,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "lubricating_oil",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-005",
+            "raw_text": "lubricating oil",
+            "label_text": "Medium",
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "table": 1,
+              "row": 5,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "motor_power",
+        "value": 19.13,
+        "unit": "kW",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-005",
+            "raw_text": "19.13",
+            "label_text": "Motor power",
+            "unit_text": "kW",
+            "location": {
+              "section": "Technical data",
+              "table": 1,
+              "row": 6,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 1300,
+          "width": 510,
+          "height": 680
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-005",
+            "raw_text": "1300 × 510 × 680",
+            "label_text": "Overall dimensions (L × W × H)",
+            "unit_text": "mm",
+            "location": {
+              "section": "Technical data",
+              "table": 1,
+              "row": 7,
+              "column": 2
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 350.79,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-005",
+            "raw_text": "350.79",
+            "label_text": "Dry weight",
+            "unit_text": "kg",
+            "location": {
+              "section": "Technical data",
+              "table": 1,
+              "row": 8,
+              "column": 2
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": null,
+  "qualifiers": []
+}

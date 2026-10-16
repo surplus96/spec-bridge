@@ -1,0 +1,385 @@
+[
+  {
+    "context_fp": 0,
+    "context_keys": 0,
+    "context_tp": 0,
+    "document_id": "DOC-001",
+    "expected_class": "Pump",
+    "facts": {
+      "capacity": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "dimensions": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "dry_weight": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "head": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "maker": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "medium": {
+        "fn": 1,
+        "fp": 1,
+        "tp": 0
+      },
+      "model_designation": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "motor_power": {
+        "fn": 0,
+        "fp": 0,
+        "tp": 1
+      },
+      "pump_type": {
+        "fn": 1,
+        "fp": 1,
+        "tp": 0
+      }
+    },
+    "failed": false,
+    "observations_found": 3,
+    "observations_invalid": 0,
+    "observations_total": 16,
+    "observations_unattributed": 0,
+    "occurrences_matched": 3,
+    "occurrences_predicted": 3,
+    "predicted_class": "Pump",
+    "top3_hit": true
+  },
+  {
+    "context_fp": 0,
+    "context_keys": 4,
+    "context_tp": 0,
+    "document_id": "DOC-002",
+    "expected_class": "AirCompressor",
+    "facts": {
+      "capacity": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "cooling_type": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "dimensions": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "dry_weight": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "maker": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "max_pressure": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "medium": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "model_designation": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "motor_power": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      }
+    },
+    "failed": false,
+    "observations_found": 0,
+    "observations_invalid": 0,
+    "observations_total": 19,
+    "observations_unattributed": 0,
+    "occurrences_matched": 0,
+    "occurrences_predicted": 0,
+    "predicted_class": "unknown",
+    "top3_hit": false
+  },
+  {
+    "context_fp": 0,
+    "context_keys": 4,
+    "context_tp": 0,
+    "document_id": "DOC-003",
+    "expected_class": "Separator",
+    "facts": {
+      "application": {
+        "fn": 1,
+        "fp": 1,
+        "tp": 0
+      },
+      "dimensions": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "dry_weight": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "maker": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "medium": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "model_designation": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "motor_power": {
+        "fn": 0,
+        "fp": 0,
+        "tp": 1
+      },
+      "rated_throughput": {
+        "fn": 2,
+        "fp": 0,
+        "tp": 0
+      },
+      "self_cleaning": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      }
+    },
+    "failed": false,
+    "observations_found": 2,
+    "observations_invalid": 0,
+    "observations_total": 21,
+    "observations_unattributed": 0,
+    "occurrences_matched": 2,
+    "occurrences_predicted": 2,
+    "predicted_class": "Separator",
+    "top3_hit": true
+  },
+  {
+    "context_fp": 0,
+    "context_keys": 1,
+    "context_tp": 0,
+    "document_id": "DOC-004",
+    "expected_class": "TwoStrokeMainEngine",
+    "facts": {
+      "bore": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "dimensions": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "dry_weight": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "fuel_types": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "maker": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "model_designation": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "number_of_cylinders": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "rated_power": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "rated_speed": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "stroke": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      }
+    },
+    "failed": false,
+    "observations_found": 0,
+    "observations_invalid": 0,
+    "observations_total": 15,
+    "observations_unattributed": 0,
+    "occurrences_matched": 0,
+    "occurrences_predicted": 0,
+    "predicted_class": "Turbocharger",
+    "top3_hit": true
+  },
+  {
+    "context_fp": 0,
+    "context_keys": 1,
+    "context_tp": 0,
+    "document_id": "DOC-005",
+    "expected_class": "FourStrokeEngine",
+    "facts": {
+      "application": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "bore": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "dimensions": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "dry_weight": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "fuel_types": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "maker": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "model_designation": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "number_of_cylinders": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "rated_power": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "rated_speed": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "stroke": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      }
+    },
+    "failed": false,
+    "observations_found": 0,
+    "observations_invalid": 0,
+    "observations_total": 17,
+    "observations_unattributed": 0,
+    "occurrences_matched": 0,
+    "occurrences_predicted": 0,
+    "predicted_class": "Turbocharger",
+    "top3_hit": true
+  },
+  {
+    "context_fp": 0,
+    "context_keys": 3,
+    "context_tp": 0,
+    "document_id": "DOC-006",
+    "expected_class": "Turbocharger",
+    "facts": {
+      "applicable_engine_power": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "bearing_type": {
+        "fn": 0,
+        "fp": 0,
+        "tp": 1
+      },
+      "dimensions": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "dry_weight": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "maker": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "model_designation": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      },
+      "turbocharger_type": {
+        "fn": 1,
+        "fp": 0,
+        "tp": 0
+      }
+    },
+    "failed": false,
+    "observations_found": 1,
+    "observations_invalid": 0,
+    "observations_total": 10,
+    "observations_unattributed": 0,
+    "occurrences_matched": 1,
+    "occurrences_predicted": 1,
+    "predicted_class": "Turbocharger",
+    "top3_hit": true
+  }
+]

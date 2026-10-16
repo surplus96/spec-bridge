@@ -1,0 +1,449 @@
+{
+  "prediction": {
+    "document_id": "DOC-006",
+    "class_id": "Turbocharger",
+    "class_candidates": [
+      "Turbocharger",
+      "TwoStrokeMainEngine"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "Torvane Engine Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-006",
+            "raw_text": "Torvane Engine Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "1. General",
+              "paragraph": 7,
+              "line": 7
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "TTA-70",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-006",
+            "raw_text": "TTA-70",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "1. General",
+              "paragraph": 8,
+              "line": 8
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 2450,
+          "width": 1500,
+          "height": 2150
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-006",
+            "raw_text": "2,450 × 1,500 × 2,150 mm",
+            "label_text": null,
+            "unit_text": "mm",
+            "location": {
+              "section": "4. Dimensions and Weight",
+              "paragraph": 27,
+              "line": 27
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 6500,
+        "unit": "kg",
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-006",
+            "raw_text": "6,500 kg",
+            "label_text": null,
+            "unit_text": "kg",
+            "location": {
+              "section": "4. Dimensions and Weight",
+              "paragraph": 28,
+              "line": 28
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "turbocharger_type",
+        "value": "Axial-flow turbine",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-006",
+            "raw_text": "Axial-flow turbine",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "2. Main Technical Data",
+              "table": 1,
+              "row": 2,
+              "column": 2,
+              "line": 17
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "bearing_type",
+        "value": "plain",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-006",
+            "raw_text": "Plain bearings",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "2. Main Technical Data",
+              "table": 1,
+              "row": 5,
+              "column": 2,
+              "line": 20
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [
+      {
+        "attribute": "applicable_engine_power",
+        "value_text": "9,000 – 16,500",
+        "unit_text": "kW",
+        "reason": "not_a_number",
+        "occurrence": {
+          "source_document_id": "DOC-006",
+          "raw_text": "9,000 – 16,500",
+          "label_text": null,
+          "unit_text": "kW",
+          "location": {
+            "section": "2. Main Technical Data",
+            "table": 1,
+            "row": 3,
+            "column": 2,
+            "line": 18
+          }
+        }
+      }
+    ],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "line": "L6",
+        "value_text": "Torvane Engine Works"
+      },
+      {
+        "attribute": "model_designation",
+        "line": "L7",
+        "value_text": "TTA-70"
+      },
+      {
+        "attribute": "dimensions",
+        "line": "L21",
+        "value_text": "2,450 × 1,500 × 2,150 mm",
+        "unit_text": "mm"
+      },
+      {
+        "attribute": "dry_weight",
+        "line": "L22",
+        "value_text": "6,500 kg",
+        "unit_text": "kg"
+      },
+      {
+        "attribute": "reported_weight",
+        "line": "L22",
+        "value_text": "6,500 kg",
+        "unit_text": "kg"
+      },
+      {
+        "attribute": "turbocharger_type",
+        "line": "L13",
+        "value_text": "Axial-flow turbine"
+      },
+      {
+        "attribute": "applicable_engine_power",
+        "line": "L14",
+        "value_text": "9,000 – 16,500",
+        "unit_text": "kW"
+      },
+      {
+        "attribute": "bearing_type",
+        "line": "L16",
+        "value_text": "Plain bearings"
+      }
+    ]
+  },
+  "qualifiers": [
+    {
+      "kind": "conflict",
+      "line": "4.2 Weight: 6,500 kg (dry; complete turbocharger including air inlet silencer and gas outlet diffuser)",
+      "candidates": [
+        "dry_weight",
+        "reported_weight"
+      ],
+      "votes": {
+        "dry_weight": 3
+      },
+      "kept": "dry_weight",
+      "retrieved_ids": [
+        "SYN-008:O006",
+        "SYN-003:O007",
+        "SYN-017:O007"
+      ]
+    },
+    {
+      "kind": "value",
+      "attribute": "maker",
+      "value_text": "Torvane Engine Works",
+      "location": {
+        "section": "1. General",
+        "paragraph": 7,
+        "line": 7
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.rating_point: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [
+        "SYN-029:O001",
+        "SYN-010:O001",
+        "SYN-034:O001"
+      ],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "model_designation",
+      "value_text": "TTA-70",
+      "location": {
+        "section": "1. General",
+        "paragraph": 8,
+        "line": 8
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.temperature: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [
+        "SYN-017:O002",
+        "SYN-012:O002",
+        "SYN-027:O002"
+      ],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "dimensions",
+      "value_text": "2,450 × 1,500 × 2,150 mm",
+      "location": {
+        "section": "4. Dimensions and Weight",
+        "paragraph": 27,
+        "line": 27
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.medium: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [
+        "SYN-008:O005",
+        "SYN-037:O006",
+        "SYN-003:O006"
+      ],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "dry_weight",
+      "value_text": "6,500 kg",
+      "location": {
+        "section": "4. Dimensions and Weight",
+        "paragraph": 28,
+        "line": 28
+      },
+      "qualifiers": {
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {
+        "basis.weight": "dry"
+      },
+      "rejected": [
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [
+        "SYN-008:O006",
+        "SYN-003:O007",
+        "SYN-017:O007"
+      ],
+      "before_check": {
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {},
+        "scope": ""
+      }
+    },
+    {
+      "kind": "value",
+      "attribute": "turbocharger_type",
+      "value_text": "Axial-flow turbine",
+      "location": {
+        "section": "2. Main Technical Data",
+        "table": 1,
+        "row": 2,
+        "column": 2,
+        "line": 17
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.pressure: evidence not in the line",
+        "condition.engine_type: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [
+        "SYN-005:O003",
+        "SYN-015:O003",
+        "SYN-008:O003"
+      ],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "applicable_engine_power",
+      "value_text": "9,000 – 16,500",
+      "location": {
+        "section": "2. Main Technical Data",
+        "table": 1,
+        "row": 3,
+        "column": 2,
+        "line": 18
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {
+          "engine_type": "two-stroke"
+        },
+        "scope": "per turbocharger"
+      },
+      "evidence": {
+        "condition.engine_type": "two-stroke",
+        "scope": "per turbocharger"
+      },
+      "rejected": [],
+      "retrieved_ids": [
+        "SYN-017:O004",
+        "SYN-017:O008",
+        "SYN-037:O004"
+      ],
+      "before_check": {
+        "basis": {},
+        "condition": {
+          "engine_type": "two-stroke"
+        },
+        "scope": "per turbocharger"
+      }
+    },
+    {
+      "kind": "value",
+      "attribute": "bearing_type",
+      "value_text": "Plain bearings",
+      "location": {
+        "section": "2. Main Technical Data",
+        "table": 1,
+        "row": 5,
+        "column": 2,
+        "line": 20
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.temperature: number not in the line",
+        "condition.viscosity: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [
+        "SYN-003:O005",
+        "SYN-037:O005",
+        "SYN-015:O003"
+      ],
+      "before_check": null
+    }
+  ]
+}

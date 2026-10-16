@@ -1,0 +1,424 @@
+{
+  "prediction": {
+    "document_id": "SYN-009",
+    "class_id": "Pump",
+    "class_candidates": [
+      "Pump"
+    ],
+    "facts": [
+      {
+        "attribute": "pump_type",
+        "value": "centrifugal",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_pump_specification",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-009",
+            "raw_text": "centrifugal",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                380.6190801146593,
+                215.35503440000002,
+                388.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "capacity",
+        "value": 423.12,
+        "unit": "m3/h",
+        "basis": {},
+        "condition": {
+          "frequency": {
+            "value": 50,
+            "unit": "Hz"
+          },
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          },
+          "absolute_pressure": {
+            "value": 1,
+            "unit": "bar"
+          }
+        },
+        "scope": "nominal_operating_conditions_for_main_pump",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-009",
+            "raw_text": "423.12",
+            "label_text": "Capacity",
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                359.6190801146593,
+                202.91362800000002,
+                367.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "head",
+        "value": 36,
+        "unit": "m",
+        "basis": {},
+        "condition": {
+          "frequency": {
+            "value": 50,
+            "unit": "Hz"
+          },
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          },
+          "absolute_pressure": {
+            "value": 1,
+            "unit": "bar"
+          }
+        },
+        "scope": "main_pump_specification",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-009",
+            "raw_text": "36",
+            "label_text": "Head",
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                338.6190801146593,
+                187.34331680000003,
+                346.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "sea water",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "operating_fluid",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-009",
+            "raw_text": "sea water",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                317.6190801146593,
+                213.12847200000002,
+                325.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "motor_power",
+        "value": 79.33,
+        "unit": "kW",
+        "basis": {},
+        "condition": {
+          "frequency": {
+            "value": 50,
+            "unit": "Hz"
+          },
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          }
+        },
+        "scope": "rated_output_for_drive_motor",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-009",
+            "raw_text": "79.33",
+            "label_text": "Motor rating",
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                296.6190801146593,
+                198.4644096,
+                304.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 1580,
+          "width": 570,
+          "height": 760
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "complete_pump_unit_dimensions_including_motor_and_base",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-009",
+            "raw_text": "1580 × 570 × 760",
+            "label_text": "Dimensions (L × W × H)",
+            "unit_text": null,
+            "location": {
+              "section": "Installation",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                245.61910638419056,
+                365.707016,
+                253.00606879999998
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 1075.43,
+        "unit": "kg",
+        "basis": {},
+        "condition": {
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          },
+          "absolute_pressure": {
+            "value": 1,
+            "unit": "bar"
+          }
+        },
+        "scope": "dry_condition_for_complete_pump_unit_with_motor_and_base",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-009",
+            "raw_text": "1075.43",
+            "label_text": "Dry mass",
+            "unit_text": null,
+            "location": {
+              "section": "Installation",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                227.61910638419056,
+                336.8046712000001,
+                235.00606879999998
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "reported_weight",
+      "text": "0",
+      "line": "none",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "discharge_pressure",
+      "text": "0",
+      "line": "none",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "differential_pressure",
+      "text": "0",
+      "line": "none",
+      "reason": "unknown_line"
+    }
+  ],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "pump_type",
+        "basis": {},
+        "condition": {},
+        "scope": "Main pump specification",
+        "line": "L9",
+        "value": "centrifugal",
+        "unit": null,
+        "raw_text": "centrifugal"
+      },
+      {
+        "attribute": "capacity",
+        "basis": {},
+        "condition": {
+          "frequency": {
+            "value": 50,
+            "unit": "Hz"
+          },
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          },
+          "absolute_pressure": {
+            "value": 1,
+            "unit": "bar"
+          }
+        },
+        "scope": "Nominal operating conditions for main pump",
+        "line": "L10",
+        "value": 423.12,
+        "unit": "m3/h",
+        "raw_text": "423.12",
+        "label": "Capacity"
+      },
+      {
+        "attribute": "head",
+        "basis": {},
+        "condition": {
+          "frequency": {
+            "value": 50,
+            "unit": "Hz"
+          },
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          },
+          "absolute_pressure": {
+            "value": 1,
+            "unit": "bar"
+          }
+        },
+        "scope": "Main pump specification",
+        "line": "L11",
+        "value": 36,
+        "unit": "m",
+        "raw_text": "36",
+        "label": "Head"
+      },
+      {
+        "attribute": "medium",
+        "basis": {},
+        "condition": {},
+        "scope": "Operating fluid",
+        "line": "L12",
+        "value": "sea water",
+        "unit": null,
+        "raw_text": "sea water"
+      },
+      {
+        "attribute": "motor_power",
+        "basis": {},
+        "condition": {
+          "frequency": {
+            "value": 50,
+            "unit": "Hz"
+          },
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          }
+        },
+        "scope": "Rated output for drive motor",
+        "line": "L13",
+        "value": 79.33,
+        "unit": "kW",
+        "raw_text": "79.33",
+        "label": "Motor rating"
+      },
+      {
+        "attribute": "dimensions",
+        "basis": {},
+        "condition": {},
+        "scope": "Complete pump unit dimensions including motor and base",
+        "line": "L15",
+        "value": {
+          "length": 1580,
+          "width": 570,
+          "height": 760
+        },
+        "unit": "mm",
+        "raw_text": "1580 × 570 × 760",
+        "label": "Dimensions (L × W × H)"
+      },
+      {
+        "attribute": "dry_weight",
+        "basis": {},
+        "condition": {
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          },
+          "absolute_pressure": {
+            "value": 1,
+            "unit": "bar"
+          }
+        },
+        "scope": "Dry condition for complete pump unit with motor and base",
+        "line": "L16",
+        "value": 1075.43,
+        "unit": "kg",
+        "raw_text": "1075.43",
+        "label": "Dry mass"
+      },
+      {
+        "attribute": "reported_weight",
+        "basis": {},
+        "condition": {},
+        "scope": "Not explicitly stated in the document",
+        "line": "none",
+        "value": 0,
+        "unit": "kg",
+        "raw_text": "",
+        "label": "none"
+      },
+      {
+        "attribute": "discharge_pressure",
+        "basis": {},
+        "condition": {},
+        "scope": "Not explicitly stated in the document",
+        "line": "none",
+        "value": 0,
+        "unit": "bar",
+        "raw_text": "",
+        "label": "none"
+      },
+      {
+        "attribute": "differential_pressure",
+        "basis": {},
+        "condition": {},
+        "scope": "Not explicitly stated in the document",
+        "line": "none",
+        "value": 0,
+        "unit": "bar",
+        "raw_text": "",
+        "label": "none"
+      }
+    ]
+  },
+  "qualifiers": []
+}

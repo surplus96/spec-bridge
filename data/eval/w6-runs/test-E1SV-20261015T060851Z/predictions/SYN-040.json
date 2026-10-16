@@ -1,0 +1,728 @@
+{
+  "prediction": {
+    "document_id": "SYN-040",
+    "class_id": "FourStrokeEngine",
+    "class_candidates": [
+      "FourStrokeEngine",
+      "Pump"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-C Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-040",
+            "raw_text": "SGDW-20261007-C Synthetic Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "sheet": "Specification",
+              "cell_ref": "A5"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX007-140",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-040",
+            "raw_text": "VX007-140",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "sheet": "Specification",
+              "cell_ref": "A6"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "number_of_cylinders",
+        "value": 6,
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-040",
+            "raw_text": "6",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B9"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "bore",
+        "value": 230,
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-040",
+            "raw_text": "230",
+            "label_text": null,
+            "unit_text": "mm",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B10"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "stroke",
+        "value": 300,
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-040",
+            "raw_text": "300",
+            "label_text": null,
+            "unit_text": "mm",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B11"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "application",
+        "value": "cargo pump drive",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-040",
+            "raw_text": "cargo pump drive",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B12"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_power",
+        "value": 3267.0,
+        "unit": "kW",
+        "basis": {
+          "rating": "continuous_engine_shaft"
+        },
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": "engine_shaft",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-040",
+            "raw_text": "3267.0",
+            "label_text": null,
+            "unit_text": "kW",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B13"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_speed",
+        "value": 1000,
+        "unit": "rpm",
+        "basis": {},
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": "engine_crankshaft",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-040",
+            "raw_text": "1000",
+            "label_text": null,
+            "unit_text": "rpm",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B14"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "fuel_types",
+        "value": [
+          "MDO",
+          "MGO"
+        ],
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-040",
+            "raw_text": "MDO, MGO",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B15"
+            }
+          },
+          {
+            "source_document_id": "SYN-040",
+            "raw_text": "MDO, MGO",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Notes",
+              "sheet": "Specification",
+              "cell_ref": "A19"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 5000,
+          "width": 2100,
+          "height": 2920
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "engine_without_generator",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-040",
+            "raw_text": "5000 × 2100 × 2920",
+            "label_text": null,
+            "unit_text": "mm",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B16"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 29304.0,
+        "unit": "kg",
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {},
+        "scope": "engine_without_generator",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-040",
+            "raw_text": "29304.0",
+            "label_text": null,
+            "unit_text": "kg",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B17"
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "line": "L5",
+        "value_text": "SGDW-20261007-C Synthetic Works",
+        "unit_text": null
+      },
+      {
+        "attribute": "model_designation",
+        "line": "L6",
+        "value_text": "VX007-140",
+        "unit_text": null
+      },
+      {
+        "attribute": "number_of_cylinders",
+        "line": "L9",
+        "value_text": "6",
+        "unit_text": null
+      },
+      {
+        "attribute": "bore",
+        "line": "L10",
+        "value_text": "230",
+        "unit_text": "mm"
+      },
+      {
+        "attribute": "stroke",
+        "line": "L11",
+        "value_text": "300",
+        "unit_text": "mm"
+      },
+      {
+        "attribute": "application",
+        "line": "L12",
+        "value_text": "cargo pump drive",
+        "unit_text": null
+      },
+      {
+        "attribute": "rated_power",
+        "line": "L13",
+        "value_text": "3267.0",
+        "unit_text": "kW"
+      },
+      {
+        "attribute": "rated_speed",
+        "line": "L14",
+        "value_text": "1000",
+        "unit_text": "rpm"
+      },
+      {
+        "attribute": "fuel_types",
+        "line": "L15",
+        "value_text": "MDO, MGO",
+        "unit_text": null
+      },
+      {
+        "attribute": "fuel_types",
+        "line": "L19",
+        "value_text": "MDO, MGO",
+        "unit_text": null
+      },
+      {
+        "attribute": "dimensions",
+        "line": "L16",
+        "value_text": "5000 × 2100 × 2920",
+        "unit_text": "mm"
+      },
+      {
+        "attribute": "dry_weight",
+        "line": "L17",
+        "value_text": "29304.0",
+        "unit_text": "kg"
+      },
+      {
+        "attribute": "reported_weight",
+        "line": "L17",
+        "value_text": "29304.0",
+        "unit_text": "kg"
+      }
+    ]
+  },
+  "qualifiers": [
+    {
+      "kind": "conflict",
+      "line": "Dry weight | 29304.0 | kg | dry, engine without generator",
+      "candidates": [
+        "dry_weight",
+        "reported_weight"
+      ],
+      "votes": {
+        "dry_weight": 3
+      },
+      "kept": "dry_weight",
+      "retrieved_ids": [
+        "SYN-012:O011",
+        "SYN-029:O011",
+        "SYN-011:O011"
+      ]
+    },
+    {
+      "kind": "value",
+      "attribute": "maker",
+      "value_text": "SGDW-20261007-C Synthetic Works",
+      "location": {
+        "section": "Product data",
+        "sheet": "Specification",
+        "cell_ref": "A5"
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.medium: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [
+        "SYN-010:O001",
+        "SYN-011:O001",
+        "SYN-029:O001"
+      ],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "model_designation",
+      "value_text": "VX007-140",
+      "location": {
+        "section": "Product data",
+        "sheet": "Specification",
+        "cell_ref": "A6"
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.medium: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [
+        "SYN-019:O002",
+        "SYN-017:O002",
+        "SYN-008:O002"
+      ],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "number_of_cylinders",
+      "value_text": "6",
+      "location": {
+        "section": "Main particulars",
+        "sheet": "Specification",
+        "cell_ref": "B9"
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.rating_point: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [
+        "SYN-011:O003",
+        "SYN-029:O003",
+        "SYN-010:O003"
+      ],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "bore",
+      "value_text": "230",
+      "location": {
+        "section": "Main particulars",
+        "sheet": "Specification",
+        "cell_ref": "B10"
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.rating_point: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [
+        "SYN-012:O004",
+        "SYN-011:O004",
+        "SYN-029:O004"
+      ],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "stroke",
+      "value_text": "300",
+      "location": {
+        "section": "Main particulars",
+        "sheet": "Specification",
+        "cell_ref": "B11"
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.rating_point: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [
+        "SYN-012:O005",
+        "SYN-026:O004",
+        "SYN-011:O005"
+      ],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "application",
+      "value_text": "cargo pump drive",
+      "location": {
+        "section": "Main particulars",
+        "sheet": "Specification",
+        "cell_ref": "B12"
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.rating_point: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [
+        "SYN-012:O006",
+        "SYN-011:O006",
+        "SYN-024:O003"
+      ],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "rated_power",
+      "value_text": "3267.0",
+      "location": {
+        "section": "Main particulars",
+        "sheet": "Specification",
+        "cell_ref": "B13"
+      },
+      "qualifiers": {
+        "basis": {
+          "rating": "continuous_engine_shaft"
+        },
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": "engine shaft"
+      },
+      "evidence": {
+        "basis.rating": "continuous output",
+        "condition.rating_point": "rating point R1",
+        "scope": "engine shaft"
+      },
+      "rejected": [],
+      "retrieved_ids": [
+        "SYN-029:O007",
+        "SYN-026:O006",
+        "SYN-011:O007"
+      ],
+      "before_check": {
+        "basis": {
+          "rating": "continuous_engine_shaft"
+        },
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": "engine shaft"
+      }
+    },
+    {
+      "kind": "value",
+      "attribute": "rated_speed",
+      "value_text": "1000",
+      "location": {
+        "section": "Main particulars",
+        "sheet": "Specification",
+        "cell_ref": "B14"
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": "engine crankshaft"
+      },
+      "evidence": {
+        "condition.rating_point": "R1",
+        "scope": "engine crankshaft"
+      },
+      "rejected": [
+        "basis.rating: evidence not in the line"
+      ],
+      "retrieved_ids": [
+        "SYN-031:O007",
+        "SYN-034:O007",
+        "SYN-010:O007"
+      ],
+      "before_check": {
+        "basis": {},
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": "engine crankshaft"
+      }
+    },
+    {
+      "kind": "value",
+      "attribute": "fuel_types",
+      "value_text": "MDO, MGO",
+      "location": {
+        "section": "Main particulars",
+        "sheet": "Specification",
+        "cell_ref": "B15"
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence"
+      ],
+      "retrieved_ids": [
+        "SYN-011:O009",
+        "SYN-012:O009",
+        "SYN-011:O012"
+      ],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "fuel_types",
+      "value_text": "MDO, MGO",
+      "location": {
+        "section": "Notes",
+        "sheet": "Specification",
+        "cell_ref": "A19"
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [],
+      "retrieved_ids": [
+        "SYN-011:O009",
+        "SYN-012:O009",
+        "SYN-011:O012"
+      ],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "dimensions",
+      "value_text": "5000 × 2100 × 2920",
+      "location": {
+        "section": "Main particulars",
+        "sheet": "Specification",
+        "cell_ref": "B16"
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": "engine without generator"
+      },
+      "evidence": {
+        "scope": "for engine without generator"
+      },
+      "rejected": [
+        "basis.rating: not supported (self-check)",
+        "condition.engine_type: not supported (self-check)"
+      ],
+      "retrieved_ids": [
+        "SYN-029:O010",
+        "SYN-012:O010",
+        "SYN-011:O010"
+      ],
+      "before_check": {
+        "basis": {
+          "rating": "nominal"
+        },
+        "condition": {
+          "engine_type": "four-stroke"
+        },
+        "scope": "engine without generator"
+      }
+    },
+    {
+      "kind": "value",
+      "attribute": "dry_weight",
+      "value_text": "29304.0",
+      "location": {
+        "section": "Main particulars",
+        "sheet": "Specification",
+        "cell_ref": "B17"
+      },
+      "qualifiers": {
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {},
+        "scope": "engine without generator"
+      },
+      "evidence": {
+        "basis.weight": "dry",
+        "scope": "engine without generator"
+      },
+      "rejected": [],
+      "retrieved_ids": [
+        "SYN-012:O011",
+        "SYN-029:O011",
+        "SYN-011:O011"
+      ],
+      "before_check": {
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {},
+        "scope": "engine without generator"
+      }
+    }
+  ]
+}

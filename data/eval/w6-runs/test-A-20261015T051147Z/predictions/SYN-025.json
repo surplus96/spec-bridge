@@ -1,0 +1,155 @@
+{
+  "prediction": {
+    "document_id": "SYN-025",
+    "class_id": "Separator",
+    "class_candidates": [
+      "Separator",
+      "Pump"
+    ],
+    "facts": [],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "Name",
+      "text": "Marine centrifugal oil separator",
+      "line": "{'Product': 'L3', 'Maker': 'L5', 'Model': 'L6', 'Max Recommended Capacity Low Viscosity': 'L11', 'Max Recommended Capacity High Viscosity': 'L12', 'Self-Cleaning': 'L13', 'Motor Rating': 'L14', 'Dimensions Length': 'L16', 'Dimensions Width': 'L16', 'Dimensions Height': 'L16', 'Dry Mass': 'L17', 'Operating Notes Max Recommended Capacity': 'L19'}",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "maker",
+      "text": "SGDW-20261007-D Synthetic Works",
+      "line": "",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "Model",
+      "text": "VX020-021",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Max Recommended Capacity",
+      "text": "{'Low Viscosity': {'Value': '2408.7', 'Unit': 'l/h', 'Fluid Reference': '380 cSt/50 degC', 'Description': 'main separator'}, 'High Viscosity': {'Value': '1565.65', 'Unit': 'l/h', 'Fluid Reference': '700 cSt/50 degC', 'Description': 'main separator'}}",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Self-Cleaning",
+      "text": "Yes",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Motor Rating",
+      "text": "{'Value': '8.03', 'Unit': 'kW', 'Description': 'separator drive motor'}",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "dimensions",
+      "text": "{'Length': '2240', 'Width': '1185', 'Height': '1930', 'Unit': 'mm', 'Notes': 'complete separator module with feed pump heater control'}",
+      "line": "",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "Dry Mass",
+      "text": "{'Value': '848.78', 'Unit': 'kg', 'Notes': 'dry; complete separator module with feed pump heater control'}",
+      "line": "",
+      "reason": "unknown_attribute"
+    }
+  ],
+  "reply": {
+    "attributes": {
+      "Name": "Marine centrifugal oil separator",
+      "Maker": "SGDW-20261007-D Synthetic Works",
+      "Model": "VX020-021",
+      "Max Recommended Capacity": {
+        "Low Viscosity": {
+          "Value": "2408.7",
+          "Unit": "l/h",
+          "Fluid Reference": "380 cSt/50 degC",
+          "Description": "main separator"
+        },
+        "High Viscosity": {
+          "Value": "1565.65",
+          "Unit": "l/h",
+          "Fluid Reference": "700 cSt/50 degC",
+          "Description": "main separator"
+        }
+      },
+      "Self-Cleaning": "Yes",
+      "Motor Rating": {
+        "Value": "8.03",
+        "Unit": "kW",
+        "Description": "separator drive motor"
+      },
+      "Dimensions": {
+        "Length": "2240",
+        "Width": "1185",
+        "Height": "1930",
+        "Unit": "mm",
+        "Notes": "complete separator module with feed pump heater control"
+      },
+      "Dry Mass": {
+        "Value": "848.78",
+        "Unit": "kg",
+        "Notes": "dry; complete separator module with feed pump heater control"
+      }
+    },
+    "lines": {
+      "Name": {
+        "Product": "L3",
+        "Maker": "L5",
+        "Model": "L6",
+        "Max Recommended Capacity Low Viscosity": "L11",
+        "Max Recommended Capacity High Viscosity": "L12",
+        "Self-Cleaning": "L13",
+        "Motor Rating": "L14",
+        "Dimensions Length": "L16",
+        "Dimensions Width": "L16",
+        "Dimensions Height": "L16",
+        "Dry Mass": "L17",
+        "Operating Notes Max Recommended Capacity": "L19"
+      },
+      "Value": {
+        "Max Recommended Capacity Low Viscosity Value": "L11",
+        "Max Recommended Capacity Low Viscosity Unit": "L11",
+        "Max Recommended Capacity Low Viscosity Fluid Reference": "L11",
+        "Max Recommended Capacity Low Viscosity Description": "L11",
+        "Max Recommended Capacity High Viscosity Value": "L12",
+        "Max Recommended Capacity High Viscosity Unit": "L12",
+        "Max Recommended Capacity High Viscosity Fluid Reference": "L12",
+        "Max Recommended Capacity High Viscosity Description": "L12",
+        "Self-Cleaning Value": "L13",
+        "Motor Rating Value": "L14",
+        "Motor Rating Unit": "L14",
+        "Motor Rating Description": "L14",
+        "Dimensions Length Value": "L16",
+        "Dimensions Width Value": "L16",
+        "Dimensions Height Value": "L16",
+        "Dry Mass Value": "L17",
+        "Dry Mass Unit": "L17",
+        "Dry Mass Notes": "L17",
+        "Operating Notes Max Recommended Capacity Value": "L19",
+        "Operating Notes Max Recommended Capacity Unit": "L19",
+        "Operating Notes Max Recommended Capacity Fluid Reference": "L19",
+        "Operating Notes Max Recommended Capacity Description": "L19"
+      },
+      "Unit": {
+        "Max Recommended Capacity Low Viscosity Unit": "L11",
+        "Max Recommended Capacity High Viscosity Unit": "L12",
+        "Motor Rating Unit": "L14",
+        "Dry Mass Unit": "L17"
+      },
+      "Remarks": {
+        "Max Recommended Capacity Low Viscosity": "L11",
+        "Max Recommended Capacity High Viscosity": "L12",
+        "Dry Mass Notes": "L17",
+        "Operating Notes Max Recommended Capacity": "L19"
+      }
+    }
+  },
+  "qualifiers": []
+}

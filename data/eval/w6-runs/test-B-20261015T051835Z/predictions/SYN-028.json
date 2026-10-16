@@ -1,0 +1,450 @@
+{
+  "prediction": {
+    "document_id": "SYN-028",
+    "class_id": "FourStrokeEngine",
+    "class_candidates": [
+      "FourStrokeEngine"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-D Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "manufacturer_identification",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-028",
+            "raw_text": "SGDW-20261007-D Synthetic Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "General",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                467.6191063841906,
+                204.27343200000007,
+                475.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX008-128",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "specific_model_identification",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-028",
+            "raw_text": "VX008-128",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "General",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                449.6191063841906,
+                155.41015040000002,
+                457.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "number_of_cylinders",
+        "value": 8,
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "engine_configuration",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-028",
+            "raw_text": "8",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                380.6190801146593,
+                182.89409840000002,
+                388.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "fuel_types",
+        "value": [
+          "MDO",
+          "MGO"
+        ],
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "fuel_compatibility",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-028",
+            "raw_text": "MDO, MGO",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                212.61908011465925,
+                220.66362880000003,
+                220.00604253046868
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 5300,
+          "width": 2200,
+          "height": 3080
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {
+          "frequency": {
+            "value": 0,
+            "unit": "Hz"
+          }
+        },
+        "scope": "physical_dimensions_of_the_engine",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-028",
+            "raw_text": "5300 × 2200 × 3080 mm (engine without generator)",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Dimensions and weight",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                161.61910638419056,
+                318.58983040000004,
+                169.00606879999998
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 38678.4,
+        "unit": "kg",
+        "basis": {},
+        "condition": {
+          "frequency": {
+            "value": 0,
+            "unit": "Hz"
+          }
+        },
+        "scope": "dry_mass_of_the_engine",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-028",
+            "raw_text": "38678.4 kg (dry, for engine without generator)",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Dimensions and weight",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                143.61910638419056,
+                246.54295680000016,
+                151.00606879999998
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "fuel_types",
+        "value": [
+          "MDO",
+          "MGO"
+        ],
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "fuel_compatibility_repeated",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-028",
+            "raw_text": "MDO, MGO",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Remarks",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                100.61909638419058,
+                108.22655999999999,
+                108.0060588
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "bore",
+      "text": "260 mm",
+      "line": "L10",
+      "reason": "not_in_line"
+    },
+    {
+      "attribute": "stroke",
+      "text": "330 mm",
+      "line": "L11",
+      "reason": "not_in_line"
+    },
+    {
+      "attribute": "rated_power",
+      "text": "4929.6 kW",
+      "line": "L13",
+      "reason": "not_in_line"
+    },
+    {
+      "attribute": "rated_power",
+      "text": "4338.05 kW",
+      "line": "L14",
+      "reason": "not_in_line"
+    },
+    {
+      "attribute": "rated_speed",
+      "text": "750 rpm",
+      "line": "L15",
+      "reason": "not_in_line"
+    },
+    {
+      "attribute": "rated_speed",
+      "text": "900 rpm",
+      "line": "L16",
+      "reason": "not_in_line"
+    }
+  ],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "basis": {},
+        "condition": {},
+        "scope": "Manufacturer identification",
+        "line": "L5",
+        "value": "SGDW-20261007-D Synthetic Works",
+        "unit": null,
+        "raw_text": "SGDW-20261007-D Synthetic Works"
+      },
+      {
+        "attribute": "model_designation",
+        "basis": {},
+        "condition": {},
+        "scope": "Specific model identification",
+        "line": "L6",
+        "value": "VX008-128",
+        "unit": null,
+        "raw_text": "VX008-128"
+      },
+      {
+        "attribute": "number_of_cylinders",
+        "basis": {},
+        "condition": {},
+        "scope": "Engine configuration",
+        "line": "L9",
+        "value": 8,
+        "unit": null,
+        "raw_text": "8"
+      },
+      {
+        "attribute": "bore",
+        "basis": {},
+        "condition": {},
+        "scope": "Cylinder diameter",
+        "line": "L10",
+        "value": 260,
+        "unit": "mm",
+        "raw_text": "260 mm"
+      },
+      {
+        "attribute": "stroke",
+        "basis": {},
+        "condition": {},
+        "scope": "Cylinder stroke length",
+        "line": "L11",
+        "value": 330,
+        "unit": "mm",
+        "raw_text": "330 mm"
+      },
+      {
+        "attribute": "rated_power",
+        "basis": {},
+        "condition": {
+          "rating_point": "R1",
+          "frequency": {
+            "value": 50,
+            "unit": "Hz"
+          },
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          },
+          "viscosity": {
+            "value": 32,
+            "unit": "cSt"
+          }
+        },
+        "scope": "Engine power output at specified conditions",
+        "line": "L13",
+        "value": 4929.6,
+        "unit": "kW",
+        "raw_text": "4929.6 kW"
+      },
+      {
+        "attribute": "rated_power",
+        "basis": {},
+        "condition": {
+          "rating_point": "R2",
+          "frequency": {
+            "value": 60,
+            "unit": "Hz"
+          },
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          },
+          "viscosity": {
+            "value": 32,
+            "unit": "cSt"
+          }
+        },
+        "scope": "Engine power output at specified conditions",
+        "line": "L14",
+        "value": 4338.05,
+        "unit": "kW",
+        "raw_text": "4338.05 kW"
+      },
+      {
+        "attribute": "rated_speed",
+        "basis": {},
+        "condition": {
+          "rating_point": "R1",
+          "frequency": {
+            "value": 50,
+            "unit": "Hz"
+          }
+        },
+        "scope": "Engine speed at specified conditions",
+        "line": "L15",
+        "value": 750,
+        "unit": "rpm",
+        "raw_text": "750 rpm"
+      },
+      {
+        "attribute": "rated_speed",
+        "basis": {},
+        "condition": {
+          "rating_point": "R2",
+          "frequency": {
+            "value": 60,
+            "unit": "Hz"
+          }
+        },
+        "scope": "Engine speed at specified conditions",
+        "line": "L16",
+        "value": 900,
+        "unit": "rpm",
+        "raw_text": "900 rpm"
+      },
+      {
+        "attribute": "fuel_types",
+        "basis": {},
+        "condition": {},
+        "scope": "Fuel compatibility",
+        "line": "L17",
+        "value": [
+          "MDO",
+          "MGO"
+        ],
+        "unit": null,
+        "raw_text": "MDO, MGO"
+      },
+      {
+        "attribute": "dimensions",
+        "basis": {},
+        "condition": {
+          "engine_type": "none",
+          "frequency": {
+            "value": 0,
+            "unit": "Hz"
+          }
+        },
+        "scope": "Physical dimensions of the engine",
+        "line": "L19",
+        "value": {
+          "length": 5300,
+          "width": 2200,
+          "height": 3080
+        },
+        "unit": "mm",
+        "raw_text": "5300 × 2200 × 3080 mm (engine without generator)"
+      },
+      {
+        "attribute": "dry_weight",
+        "basis": {},
+        "condition": {
+          "engine_type": "none",
+          "frequency": {
+            "value": 0,
+            "unit": "Hz"
+          }
+        },
+        "scope": "Dry mass of the engine",
+        "line": "L20",
+        "value": 38678.4,
+        "unit": "kg",
+        "raw_text": "38678.4 kg (dry, for engine without generator)"
+      },
+      {
+        "attribute": "fuel_types",
+        "basis": {},
+        "condition": {},
+        "scope": "Fuel compatibility (repeated)",
+        "line": "L22",
+        "value": [
+          "MDO",
+          "MGO"
+        ],
+        "unit": null,
+        "raw_text": "MDO, MGO"
+      }
+    ]
+  },
+  "qualifiers": []
+}

@@ -1,0 +1,373 @@
+schema_version: 3
+input_id: DOC-003
+origin: synthetic
+status: converted_from_v2_helper_draft
+expected_class: Separator
+facts:
+- fact_id: F001
+  attribute_id: maker
+  value: Hallmar Separation AB
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O001
+  - O002
+  admissibility: supported
+- fact_id: F002
+  attribute_id: model_designation
+  value: HSX 40
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O003
+  admissibility: supported
+- fact_id: F003
+  attribute_id: application
+  value: fuel_oil
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O004
+  - O005
+  - O006
+  admissibility: supported
+- fact_id: F004
+  attribute_id: rated_throughput
+  value: 3600
+  unit: l/h
+  basis: &id001
+    rating: maximum_capacity
+  condition:
+    medium: HFO
+    viscosity:
+      value: 380
+      unit: cSt
+      reference_temperature:
+        value: 50
+        unit: degC
+    viscosity_basis: fuel_reference
+  scope: main_equipment
+  observation_ids:
+  - O007
+  - O008
+  admissibility: supported
+- fact_id: F005
+  attribute_id: rated_throughput
+  value: 2100
+  unit: l/h
+  basis: *id001
+  condition:
+    medium: HFO
+    viscosity:
+      value: 700
+      unit: cSt
+      reference_temperature:
+        value: 50
+        unit: degC
+    viscosity_basis: fuel_reference
+  scope: main_equipment
+  observation_ids:
+  - O009
+  admissibility: supported
+- fact_id: F006
+  attribute_id: self_cleaning
+  value: true
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O010
+  - O011
+  - O012
+  admissibility: supported
+- fact_id: F007
+  attribute_id: medium
+  value: heavy_fuel_oil
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O013
+  - O014
+  - O015
+  - O016
+  - O017
+  - O018
+  admissibility: supported
+- fact_id: F008
+  attribute_id: motor_power
+  value: 7.5
+  unit: kW
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O019
+  admissibility: supported
+- fact_id: F009
+  attribute_id: dimensions
+  value:
+    length: 1100
+    width: 1050
+    height: 1550
+  unit: mm
+  basis: {}
+  condition: {}
+  scope: complete_separator_module
+  observation_ids:
+  - O020
+  admissibility: supported
+- fact_id: F010
+  attribute_id: dry_weight
+  value: 790
+  unit: kg
+  basis:
+    weight: dry
+  condition: {}
+  scope: complete_separator_module_including_feed_pump_heater_and_control_unit
+  observation_ids:
+  - O021
+  admissibility: supported
+observations:
+- observation_id: O001
+  attribute_id: maker
+  raw_text: Hallmar Separation AB
+  label_text: Issued by
+  unit_text: null
+  location:
+    paragraph: 3
+    line: 3
+    section: null
+  interpretation: normalized
+- observation_id: O002
+  attribute_id: maker
+  raw_text: Hallmar Separation AB
+  label_text: Maker
+  unit_text: null
+  location:
+    paragraph: 7
+    line: 7
+    section: 1. General
+  interpretation: normalized
+- observation_id: O003
+  attribute_id: model_designation
+  raw_text: HSX 40
+  label_text: Model designation
+  unit_text: null
+  location:
+    paragraph: 8
+    line: 8
+    section: 1. General
+  interpretation: normalized
+- observation_id: O004
+  attribute_id: application
+  raw_text: Heavy fuel oil purification
+  label_text: Application
+  unit_text: null
+  location:
+    paragraph: 10
+    line: 10
+    section: 1. General
+  interpretation: normalized
+- observation_id: O005
+  attribute_id: application
+  raw_text: Heavy fuel oil purification
+  label_text: Application
+  unit_text: null
+  location:
+    table: 1
+    row: 2
+    cell: 2
+    line: 17
+  interpretation: normalized
+- observation_id: O006
+  attribute_id: application
+  raw_text: heavy fuel oil treatment
+  label_text: Product description
+  unit_text: null
+  location:
+    paragraph: 9
+    line: 9
+    section: 1. General
+  interpretation: normalized
+- observation_id: O007
+  attribute_id: rated_throughput
+  raw_text: 3,600
+  label_text: Max. capacity, HFO 380 cSt at 50 °C
+  unit_text: l/h
+  location:
+    table: 1
+    row: 3
+    cell: 2
+    line: 18
+  interpretation: normalized
+- observation_id: O008
+  attribute_id: rated_throughput
+  raw_text: 3,600 l/h
+  label_text: handles up to
+  unit_text: null
+  location:
+    paragraph: 24
+    line: 24
+    section: 3. Process and Operation
+  interpretation: normalized
+- observation_id: O009
+  attribute_id: rated_throughput
+  raw_text: 2,100
+  label_text: Max. capacity, HFO 700 cSt at 50 °C
+  unit_text: l/h
+  location:
+    table: 1
+    row: 4
+    cell: 2
+    line: 19
+  interpretation: normalized
+- observation_id: O010
+  attribute_id: self_cleaning
+  raw_text: Self-cleaning disc stack
+  label_text: Bowl type
+  unit_text: null
+  location:
+    table: 1
+    row: 5
+    cell: 2
+    line: 20
+  interpretation: normalized
+- observation_id: O011
+  attribute_id: self_cleaning
+  raw_text: self-cleaning disc stack bowl
+  label_text: Product description
+  unit_text: null
+  location:
+    paragraph: 9
+    line: 9
+    section: 1. General
+  interpretation: normalized
+- observation_id: O012
+  attribute_id: self_cleaning
+  raw_text: discharged automatically
+  label_text: Sludge discharge
+  unit_text: null
+  location:
+    paragraph: 25
+    line: 25
+    section: 3. Process and Operation
+  interpretation: normalized
+- observation_id: O013
+  attribute_id: medium
+  raw_text: Heavy fuel oil
+  label_text: Process medium
+  unit_text: null
+  location:
+    paragraph: 24
+    line: 24
+    section: 3. Process and Operation
+  interpretation: normalized
+- observation_id: O014
+  attribute_id: medium
+  raw_text: heavy fuel oil
+  label_text: Product description
+  unit_text: null
+  location:
+    paragraph: 9
+    line: 9
+    section: 1. General
+  interpretation: normalized
+- observation_id: O015
+  attribute_id: medium
+  raw_text: Heavy fuel oil
+  label_text: Application
+  unit_text: null
+  location:
+    paragraph: 10
+    line: 10
+    section: 1. General
+  interpretation: normalized
+- observation_id: O016
+  attribute_id: medium
+  raw_text: Heavy fuel oil
+  label_text: Application
+  unit_text: null
+  location:
+    table: 1
+    row: 2
+    cell: 2
+    line: 17
+  interpretation: normalized
+- observation_id: O017
+  attribute_id: medium
+  raw_text: HFO
+  label_text: Max. capacity
+  unit_text: null
+  location:
+    table: 1
+    row: 3
+    cell: 1
+    line: 18
+  interpretation: normalized
+- observation_id: O018
+  attribute_id: medium
+  raw_text: HFO
+  label_text: Max. capacity
+  unit_text: null
+  location:
+    table: 1
+    row: 4
+    cell: 1
+    line: 19
+  interpretation: normalized
+- observation_id: O019
+  attribute_id: motor_power
+  raw_text: '7.5'
+  label_text: Motor power
+  unit_text: kW
+  location:
+    table: 1
+    row: 6
+    cell: 2
+    line: 21
+  interpretation: normalized
+- observation_id: O020
+  attribute_id: dimensions
+  raw_text: 1,550 × 1,100 × 1,050 mm
+  label_text: Size (H × L × W)
+  unit_text: null
+  location:
+    paragraph: 28
+    line: 28
+    section: 4. Dimensions and Weight
+  interpretation: normalized
+- observation_id: O021
+  attribute_id: dry_weight
+  raw_text: 790 kg
+  label_text: Net weight
+  unit_text: null
+  location:
+    paragraph: 29
+    line: 29
+    section: 4. Dimensions and Weight
+  interpretation: normalized
+issues: []
+missing_required: []
+conversion:
+  source: data/eval/handwritten/HW-SEP-001.answer.yaml
+  doc_id: HW-SEP-001
+  author: Claude (draft)
+  reviewed_by: null
+  notes:
+  - 'rated_throughput: condition ''°C'' written as ''degC'''
+  - 'rated_throughput: condition ''°C'' written as ''degC'''
+  - 'rated_throughput: conditional value 2100 l/h as a fact'
+  - 'dimensions: scope ''complete_separator_module_with_feed_pump_heater_control''
+    -> ''complete_separator_module'' (document phrase)'
+  - 'dry_weight: scope ''complete_separator_module_with_feed_pump_heater_control''
+    -> ''complete_separator_module_including_feed_pump_heater_and_control_unit'' (document
+    phrase)'

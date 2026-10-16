@@ -1,0 +1,95 @@
+{
+  "prediction": {
+    "document_id": "SYN-001",
+    "class_id": "AirCompressor",
+    "class_candidates": [
+      "AirCompressor"
+    ],
+    "facts": [],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "Name",
+      "text": "Marine air compressor",
+      "line": "{'Marine air compressor': 'L3', 'SGDW-20261007-D Synthetic Works': 'L5', 'VX012-101': 'L6', '30 bar': 'L9', 'water': 'L10', 'air': 'L11', '49.5 kW': 'L12', '1400 × 795 × 1005 mm': 'L13', '1109.55 kg': 'L14'}",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "maker",
+      "text": "SGDW-20261007-D Synthetic Works",
+      "line": "",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "Model",
+      "text": "VX012-101",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Maximum Pressure",
+      "text": "30 bar",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Cooling Type",
+      "text": "water",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "medium",
+      "text": "air",
+      "line": "",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "Motor Power",
+      "text": "49.5 kW",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "dimensions",
+      "text": "1400 × 795 × 1005 mm",
+      "line": "",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "Dry Mass",
+      "text": "1109.55 kg",
+      "line": "",
+      "reason": "unknown_attribute"
+    }
+  ],
+  "reply": {
+    "attributes": {
+      "Name": "Marine air compressor",
+      "Maker": "SGDW-20261007-D Synthetic Works",
+      "Model": "VX012-101",
+      "Maximum Pressure": "30 bar",
+      "Cooling Type": "water",
+      "Medium": "air",
+      "Motor Power": "49.5 kW",
+      "Dimensions": "1400 × 795 × 1005 mm",
+      "Dry Mass": "1109.55 kg"
+    },
+    "lines": {
+      "Name": {
+        "Marine air compressor": "L3",
+        "SGDW-20261007-D Synthetic Works": "L5",
+        "VX012-101": "L6",
+        "30 bar": "L9",
+        "water": "L10",
+        "air": "L11",
+        "49.5 kW": "L12",
+        "1400 × 795 × 1005 mm": "L13",
+        "1109.55 kg": "L14"
+      }
+    }
+  },
+  "qualifiers": []
+}

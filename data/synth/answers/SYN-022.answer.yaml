@@ -1,0 +1,339 @@
+schema_version: 3
+input_id: SYN-022
+origin: synthetic
+expected_class: Separator
+status: final_v1; frozen by user decision D-019 (2026-10-08); reviewed_by awaits user signature
+artifact:
+  path: data/synth/inputs/SYN-022.xlsx
+  sha256: 9514f9adba6b52d222a56b64396074fa3a7ac733921c0608da5c041e3c7b0267
+  file_format: xlsx
+  location_verified: true
+  source_path: data/synth/test/sources/SYN-022.md
+  source_sha256: 636b146b8037134a9aec9588bd915997530f256d43e1e866ee77eed6e74d72dc
+  verification_method: independent file-content audit
+observations:
+- observation_id: O001
+  attribute_id: maker
+  raw_text: SGDW-20261007-D Synthetic Works
+  label_text: Maker
+  unit_text: null
+  location:
+    source_line: 9
+    source_section: General
+    pdf_page: null
+    sheet: Specification
+    cell_or_range: A5
+    value_cell: A5
+  interpretation: normalized
+  parsed_value: SGDW-20261007-D Synthetic Works
+  parsed_unit: null
+- observation_id: O002
+  attribute_id: model_designation
+  raw_text: VX020-122
+  label_text: Model designation
+  unit_text: null
+  location:
+    source_line: 11
+    source_section: General
+    pdf_page: null
+    sheet: Specification
+    cell_or_range: A6
+    value_cell: A6
+  interpretation: normalized
+  parsed_value: VX020-122
+  parsed_unit: null
+- observation_id: O003
+  attribute_id: application
+  raw_text: fresh water
+  label_text: Service
+  unit_text: null
+  location:
+    source_line: 17
+    source_section: Technical data
+    pdf_page: null
+    source_table: 1
+    source_row: 1
+    sheet: Specification
+    cell_or_range: A9:D9
+    value_cell: B9
+  interpretation: unsupported_value
+  parsed_value: fresh water
+  parsed_unit: null
+- observation_id: O004
+  attribute_id: medium
+  raw_text: lube oil
+  label_text: Fluid
+  unit_text: null
+  location:
+    source_line: 18
+    source_section: Technical data
+    pdf_page: null
+    source_table: 1
+    source_row: 2
+    sheet: Specification
+    cell_or_range: A10:D10
+    value_cell: B10
+  interpretation: normalized
+  parsed_value: lubricating_oil
+  parsed_unit: null
+- observation_id: O005
+  attribute_id: rated_throughput
+  raw_text: '3893.4'
+  label_text: Rated throughput
+  unit_text: l/h
+  location:
+    source_line: 19
+    source_section: Technical data
+    pdf_page: null
+    source_table: 1
+    source_row: 3
+    sheet: Specification
+    cell_or_range: A11:D11
+    value_cell: B11
+  interpretation: normalized
+  parsed_value: 3893.4
+  parsed_unit: l/h
+- observation_id: O006
+  attribute_id: rated_throughput
+  raw_text: '2530.71'
+  label_text: Rated throughput
+  unit_text: l/h
+  location:
+    source_line: 20
+    source_section: Technical data
+    pdf_page: null
+    source_table: 1
+    source_row: 4
+    sheet: Specification
+    cell_or_range: A12:D12
+    value_cell: B12
+  interpretation: normalized
+  parsed_value: 2530.71
+  parsed_unit: l/h
+- observation_id: O007
+  attribute_id: self_cleaning
+  raw_text: 'Yes'
+  label_text: Self-cleaning
+  unit_text: null
+  location:
+    source_line: 21
+    source_section: Technical data
+    pdf_page: null
+    source_table: 1
+    source_row: 5
+    sheet: Specification
+    cell_or_range: A13:D13
+    value_cell: B13
+  interpretation: normalized
+  parsed_value: true
+  parsed_unit: null
+- observation_id: O008
+  attribute_id: motor_power
+  raw_text: '12.98'
+  label_text: Motor rating
+  unit_text: kW
+  location:
+    source_line: 22
+    source_section: Technical data
+    pdf_page: null
+    source_table: 1
+    source_row: 6
+    sheet: Specification
+    cell_or_range: A14:D14
+    value_cell: B14
+  interpretation: normalized
+  parsed_value: 12.98
+  parsed_unit: kW
+- observation_id: O009
+  attribute_id: dimensions
+  raw_text: 2240 × 1185 × 1930
+  label_text: Overall dimensions (L × W × H)
+  unit_text: mm
+  location:
+    source_line: 23
+    source_section: Technical data
+    pdf_page: null
+    source_table: 1
+    source_row: 7
+    sheet: Specification
+    cell_or_range: A15:D15
+    value_cell: B15
+  interpretation: normalized
+  parsed_value:
+    length: 2240
+    width: 1185
+    height: 1930
+  parsed_unit: mm
+- observation_id: O010
+  attribute_id: dry_weight
+  raw_text: '1371.96'
+  label_text: Dry weight
+  unit_text: kg
+  location:
+    source_line: 24
+    source_section: Technical data
+    pdf_page: null
+    source_table: 1
+    source_row: 8
+    sheet: Specification
+    cell_or_range: A16:D16
+    value_cell: B16
+  interpretation: normalized
+  parsed_value: 1371.96
+  parsed_unit: kg
+- observation_id: O011
+  attribute_id: rated_throughput
+  raw_text: '3893.4'
+  label_text: Rated throughput
+  unit_text: l/h
+  location:
+    source_line: 28
+    source_section: Remarks
+    pdf_page: null
+    sheet: Specification
+    cell_or_range: A18
+    value_cell: A18
+  interpretation: normalized
+  parsed_value: 3893.4
+  parsed_unit: l/h
+facts:
+- fact_id: F001
+  attribute_id: maker
+  value: SGDW-20261007-D Synthetic Works
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O001
+  admissibility: supported
+- fact_id: F002
+  attribute_id: model_designation
+  value: VX020-122
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O002
+  admissibility: supported
+- fact_id: F003
+  attribute_id: application
+  value: fresh water
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O003
+  admissibility: unsupported_value
+- fact_id: F004
+  attribute_id: medium
+  value: lubricating_oil
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O004
+  admissibility: supported
+- fact_id: F005
+  attribute_id: rated_throughput
+  value: 3893.4
+  unit: l/h
+  basis:
+    rating: maximum_capacity
+  condition:
+    medium: lubricating_oil
+    viscosity:
+      value: 380
+      unit: cSt
+      reference_temperature:
+        value: 50
+        unit: degC
+    viscosity_basis: fluid_reference
+  scope: main_separator
+  observation_ids:
+  - O005
+  - O011
+  admissibility: supported
+- fact_id: F006
+  attribute_id: rated_throughput
+  value: 2530.71
+  unit: l/h
+  basis:
+    rating: maximum_capacity
+  condition:
+    medium: lubricating_oil
+    viscosity:
+      value: 700
+      unit: cSt
+      reference_temperature:
+        value: 50
+        unit: degC
+    viscosity_basis: fluid_reference
+  scope: main_separator
+  observation_ids:
+  - O006
+  admissibility: supported
+- fact_id: F007
+  attribute_id: self_cleaning
+  value: true
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O007
+  admissibility: supported
+- fact_id: F008
+  attribute_id: motor_power
+  value: 12.98
+  unit: kW
+  basis:
+    rating: motor_rated
+  condition: {}
+  scope: separator_drive_motor
+  observation_ids:
+  - O008
+  admissibility: supported
+- fact_id: F009
+  attribute_id: dimensions
+  value:
+    length: 2240
+    width: 1185
+    height: 1930
+  unit: mm
+  basis: {}
+  condition: {}
+  scope: complete_separator_module_with_feed_pump_heater_control
+  observation_ids:
+  - O009
+  admissibility: supported
+- fact_id: F010
+  attribute_id: dry_weight
+  value: 1371.96
+  unit: kg
+  basis:
+    weight: dry
+  condition: {}
+  scope: complete_separator_module_with_feed_pump_heater_control
+  observation_ids:
+  - O010
+  admissibility: supported
+issues:
+- issue_id: I001
+  code: E4
+  attribute_ids:
+  - application
+  observation_ids:
+  - O003
+  rule_ref: data/ontology/dataset-contract.yaml#classes/Separator/attribute_definitions/application/dataset_allowed_values
+  reason: Explicit application is outside the synthetic supported list.
+missing_required: []
+comparison:
+  label_scope: nominated_pairs_only
+  pairs: []
+relations: []
+reference_variants: []
+reviewed_by: null

@@ -1,0 +1,108 @@
+{
+  "prediction": {
+    "document_id": "SYN-022",
+    "class_id": "Separator",
+    "class_candidates": [
+      "Separator",
+      "Pump"
+    ],
+    "facts": [],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "Name",
+      "text": "Marine centrifugal oil separator",
+      "line": "{'Product': 'L3', 'Maker': 'L5', 'Model Designation': 'L6', 'Rated Throughput (380 cSt/50 degC)': 'L11', 'Rated Throughput (700 cSt/50 degC)': 'L12', 'Self-Cleaning': 'L13', 'Motor Rating': 'L14', 'Overall Dimensions': 'L15', 'Dry Weight': 'L16', 'Rated Throughput (Summary)': 'L18', 'Scope Note': 'L20'}",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "maker",
+      "text": "SGDW-20261007-D Synthetic Works",
+      "line": "",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "Model Designation",
+      "text": "VX020-122",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Rated Throughput (Fluid Reference)",
+      "text": "{'380 cSt/50 degC': '3893.4 l/h', '700 cSt/50 degC': '2530.71 l/h'}",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Self-Cleaning",
+      "text": "Yes",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Motor Rating",
+      "text": "12.98 kW",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Overall Dimensions",
+      "text": "['2240 mm', '1185 mm', '1930 mm']",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "Dry Weight",
+      "text": "1371.96 kg",
+      "line": "",
+      "reason": "unknown_attribute"
+    }
+  ],
+  "reply": {
+    "attributes": {
+      "Name": "Marine centrifugal oil separator",
+      "Maker": "SGDW-20261007-D Synthetic Works",
+      "Model Designation": "VX020-122",
+      "Rated Throughput (Fluid Reference)": {
+        "380 cSt/50 degC": "3893.4 l/h",
+        "700 cSt/50 degC": "2530.71 l/h"
+      },
+      "Self-Cleaning": "Yes",
+      "Motor Rating": "12.98 kW",
+      "Overall Dimensions": [
+        "2240 mm",
+        "1185 mm",
+        "1930 mm"
+      ],
+      "Dry Weight": "1371.96 kg"
+    },
+    "lines": {
+      "Name": {
+        "Product": "L3",
+        "Maker": "L5",
+        "Model Designation": "L6",
+        "Rated Throughput (380 cSt/50 degC)": "L11",
+        "Rated Throughput (700 cSt/50 degC)": "L12",
+        "Self-Cleaning": "L13",
+        "Motor Rating": "L14",
+        "Overall Dimensions": "L15",
+        "Dry Weight": "L16",
+        "Rated Throughput (Summary)": "L18",
+        "Scope Note": "L20"
+      },
+      "Value": {
+        "Service Fluid": "L9",
+        "Fluid Type": "L10",
+        "Rated Throughput (380 cSt/50 degC) Value": "L11",
+        "Rated Throughput (700 cSt/50 degC) Value": "L12",
+        "Overall Dimensions (L)": "L15",
+        "Overall Dimensions (W)": "L15",
+        "Overall Dimensions (H)": "L15",
+        "Dry Weight Value": "L16"
+      }
+    }
+  },
+  "qualifiers": []
+}

@@ -1,0 +1,63 @@
+{
+  "prediction": {
+    "document_id": "DOC-003",
+    "class_id": "Separator",
+    "class_candidates": [
+      "Separator",
+      "Pump"
+    ],
+    "facts": [
+      {
+        "attribute": "application",
+        "value": "Heavy fuel oil purification",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-003",
+            "raw_text": "Heavy fuel oil purification",
+            "label_text": "Application",
+            "unit_text": null,
+            "location": {
+              "section": "2. Main Technical Data",
+              "table": 1,
+              "row": 2,
+              "column": 2,
+              "line": 17
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "motor_power",
+        "value": 7.5,
+        "unit": "kW",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-003",
+            "raw_text": "7.5",
+            "label_text": "Motor power",
+            "unit_text": "kW",
+            "location": {
+              "section": "2. Main Technical Data",
+              "table": 1,
+              "row": 6,
+              "column": 2,
+              "line": 21
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": null,
+  "qualifiers": []
+}

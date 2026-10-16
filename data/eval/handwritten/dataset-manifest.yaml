@@ -1,0 +1,31 @@
+# 평가기 전용 매핑: 입력 모델에는 inputs/의 지정 파일만 전달한다.
+schema_version: 1
+dataset_revision: 2
+origin: synthetic
+status: candidate_ontology_and_user_review_pending
+scoring_policy: data/eval/handwritten/SCORING-POLICY.md
+documents:
+- input_id: DOC-001
+  doc_id: HW-PUMP-001
+  input_text: data/eval/handwritten/inputs/DOC-001.md
+  answer: data/eval/handwritten/HW-PUMP-001.answer.yaml
+- input_id: DOC-002
+  doc_id: HW-COMP-001
+  input_text: data/eval/handwritten/inputs/DOC-002.md
+  answer: data/eval/handwritten/HW-COMP-001.answer.yaml
+- input_id: DOC-003
+  doc_id: HW-SEP-001
+  input_text: data/eval/handwritten/inputs/DOC-003.md
+  answer: data/eval/handwritten/HW-SEP-001.answer.yaml
+- input_id: DOC-004
+  doc_id: HW-2S-001
+  input_text: data/eval/handwritten/inputs/DOC-004.md
+  answer: data/eval/handwritten/HW-2S-001.answer.yaml
+- input_id: DOC-005
+  doc_id: HW-4S-001
+  input_text: data/eval/handwritten/inputs/DOC-005.md
+  answer: data/eval/handwritten/HW-4S-001.answer.yaml
+- input_id: DOC-006
+  doc_id: HW-TC-001
+  input_text: data/eval/handwritten/inputs/DOC-006.md
+  answer: data/eval/handwritten/HW-TC-001.answer.yaml

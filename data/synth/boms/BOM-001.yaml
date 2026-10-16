@@ -1,0 +1,33 @@
+bom_id: BOM-001
+origin: synthetic
+status: final_v1; frozen by user decision D-019 (2026-10-08); reviewed_by awaits user signature
+reviewed_by: null
+root_product_id: REG-2S-001
+root_model: VX001-001
+rating_context:
+  rating_point: R1
+  basis:
+    rating: MCR
+  scope: engine_shaft
+  power:
+    value: 9868.6
+    unit: kW
+items:
+- product_id: REG-TC-002
+  model_designation: VX021-002
+  class: Turbocharger
+  quantity: 1
+  origin: synthetic
+- product_id: REG-PUMP-001
+  model_designation: VX013-001
+  class: Pump
+  quantity: 1
+  origin: synthetic
+- product_id: REG-SEP-001
+  model_designation: VX017-001
+  class: Separator
+  quantity: 1
+  origin: synthetic
+relation_meaning: has_component = supply-scope (BOM) inclusion; not physical attachment
+interpretation: explicit fictional shaft/R1 rating association; no actual physical
+  compatibility approval

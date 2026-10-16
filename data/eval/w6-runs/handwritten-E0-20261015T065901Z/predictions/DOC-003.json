@@ -1,0 +1,558 @@
+{
+  "prediction": {
+    "document_id": "DOC-003",
+    "class_id": "Separator",
+    "class_candidates": [
+      "Separator",
+      "Pump"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "Hallmar Separation AB",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-003",
+            "raw_text": "Hallmar Separation AB",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "1. General",
+              "paragraph": 7,
+              "line": 7
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "HSX 40",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-003",
+            "raw_text": "HSX 40",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "1. General",
+              "paragraph": 8,
+              "line": 8
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "application",
+        "value": "Heavy fuel oil purification",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-003",
+            "raw_text": "Heavy fuel oil purification",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "1. General",
+              "paragraph": 10,
+              "line": 10
+            }
+          },
+          {
+            "source_document_id": "DOC-003",
+            "raw_text": "Heavy fuel oil purification",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "2. Main Technical Data",
+              "table": 1,
+              "row": 2,
+              "column": 2,
+              "line": 17
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_throughput",
+        "value": 3600,
+        "unit": "l/h",
+        "basis": {
+          "capacity": "charging_capacity"
+        },
+        "condition": {
+          "medium": "HFO"
+        },
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-003",
+            "raw_text": "3,600",
+            "label_text": null,
+            "unit_text": "l/h",
+            "location": {
+              "section": "2. Main Technical Data",
+              "table": 1,
+              "row": 3,
+              "column": 2,
+              "line": 18
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_throughput",
+        "value": 2100,
+        "unit": "l/h",
+        "basis": {
+          "capacity": "charging_capacity"
+        },
+        "condition": {
+          "medium": "HFO"
+        },
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-003",
+            "raw_text": "2,100",
+            "label_text": null,
+            "unit_text": "l/h",
+            "location": {
+              "section": "2. Main Technical Data",
+              "table": 1,
+              "row": 4,
+              "column": 2,
+              "line": 19
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "motor_power",
+        "value": 7.5,
+        "unit": "kW",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-003",
+            "raw_text": "7.5",
+            "label_text": null,
+            "unit_text": "kW",
+            "location": {
+              "section": "2. Main Technical Data",
+              "table": 1,
+              "row": 6,
+              "column": 2,
+              "line": 21
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 1550,
+          "width": 1100,
+          "height": 1050
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-003",
+            "raw_text": "1,550 × 1,100 × 1,050 mm",
+            "label_text": null,
+            "unit_text": "(mm)",
+            "location": {
+              "section": "4. Dimensions and Weight",
+              "paragraph": 28,
+              "line": 28
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 790,
+        "unit": "kg",
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {
+          "basis": "per_turbocharger"
+        },
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-003",
+            "raw_text": "790",
+            "label_text": null,
+            "unit_text": "kg",
+            "location": {
+              "section": "4. Dimensions and Weight",
+              "paragraph": 29,
+              "line": 29
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [
+      {
+        "attribute": "self_cleaning",
+        "value_text": "Self-cleaning disc stack",
+        "unit_text": null,
+        "reason": "not_boolean",
+        "occurrence": {
+          "source_document_id": "DOC-003",
+          "raw_text": "Self-cleaning disc stack",
+          "label_text": null,
+          "unit_text": null,
+          "location": {
+            "section": "2. Main Technical Data",
+            "table": 1,
+            "row": 5,
+            "column": 2,
+            "line": 20
+          }
+        }
+      }
+    ],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "line": "L6",
+        "value_text": "Hallmar Separation AB"
+      },
+      {
+        "attribute": "model_designation",
+        "line": "L7",
+        "value_text": "HSX 40"
+      },
+      {
+        "attribute": "application",
+        "line": "L9",
+        "value_text": "Heavy fuel oil purification"
+      },
+      {
+        "attribute": "application",
+        "line": "L13",
+        "value_text": "Heavy fuel oil purification"
+      },
+      {
+        "attribute": "rated_throughput",
+        "line": "L14",
+        "value_text": "3,600",
+        "unit_text": "l/h"
+      },
+      {
+        "attribute": "rated_throughput",
+        "line": "L15",
+        "value_text": "2,100",
+        "unit_text": "l/h"
+      },
+      {
+        "attribute": "self_cleaning",
+        "line": "L16",
+        "value_text": "Self-cleaning disc stack"
+      },
+      {
+        "attribute": "motor_power",
+        "line": "L17",
+        "value_text": "7.5",
+        "unit_text": "kW"
+      },
+      {
+        "attribute": "dimensions",
+        "line": "L22",
+        "value_text": "1,550 × 1,100 × 1,050 mm",
+        "unit_text": "(mm)"
+      },
+      {
+        "attribute": "dry_weight",
+        "line": "L23",
+        "value_text": "790",
+        "unit_text": "kg"
+      }
+    ]
+  },
+  "qualifiers": [
+    {
+      "kind": "value",
+      "attribute": "maker",
+      "value_text": "Hallmar Separation AB",
+      "location": {
+        "section": "1. General",
+        "paragraph": 7,
+        "line": 7
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.temperature: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "model_designation",
+      "value_text": "HSX 40",
+      "location": {
+        "section": "1. General",
+        "paragraph": 8,
+        "line": 8
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.temperature: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "application",
+      "value_text": "Heavy fuel oil purification",
+      "location": {
+        "section": "1. General",
+        "paragraph": 10,
+        "line": 10
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.temperature: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "application",
+      "value_text": "Heavy fuel oil purification",
+      "location": {
+        "section": "2. Main Technical Data",
+        "table": 1,
+        "row": 2,
+        "column": 2,
+        "line": 17
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.frequency: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "rated_throughput",
+      "value_text": "3,600",
+      "location": {
+        "section": "2. Main Technical Data",
+        "table": 1,
+        "row": 3,
+        "column": 2,
+        "line": 18
+      },
+      "qualifiers": {
+        "basis": {
+          "capacity": "charging_capacity"
+        },
+        "condition": {
+          "medium": "HFO"
+        },
+        "scope": ""
+      },
+      "evidence": {
+        "basis.capacity": "Max. capacity",
+        "condition.medium": "HFO 380 cSt"
+      },
+      "rejected": [
+        "condition.viscosity: wrong unit or form",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "rated_throughput",
+      "value_text": "2,100",
+      "location": {
+        "section": "2. Main Technical Data",
+        "table": 1,
+        "row": 4,
+        "column": 2,
+        "line": 19
+      },
+      "qualifiers": {
+        "basis": {
+          "capacity": "charging_capacity"
+        },
+        "condition": {
+          "medium": "HFO"
+        },
+        "scope": ""
+      },
+      "evidence": {
+        "basis.capacity": "Max. capacity",
+        "condition.medium": "HFO 700 cSt"
+      },
+      "rejected": [
+        "condition.viscosity: wrong unit or form",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "self_cleaning",
+      "value_text": "Self-cleaning disc stack",
+      "location": {
+        "section": "2. Main Technical Data",
+        "table": 1,
+        "row": 5,
+        "column": 2,
+        "line": 20
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: evidence not in the line",
+        "condition.medium: evidence not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "motor_power",
+      "value_text": "7.5",
+      "location": {
+        "section": "2. Main Technical Data",
+        "table": 1,
+        "row": 6,
+        "column": 2,
+        "line": 21
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.engine_type: no evidence",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "dimensions",
+      "value_text": "1,550 × 1,100 × 1,050 mm",
+      "location": {
+        "section": "4. Dimensions and Weight",
+        "paragraph": 28,
+        "line": 28
+      },
+      "qualifiers": {
+        "basis": {},
+        "condition": {},
+        "scope": ""
+      },
+      "evidence": {},
+      "rejected": [
+        "basis.capacity: no evidence",
+        "condition.basis: no evidence",
+        "condition.frequency: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    },
+    {
+      "kind": "value",
+      "attribute": "dry_weight",
+      "value_text": "790",
+      "location": {
+        "section": "4. Dimensions and Weight",
+        "paragraph": 29,
+        "line": 29
+      },
+      "qualifiers": {
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {
+          "basis": "per_turbocharger"
+        },
+        "scope": ""
+      },
+      "evidence": {
+        "basis.weight": "dry",
+        "condition.basis": "complete separator module including feed pump, heater and control unit"
+      },
+      "rejected": [
+        "condition.temperature: number not in the line",
+        "scope: phrase not in the remarks"
+      ],
+      "retrieved_ids": [],
+      "before_check": null
+    }
+  ]
+}

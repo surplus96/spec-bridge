@@ -1,0 +1,34 @@
+[
+  {
+    "maker_id": "SG-MAKER-01",
+    "name": "SGDW-20261007-A Synthetic Works",
+    "aliases": [
+      "SGDW-A Synthetic Works"
+    ],
+    "origin": "synthetic"
+  },
+  {
+    "maker_id": "SG-MAKER-02",
+    "name": "SGDW-20261007-B Synthetic Works",
+    "aliases": [
+      "SGDW-B Synthetic Works"
+    ],
+    "origin": "synthetic"
+  },
+  {
+    "maker_id": "SG-MAKER-03",
+    "name": "SGDW-20261007-C Synthetic Works",
+    "aliases": [
+      "SGDW-C Synthetic Works"
+    ],
+    "origin": "synthetic"
+  },
+  {
+    "maker_id": "SG-MAKER-04",
+    "name": "SGDW-20261007-D Synthetic Works",
+    "aliases": [
+      "SGDW-D Synthetic Works"
+    ],
+    "origin": "synthetic"
+  }
+]

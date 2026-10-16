@@ -1,0 +1,283 @@
+schema_version: 3
+input_id: DOC-004
+origin: synthetic
+status: converted_from_v2_helper_draft
+expected_class: TwoStrokeMainEngine
+facts:
+- fact_id: F001
+  attribute_id: maker
+  value: Torvane Engine Works
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O001
+  - O002
+  admissibility: supported
+- fact_id: F002
+  attribute_id: model_designation
+  value: TXL-650/6
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O003
+  - O004
+  admissibility: supported
+- fact_id: F003
+  attribute_id: number_of_cylinders
+  value: 6
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O005
+  admissibility: supported
+- fact_id: F004
+  attribute_id: bore
+  value: 650
+  unit: mm
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O006
+  admissibility: supported
+- fact_id: F005
+  attribute_id: stroke
+  value: 2750
+  unit: mm
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O007
+  admissibility: supported
+- fact_id: F006
+  attribute_id: rated_power
+  value: 15000
+  unit: kW
+  basis:
+    rating: MCR
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O008
+  - O009
+  admissibility: supported
+- fact_id: F007
+  attribute_id: rated_speed
+  value: 98
+  unit: rpm
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O010
+  - O011
+  admissibility: supported
+- fact_id: F008
+  attribute_id: fuel_types
+  value:
+  - HFO
+  - MGO
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O012
+  - O013
+  admissibility: supported
+- fact_id: F009
+  attribute_id: dimensions
+  value:
+    length: 8450
+    width: 3900
+    height: 11950
+  unit: mm
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O014
+  admissibility: supported
+- fact_id: F010
+  attribute_id: dry_weight
+  value: 395000
+  unit: kg
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O015
+  admissibility: supported
+observations:
+- observation_id: O001
+  attribute_id: maker
+  raw_text: Torvane Engine Works
+  label_text: Issued by
+  unit_text: null
+  location:
+    paragraph: 3
+    line: 3
+    section: null
+  interpretation: normalized
+- observation_id: O002
+  attribute_id: maker
+  raw_text: Torvane Engine Works
+  label_text: Maker
+  unit_text: null
+  location:
+    paragraph: 7
+    line: 7
+    section: 1. General
+  interpretation: normalized
+- observation_id: O003
+  attribute_id: model_designation
+  raw_text: TXL-650/6
+  label_text: Model designation
+  unit_text: null
+  location:
+    paragraph: 8
+    line: 8
+    section: 1. General
+  interpretation: normalized
+- observation_id: O004
+  attribute_id: model_designation
+  raw_text: TXL-650/6
+  label_text: type
+  unit_text: null
+  location:
+    paragraph: 33
+    line: 33
+    section: 5. Scope of Supply
+  interpretation: normalized
+- observation_id: O005
+  attribute_id: number_of_cylinders
+  raw_text: '6'
+  label_text: Number of cylinders
+  unit_text: null
+  location:
+    table: 1
+    row: 2
+    cell: 2
+    line: 17
+  interpretation: normalized
+- observation_id: O006
+  attribute_id: bore
+  raw_text: '650'
+  label_text: Bore
+  unit_text: mm
+  location:
+    table: 1
+    row: 3
+    cell: 2
+    line: 18
+  interpretation: normalized
+- observation_id: O007
+  attribute_id: stroke
+  raw_text: 2,750
+  label_text: Stroke
+  unit_text: mm
+  location:
+    table: 1
+    row: 4
+    cell: 2
+    line: 19
+  interpretation: normalized
+- observation_id: O008
+  attribute_id: rated_power
+  raw_text: 15,000
+  label_text: Rated power (MCR)
+  unit_text: kW
+  location:
+    table: 1
+    row: 5
+    cell: 2
+    line: 20
+  interpretation: normalized
+- observation_id: O009
+  attribute_id: rated_power
+  raw_text: 20,115 bhp
+  label_text: At MCR the engine delivers
+  unit_text: null
+  location:
+    paragraph: 25
+    line: 25
+    section: 3. Engine Configuration
+  interpretation: normalized
+- observation_id: O010
+  attribute_id: rated_speed
+  raw_text: '98'
+  label_text: Rated speed (MCR)
+  unit_text: rpm
+  location:
+    table: 1
+    row: 6
+    cell: 2
+    line: 21
+  interpretation: normalized
+- observation_id: O011
+  attribute_id: rated_speed
+  raw_text: 98 r/min
+  label_text: at
+  unit_text: null
+  location:
+    paragraph: 25
+    line: 25
+    section: 3. Engine Configuration
+  interpretation: normalized
+- observation_id: O012
+  attribute_id: fuel_types
+  raw_text: HFO / MGO
+  label_text: Fuel
+  unit_text: null
+  location:
+    table: 1
+    row: 7
+    cell: 2
+    line: 22
+  interpretation: normalized
+- observation_id: O013
+  attribute_id: fuel_types
+  raw_text: heavy fuel oil (HFO) and marine gas oil (MGO)
+  label_text: Fuel operation modes
+  unit_text: null
+  location:
+    paragraph: 25
+    line: 25
+    section: 3. Engine Configuration
+  interpretation: normalized
+- observation_id: O014
+  attribute_id: dimensions
+  raw_text: 8,450 × 3,900 × 11,950 mm
+  label_text: Overall dimensions (L × W × H)
+  unit_text: null
+  location:
+    paragraph: 29
+    line: 29
+    section: 4. Dimensions and Weight
+  interpretation: normalized
+- observation_id: O015
+  attribute_id: dry_weight
+  raw_text: 395 t
+  label_text: Dry weight
+  unit_text: null
+  location:
+    paragraph: 30
+    line: 30
+    section: 4. Dimensions and Weight
+  interpretation: normalized
+issues: []
+missing_required: []
+conversion:
+  source: data/eval/handwritten/HW-2S-001.answer.yaml
+  doc_id: HW-2S-001
+  author: Claude (draft)
+  reviewed_by: null
+  notes:
+  - 'rated_power: match_tolerance_rel dropped (scorer compares exactly)'

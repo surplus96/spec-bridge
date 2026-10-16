@@ -1,0 +1,274 @@
+{
+  "prediction": {
+    "document_id": "SYN-024",
+    "class_id": "Separator",
+    "class_candidates": [
+      "Separator",
+      "Pump"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-A Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-024",
+            "raw_text": "SGDW-20261007-A Synthetic Works",
+            "label_text": "Maker",
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                467.6191063841906,
+                203.83202560000007,
+                475.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX017-124",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-024",
+            "raw_text": "VX017-124",
+            "label_text": "Model",
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                449.6191063841906,
+                112.2656216,
+                457.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "application",
+        "value": "fuel_oil",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-024",
+            "raw_text": "fuel oil",
+            "label_text": "Application",
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                406.6191063841906,
+                112.70702879999999,
+                414.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "heavy_fuel_oil",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-024",
+            "raw_text": "heavy fuel oil",
+            "label_text": "Medium",
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                388.6191063841906,
+                125.59374640000001,
+                396.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "self_cleaning",
+        "value": true,
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-024",
+            "raw_text": "Yes",
+            "label_text": "Self-cleaning",
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                334.6191063841906,
+                110.48046639999998,
+                342.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "motor_power",
+        "value": 11.21,
+        "unit": "kW",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-024",
+            "raw_text": "11.21",
+            "label_text": "Motor power",
+            "unit_text": "kW",
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                316.6191063841906,
+                259.4257680000002,
+                324.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 1850,
+          "width": 990,
+          "height": 1690
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-024",
+            "raw_text": "1850 × 990 × 1690",
+            "label_text": "Overall dimensions (L × W × H)",
+            "unit_text": "mm",
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                298.6191063841906,
+                456.8710727999999,
+                306.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 1457.04,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-024",
+            "raw_text": "1457.04",
+            "label_text": "Dry weight",
+            "unit_text": "kg",
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                280.6191063841906,
+                367.05076240000005,
+                288.0060688
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [
+      {
+        "attribute": "rated_throughput",
+        "value_text": "5230.4",
+        "unit_text": "kg",
+        "reason": "dimension",
+        "occurrence": {
+          "source_document_id": "SYN-024",
+          "raw_text": "5230.4",
+          "label_text": "Throughput",
+          "unit_text": "kg",
+          "location": {
+            "section": "Specifications",
+            "pdf_page": 1,
+            "bbox": [
+              38.0,
+              370.6191063841906,
+              423.52341359999986,
+              378.0060688
+            ]
+          }
+        }
+      },
+      {
+        "attribute": "rated_throughput",
+        "value_text": "3399.76",
+        "unit_text": "kg",
+        "reason": "dimension",
+        "occurrence": {
+          "source_document_id": "SYN-024",
+          "raw_text": "3399.76",
+          "label_text": "Throughput",
+          "unit_text": "kg",
+          "location": {
+            "section": "Specifications",
+            "pdf_page": 1,
+            "bbox": [
+              38.0,
+              352.6191063841906,
+              427.97263199999986,
+              360.0060688
+            ]
+          }
+        }
+      }
+    ],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": null,
+  "qualifiers": []
+}

@@ -1,0 +1,201 @@
+# 본셋 정답 작성·채점 명세; 제품 기능 코드와 별도. 모델에 전달하지 않는다.
+answer_schema_version: 3
+contract_version: 2
+created_at: '2026-10-07'
+task: DATA-GOLD-LEDGER
+origin: synthetic
+status: frozen_for_dataset_v1 (D-019)
+applies_to: data/synth/case-plan.yaml
+ontology: data/ontology/dataset-contract.yaml
+ontology_version: 2
+legacy_handwritten: preserve schema_version 2 and scoring policy; no automatic migration
+reviewed_by: null
+required_document_fields:
+- schema_version
+- input_id
+- origin
+- expected_class
+- artifact
+- observations
+- facts
+- issues
+- missing_required
+- comparison
+- reviewed_by
+artifact:
+  required:
+  - path
+  - sha256
+  - file_format
+  - location_verified
+  pending_policy: draft source locations allowed during authoring; final gold requires actual rendered file hash
+    and verified locations
+observation:
+  required:
+  - observation_id
+  - attribute_id
+  - raw_text
+  - label_text
+  - unit_text
+  - location
+  - interpretation
+  nullable:
+  - attribute_id
+  - label_text
+  - unit_text
+  interpretation:
+  - normalized
+  - invalid_unit
+  - invalid_shape
+  - unsupported_value
+  - unresolved
+  optional:
+  - parsed_value
+  - parsed_unit
+  - unresolved_reason
+  meaning: parsed_value preserves readable raw value even if invalid; it does not assert a corrected normalized
+    value
+  location:
+    formats:
+      pdf:
+      - pdf_page
+      - region_or_section
+      xlsx:
+      - sheet
+      - cell_or_range
+      docx:
+      - paragraph_or_table_cell
+      md_draft:
+      - source_line
+      - source_section
+    optional:
+    - source_section
+    - source_table
+    - source_row
+    - printed_page
+    evidence_policy: preserve every relevant occurrence; do not copy source-document page into synthetic location
+    draft_only: Markdown source_line/source_table/source_row for draft audit; must relabel actual rendered files
+      before freeze
+fact:
+  required:
+  - fact_id
+  - attribute_id
+  - value
+  - unit
+  - basis
+  - condition
+  - scope
+  - observation_ids
+  - admissibility
+  observation_ids: nonempty references to observations from this document
+  admissibility:
+  - supported
+  - unsupported_value
+  normalization_policy: normalized shape/unit only when justified; no ledger values substituted for absent or corrupt
+    observations
+  unknown_context: retain unknown explicitly; do not assume equal contexts for conflict comparison
+issue:
+  required:
+  - issue_id
+  - code
+  - attribute_ids
+  - observation_ids
+  - rule_ref
+  - reason
+  codes:
+  - E1
+  - E2
+  - E3
+  - E4
+  - E5
+  E1: absent required attribute (no explicit occurrence); observation_ids empty permitted only with missing evidence
+  missing_required: registration-readiness list of required attributes without any fact, including required
+    attributes present only as E2/E3 occurrences; those keep their single E2/E3 issue code and are not also
+    labeled E1. E4 values are present facts and are not listed (D-015)
+  identity_policy: model designations compare after uppercasing and removing spaces/hyphens; makers match the
+    registered name or a registered synthetic alias in manufacturers.json; normalized facts keep the registered
+    canonical text (D-016)
+  complete_comparison_labels: data/synth/comparison-candidates.yaml lists duplicate and similar registry products
+    for every document within its split; unlisted registry products are new/negative. Similar means same synthetic
+    family; the nominated 10 pairs remain the designed scenario subset (D-016)
+  context_defaults: scope main_equipment, basis pressure not_applicable and basis weight unknown are policy
+    defaults that the document does not write; other basis/condition/scope values must be stated in natural
+    phrasing, not schema tokens (D-015)
+  E2: wrong unit dimension; raw observation retained and no normalized fact for this occurrence
+  E3: malformed typed value or reversed range; retain parsed_value, no invented corrected fact
+  E4: type-correct explicit value outside scoped synthetic allowed list; keep fact with admissibility unsupported_value
+  E5: conflicting facts under explicitly identical basis/condition/scope; preserve all values and observations
+  missing_evidence:
+    required:
+    - inspected_artifact_sha256
+    - searched_attribute_id
+    - inspected_locations
+    - applied_requirement
+    meaning: missing is evidence from inspected document coverage, not an imaginary source occurrence
+  rule_ref: point to dataset ontology required/type/unit/allowed policy; synthetic only
+comparison:
+  required:
+  - label_scope
+  - pairs
+  label_scope: nominated_pairs_only
+  pair_required:
+  - registry_id
+  - expected_relation
+  - identity_evidence
+  - differing_attribute_ids
+  expected_relation:
+  - duplicate
+  - similar
+  duplicate: same canonical synthetic product ID and normalized maker/model; cite actual document identity evidence
+  similar: explicitly same synthetic family and distinct product identity; retain declared attribute differences
+  unlabeled: no pair annotation means not_evaluated, never implicitly new or dissimilar
+  evaluation_policy: score nominated pair labels; do not treat every other registry record as negative or require
+    a single top-1 match
+identity:
+  key:
+  - maker
+  - model_designation
+  normalization: Unicode NFKC, trim and collapse whitespace; casefold for comparison
+  prohibited: global punctuation removal, memory-based maker aliases, model-name decoding
+  variation_aliases: only explicit document/development dictionary definitions fixed before test
+scoring:
+  channels:
+  - class_mapping
+  - normalized_facts
+  - raw_observation_retrieval
+  - validation_issues
+  - nominated_comparison_pairs
+  normalized_fact_key:
+  - input_id
+  - attribute_id
+  - basis
+  - condition
+  - scope
+  normalized_fact_values: distinct gold values under the key form an atomic set; E5 requires the complete conflicting
+    set
+  repeated_occurrences: one fact group; evidence recall is reported separately
+  invalid_unit_or_shape: excluded from normalized fact denominator, included in observation and validation denominators;
+    publish channel counts
+  E4_value: included in normalized extraction despite being unsupported for registration
+  numeric_match: canonical units and explicit conditions required; default abs tolerance 0.000001 and rel tolerance
+    0; document-specific conversion tolerance must be declared before evaluation
+  set_and_object_match: fuel list order ignored; dimensions/ranges atomic; known/unknown axes preserved
+  missing: missing fact is not fabricated; hallucinated in-scope facts count as extraction false positives
+  out_of_scope: non-target technical information is not gold; extracting it as a supported target attribute can
+    be a false positive
+  issue_match: code + attribute IDs + rule reference + relevant occurrence coverage; E1 inspected coverage instead
+    of occurrence
+  denominators: count from actual finalized answers; no target of approximately 400 assumed as an observed count
+  generation_failures: keep failed input IDs in evaluation inventory and report failures; do not drop documents
+freeze:
+  files:
+  - ontology
+  - answer_contract
+  - split_plan
+  - product_ledger
+  - rendered_inputs
+  - answers
+  - registry_snapshots
+  - comparison_labels
+  - boms
+  status: frozen_for_dataset_v1 (D-019)

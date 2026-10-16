@@ -1,0 +1,40 @@
+{
+  "name": "spec-bridge-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "gen:api": "openapi-typescript openapi.json -o src/api/schema.d.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check .",
+    "test": "vitest run",
+    "check": "tsc --noEmit && biome check . && vitest run",
+    "build": "tsc --noEmit && vite build"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.104.2",
+    "lucide-react": "^1.57.0",
+    "openapi-fetch": "^0.17.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-pdf": "^11.0.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.15",
+    "@tailwindcss/vite": "^4.3.3",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.8",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "jsdom": "^29.1.1",
+    "msw": "^2.15.0",
+    "openapi-typescript": "^7.13.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.4",
+    "vitest": "^4.1.11"
+  }
+}

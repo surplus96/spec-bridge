@@ -1,0 +1,370 @@
+{
+  "prediction": {
+    "document_id": "SYN-016",
+    "class_id": "AirCompressor",
+    "class_candidates": [
+      "AirCompressor"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-C Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "manufacturer_of_the_compressor",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-016",
+            "raw_text": "SGDW-20261007-C Synthetic Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                467.6191063841906,
+                204.27343200000007,
+                475.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX011-116",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "specific_model_identifier_of_the_compressor",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-016",
+            "raw_text": "VX011-116",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                449.6191063841906,
+                155.41015040000002,
+                457.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "working_pressure",
+        "value": 25,
+        "unit": "bar",
+        "basis": {},
+        "condition": {
+          "basis": "per_turbocharger",
+          "frequency": {
+            "value": 1,
+            "unit": "Hz"
+          },
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          }
+        },
+        "scope": "operating_pressure_under_normal_working_conditions",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-016",
+            "raw_text": "25 bar (gauge, working condition, for main compressor)",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                388.6191063841906,
+                309.2265488000001,
+                396.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "air",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "type_of_medium_used_or_through_which_the_compressor_operates",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-016",
+            "raw_text": "air",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                352.6191063841906,
+                87.78906079999999,
+                360.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "cooling_type",
+        "value": "air",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "method_used_for_cooling_the_compressor",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-016",
+            "raw_text": "air",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                370.6191063841906,
+                103.8085912,
+                378.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "motor_power",
+        "value": 34.43,
+        "unit": "kW",
+        "basis": {},
+        "condition": {
+          "basis": "per_turbocharger",
+          "frequency": {
+            "value": 50,
+            "unit": "Hz"
+          }
+        },
+        "scope": "rated_output_power_of_the_drive_motor",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-016",
+            "raw_text": "34.43 kW (rated output, for drive motor)",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                334.6191063841906,
+                234.96483200000011,
+                342.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 1280,
+          "width": 760,
+          "height": 940
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "physical_size_of_the_compressor_unit_including_motor_and_mountings",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-016",
+            "raw_text": "1280 × 760 × 940 mm (complete compressor unit with motor and mountings)",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                316.6191063841906,
+                407.04685839999996,
+                324.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "reported_weight",
+        "value": 779.16,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "total_weight_of_the_complete_compressor_unit_including_motor_and_mountings",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-016",
+            "raw_text": "779.16 kg (for complete compressor unit with motor and mountings)",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                298.6191063841906,
+                348.37107680000014,
+                306.0060688
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "capacity",
+      "text": "130.46 m3/h (charging, for main compressor)",
+      "line": "L8, L16",
+      "reason": "unknown_line"
+    }
+  ],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "basis": {},
+        "condition": {},
+        "scope": "Manufacturer of the compressor",
+        "line": "L5",
+        "value": "SGDW-20261007-C Synthetic Works",
+        "unit": null,
+        "raw_text": "SGDW-20261007-C Synthetic Works"
+      },
+      {
+        "attribute": "model_designation",
+        "basis": {},
+        "condition": {},
+        "scope": "Specific model identifier of the compressor",
+        "line": "L6",
+        "value": "VX011-116",
+        "unit": null,
+        "raw_text": "VX011-116"
+      },
+      {
+        "attribute": "capacity",
+        "basis": {},
+        "condition": {
+          "basis": "per_turbocharger",
+          "frequency": {
+            "value": 1,
+            "unit": "Hz"
+          }
+        },
+        "scope": "Air volume capacity during charging cycle",
+        "line": "L8, L16",
+        "value": 130.46,
+        "unit": "m3/h",
+        "raw_text": "130.46 m3/h (charging, for main compressor)"
+      },
+      {
+        "attribute": "working_pressure",
+        "basis": {},
+        "condition": {
+          "basis": "per_turbocharger",
+          "frequency": {
+            "value": 1,
+            "unit": "Hz"
+          },
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          }
+        },
+        "scope": "Operating pressure under normal working conditions",
+        "line": "L9",
+        "value": 25,
+        "unit": "bar",
+        "raw_text": "25 bar (gauge, working condition, for main compressor)"
+      },
+      {
+        "attribute": "medium",
+        "basis": {},
+        "condition": {},
+        "scope": "Type of medium used or through which the compressor operates",
+        "line": "L11",
+        "value": "air",
+        "unit": null,
+        "raw_text": "air"
+      },
+      {
+        "attribute": "cooling_type",
+        "basis": {},
+        "condition": {},
+        "scope": "Method used for cooling the compressor",
+        "line": "L10",
+        "value": "air",
+        "unit": null,
+        "raw_text": "air"
+      },
+      {
+        "attribute": "motor_power",
+        "basis": {},
+        "condition": {
+          "basis": "per_turbocharger",
+          "frequency": {
+            "value": 50,
+            "unit": "Hz"
+          }
+        },
+        "scope": "Rated output power of the drive motor",
+        "line": "L12",
+        "value": 34.43,
+        "unit": "kW",
+        "raw_text": "34.43 kW (rated output, for drive motor)"
+      },
+      {
+        "attribute": "dimensions",
+        "basis": {},
+        "condition": {},
+        "scope": "Physical size of the compressor unit including motor and mountings",
+        "line": "L13",
+        "value": {
+          "length": 1280,
+          "width": 760,
+          "height": 940
+        },
+        "unit": "mm",
+        "raw_text": "1280 × 760 × 940 mm (complete compressor unit with motor and mountings)"
+      },
+      {
+        "attribute": "reported_weight",
+        "basis": {},
+        "condition": {},
+        "scope": "Total weight of the complete compressor unit including motor and mountings",
+        "line": "L14",
+        "value": 779.16,
+        "unit": "kg",
+        "raw_text": "779.16 kg (for complete compressor unit with motor and mountings)"
+      }
+    ]
+  },
+  "qualifiers": []
+}

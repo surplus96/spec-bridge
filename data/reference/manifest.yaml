@@ -1,0 +1,232 @@
+# spec-bridge 참고 문서 manifest
+# 근거: docs/dataset-plan.md 4-2 · 생성: 2026-10-06 (Claude 작성, 사용자 검증 대기)
+#
+# - PDF 원본은 커밋하지 않는다(.gitignore). 이 파일만 커밋한다.
+# - doc_title / edition은 PDF 표지·바닥글에서 그대로 옮겼다. edition_location이 출처 위치다.
+#   표지에 판본이 없는 문서는 바닥글의 문서 코드나 PDF 메타데이터 날짜를 적고 그 사실을 표시했다.
+# - retrieved_at은 로컬 파일 생성일(macOS stat)이다.
+# - verified_by는 사용자만 채운다(H3). 채우기 전까지 verification_status: unverifired.
+# - 용도: 속성 구성·표기 방식·레이아웃 참고. 수치를 온톨로지에 넣을 때는 별도 원문 발췌 절차를 따른다.
+# - 사전 대조(2026-10-06, Claude 자동 검사): 12건 모두 sha256·쪽수 일치, doc_title·edition·marine_use 등
+#   검사 문구 47개 전부 PDF 텍스트에서 발견(줄바꿈 하이픈 결합·공백 정규화 후 부분 문자열 일치).
+#   문자열 존재만 확인한 것이며 verified_by 서명을 대신하지 않는다.
+# - 갱신·재배포 규칙: docs/dataset-plan.md 6-1(새 판은 새 ID, 덮어쓰기 금지), 6-2(원문 재배포 금지 기준)
+
+schema_version: 1
+documents:
+
+  - id: REF-2S-01
+    class: TwoStrokeMainEngine
+    maker: Everllence
+    doc_title: "Everllence B&W G80ME-C10.5-GI Project guide"
+    edition: "Document No. 7020-0273-14ppr, July 2026, Revision 1.0"
+    edition_location: "표지 (p.1)"
+    source_url: "https://www.everllence.com/applications/projectguides/2stroke/content/printed/G80ME-C10_5-GI.pdf"
+    hosting: official
+    local_path: "data/reference/two_stroke_main_engine/REF-2S-01.pdf"
+    retrieved_at: 2026-10-05
+    sha256: 86babe1a81696da8bb8606c538d00d0e2dd55e7ac8f73fc0b58f65557f95989e
+    pages: 712
+    file_bytes: 34735582
+    marine_use: "서문: 'Electronically controlled dual-fuel two-stroke engine … layout of a marine prop[ulsion plant]'"
+    notes: "착수 리서치(2026-09-30)가 기록한 판본은 'Edition 1.0, March 2026'. 받은 파일은 July 2026 Revision 1.0으로 더 최신. 저작권 고지: reprinting/copying 금지"
+    verification_status: verified
+    verified_by: Choi Taeyoung
+
+  - id: REF-2S-02
+    class: TwoStrokeMainEngine
+    maker: WinGD (Winterthur Gas & Diesel Ltd.)
+    doc_title: "Marine Installation Manual X62DF"
+    edition: "Issue 2021-08"
+    edition_location: "표지 (p.1)"
+    source_url: "https://wingd.com/media/y4eijz3k/mim_wingd_x62df_20210830.pdf"
+    hosting: official
+    local_path: "data/reference/two_stroke_main_engine/REF-2S-02.pdf"
+    retrieved_at: 2026-10-05
+    sha256: b87cda203214b2cbfb4c7e4ddf8d4fd5a4f2c5951da126ec6a3937b4eb667ace
+    pages: 236
+    file_bytes: 7366519
+    marine_use: "표지: 'Marine Installation Manual'"
+    notes: "저작권 고지: 서면 허락 없는 복제·복사 금지. 2021년 판으로 최신판 여부 미확인"
+    verification_status: verified
+    verified_by: Choi Taeyoung
+
+  - id: REF-4S-01
+    class: FourStrokeEngine
+    maker: Everllence
+    doc_title: "Everllence V28/33D STC Project Guide – Marine"
+    edition: "Revision 06.2025/9.2"
+    edition_location: "표지 (p.1)"
+    source_url: "https://www.everllence.com/applications/projectguides/4stroke/Propulsion/PG_P-II_V2833D%20STC.pdf"
+    hosting: official
+    local_path: "data/reference/four_stroke_engine/REF-4S-01.pdf"
+    retrieved_at: 2026-10-05
+    sha256: 0fd47a73569b6539e2faca654d950a5b5690eaa6d6f4cc1b9b7ee50e6d1ab1db
+    pages: 297
+    file_bytes: 13223637
+    marine_use: "표지: 'Project Guide – Marine, Four-stroke diesel engine compliant with IMO Tier II'"
+    notes: "문서 내 'MAN' 표기와 'Everllence' 표기 혼재 안내 있음 → 제조사 별칭 수집 근거. 리브랜딩 안내 위치: pdf_page 1 (표지 하단, 'same legal entity'로 검색)"
+    verification_status: verified
+    verified_by: Choi Taeyoung
+
+  - id: REF-4S-02
+    class: FourStrokeEngine
+    maker: HD Hyundai (HiMSEN)
+    doc_title: "HiMSEN H17/28 Project Guide for Marine"
+    edition: "2nd Edition, Dec. 2022"
+    edition_location: "표지 및 페이지 머리글 ('2nd Edit. Dec. 2022')"
+    source_url: "https://www.maritimeinformed.com/datasheets/hyundai-heavy-industries-5h17-28m-prime-mover/co-1623926422-ga/h1728-project-guide-for-marine-dec-2022.pdf"
+    hosting: third_party
+    local_path: "data/reference/four_stroke_engine/REF-4S-02.pdf"
+    retrieved_at: 2026-10-05
+    sha256: e3b48ee4d0caf934e8832163c0b984b35d5ed5ecf75f932dc0ba6768cbfe1f15
+    pages: 153
+    file_bytes: 4566284
+    marine_use: "표지: 'PROJECT GUIDE HiMSEN H17/28 FOR MARINE'"
+    notes: "제3자 사이트 출처. 공식 출처를 찾으면 교체. 쪽 번호: PDF 153쪽 = 본문 '1/146'~'152/146' 152쪽 + PDF p.3에 삽입된 개정 이력 1쪽('1/1'). PDF p.4부터 인쇄 쪽 번호 = PDF 쪽 - 1. 부록(PDF p.148~153)은 인쇄 번호가 분모 146을 넘음(문서 자체의 번호 오류). 누락·손상 없음"
+    verification_status: verified
+    verified_by: Choi Taeyoung
+
+  - id: REF-PUMP-01
+    class: Pump
+    maker: Alfa Laval
+    doc_title: "Alfa Laval Three-screw pump – Alfa Laval ALP pump range"
+    edition: "200008926-2-EN-GB (PDF 수정일 2023-09-12)"
+    edition_location: "마지막 페이지 바닥글 문서 코드 + PDF 메타데이터"
+    source_url: "https://www.alfalaval.com/globalassets/documents/products/fluid-handling/pumps/three-screw-pumps/product_leaflet_alp_three-screw_pumps.pdf"
+    hosting: official
+    local_path: "data/reference/pump/REF-PUMP-01.pdf"
+    retrieved_at: 2026-10-05
+    sha256: f111a023b58d2eef139c5363ffc1e0897128a67589efca0fa371e47bb2329ae8
+    pages: 6
+    file_bytes: 1133650
+    marine_use: "'developed with a specific focus on marine and industrial applications'"
+    notes: "선박·산업 겸용. 육상 전용 항목은 속성 수집에서 제외"
+    verification_status: verified
+    verified_by: Choi Taeyoung
+
+  - id: REF-PUMP-02
+    class: Pump
+    maker: DESMI
+    doc_title: "Marine & Offshore Pump Solutions"
+    edition: "표기 없음 (PDF 수정일 2025-06-18)"
+    edition_location: "PDF 메타데이터 (표지·바닥글에 판본 표기 없음)"
+    source_url: "https://www.desmi.com/media/5mwm24kq/desmi-marine-pump-solutions-web.pdf"
+    hosting: official
+    local_path: "data/reference/pump/REF-PUMP-02.pdf"
+    retrieved_at: 2026-10-05
+    sha256: 4ad5ffa448b7a0de121b4425f173fd96b8d1edbbd40b353129ccb8103d8f4e29
+    pages: 36
+    file_bytes: 2363670
+    marine_use: "'used as cooling, ballast, fire, and bilge pumps for fresh as well as seawater'"
+    notes: null
+    verification_status: verified
+    verified_by: Choi Taeyoung
+
+  - id: REF-COMP-01
+    class: AirCompressor
+    maker: Atlas Copco
+    doc_title: "Atlas Copco Marine Air Solutions – Setting the standard in marine compressed air"
+    edition: "표기 없음 (PDF 수정일 2018-09-13)"
+    edition_location: "PDF 메타데이터 (표지·바닥글에 판본 표기 없음)"
+    source_url: "https://www.atlascopco.com/content/dam/atlas-copco/compressor-technique/industrial-air/documents/brochures/air-compressors/marine-compressors/Marine_solutions.pdf"
+    hosting: official
+    local_path: "data/reference/air_compressor/REF-COMP-01.pdf"
+    retrieved_at: 2026-10-05
+    sha256: 475a541043b952999c0a1b33532447427443f1a3685c3455cfd4ea2b91e62f99
+    pages: 88
+    file_bytes: 2523919
+    marine_use: "목차: 'Air-cooled Starting Air Compressors', 'Working, Control & Instrument Air Compressors'"
+    notes: "2018년 자료로 현행 제품군과 다를 수 있음"
+    verification_status: verified
+    verified_by: Choi Taeyoung
+
+  - id: REF-COMP-02
+    class: AirCompressor
+    maker: Sauer Compressors
+    doc_title: "Sauer Compressors for Commercial Shipping"
+    edition: "표기 없음 (파일명 2025, PDF 수정일 2025-05-05)"
+    edition_location: "파일명 + PDF 메타데이터 (표지·바닥글에 판본 표기 없음)"
+    source_url: "https://www.sauercompressors.com/assets/Downloads/Sauer_Commercial_shipping_global_en_2025.pdf"
+    hosting: official
+    local_path: "data/reference/air_compressor/REF-COMP-02.pdf"
+    retrieved_at: 2026-10-05
+    sha256: f9795e0dbc46e99ba8bc2ea639fae17428a770a2a74f4611bc4b9a3b5cfcd116
+    pages: 24
+    file_bytes: 3995898
+    marine_use: "'International commercial shipping … starting- and working-air compressors'"
+    notes: null
+    verification_status: verified
+    verified_by: Choi Taeyoung
+
+  - id: REF-SEP-01
+    class: Separator
+    maker: Alfa Laval
+    doc_title: "Alfa Laval P separators 626/636/646 – Cleaning systems for lubricating, diesel and hydraulic oil applications"
+    edition: "200006015-3-EN-GB (PDF 수정일 2023-05-02)"
+    edition_location: "마지막 페이지 바닥글 문서 코드 + PDF 메타데이터"
+    source_url: "https://www.alfalaval.com/globalassets/documents/products/separation/centrifugal-separators/separators/s-and-p-flex/product_leaflet_p_626_636_646_separator_and_system_-product-leaflets_en.pdf"
+    hosting: official
+    local_path: "data/reference/separator/REF-SEP-01.pdf"
+    retrieved_at: 2026-10-05
+    sha256: 3403175b4c4fa14d15bcb6a33bc532b00569a8997c6213a51fd82593f2c53e57
+    pages: 5
+    file_bytes: 1461946
+    marine_use: "'remove water and particles from lubrication oils used in trunk-piston and cross-head engines', ISO 8217 연료"
+    notes: null
+    verification_status: verified
+    verified_by: Choi Taeyoung
+
+  - id: REF-SEP-02
+    class: Separator
+    maker: GEA
+    doc_title: "GEA marine Separator – Pushing the limits"
+    edition: "February 2026"
+    edition_location: "마지막 페이지 바닥글"
+    source_url: "https://www.gea.com/assets/322211/"
+    hosting: official
+    local_path: "data/reference/separator/REF-SEP-02.pdf"
+    retrieved_at: 2026-10-05
+    sha256: 3c86c789afcea0edbc7b641e4547d5b8461b2562d1b5ca4c58e2ba173846a04a
+    pages: 9
+    file_bytes: 1978213
+    marine_use: "표지: 'GEA MARINE SEPARATOR', 발행: GEA Global Marine Business"
+    notes: "브로슈어 성격이라 사양 표 분량 적음"
+    verification_status: verified
+    verified_by: Choi Taeyoung
+
+  - id: REF-TC-01
+    class: Turbocharger
+    maker: Everllence
+    doc_title: "Turbochargers TCA – Turbocharger power systems"
+    edition: "EVR 000073EN-250400"
+    edition_location: "마지막 페이지 바닥글 문서 코드"
+    source_url: "https://www.everllence.com/docs/default-source/marine-documents/turbocharger/evr-000073en_l3_tca_preview.pdf?sfvrsn=ec468fb7_3"
+    hosting: official
+    local_path: "data/reference/turbocharger/REF-TC-01.pdf"
+    retrieved_at: 2026-10-05
+    sha256: c37f94ab35cfda011d5537093dac35e8df2e898914aa06ce68cc9a408f61dd96
+    pages: 2
+    file_bytes: 206292
+    marine_use: "Applications: 'Marine propulsion, Power generation, Marine GenSets'"
+    notes: "선박·육상 겸용. 2쪽 분량으로 속성 수집량 적음"
+    verification_status: verified
+    verified_by: Choi Taeyoung
+
+  - id: REF-TC-02
+    class: Turbocharger
+    maker: Mitsubishi Heavy Industries Marine Machinery & Equipment
+    doc_title: "Marine Machinery – Company Profile / Product Information"
+    edition: "CP-003E (24-03)"
+    edition_location: "마지막 페이지 바닥글 문서 코드"
+    source_url: "https://www.mhi.com/group/mhimme/company/lib/cp_catalogue_e.pdf"
+    hosting: official
+    local_path: "data/reference/turbocharger/REF-TC-02.pdf"
+    retrieved_at: 2026-10-06
+    sha256: e5d835e933714180d46d7bfce90d5f32e169b4708baca227cabf168d8c40ddc5
+    pages: 36
+    file_bytes: 12440726
+    marine_use: "표지: 'MARINE MACHINERY … PRODUCT INFORMATION'"
+    notes: "과급기 참고 범위는 p.7~ (MET TURBOCHARGERS). 회사 전체 제품 카탈로그. Accelleron TPL-B(다운로드 불가) 대체"
+    verification_status: verified
+    verified_by: Choi Taeyoung

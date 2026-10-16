@@ -1,0 +1,756 @@
+# 합성 데이터 작성·평가 명세. 애플리케이션 로더/검증기 구현이 아님.
+contract_version: 2
+created_at: '2026-10-06'
+task: DATA-CONTRACT
+origin: synthetic
+status: frozen_for_dataset_v1 (D-019); W1 ontology source; domain semantics not user-verified
+scope: six-class synthetic dataset only; not production validation or industry requirements
+reviewed_by: null
+source_evidence: docs/ontology-scope/reference-evidence.yaml
+existing_candidate_policy: data/eval/handwritten/SCORING-POLICY.md
+existing_candidate_revision: 2
+units:
+  mm:
+    dimension: length
+    origin: synthetic
+  m:
+    dimension: length
+    origin: synthetic
+  kg:
+    dimension: mass
+    origin: synthetic
+  kW:
+    dimension: power
+    origin: synthetic
+  bar:
+    dimension: pressure
+    origin: synthetic
+  m3/h:
+    dimension: volume_flow
+    origin: synthetic
+  l/h:
+    dimension: volume_flow
+    origin: synthetic
+  rpm:
+    dimension: rotational_frequency
+    origin: synthetic
+  degC:
+    dimension: temperature
+    origin: synthetic
+  mbar:
+    dimension: pressure
+    origin: synthetic
+  cSt:
+    dimension: kinematic_viscosity
+    origin: synthetic
+  Hz:
+    dimension: frequency
+    origin: synthetic
+value_shapes:
+  number: finite numeric value; boolean is not numeric
+  integer: integer value; boolean is not integer
+  string: nonempty text; unknown represented separately
+  string_set: nonempty list of distinct strings; order not scored
+  boolean: explicit true/false; silence is unknown, not false
+  range: object {min,max}; finite numbers; min <= max; no fabricated endpoints
+  dimensions: object {length,width,height}; known axes numeric; unknown axes null; at least one known; partial axes
+    are partial observations
+attributes:
+  maker:
+    value_types:
+    - string
+    canonical_unit: null
+    dimension: dimensionless
+    origin: synthetic
+    definition_status: dataset_authoring_policy
+    verified_by: null
+  model_designation:
+    value_types:
+    - string
+    canonical_unit: null
+    dimension: dimensionless
+    origin: synthetic
+    definition_status: dataset_authoring_policy
+    verified_by: null
+  dimensions:
+    value_types:
+    - dimensions
+    canonical_unit: mm
+    dimension: length
+    origin: synthetic
+    definition_status: dataset_authoring_policy
+    verified_by: null
+  dry_weight:
+    value_types:
+    - number
+    canonical_unit: kg
+    dimension: mass
+    origin: synthetic
+    definition_status: dataset_authoring_policy
+    verified_by: null
+  reported_weight:
+    value_types:
+    - number
+    canonical_unit: kg
+    dimension: mass
+    origin: synthetic
+    definition_status: dataset_authoring_policy
+    verified_by: null
+  pump_type:
+    value_types:
+    - string
+    canonical_unit: null
+    dimension: dimensionless
+    origin: synthetic
+    definition_status: dataset_authoring_policy
+    verified_by: null
+  capacity:
+    value_types:
+    - number
+    canonical_unit: m3/h
+    dimension: volume_flow
+    origin: synthetic
+    definition_status: dataset_authoring_policy
+    verified_by: null
+  head:
+    value_types:
+    - number
+    canonical_unit: m
+    dimension: length
+    origin: synthetic
+    definition_status: dataset_authoring_policy
+    verified_by: null
+  medium:
+    value_types:
+    - string
+    canonical_unit: null
+    dimension: dimensionless
+    origin: synthetic
+    definition_status: dataset_authoring_policy
+    verified_by: null
+  motor_power:
+    value_types:
+    - number
+    canonical_unit: kW
+    dimension: power
+    origin: synthetic
+    definition_status: dataset_authoring_policy
+    verified_by: null
+  differential_pressure:
+    value_types:
+    - number
+    canonical_unit: bar
+    dimension: pressure
+    origin: synthetic
+    definition_status: dataset_authoring_policy
+    verified_by: null
+  discharge_pressure:
+    value_types:
+    - number
+    canonical_unit: bar
+    dimension: pressure
+    origin: synthetic
+    definition_status: dataset_authoring_policy
+    verified_by: null
+  max_pressure:
+    value_types:
+    - number
+    canonical_unit: bar
+    dimension: pressure
+    origin: synthetic
+    definition_status: dataset_authoring_policy
+    verified_by: null
+  working_pressure:
+    value_types:
+    - number
+    canonical_unit: bar
+    dimension: pressure
+    origin: synthetic
+    definition_status: dataset_authoring_policy
+    verified_by: null
+  cooling_type:
+    value_types:
+    - string
+    canonical_unit: null
+    dimension: dimensionless
+    origin: synthetic
+    definition_status: dataset_authoring_policy
+    verified_by: null
+  application:
+    value_types:
+    - string
+    canonical_unit: null
+    dimension: dimensionless
+    origin: synthetic
+    definition_status: dataset_authoring_policy
+    verified_by: null
+  rated_throughput:
+    value_types:
+    - number
+    canonical_unit: l/h
+    dimension: volume_flow
+    origin: synthetic
+    definition_status: dataset_authoring_policy
+    verified_by: null
+  self_cleaning:
+    value_types:
+    - boolean
+    canonical_unit: null
+    dimension: dimensionless
+    origin: synthetic
+    definition_status: dataset_authoring_policy
+    verified_by: null
+  rated_power:
+    value_types:
+    - number
+    canonical_unit: kW
+    dimension: power
+    origin: synthetic
+    definition_status: dataset_authoring_policy
+    verified_by: null
+  rated_speed:
+    value_types:
+    - number
+    canonical_unit: rpm
+    dimension: rotational_frequency
+    origin: synthetic
+    definition_status: dataset_authoring_policy
+    verified_by: null
+  number_of_cylinders:
+    value_types:
+    - integer
+    canonical_unit: null
+    dimension: dimensionless
+    origin: synthetic
+    definition_status: dataset_authoring_policy
+    verified_by: null
+  fuel_types:
+    value_types:
+    - string_set
+    canonical_unit: null
+    dimension: dimensionless
+    origin: synthetic
+    definition_status: dataset_authoring_policy
+    verified_by: null
+  bore:
+    value_types:
+    - number
+    canonical_unit: mm
+    dimension: length
+    origin: synthetic
+    definition_status: dataset_authoring_policy
+    verified_by: null
+  stroke:
+    value_types:
+    - number
+    canonical_unit: mm
+    dimension: length
+    origin: synthetic
+    definition_status: dataset_authoring_policy
+    verified_by: null
+  turbocharger_type:
+    value_types:
+    - string
+    canonical_unit: null
+    dimension: dimensionless
+    origin: synthetic
+    definition_status: dataset_authoring_policy
+    verified_by: null
+  applicable_engine_power:
+    value_types:
+    - number
+    - range
+    canonical_unit: kW
+    dimension: power
+    origin: synthetic
+    definition_status: dataset_authoring_policy
+    verified_by: null
+  bearing_type:
+    value_types:
+    - string
+    canonical_unit: null
+    dimension: dimensionless
+    origin: synthetic
+    definition_status: dataset_authoring_policy
+    verified_by: null
+classes:
+  Equipment:
+    abstract: true
+    parent: null
+    attributes:
+    - maker
+    - model_designation
+    - dimensions
+    - dry_weight
+    - reported_weight
+    attribute_definitions:
+      maker:
+        meaning: 주 제품 제조사; 발행자·판매자와 구별
+        conditions_and_basis: 명시적인 제조사 근거가 필요; Issued by만으로 일반적인 제조사 동등성을 확정하지 않음
+        evidence_summary: '원본 12건의 표지·브랜드와 manifest; S: 합성 1.1. 실제 별칭 규칙 사용자 검증 대기'
+        source_definition: docs/ontology-scope/common-attributes.md
+        verified_by: null
+      model_designation:
+        meaning: 특정 주 제품의 형식명
+        conditions_and_basis: 제품군 제목과 모델 행 구별; 제조사별 형식명 구조를 기억으로 추정하지 않음
+        evidence_summary: PUMP-01 p.3, COMP-01 p.10, SEP-01 p.5, 2S-02 p.29, 4S-02 p.8, TC-01 p.2; 관찰 검증 대기
+        source_definition: docs/ontology-scope/common-attributes.md
+        verified_by: null
+      dimensions:
+        meaning: 명시된 대상 범위의 전체 치수
+        conditions_and_basis: scope·축 순서 필수; 도면 문자·부분 치수는 원문 근거에 보존, 알 수 없는 축은 미확정; footprint를 전체 치수로 만들지 않음
+        evidence_summary: PUMP-01 p.5, COMP-01 p.10, SEP-01 p.5, 2S-02 p.30, 4S-02 p.15, TC-01 p.2; 도면 해석 사용자 검증
+          대기
+        source_definition: docs/ontology-scope/common-attributes.md
+        verified_by: null
+      dry_weight:
+        meaning: 건조 상태가 명시된 장비/유닛/모듈의 중량
+        conditions_and_basis: dry 근거와 scope 보존; ton의 종류가 불명확하면 자동 환산 보류
+        evidence_summary: '2S-02 p.30, 4S-02 p.15; S: COMP/SEP/TC 4.2. generic Weight의 dry 동등성은 미확정'
+        source_definition: docs/ontology-scope/common-attributes.md
+        verified_by: null
+      reported_weight:
+        meaning: 건조 여부가 명시되지 않은 원문 중량
+        conditions_and_basis: weight_basis는 원문 명시값 또는 unknown; dry_weight와 같은 근거를 이중 사실로 저장하지 않음
+        evidence_summary: COMP-01 p.10, SEP-01 p.5, TC-01 p.2; 기준 의미 사용자 검증 대기
+        source_definition: docs/ontology-scope/common-attributes.md
+        verified_by: null
+  Engine:
+    abstract: true
+    parent: Equipment
+    attributes:
+    - rated_power
+    - rated_speed
+    - number_of_cylinders
+    - fuel_types
+  FluidMachinery:
+    abstract: true
+    parent: Equipment
+    attributes:
+    - medium
+    - motor_power
+  EngineComponent:
+    abstract: true
+    parent: Equipment
+    attributes: []
+  Pump:
+    abstract: false
+    parent: FluidMachinery
+    attributes:
+    - pump_type
+    - capacity
+    - head
+    - differential_pressure
+    - discharge_pressure
+    attribute_definitions:
+      pump_type:
+        meaning: 주 펌프의 작동 형식
+        conditions_and_basis: centrifugal/three_screw 등은 관찰 기반 후보; horizontal·single-stage를 형식 하나로 뭉개지 않음
+        evidence_summary: P1 p.1, P2 p.2~3; S 1.3/표1
+        source_definition: docs/ontology-scope/pump.md
+        verified_by: null
+      capacity:
+        meaning: 펌프가 전달하는 유체의 유량
+        conditions_and_basis: rated/nominal/maximum 구별; 주파수·회전수·점도·압력 등 명시된 조건 보존
+        evidence_summary: P1 p.3~4, P2 p.3; S 표2/5장
+        source_definition: docs/ontology-scope/pump.md
+        verified_by: null
+      head:
+        meaning: 주 펌프의 토출 성능으로 명시된 양정
+        conditions_and_basis: centrifugal로 확인된 경우 요구 후보; 유량과 같은 성능점인지 확인; suction head와 구별
+        evidence_summary: P2 p.3; S 표3
+        source_definition: docs/ontology-scope/pump.md
+        verified_by: null
+      medium:
+        meaning: 펌프가 이송하는 유체
+        conditions_and_basis: oil/seawater 등 원문 또는 조건을 보존; 냉각 매체와 이송 매체 구별
+        evidence_summary: P1 p.1, P2 p.2~3; S 1.3/1.4/표4
+        source_definition: docs/ontology-scope/pump.md
+        verified_by: null
+      motor_power:
+        meaning: 펌프 구동 전동기의 명시된 정격 출력
+        conditions_and_basis: Motor size/프레임 번호를 출력으로 해석하지 않음
+        evidence_summary: S 표5/3.1; P1 p.5는 Motor size여서 동등 매핑 근거가 아님
+        source_definition: docs/ontology-scope/pump.md
+        verified_by: null
+      differential_pressure:
+        meaning: 입출구 사이 차압으로 명시된 값
+        conditions_and_basis: 원문이 differential/Δp를 명시해야 함; 밸브 설정과 성능 조건 구별
+        evidence_summary: P1 p.3~4
+        source_definition: docs/ontology-scope/pump.md
+        verified_by: null
+      discharge_pressure:
+        meaning: 토출 압력으로 명시된 값
+        conditions_and_basis: pressure_basis gauge/absolute/unknown; 차압과 자동 동등화 금지
+        evidence_summary: P1 p.3
+        source_definition: docs/ontology-scope/pump.md
+        verified_by: null
+    required_all:
+    - maker
+    - model_designation
+    - pump_type
+    - capacity
+    required_any_groups: []
+    conditional_required:
+    - when:
+        pump_type: centrifugal
+      required_all:
+      - head
+    - when:
+        pump_type: three_screw
+      required_any_groups:
+      - - differential_pressure
+        - discharge_pressure
+    unknown_policy: retain_evidence_and_review; do not infer missing values
+  AirCompressor:
+    abstract: false
+    parent: FluidMachinery
+    attributes:
+    - capacity
+    - max_pressure
+    - working_pressure
+    - cooling_type
+    attribute_definitions:
+      capacity:
+        meaning: 압축기의 공기 공급/충전 능력
+        conditions_and_basis: capacity_basis 필수; FAD와 charging_capacity를 별도 관찰로 유지; 기준 온도·절대압·주파수 보존
+        evidence_summary: C1 p.10/14, C2 p.5/7; S 표2/3.2
+        source_definition: docs/ontology-scope/air-compressor.md
+        verified_by: null
+      max_pressure:
+        meaning: 최대 작동 압력이라고 명시된 값
+        conditions_and_basis: gauge/absolute/unknown 보존; nominal/final의 이름만으로 최대압 확정 금지
+        evidence_summary: S 표3; C1 p.10/C2 p.5는 작동/최종 압력 표기이므로 max 동등성 미검증
+        source_definition: docs/ontology-scope/air-compressor.md
+        verified_by: null
+      working_pressure:
+        meaning: 명시된 작동/최종 압력
+        conditions_and_basis: working 또는 max_pressure 중 명시된 작동 범위 정보 최소 1개 요구 후보; nominal/final 기준 구별
+        evidence_summary: C1 p.10, C2 p.5
+        source_definition: docs/ontology-scope/air-compressor.md
+        verified_by: null
+      cooling_type:
+        meaning: 압축기 자체의 냉각 방식
+        conditions_and_basis: air/water 후보; No cooling water만으로 임의 타입 추론하지 않음
+        evidence_summary: C1 p.8/10/15; S 1.3/표1/표4/3.2
+        source_definition: docs/ontology-scope/air-compressor.md
+        verified_by: null
+      medium:
+        meaning: 압축/공급하는 작동 매체
+        conditions_and_basis: 본문에서 air를 확인; 명칭만으로 기본값을 조용히 채우지 않음
+        evidence_summary: C1 p.8, C2 p.5의 압축기 문맥; S 1.3/1.4/표5/3.2
+        source_definition: docs/ontology-scope/air-compressor.md
+        verified_by: null
+      motor_power:
+        meaning: 구동 전동기의 명시된 정격 출력
+        conditions_and_basis: Shaft power/Installed power/Power consumption을 그대로 motor_power로 합치지 않음
+        evidence_summary: S 표6/3.1; C1 p.10/11/14, C2 p.5의 출력 용어는 추가 의미 검증 필요
+        source_definition: docs/ontology-scope/air-compressor.md
+        verified_by: null
+    required_all:
+    - maker
+    - model_designation
+    - capacity
+    required_any_groups:
+    - - max_pressure
+      - working_pressure
+    conditional_required: []
+    unknown_policy: retain_evidence_and_review; do not infer missing values
+  Separator:
+    abstract: false
+    parent: FluidMachinery
+    attributes:
+    - application
+    - rated_throughput
+    - self_cleaning
+    attribute_definitions:
+      application:
+        meaning: 연료유/윤활유 등 처리 용도
+        conditions_and_basis: fuel_oil/lube_oil 후보; 모듈 설치 위치와 유종은 구별
+        evidence_summary: S1 p.1, S2 p.7; S 1.3/1.4/표1
+        source_definition: docs/ontology-scope/separator.md
+        verified_by: null
+        dataset_allowed_values:
+          values:
+          - fuel_oil
+          - lube_oil
+          origin: synthetic
+          scope: supported registration application categories in this synthetic dataset; not exhaustive industry
+            ontology
+          unlisted_explicit_value: E4 only when a stated value is outside this closed dataset list
+          unmentioned_value: unknown/review, never assume E4
+      rated_throughput:
+        meaning: 원문이 제시한 처리량
+        conditions_and_basis: 이름은 기존 ID 유지; rating_basis가 maximum/recommended/rated인지 보존, 모든 값을 정격으로 재해석하지 않음
+        evidence_summary: S1 p.4, S2 p.7; S 표2~3/3.1
+        source_definition: docs/ontology-scope/separator.md
+        verified_by: null
+      self_cleaning:
+        meaning: 자체/자동 배출 기능이 명시된 여부
+        conditions_and_basis: 미언급은 false가 아님; bowl 구조만으로 boolean 추측 금지
+        evidence_summary: S1 p.3의 배출 설명; S 1.3/표4/3.2
+        source_definition: docs/ontology-scope/separator.md
+        verified_by: null
+      medium:
+        meaning: 처리하는 유체
+        conditions_and_basis: heavy_fuel_oil 등은 조건과 연결; 포괄적 oil만으로 특정 등급을 추정하지 않음
+        evidence_summary: S1 p.1, S2 p.7; S 1.3/1.4/표1~3/3.1
+        source_definition: docs/ontology-scope/separator.md
+        verified_by: null
+      motor_power:
+        meaning: 주 분리기 구동 전동기의 명시된 정격
+        conditions_and_basis: 모듈 내 다른 부품 전력을 분리기의 모터 출력으로 합산하지 않음
+        evidence_summary: S 표5. 원본 S1/S2의 해당 kW 정격 직접 근거는 이번 범위 정의에서 미확인
+        source_definition: docs/ontology-scope/separator.md
+        verified_by: null
+    required_all:
+    - maker
+    - model_designation
+    - application
+    - rated_throughput
+    required_any_groups: []
+    conditional_required: []
+    unknown_policy: retain_evidence_and_review; do not infer missing values
+  TwoStrokeMainEngine:
+    abstract: false
+    parent: Engine
+    attributes:
+    - bore
+    - stroke
+    attribute_definitions:
+      rated_power:
+        meaning: 엔진 전체의 지정 정격 출력
+        conditions_and_basis: MCR/NMCR/SMCR/CMCR·정격점·실린더 구성 보존; kW/cyl를 전체 출력으로 대체 금지
+        evidence_summary: E1 p.23/51, E2 p.29/38; S 표4/3.1
+        source_definition: docs/ontology-scope/two-stroke-main-engine.md
+        verified_by: null
+      rated_speed:
+        meaning: 출력 정격에 대응하는 엔진 회전수
+        conditions_and_basis: 같은 정격점의 power와 연결; 과급기 회전수와 구별
+        evidence_summary: E2 p.26/29; E1 p.23; S 표5/3.1
+        source_definition: docs/ontology-scope/two-stroke-main-engine.md
+        verified_by: null
+      number_of_cylinders:
+        meaning: 해당 엔진 모델/구성의 실린더 수
+        conditions_and_basis: 제품군의 실린더 수 범위는 별도 후보 구성 목록, 단일 정수로 임의 선택 금지
+        evidence_summary: E2 p.26/29; S 표1
+        source_definition: docs/ontology-scope/two-stroke-main-engine.md
+        verified_by: null
+      fuel_types:
+        meaning: 엔진에서 명시적으로 사용할 수 있는 연료 목록
+        conditions_and_basis: 연료와 gas/liquid/pilot 등의 역할은 명시된 경우 보존; 목록 합집합을 동시에 사용하는 모드로 해석하지 않음
+        evidence_summary: E2 p.26/38; S 표6/3.1
+        source_definition: docs/ontology-scope/two-stroke-main-engine.md
+        verified_by: null
+      bore:
+        meaning: 주 엔진의 실린더 보어
+        conditions_and_basis: Bore x stroke는 두 값으로 분리; 형식명에서 값 추정 금지
+        evidence_summary: E2 p.26/29; S 표2
+        source_definition: docs/ontology-scope/two-stroke-main-engine.md
+        verified_by: null
+      stroke:
+        meaning: 주 엔진의 피스톤 행정
+        conditions_and_basis: bore와 순서 구별; 같은 기하 구성의 값인지 확인
+        evidence_summary: E2 p.26/29; S 표3
+        source_definition: docs/ontology-scope/two-stroke-main-engine.md
+        verified_by: null
+    required_all:
+    - maker
+    - model_designation
+    - rated_power
+    - rated_speed
+    - number_of_cylinders
+    required_any_groups: []
+    conditional_required: []
+    unknown_policy: retain_evidence_and_review; do not infer missing values
+  FourStrokeEngine:
+    abstract: false
+    parent: Engine
+    attributes:
+    - application
+    - bore
+    - stroke
+    attribute_definitions:
+      application:
+        meaning: 엔진의 주 사용 용도
+        conditions_and_basis: propulsion/genset 후보; 공급 품목과 주 용도를 구별
+        evidence_summary: F1 p.33/35, F2 p.8/18; S 1.3/1.4/표1/3.1
+        source_definition: docs/ontology-scope/four-stroke-engine.md
+        verified_by: null
+        dataset_allowed_values:
+          values:
+          - propulsion
+          - genset
+          origin: synthetic
+          scope: supported registration application categories in this synthetic dataset; not exhaustive industry
+            ontology
+          unlisted_explicit_value: E4 only when a stated value is outside this closed dataset list
+          unmentioned_value: unknown/review, never assume E4
+      rated_power:
+        meaning: 주 엔진 전체의 정격 출력
+        conditions_and_basis: Engine kWm/Generator kWe, Normal/Higher, ICN/ICFN 등의 명시 기준 보존; 단위 kW만으로 동일화 금지
+        evidence_summary: F1 p.33~35, F2 p.18; S 표5/3.1
+        source_definition: docs/ontology-scope/four-stroke-engine.md
+        verified_by: null
+      rated_speed:
+        meaning: 출력 정격에 대응하는 엔진 회전수
+        conditions_and_basis: 주파수·출력 정격과 대응; 발전기 극수를 엔진 속성으로 대체하지 않음
+        evidence_summary: F2 p.10/18; F1 p.33; S 표6/3.1
+        source_definition: docs/ontology-scope/four-stroke-engine.md
+        verified_by: null
+      number_of_cylinders:
+        meaning: 주 엔진의 실린더 수
+        conditions_and_basis: 발전기 극수나 형식명 숫자와 구별; 범위 표는 모델별 구성으로 보존
+        evidence_summary: F2 p.8/10; F1 p.33; S 표2
+        source_definition: docs/ontology-scope/four-stroke-engine.md
+        verified_by: null
+      fuel_types:
+        meaning: 명시된 운전 연료 목록
+        conditions_and_basis: 원문 연료명·규격과 합성 약칭의 동등성은 검증 후 사전 연결
+        evidence_summary: F1 p.33; S 표7. S의 MDO/MGO와 원본 DMA의 일반 동등성은 미확정
+        source_definition: docs/ontology-scope/four-stroke-engine.md
+        verified_by: null
+      bore:
+        meaning: 주 엔진의 실린더 보어
+        conditions_and_basis: 사양 표의 값과 형식명 설명의 단위를 구별; 이름만으로 수치 복원하지 않음
+        evidence_summary: F2 p.8/10; S 표3
+        source_definition: docs/ontology-scope/four-stroke-engine.md
+        verified_by: null
+      stroke:
+        meaning: 주 엔진의 피스톤 행정
+        conditions_and_basis: 보어와 순서 및 단위 구별
+        evidence_summary: F2 p.8/10; S 표4
+        source_definition: docs/ontology-scope/four-stroke-engine.md
+        verified_by: null
+    required_all:
+    - maker
+    - model_designation
+    - application
+    - rated_power
+    - rated_speed
+    - number_of_cylinders
+    required_any_groups: []
+    conditional_required: []
+    unknown_policy: retain_evidence_and_review; do not infer missing values
+  Turbocharger:
+    abstract: false
+    parent: EngineComponent
+    attributes:
+    - turbocharger_type
+    - applicable_engine_power
+    - bearing_type
+    attribute_definitions:
+      turbocharger_type:
+        meaning: 명시된 과급기 형식; 대상 부위를 함께 보존
+        conditions_and_basis: axial/radial 후보; turbine/compressor 구별이 불명확하면 검토, 임의 동일화 금지
+        evidence_summary: T1 p.1, T2 p.8~9; S 1.3/표1은 axial-flow turbine
+        source_definition: docs/ontology-scope/turbocharger.md
+        verified_by: null
+      applicable_engine_power:
+        meaning: 해당 과급기가 적용되는 엔진 출력
+        conditions_and_basis: 2/4행정, per_turbocharger 및 정격/최대 기준 명시값 보존; T1 단일값을 임의 범위로 만들지 않음
+        evidence_summary: T1 p.2, T2 p.8; S 표2/3.1
+        source_definition: docs/ontology-scope/turbocharger.md
+        verified_by: null
+      bearing_type:
+        meaning: 과급기 자체의 명시된 베어링 형식
+        conditions_and_basis: plain 관찰 후보; 다른 제품의 베어링 설명을 가져오지 않음
+        evidence_summary: T1 p.2; S 표4
+        source_definition: docs/ontology-scope/turbocharger.md
+        verified_by: null
+    required_all:
+    - maker
+    - model_designation
+    - turbocharger_type
+    - applicable_engine_power
+    required_any_groups: []
+    conditional_required: []
+    unknown_policy: retain_evidence_and_review; do not infer missing values
+fact_contract:
+  identity:
+  - document
+  - attribute
+  - condition
+  - basis
+  - scope
+  required_evidence:
+  - raw_text
+  - location
+  repeated_occurrences: one fact, multiple source locations; one scoring unit
+  conditional_values: distinct conditions produce distinct facts; no conflict merely because values differ
+  unknown: preserve unknown; do not treat unknown contexts as equal
+  empty_required_value: empty text/list or unresolved observation does not satisfy required attribute
+  zero_and_false: preserve as values; no physical limits asserted
+  unit_policy: canonical units apply to normalized answers; retain original unit text; no bare bhp/BHP/ton default
+    conversion
+  missing_policy: required policies are synthetic registration-readiness labels, not faulty equipment judgments
+metadata_contract:
+  basis:
+  - capacity
+  - rating
+  - pressure
+  - weight
+  condition:
+  - medium
+  - viscosity
+  - viscosity_basis
+  - temperature
+  - absolute_pressure
+  - frequency
+  - rating_point
+  - engine_type
+  - basis
+  scope: explicit object/component boundary or unknown
+  viscosity: quantity with optional reference_temperature; preserve fuel_reference versus inlet
+  pressure_basis:
+  - gauge
+  - absolute
+  - unknown
+  - not_applicable
+  gold_v2_aliases:
+    capacity_basis: basis.capacity
+    rating_basis: basis.rating
+    pressure_basis: basis.pressure
+    weight_basis: basis.weight
+    reference_conditions: condition
+    conditional_values: additional facts of same attribute
+  representation: legacy gold v2 viscosity text remains allowed; structured form may be introduced only with a versioned
+    gold migration
+relations:
+  manufactured_by:
+    target: Manufacturer
+    representation: maker text in current gold; synthetic registry ID in future data
+    origin: synthetic
+  has_component:
+    target: Equipment
+    meaning: supply-scope (BOM) inclusion of an identified product; not physical attachment, mechanical
+      compatibility or equipment selection (D-014)
+    representation: identified model/registry reference list; generic component mention is not a confirmed product
+      link
+    origin: synthetic
+  variant_of:
+    target: Equipment
+    representation: explicit family reference or null; similarity alone does not prove relation
+    origin: synthetic
+  external_ref:
+    representation: optional external classification reference; codes unresolved and not required for dataset completion
+    origin: synthetic
+excluded_rules:
+- manufacturer aliases and model-name parsing inferred from memory
+- physical acceptance ranges without verified source
+- automatic head/pressure equivalence
+- generic Weight implies dry_weight
+- silent enum defaulting or universal enum exhaustiveness
+evaluation_separation:
+  current_six: design-exposed supplemental candidates; not independent held-out test
+  score_units_unchanged: 56
+  extensions:
+  - reported_weight
+  - differential_pressure
+  - discharge_pressure
+  - working_pressure
+  extension_policy: allowed in new authoring; do not add absent attributes as missing errors to old gold without
+    explicit revision
+  input_policy: product document bodies only; no answer, contract, manifest or case-design metadata in document
+    input
+updated_at: '2026-10-07'

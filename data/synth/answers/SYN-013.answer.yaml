@@ -1,0 +1,439 @@
+schema_version: 3
+input_id: SYN-013
+origin: synthetic
+expected_class: TwoStrokeMainEngine
+status: final_v1; frozen by user decision D-019 (2026-10-08); reviewed_by awaits user signature
+artifact:
+  path: data/synth/inputs/SYN-013.pdf
+  sha256: d4c3e0529a15b1fa80a20a77982d5b40cb3135b2415c0af87e6643d796450ea9
+  file_format: pdf
+  location_verified: true
+  source_path: data/synth/test/sources/SYN-013.md
+  source_sha256: 195c21aacec53ba9159b00f11e6c3d3cf946c026045bdb07974ed9915679a67b
+  verification_method: independent file-content audit
+observations:
+- observation_id: O001
+  attribute_id: maker
+  raw_text: SGDW-20261007-C Synthetic Works
+  label_text: Manufacturer
+  unit_text: null
+  location:
+    source_line: 9
+    source_section: Identification
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 466.28
+    - 803.89
+    - 477.28
+    bbox_unit: pt
+    region_or_section: Identification
+  interpretation: normalized
+  parsed_value: SGDW-20261007-C Synthetic Works
+  parsed_unit: null
+- observation_id: O002
+  attribute_id: model_designation
+  raw_text: VX003-113
+  label_text: Model designation
+  unit_text: null
+  location:
+    source_line: 11
+    source_section: Identification
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 448.28
+    - 803.89
+    - 459.28
+    bbox_unit: pt
+    region_or_section: Identification
+  interpretation: normalized
+  parsed_value: VX003-113
+  parsed_unit: null
+- observation_id: O003
+  attribute_id: number_of_cylinders
+  raw_text: '7'
+  label_text: Cylinders
+  unit_text: null
+  location:
+    source_line: 15
+    source_section: Specifications
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 405.28
+    - 803.89
+    - 416.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value: 7
+  parsed_unit: null
+- observation_id: O004
+  attribute_id: bore
+  raw_text: '600'
+  label_text: 'Bore:'
+  unit_text: mm
+  location:
+    source_line: 17
+    source_section: Specifications
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 387.28
+    - 803.89
+    - 398.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value: 600
+  parsed_unit: mm
+- observation_id: O005
+  attribute_id: stroke
+  raw_text: '2320'
+  label_text: 'Stroke:'
+  unit_text: mm
+  location:
+    source_line: 19
+    source_section: Specifications
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 369.28
+    - 803.89
+    - 380.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value: 2320
+  parsed_unit: mm
+- observation_id: O006
+  attribute_id: rated_power
+  raw_text: '24894.9'
+  label_text: Rated output
+  unit_text: kW
+  location:
+    source_line: 21
+    source_section: Specifications
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 351.28
+    - 803.89
+    - 362.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value: 24894.9
+  parsed_unit: kW
+- observation_id: O007
+  attribute_id: rated_power
+  raw_text: '21907.51'
+  label_text: Rated output
+  unit_text: kW
+  location:
+    source_line: 23
+    source_section: Specifications
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 333.28
+    - 803.89
+    - 344.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value: 21907.51
+  parsed_unit: kW
+- observation_id: O008
+  attribute_id: rated_speed
+  raw_text: '88'
+  label_text: Engine speed
+  unit_text: rpm
+  location:
+    source_line: 25
+    source_section: Specifications
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 315.28
+    - 803.89
+    - 326.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value: 88
+  parsed_unit: rpm
+- observation_id: O009
+  attribute_id: rated_speed
+  raw_text: '79'
+  label_text: Engine speed
+  unit_text: rpm
+  location:
+    source_line: 27
+    source_section: Specifications
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 297.28
+    - 803.89
+    - 308.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value: 79
+  parsed_unit: rpm
+- observation_id: O010
+  attribute_id: fuel_types
+  raw_text: natural gas, MDO
+  label_text: Fuel
+  unit_text: null
+  location:
+    source_line: 29
+    source_section: Specifications
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 279.28
+    - 803.89
+    - 290.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value:
+  - natural_gas
+  - MDO
+  parsed_unit: null
+- observation_id: O011
+  attribute_id: dimensions
+  raw_text: 11600 × 5160 × 12000
+  label_text: Dimensions (L × W × H)
+  unit_text: mm
+  location:
+    source_line: 31
+    source_section: Specifications
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 261.28
+    - 803.89
+    - 272.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value:
+    length: 11600
+    width: 5160
+    height: 12000
+  parsed_unit: mm
+- observation_id: O012
+  attribute_id: dry_weight
+  raw_text: '483570.0'
+  label_text: Dry mass
+  unit_text: kg
+  location:
+    source_line: 33
+    source_section: Specifications
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 243.28
+    - 803.89
+    - 254.28
+    bbox_unit: pt
+    region_or_section: Specifications
+  interpretation: normalized
+  parsed_value: 483570.0
+  parsed_unit: kg
+- observation_id: O013
+  attribute_id: rated_power
+  raw_text: '24894.9'
+  label_text: Rated output
+  unit_text: kW
+  location:
+    source_line: 38
+    source_section: Operating notes
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 200.28
+    - 803.89
+    - 211.28
+    bbox_unit: pt
+    region_or_section: Operating notes
+  interpretation: normalized
+  parsed_value: 24894.9
+  parsed_unit: kW
+- observation_id: O014
+  attribute_id: null
+  raw_text: VX023-017
+  label_text: Included component
+  unit_text: null
+  location:
+    source_line: 40
+    source_section: Operating notes
+    pdf_page: 1
+    bbox:
+    - 38.0
+    - 182.28
+    - 803.89
+    - 193.28
+    bbox_unit: pt
+    region_or_section: Operating notes
+  interpretation: normalized
+facts:
+- fact_id: F001
+  attribute_id: maker
+  value: SGDW-20261007-C Synthetic Works
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O001
+  admissibility: supported
+- fact_id: F002
+  attribute_id: model_designation
+  value: VX003-113
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O002
+  admissibility: supported
+- fact_id: F003
+  attribute_id: number_of_cylinders
+  value: 7
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O003
+  admissibility: supported
+- fact_id: F004
+  attribute_id: bore
+  value: 600
+  unit: mm
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O004
+  admissibility: supported
+- fact_id: F005
+  attribute_id: stroke
+  value: 2320
+  unit: mm
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O005
+  admissibility: supported
+- fact_id: F006
+  attribute_id: rated_power
+  value: 24894.9
+  unit: kW
+  basis:
+    rating: MCR
+  condition:
+    rating_point: R1
+  scope: engine_shaft
+  observation_ids:
+  - O006
+  - O013
+  admissibility: supported
+- fact_id: F007
+  attribute_id: rated_power
+  value: 21907.51
+  unit: kW
+  basis:
+    rating: MCR
+  condition:
+    rating_point: R2
+  scope: engine_shaft
+  observation_ids:
+  - O007
+  admissibility: supported
+- fact_id: F008
+  attribute_id: rated_speed
+  value: 88
+  unit: rpm
+  basis: {}
+  condition:
+    rating_point: R1
+  scope: engine_crankshaft
+  observation_ids:
+  - O008
+  admissibility: supported
+- fact_id: F009
+  attribute_id: rated_speed
+  value: 79
+  unit: rpm
+  basis: {}
+  condition:
+    rating_point: R2
+  scope: engine_crankshaft
+  observation_ids:
+  - O009
+  admissibility: supported
+- fact_id: F010
+  attribute_id: fuel_types
+  value:
+  - natural_gas
+  - MDO
+  unit: null
+  basis: {}
+  condition: {}
+  scope: main_equipment
+  observation_ids:
+  - O010
+  admissibility: supported
+- fact_id: F011
+  attribute_id: dimensions
+  value:
+    length: 11600
+    width: 5160
+    height: 12000
+  unit: mm
+  basis: {}
+  condition: {}
+  scope: main_engine
+  observation_ids:
+  - O011
+  admissibility: supported
+- fact_id: F012
+  attribute_id: dry_weight
+  value: 483570.0
+  unit: kg
+  basis:
+    weight: dry
+  condition: {}
+  scope: main_engine
+  observation_ids:
+  - O012
+  admissibility: supported
+issues: []
+missing_required: []
+comparison:
+  label_scope: nominated_pairs_only
+  pairs: []
+relations:
+- relation_id: has_component
+  target_product_id: REG-TC-017
+  observation_ids:
+  - O014
+reference_variants:
+- observation_id: O004
+  notation: 'Bore:'
+  document_id: REF-2S-02
+  pdf_page: 26
+  context_suffix_origin: synthetic
+- observation_id: O005
+  notation: 'Stroke:'
+  document_id: REF-2S-02
+  pdf_page: 26
+  context_suffix_origin: synthetic
+reviewed_by: null

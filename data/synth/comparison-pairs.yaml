@@ -1,0 +1,127 @@
+version: 2
+origin: synthetic
+status: final_v1; frozen by user decision D-019 (2026-10-08); reviewed_by awaits user signature
+label_scope: nominated_pairs_only; no implicit negatives or top-1 ground truth
+reviewed_by: null
+pairs:
+- input_id: SYN-003
+  split: dev
+  input_sha256: 1b6962fedce8175508e9f601d658c99e18825c987476549365d24fc90bcf059c
+  registry_id: REG-TC-009
+  expected_relation: duplicate
+  identity_evidence:
+  - O001
+  - O002
+  differing_attribute_ids: []
+  label_provenance: explicit synthetic product/family mapping; family ID not given,
+    but the model-designation series prefix is visible
+- input_id: SYN-004
+  split: dev
+  input_sha256: 79251c3f6084f419b566da45e71f211e9a4b4e2e6379dd739d83f59388c11fe8
+  registry_id: REG-COMP-009
+  expected_relation: duplicate
+  identity_evidence:
+  - O001
+  - O002
+  differing_attribute_ids: []
+  label_provenance: explicit synthetic product/family mapping; family ID not given,
+    but the model-designation series prefix is visible
+- input_id: SYN-005
+  split: dev
+  input_sha256: 14f51d1b360674236d79928b9ce73daf0199309d61306c17fa7dbd91522ae021
+  registry_id: REG-PUMP-009
+  expected_relation: duplicate
+  identity_evidence:
+  - O001
+  - O002
+  differing_attribute_ids: []
+  label_provenance: explicit synthetic product/family mapping; family ID not given,
+    but the model-designation series prefix is visible
+- input_id: SYN-019
+  split: dev
+  input_sha256: daa1d891f9c6723c94bcd2c3a45b3cb44a430b0d7ceaf07da05d2366129b44b3
+  registry_id: REG-PUMP-009
+  expected_relation: similar
+  identity_evidence:
+  - O001
+  - O002
+  differing_attribute_ids:
+  - capacity
+  - motor_power
+  - dry_weight
+  label_provenance: explicit synthetic product/family mapping; family ID not given,
+    but the model-designation series prefix is visible
+- input_id: SYN-020
+  split: test
+  input_sha256: f2a8a8a7994d25dd484fce205affb3f30bd11c3c50d3908afcdbad78917b93a5
+  registry_id: REG-4S-021
+  expected_relation: duplicate
+  identity_evidence:
+  - O001
+  - O002
+  differing_attribute_ids: []
+  label_provenance: explicit synthetic product/family mapping; family ID not given,
+    but the model-designation series prefix is visible
+- input_id: SYN-021
+  split: test
+  input_sha256: 83d93bdd047cb9cab3a9b1d65760b99e4d89f412633e0a994a44ecd86551d7b8
+  registry_id: REG-COMP-021
+  expected_relation: similar
+  identity_evidence:
+  - O001
+  - O002
+  differing_attribute_ids:
+  - capacity
+  - motor_power
+  - dry_weight
+  label_provenance: explicit synthetic product/family mapping; family ID not given,
+    but the model-designation series prefix is visible
+- input_id: SYN-025
+  split: test
+  input_sha256: 835b395b813d912ace18bb43f3b613949565dec51c191d2bbd972513937d1c9f
+  registry_id: REG-SEP-021
+  expected_relation: duplicate
+  identity_evidence:
+  - O001
+  - O002
+  differing_attribute_ids: []
+  label_provenance: explicit synthetic product/family mapping; family ID not given,
+    but the model-designation series prefix is visible
+- input_id: SYN-028
+  split: test
+  input_sha256: 6a0feb7c4785e82116814378950d8a1770e38b43ac3a469303489a1e27955d68
+  registry_id: REG-4S-021
+  expected_relation: similar
+  identity_evidence:
+  - O001
+  - O002
+  differing_attribute_ids:
+  - rated_power
+  - dry_weight
+  label_provenance: explicit synthetic product/family mapping; family ID not given,
+    but the model-designation series prefix is visible
+- input_id: SYN-034
+  split: dev
+  input_sha256: f5d78fe62debc34862910a9781c6cd08f5920180fd60f3008e99a17bd008481a
+  registry_id: REG-2S-009
+  expected_relation: duplicate
+  identity_evidence:
+  - O001
+  - O002
+  differing_attribute_ids: []
+  label_provenance: explicit synthetic product/family mapping; family ID not given,
+    but the model-designation series prefix is visible
+- input_id: SYN-035
+  split: dev
+  input_sha256: d2b7c39c6985982f00a7f900a18cd314b8c90fbfd2d597098a43dbca24f9c1cf
+  registry_id: REG-SEP-009
+  expected_relation: similar
+  identity_evidence:
+  - O001
+  - O002
+  differing_attribute_ids:
+  - rated_throughput
+  - motor_power
+  - dry_weight
+  label_provenance: explicit synthetic product/family mapping; family ID not given,
+    but the model-designation series prefix is visible

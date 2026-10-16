@@ -1,0 +1,343 @@
+{
+  "prediction": {
+    "document_id": "SYN-021",
+    "class_id": "AirCompressor",
+    "class_candidates": [
+      "AirCompressor"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-D Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "manufacturer_identification",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-021",
+            "raw_text": "SGDW-20261007-D Synthetic Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "General",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                467.6191063841906,
+                229.17968000000008,
+                475.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX012-121",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "model_identification",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-021",
+            "raw_text": "VX012-121",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "General",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                449.6191063841906,
+                112.2656216,
+                457.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "max_pressure",
+        "value": 30,
+        "unit": "bar",
+        "basis": {},
+        "condition": {},
+        "scope": "maximum_operational_pressure_limit",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-021",
+            "raw_text": "30",
+            "label_text": "Max pressure",
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                359.6190801146593,
+                187.34331680000003,
+                367.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "cooling_type",
+        "value": "water-cooled",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "cooling_method",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-021",
+            "raw_text": "water-cooled",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                338.6190801146593,
+                224.2456592,
+                346.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "air",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "operating_medium",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-021",
+            "raw_text": "air",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                317.6190801146593,
+                187.33550480000002,
+                325.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "motor_power",
+        "value": 53.56,
+        "unit": "kW",
+        "basis": {},
+        "condition": {},
+        "scope": "motor_rated_output",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-021",
+            "raw_text": "53.56",
+            "label_text": "Motor rating",
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "pdf_page": 1,
+              "bbox": [
+                178.44488,
+                296.6190801146593,
+                198.4644096,
+                304.0060425304687
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 1200.55,
+        "unit": "kg",
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          },
+          "absolute_pressure": {
+            "value": 1013,
+            "unit": "mbar"
+          }
+        },
+        "scope": "dry_weight_of_complete_unit",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-021",
+            "raw_text": "1200.55",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Dimensions and weight",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                227.61910638419056,
+                370.59763920000006,
+                235.00606879999998
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "capacity",
+      "text": "212.41",
+      "line": "L9, L19",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "reported_weight",
+      "text": "1200.55 kg (dry condition, complete compressor unit with motor and mountings)",
+      "line": "none",
+      "reason": "unknown_line"
+    }
+  ],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "basis": {},
+        "condition": {},
+        "scope": "Manufacturer identification",
+        "line": "L5",
+        "value": "SGDW-20261007-D Synthetic Works",
+        "unit": null,
+        "raw_text": "SGDW-20261007-D Synthetic Works"
+      },
+      {
+        "attribute": "model_designation",
+        "basis": {},
+        "condition": {},
+        "scope": "Model identification",
+        "line": "L6",
+        "value": "VX012-121",
+        "unit": null,
+        "raw_text": "VX012-121"
+      },
+      {
+        "attribute": "capacity",
+        "basis": {
+          "capacity": "free_air_delivery",
+          "pressure": "absolute",
+          "weight": "none"
+        },
+        "condition": {
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          },
+          "absolute_pressure": {
+            "value": 1013,
+            "unit": "mbar"
+          }
+        },
+        "scope": "Main compressor performance",
+        "line": "L9, L19",
+        "value": 212.41,
+        "unit": "m3/h",
+        "raw_text": "212.41"
+      },
+      {
+        "attribute": "max_pressure",
+        "basis": {},
+        "condition": {},
+        "scope": "Maximum operational pressure limit",
+        "line": "L10",
+        "value": 30,
+        "unit": "bar",
+        "raw_text": "30",
+        "label": "Max pressure"
+      },
+      {
+        "attribute": "cooling_type",
+        "basis": {},
+        "condition": {},
+        "scope": "Cooling method",
+        "line": "L11",
+        "value": "water-cooled",
+        "unit": null,
+        "raw_text": "water-cooled"
+      },
+      {
+        "attribute": "medium",
+        "basis": {},
+        "condition": {},
+        "scope": "Operating medium",
+        "line": "L12",
+        "value": "air",
+        "unit": null,
+        "raw_text": "air"
+      },
+      {
+        "attribute": "motor_power",
+        "basis": {},
+        "condition": {},
+        "scope": "Motor rated output",
+        "line": "L13",
+        "value": 53.56,
+        "unit": "kW",
+        "raw_text": "53.56",
+        "label": "Motor rating"
+      },
+      {
+        "attribute": "dry_weight",
+        "basis": {
+          "weight": "dry"
+        },
+        "condition": {
+          "medium": "none",
+          "temperature": {
+            "value": 20,
+            "unit": "degC"
+          },
+          "absolute_pressure": {
+            "value": 1013,
+            "unit": "mbar"
+          }
+        },
+        "scope": "Dry weight of complete unit",
+        "line": "L16",
+        "value": 1200.55,
+        "unit": "kg",
+        "raw_text": "1200.55"
+      },
+      {
+        "attribute": "reported_weight",
+        "basis": {},
+        "condition": {},
+        "scope": "None explicitly stated, inferred from dry weight",
+        "line": "none",
+        "value": 1200.55,
+        "unit": "kg",
+        "raw_text": "1200.55 kg (dry condition, complete compressor unit with motor and mountings)",
+        "label": "Dry weight"
+      }
+    ]
+  },
+  "qualifiers": []
+}

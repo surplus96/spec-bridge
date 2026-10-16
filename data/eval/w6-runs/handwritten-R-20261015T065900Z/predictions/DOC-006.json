@@ -1,0 +1,40 @@
+{
+  "prediction": {
+    "document_id": "DOC-006",
+    "class_id": "Turbocharger",
+    "class_candidates": [
+      "Turbocharger",
+      "TwoStrokeMainEngine"
+    ],
+    "facts": [
+      {
+        "attribute": "bearing_type",
+        "value": "plain",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "DOC-006",
+            "raw_text": "Plain bearings",
+            "label_text": "Bearing type",
+            "unit_text": null,
+            "location": {
+              "section": "2. Main Technical Data",
+              "table": 1,
+              "row": 5,
+              "column": 2,
+              "line": 20
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": null,
+  "qualifiers": []
+}

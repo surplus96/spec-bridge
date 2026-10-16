@@ -1,0 +1,363 @@
+{
+  "prediction": {
+    "document_id": "SYN-040",
+    "class_id": "FourStrokeEngine",
+    "class_candidates": [
+      "FourStrokeEngine",
+      "Pump"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-C Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "manufacturer_of_the_engine",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-040",
+            "raw_text": "SGDW-20261007-C Synthetic Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "sheet": "Specification",
+              "cell_ref": "A5"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX007-140",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "specific_model_identifier_of_the_engine",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-040",
+            "raw_text": "VX007-140",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Product data",
+              "sheet": "Specification",
+              "cell_ref": "A6"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "number_of_cylinders",
+        "value": 6,
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "number_of_cylinders_in_the_engine",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-040",
+            "raw_text": "6",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B9"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "bore",
+        "value": 230,
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "diameter_of_each_cylinder_bore",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-040",
+            "raw_text": "230",
+            "label_text": null,
+            "unit_text": "mm",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B10"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "stroke",
+        "value": 300,
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "length_of_piston_stroke_within_each_cylinder",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-040",
+            "raw_text": "300",
+            "label_text": null,
+            "unit_text": "mm",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B11"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "application",
+        "value": "cargo pump drive",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "primary_use_case_of_the_engine",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-040",
+            "raw_text": "cargo pump drive",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B12"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_power",
+        "value": 3267.0,
+        "unit": "kW",
+        "basis": {},
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": "maximum_power_output_under_specified_conditions",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-040",
+            "raw_text": "3267.0",
+            "label_text": null,
+            "unit_text": "kW",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B13"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_speed",
+        "value": 1000,
+        "unit": "rpm",
+        "basis": {},
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": "maximum_operational_speed_under_specified_conditions",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-040",
+            "raw_text": "1000",
+            "label_text": null,
+            "unit_text": "rpm",
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B14"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "fuel_types",
+        "value": [
+          "MDO",
+          "MGO"
+        ],
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "types_of_fuel_compatible_with_the_engine",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-040",
+            "raw_text": "MDO, MGO",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Main particulars",
+              "sheet": "Specification",
+              "cell_ref": "B15"
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [
+      {
+        "attribute": "dimensions",
+        "value_text": "5000 × 2100 × 2920",
+        "unit_text": "mm",
+        "reason": "condition",
+        "occurrence": {
+          "source_document_id": "SYN-040",
+          "raw_text": "5000 × 2100 × 2920",
+          "label_text": null,
+          "unit_text": "mm",
+          "location": {
+            "section": "Main particulars",
+            "sheet": "Specification",
+            "cell_ref": "B16"
+          }
+        }
+      },
+      {
+        "attribute": "dry_weight",
+        "value_text": "29304.0",
+        "unit_text": "kg",
+        "reason": "condition",
+        "occurrence": {
+          "source_document_id": "SYN-040",
+          "raw_text": "29304.0",
+          "label_text": null,
+          "unit_text": "kg",
+          "location": {
+            "section": "Main particulars",
+            "sheet": "Specification",
+            "cell_ref": "B17"
+          }
+        }
+      }
+    ],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "basis": {},
+        "condition": {},
+        "scope": "Manufacturer of the engine",
+        "line": "L5",
+        "value_text": "SGDW-20261007-C Synthetic Works",
+        "unit_text": null
+      },
+      {
+        "attribute": "model_designation",
+        "basis": {},
+        "condition": {},
+        "scope": "Specific model identifier of the engine",
+        "line": "L6",
+        "value_text": "VX007-140",
+        "unit_text": null
+      },
+      {
+        "attribute": "number_of_cylinders",
+        "basis": {},
+        "condition": {},
+        "scope": "Number of cylinders in the engine",
+        "line": "L9",
+        "value_text": "6",
+        "unit_text": null
+      },
+      {
+        "attribute": "bore",
+        "basis": {},
+        "condition": {},
+        "scope": "Diameter of each cylinder bore",
+        "line": "L10",
+        "value_text": "230",
+        "unit_text": "mm"
+      },
+      {
+        "attribute": "stroke",
+        "basis": {},
+        "condition": {},
+        "scope": "Length of piston stroke within each cylinder",
+        "line": "L11",
+        "value_text": "300",
+        "unit_text": "mm"
+      },
+      {
+        "attribute": "application",
+        "basis": {},
+        "condition": {},
+        "scope": "Primary use case of the engine",
+        "line": "L12",
+        "value_text": "cargo pump drive",
+        "unit_text": null
+      },
+      {
+        "attribute": "rated_power",
+        "basis": {},
+        "condition": {
+          "rating_point": "R1",
+          "engine_type": "none",
+          "basis": "none"
+        },
+        "scope": "Maximum power output under specified conditions",
+        "line": "L13",
+        "value_text": "3267.0",
+        "unit_text": "kW"
+      },
+      {
+        "attribute": "rated_speed",
+        "basis": {},
+        "condition": {
+          "rating_point": "R1",
+          "engine_type": "none"
+        },
+        "scope": "Maximum operational speed under specified conditions",
+        "line": "L14",
+        "value_text": "1000",
+        "unit_text": "rpm"
+      },
+      {
+        "attribute": "fuel_types",
+        "basis": {},
+        "condition": {},
+        "scope": "Types of fuel compatible with the engine",
+        "line": "L15",
+        "value_text": "MDO, MGO",
+        "unit_text": null
+      },
+      {
+        "attribute": "dimensions",
+        "basis": {},
+        "condition": {
+          "engine_type": "none",
+          "frequency": "without generator"
+        },
+        "scope": "Overall physical dimensions of the engine",
+        "line": "L16",
+        "value_text": "5000 × 2100 × 2920",
+        "unit_text": "mm"
+      },
+      {
+        "attribute": "dry_weight",
+        "basis": {},
+        "condition": {
+          "engine_type": "none",
+          "frequency": "without generator"
+        },
+        "scope": "Weight of the engine without any fluids or additional components",
+        "line": "L17",
+        "value_text": "29304.0",
+        "unit_text": "kg"
+      }
+    ]
+  },
+  "qualifiers": []
+}

@@ -1,0 +1,241 @@
+# 평가기 전용: 입력 모델에 전달하지 않는다.
+# schema_version 2: 별도 함정 목록 제거, 미확정 검증 상태는 null.
+schema_version: 2
+doc_id: HW-2S-001
+origin: synthetic
+author: Claude (draft)
+reviewed_by: null
+created_at: 2026-10-06
+files:
+  spec_source: data/eval/handwritten/HW-2S-001.spec.md
+  docx: null
+  pdf: null
+  input_text: data/eval/handwritten/inputs/DOC-004.md
+expected_class: TwoStrokeMainEngine
+class_path:
+- Equipment
+- Engine
+- TwoStrokeMainEngine
+attributes:
+  maker:
+    value: Torvane Engine Works
+    unit: null
+    expected_status: null
+    occurrences:
+    - raw_text: Torvane Engine Works
+      label_text: Issued by
+      location:
+        section: header
+        line: 3
+        pdf_page: null
+        printed_page: null
+    - raw_text: Torvane Engine Works
+      label_text: Maker
+      location:
+        section: '1.1'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+  model_designation:
+    value: TXL-650/6
+    unit: null
+    expected_status: null
+    occurrences:
+    - raw_text: TXL-650/6
+      label_text: Model designation
+      location:
+        section: '1.2'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+    - raw_text: TXL-650/6
+      label_text: type
+      location:
+        section: '5'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+  number_of_cylinders:
+    value: 6
+    unit: null
+    expected_status: null
+    occurrences:
+    - raw_text: '6'
+      label_text: Number of cylinders
+      location:
+        section: '2'
+        table: 1
+        row: 1
+        pdf_page: null
+        printed_page: null
+  bore:
+    value: 650
+    unit: mm
+    expected_status: null
+    occurrences:
+    - raw_text: '650'
+      label_text: Bore
+      unit_text: mm
+      location:
+        section: '2'
+        table: 1
+        row: 2
+        pdf_page: null
+        printed_page: null
+  stroke:
+    value: 2750
+    unit: mm
+    expected_status: null
+    occurrences:
+    - raw_text: 2,750
+      label_text: Stroke
+      unit_text: mm
+      location:
+        section: '2'
+        table: 1
+        row: 3
+        pdf_page: null
+        printed_page: null
+  rated_power:
+    value: 15000
+    unit: kW
+    rating_basis: MCR
+    match_tolerance_rel: 0.001
+    expected_status: null
+    occurrences:
+    - raw_text: 15,000
+      label_text: Rated power (MCR)
+      unit_text: kW
+      location:
+        section: '2'
+        table: 1
+        row: 4
+        pdf_page: null
+        printed_page: null
+    - raw_text: 20,115 bhp
+      label_text: At MCR the engine delivers
+      location:
+        section: '3.1'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+  rated_speed:
+    value: 98
+    unit: rpm
+    expected_status: null
+    occurrences:
+    - raw_text: '98'
+      label_text: Rated speed (MCR)
+      unit_text: rpm
+      location:
+        section: '2'
+        table: 1
+        row: 5
+        pdf_page: null
+        printed_page: null
+    - raw_text: 98 r/min
+      label_text: at
+      location:
+        section: '3.1'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+  fuel_types:
+    value:
+    - HFO
+    - MGO
+    unit: null
+    expected_status: null
+    occurrences:
+    - raw_text: HFO / MGO
+      label_text: Fuel
+      location:
+        section: '2'
+        table: 1
+        row: 6
+        pdf_page: null
+        printed_page: null
+    - raw_text: heavy fuel oil (HFO) and marine gas oil (MGO)
+      label_text: Fuel operation modes
+      location:
+        section: '3.1'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+  dimensions:
+    value:
+      length: 8450
+      width: 3900
+      height: 11950
+    unit: mm
+    expected_status: null
+    occurrences:
+    - raw_text: 8,450 × 3,900 × 11,950 mm
+      label_text: Overall dimensions (L × W × H)
+      location:
+        section: '4.1'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+  dry_weight:
+    value: 395000
+    unit: kg
+    expected_status: null
+    occurrences:
+    - raw_text: 395 t
+      label_text: Dry weight
+      location:
+        section: '4.2'
+        paragraph: 1
+        pdf_page: null
+        printed_page: null
+missing_required: null
+relations:
+  manufactured_by: Torvane Engine Works
+  has_component:
+  - model_designation: TTA-70
+    expected_class: Turbocharger
+    linked_doc: HW-TC-001
+    raw_text: Torvane TTA-70
+    location:
+      section: '3.2'
+      paragraph: 1
+      pdf_page: null
+      printed_page: null
+  variant_of: null
+injections:
+- type: V1
+  attribute: rated_power
+  detail: '단위 병기: 표 ''kW'', 3.1 ''bhp'' (기계식 마력 0.7457 kW/hp)'
+  origin: synthetic
+  source_observations:
+  - document_id: REF-2S-01
+    pdf_page: 23
+  source_usage: 표기 관찰 참고; 합성 별칭·단위 정의는 본문과 SCORING-POLICY를 따름
+- type: V1
+  attribute: rated_speed
+  detail: '단위 표기: 표 ''rpm'', 3.1 ''r/min'''
+  origin: synthetic
+  source_observations:
+  - document_id: REF-2S-02
+    pdf_page: 26
+  - document_id: REF-2S-01
+    pdf_page: 47
+  source_usage: 표기 관찰 참고; 합성 별칭·단위 정의는 본문과 SCORING-POLICY를 따름
+- type: V1
+  attribute: dry_weight
+  detail: 중량 단위 't' (정규 kg)
+  origin: synthetic
+  source_observations:
+  - document_id: REF-2S-02
+    pdf_page: 30
+  source_usage: 표기 관찰 참고; 합성 별칭·단위 정의는 본문과 SCORING-POLICY를 따름
+duplicate_of: null
+open_issues:
+- rated_power의 정격 기준(MCR/SMCR/CMCR/정격점 L1·R1)을 온톨로지에서 어떻게 정의할지 W1에서 결정
+- pint의 'r/min', 'bhp', 't' 인식 여부를 W1에서 확인
+notes: MEP 약 16.8 bar(계산값, 2행정). 참고 문서는 표기 방식만 참고(REF-2S-01, REF-2S-02)
+dataset_revision: 2
+revised_by: Codex
+validation_status: ontology_pending
+scoring_policy: data/eval/handwritten/SCORING-POLICY.md

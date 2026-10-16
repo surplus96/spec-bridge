@@ -1,0 +1,262 @@
+{
+  "prediction": {
+    "document_id": "SYN-012",
+    "class_id": "FourStrokeEngine",
+    "class_candidates": [
+      "FourStrokeEngine"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-B Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-012",
+            "raw_text": "SGDW-20261007-B Synthetic Works",
+            "label_text": "Manufacturer",
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "sheet": "Specification",
+              "cell_ref": "A5"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX006-112",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-012",
+            "raw_text": "VX006-112",
+            "label_text": "Model designation",
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "sheet": "Specification",
+              "cell_ref": "A6"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "bore",
+        "value": 240,
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-012",
+            "raw_text": "240",
+            "label_text": "Cylinder bore mm",
+            "unit_text": "mm",
+            "location": {
+              "section": "Specifications",
+              "sheet": "Specification",
+              "cell_ref": "B10"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "stroke",
+        "value": 310,
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-012",
+            "raw_text": "310",
+            "label_text": "Piston stroke mm",
+            "unit_text": "mm",
+            "location": {
+              "section": "Specifications",
+              "sheet": "Specification",
+              "cell_ref": "B11"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "application",
+        "value": "propulsion",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-012",
+            "raw_text": "propulsion",
+            "label_text": "Application",
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "sheet": "Specification",
+              "cell_ref": "B12"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_power",
+        "value": 3746.4,
+        "unit": "kW",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-012",
+            "raw_text": "3746.4",
+            "label_text": "Engine (kWm)",
+            "unit_text": "kW",
+            "location": {
+              "section": "Specifications",
+              "sheet": "Specification",
+              "cell_ref": "B13"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_speed",
+        "value": 720,
+        "unit": "rpm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-012",
+            "raw_text": "720",
+            "label_text": "Rated speed",
+            "unit_text": "rpm",
+            "location": {
+              "section": "Specifications",
+              "sheet": "Specification",
+              "cell_ref": "B14"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "fuel_types",
+        "value": [
+          "MDO",
+          "MGO"
+        ],
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-012",
+            "raw_text": "MDO, MGO",
+            "label_text": "Fuel types",
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "sheet": "Specification",
+              "cell_ref": "B15"
+            }
+          },
+          {
+            "source_document_id": "SYN-012",
+            "raw_text": "MDO, MGO",
+            "label_text": "Fuel types",
+            "unit_text": null,
+            "location": {
+              "section": "Operating notes",
+              "sheet": "Specification",
+              "cell_ref": "A20"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 4700,
+          "width": 2000,
+          "height": 2760
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-012",
+            "raw_text": "4700 × 2000 × 2760",
+            "label_text": "Overall dimensions (L × W × H)",
+            "unit_text": "mm",
+            "location": {
+              "section": "Specifications",
+              "sheet": "Specification",
+              "cell_ref": "B16"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 31755.2,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "main_equipment",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-012",
+            "raw_text": "31755.2",
+            "label_text": "Dry weight",
+            "unit_text": "kg",
+            "location": {
+              "section": "Specifications",
+              "sheet": "Specification",
+              "cell_ref": "B17"
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [
+      {
+        "attribute": "number_of_cylinders",
+        "value_text": "8.5",
+        "unit_text": null,
+        "reason": "not_integer",
+        "occurrence": {
+          "source_document_id": "SYN-012",
+          "raw_text": "8.5",
+          "label_text": "Cylinders",
+          "unit_text": null,
+          "location": {
+            "section": "Specifications",
+            "sheet": "Specification",
+            "cell_ref": "B9"
+          }
+        }
+      }
+    ],
+    "failure": null
+  },
+  "rejected": [],
+  "reply": null,
+  "qualifiers": []
+}

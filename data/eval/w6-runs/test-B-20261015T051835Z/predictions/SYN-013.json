@@ -1,0 +1,515 @@
+{
+  "prediction": {
+    "document_id": "SYN-013",
+    "class_id": "TwoStrokeMainEngine",
+    "class_candidates": [
+      "TwoStrokeMainEngine",
+      "Turbocharger"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-C Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "identification",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-013",
+            "raw_text": "SGDW-20261007-C Synthetic Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                467.6191063841906,
+                229.17968000000008,
+                475.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX003-113",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "identification",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-013",
+            "raw_text": "VX003-113",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Identification",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                449.6191063841906,
+                155.41015040000002,
+                457.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "number_of_cylinders",
+        "value": 7,
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "specifications",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-013",
+            "raw_text": "7",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                406.6191063841906,
+                88.23828,
+                414.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "bore",
+        "value": 600,
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "specifications",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-013",
+            "raw_text": "600 mm",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                388.6191063841906,
+                98.46484079999999,
+                396.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "stroke",
+        "value": 2320,
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "specifications",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-013",
+            "raw_text": "2320 mm",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                370.6191063841906,
+                109.13671520000001,
+                378.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_power",
+        "value": 24894.9,
+        "unit": "kW",
+        "basis": {
+          "rating": "MCR"
+        },
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": "specifications",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-013",
+            "raw_text": "24894.9 kW",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                352.6191063841906,
+                278.1249864000001,
+                360.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_power",
+        "value": 21907.51,
+        "unit": "kW",
+        "basis": {
+          "rating": "MCR"
+        },
+        "condition": {
+          "rating_point": "R2"
+        },
+        "scope": "specifications",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-013",
+            "raw_text": "21907.51 kW",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                334.6191063841906,
+                282.5742048000002,
+                342.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_speed",
+        "value": 88,
+        "unit": "rpm",
+        "basis": {},
+        "condition": {
+          "rating_point": "R1"
+        },
+        "scope": "specifications",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-013",
+            "raw_text": "88 rpm",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                316.6191063841906,
+                263.01170560000014,
+                324.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "rated_speed",
+        "value": 79,
+        "unit": "rpm",
+        "basis": {},
+        "condition": {
+          "rating_point": "R2"
+        },
+        "scope": "specifications",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-013",
+            "raw_text": "79 rpm",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                298.6191063841906,
+                263.01170560000014,
+                306.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "fuel_types",
+        "value": [
+          "natural gas",
+          "MDO"
+        ],
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "specifications",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-013",
+            "raw_text": "natural gas, MDO",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                280.6191063841906,
+                128.69921440000002,
+                288.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dimensions",
+        "value": {
+          "length": 11600,
+          "width": 5160,
+          "height": 12000
+        },
+        "unit": "mm",
+        "basis": {},
+        "condition": {},
+        "scope": "specifications",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-013",
+            "raw_text": "11600 × 5160 × 12000 mm",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                262.6191063841906,
+                294.57030080000015,
+                270.0060688
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "dry_weight",
+        "value": 483570.0,
+        "unit": "kg",
+        "basis": {},
+        "condition": {},
+        "scope": "specifications",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-013",
+            "raw_text": "483570.0 kg",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Specifications",
+              "pdf_page": 1,
+              "bbox": [
+                38.0,
+                244.61910638419056,
+                194.9570232000001,
+                252.00606879999998
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "reported_weight",
+      "text": "483570.0 kg",
+      "line": "none",
+      "reason": "unknown_line"
+    }
+  ],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "basis": {},
+        "condition": {},
+        "scope": "Identification",
+        "line": "L5",
+        "value": "SGDW-20261007-C Synthetic Works",
+        "unit": null,
+        "raw_text": "SGDW-20261007-C Synthetic Works"
+      },
+      {
+        "attribute": "model_designation",
+        "basis": {},
+        "condition": {},
+        "scope": "Identification",
+        "line": "L6",
+        "value": "VX003-113",
+        "unit": null,
+        "raw_text": "VX003-113"
+      },
+      {
+        "attribute": "number_of_cylinders",
+        "basis": {},
+        "condition": {},
+        "scope": "Specifications",
+        "line": "L8",
+        "value": 7,
+        "unit": null,
+        "raw_text": "7"
+      },
+      {
+        "attribute": "bore",
+        "basis": {},
+        "condition": {},
+        "scope": "Specifications",
+        "line": "L9",
+        "value": 600,
+        "unit": "mm",
+        "raw_text": "600 mm"
+      },
+      {
+        "attribute": "stroke",
+        "basis": {},
+        "condition": {},
+        "scope": "Specifications",
+        "line": "L10",
+        "value": 2320,
+        "unit": "mm",
+        "raw_text": "2320 mm"
+      },
+      {
+        "attribute": "rated_power",
+        "basis": {
+          "rating": "MCR",
+          "pressure": "none",
+          "weight": "none"
+        },
+        "condition": {
+          "rating_point": "R1",
+          "engine_type": "none"
+        },
+        "scope": "Specifications",
+        "line": "L11",
+        "value": 24894.9,
+        "unit": "kW",
+        "raw_text": "24894.9 kW"
+      },
+      {
+        "attribute": "rated_power",
+        "basis": {
+          "rating": "MCR",
+          "pressure": "none",
+          "weight": "none"
+        },
+        "condition": {
+          "rating_point": "R2",
+          "engine_type": "none"
+        },
+        "scope": "Specifications",
+        "line": "L12",
+        "value": 21907.51,
+        "unit": "kW",
+        "raw_text": "21907.51 kW"
+      },
+      {
+        "attribute": "rated_speed",
+        "basis": {},
+        "condition": {
+          "rating_point": "R1",
+          "engine_type": "none"
+        },
+        "scope": "Specifications",
+        "line": "L13",
+        "value": 88,
+        "unit": "rpm",
+        "raw_text": "88 rpm"
+      },
+      {
+        "attribute": "rated_speed",
+        "basis": {},
+        "condition": {
+          "rating_point": "R2",
+          "engine_type": "none"
+        },
+        "scope": "Specifications",
+        "line": "L14",
+        "value": 79,
+        "unit": "rpm",
+        "raw_text": "79 rpm"
+      },
+      {
+        "attribute": "fuel_types",
+        "basis": {},
+        "condition": {},
+        "scope": "Specifications",
+        "line": "L15",
+        "value": [
+          "natural gas",
+          "MDO"
+        ],
+        "unit": null,
+        "raw_text": "natural gas, MDO"
+      },
+      {
+        "attribute": "dimensions",
+        "basis": {},
+        "condition": {},
+        "scope": "Specifications",
+        "line": "L16",
+        "value": {
+          "length": 11600,
+          "width": 5160,
+          "height": 12000
+        },
+        "unit": "mm",
+        "raw_text": "11600 × 5160 × 12000 mm"
+      },
+      {
+        "attribute": "dry_weight",
+        "basis": {},
+        "condition": {},
+        "scope": "Specifications",
+        "line": "L17",
+        "value": 483570.0,
+        "unit": "kg",
+        "raw_text": "483570.0 kg"
+      },
+      {
+        "attribute": "reported_weight",
+        "basis": {},
+        "condition": {},
+        "scope": "none",
+        "line": "none",
+        "value": 483570.0,
+        "unit": "kg",
+        "raw_text": "483570.0 kg"
+      }
+    ]
+  },
+  "qualifiers": []
+}

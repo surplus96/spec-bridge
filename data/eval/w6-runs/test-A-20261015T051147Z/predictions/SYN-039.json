@@ -1,0 +1,88 @@
+{
+  "prediction": {
+    "document_id": "SYN-039",
+    "class_id": "Turbocharger",
+    "class_candidates": [
+      "Turbocharger",
+      "FourStrokeEngine"
+    ],
+    "facts": [],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "name",
+      "text": "Marine exhaust-gas turbocharger",
+      "line": "{'Marine exhaust-gas turbocharger': 'L3', 'maker': 'L5', 'model_designation': 'L6', 'turbine_flow_type': 'L9', 'four_stroke_power_range': 'L10', 'bearing_type': 'L11', 'dimensions': 'L12', 'dry_mass': 'L13'}",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "maker",
+      "text": "SGDW-20261007-D Synthetic Works",
+      "line": "",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "model_designation",
+      "text": "VX024-139",
+      "line": "",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "turbine_flow_type",
+      "text": "axial",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "four_stroke_power_range",
+      "text": "25254.4 to 10654.2 kW",
+      "line": "",
+      "reason": "unknown_attribute"
+    },
+    {
+      "attribute": "bearing_type",
+      "text": "plain",
+      "line": "",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "dimensions",
+      "text": "2680 × 2210 × 2820 mm",
+      "line": "",
+      "reason": "unknown_line"
+    },
+    {
+      "attribute": "dry_mass",
+      "text": "6412.25 kg",
+      "line": "",
+      "reason": "unknown_attribute"
+    }
+  ],
+  "reply": {
+    "attributes": {
+      "name": "Marine exhaust-gas turbocharger",
+      "maker": "SGDW-20261007-D Synthetic Works",
+      "model_designation": "VX024-139",
+      "turbine_flow_type": "axial",
+      "four_stroke_power_range": "25254.4 to 10654.2 kW",
+      "bearing_type": "plain",
+      "dimensions": "2680 × 2210 × 2820 mm",
+      "dry_mass": "6412.25 kg"
+    },
+    "lines": {
+      "name": {
+        "Marine exhaust-gas turbocharger": "L3",
+        "maker": "L5",
+        "model_designation": "L6",
+        "turbine_flow_type": "L9",
+        "four_stroke_power_range": "L10",
+        "bearing_type": "L11",
+        "dimensions": "L12",
+        "dry_mass": "L13"
+      }
+    }
+  },
+  "qualifiers": []
+}

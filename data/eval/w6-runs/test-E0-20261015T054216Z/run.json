@@ -1,0 +1,137 @@
+{
+  "config": "E",
+  "environment": {
+    "git_commit": "d0d259428a2f7788dba1b0b580d613c1ac18d7c5",
+    "git_dirty": false,
+    "models_sha256": "1ce23c82391ada096d865f3bea3a0f81bef9cca4abc3b5165022effc8f78a1c9",
+    "pdf_options": {
+      "do_ocr": false,
+      "do_table_structure": true
+    },
+    "uv_lock_sha256": "19f71885b077dbb9feafa685fb049d7ce2b347f54911e0d8c854a060ecc39a3d",
+    "versions": {
+      "docling": "2.137.0",
+      "docling-core": "2.101.1",
+      "docling-ibm-models": "4.0.3",
+      "openpyxl": "3.1.5",
+      "pypdfium2": "5.14.0",
+      "python-docx": "1.2.0"
+    }
+  },
+  "extraction": {
+    "context": "optional"
+  },
+  "failures": {},
+  "finished_at": "2026-10-15T06:08:50.455252+00:00",
+  "freeze": "2026-10-15T00:48:37.899364+00:00",
+  "hashes": {
+    "dev_dictionary": "1d3aa91bbc452f4f14506f7f99f89213bfb790d5105bc9073f14e1953f76ea8c",
+    "evaluation": {
+      "SHA256SUMS": "54f0cecf27cba6c5b23a381254afaa927433c36d2536d094f8b465f2bc664768",
+      "dataset-manifest.yaml": "5efe8772f47923bcaf4cf7e453905af1abcfad9fd7dd8ece235db6c0d3a060a5",
+      "spec_bridge.dedup.matcher": "fd31b393dda39f1b39eed2218e95d957431fdedc892de8eb5d007d31f148d22f",
+      "spec_bridge.eval.dedup_scoring": "d18bb37270cd581aee3348f1edcb455f748deb7bcc8bb8a64e1ad3b077ab5e48",
+      "spec_bridge.eval.locations": "d87796729758ba70cf964115eb56854de5993baca2e2cb37bdb8c132ee20dfe7",
+      "spec_bridge.eval.scoring": "b00aa222a4b12d129cb7be71b7ac68472a2c1f2d6f4a42bbd2cdaeff5efb6e62",
+      "spec_bridge.eval.validation_scoring": "00feb03ed0d5f935c71cd6ef35247cc3aa569566c9a9bae0a259f167917a8da1",
+      "spec_bridge.validate.findings": "6e09c7bd581a412cb118a04b0438d4afea4a4234eda0dd7ab0592e474d9e9a33",
+      "spec_bridge.validate.validator": "537abc2de90273f441216703e4bd9e45222f9c2f9bb7e6bbda0440fd04bc5949"
+    },
+    "ontology": "78d3fea6309d1c8a98f4fc8d3f0a241e18ec6110c12f6ac8d53626fa1a158b69",
+    "prompt_modules": {
+      "spec_bridge.extract.classifier": "f73e5c158a88c2020046cb890ffdaa741b48594cee16636d2f22ab1bc3711587",
+      "spec_bridge.extract.extractor": "505c08113c8a5bbe7dcdf7f8b0c5169292ddd4858e756d03200a244f49c770e9",
+      "spec_bridge.extract.prompt_input": "9fbf5ed1147ca3c303cbd3f1bff66e4c9df02952bcca541ad7ddf5686b8ff3b3",
+      "spec_bridge.extract.rules": "1b223cfc481a0c0454a710a0beabde0590e683d5ec3b48ec0fb80ad38e3b254c",
+      "spec_bridge.extract.schemas": "66174afe790f6bdb09b67081e66ea52b74667d390f3ba3fad917883e34eaec34"
+    },
+    "scorer_id": "f9b6e223cb15"
+  },
+  "latency_s": {
+    "first": 76.406,
+    "per_document": {
+      "SYN-001": 76.406,
+      "SYN-002": 75.655,
+      "SYN-006": 67.15,
+      "SYN-007": 96.078,
+      "SYN-009": 67.203,
+      "SYN-013": 98.782,
+      "SYN-014": 49.593,
+      "SYN-016": 90.295,
+      "SYN-018": 113.689,
+      "SYN-020": 193.405,
+      "SYN-021": 147.262,
+      "SYN-022": 104.147,
+      "SYN-025": 134.488,
+      "SYN-028": 115.087,
+      "SYN-039": 62.829,
+      "SYN-040": 100.966
+    },
+    "rest_mean": 101.109
+  },
+  "model": {
+    "digest": "c7c4e3d1ca22fe9225f18b35eb719f67e2ca96a42e7fd17294a45b83ba8fbf03",
+    "name": "exaone3.5:7.8b",
+    "options": {
+      "num_ctx": 8192,
+      "seed": 7,
+      "temperature": 0
+    },
+    "provider": "ollama"
+  },
+  "parse": {
+    "git_commit": "962564f6f0fb96dd90a101f828a0679e134d4ed2",
+    "git_dirty": true,
+    "models_sha256": "1ce23c82391ada096d865f3bea3a0f81bef9cca4abc3b5165022effc8f78a1c9",
+    "pdf_options": {
+      "do_ocr": false,
+      "do_table_structure": true
+    },
+    "summary": "var/parsed/test/_summary.json",
+    "uv_lock_sha256": "4e4ff7420d2cc489965c4e3fc95fcd96154831de110a56be987c89562258aafc",
+    "versions": {
+      "docling": "2.137.0",
+      "docling-core": "2.101.1",
+      "docling-ibm-models": "4.0.3",
+      "openpyxl": "3.1.5",
+      "pypdfium2": "5.14.0",
+      "python-docx": "1.2.0"
+    }
+  },
+  "rag": {
+    "k": 0,
+    "kb_sha256": "cfc116a652af7419d76c7e7affde56fc30e849dcb9fbad3eec44530de25c4b42",
+    "mode": "e0",
+    "modules": {
+      "spec_bridge.rag.knowledge": "15ff50ea2dfc144589784626c0d5935231d3dfe1b4873e6441c0341a035ca34f",
+      "spec_bridge.rag.pipeline": "61dded373849f0eaff9ec45d51b3dca354650494bcb0e32cf6171ac2b148ea36",
+      "spec_bridge.rag.qualifiers": "ec8b6e604f370e63959cf7fdebb935e519f52f3a237b4dec55b8d70ecdc070d0",
+      "spec_bridge.rag.retrieval": "4631af0e4164868f0820a0349d1cf2af8c96e5f1581d892c642a3bc50decb689",
+      "spec_bridge.rag.selfrag": "528d4bd814a22ce719efe717aff7b324aac894cf03f055e9025ccfda440ffcbb"
+    },
+    "qualifiers": {
+      "fields_kept": 85,
+      "fields_rejected": {
+        "evidence not in the line": 137,
+        "no evidence": 88,
+        "number not in the line": 95,
+        "phrase not in the remarks": 141,
+        "wrong unit or form": 7
+      },
+      "values": 164
+    },
+    "query": "label_remarks",
+    "resolve_conflicts": false,
+    "retriever": null,
+    "self_check": false
+  },
+  "run_id": "test-E0-20261015T054216Z",
+  "served_by": [],
+  "split": "test",
+  "tokens": {
+    "calls": 196,
+    "completion": 30843,
+    "errors": 0,
+    "prompt": 42630
+  }
+}

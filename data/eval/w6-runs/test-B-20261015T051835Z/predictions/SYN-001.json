@@ -1,0 +1,234 @@
+{
+  "prediction": {
+    "document_id": "SYN-001",
+    "class_id": "AirCompressor",
+    "class_candidates": [
+      "AirCompressor"
+    ],
+    "facts": [
+      {
+        "attribute": "maker",
+        "value": "SGDW-20261007-D Synthetic Works",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "manufacturer_identifier",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-001",
+            "raw_text": "SGDW-20261007-D Synthetic Works",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "General",
+              "sheet": "Specification",
+              "cell_ref": "A5"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "model_designation",
+        "value": "VX012-101",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "specific_model_identifier",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-001",
+            "raw_text": "VX012-101",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "General",
+              "sheet": "Specification",
+              "cell_ref": "A6"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "cooling_type",
+        "value": "water",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "method_of_cooling_for_the_compressor",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-001",
+            "raw_text": "water",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B10"
+            }
+          }
+        ]
+      },
+      {
+        "attribute": "medium",
+        "value": "air",
+        "unit": null,
+        "basis": {},
+        "condition": {},
+        "scope": "working_medium_for_the_compressor",
+        "occurrences": [
+          {
+            "source_document_id": "SYN-001",
+            "raw_text": "air",
+            "label_text": null,
+            "unit_text": null,
+            "location": {
+              "section": "Technical data",
+              "sheet": "Specification",
+              "cell_ref": "B11"
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": [],
+    "failure": null
+  },
+  "rejected": [
+    {
+      "attribute": "max_pressure",
+      "text": "30 bar",
+      "line": "L9",
+      "reason": "not_in_line"
+    },
+    {
+      "attribute": "motor_power",
+      "text": "49.5 kW",
+      "line": "L12",
+      "reason": "not_in_line"
+    },
+    {
+      "attribute": "dimensions",
+      "text": "1400 × 795 × 1005 mm",
+      "line": "L13",
+      "reason": "not_in_line"
+    },
+    {
+      "attribute": "dry_weight",
+      "text": "1109.55 kg",
+      "line": "L14",
+      "reason": "not_in_line"
+    },
+    {
+      "attribute": "reported_weight",
+      "text": "1109.55 kg",
+      "line": "L14",
+      "reason": "not_in_line"
+    }
+  ],
+  "reply": {
+    "facts": [
+      {
+        "attribute": "maker",
+        "basis": {},
+        "condition": {},
+        "scope": "Manufacturer identifier",
+        "line": "L5",
+        "value": "SGDW-20261007-D Synthetic Works",
+        "unit": null,
+        "raw_text": "SGDW-20261007-D Synthetic Works"
+      },
+      {
+        "attribute": "model_designation",
+        "basis": {},
+        "condition": {},
+        "scope": "Specific model identifier",
+        "line": "L6",
+        "value": "VX012-101",
+        "unit": null,
+        "raw_text": "VX012-101"
+      },
+      {
+        "attribute": "max_pressure",
+        "basis": {},
+        "condition": {
+          "basis": "per_turbocharger",
+          "absolute_pressure": {
+            "value": 30,
+            "unit": "bar"
+          }
+        },
+        "scope": "Maximum operational pressure rating",
+        "line": "L9",
+        "value": 30,
+        "unit": "bar",
+        "raw_text": "30 bar"
+      },
+      {
+        "attribute": "cooling_type",
+        "basis": {},
+        "condition": {},
+        "scope": "Method of cooling for the compressor",
+        "line": "L10",
+        "value": "water",
+        "unit": null,
+        "raw_text": "water"
+      },
+      {
+        "attribute": "medium",
+        "basis": {},
+        "condition": {},
+        "scope": "Working medium for the compressor",
+        "line": "L11",
+        "value": "air",
+        "unit": null,
+        "raw_text": "air"
+      },
+      {
+        "attribute": "motor_power",
+        "basis": {},
+        "condition": {},
+        "scope": "Rated power of the motor",
+        "line": "L12",
+        "value": 49.5,
+        "unit": "kW",
+        "raw_text": "49.5 kW"
+      },
+      {
+        "attribute": "dimensions",
+        "basis": {},
+        "condition": {},
+        "scope": "Physical dimensions of the compressor unit",
+        "line": "L13",
+        "value": {
+          "length": 1400,
+          "width": 795,
+          "height": 1005
+        },
+        "unit": "mm",
+        "raw_text": "1400 × 795 × 1005 mm"
+      },
+      {
+        "attribute": "dry_weight",
+        "basis": {},
+        "condition": {},
+        "scope": "Weight of the compressor without lubricant",
+        "line": "L14",
+        "value": 1109.55,
+        "unit": "kg",
+        "raw_text": "1109.55 kg"
+      },
+      {
+        "attribute": "reported_weight",
+        "basis": {},
+        "condition": {},
+        "scope": "Weight specification for completeness including motor and mountings",
+        "line": "L14",
+        "value": 1109.55,
+        "unit": "kg",
+        "raw_text": "1109.55 kg"
+      }
+    ]
+  },
+  "qualifiers": []
+}

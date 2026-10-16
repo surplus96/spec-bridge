@@ -1,0 +1,56 @@
+# Display labels for the review UI (W5-7a, D-074). origin: synthetic.
+# Screen names only: Korean names for the ontology's own ids. They add no domain fact (H3)
+# and are not model input; ontology.yaml (prompts, KB, hashes) is unchanged.
+# Every key must exist in ontology.yaml (checked by spec_bridge.ontology.display).
+origin: synthetic
+verified_by: null
+classes:
+  Pump: 펌프
+  AirCompressor: 공기압축기
+  Separator: 청정기
+  TwoStrokeMainEngine: 2행정 주기관
+  FourStrokeEngine: 4행정 엔진
+  Turbocharger: 과급기
+attributes:
+  maker: 제조사
+  model_designation: 모델명
+  dimensions: 외형 치수
+  dry_weight: 건조 중량
+  reported_weight: 표기 중량
+  medium: 취급 매체
+  motor_power: 모터 출력
+  pump_type: 펌프 형식
+  capacity: 용량
+  head: 양정
+  differential_pressure: 차압
+  discharge_pressure: 토출 압력
+  cooling_type: 냉각 방식
+  max_pressure: 최대 압력
+  working_pressure: 사용 압력
+  application: 용도
+  rated_throughput: 정격 처리량
+  self_cleaning: 자동 청소
+  rated_power: 정격 출력
+  rated_speed: 정격 회전수
+  number_of_cylinders: 실린더 수
+  fuel_types: 사용 연료
+  bore: 실린더 내경
+  stroke: 행정
+  turbocharger_type: 과급기 형식
+  applicable_engine_power: 적용 엔진 출력
+  bearing_type: 베어링 형식
+basis:
+  capacity: 용량 기준
+  rating: 정격 기준
+  pressure: 압력 기준
+  weight: 중량 기준
+condition:
+  medium: 매체
+  viscosity_basis: 점도 기준
+  rating_point: 정격점
+  engine_type: 엔진 형식
+  basis: 기준
+  frequency: 주파수
+  temperature: 온도
+  absolute_pressure: 절대 압력
+  viscosity: 점도

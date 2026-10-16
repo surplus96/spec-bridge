@@ -1,0 +1,48 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(uv run pytest *)",
+      "Bash(uv run pytest)",
+      "Bash(uv run ruff *)",
+      "Bash(uv run mypy *)",
+      "Bash(uv sync *)",
+      "Bash(uv sync)",
+      "Bash(uv tree *)",
+      "Bash(git status *)",
+      "Bash(git status)",
+      "Bash(git diff *)",
+      "Bash(git diff)",
+      "Bash(git log *)",
+      "Bash(ollama list)",
+      "Bash(ollama ps)"
+    ],
+    "ask": [
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(git reset *)",
+      "Bash(git rebase *)",
+      "Bash(uv add *)",
+      "Bash(uv remove *)"
+    ]
+  },
+  "skillOverrides": {
+    "anthropic-skills:seedance-director": "user-invocable-only",
+    "anthropic-skills:seedance-gen": "user-invocable-only",
+    "anthropic-skills:seedance-continuity-builder": "user-invocable-only",
+    "anthropic-skills:higgsfield-seedance-prompt": "user-invocable-only",
+    "anthropic-skills:storyboard-v1": "user-invocable-only",
+    "anthropic-skills:storyboard-v2": "user-invocable-only",
+    "anthropic-skills:mv-storyboard-v1": "user-invocable-only",
+    "anthropic-skills:mv-storyboard-v2": "user-invocable-only",
+    "anthropic-skills:master-sheet-v1": "user-invocable-only",
+    "anthropic-skills:master-sheet-v2": "user-invocable-only",
+    "anthropic-skills:mv-master-sheet-v1": "user-invocable-only",
+    "anthropic-skills:mv-master-sheet-v2": "user-invocable-only",
+    "anthropic-skills:mv-continuity-builder": "user-invocable-only",
+    "anthropic-skills:suno-songwriter": "user-invocable-only",
+    "anthropic-skills:pm-mcp-director": "user-invocable-only",
+    "anthropic-skills:morning": "user-invocable-only",
+    "anthropic-skills:import-memory": "user-invocable-only",
+    "vercel-react-best-practices": "user-invocable-only"
+  }
+}
