@@ -267,4 +267,13 @@ uv run python -m spec_bridge.llm.hosts var/w6-6/app/registry.sqlite var/w6-6/con
 - **커버리지**(2026-10-16): 문장 기준 **91%**(4,761문장 중 406개 미실행)이고, 이때 테스트는 791 passed였다. 측정 명령은 `uv run --with pytest-cov pytest --cov=spec_bridge`이고, 일회성 설치라 `uv.lock`을 바꾸지 않는다. 커버리지는 통과 조건이 아니라 보고 항목이다(D-083).
   - 낮은 모듈: `rag/diagnose.py` 62%(검색 진단 실험 스크립트), `eval/manifest.py` 59%(git 비교 경로), `release.py` 68%(CLI 경로), `service.py` 71%(실제 모델 연결), `eval/experiment.py` 73%(클라우드·CLI 경로).
 - **재채점 묶음**: W6 실행 13개의 `run.json`·예측·점수를 `data/eval/w6-runs/`에 두었다(241파일, 2.8 MB, 감사 기록 제외, 절대 경로 제거). 모델 없이 §8의 `rescore`·`compare`를 이 경로로 실행할 수 있다.
-- **미완료**: 실제 GitHub Actions 실행(공개 저장소 생성 뒤), 데모 GIF 녹화(사용자), Docling 모델 다운로드를 새 환경에서 네트워크로 받는 단계(복사본에서는 기존 모델을 연결해 확인).
+- **GitHub Actions**(2026-10-16, D-098): 첫 실행이 두 저장소 모두 통과했다.
+
+  | 저장소 | 실행 | python | web |
+  |---|---|---|---|
+  | 공개 `surplus96/spec-bridge`(커밋 `70b2ec6`) | 38854372533 | ruff 통과, mypy 153파일 문제 없음, pytest 696 passed / 1 skipped / 99 deselected / 1 xfailed | check 32 passed, build 통과 |
+  | 비공개 `surplus96/spec-bridge-dev`(커밋 `dbb43c5`) | 38854425716 | 같음 | 같음 |
+
+  - CI는 모델 서버 없이 돈다. 그래서 Docling PDF 테스트와 LLM 테스트(99 deselected)는 로컬에서만 확인한다.
+  - 경고 두 개가 붙었다. 사용하는 액션(`checkout@v4`, `setup-uv@v6`, `setup-node@v4`)이 Node.js 20용이라 Node.js 24로 강제 실행됐다. `ubuntu-latest`는 2026-10-19부터 Ubuntu 26으로 바뀌므로, 실행 환경을 `ubuntu-24.04`로 고정했다(D-098). Node.js 20 경고는 남아 있다.
+- **미완료**: 데모 GIF 녹화(사용자), Docling 모델 다운로드를 새 환경에서 네트워크로 받는 단계(복사본에서는 기존 모델을 연결해 확인).
