@@ -139,7 +139,7 @@ export function ProductPage({ productId, onBack }: { productId: string; onBack: 
                 <li key={e.edit_id} className="px-4 py-2">
                   <div>
                     <span className="font-medium">{attributeName(labels, e.attribute)}</span>{" "}
-                    {{ set: "수정", add: "추가", remove: "삭제" }[e.op]} —{" "}
+                    {{ set: "수정", add: "추가", remove: "삭제", context: "문맥 수정" }[e.op]} —{" "}
                     <span className="text-gray-700">{e.reason}</span>
                   </div>
                   <div className="text-xs text-gray-500">

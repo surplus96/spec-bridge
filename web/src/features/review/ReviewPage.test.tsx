@@ -70,6 +70,7 @@ function review(overrides: Partial<ReviewPrompt> = {}): ReviewPrompt {
     edits: [],
     edited: [],
     attributes: ["maker", "model_designation", "rated_power"],
+    context_axes: [],
     notice: null,
     ...overrides,
   };
@@ -229,6 +230,7 @@ describe("ReviewPage", () => {
               attribute: "rated_power",
               reasons: ["basis.rating: evidence not in the line"],
               messages: ["기준 rating — 모델의 근거 구절이 원문 줄에 없음"],
+              reviewed: false,
             },
           ],
           edited: [0],
@@ -241,6 +243,97 @@ describe("ReviewPage", () => {
     fireEvent.click(chip);
     expect(screen.getByText("기준 rating — 모델의 근거 구절이 원문 줄에 없음")).toBeInTheDocument();
     expect(screen.getByTitle("사람 수정")).toBeInTheDocument();
+  });
+
+  const axes: ReviewPrompt["context_axes"] = [
+    { axis: "basis.rating", kind: "token", values: ["MCR", "maximum"], units: [] },
+    { axis: "condition.rating_point", kind: "token", values: ["R1", "R2"], units: [] },
+    { axis: "condition.frequency", kind: "quantity", values: [], units: ["Hz"] },
+    { axis: "scope", kind: "scope", values: [], units: [] },
+  ];
+
+  async function openContextForm(onResume: (body: unknown) => void) {
+    serve(job(review({ context_axes: axes })), (body) => {
+      onResume(body);
+      return undefined;
+    });
+    renderWithQuery(<ReviewPage jobId="JOB-1" onBack={() => {}} />);
+    fireEvent.click(await screen.findByRole("button", { name: "문맥 수정" }));
+    return screen.getByRole("form", { name: "문맥 수정" });
+  }
+
+  it("edits one context axis, a token from the vocabulary (D-100)", async () => {
+    let sent: unknown;
+    const form = await openContextForm((body) => {
+      sent = body;
+    });
+    const axis = within(form).getByLabelText("축") as HTMLSelectElement;
+    expect(axis.value).toBe("condition.rating_point"); // an axis the fact has comes first
+    fireEvent.change(axis, { target: { value: "basis.rating" } }); // 축 추가
+    const value = within(form).getByLabelText("값") as HTMLSelectElement;
+    expect([...value.options].map((o) => o.value)).toEqual(["", "MCR", "maximum"]);
+    fireEvent.change(value, { target: { value: "MCR" } });
+    fireEvent.change(within(form).getByLabelText("사유(필수)"), { target: { value: "비고 확인" } });
+    fireEvent.click(within(form).getByRole("button", { name: "적용" }));
+    await waitFor(() => expect(sent).toBeDefined());
+    expect(sent).toMatchObject({
+      command: {
+        action: "edit",
+        revision: 3,
+        edit: {
+          op: "context",
+          target: "fact",
+          index: 0,
+          axis: "basis.rating",
+          value_text: "MCR",
+          reason: "비고 확인",
+        },
+      },
+    });
+  });
+
+  it("clears an axis and types a scope phrase or a quantity as text", async () => {
+    const sent: unknown[] = [];
+    const form = await openContextForm((body) => sent.push(body));
+    const value = within(form).getByLabelText("값") as HTMLSelectElement;
+    expect(value.value).toBe("R1"); // the current value
+    fireEvent.change(value, { target: { value: "" } }); // 비우기
+    fireEvent.change(within(form).getByLabelText("사유(필수)"), { target: { value: "근거 없음" } });
+    fireEvent.click(within(form).getByRole("button", { name: "적용" }));
+    await waitFor(() => expect(sent).toHaveLength(1));
+    expect(sent[0]).toMatchObject({
+      command: { edit: { axis: "condition.rating_point", value_text: null } },
+    });
+
+    fireEvent.click(await screen.findByRole("button", { name: "문맥 수정" })); // closed on success
+    const again = screen.getByRole("form", { name: "문맥 수정" });
+    fireEvent.change(within(again).getByLabelText("축"), { target: { value: "scope" } });
+    const scope = within(again).getByLabelText("범위 구절") as HTMLInputElement;
+    expect(scope.value).toBe("engine shaft");
+    fireEvent.change(within(again).getByLabelText("축"), {
+      target: { value: "condition.frequency" },
+    });
+    expect(within(again).getByText(/단위: Hz/)).toBeInTheDocument();
+  });
+  it("marks a context hint the reviewer has edited (D-100)", async () => {
+    serve(
+      job(
+        review({
+          context_hints: [
+            {
+              fact_index: 0,
+              attribute: "rated_power",
+              reasons: ["scope: phrase not in the remarks"],
+              messages: ["범위 — 범위 구절이 비고에 없음"],
+              reviewed: true,
+            },
+          ],
+          edited: [0],
+        }),
+      ),
+    );
+    renderWithQuery(<ReviewPage jobId="JOB-1" onBack={() => {}} />);
+    expect(await screen.findByRole("button", { name: /문맥 확인함/ })).toBeInTheDocument();
   });
 
   it("explains findings and unread values in words, unit once", async () => {

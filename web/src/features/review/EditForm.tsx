@@ -8,10 +8,11 @@ import type { FactEdit } from "./types";
 export type EditTarget =
   | { op: "set"; target: "fact" | "unresolved"; index: number; valueText: string; unitText: string }
   | { op: "remove"; target: "fact" | "unresolved"; index: number }
+  | { op: "context"; target: "fact"; index: number }
   | { op: "add" };
 
 interface Props {
-  target: EditTarget;
+  target: Exclude<EditTarget, { op: "context" }>;
   attributes: string[];
   pickedBlock: { index: number; text: string } | null;
   onStartPick: () => void;

@@ -261,6 +261,29 @@ export interface components {
             notice?: string | null;
         };
         /**
+         * ContextAxis
+         * @description One context axis the reviewer may edit (D-100), from the ontology vocabulary.
+         */
+        ContextAxis: {
+            /** Axis */
+            axis: string;
+            /**
+             * Kind
+             * @enum {string}
+             */
+            kind: "token" | "quantity" | "reference_quantity" | "scope";
+            /**
+             * Units
+             * @default []
+             */
+            units: string[];
+            /**
+             * Values
+             * @default []
+             */
+            values: string[];
+        };
+        /**
          * ContextHint
          * @description A fact whose basis / condition / scope the reviewer should check (D-069).
          */
@@ -276,6 +299,11 @@ export interface components {
             messages: string[];
             /** Reasons */
             reasons: string[];
+            /**
+             * Reviewed
+             * @default false
+             */
+            reviewed: boolean;
         };
         /** DisplayLabels */
         DisplayLabels: {
@@ -329,6 +357,8 @@ export interface components {
         FactEdit: {
             /** Attribute */
             attribute?: string | null;
+            /** Axis */
+            axis?: string | null;
             /** Block */
             block?: number | null;
             /** Index */
@@ -337,7 +367,7 @@ export interface components {
              * Op
              * @enum {string}
              */
-            op: "set" | "add" | "remove";
+            op: "set" | "add" | "remove" | "context";
             /** Reason */
             reason: string;
             /** Target */
@@ -498,7 +528,7 @@ export interface components {
              * Op
              * @enum {string}
              */
-            op: "set" | "add" | "remove";
+            op: "set" | "add" | "remove" | "context";
             /** Outcome */
             outcome: string;
             /** Reason */
@@ -655,6 +685,11 @@ export interface components {
             attributes: string[];
             /** Blockers */
             blockers: string[];
+            /**
+             * Context Axes
+             * @default []
+             */
+            context_axes: components["schemas"]["ContextAxis"][];
             /**
              * Context Hints
              * @default []

@@ -120,3 +120,19 @@ uv run python -m spec_bridge.llm.hosts var/w6-6/connections-<time>.log
 ## 6. Docker를 쓰지 않는 이유
 
 범위 밖이다(D-085). macOS의 컨테이너는 Metal GPU를 쓰지 못해 Ollama를 호스트에서 돌려야 하고, 그러면 컨테이너가 `host.docker.internal`로 나가야 해서 오프라인 가드(루프백만 허용)와 충돌한다. Docling(PyTorch) 때문에 이미지도 수 GB가 된다. 로컬 단일 사용자 도구라 위의 로컬 실행과 CI로 충분하다.
+
+## 7. BOM 연결 (1단계, D-101)
+
+BOM 표(Excel 또는 Markdown, 열 `Component`·`Model`·`Manufacturer`·`Quantity`, 위에 `Root model:`·`Manufacturer:`)의 행을 등록 저장소의 기존 제품에 연결한다. 모델은 쓰지 않는다.
+
+```bash
+uv run python -m spec_bridge.registry.store dev
+uv run python -m spec_bridge.bom data/synth/boms/BOM-001.md --registry var/registry/dev.sqlite
+uv run python -m spec_bridge.bom data/synth/boms/BOM-001.md --registry var/registry/dev.sqlite --apply
+```
+
+- 첫 실행은 미리보기다. 행마다 `new`(추가될 관계), `existing`(이미 있음), `pending`(검토 대기와 사유)을 보인다. `--apply`일 때만 저장한다.
+- 상위 제품(`Root model` + `Manufacturer`)이 저장소에 없으면 BOM 전체를 거부한다. 새 제품은 사양서 등록으로 만든다.
+- 기존 관계는 지우지 않는다. BOM에 없는 기존 관계는 `not_in_bom`으로 보고한다. 수량은 제품 이벤트 `bom_linked`와 감사 기록에 남는다.
+- 합성 BOM 4건의 관계는 seed에 이미 있으므로, seed 저장소에서는 모든 행이 `existing`이다. BOM-002·004는 테스트 분할 저장소(`test`)에 있다.
+

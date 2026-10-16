@@ -5,6 +5,7 @@ export type ClassPrompt = components["schemas"]["ClassPrompt"];
 export type FactEdit = components["schemas"]["FactEdit"];
 export type Finding = components["schemas"]["Finding"];
 export type TermNote = components["schemas"]["TermNote"];
+export type ContextAxis = components["schemas"]["ContextAxis"];
 export type Fact = Record<string, unknown>;
 
 /** What the reviewer is looking at: the source pane highlights its places. */

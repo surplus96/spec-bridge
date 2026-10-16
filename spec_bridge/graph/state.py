@@ -100,6 +100,16 @@ class ContextHint(StrictModel):
     attribute: str
     reasons: list[str]  # the chain's rejections, e.g. "basis.rating: evidence not in the line"
     messages: list[str] = []  # the same for a person; invented axes left out (D-072)
+    reviewed: bool = False  # the reviewer has edited this fact's context (D-100)
+
+
+class ContextAxis(StrictModel):
+    """One context axis the reviewer may edit (D-100), from the ontology vocabulary."""
+
+    axis: str  # basis.<axis>, condition.<axis> or scope
+    kind: Literal["token", "quantity", "reference_quantity", "scope"]
+    values: list[str] = []  # the tokens to choose from (token axes)
+    units: list[str] = []  # the units a quantity may be written in
 
 
 class UnresolvedNote(StrictModel):
@@ -126,4 +136,5 @@ class ReviewPrompt(StrictModel):
     edits: list[dict[str, Any]] = []  # HumanEdit rows so far (history on the screen)
     edited: list[int] = []  # indexes of facts that are a reviewer's edit (✎)
     attributes: list[str] = []  # the class's attributes (the "add" form)
+    context_axes: list[ContextAxis] = []  # what a context edit may set (D-100)
     notice: str | None = None

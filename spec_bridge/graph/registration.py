@@ -34,6 +34,7 @@ from pydantic import ValidationError
 from spec_bridge.dedup.matcher import Match
 from spec_bridge.extract.classifier import UNKNOWN, classify
 from spec_bridge.extract.extractor import Extraction
+from spec_bridge.extract.schemas import units_of_dimension
 from spec_bridge.graph.state import (
     COMMAND,
     Acknowledge,
@@ -41,6 +42,7 @@ from spec_bridge.graph.state import (
     Cancel,
     ChooseClass,
     ClassPrompt,
+    ContextAxis,
     ContextHint,
     Edit,
     JobState,
@@ -152,6 +154,7 @@ def context_hints(state: JobState, onto: Ontology) -> list[ContextHint]:
     reviewer should look first. Nothing is changed; a context the model never proposed
     leaves no record, so no hint is not proof the context is complete."""
     records = [r for r in state.get("qualifier_records", []) if r.get("kind") == "value"]
+    reviewed = {canonical(e["after"]) for e in state.get("edits", []) if e["op"] == "context"}
     hints = []
     for index, fact in enumerate(state.get("facts", [])):
         places = [o["location"] for o in fact["occurrences"]]
@@ -167,9 +170,35 @@ def context_hints(state: JobState, onto: Ontology) -> list[ContextHint]:
                     attribute=fact["attribute"],
                     reasons=reasons,
                     messages=list(dict.fromkeys(messages)),
+                    reviewed=canonical(fact) in reviewed,
                 )
             )
     return hints
+
+
+_AXES: dict[int, tuple[Ontology, list[ContextAxis]]] = {}  # unit lookups build a pint registry
+
+
+def context_axes(onto: Ontology) -> list[ContextAxis]:
+    """The axes a context edit may set (D-100). "unknown" is offered as clearing the axis,
+    not as a token; which axes suit which attribute is not in the ontology, so all are.
+    Worked out once per ontology: the review prompt is rebuilt on every request (D-071)."""
+    cached = _AXES.get(id(onto))
+    if cached is not None and cached[0] is onto:
+        return cached[1]
+    vocab = onto.vocabularies
+    axes = [
+        ContextAxis(axis=f"basis.{key}", kind="token", values=[t for t in tokens if t != "unknown"])
+        for key, tokens in vocab.basis.items()
+    ]
+    for key, cond in vocab.condition.items():
+        units = [] if cond.dimension is None else units_of_dimension(onto, cond.dimension)
+        axes.append(
+            ContextAxis(axis=f"condition.{key}", kind=cond.kind, values=cond.values, units=units)
+        )
+    axes.append(ContextAxis(axis="scope", kind="scope"))
+    _AXES[id(onto)] = (onto, axes)
+    return axes
 
 
 def edited_facts(state: JobState) -> list[int]:
@@ -250,6 +279,7 @@ def review_prompt(
         edits=state.get("edits", []),
         edited=edited_facts(state),
         attributes=(onto.attributes_of(result.class_id) if result.class_id in onto.classes else []),
+        context_axes=[] if result.failure else context_axes(onto),
         notice=state.get("notice"),
     )
 

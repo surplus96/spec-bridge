@@ -22,7 +22,7 @@ from spec_bridge.graph.registration import (
 from spec_bridge.ontology.loader import Ontology
 from spec_bridge.registry.identity import MakerIndex
 from spec_bridge.registry.output import RegistrationResult
-from spec_bridge.registry.store import RegistryError, RegistryStore
+from spec_bridge.registry.store import SCHEMA_VERSION, RegistryError, RegistryStore
 from tests.api.test_app import service_with
 from tests.conftest import ROOT
 from tests.eval.test_experiment import FAST, classify_reply
@@ -196,7 +196,7 @@ def test_a_schema_1_file_is_migrated_without_touching_the_seed(
         version = s.conn.execute(
             "SELECT value FROM schema_meta WHERE key = 'schema_version'"
         ).fetchone()
-        assert version == ("2",)
+        assert version == (SCHEMA_VERSION,)
     finally:
         s.close()
 
@@ -204,3 +204,64 @@ def test_a_schema_1_file_is_migrated_without_touching_the_seed(
 def test_audit_rows_are_kept(store: RegistryStore) -> None:
     store.audit("J", "uploaded", "reviewer", {"file_name": "a.xlsx"})
     assert store.count("audit_events") == 1
+
+
+SCHEMA_2_EDITS = """CREATE TABLE human_edits (
+    edit_id TEXT PRIMARY KEY, job_id TEXT NOT NULL,
+    product_id TEXT REFERENCES products(product_id),
+    attribute_id TEXT NOT NULL, op TEXT NOT NULL CHECK (op IN ('set', 'add', 'remove')),
+    before_json TEXT NOT NULL, after_json TEXT NOT NULL, outcome TEXT NOT NULL,
+    reason TEXT NOT NULL, actor TEXT NOT NULL, occurred_at TEXT NOT NULL)"""
+
+
+def edit_row(edit_id: str, op: str) -> dict[str, Any]:
+    return {
+        "edit_id": edit_id,
+        "attribute": "rated_power",
+        "op": op,
+        "before": None,
+        "after": None,
+        "outcome": "removed",
+        "reason": "test",
+        "at": "t",
+    }
+
+
+def test_a_schema_2_file_is_migrated_and_keeps_its_edits(tmp_path: Path, onto: Ontology) -> None:
+    """D-100: schema 3 lets the edit table hold context edits; old rows are kept."""
+    path = tmp_path / "old.sqlite"
+    RegistryStore(path, onto).close()
+    with sqlite3.connect(path) as conn:  # make it look like a W5 file
+        conn.execute("DROP TABLE human_edits")
+        conn.execute(SCHEMA_2_EDITS)
+        conn.execute(
+            "INSERT INTO human_edits VALUES ('J-E1', 'J', NULL, 'rated_power', 'set',"
+            " 'null', 'null', 'fact', 'old', 'reviewer', 't')"
+        )
+        conn.execute("UPDATE schema_meta SET value = '2' WHERE key = 'schema_version'")
+    conn.close()
+
+    s = RegistryStore(path, onto)
+    try:
+        assert s.conn.execute("SELECT edit_id, reason FROM human_edits").fetchall() == [
+            ("J-E1", "old")
+        ]
+        with s.conn:
+            s._edit_rows("J", None, [edit_row("J-E2", "context")], "reviewer")
+        assert s.count("human_edits") == 2
+        version = s.conn.execute(
+            "SELECT value FROM schema_meta WHERE key = 'schema_version'"
+        ).fetchone()
+        assert version == (SCHEMA_VERSION,)
+    finally:
+        s.close()
+
+
+def test_an_edit_row_the_table_refuses_is_an_error_not_skipped(store: RegistryStore) -> None:
+    """A refused row used to vanish under INSERT OR IGNORE; only a repeat is skipped now."""
+    with store.conn:
+        store._edit_rows("J", None, [edit_row("J-E1", "set")], "reviewer")
+        store._edit_rows("J", None, [edit_row("J-E1", "set")], "reviewer")  # idempotent
+    assert store.count("human_edits") == 1
+    with pytest.raises(sqlite3.IntegrityError), store.conn:
+        store._edit_rows("J", None, [edit_row("J-E2", "not an op")], "reviewer")

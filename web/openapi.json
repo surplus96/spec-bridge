@@ -179,6 +179,48 @@
         "title": "ClassPrompt",
         "type": "object"
       },
+      "ContextAxis": {
+        "additionalProperties": false,
+        "description": "One context axis the reviewer may edit (D-100), from the ontology vocabulary.",
+        "properties": {
+          "axis": {
+            "title": "Axis",
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "token",
+              "quantity",
+              "reference_quantity",
+              "scope"
+            ],
+            "title": "Kind",
+            "type": "string"
+          },
+          "units": {
+            "default": [],
+            "items": {
+              "type": "string"
+            },
+            "title": "Units",
+            "type": "array"
+          },
+          "values": {
+            "default": [],
+            "items": {
+              "type": "string"
+            },
+            "title": "Values",
+            "type": "array"
+          }
+        },
+        "required": [
+          "axis",
+          "kind"
+        ],
+        "title": "ContextAxis",
+        "type": "object"
+      },
       "ContextHint": {
         "additionalProperties": false,
         "description": "A fact whose basis / condition / scope the reviewer should check (D-069).",
@@ -205,6 +247,11 @@
             },
             "title": "Reasons",
             "type": "array"
+          },
+          "reviewed": {
+            "default": false,
+            "title": "Reviewed",
+            "type": "boolean"
           }
         },
         "required": [
@@ -352,6 +399,17 @@
             ],
             "title": "Attribute"
           },
+          "axis": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Axis"
+          },
           "block": {
             "anyOf": [
               {
@@ -378,7 +436,8 @@
             "enum": [
               "set",
               "add",
-              "remove"
+              "remove",
+              "context"
             ],
             "title": "Op",
             "type": "string"
@@ -937,7 +996,8 @@
             "enum": [
               "set",
               "add",
-              "remove"
+              "remove",
+              "context"
             ],
             "title": "Op",
             "type": "string"
@@ -1346,6 +1406,14 @@
               "type": "string"
             },
             "title": "Blockers",
+            "type": "array"
+          },
+          "context_axes": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/ContextAxis"
+            },
+            "title": "Context Axes",
             "type": "array"
           },
           "context_hints": {

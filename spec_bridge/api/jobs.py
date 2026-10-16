@@ -113,7 +113,7 @@ class ProductEdit(StrictModel):
     edit_id: str
     job_id: str
     attribute: str
-    op: Literal["set", "add", "remove"]
+    op: Literal["set", "add", "remove", "context"]
     before: dict[str, Any] | None
     after: dict[str, Any] | None
     outcome: str

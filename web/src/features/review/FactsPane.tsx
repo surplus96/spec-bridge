@@ -1,12 +1,22 @@
 // ② Extracted attributes: what would be registered. Each row: the Korean name (the id small
 // below), the value, the context as chips, and status chips — 원문 (read from the document),
 // 수정됨 (a reviewer's edit, NFR-07), 문맥 확인 n (verification refused a context the model
-// proposed, D-069; folded until opened). Edit/remove show on the selected or hovered row.
-import { AlertTriangle, FileText, Pencil, Plus, Trash2 } from "lucide-react";
+// proposed, D-069; folded until opened; 문맥 확인함 once the reviewer edited that context,
+// D-100). Edit/context/remove show on the selected or hovered row.
+import {
+  AlertTriangle,
+  CheckCircle2,
+  FileText,
+  Pencil,
+  Plus,
+  SlidersHorizontal,
+  Trash2,
+} from "lucide-react";
 import { useState } from "react";
 import { attributeName, useLabels } from "../../lib/display";
 import { contextParts, editableValue, formatContext, formatValue } from "../../lib/format";
 import { Badge } from "../../ui/Badge";
+import { ContextForm } from "./ContextForm";
 import { EditForm, type EditTarget } from "./EditForm";
 import type { Fact, FactEdit, ReviewPrompt, Selection } from "./types";
 
@@ -37,8 +47,21 @@ export function FactsPane(props: Props) {
   const unresolved = prompt.result.unresolved as Fact[];
   const hints = new Map((prompt.context_hints ?? []).map((h) => [h.fact_index, h]));
   const edited = new Set(prompt.edited ?? []);
-  const form = (here: (t: EditTarget) => boolean) =>
-    editing && here(editing) ? (
+  const form = (here: (t: EditTarget) => boolean) => {
+    if (!editing || !here(editing)) return null;
+    if (editing.op === "context") {
+      return (
+        <ContextForm
+          fact={facts[editing.index]}
+          index={editing.index}
+          axes={prompt.context_axes ?? []}
+          onSubmit={props.onSubmit}
+          onClose={() => onEdit(null)}
+          busy={props.busy}
+        />
+      );
+    }
+    return (
       <EditForm
         target={editing}
         attributes={prompt.attributes ?? []}
@@ -48,7 +71,8 @@ export function FactsPane(props: Props) {
         onClose={() => onEdit(null)}
         busy={props.busy}
       />
-    ) : null;
+    );
+  };
   const toggle = (i: number) => {
     const next = new Set(openHints);
     if (next.has(i)) next.delete(i);
@@ -141,10 +165,16 @@ export function FactsPane(props: Props) {
                       onClick={() => toggle(i)}
                       aria-expanded={openHints.has(i)}
                     >
-                      <Badge tone="hint">
-                        <AlertTriangle className="size-3" /> 문맥 확인{" "}
-                        {(hint.messages ?? hint.reasons).length}
-                      </Badge>
+                      {hint.reviewed ? (
+                        <Badge tone="info" title="담당자가 문맥을 수정함">
+                          <CheckCircle2 className="size-3" /> 문맥 확인함
+                        </Badge>
+                      ) : (
+                        <Badge tone="hint">
+                          <AlertTriangle className="size-3" /> 문맥 확인{" "}
+                          {(hint.messages ?? hint.reasons).length}
+                        </Badge>
+                      )}
                     </button>
                   )}
                   {canEdit && (
@@ -166,6 +196,14 @@ export function FactsPane(props: Props) {
                         }
                       >
                         <Pencil className="size-4" />
+                      </button>
+                      <button
+                        type="button"
+                        aria-label="문맥 수정"
+                        className={iconButton}
+                        onClick={() => onEdit({ op: "context", target: "fact", index: i })}
+                      >
+                        <SlidersHorizontal className="size-4" />
                       </button>
                       <button
                         type="button"
@@ -254,8 +292,10 @@ export function FactsPane(props: Props) {
               {(prompt.edits ?? []).map((e) => (
                 <li key={String(e.edit_id)}>
                   <span className="font-medium">{attributeName(labels, String(e.attribute))}</span>{" "}
-                  {{ set: "수정", add: "추가", remove: "삭제" }[String(e.op)] ?? String(e.op)} —{" "}
-                  {String(e.reason)}
+                  {{ set: "수정", add: "추가", remove: "삭제", context: "문맥 수정" }[
+                    String(e.op)
+                  ] ?? String(e.op)}
+                  {e.axis ? ` (${String(e.axis)})` : ""} — {String(e.reason)}
                 </li>
               ))}
             </ol>

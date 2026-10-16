@@ -86,9 +86,15 @@ OFFLINE=1 SPEC_BRIDGE_APP_DIR=var/app uv run uvicorn spec_bridge.api.app:app --h
 
 Python 3.12(uv) · LangGraph · LangChain(LCEL, 검색기) · FastAPI · Docling · pint · SQLite · Chroma/BM25 + bge-m3 · Ollama · React·TypeScript·Vite · TanStack Query · react-pdf · Tailwind · pytest·ruff·mypy · Vitest·Biome
 
+## W6 이후 추가한 기능
+
+W6 평가 수치와 동결 기록에는 영향이 없습니다(`freeze verify`·`manifest check` 일치).
+
+- **문맥 편집**(D-100): 검토 화면에서 담당자가 사실의 기준·조건·범위를 한 번에 한 축씩 고칩니다. 단어는 온톨로지 어휘에서만 고르고, 범위 구절은 문서에 있어야 합니다. W6 문맥 오답이 이 수정으로 정답 문맥에 닿는지 사후 확인했습니다(테스트 9/9, 수기 11/11, 독립 평가 아님).
+- **BOM 1단계**(D-101): Excel·Markdown BOM 표의 행을 제조사·모델로 기존 제품에 식별하고 `has_component`(공급 범위 포함) 관계를 추가합니다. 명령줄 미리보기 뒤 `--apply`로 저장하고, 찾지 못한 행은 검토 대기로 남깁니다. 합성 BOM 4건 12행이 정답과 같게 식별됩니다(기능 확인).
+
 ## 이후 확장 (미구현)
 
-- **BOM 일괄 등록**: 1단계로 BOM 행을 기존 제품 식별에 연결하고 `has_component` 관계를 만듭니다(D-060).
-- **G5 후속 실험**: 비정형 BOM 행 매핑에 해결 사례 RAG를 적용합니다. 새 데이터와 사전 등록이 필요합니다.
-- **문맥 편집**: 담당자가 기준·조건·범위를 고치는 기능입니다. 보류 중입니다(D-091).
+- **BOM 2단계**: 검토 화면 연동, BOM 행에서 새 제품 등록.
+- **G5 후속 실험**(보류, D-102): 비정형 BOM 행 매핑에 해결 사례 RAG를 적용합니다. 실제 BOM 표기 사례를 확보한 뒤에 진행합니다([확보 절차](docs/dataset-plan.md)의 4-5).
 - **호스트 연동**: Atlas CMMS([설계안](docs/host-integration-design.md))와 연동합니다. 대안 호스트 openMAINT는 조사만 해 두었습니다.

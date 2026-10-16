@@ -328,3 +328,29 @@ def test_a_failed_build_is_retried_on_the_next_request() -> None:
     with pytest.raises(RuntimeError):
         flaky()
     assert flaky() == "ok" and len(attempts) == 2
+
+
+def test_a_context_edit_is_registered_as_a_human_edit(tmp_path: Path, client: TestClient) -> None:
+    """D-100: the registered fact carries the context the reviewer set, with its reason."""
+    jobs, job_id = started(tmp_path, client, CLEAN)
+    add_values(client, job_id, CLEAN)
+    prompt = view(client, job_id)["prompt"]
+    axis = next(a for a in prompt["context_axes"] if a["kind"] == "token")
+    edit = {
+        "op": "context",
+        "target": "fact",
+        "index": 0,
+        "axis": axis["axis"],
+        "value_text": axis["values"][0],
+        "reason": "the remarks state it",
+    }
+    command = {"action": "edit", "revision": prompt["revision"], "edit": edit}
+    assert send(client, job_id, command).status_code == 202
+    revision = view(client, job_id)["prompt"]["revision"]
+    assert send(client, job_id, {"action": "register_new", "revision": revision}).status_code == 202
+    product = client.get(f"/api/products/{view(client, job_id)['product_id']}").json()
+    group, key = axis["axis"].split(".")
+    (fact,) = [f for f in product["facts"] if f[group].get(key) == axis["values"][0]]
+    assert fact["evidence_kind"] == "human_edit"
+    assert fact["evidence_text"].endswith("the remarks state it")
+    assert [e["op"] for e in product["edits"]].count("context") == 1

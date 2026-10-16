@@ -365,3 +365,92 @@ def test_a_value_outside_the_dictionary_terms_must_be_checked_before_registering
     change = {"op": "set", "target": "fact", "index": note["fact_index"], "value_text": term}
     edit(graph, change)
     assert prompt(graph)["term_notes"] == []
+
+
+def test_a_context_edit_marks_the_hint_reviewed_and_keeps_the_fact_edited(
+    tmp_path: Path,
+) -> None:
+    """D-100: the reviewer fixes the context the hint pointed at."""
+    fact, item = scoped_item()
+    unsupported = {"scope": {"value": "nowhere", "evidence": "nowhere"}}
+    graph, _, _ = graph_for(
+        tmp_path, [classify_reply(DOC_ID), {"facts": [item]}, unsupported], rag=True
+    )
+    start(graph, "J", PATH, DOC_ID, PATH.name)
+    (hint,) = prompt(graph)["context_hints"]
+    assert hint["reviewed"] is False
+    phrase = next(b.text for b in parse_document(PATH, DOC_ID).blocks if "; for " in b.text)
+    edit(
+        graph,
+        {
+            "op": "context",
+            "target": "fact",
+            "index": 0,
+            "axis": "scope",
+            "value_text": phrase.split("; ", 1)[1],
+        },
+    )
+    shown = prompt(graph)
+    assert shown["notice"] is None and shown["edits"][0]["axis"] == "scope"
+    assert shown["context_hints"][0]["reviewed"] is True and shown["edited"] == [0]
+
+
+def test_a_context_edit_can_resolve_and_make_an_e5(tmp_path: Path) -> None:
+    """Two values in one context are E5; giving one of them its own context resolves it."""
+    graph, _, _ = graph_for(tmp_path, replies())
+    start(graph, "J", PATH, DOC_ID, PATH.name)
+    first = prompt(graph)["result"]["facts"][0]
+    blocks = parse_document(PATH, DOC_ID).blocks
+    place = next(i for i, b in enumerate(blocks) if b.text == first["occurrences"][0]["raw_text"])
+    phrase = next(b.text for b in blocks if "; for " in b.text).split("; ", 1)[1]
+    change = {"op": "add", "attribute": first["attribute"], "block": place}
+    edit(graph, change | {"value_text": str(first["value"] + 1), "unit_text": first["unit"]})
+
+    def codes() -> list[str]:
+        return [f["code"] for f in prompt(graph)["result"]["validation"]["findings"]]
+
+    assert "E5" in codes()  # both values have the empty context
+    scope = {"op": "context", "target": "fact", "index": 1, "axis": "scope"}
+    edit(graph, scope | {"value_text": phrase})
+    assert "E5" not in codes()
+    edit(graph, scope | {"value_text": ""})
+    assert "E5" in codes()
+
+
+def test_a_refused_context_edit_is_a_notice(tmp_path: Path) -> None:
+    graph, _, _ = graph_for(tmp_path, replies())
+    start(graph, "J", PATH, DOC_ID, PATH.name)
+    edit(
+        graph,
+        {
+            "op": "context",
+            "target": "fact",
+            "index": 0,
+            "axis": "basis.rating",
+            "value_text": "not a token",
+        },
+    )
+    shown = prompt(graph)
+    assert shown["notice"].startswith("edit refused: basis.rating") and shown["edits"] == []
+
+
+def test_the_review_lists_the_context_axes_from_the_ontology(tmp_path: Path) -> None:
+    graph, service, _ = graph_for(tmp_path, replies())
+    start(graph, "J", PATH, DOC_ID, PATH.name)
+    axes = {a["axis"]: a for a in prompt(graph)["context_axes"]}
+    vocab = service.onto.vocabularies
+    assert set(axes) == {f"basis.{k}" for k in vocab.basis} | {
+        f"condition.{k}" for k in vocab.condition
+    } | {"scope"}
+    for key, tokens in vocab.basis.items():
+        assert axes[f"basis.{key}"] == {
+            "axis": f"basis.{key}",
+            "kind": "token",
+            "values": [t for t in tokens if t != "unknown"],
+            "units": [],
+        }
+    for key, cond in vocab.condition.items():
+        shown = axes[f"condition.{key}"]
+        assert shown["kind"] == cond.kind and shown["values"] == cond.values
+        assert bool(shown["units"]) == (cond.kind != "token")
+    assert axes["scope"]["kind"] == "scope"

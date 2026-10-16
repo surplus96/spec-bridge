@@ -4,12 +4,15 @@ Build: uv run python -m spec_bridge.registry.store dev
 
 Schema 2 (D-064) adds the reviewer's edits and an audit table. A schema-1 file is
 migrated in place: the new tables are created and nothing else changes.
+Schema 3 (D-100) lets the edit table hold context edits (op 'context'). SQLite cannot
+change a CHECK in place, so a schema-2 file gets its edit table rebuilt, rows kept.
 """
 
 import hashlib
 import json
 import sqlite3
 import sys
+import uuid
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
@@ -22,8 +25,8 @@ from spec_bridge.registry.identity import MakerIndex, maker_key, model_key
 from spec_bridge.registry.output import RegistrationResult
 
 ROOT = Path(__file__).resolve().parents[2]
-SCHEMA_VERSION = "2"
-MIGRATES_FROM = {"1"}  # schema versions opened by adding the new tables
+SCHEMA_VERSION = "3"
+MIGRATES_FROM = {"1", "2"}  # schema versions opened in place (new tables, rebuilt edit table)
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS schema_meta (key TEXT PRIMARY KEY, value TEXT NOT NULL);
@@ -61,7 +64,7 @@ CREATE TABLE IF NOT EXISTS registration_events (
 CREATE TABLE IF NOT EXISTS human_edits (
     edit_id TEXT PRIMARY KEY, job_id TEXT NOT NULL,
     product_id TEXT REFERENCES products(product_id),
-    attribute_id TEXT NOT NULL, op TEXT NOT NULL CHECK (op IN ('set', 'add', 'remove')),
+    attribute_id TEXT NOT NULL, op TEXT NOT NULL CHECK (op IN ('set', 'add', 'remove', 'context')),
     before_json TEXT NOT NULL, after_json TEXT NOT NULL, outcome TEXT NOT NULL,
     reason TEXT NOT NULL, actor TEXT NOT NULL, occurred_at TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS audit_events (
@@ -95,6 +98,7 @@ class RegistryStore:
             return
         if stored.get("schema_version") in MIGRATES_FROM:
             with self.conn:  # the CREATE IF NOT EXISTS above added the new tables
+                self._rebuild_edit_table()
                 self._meta("schema_version", SCHEMA_VERSION)
             stored["schema_version"] = SCHEMA_VERSION
         stale = {k: stored.get(k) for k, v in expected.items() if stored.get(k) != v}
@@ -107,6 +111,20 @@ class RegistryStore:
 
     def close(self) -> None:
         self.conn.close()
+
+    def _rebuild_edit_table(self) -> None:
+        """Schema 2 → 3: the edit table with the current CHECK, every row kept."""
+        (old,) = self.conn.execute(
+            "SELECT sql FROM sqlite_master WHERE type = 'table' AND name = 'human_edits'"
+        ).fetchone()
+        if "'context'" in old:
+            return
+        start = SCHEMA.index("CREATE TABLE IF NOT EXISTS human_edits")
+        create = SCHEMA[start : SCHEMA.index(";", start)]
+        self.conn.execute("ALTER TABLE human_edits RENAME TO human_edits_schema2")
+        self.conn.execute(create)
+        self.conn.execute("INSERT INTO human_edits SELECT * FROM human_edits_schema2")
+        self.conn.execute("DROP TABLE human_edits_schema2")
 
     def _meta(self, key: str, value: str) -> None:
         self.conn.execute("INSERT OR REPLACE INTO schema_meta VALUES (?, ?)", (key, value))
@@ -265,6 +283,41 @@ class RegistryStore:
         ).fetchone()
         return None if row is None else str(row[0])
 
+    # BOM relations (D-101) -----------------------------------------------------------------
+    def product_class(self, product_id: str) -> str | None:
+        row = self.conn.execute(
+            "SELECT class_id FROM products WHERE product_id = ?", (product_id,)
+        ).fetchone()
+        return None if row is None else str(row[0])
+
+    def relations_of(self, product_id: str, relation_id: str) -> list[str]:
+        rows = self.conn.execute(
+            "SELECT target_product_id FROM relations WHERE product_id = ? AND relation_id = ?"
+            " ORDER BY target_product_id",
+            (product_id, relation_id),
+        )
+        return [str(r[0]) for r in rows]
+
+    def add_components(
+        self, product_id: str, targets: list[str], actor: str, payload: dict[str, Any]
+    ) -> int:
+        """Add has_component relations in one transaction; returns how many were new.
+        Existing relations are kept and never removed; when something was added, the
+        product gets a `bom_linked` event and the audit a row, both with the payload."""
+        with self.conn:
+            added = 0
+            for target in sorted(set(targets)):
+                cursor = self.conn.execute(
+                    "INSERT INTO relations VALUES (?, 'has_component', ?) ON CONFLICT DO NOTHING",
+                    (product_id, target),
+                )
+                added += cursor.rowcount
+            if added:
+                key = f"bom:{product_id}:{uuid.uuid4().hex}"  # relations dedupe repeats
+                self._event(product_id, "bom_linked", actor, payload, key)
+                self._audit(f"bom:{product_id}", "bom_linked", actor, payload)
+        return added
+
     # Registrations (W5-3, D-063) ---------------------------------------------------------
     def records(self) -> list[dict[str, Any]]:
         """Every product in the seed JSONL shape, for duplicate/similar matching."""
@@ -326,7 +379,8 @@ class RegistryStore:
     ) -> None:
         for e in edits:
             self.conn.execute(
-                "INSERT OR IGNORE INTO human_edits VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                "INSERT INTO human_edits VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+                " ON CONFLICT(edit_id) DO NOTHING",  # a repeat is skipped, a bad row is not
                 (
                     e["edit_id"],
                     job_id,
