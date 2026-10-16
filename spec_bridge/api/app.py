@@ -17,6 +17,7 @@ from typing import Annotated, Any
 from fastapi import Depends, FastAPI, HTTPException, UploadFile
 from fastapi.staticfiles import StaticFiles
 
+from spec_bridge.api.boms import router as boms_router
 from spec_bridge.api.deps import (
     ALLOWED_SUFFIXES,
     Service,
@@ -33,6 +34,7 @@ __all__ = ["Service", "app", "get_service", "load_registry", "service_provider"]
 
 app = FastAPI(title="spec-bridge", version="0.1.0")
 app.include_router(jobs_router)
+app.include_router(boms_router)
 
 
 @app.get("/health")

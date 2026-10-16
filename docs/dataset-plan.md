@@ -175,7 +175,7 @@ G5 후속 실험(비정형 BOM 행 → 기존 제품 매핑)은 **실제 BOM 표
 - 각 패턴 행에는 `source_ref`(문서 ID, 쪽·행), `pattern_type`, `raw_example`(로컬 전용), `description`(커밋 가능, 원문 문장 복제 금지), `verified_by`를 둔다.
 - 커밋하는 것은 패턴 목록(`data/reference/bom-notation-patterns.yaml`)과 manifest뿐이다. 원문 예시는 커밋하지 않는다.
 
-**3. 착수 조건 (제안, 사용자 승인 시 확정)**
+**3. 착수 조건 (확정, 2026-10-16, 사용자 승인, D-104)**
 
 - 서로 다른 출처 3곳 이상(제조사 또는 발행 기관 2곳 이상 포함)
 - 원문 행 30개 이상, 패턴 유형 5개 이상
@@ -189,7 +189,19 @@ G5 후속 실험(비정형 BOM 행 → 기존 제품 매핑)은 **실제 BOM 표
 4. 판정 기준을 실행 전에 등록하고, 동결 후 테스트 분할을 한 번 실행한다(D-048·D-080 방식). 결과는 교차 검토한다.
 5. 결론의 범위는 "확보한 출처의 표기 패턴 안에서"로 한정한다.
 
-**5. 역할**
+**5. 파일과 점검 (D-104, 준비됨)**
+
+| 파일 | 커밋 | 내용 |
+|---|---|---|
+| `data/reference/bom/manifest.yaml` | 함 | 출처 목록(종류, 발행 주체, 제목, 판본, URL, 이용 조건, 원본 sha256, `verified_by`) |
+| `data/reference/bom/<원본 파일>` | 안 함 | 공개 문서·업무 자료 원본 |
+| `data/reference/bom/raw-examples.yaml` | 안 함 | 원문 표기 행(출처, 위치, 원문, 관련 패턴) |
+| `data/reference/bom-notation-patterns.yaml` | 함 | 패턴 목록(유형, 설명, 출처 위치, `verified_by`). 원문 필드는 거부된다 |
+
+- `uv run python -m spec_bridge.bom.notation`이 형식과 출처 참조를 검사하고, 서명된 항목만 세어 착수 조건까지 남은 것을 보인다.
+- `.gitignore`가 `data/reference/bom/`의 manifest 밖 파일을 모두 막는다. 공개 묶음 검사와 `tests/test_no_originals.py`가 BOM 원본의 sha256도 찾는다.
+
+**6. 역할**
 
 - 사용자: 출처 선택·확보, 사용 권한 확인, 패턴 행 `verified_by` 서명, 착수 조건 승인.
 - 헬퍼: manifest·패턴 목록 형식, 원문 미커밋 검사(공개 묶음 검사에 `data/reference/bom/` 해시 추가), 생성기·실험 코드. 표기 패턴을 기억으로 채우지 않는다.

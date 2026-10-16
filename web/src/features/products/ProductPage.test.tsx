@@ -72,6 +72,8 @@ const product: ProductView = {
       },
     },
   ],
+  components: [],
+  parents: [],
 };
 
 describe("ProductPage", () => {
@@ -103,5 +105,40 @@ describe("ProductPage", () => {
     );
     renderWithQuery(<ProductPage productId="NOPE" onBack={() => {}} />);
     expect(await screen.findByText("제품을 불러오지 못했습니다")).toBeInTheDocument();
+  });
+
+  it("lists the components with their BOM quantity and the parents (D-103)", async () => {
+    const withLinks: ProductView = {
+      ...product,
+      components: [
+        {
+          product_id: "REG-TC-1",
+          class_id: "Turbocharger",
+          model_designation: "VX021-1",
+          quantity: 2,
+        },
+      ],
+      parents: [
+        {
+          product_id: "REG-2S-1",
+          class_id: "TwoStrokeMainEngine",
+          model_designation: "VX001-1",
+          quantity: null,
+        },
+      ],
+    };
+    server.use(http.get("*/api/products/REG-UP-1", () => HttpResponse.json(withLinks)));
+    renderWithQuery(<ProductPage productId="REG-UP-1" onBack={() => {}} />);
+    const parts = await screen.findByRole("region", { name: "구성품" });
+    expect(within(parts).getByRole("link", { name: /VX021-1/ })).toHaveAttribute(
+      "href",
+      "#/products/REG-TC-1",
+    );
+    expect(within(parts).getByText("수량 2")).toBeInTheDocument();
+    const up = screen.getByRole("region", { name: "상위 제품" });
+    expect(within(up).getByRole("link", { name: /VX001-1/ })).toHaveAttribute(
+      "href",
+      "#/products/REG-2S-1",
+    );
   });
 });

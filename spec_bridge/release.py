@@ -10,8 +10,9 @@ the result, archives included.
 - export: the files git would commit (tracked and unignored), minus EXCLUDED, copied to an
   empty folder. The existing repository, its history and data/backups stay as they are.
 - scan: in every file, and inside every .tgz/.zip member: a home directory path, a
-  reference document (manifest sha256), an environment file, a secret key pattern, Python
-  caches, macOS metadata, and document files outside the synthetic inputs.
+  reference document (manifest sha256, BOM notation sources included), an environment
+  file, a secret key pattern, Python caches, macOS metadata, and document files outside
+  the synthetic inputs.
 """
 
 import hashlib
@@ -55,6 +56,16 @@ DOCUMENT_SUFFIXES = (".pdf", ".docx", ".xlsx", ".doc", ".xls", ".pptx")
 HOMES = (b"/" + b"Users/", b"/" + b"home/")  # spelled apart so this file does not match itself
 SECRETS = re.compile(rb"sk-[A-Za-z0-9_-]{20,}|-----BEGIN [A-Z ]*PRIVATE KEY-----")
 MANIFEST = ROOT / "data/reference/manifest.yaml"
+BOM_MANIFEST = ROOT / "data/reference/bom/manifest.yaml"  # BOM notation sources (D-104)
+
+
+def reference_hashes(manifest: Path = MANIFEST, bom: Path = BOM_MANIFEST) -> set[str]:
+    """sha256 of every original the project reads but must not publish."""
+    found = {d["sha256"] for d in yaml.safe_load(manifest.read_text())["documents"]}
+    if bom.is_file():
+        sources = yaml.safe_load(bom.read_text()).get("sources") or []
+        found |= {s["sha256"] for s in sources if s.get("sha256")}
+    return found
 
 
 # bundle ------------------------------------------------------------------------------------
@@ -151,7 +162,7 @@ def _problems(rel: str, name: str, data: bytes, references: set[str]) -> list[st
 
 
 def scan(folder: Path) -> list[str]:
-    references = {d["sha256"] for d in yaml.safe_load(MANIFEST.read_text())["documents"]}
+    references = reference_hashes()
     found: list[str] = []
     for path in sorted(p for p in folder.rglob("*") if p.is_file()):
         rel = path.relative_to(folder).as_posix()

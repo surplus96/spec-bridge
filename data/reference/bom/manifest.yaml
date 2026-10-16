@@ -1,0 +1,31 @@
+# BOM 표기 데이터 출처 manifest (G5 후속 실험용, D-102·D-104)
+# 절차: docs/dataset-plan.md 4-5. 점검: uv run python -m spec_bridge.bom.notation
+#
+# - 이 파일만 커밋한다. 같은 폴더의 원본(PDF·Excel·이미지 등)과 raw-examples.yaml은
+#   커밋하지 않는다(.gitignore). 공개 묶음 검사가 원본 sha256을 찾는다.
+# - 출처를 고르고 확보하는 일, verified_by 서명은 사용자만 한다(H3).
+# - kind: public_document(공개 문서) | work_material(업무 자료, 사용 권한 확인·비식별화)
+#         | user_observed(사용자 직접 기록, 원본 없음, sha256 null)
+#
+# 항목 형식:
+#   - id: BOMSRC-01
+#     kind: public_document
+#     publisher: <제조사 또는 발행 기관; 업무 자료는 de-identified>
+#     title: <문서 제목>
+#     edition: <판본·문서 번호>
+#     source_url: <공개 문서 URL>
+#     retrieved_at: <받은 날짜>
+#     license_note: <이용 조건 요약>
+#     file: <이 폴더의 원본 파일 이름>
+#     sha256: <원본의 sha256>
+#     verified_by: null
+#
+# raw-examples.yaml(로컬 전용) 형식:
+#   rows:
+#     - source_id: BOMSRC-01
+#       location: <쪽·시트·행>
+#       raw_text: <원문 표기 그대로>
+#       pattern_ids: [PAT-01]
+
+schema_version: 1
+sources: []

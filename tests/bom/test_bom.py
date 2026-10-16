@@ -10,7 +10,7 @@ import pytest
 import yaml
 
 from spec_bridge.bom.__main__ import main
-from spec_bridge.bom.linker import apply, plan
+from spec_bridge.bom.linker import Pick, apply, candidates, plan, plan_key
 from spec_bridge.bom.reader import BomDocument, BomError, read_bom
 from spec_bridge.ontology.loader import Ontology
 from spec_bridge.registry.store import RegistryStore
@@ -220,3 +220,67 @@ def test_the_command_previews_unless_asked_to_apply(
 def test_a_bom_document_is_a_plain_model() -> None:
     bom = read_bom(BOMS / "BOM-001.md")
     assert BomDocument.model_validate(bom.model_dump()) == bom
+
+
+# step 2 (D-103): reviewer picks, candidates, a fingerprint for stale previews ---------
+def typo_bom(tmp_path: Path) -> tuple[Path, dict[str, Any]]:
+    pump = answer("BOM-001")["items"][1]
+    return edited(
+        BOMS / "BOM-001.md", tmp_path, f"| {pump['model_designation']} |", "| VX999-999 |"
+    ), pump
+
+
+def test_a_pending_row_lists_the_products_of_its_class_as_candidates(
+    dev: RegistryStore, onto: Ontology, tmp_path: Path
+) -> None:
+    path, pump = typo_bom(tmp_path)
+    row = plan(dev, onto, read_bom(path)).rows[1]
+    found = candidates(dev, onto, row.row)
+    assert pump["product_id"] in [c["product_id"] for c in found]
+    assert {c["class_id"] for c in found} == {pump["class"]}
+
+
+def test_a_reviewer_pick_links_a_pending_row_and_is_marked_as_the_reviewers(
+    dev: RegistryStore, onto: Ontology, tmp_path: Path
+) -> None:
+    path, pump = typo_bom(tmp_path)
+    line = plan(dev, onto, read_bom(path)).rows[1].row.line
+    pick = Pick(line=line, product_id=pump["product_id"], reason="model typo in the BOM")
+    result = plan(dev, onto, read_bom(path), [pick])
+    row = result.rows[1]
+    assert (row.status, row.product_id, row.decided_by) == ("new", pump["product_id"], "reviewer")
+    assert row.reason == "model typo in the BOM"
+    assert [r.decided_by for r in result.rows] == ["rule", "reviewer", "rule"]
+    assert apply(dev, result, "reviewer", {"bom_id": "B1"}) == 3
+    product = dev.product(result.root_id)
+    assert product is not None
+    (event,) = [e for e in product["events"] if e["event_type"] == "bom_linked"]
+    assert event["payload"]["bom_id"] == "B1"
+    assert event["payload"]["rows"][1]["decided_by"] == "reviewer"
+
+
+@pytest.mark.parametrize("problem", ["other class", "unknown product", "found row", "no line"])
+def test_a_pick_that_does_not_fit_is_refused(
+    problem: str, dev: RegistryStore, onto: Ontology, tmp_path: Path
+) -> None:
+    path, pump = typo_bom(tmp_path)
+    rows = plan(dev, onto, read_bom(path)).rows
+    sep = answer("BOM-001")["items"][2]
+    pick = {
+        "other class": Pick(line=rows[1].row.line, product_id=sep["product_id"], reason="x"),
+        "unknown product": Pick(line=rows[1].row.line, product_id="REG-NONE", reason="x"),
+        "found row": Pick(line=rows[0].row.line, product_id=pump["product_id"], reason="x"),
+        "no line": Pick(line=999, product_id=pump["product_id"], reason="x"),
+    }[problem]
+    with pytest.raises(BomError):
+        plan(dev, onto, read_bom(path), [pick])
+
+
+def test_the_fingerprint_changes_when_the_registry_changes(
+    dev: RegistryStore, onto: Ontology
+) -> None:
+    bom = read_bom(BOMS / "BOM-001.md")
+    first = plan(dev, onto, bom)
+    assert plan_key(plan(dev, onto, bom)) == plan_key(first)  # same registry, same plan
+    apply(dev, first, "reviewer")
+    assert plan_key(plan(dev, onto, bom)) != plan_key(first)  # new -> existing

@@ -4,6 +4,77 @@
  */
 
 export interface paths {
+    "/api/boms": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Upload Bom
+         * @description Unsupported type: 415. Empty: 400. Unreadable or unknown root: 422.
+         */
+        post: operations["upload_bom_api_boms_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/boms/{bom_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Get Bom */
+        get: operations["get_bom_api_boms__bom_id__get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/boms/{bom_id}/apply": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Apply Bom */
+        post: operations["apply_bom_api_boms__bom_id__apply_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/boms/{bom_id}/preview": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Preview Bom */
+        post: operations["preview_bom_api_boms__bom_id__preview_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/display": {
         parameters: {
             query?: never;
@@ -201,6 +272,16 @@ export interface components {
             /** Revision */
             revision: number;
         };
+        /** ApplyRequest */
+        ApplyRequest: {
+            /**
+             * Picks
+             * @default []
+             */
+            picks: components["schemas"]["Pick"][];
+            /** Plan Key */
+            plan_key: string;
+        };
         /** BlockView */
         BlockView: {
             /** Index */
@@ -218,10 +299,78 @@ export interface components {
             /** File */
             file: string;
         };
+        /** Body_upload_bom_api_boms_post */
+        Body_upload_bom_api_boms_post: {
+            /** File */
+            file: string;
+        };
         /** Body_upload_documents_post */
         Body_upload_documents_post: {
             /** File */
             file: string;
+        };
+        /** BomCandidate */
+        BomCandidate: {
+            /** Class Id */
+            class_id: string;
+            /** Maker Name */
+            maker_name?: string | null;
+            /** Model Designation */
+            model_designation: string;
+            /** Product Id */
+            product_id: string;
+        };
+        /** BomRowView */
+        BomRowView: {
+            /**
+             * Candidates
+             * @default []
+             */
+            candidates: components["schemas"]["BomCandidate"][];
+            /** Component */
+            component: string;
+            /**
+             * Decided By
+             * @default rule
+             * @enum {string}
+             */
+            decided_by: "rule" | "reviewer";
+            /** Line */
+            line: number;
+            /** Maker */
+            maker: string;
+            /** Model */
+            model: string;
+            /** Product Id */
+            product_id?: string | null;
+            /** Quantity */
+            quantity: number;
+            /** Reason */
+            reason?: string | null;
+            /**
+             * Status
+             * @enum {string}
+             */
+            status: "new" | "existing" | "pending";
+        };
+        /** BomView */
+        BomView: {
+            /** Added */
+            added?: number | null;
+            /** Bom Id */
+            bom_id: string;
+            /** File Name */
+            file_name: string;
+            /** Not In Bom */
+            not_in_bom: string[];
+            /** Plan Key */
+            plan_key: string;
+            /** Root Id */
+            root_id: string;
+            /** Rows */
+            rows: components["schemas"]["BomRowView"][];
+            /** Sha256 */
+            sha256: string;
         };
         /** Cancel */
         Cancel: {
@@ -504,6 +653,26 @@ export interface components {
             /** Rule Ref */
             rule_ref: string;
         };
+        /**
+         * Pick
+         * @description A reviewer's product for a pending row (D-103).
+         */
+        Pick: {
+            /** Line */
+            line: number;
+            /** Product Id */
+            product_id: string;
+            /** Reason */
+            reason: string;
+        };
+        /** PreviewRequest */
+        PreviewRequest: {
+            /**
+             * Picks
+             * @default []
+             */
+            picks: components["schemas"]["Pick"][];
+        };
         /** ProductEdit */
         ProductEdit: {
             /** Actor */
@@ -578,10 +747,29 @@ export interface components {
             /** Value */
             value: unknown;
         };
+        /**
+         * ProductLink
+         * @description A has_component neighbour; quantity from the last BOM that listed it, if any.
+         */
+        ProductLink: {
+            /** Class Id */
+            class_id: string;
+            /** Model Designation */
+            model_designation: string;
+            /** Product Id */
+            product_id: string;
+            /** Quantity */
+            quantity?: number | null;
+        };
         /** ProductView */
         ProductView: {
             /** Class Id */
             class_id: string;
+            /**
+             * Components
+             * @default []
+             */
+            components: components["schemas"]["ProductLink"][];
             /** Created At */
             created_at: string;
             /** Edits */
@@ -598,6 +786,11 @@ export interface components {
             model_designation: string;
             /** Origin */
             origin: string;
+            /**
+             * Parents
+             * @default []
+             */
+            parents: components["schemas"]["ProductLink"][];
             /** Product Id */
             product_id: string;
         };
@@ -838,6 +1031,140 @@ export interface components {
 }
 export type $defs = Record<string, never>;
 export interface operations {
+    upload_bom_api_boms_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "multipart/form-data": components["schemas"]["Body_upload_bom_api_boms_post"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["BomView"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    get_bom_api_boms__bom_id__get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                bom_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["BomView"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    apply_bom_api_boms__bom_id__apply_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                bom_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["ApplyRequest"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["BomView"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    preview_bom_api_boms__bom_id__preview_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                bom_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["PreviewRequest"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["BomView"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
     display_labels_api_display_get: {
         parameters: {
             query?: never;

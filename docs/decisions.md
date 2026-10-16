@@ -1316,3 +1316,31 @@ E2(질의 재작성)는 D-047에서 제외했다. E3(Self-RAG)는 E1 대비 같�
   - 옮기는 것은 값이 아니라 표기 패턴이다. 착수 조건(출처 3곳·행 30개·패턴 유형 5개)은 제안이며, 사용자 승인 시 확정한다.
   - 생성기는 수집한 패턴만 쓰고, 분할은 출처 단위로 한다.
 - **다음**: 공개 저장소 반영 → BOM 2단계(사용자 지시).
+
+## D-103 · 2026-10-16 · BOM 2단계: 검토 화면 연동
+
+- **승인 근거**: 사용자 "공개 저장소 반영 후 2단계 진행", 결정 "권장안으로 모두 진행"(결정 1~7 모두 권장안).
+- **결정**: [설계 문서](superpowers/specs/2026-10-16-bom-step2-design.md).
+  - 새 BOM 화면에서 업로드 → 미리보기 → 적용한다. 적용할 때 다시 계획하고, 미리보기와 다르면 거부한다(`plan_key`).
+  - 검토 대기 행은 담당자가 같은 클래스의 등록 제품을 골라 사유와 함께 지정한다(`decided_by: reviewer`). 등록되지 않은 제품은 만들지 않는다.
+  - 제품 상세에 구성품(수량)과 상위 제품을 보인다. 업로드 파일은 앱 폴더에 두고 해시를 적용 기록에 남긴다.
+- **구현**:
+  - `spec_bridge/api/boms.py`(새 라우터). `bom/linker.py`의 `Pick`·`candidates`·`plan_key`, `apply(extra)`. `RegistryStore.parents_of`·`products_in_classes`, `ProductView.components`·`parents`.
+  - 웹 `features/boms/BomPage.tsx`(`#/boms`), 제품 상세의 구성품·상위 제품.
+  - 저장소 schema는 바꾸지 않았다.
+- **테스트**: Python 11개(지정·후보·지문 7, API 4), 웹 5개(BOM 화면 4, 제품 상세 1).
+- **검사**: pytest 842 passed, ruff·mypy(161파일) 깨끗, 웹 40 passed·build, `freeze verify`·`manifest check` 일치.
+- **화면 확인(사용자, 2026-10-16)**: 확인용 BOM(`var/bom-check-input/BOM-DEMO.md`, 커밋 안 함, 상위 REG-2S-002, 펌프 모델 오타 1행)으로 미리보기(추가·검토 대기·추가) → 담당자 지정 → 적용(관계 3개) → 제품 상세의 구성품·이력·상위 제품까지 확인 완료. 문제 없음.
+
+## D-104 · 2026-10-16 · BOM 표기 데이터 수집 준비(형식·점검·원본 차단)
+
+- **승인 근거**: 사용자 "실제 BOM 표기 데이터 확보에 대한 기록 내용 설명부터 이어서 진행해줘"(D-102 절차의 헬퍼 몫).
+- **조치**:
+  - 빈 양식을 커밋했다: `data/reference/bom/manifest.yaml`(출처), `data/reference/bom-notation-patterns.yaml`(패턴). 로컬 전용 `raw-examples.yaml` 형식은 manifest 머리에 적었다.
+  - `.gitignore`: `data/reference/bom/`에서는 manifest만 커밋한다.
+  - `spec_bridge/release.py`의 `reference_hashes()`: 참고 문서와 BOM 원본의 sha256을 함께 모은다. 공개 묶음 검사와 `tests/test_no_originals.py`가 같은 함수를 쓴다.
+  - `spec_bridge/bom/notation.py`: 형식 검사(출처 id 중복, 공개·업무 자료의 sha256 필수, 모르는 출처 참조, 패턴 목록의 원문 필드 거부), 서명된 항목 집계, 착수 조건 대비 남은 것, 일반/단일 출처 패턴 구분.
+- **하지 않은 것**: 출처·패턴을 채우지 않았다(H3). 테스트 픽스처는 자리표시 문자열만 쓴다.
+- **테스트**: 표기 데이터 9개, 원본 차단 2개.
+- **현재 점검 결과**: `ready: false`(출처 0, 행 0, 패턴 유형 0).
+- **착수 조건 확정(사용자, 2026-10-16)**: "착수 조건도 확정". 서명된 출처 3곳 이상(발행 주체 2곳 이상), 원문 행 30개 이상, 패턴 유형 5개 이상. 출처 2곳 이상에서 관찰된 패턴은 일반 패턴, 1곳은 단일 출처 패턴으로 구분한다. 충족하면 G5 후속 실험의 재개 여부를 다시 정한다(D-102).

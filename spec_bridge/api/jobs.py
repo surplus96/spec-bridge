@@ -7,7 +7,8 @@
     GET  /api/jobs/{id}/source        the uploaded file (PDF viewer)
     GET  /api/jobs/{id}/blocks        parsed blocks with their places (highlights)
     GET  /api/jobs/{id}/supplement    what the sender must add (D-066)
-    GET  /api/products/{id}           a registered product: facts, evidence, edits, events
+    GET  /api/products/{id}           a registered product: facts, evidence, edits, events,
+                                      its components and parents (has_component, D-103)
 
 One worker runs graph work (the local model serves one request at a time). A command is
 checked here against the waiting prompt first (409 with the reason), so the screen hears
@@ -129,6 +130,15 @@ class ProductEvent(StrictModel):
     payload: dict[str, Any]
 
 
+class ProductLink(StrictModel):
+    """A has_component neighbour; quantity from the last BOM that listed it, if any."""
+
+    product_id: str
+    class_id: str
+    model_designation: str
+    quantity: int | None = None
+
+
 class ProductView(StrictModel):
     product_id: str
     class_id: str
@@ -140,6 +150,8 @@ class ProductView(StrictModel):
     facts: list[ProductFact]
     edits: list[ProductEdit]
     events: list[ProductEvent]
+    components: list[ProductLink] = []
+    parents: list[ProductLink] = []
 
 
 class JobConflict(Exception):
@@ -457,7 +469,36 @@ def get_product(product_id: str, jobs: JobsDep) -> ProductView:
     edits = {e["edit_id"]: e for e in product["edits"]}
     for fact in product["facts"]:
         fact["evidence_text"] = evidence_text(fact, edits)
-    return ProductView.model_validate(product)
+    with jobs.registry.lock:
+        components, parents = product_links(jobs.registry.store, product_id, product["events"])
+    return ProductView.model_validate(product | {"components": components, "parents": parents})
+
+
+def product_links(
+    store: RegistryStore, product_id: str, events: list[dict[str, Any]]
+) -> tuple[list[ProductLink], list[ProductLink]]:
+    """Components (with the quantity of the last BOM applied to this product) and parents."""
+    quantities: dict[str, int] = {}
+    for event in events:  # oldest first: a later BOM wins
+        if event["event_type"] == "bom_linked":
+            for row in event["payload"].get("rows", []):
+                if row.get("product_id"):
+                    quantities[row["product_id"]] = row["quantity"]
+
+    def link(other: str, quantity: int | None) -> ProductLink:
+        record = store.product(other) or {}
+        return ProductLink(
+            product_id=other,
+            class_id=record.get("class_id", ""),
+            model_designation=record.get("model_designation", ""),
+            quantity=quantity,
+        )
+
+    components = [
+        link(c, quantities.get(c)) for c in store.relations_of(product_id, "has_component")
+    ]
+    parents = [link(p, None) for p in store.parents_of(product_id, "has_component")]
+    return components, parents
 
 
 def evidence_text(fact: dict[str, Any], edits: dict[str, dict[str, Any]]) -> str:

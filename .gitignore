@@ -188,6 +188,9 @@ node_modules/
 
 # Reference documents are copyrighted originals: kept locally, never committed (D-094)
 data/reference/**/*.pdf
+# BOM notation sources (D-104): only the manifest is committed, never originals or raw rows
+data/reference/bom/*
+!data/reference/bom/manifest.yaml
 .DS_Store
 
 # Re-scoring the committed W6 runs writes next to them; keep only the committed files

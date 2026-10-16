@@ -15,10 +15,12 @@ import hashlib
 import shutil
 import subprocess
 import tarfile
+from pathlib import Path
 
 import pytest
 import yaml
 
+from spec_bridge.release import reference_hashes
 from tests.conftest import ROOT
 
 MANIFEST = ROOT / "data/reference/manifest.yaml"
@@ -39,7 +41,7 @@ def tracked() -> list[str]:
 
 
 def test_no_tracked_file_is_a_reference_document() -> None:
-    references = {d["sha256"] for d in yaml.safe_load(MANIFEST.read_text())["documents"]}
+    references = reference_hashes()  # project guides and BOM notation sources (D-104)
     assert len(references) == 12
     hits = []
     for path in tracked():
@@ -79,3 +81,21 @@ def test_no_tracked_text_names_a_home_directory() -> None:
         if any(home in text for home in HOMES):
             found.append(path)
     assert found == []
+
+
+def test_only_the_manifest_is_tracked_among_the_bom_notation_sources() -> None:
+    """D-104: originals and raw rows in data/reference/bom stay local."""
+    assert [p for p in tracked() if p.startswith("data/reference/bom/")] == [
+        "data/reference/bom/manifest.yaml"
+    ]
+
+
+def test_bom_source_hashes_join_the_reference_hashes(tmp_path: Path) -> None:
+    bom = tmp_path / "manifest.yaml"
+    bom.write_text(
+        yaml.safe_dump({"schema_version": 1, "sources": [{"sha256": "ab" * 32}, {"sha256": None}]})
+    )
+    assert "ab" * 32 in reference_hashes(MANIFEST, bom)
+    assert reference_hashes(MANIFEST, tmp_path / "absent.yaml") == reference_hashes(
+        MANIFEST, MANIFEST.parent / "absent.yaml"
+    )

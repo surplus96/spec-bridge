@@ -298,6 +298,26 @@ class RegistryStore:
         )
         return [str(r[0]) for r in rows]
 
+    def parents_of(self, product_id: str, relation_id: str) -> list[str]:
+        rows = self.conn.execute(
+            "SELECT product_id FROM relations WHERE target_product_id = ? AND relation_id = ?"
+            " ORDER BY product_id",
+            (product_id, relation_id),
+        )
+        return [str(r[0]) for r in rows]
+
+    def products_in_classes(self, classes: list[str]) -> list[dict[str, Any]]:
+        """Products of the given classes with their maker's name, by product id."""
+        marks = ", ".join("?" for _ in classes) or "NULL"
+        rows = self.conn.execute(
+            "SELECT p.product_id, p.class_id, p.model_designation, m.name FROM products p"
+            f" JOIN manufacturers m ON m.maker_id = p.maker_id WHERE p.class_id IN ({marks})"
+            " ORDER BY p.product_id",
+            classes,
+        )
+        keys = ("product_id", "class_id", "model_designation", "maker_name")
+        return [dict(zip(keys, r, strict=True)) for r in rows]
+
     def add_components(
         self, product_id: str, targets: list[str], actor: str, payload: dict[str, Any]
     ) -> int:

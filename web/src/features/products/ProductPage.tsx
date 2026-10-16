@@ -11,6 +11,7 @@ import { Badge } from "../../ui/Badge";
 
 type Fact = components["schemas"]["ProductFact"];
 type Event = components["schemas"]["ProductEvent"];
+type Link = components["schemas"]["ProductLink"];
 
 const EVIDENCE = {
   observed: { label: "원문", tone: "ref", Icon: FileText },
@@ -22,6 +23,7 @@ const EVENTS: Record<string, string> = {
   seed_import: "기존 등록 목록에서 적재",
   registered: "신규 등록",
   linked_document: "문서 연결",
+  bom_linked: "BOM 구성품 연결",
 };
 
 export function ProductPage({ productId, onBack }: { productId: string; onBack: () => void }) {
@@ -155,6 +157,9 @@ export function ProductPage({ productId, onBack }: { productId: string; onBack: 
           </section>
         )}
 
+        <Links title="구성품" links={p.components ?? []} quantity />
+        <Links title="상위 제품" links={p.parents ?? []} />
+
         <section className="rounded-lg border bg-white">
           <h2 className="border-b px-4 py-2 text-sm font-semibold text-gray-700">이력</h2>
           <ol className="space-y-3 px-4 py-3 text-sm">
@@ -168,6 +173,30 @@ export function ProductPage({ productId, onBack }: { productId: string; onBack: 
         </section>
       </div>
     </main>
+  );
+}
+
+/** has_component neighbours (D-103): supply-scope inclusion, not compatibility (D-014). */
+function Links({ title, links, quantity }: { title: string; links: Link[]; quantity?: boolean }) {
+  const labels = useLabels();
+  if (links.length === 0) return null;
+  return (
+    <section aria-label={title} className="rounded-lg border bg-white">
+      <h2 className="border-b px-4 py-2 text-sm font-semibold text-gray-700">{title}</h2>
+      <ul className="divide-y text-sm">
+        {links.map((l) => (
+          <li key={l.product_id} className="flex items-baseline gap-3 px-4 py-2">
+            <a className="text-blue-700" href={`#/products/${l.product_id}`}>
+              {l.model_designation} <span className="font-mono text-xs">({l.product_id})</span>
+            </a>
+            <span className="text-gray-600">{className(labels, l.class_id)}</span>
+            {quantity && l.quantity != null && (
+              <span className="text-gray-500">수량 {l.quantity}</span>
+            )}
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
 

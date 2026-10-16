@@ -29,6 +29,28 @@
         "title": "Acknowledge",
         "type": "object"
       },
+      "ApplyRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "picks": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/Pick"
+            },
+            "title": "Picks",
+            "type": "array"
+          },
+          "plan_key": {
+            "title": "Plan Key",
+            "type": "string"
+          }
+        },
+        "required": [
+          "plan_key"
+        ],
+        "title": "ApplyRequest",
+        "type": "object"
+      },
       "BlockView": {
         "additionalProperties": false,
         "properties": {
@@ -83,6 +105,20 @@
         "title": "Body_create_job_api_jobs_post",
         "type": "object"
       },
+      "Body_upload_bom_api_boms_post": {
+        "properties": {
+          "file": {
+            "contentMediaType": "application/octet-stream",
+            "title": "File",
+            "type": "string"
+          }
+        },
+        "required": [
+          "file"
+        ],
+        "title": "Body_upload_bom_api_boms_post",
+        "type": "object"
+      },
       "Body_upload_documents_post": {
         "properties": {
           "file": {
@@ -95,6 +131,185 @@
           "file"
         ],
         "title": "Body_upload_documents_post",
+        "type": "object"
+      },
+      "BomCandidate": {
+        "additionalProperties": false,
+        "properties": {
+          "class_id": {
+            "title": "Class Id",
+            "type": "string"
+          },
+          "maker_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Maker Name"
+          },
+          "model_designation": {
+            "title": "Model Designation",
+            "type": "string"
+          },
+          "product_id": {
+            "title": "Product Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "product_id",
+          "class_id",
+          "model_designation"
+        ],
+        "title": "BomCandidate",
+        "type": "object"
+      },
+      "BomRowView": {
+        "additionalProperties": false,
+        "properties": {
+          "candidates": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/BomCandidate"
+            },
+            "title": "Candidates",
+            "type": "array"
+          },
+          "component": {
+            "title": "Component",
+            "type": "string"
+          },
+          "decided_by": {
+            "default": "rule",
+            "enum": [
+              "rule",
+              "reviewer"
+            ],
+            "title": "Decided By",
+            "type": "string"
+          },
+          "line": {
+            "title": "Line",
+            "type": "integer"
+          },
+          "maker": {
+            "title": "Maker",
+            "type": "string"
+          },
+          "model": {
+            "title": "Model",
+            "type": "string"
+          },
+          "product_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Product Id"
+          },
+          "quantity": {
+            "title": "Quantity",
+            "type": "integer"
+          },
+          "reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reason"
+          },
+          "status": {
+            "enum": [
+              "new",
+              "existing",
+              "pending"
+            ],
+            "title": "Status",
+            "type": "string"
+          }
+        },
+        "required": [
+          "component",
+          "model",
+          "maker",
+          "quantity",
+          "line",
+          "status"
+        ],
+        "title": "BomRowView",
+        "type": "object"
+      },
+      "BomView": {
+        "additionalProperties": false,
+        "properties": {
+          "added": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Added"
+          },
+          "bom_id": {
+            "title": "Bom Id",
+            "type": "string"
+          },
+          "file_name": {
+            "title": "File Name",
+            "type": "string"
+          },
+          "not_in_bom": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Not In Bom",
+            "type": "array"
+          },
+          "plan_key": {
+            "title": "Plan Key",
+            "type": "string"
+          },
+          "root_id": {
+            "title": "Root Id",
+            "type": "string"
+          },
+          "rows": {
+            "items": {
+              "$ref": "#/components/schemas/BomRowView"
+            },
+            "title": "Rows",
+            "type": "array"
+          },
+          "sha256": {
+            "title": "Sha256",
+            "type": "string"
+          }
+        },
+        "required": [
+          "bom_id",
+          "file_name",
+          "sha256",
+          "root_id",
+          "rows",
+          "not_in_bom",
+          "plan_key"
+        ],
+        "title": "BomView",
         "type": "object"
       },
       "Cancel": {
@@ -945,6 +1160,47 @@
         "title": "MissingItem",
         "type": "object"
       },
+      "Pick": {
+        "additionalProperties": false,
+        "description": "A reviewer's product for a pending row (D-103).",
+        "properties": {
+          "line": {
+            "title": "Line",
+            "type": "integer"
+          },
+          "product_id": {
+            "title": "Product Id",
+            "type": "string"
+          },
+          "reason": {
+            "minLength": 1,
+            "title": "Reason",
+            "type": "string"
+          }
+        },
+        "required": [
+          "line",
+          "product_id",
+          "reason"
+        ],
+        "title": "Pick",
+        "type": "object"
+      },
+      "PreviewRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "picks": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/Pick"
+            },
+            "title": "Picks",
+            "type": "array"
+          }
+        },
+        "title": "PreviewRequest",
+        "type": "object"
+      },
       "ProductEdit": {
         "additionalProperties": false,
         "properties": {
@@ -1123,12 +1379,56 @@
         "title": "ProductFact",
         "type": "object"
       },
+      "ProductLink": {
+        "additionalProperties": false,
+        "description": "A has_component neighbour; quantity from the last BOM that listed it, if any.",
+        "properties": {
+          "class_id": {
+            "title": "Class Id",
+            "type": "string"
+          },
+          "model_designation": {
+            "title": "Model Designation",
+            "type": "string"
+          },
+          "product_id": {
+            "title": "Product Id",
+            "type": "string"
+          },
+          "quantity": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Quantity"
+          }
+        },
+        "required": [
+          "product_id",
+          "class_id",
+          "model_designation"
+        ],
+        "title": "ProductLink",
+        "type": "object"
+      },
       "ProductView": {
         "additionalProperties": false,
         "properties": {
           "class_id": {
             "title": "Class Id",
             "type": "string"
+          },
+          "components": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/ProductLink"
+            },
+            "title": "Components",
+            "type": "array"
           },
           "created_at": {
             "title": "Created At",
@@ -1177,6 +1477,14 @@
           "origin": {
             "title": "Origin",
             "type": "string"
+          },
+          "parents": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/ProductLink"
+            },
+            "title": "Parents",
+            "type": "array"
           },
           "product_id": {
             "title": "Product Id",
@@ -1797,6 +2105,182 @@
   },
   "openapi": "3.1.0",
   "paths": {
+    "/api/boms": {
+      "post": {
+        "description": "Unsupported type: 415. Empty: 400. Unreadable or unknown root: 422.",
+        "operationId": "upload_bom_api_boms_post",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_upload_bom_api_boms_post"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BomView"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Upload Bom"
+      }
+    },
+    "/api/boms/{bom_id}": {
+      "get": {
+        "operationId": "get_bom_api_boms__bom_id__get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "bom_id",
+            "required": true,
+            "schema": {
+              "title": "Bom Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BomView"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Get Bom"
+      }
+    },
+    "/api/boms/{bom_id}/apply": {
+      "post": {
+        "operationId": "apply_bom_api_boms__bom_id__apply_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "bom_id",
+            "required": true,
+            "schema": {
+              "title": "Bom Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ApplyRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BomView"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Apply Bom"
+      }
+    },
+    "/api/boms/{bom_id}/preview": {
+      "post": {
+        "operationId": "preview_bom_api_boms__bom_id__preview_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "bom_id",
+            "required": true,
+            "schema": {
+              "title": "Bom Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PreviewRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BomView"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Preview Bom"
+      }
+    },
     "/api/display": {
       "get": {
         "description": "Screen names for ontology ids (D-074); the UI falls back to the id.",

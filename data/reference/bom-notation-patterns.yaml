@@ -1,0 +1,19 @@
+# BOM 표기 패턴 목록 (G5 후속 실험용, D-102·D-104)
+# 절차: docs/dataset-plan.md 4-5. 점검: uv run python -m spec_bridge.bom.notation
+#
+# - 수집한 출처(data/reference/bom/manifest.yaml)에서 관찰한 패턴만 적는다. 헬퍼가 기억으로
+#   패턴을 만들지 않는다(H3). verified_by는 사용자만 채운다.
+# - 원문 표기는 여기에 적지 않는다(raw_example 필드는 거부된다). 원문은 로컬 raw-examples.yaml에 둔다.
+# - pattern_type 이름은 수집한 행을 보고 정한다. 미리 정한 목록은 없다.
+#
+# 항목 형식:
+#   - id: PAT-01
+#     pattern_type: <snake_case 이름>
+#     description: <프로젝트 말로 쓴 설명, 원문 문장 복제 금지>
+#     source_refs:
+#       - source_id: BOMSRC-01
+#         location: <쪽·시트·행>
+#     verified_by: null
+
+schema_version: 1
+patterns: []
