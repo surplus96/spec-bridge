@@ -1,0 +1,1902 @@
+{
+ "origin": "synthetic",
+ "decision": "D-109",
+ "split": "dev",
+ "sources": [
+  "BOMSRC-01",
+  "BOMSRC-02",
+  "BOMSRC-03",
+  "BOMSRC-04"
+ ],
+ "rows": [
+  {
+   "row_id": "dev-P000",
+   "split": "dev",
+   "component": "TwoStrokeMainEngine",
+   "model": "VX001/001, 570 mm",
+   "maker": "SGDW-20261007-A",
+   "quantity_text": "(2)",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-2S-001",
+   "patterns": [
+    "PAT-02",
+    "PAT-04",
+    "PAT-05",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P001",
+   "split": "dev",
+   "component": "TwoStrokeMainEngine",
+   "model": "VX001.002, 570 mm",
+   "maker": "SGDW-20261007-A",
+   "quantity_text": "(1)",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-2S-002",
+   "patterns": [
+    "PAT-02",
+    "PAT-04",
+    "PAT-05",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P002",
+   "split": "dev",
+   "component": "TwoStrokeMainEngine",
+   "model": "VX001-003, 570 mm",
+   "maker": "SGDW-20261007-A Synthetic oWrks",
+   "quantity_text": "2",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-2S-003",
+   "patterns": [
+    "PAT-03",
+    "PAT-04",
+    "PAT-06"
+   ]
+  },
+  {
+   "row_id": "dev-P003",
+   "split": "dev",
+   "component": "TwoStrokeMainEngine",
+   "model": "VX001/004",
+   "maker": "SGDW-20261007-A Synthetic Worsk",
+   "quantity_text": "(2)",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-2S-004",
+   "patterns": [
+    "PAT-02",
+    "PAT-06",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P004",
+   "split": "dev",
+   "component": "TwoStrokeMainEngine",
+   "model": "VX001-005, 570 mm",
+   "maker": "SGDW-20261007-A Synthetic Worsk",
+   "quantity_text": "One (1)",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-2S-005",
+   "patterns": [
+    "PAT-04",
+    "PAT-06",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-P005",
+   "split": "dev",
+   "component": "TwoStrokeMainEngine",
+   "model": "VX001 006",
+   "maker": "SGDW-20261007-A",
+   "quantity_text": "(2)",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-2S-006",
+   "patterns": [
+    "PAT-02",
+    "PAT-05",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P006",
+   "split": "dev",
+   "component": "TwoStrokeMainEngine",
+   "model": "VX001 007",
+   "maker": "SGDW-A SYNTHETIC WORKS",
+   "quantity_text": "(2)",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-2S-007",
+   "patterns": [
+    "PAT-02",
+    "PAT-05",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P007",
+   "split": "dev",
+   "component": "TwoStrokeMainEngine",
+   "model": "VX001.008, 570 mm",
+   "maker": "SGDW-20261007-A SYNTHETIC WORKS",
+   "quantity_text": "Two",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-2S-008",
+   "patterns": [
+    "PAT-04",
+    "PAT-05",
+    "PAT-11",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-P008",
+   "split": "dev",
+   "component": "TwoStrokeMainEngine",
+   "model": "VX002 009, 650 mm",
+   "maker": "SGDW-20261007-B Syntehtic Works",
+   "quantity_text": "2x",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-2S-009",
+   "patterns": [
+    "PAT-01",
+    "PAT-04",
+    "PAT-06",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P009",
+   "split": "dev",
+   "component": "TwoStrokeMainEngine",
+   "model": "VX002-010",
+   "maker": "SGDW-B",
+   "quantity_text": "Two",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-2S-010",
+   "patterns": [
+    "PAT-05",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-P010",
+   "split": "dev",
+   "component": "TwoStrokeMainEngine",
+   "model": "VX002-011",
+   "maker": "SGDW-20261007-B Synthetic Works",
+   "quantity_text": "2 ×",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-2S-011",
+   "patterns": [
+    "PAT-01"
+   ]
+  },
+  {
+   "row_id": "dev-P011",
+   "split": "dev",
+   "component": "TwoStrokeMainEngine",
+   "model": "VX002 012, 650 mm",
+   "maker": "SGDW-20261007-B Synthetic Works",
+   "quantity_text": "2x",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-2S-012",
+   "patterns": [
+    "PAT-01",
+    "PAT-04",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P012",
+   "split": "dev",
+   "component": "TwoStrokeMainEngine",
+   "model": "VX002-013, 650 mm",
+   "maker": "SGDW-20261007-B Synthetic Wroks",
+   "quantity_text": "2 x",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-2S-013",
+   "patterns": [
+    "PAT-01",
+    "PAT-04",
+    "PAT-06"
+   ]
+  },
+  {
+   "row_id": "dev-P013",
+   "split": "dev",
+   "component": "TwoStrokeMainEngine",
+   "model": "VX002-014, 650 mm",
+   "maker": "SGDW-B Synthetic Works",
+   "quantity_text": "Two",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-2S-014",
+   "patterns": [
+    "PAT-04",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-P014",
+   "split": "dev",
+   "component": "TwoStrokeMainEngine",
+   "model": "VX002-015",
+   "maker": "SGDW-20261007-B Snythetic Works",
+   "quantity_text": "Two",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-2S-015",
+   "patterns": [
+    "PAT-06",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-P015",
+   "split": "dev",
+   "component": "FourStrokeEngine",
+   "model": "VX005-001, 210 mm",
+   "maker": "SGDW-A",
+   "quantity_text": "1",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-4S-001",
+   "patterns": [
+    "PAT-03",
+    "PAT-04",
+    "PAT-05"
+   ]
+  },
+  {
+   "row_id": "dev-P016",
+   "split": "dev",
+   "component": "FourStrokeEngine",
+   "model": "VX005/002",
+   "maker": "SGDW-A Synthetic Wroks",
+   "quantity_text": "2",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-4S-002",
+   "patterns": [
+    "PAT-03",
+    "PAT-06",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P017",
+   "split": "dev",
+   "component": "FourStrokeEngine",
+   "model": "VX005 003, 210 mm",
+   "maker": "SGDW-A Synthetic Works",
+   "quantity_text": "2",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-4S-003",
+   "patterns": [
+    "PAT-03",
+    "PAT-04",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P018",
+   "split": "dev",
+   "component": "FourStrokeEngine",
+   "model": "VX005-004",
+   "maker": "SGDW-A Synthetic Wroks",
+   "quantity_text": "1",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-4S-004",
+   "patterns": [
+    "PAT-03",
+    "PAT-06"
+   ]
+  },
+  {
+   "row_id": "dev-P019",
+   "split": "dev",
+   "component": "FourStrokeEngine",
+   "model": "VX005-005",
+   "maker": "SGDW-20261007-A SYNTHETIC WORKS",
+   "quantity_text": "One (1)",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-4S-005",
+   "patterns": [
+    "PAT-05",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-P020",
+   "split": "dev",
+   "component": "FourStrokeEngine",
+   "model": "VX005/006, 210 mm",
+   "maker": "SGDW-A Snythetic Works",
+   "quantity_text": "1",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-4S-006",
+   "patterns": [
+    "PAT-03",
+    "PAT-04",
+    "PAT-06",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P021",
+   "split": "dev",
+   "component": "FourStrokeEngine",
+   "model": "VX005-007",
+   "maker": "SGDW-A",
+   "quantity_text": "1",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-4S-007",
+   "patterns": [
+    "PAT-03",
+    "PAT-05"
+   ]
+  },
+  {
+   "row_id": "dev-P022",
+   "split": "dev",
+   "component": "FourStrokeEngine",
+   "model": "VX005-008, 210 mm",
+   "maker": "SGDW-20261007-A",
+   "quantity_text": "1",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-4S-008",
+   "patterns": [
+    "PAT-03",
+    "PAT-04",
+    "PAT-05"
+   ]
+  },
+  {
+   "row_id": "dev-P023",
+   "split": "dev",
+   "component": "FourStrokeEngine",
+   "model": "VX006.009, 240 mm",
+   "maker": "SGDW-B SYNTHETIC WORKS",
+   "quantity_text": "Two (2)",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-4S-009",
+   "patterns": [
+    "PAT-04",
+    "PAT-05",
+    "PAT-11",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-P024",
+   "split": "dev",
+   "component": "FourStrokeEngine",
+   "model": "VX006-010, 240 mm",
+   "maker": "SGDW-B SYNTHETIC WORKS",
+   "quantity_text": "One (1)",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-4S-010",
+   "patterns": [
+    "PAT-04",
+    "PAT-05",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-P025",
+   "split": "dev",
+   "component": "FourStrokeEngine",
+   "model": "VX006-011",
+   "maker": "SGDW-20261007-B Syntehtic Works",
+   "quantity_text": "1",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-4S-011",
+   "patterns": [
+    "PAT-03",
+    "PAT-06"
+   ]
+  },
+  {
+   "row_id": "dev-P026",
+   "split": "dev",
+   "component": "FourStrokeEngine",
+   "model": "VX006.012, 240 mm",
+   "maker": "SGDW-20261007-B Synthetic Works",
+   "quantity_text": "1x",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-4S-012",
+   "patterns": [
+    "PAT-01",
+    "PAT-04",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P027",
+   "split": "dev",
+   "component": "FourStrokeEngine",
+   "model": "VX006-013, 240 mm",
+   "maker": "SGDW-B Synthetic Works",
+   "quantity_text": "(2)",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-4S-013",
+   "patterns": [
+    "PAT-02",
+    "PAT-04"
+   ]
+  },
+  {
+   "row_id": "dev-P028",
+   "split": "dev",
+   "component": "FourStrokeEngine",
+   "model": "VX006.014, 240 mm",
+   "maker": "SGDW-B",
+   "quantity_text": "(2)",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-4S-014",
+   "patterns": [
+    "PAT-02",
+    "PAT-04",
+    "PAT-05",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P029",
+   "split": "dev",
+   "component": "FourStrokeEngine",
+   "model": "VX006-015",
+   "maker": "SGDW-B SYNTHETIC WORKS",
+   "quantity_text": "2",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-4S-015",
+   "patterns": [
+    "PAT-03",
+    "PAT-05"
+   ]
+  },
+  {
+   "row_id": "dev-P030",
+   "split": "dev",
+   "component": "AirCompressor",
+   "model": "VX009.001",
+   "maker": "SGDW-A Synthetic oWrks",
+   "quantity_text": "(2)",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-COMP-001",
+   "patterns": [
+    "PAT-02",
+    "PAT-06",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P031",
+   "split": "dev",
+   "component": "AirCompressor",
+   "model": "VX009-002, 65.91 m3/h",
+   "maker": "SGDW-20261007-A",
+   "quantity_text": "2",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-COMP-002",
+   "patterns": [
+    "PAT-03",
+    "PAT-04",
+    "PAT-05"
+   ]
+  },
+  {
+   "row_id": "dev-P032",
+   "split": "dev",
+   "component": "AirCompressor",
+   "model": "VX009 003, 66.36 m3/h",
+   "maker": "SGDW-20261007-A SYNTHETIC WORKS",
+   "quantity_text": "Two (2)",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-COMP-003",
+   "patterns": [
+    "PAT-04",
+    "PAT-05",
+    "PAT-11",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-P033",
+   "split": "dev",
+   "component": "AirCompressor",
+   "model": "VX009 004, 66.82 m3/h",
+   "maker": "SGDW-A SYNTHETIC WORKS",
+   "quantity_text": "2 x",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-COMP-004",
+   "patterns": [
+    "PAT-01",
+    "PAT-04",
+    "PAT-05",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P034",
+   "split": "dev",
+   "component": "AirCompressor",
+   "model": "VX009-005",
+   "maker": "SGDW-A",
+   "quantity_text": "Two",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-COMP-005",
+   "patterns": [
+    "PAT-05",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-P035",
+   "split": "dev",
+   "component": "AirCompressor",
+   "model": "VX009/006, 67.73 m3/h",
+   "maker": "SGDW-A",
+   "quantity_text": "1",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-COMP-006",
+   "patterns": [
+    "PAT-03",
+    "PAT-04",
+    "PAT-05",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P036",
+   "split": "dev",
+   "component": "AirCompressor",
+   "model": "VX009.007, 68.19 m3/h",
+   "maker": "SGDW-A",
+   "quantity_text": "2",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-COMP-007",
+   "patterns": [
+    "PAT-03",
+    "PAT-04",
+    "PAT-05",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P037",
+   "split": "dev",
+   "component": "AirCompressor",
+   "model": "VX009-008",
+   "maker": "SGDW-20261007-A ySnthetic Works",
+   "quantity_text": "Two (2)",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-COMP-008",
+   "patterns": [
+    "PAT-06",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-P038",
+   "split": "dev",
+   "component": "AirCompressor",
+   "model": "VX010-009",
+   "maker": "SGDW-20261007-B Synthetic Works",
+   "quantity_text": "Two (2)",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-COMP-009",
+   "patterns": [
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-P039",
+   "split": "dev",
+   "component": "AirCompressor",
+   "model": "VX010.010, 101.65 m3/h",
+   "maker": "SGDW-20261007-B",
+   "quantity_text": "One (1)",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-COMP-010",
+   "patterns": [
+    "PAT-04",
+    "PAT-05",
+    "PAT-11",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-P040",
+   "split": "dev",
+   "component": "AirCompressor",
+   "model": "VX010 011, 102.31 m3/h",
+   "maker": "SGDW-20261007-B Synthetic Works",
+   "quantity_text": "2x",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-COMP-011",
+   "patterns": [
+    "PAT-01",
+    "PAT-04",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P041",
+   "split": "dev",
+   "component": "AirCompressor",
+   "model": "VX010/012, 102.98 m3/h",
+   "maker": "SGDW-20261007-B SYNTHETIC WORKS",
+   "quantity_text": "(2)",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-COMP-012",
+   "patterns": [
+    "PAT-02",
+    "PAT-04",
+    "PAT-05",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P042",
+   "split": "dev",
+   "component": "AirCompressor",
+   "model": "VX010-013, 103.64 m3/h",
+   "maker": "SGDW-20261007-B",
+   "quantity_text": "(1)",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-COMP-013",
+   "patterns": [
+    "PAT-02",
+    "PAT-04",
+    "PAT-05"
+   ]
+  },
+  {
+   "row_id": "dev-P043",
+   "split": "dev",
+   "component": "AirCompressor",
+   "model": "VX010.014, 104.31 m3/h",
+   "maker": "SGDW-20261007-B Synthetic Works",
+   "quantity_text": "(1)",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-COMP-014",
+   "patterns": [
+    "PAT-02",
+    "PAT-04",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P044",
+   "split": "dev",
+   "component": "AirCompressor",
+   "model": "VX010-015",
+   "maker": "SGDW-20261007-B Snythetic Works",
+   "quantity_text": "1 ×",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-COMP-015",
+   "patterns": [
+    "PAT-01",
+    "PAT-06"
+   ]
+  },
+  {
+   "row_id": "dev-P045",
+   "split": "dev",
+   "component": "Pump",
+   "model": "VX013/001",
+   "maker": "SGDW-A Synthetic Works",
+   "quantity_text": "2 x",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-PUMP-001",
+   "patterns": [
+    "PAT-01",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P046",
+   "split": "dev",
+   "component": "Pump",
+   "model": "VX013-002",
+   "maker": "SGDW-20261007-A",
+   "quantity_text": "Two",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-PUMP-002",
+   "patterns": [
+    "PAT-05",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-P047",
+   "split": "dev",
+   "component": "Pump",
+   "model": "VX013-003, 183.78 m3/h",
+   "maker": "SGDW-A Synthetic Works",
+   "quantity_text": "Two (2)",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-PUMP-003",
+   "patterns": [
+    "PAT-04",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-P048",
+   "split": "dev",
+   "component": "Pump",
+   "model": "VX013 004, 185.04 m3/h",
+   "maker": "SGDW-A Synthetic oWrks",
+   "quantity_text": "1",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-PUMP-004",
+   "patterns": [
+    "PAT-03",
+    "PAT-04",
+    "PAT-06",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P049",
+   "split": "dev",
+   "component": "Pump",
+   "model": "VX013-005",
+   "maker": "SGDW-20261007-A SYNTHETIC WORKS",
+   "quantity_text": "Two",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-PUMP-005",
+   "patterns": [
+    "PAT-05",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-P050",
+   "split": "dev",
+   "component": "Pump",
+   "model": "VX013-006",
+   "maker": "SGDW-A Synthetic Worsk",
+   "quantity_text": "1",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-PUMP-006",
+   "patterns": [
+    "PAT-03",
+    "PAT-06"
+   ]
+  },
+  {
+   "row_id": "dev-P051",
+   "split": "dev",
+   "component": "Pump",
+   "model": "VX013-007, 188.82 m3/h",
+   "maker": "SGDW-20261007-A Synthetic Works",
+   "quantity_text": "(1)",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-PUMP-007",
+   "patterns": [
+    "PAT-02",
+    "PAT-04"
+   ]
+  },
+  {
+   "row_id": "dev-P052",
+   "split": "dev",
+   "component": "Pump",
+   "model": "VX013/008",
+   "maker": "SGDW-A Sytnhetic Works",
+   "quantity_text": "2 ×",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-PUMP-008",
+   "patterns": [
+    "PAT-01",
+    "PAT-06",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P053",
+   "split": "dev",
+   "component": "Pump",
+   "model": "VX014-009, 95.67 m3/h",
+   "maker": "SGDW-B",
+   "quantity_text": "1",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-PUMP-009",
+   "patterns": [
+    "PAT-03",
+    "PAT-04",
+    "PAT-05"
+   ]
+  },
+  {
+   "row_id": "dev-P054",
+   "split": "dev",
+   "component": "Pump",
+   "model": "VX014/010, 96.3 m3/h",
+   "maker": "SGDW-20261007-B Synthetic Works",
+   "quantity_text": "(1)",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-PUMP-010",
+   "patterns": [
+    "PAT-02",
+    "PAT-04",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P055",
+   "split": "dev",
+   "component": "Pump",
+   "model": "VX014-011",
+   "maker": "SGDW-B Snythetic Works",
+   "quantity_text": "(1)",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-PUMP-011",
+   "patterns": [
+    "PAT-02",
+    "PAT-06"
+   ]
+  },
+  {
+   "row_id": "dev-P056",
+   "split": "dev",
+   "component": "Pump",
+   "model": "VX014/012, 97.56 m3/h",
+   "maker": "SGDW-B Synthetic Works",
+   "quantity_text": "(2)",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-PUMP-012",
+   "patterns": [
+    "PAT-02",
+    "PAT-04",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P057",
+   "split": "dev",
+   "component": "Pump",
+   "model": "VX014.013, 98.19 m3/h",
+   "maker": "SGDW-20261007-B",
+   "quantity_text": "1",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-PUMP-013",
+   "patterns": [
+    "PAT-03",
+    "PAT-04",
+    "PAT-05",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P058",
+   "split": "dev",
+   "component": "Pump",
+   "model": "VX014-014",
+   "maker": "SGDW-20261007-B Synthetic Works",
+   "quantity_text": "1 ×",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-PUMP-014",
+   "patterns": [
+    "PAT-01"
+   ]
+  },
+  {
+   "row_id": "dev-P059",
+   "split": "dev",
+   "component": "Pump",
+   "model": "VX014/015, 99.45 m3/h",
+   "maker": "SGDW-B Synthetic Works",
+   "quantity_text": "(2)",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-PUMP-015",
+   "patterns": [
+    "PAT-02",
+    "PAT-04",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P060",
+   "split": "dev",
+   "component": "Separator",
+   "model": "VX017-001",
+   "maker": "SGDW-A SYNTHETIC WORKS",
+   "quantity_text": "Two",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-SEP-001",
+   "patterns": [
+    "PAT-05",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-P061",
+   "split": "dev",
+   "component": "Separator",
+   "model": "VX017.002, 2839.2 l/h",
+   "maker": "SGDW-20261007-A Synthetic Wokrs",
+   "quantity_text": "1x",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-SEP-002",
+   "patterns": [
+    "PAT-01",
+    "PAT-04",
+    "PAT-06",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P062",
+   "split": "dev",
+   "component": "Separator",
+   "model": "VX017/003, 2858.8 l/h",
+   "maker": "SGDW-A Synthetic Works",
+   "quantity_text": "1",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-SEP-003",
+   "patterns": [
+    "PAT-03",
+    "PAT-04",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P063",
+   "split": "dev",
+   "component": "Separator",
+   "model": "VX017.004",
+   "maker": "SGDW-A Synthetic Works",
+   "quantity_text": "1",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-SEP-004",
+   "patterns": [
+    "PAT-03",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P064",
+   "split": "dev",
+   "component": "Separator",
+   "model": "VX017 005, 2898.0 l/h",
+   "maker": "SGDW-20261007-A",
+   "quantity_text": "(1)",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-SEP-005",
+   "patterns": [
+    "PAT-02",
+    "PAT-04",
+    "PAT-05",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P065",
+   "split": "dev",
+   "component": "Separator",
+   "model": "VX017/006",
+   "maker": "SGDW-20261007-A Synthetci Works",
+   "quantity_text": "(1)",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-SEP-006",
+   "patterns": [
+    "PAT-02",
+    "PAT-06",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P066",
+   "split": "dev",
+   "component": "Separator",
+   "model": "VX017/007",
+   "maker": "SGDW-A",
+   "quantity_text": "One",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-SEP-007",
+   "patterns": [
+    "PAT-05",
+    "PAT-11",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-P067",
+   "split": "dev",
+   "component": "Separator",
+   "model": "VX017/008, 2956.8 l/h",
+   "maker": "SGDW-A",
+   "quantity_text": "One (1)",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-SEP-008",
+   "patterns": [
+    "PAT-04",
+    "PAT-05",
+    "PAT-11",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-P068",
+   "split": "dev",
+   "component": "Separator",
+   "model": "VX018-009",
+   "maker": "SGDW-20261007-B",
+   "quantity_text": "One",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-SEP-009",
+   "patterns": [
+    "PAT-05",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-P069",
+   "split": "dev",
+   "component": "Separator",
+   "model": "VX018.010, 1819.0 l/h",
+   "maker": "SGDW-B Synthetic Wokrs",
+   "quantity_text": "Two (2)",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-SEP-010",
+   "patterns": [
+    "PAT-04",
+    "PAT-06",
+    "PAT-11",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-P070",
+   "split": "dev",
+   "component": "Separator",
+   "model": "VX018-011, 1830.9 l/h",
+   "maker": "SGDW-B Synthetic Works",
+   "quantity_text": "Two (2)",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-SEP-011",
+   "patterns": [
+    "PAT-04",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-P071",
+   "split": "dev",
+   "component": "Separator",
+   "model": "VX018.012, 1842.8 l/h",
+   "maker": "SGDW-B ySnthetic Works",
+   "quantity_text": "Two",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-SEP-012",
+   "patterns": [
+    "PAT-04",
+    "PAT-06",
+    "PAT-11",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-P072",
+   "split": "dev",
+   "component": "Separator",
+   "model": "VX018.013",
+   "maker": "SGDW-20261007-B",
+   "quantity_text": "One",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-SEP-013",
+   "patterns": [
+    "PAT-05",
+    "PAT-11",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-P073",
+   "split": "dev",
+   "component": "Separator",
+   "model": "VX018-014",
+   "maker": "SGDW-20261007-B Synthteic Works",
+   "quantity_text": "1",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-SEP-014",
+   "patterns": [
+    "PAT-03",
+    "PAT-06"
+   ]
+  },
+  {
+   "row_id": "dev-P074",
+   "split": "dev",
+   "component": "Separator",
+   "model": "VX018.015",
+   "maker": "SGDW-20261007-B Synthetic Works",
+   "quantity_text": "1",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-SEP-015",
+   "patterns": [
+    "PAT-03",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P075",
+   "split": "dev",
+   "component": "Turbocharger",
+   "model": "VX021.001",
+   "maker": "SGDW-20261007-A Synthetic Works",
+   "quantity_text": "2 ×",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-TC-001",
+   "patterns": [
+    "PAT-01",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P076",
+   "split": "dev",
+   "component": "Turbocharger",
+   "model": "VX021-002",
+   "maker": "SGDW-20261007-A Synthetic Works",
+   "quantity_text": "2",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-TC-002",
+   "patterns": [
+    "PAT-03"
+   ]
+  },
+  {
+   "row_id": "dev-P077",
+   "split": "dev",
+   "component": "Turbocharger",
+   "model": "VX021.003",
+   "maker": "SGDW-A Synthetic Works",
+   "quantity_text": "One (1)",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-TC-003",
+   "patterns": [
+    "PAT-11",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-P078",
+   "split": "dev",
+   "component": "Turbocharger",
+   "model": "VX021/004, 2158.8 kg",
+   "maker": "SGDW-A Synthetic Works",
+   "quantity_text": "(2)",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-TC-004",
+   "patterns": [
+    "PAT-02",
+    "PAT-04",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P079",
+   "split": "dev",
+   "component": "Turbocharger",
+   "model": "VX021-005, 2173.5 kg",
+   "maker": "SGDW-A Synthetic Works",
+   "quantity_text": "2 ×",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-TC-005",
+   "patterns": [
+    "PAT-01",
+    "PAT-04"
+   ]
+  },
+  {
+   "row_id": "dev-P080",
+   "split": "dev",
+   "component": "Turbocharger",
+   "model": "VX021.006, 2188.2 kg",
+   "maker": "SGDW-A Synthetic Works",
+   "quantity_text": "1",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-TC-006",
+   "patterns": [
+    "PAT-03",
+    "PAT-04",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P081",
+   "split": "dev",
+   "component": "Turbocharger",
+   "model": "VX021.007, 2202.9 kg",
+   "maker": "SGDW-20261007-A",
+   "quantity_text": "2",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-TC-007",
+   "patterns": [
+    "PAT-03",
+    "PAT-04",
+    "PAT-05",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P082",
+   "split": "dev",
+   "component": "Turbocharger",
+   "model": "VX021.008",
+   "maker": "SGDW-20261007-A",
+   "quantity_text": "One (1)",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-TC-008",
+   "patterns": [
+    "PAT-05",
+    "PAT-11",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-P083",
+   "split": "dev",
+   "component": "Turbocharger",
+   "model": "VX022/009, 3029.55 kg",
+   "maker": "SGDW-20261007-B SYNTHETIC WORKS",
+   "quantity_text": "2",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-TC-009",
+   "patterns": [
+    "PAT-03",
+    "PAT-04",
+    "PAT-05",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P084",
+   "split": "dev",
+   "component": "Turbocharger",
+   "model": "VX022.010, 3049.5 kg",
+   "maker": "SGDW-20261007-B Synthetic Works",
+   "quantity_text": "1",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-TC-010",
+   "patterns": [
+    "PAT-03",
+    "PAT-04",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P085",
+   "split": "dev",
+   "component": "Turbocharger",
+   "model": "VX022/011, 3069.45 kg",
+   "maker": "SGDW-B Synthetic Wroks",
+   "quantity_text": "(2)",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-TC-011",
+   "patterns": [
+    "PAT-02",
+    "PAT-04",
+    "PAT-06",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P086",
+   "split": "dev",
+   "component": "Turbocharger",
+   "model": "VX022/012, 3089.4 kg",
+   "maker": "SGDW-20261007-B SYNTHETIC WORKS",
+   "quantity_text": "1",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-TC-012",
+   "patterns": [
+    "PAT-03",
+    "PAT-04",
+    "PAT-05",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-P087",
+   "split": "dev",
+   "component": "Turbocharger",
+   "model": "VX022/013",
+   "maker": "SGDW-B Synthetic Works",
+   "quantity_text": "Two (2)",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-TC-013",
+   "patterns": [
+    "PAT-11",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-P088",
+   "split": "dev",
+   "component": "Turbocharger",
+   "model": "VX022-014",
+   "maker": "SGDW-20261007-B",
+   "quantity_text": "1",
+   "quantity": 1,
+   "kind": "product",
+   "gold": "REG-TC-014",
+   "patterns": [
+    "PAT-03",
+    "PAT-05"
+   ]
+  },
+  {
+   "row_id": "dev-P089",
+   "split": "dev",
+   "component": "Turbocharger",
+   "model": "VX022 015, 3149.25 kg",
+   "maker": "SGDW-B Synthetic Works",
+   "quantity_text": "(2)",
+   "quantity": 2,
+   "kind": "product",
+   "gold": "REG-TC-015",
+   "patterns": [
+    "PAT-02",
+    "PAT-04",
+    "PAT-11"
+   ]
+  },
+  {
+   "row_id": "dev-N000",
+   "split": "dev",
+   "component": "AirCompressor",
+   "model": "VX125-977",
+   "maker": "SGDW-B Synthetic oWrks",
+   "quantity_text": "One (1)",
+   "quantity": 1,
+   "kind": "unregistered",
+   "gold": null,
+   "patterns": [
+    "PAT-06",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-N001",
+   "split": "dev",
+   "component": "Turbocharger",
+   "model": "—",
+   "maker": "SGDW-B SYNTHETIC WORKS",
+   "quantity_text": "(2)",
+   "quantity": 2,
+   "kind": "no_model",
+   "gold": null,
+   "patterns": [
+    "PAT-02",
+    "PAT-05",
+    "PAT-07"
+   ]
+  },
+  {
+   "row_id": "dev-N002",
+   "split": "dev",
+   "component": "TwoStrokeMainEngine",
+   "model": "driven by VX013-007",
+   "maker": "SGDW-A",
+   "quantity_text": "1",
+   "quantity": 1,
+   "kind": "driver",
+   "gold": null,
+   "patterns": [
+    "PAT-03",
+    "PAT-05",
+    "PAT-08"
+   ]
+  },
+  {
+   "row_id": "dev-N003",
+   "split": "dev",
+   "component": "Pump",
+   "model": "VX487-723",
+   "maker": "SGDW-B Synthetic Works",
+   "quantity_text": "2",
+   "quantity": 2,
+   "kind": "unregistered",
+   "gold": null,
+   "patterns": [
+    "PAT-03"
+   ]
+  },
+  {
+   "row_id": "dev-N004",
+   "split": "dev",
+   "component": "FourStrokeEngine",
+   "model": "—",
+   "maker": "SGDW-B Snythetic Works",
+   "quantity_text": "2",
+   "quantity": 2,
+   "kind": "no_model",
+   "gold": null,
+   "patterns": [
+    "PAT-03",
+    "PAT-06",
+    "PAT-07"
+   ]
+  },
+  {
+   "row_id": "dev-N005",
+   "split": "dev",
+   "component": "AirCompressor",
+   "model": "driven by VX018-012",
+   "maker": "SGDW-B Syntheitc Works",
+   "quantity_text": "(2)",
+   "quantity": 2,
+   "kind": "driver",
+   "gold": null,
+   "patterns": [
+    "PAT-02",
+    "PAT-06",
+    "PAT-08"
+   ]
+  },
+  {
+   "row_id": "dev-N006",
+   "split": "dev",
+   "component": "AirCompressor",
+   "model": "VX645-278",
+   "maker": "SGDW-A",
+   "quantity_text": "2x",
+   "quantity": 2,
+   "kind": "unregistered",
+   "gold": null,
+   "patterns": [
+    "PAT-01",
+    "PAT-05"
+   ]
+  },
+  {
+   "row_id": "dev-N007",
+   "split": "dev",
+   "component": "Turbocharger",
+   "model": "—",
+   "maker": "SGDW-20261007-A",
+   "quantity_text": "1",
+   "quantity": 1,
+   "kind": "no_model",
+   "gold": null,
+   "patterns": [
+    "PAT-03",
+    "PAT-05",
+    "PAT-07"
+   ]
+  },
+  {
+   "row_id": "dev-N008",
+   "split": "dev",
+   "component": "Separator",
+   "model": "driven by VX009-006",
+   "maker": "SGDW-20261007-A Synthteic Works",
+   "quantity_text": "(2)",
+   "quantity": 2,
+   "kind": "driver",
+   "gold": null,
+   "patterns": [
+    "PAT-02",
+    "PAT-06",
+    "PAT-08"
+   ]
+  },
+  {
+   "row_id": "dev-N009",
+   "split": "dev",
+   "component": "TwoStrokeMainEngine",
+   "model": "VX179-067",
+   "maker": "SGDW-20261007-B",
+   "quantity_text": "(2)",
+   "quantity": 2,
+   "kind": "unregistered",
+   "gold": null,
+   "patterns": [
+    "PAT-02",
+    "PAT-05"
+   ]
+  },
+  {
+   "row_id": "dev-N010",
+   "split": "dev",
+   "component": "Pump",
+   "model": "—",
+   "maker": "SGDW-B Synthetic Works",
+   "quantity_text": "(1)",
+   "quantity": 1,
+   "kind": "no_model",
+   "gold": null,
+   "patterns": [
+    "PAT-02",
+    "PAT-07"
+   ]
+  },
+  {
+   "row_id": "dev-N011",
+   "split": "dev",
+   "component": "Separator",
+   "model": "driven by VX009-006",
+   "maker": "SGDW-20261007-A Synthetic Works",
+   "quantity_text": "One",
+   "quantity": 1,
+   "kind": "driver",
+   "gold": null,
+   "patterns": [
+    "PAT-08",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-N012",
+   "split": "dev",
+   "component": "FourStrokeEngine",
+   "model": "VX895-648",
+   "maker": "SGDW-20261007-B Synthetci Works",
+   "quantity_text": "1",
+   "quantity": 1,
+   "kind": "unregistered",
+   "gold": null,
+   "patterns": [
+    "PAT-03",
+    "PAT-06"
+   ]
+  },
+  {
+   "row_id": "dev-N013",
+   "split": "dev",
+   "component": "Pump",
+   "model": "—",
+   "maker": "SGDW-20261007-B Syntehtic Works",
+   "quantity_text": "Two",
+   "quantity": 2,
+   "kind": "no_model",
+   "gold": null,
+   "patterns": [
+    "PAT-06",
+    "PAT-07",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-N014",
+   "split": "dev",
+   "component": "Pump",
+   "model": "driven by VX009-001",
+   "maker": "SGDW-20261007-A Synhtetic Works",
+   "quantity_text": "2",
+   "quantity": 2,
+   "kind": "driver",
+   "gold": null,
+   "patterns": [
+    "PAT-03",
+    "PAT-06",
+    "PAT-08"
+   ]
+  },
+  {
+   "row_id": "dev-N015",
+   "split": "dev",
+   "component": "TwoStrokeMainEngine",
+   "model": "VX425-303",
+   "maker": "SGDW-B",
+   "quantity_text": "(2)",
+   "quantity": 2,
+   "kind": "unregistered",
+   "gold": null,
+   "patterns": [
+    "PAT-02",
+    "PAT-05"
+   ]
+  },
+  {
+   "row_id": "dev-N016",
+   "split": "dev",
+   "component": "TwoStrokeMainEngine",
+   "model": "—",
+   "maker": "SGDW-20261007-B Synthteic Works",
+   "quantity_text": "2x",
+   "quantity": 2,
+   "kind": "no_model",
+   "gold": null,
+   "patterns": [
+    "PAT-01",
+    "PAT-06",
+    "PAT-07"
+   ]
+  },
+  {
+   "row_id": "dev-N017",
+   "split": "dev",
+   "component": "Turbocharger",
+   "model": "driven by VX018-011",
+   "maker": "SGDW-B Synhtetic Works",
+   "quantity_text": "(2)",
+   "quantity": 2,
+   "kind": "driver",
+   "gold": null,
+   "patterns": [
+    "PAT-02",
+    "PAT-06",
+    "PAT-08"
+   ]
+  },
+  {
+   "row_id": "dev-N018",
+   "split": "dev",
+   "component": "FourStrokeEngine",
+   "model": "VX353-133",
+   "maker": "SGDW-B SYNTHETIC WORKS",
+   "quantity_text": "(1)",
+   "quantity": 1,
+   "kind": "unregistered",
+   "gold": null,
+   "patterns": [
+    "PAT-02",
+    "PAT-05"
+   ]
+  },
+  {
+   "row_id": "dev-N019",
+   "split": "dev",
+   "component": "Separator",
+   "model": "—",
+   "maker": "SGDW-20261007-B Synthetic oWrks",
+   "quantity_text": "1",
+   "quantity": 1,
+   "kind": "no_model",
+   "gold": null,
+   "patterns": [
+    "PAT-03",
+    "PAT-06",
+    "PAT-07"
+   ]
+  },
+  {
+   "row_id": "dev-N020",
+   "split": "dev",
+   "component": "Pump",
+   "model": "driven by VX009-002",
+   "maker": "SGDW-A Synthetic Works",
+   "quantity_text": "Two (2)",
+   "quantity": 2,
+   "kind": "driver",
+   "gold": null,
+   "patterns": [
+    "PAT-08",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-N021",
+   "split": "dev",
+   "component": "Pump",
+   "model": "VX266-252",
+   "maker": "SGDW-A Synthetic Wroks",
+   "quantity_text": "1",
+   "quantity": 1,
+   "kind": "unregistered",
+   "gold": null,
+   "patterns": [
+    "PAT-03",
+    "PAT-06"
+   ]
+  },
+  {
+   "row_id": "dev-N022",
+   "split": "dev",
+   "component": "TwoStrokeMainEngine",
+   "model": "—",
+   "maker": "SGDW-20261007-B Synthetic Works",
+   "quantity_text": "1x",
+   "quantity": 1,
+   "kind": "no_model",
+   "gold": null,
+   "patterns": [
+    "PAT-01",
+    "PAT-07"
+   ]
+  },
+  {
+   "row_id": "dev-N023",
+   "split": "dev",
+   "component": "Pump",
+   "model": "driven by VX009-007",
+   "maker": "SGDW-20261007-A Synthetic Works",
+   "quantity_text": "(2)",
+   "quantity": 2,
+   "kind": "driver",
+   "gold": null,
+   "patterns": [
+    "PAT-02",
+    "PAT-08"
+   ]
+  },
+  {
+   "row_id": "dev-N024",
+   "split": "dev",
+   "component": "Turbocharger",
+   "model": "VX771-451",
+   "maker": "SGDW-B Synthetic Wokrs",
+   "quantity_text": "(1)",
+   "quantity": 1,
+   "kind": "unregistered",
+   "gold": null,
+   "patterns": [
+    "PAT-02",
+    "PAT-06"
+   ]
+  },
+  {
+   "row_id": "dev-N025",
+   "split": "dev",
+   "component": "Separator",
+   "model": "—",
+   "maker": "SGDW-20261007-B",
+   "quantity_text": "(2)",
+   "quantity": 2,
+   "kind": "no_model",
+   "gold": null,
+   "patterns": [
+    "PAT-02",
+    "PAT-05",
+    "PAT-07"
+   ]
+  },
+  {
+   "row_id": "dev-N026",
+   "split": "dev",
+   "component": "FourStrokeEngine",
+   "model": "driven by VX009-007",
+   "maker": "SGDW-20261007-A",
+   "quantity_text": "One",
+   "quantity": 1,
+   "kind": "driver",
+   "gold": null,
+   "patterns": [
+    "PAT-05",
+    "PAT-08",
+    "PAT-12"
+   ]
+  },
+  {
+   "row_id": "dev-N027",
+   "split": "dev",
+   "component": "TwoStrokeMainEngine",
+   "model": "VX501-133",
+   "maker": "SGDW-A Syntehtic Works",
+   "quantity_text": "1 ×",
+   "quantity": 1,
+   "kind": "unregistered",
+   "gold": null,
+   "patterns": [
+    "PAT-01",
+    "PAT-06"
+   ]
+  },
+  {
+   "row_id": "dev-N028",
+   "split": "dev",
+   "component": "Separator",
+   "model": "—",
+   "maker": "SGDW-20261007-B Synthetic Works",
+   "quantity_text": "(2)",
+   "quantity": 2,
+   "kind": "no_model",
+   "gold": null,
+   "patterns": [
+    "PAT-02",
+    "PAT-07"
+   ]
+  },
+  {
+   "row_id": "dev-N029",
+   "split": "dev",
+   "component": "Separator",
+   "model": "driven by VX014-010",
+   "maker": "SGDW-B Synthetic oWrks",
+   "quantity_text": "Two",
+   "quantity": 2,
+   "kind": "driver",
+   "gold": null,
+   "patterns": [
+    "PAT-06",
+    "PAT-08",
+    "PAT-12"
+   ]
+  }
+ ]
+}

@@ -42,7 +42,9 @@ def tracked() -> list[str]:
 
 def test_no_tracked_file_is_a_reference_document() -> None:
     references = reference_hashes()  # project guides and BOM notation sources (D-104)
-    assert len(references) == 12
+    guides = yaml.safe_load(MANIFEST.read_text())["documents"]
+    bom = yaml.safe_load((ROOT / "data/reference/bom/manifest.yaml").read_text())["sources"]
+    assert len(guides) == 12 and len(references) == 12 + sum(1 for s in bom if s["sha256"])
     hits = []
     for path in tracked():
         file = ROOT / path

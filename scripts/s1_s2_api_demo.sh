@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
-# S1/S2 demo through the job API (W5-4): start the spec-bridge API on 127.0.0.1:8000 with
+# S1/S2 demo through the job API (W5-4): start the spec-bridge API on 127.0.0.1:8010 with
 # a fresh app folder, run scripts/s1_s2_api_demo.py against it, stop the server.
 #
 #   scripts/s1_s2_api_demo.sh openai   # cloud LLM: wiring check (fast)
 #   scripts/s1_s2_api_demo.sh ollama   # local LLM: the local-first run
 #
 # The app folder is var/app-demo/<time>/ (registry, checkpoints, uploads): your var/app is
-# not touched. Port 8000 must be free; the script names the holder instead of killing it.
+# not touched. Port 8010 must be free; the script names the holder instead of killing it.
 set -euo pipefail
 
 PROVIDER="${1:-openai}"
-PORT=8000
+PORT=8010
 URL="http://127.0.0.1:${PORT}"
 STAMP="$(date -u +%Y%m%dT%H%M%SZ)"
 APP_DIR="var/app-demo/${STAMP}"

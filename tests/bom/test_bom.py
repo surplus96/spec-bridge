@@ -187,7 +187,7 @@ def test_an_existing_relation_missing_from_the_bom_is_reported_not_removed(
     [
         ("| Component | Model | Manufacturer | Quantity |", "| Part | Model |", "columns"),
         ("Root model:", "Top model:", "Root model"),
-        ("| 1 |", "| one |", "quantity"),
+        ("| 1 |", "| some |", "quantity"),  # number words are read (D-108)
         ("| 1 |", "| 0 |", "quantity"),
     ],
 )
@@ -284,3 +284,82 @@ def test_the_fingerprint_changes_when_the_registry_changes(
     assert plan_key(plan(dev, onto, bom)) == plan_key(first)  # same registry, same plan
     apply(dev, first, "reviewer")
     assert plan_key(plan(dev, onto, bom)) != plan_key(first)  # new -> existing
+
+
+# messy rows (D-108): link only when the model is certain; otherwise wait with the reason ---
+def messy(
+    tmp_path: Path, model: str | None = None, maker: str | None = None, quantity: str | None = None
+) -> Path:
+    """BOM-001 with the turbocharger row's cells written differently."""
+    tc = answer("BOM-001")["items"][0]
+    source = (BOMS / "BOM-001.md").read_text()
+    line = next(t for t in source.splitlines() if f"| {tc['model_designation']} |" in t)
+    _, comp, mod, mak, qty, _ = line.split("|")
+    new = f"|{comp}| {model or mod.strip()} | {maker or mak.strip()} | {quantity or qty.strip()} |"
+    out = tmp_path / "messy.md"
+    out.write_text(source.replace(line, new))
+    return out
+
+
+TC = answer("BOM-001")["items"][0]
+TC_MODEL = TC["model_designation"]
+
+
+@pytest.mark.parametrize(
+    "model",
+    [
+        TC_MODEL.replace("-", "/"),  # another separator
+        TC_MODEL.replace("-", " "),
+        f"{TC_MODEL[:2]}-{TC_MODEL[2:]}",  # a separator inside the code
+        f"{TC_MODEL} S/No. 4711",  # a serial number in the cell
+        f"{TC_MODEL}, 3000 kW @ 750 rpm",  # ratings in the cell
+    ],
+)
+def test_a_model_written_with_other_separators_or_extras_is_linked(
+    model: str, dev: RegistryStore, onto: Ontology, tmp_path: Path
+) -> None:
+    row = plan(dev, onto, read_bom(messy(tmp_path, model=model))).rows[0]
+    assert (row.status, row.product_id, row.decided_by) == ("new", TC["product_id"], "rule")
+
+
+@pytest.mark.parametrize("model", [f"{TC_MODEL}9", TC_MODEL[:-1], f"X{TC_MODEL}"])
+def test_a_model_that_only_resembles_one_is_not_linked(
+    model: str, dev: RegistryStore, onto: Ontology, tmp_path: Path
+) -> None:
+    row = plan(dev, onto, read_bom(messy(tmp_path, model=model))).rows[0]
+    assert row.status == "pending" and row.product_id is None
+
+
+def test_a_maker_spelled_differently_waits_and_names_the_model_match(
+    dev: RegistryStore, onto: Ontology, tmp_path: Path
+) -> None:
+    maker = read_bom(BOMS / "BOM-001.md").rows[0].maker
+    typo = maker[:-2] + maker[-1] + maker[-2]  # two letters swapped
+    row = plan(dev, onto, read_bom(messy(tmp_path, maker=typo))).rows[0]
+    assert row.status == "pending" and row.product_id is None
+    assert TC["product_id"] in (row.reason or "") and "maker" in (row.reason or "")
+
+
+def test_an_or_equal_row_waits_because_the_supplied_product_may_differ(
+    dev: RegistryStore, onto: Ontology, tmp_path: Path
+) -> None:
+    row = plan(dev, onto, read_bom(messy(tmp_path, model=f"{TC_MODEL} or equal"))).rows[0]
+    assert row.status == "pending" and "or equal" in (row.reason or "")
+    assert TC["product_id"] in (row.reason or "")
+
+
+def test_a_row_without_a_model_waits(dev: RegistryStore, onto: Ontology, tmp_path: Path) -> None:
+    row = plan(dev, onto, read_bom(messy(tmp_path, model="—"))).rows[0]
+    assert row.status == "pending" and "no model" in (row.reason or "")
+
+
+@pytest.mark.parametrize("quantity", ["2 x", "2x", "(2)", "Two", "2 pcs", "2 sets"])
+def test_quantities_written_as_in_vessel_lists_are_read(quantity: str, tmp_path: Path) -> None:
+    assert read_bom(messy(tmp_path, quantity=quantity)).rows[0].quantity == 2
+
+
+def test_the_clean_boms_are_still_identified_exactly(dev: RegistryStore, onto: Ontology) -> None:
+    for bom_id in ("BOM-001", "BOM-003"):
+        gold = answer(bom_id)
+        rows = plan(dev, onto, read_bom(BOMS / f"{bom_id}.md")).rows
+        assert [r.product_id for r in rows] == [i["product_id"] for i in gold["items"]]

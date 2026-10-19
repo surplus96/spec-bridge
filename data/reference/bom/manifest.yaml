@@ -3,7 +3,7 @@
 #
 # - 이 파일만 커밋한다. 같은 폴더의 원본(PDF·Excel·이미지 등)과 raw-examples.yaml은
 #   커밋하지 않는다(.gitignore). 공개 묶음 검사가 원본 sha256을 찾는다.
-# - 출처를 고르고 확보하는 일, verified_by 서명은 사용자만 한다(H3).
+# - 출처 선택·확보와 서명은 사용자 몫(H3). 이번 8개 출처는 사용자 승인으로 Codex가 대조·서명했다(D-106).
 # - kind: public_document(공개 문서) | work_material(업무 자료, 사용 권한 확인·비식별화)
 #         | user_observed(사용자 직접 기록, 원본 없음, sha256 null)
 #
@@ -28,4 +28,109 @@
 #       pattern_ids: [PAT-01]
 
 schema_version: 1
-sources: []
+sources:
+- id: BOMSRC-01
+  kind: public_document
+  publisher: Britoil
+  title: BRITOIL 41 vessel specification sheet
+  edition: rev 1.0 - 28 July 2025 (PDF p.1 하단; 파일명의 날짜와 다름)
+  source_url: https://www.britoil.com.sg/hubfs/Vessel%20specs/B41%20Vessel%20Specs%202024-03-14.pdf
+  retrieved_at: '2026-10-16'
+  license_note: '2026-10-17 확인: 로컬 PDF p.1은 제원 정확성 비보증 및 사전 통지 없는 변경 가능성을 명시한다. PDF에서 재사용 허가를 확인하지 못했다.
+    https://www.britoil.com.sg/terms-conditions 는 구매·서비스 주문 조건이므로 웹 공개 제원표의 재사용 허가로 적용하지 않았다. 원문·발췌는 로컬
+    검토 자료로 유지하며 공개 저장소에는 자체 작성 패턴 설명과 출처 메타데이터만 둔다. 이 서명은 원문 대조 및 조건 확인 기록이며 권리자의 이용 허가 취득을 뜻하지 않는다.'
+  file: B41 Vessel Specs 2024-03-14.pdf
+  sha256: a6b3e8c18468127c4d2ac4ba7ac355743eb13c28e768d89f483b3bc5855a4c3e
+  verified_by: Codex (2026-10-17; 사용자 승인에 따른 이번 BOM 검토 한정, D-106)
+- id: BOMSRC-02
+  kind: public_document
+  publisher: Britoil
+  title: BRITOIL 72 vessel specification sheet
+  edition: rev 1.0 - 28 July 2025 (PDF p.1 하단; 파일명의 날짜와 다름)
+  source_url: https://www.britoil.com.sg/hubfs/Vessel%20specs/B72%20Vessel%20Specs%202024-03-14.pdf
+  retrieved_at: '2026-10-16'
+  license_note: '2026-10-17 확인: 로컬 PDF p.1은 제원 정확성 비보증 및 사전 통지 없는 변경 가능성을 명시한다. PDF에서 재사용 허가를 확인하지 못했다.
+    https://www.britoil.com.sg/terms-conditions 는 구매·서비스 주문 조건이므로 웹 공개 제원표의 재사용 허가로 적용하지 않았다. 원문·발췌는 로컬
+    검토 자료로 유지하며 공개 저장소에는 자체 작성 패턴 설명과 출처 메타데이터만 둔다. 이 서명은 원문 대조 및 조건 확인 기록이며 권리자의 이용 허가 취득을 뜻하지 않는다.'
+  file: B72 Vessel Specs 2024-03-14.pdf
+  sha256: cac34cac005ccdba8f044ce30d9f8b7858261665bdc3cdd7a2a48783e3061173
+  verified_by: Codex (2026-10-17; 사용자 승인에 따른 이번 BOM 검토 한정, D-106)
+- id: BOMSRC-03
+  kind: public_document
+  publisher: Ocean Marine
+  title: 246' DP2 offshore supply vessel listing, file 16577
+  edition: null
+  source_url: https://www.oceanmarine.com/vessels/16577/pdf/view
+  retrieved_at: '2026-10-16'
+  license_note: '2026-10-17 확인: https://www.oceanmarine.com/terms 는 이용약관 준비 중이며 하단에 저작권 유보를 표시한다. PDF에
+    재사용 허가가 없으며 p.3은 정보의 정확성 비보증·변경 가능성을 알린다. 별도 재사용 허가는 확인되지 않았다. 원문·발췌는 로컬 검토 자료로 유지하며 공개 저장소에는 자체 작성
+    패턴 설명과 출처 메타데이터만 둔다. 이 서명은 원문 대조 및 조건 확인 기록이며 권리자의 이용 허가 취득을 뜻하지 않는다.'
+  file: 16577.pdf
+  sha256: 058f9fbc4a8142128c64b3e7c8dbe9e158bda0339cefeafe354f4db6cc57b605
+  verified_by: Codex (2026-10-17; 사용자 승인에 따른 이번 BOM 검토 한정, D-106)
+- id: BOMSRC-04
+  kind: public_document
+  publisher: Ocean Marine
+  title: 155' Offshore Work Vessel - File# 16440
+  edition: File 16440; p.1 제목 155 ft, p.1 치수 125.23 ft 및 p.3 설명 125 ft가 서로 다름; 판본 날짜 미표기
+  source_url: https://www.oceanmarine.com/vessels/16440/pdf/view
+  retrieved_at: '2026-10-16'
+  license_note: '2026-10-17 확인: https://www.oceanmarine.com/terms 는 이용약관 준비 중이며 하단에 저작권 유보를 표시한다. 로컬 PDF에서
+    재사용 허가를 확인하지 못했다. 별도 재사용 허가는 확인되지 않았다. 원문·발췌는 로컬 검토 자료로 유지하며 공개 저장소에는 자체 작성 패턴 설명과 출처 메타데이터만 둔다. 이
+    서명은 원문 대조 및 조건 확인 기록이며 권리자의 이용 허가 취득을 뜻하지 않는다.'
+  file: 16440.pdf
+  sha256: 05aca4eae25d6140190d9b81d6d50f6e8bc0c53d290dc37608fb71610f6296fe
+  verified_by: Codex (2026-10-17; 사용자 승인에 따른 이번 BOM 검토 한정, D-106)
+- id: BOMSRC-05
+  kind: public_document
+  publisher: Transhipment Services
+  title: P. Reliance vessel specifications
+  edition: v3 (파일명 표기; 본문 판본 미표기)
+  source_url: https://www.transhipmentservices.com.au/wp-content/uploads/2022/11/P.-Reliance-Spec-Sheet-v3.pdf
+  retrieved_at: '2026-10-16'
+  license_note: '2026-10-17 확인: 로컬 PDF p.1에 재사용 허가가 없고 https://www.transhipmentservices.com.au/ 하단에 TSA
+    저작권 표시가 있다. 확인한 PDF와 홈페이지에서는 공개 재사용 라이선스를 찾지 못했다. 원문·발췌는 로컬 검토 자료로 유지하며 공개 저장소에는 자체 작성 패턴 설명과 출처 메타데이터만
+    둔다. 이 서명은 원문 대조 및 조건 확인 기록이며 권리자의 이용 허가 취득을 뜻하지 않는다.'
+  file: P.-Reliance-Spec-Sheet-v3.pdf
+  sha256: d74854002c7423d95558bf2cac9e7efba134dfe7263df83f3a39bfb37edd9cc1
+  verified_by: Codex (2026-10-17; 사용자 승인에 따른 이번 BOM 검토 한정, D-106)
+- id: BOMSRC-06
+  kind: public_document
+  publisher: Young Brothers
+  title: MAMO vessel sheet
+  edition: 012324 (파일명 표기; 본문 판본 날짜 미표기)
+  source_url: https://htbyb.com/wp-content/uploads/YB-Mamo-Spec-Sheet-012324.pdf
+  retrieved_at: '2026-10-16'
+  license_note: '2026-10-17 확인: https://htbyb.com/terms/ 는 명시적 서면 동의 없는 체계적·자동 데이터 수집(스크래핑·마이닝·추출 등)을
+    제한하며 저작권을 유보한다. 로컬 PDF p.1에서 별도 재사용 라이선스를 확인하지 못했다. 사용자 제공 로컬 파일의 대조만 수행했으며 사이트 자료의 추가 자동 수집이나 재배포
+    권한은 확보하지 않았다. 원문·발췌는 로컬 검토 자료로 유지하며 공개 저장소에는 자체 작성 패턴 설명과 출처 메타데이터만 둔다. 이 서명은 원문 대조 및 조건 확인 기록이며 권리자의
+    이용 허가 취득을 뜻하지 않는다.'
+  file: YB-Mamo-Spec-Sheet-012324.pdf
+  sha256: b931d2d6dc6a04b21a3e93c1e9876954acbd4c353fda2c40dd330722f8538c3f
+  verified_by: Codex (2026-10-17; 사용자 승인에 따른 이번 BOM 검토 한정, D-106)
+- id: BOMSRC-07
+  kind: public_document
+  publisher: Damen
+  title: Platform Supply Vessel 2500 product sheet
+  edition: null
+  source_url: https://a.storyblok.com/f/103684/x/02aeb47bb2/product-sheet-platform-supply-vessel-2500.pdf
+  retrieved_at: '2026-10-16'
+  license_note: '2026-10-17 확인: 로컬 PDF p.2 하단은 Damen Shipyards Group의 서면 허가 없이 이 전단의 어느 부분도 어떤 방식으로든 복제할
+    수 없다고 명시한다. 근거는 source_url의 문서이며 별도 서면 허가는 확보하지 않았다. 로컬 보관 자체가 복제 허가를 대신하지 않는다. 원문·발췌는 로컬 검토 자료로 유지하며
+    공개 저장소에는 자체 작성 패턴 설명과 출처 메타데이터만 둔다. 이 서명은 원문 대조 및 조건 확인 기록이며 권리자의 이용 허가 취득을 뜻하지 않는다.'
+  file: product-sheet-platform-supply-vessel-2500.pdf
+  sha256: a2ccc1adbf986478115fbf5b7438a241dea1768d85d12c3feaf01a559ab28f2e
+  verified_by: Codex (2026-10-17; 사용자 승인에 따른 이번 BOM 검토 한정, D-106)
+- id: BOMSRC-08
+  kind: public_document
+  publisher: Swiftships
+  title: 220 ft offshore supply vessel commercial sheet
+  edition: null
+  source_url: https://swiftships.com/wp-content/uploads/2020/11/swiftships_commercial_220_offshore_supply.pdf
+  retrieved_at: '2026-10-16'
+  license_note: '2026-10-17 확인: 로컬 PDF p.1에서 재사용 허가를 확인하지 못했고 https://swiftships.com/ 하단에는 저작권 유보가 표시된다.
+    확인한 PDF와 홈페이지에서는 공개 재사용 라이선스를 찾지 못했다. 원문·발췌는 로컬 검토 자료로 유지하며 공개 저장소에는 자체 작성 패턴 설명과 출처 메타데이터만 둔다. 이
+    서명은 원문 대조 및 조건 확인 기록이며 권리자의 이용 허가 취득을 뜻하지 않는다.'
+  file: swiftships_commercial_220_offshore_supply.pdf
+  sha256: bd09210c0923d0c34b0a86babb8965b386d959a6a8ab72e3ff507306e1230740
+  verified_by: Codex (2026-10-17; 사용자 승인에 따른 이번 BOM 검토 한정, D-106)

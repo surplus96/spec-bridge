@@ -1,7 +1,9 @@
 // BOM linking (D-103): upload an Excel / Markdown BOM, read each row's outcome (추가, 이미
 // 있음, 검토 대기 and why), pick a product for a pending row with a reason, then apply. The
 // server plans again on apply and refuses an out-of-date preview (409). A product that is
-// not registered is never created here: it comes in through its spec sheet.
+// not registered is never created here: it comes in through its spec sheet. A pending row
+// can ask for a suggestion (D-112): the model chooses, code verifies, and the suggestion only
+// fills the pick form; the reviewer confirms it with "지정".
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { ArrowLeft, Upload, UserCheck } from "lucide-react";
 import { type FormEvent, useRef, useState } from "react";
@@ -13,6 +15,7 @@ import { Badge, type Tone } from "../../ui/Badge";
 type BomView = components["schemas"]["BomView"];
 type BomRow = components["schemas"]["BomRowView"];
 type Pick = components["schemas"]["Pick"];
+type Suggestion = components["schemas"]["Suggestion"];
 
 const STATUS: Record<BomRow["status"], { label: string; tone: Tone }> = {
   new: { label: "추가", tone: "info" },
@@ -188,7 +191,7 @@ function BomPreview({ bomId }: { bomId: string }) {
                 {row.status === "pending" && (
                   <>
                     <p className="text-xs text-yellow-900">{row.reason}</p>
-                    <PickForm row={row} onPick={choose} />
+                    <PickForm bomId={bomId} picks={picks} row={row} onPick={choose} />
                   </>
                 )}
               </td>
@@ -225,10 +228,35 @@ function BomPreview({ bomId }: { bomId: string }) {
   );
 }
 
-function PickForm({ row, onPick }: { row: BomRow; onPick: (pick: Pick) => void }) {
+interface PickProps {
+  bomId: string;
+  picks: Pick[];
+  row: BomRow;
+  onPick: (pick: Pick) => void;
+}
+
+function PickForm({ bomId, picks, row, onPick }: PickProps) {
   const [productId, setProductId] = useState("");
   const [reason, setReason] = useState("");
   const options = row.candidates ?? [];
+  const asking = useMutation({
+    mutationFn: async (): Promise<Suggestion> => {
+      const { data, error } = await api.POST("/api/boms/{bom_id}/suggest", {
+        params: { path: { bom_id: bomId } },
+        body: { line: row.line, picks },
+      });
+      if (error || !data) throw new Error(detailOf(error, "제안을 받지 못했습니다"));
+      return data;
+    },
+    onSuccess: (s) => {
+      if (s.product_id) {
+        setProductId(s.product_id);
+        setReason(`모델 제안 확인: ${s.reason}`);
+      }
+    },
+  });
+  const suggested = asking.data;
+  const named = options.find((c) => c.product_id === suggested?.product_id);
   if (options.length === 0) {
     return (
       <p className="text-xs text-gray-600">
@@ -270,13 +298,41 @@ function PickForm({ row, onPick }: { row: BomRow; onPick: (pick: Pick) => void }
           placeholder="예: BOM의 모델명 오타"
         />
       </label>
-      <button
-        type="submit"
-        disabled={!productId || !reason.trim()}
-        className="rounded bg-gray-700 px-2 py-0.5 text-white disabled:opacity-40"
-      >
-        지정
-      </button>
+      <div className="flex items-center gap-2">
+        <button
+          type="submit"
+          disabled={!productId || !reason.trim()}
+          className="rounded bg-gray-700 px-2 py-0.5 text-white disabled:opacity-40"
+        >
+          지정
+        </button>
+        <button
+          type="button"
+          disabled={asking.isPending}
+          className="rounded border px-2 py-0.5 disabled:opacity-40"
+          onClick={() => asking.mutate()}
+        >
+          {asking.isPending ? "묻는 중…" : "제안 받기"}
+        </button>
+      </div>
+      {suggested?.product_id && (
+        <p className="text-blue-900">
+          제안: {named?.model_designation ?? suggested.product_id} ({suggested.product_id}) —{" "}
+          {suggested.reason}. 맞으면 "지정"을 누르세요.
+        </p>
+      )}
+      {suggested && !suggested.product_id && (
+        <p className="text-gray-700">
+          제안 없음 —{" "}
+          {suggested.rejected ??
+            (suggested.model_answer ? suggested.reason : "모델이 후보를 고르지 않았습니다")}
+        </p>
+      )}
+      {asking.isError && (
+        <p role="alert" className="text-red-700">
+          {asking.error.message}
+        </p>
+      )}
       <p className="text-gray-500">목록에 없으면 사양서로 먼저 등록합니다.</p>
     </form>
   );

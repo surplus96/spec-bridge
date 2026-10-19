@@ -18,7 +18,7 @@ from typing import Any
 
 import httpx
 
-URL = sys.argv[1] if len(sys.argv) > 1 else "http://127.0.0.1:8000"
+URL = sys.argv[1] if len(sys.argv) > 1 else "http://127.0.0.1:8010"
 S1_DOC = Path(sys.argv[2] if len(sys.argv) > 2 else "data/synth/inputs/SYN-011.docx")
 S2_DOC = Path(sys.argv[3] if len(sys.argv) > 3 else "data/synth/inputs/SYN-004.docx")
 WAIT_S = 900

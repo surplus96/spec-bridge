@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
-# MVP check (W4-7): start the spec-bridge API on 127.0.0.1:8000, upload one document,
+# MVP check (W4-7): start the spec-bridge API on 127.0.0.1:8010, upload one document,
 # save the registration JSON, print a summary and stop the server.
 #
 #   scripts/mvp_check.sh openai  [document]   # cloud LLM: pipeline wiring check (fast)
 #   scripts/mvp_check.sh ollama  [document]   # local LLM: the local-first MVP check
 #
 # Default document: data/synth/inputs/SYN-004.docx (has a duplicate in the dev registry).
-# Port 8000 must be free; if another program holds it, the script stops and names it
+# Port 8010 must be free; if another program holds it, the script stops and names it
 # instead of killing anything.
 set -euo pipefail
 
 PROVIDER="${1:-openai}"
 DOCUMENT="${2:-data/synth/inputs/SYN-004.docx}"
-PORT=8000
+PORT=8010
 URL="http://127.0.0.1:${PORT}"
 NAME="$(basename "${DOCUMENT%.*}")"
 OUT="var/api/${NAME}-${PROVIDER}.json"

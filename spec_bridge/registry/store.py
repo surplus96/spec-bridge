@@ -306,6 +306,28 @@ class RegistryStore:
         )
         return [str(r[0]) for r in rows]
 
+    def identities(self) -> list[dict[str, Any]]:
+        """Every product's identity (id, class, maker, model) for searching a BOM row (D-108)."""
+        rows = self.conn.execute(
+            "SELECT p.product_id, p.class_id, p.maker_id, m.name, p.model_designation"
+            " FROM products p JOIN manufacturers m ON m.maker_id = p.maker_id"
+            " ORDER BY p.product_id"
+        )
+        keys = ("product_id", "class_id", "maker_id", "maker_name", "model_designation")
+        return [dict(zip(keys, r, strict=True)) for r in rows]
+
+    def maker_aliases(self) -> dict[str, list[str]]:
+        """Other names of each maker (its registered name left out), for BOM suggestions."""
+        out: dict[str, list[str]] = {}
+        for maker_id, alias, name in self.conn.execute(
+            "SELECT a.maker_id, a.alias_text, m.name FROM manufacturer_aliases a"
+            " JOIN manufacturers m ON m.maker_id = a.maker_id ORDER BY a.maker_id, a.alias_text"
+        ):
+            names = out.setdefault(str(maker_id), [])
+            if alias != name:
+                names.append(str(alias))
+        return out
+
     def products_in_classes(self, classes: list[str]) -> list[dict[str, Any]]:
         """Products of the given classes with their maker's name, by product id."""
         marks = ", ".join("?" for _ in classes) or "NULL"

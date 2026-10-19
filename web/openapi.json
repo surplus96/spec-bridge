@@ -1824,6 +1824,92 @@
         "title": "ReviewPrompt",
         "type": "object"
       },
+      "SuggestRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "line": {
+            "title": "Line",
+            "type": "integer"
+          },
+          "picks": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/Pick"
+            },
+            "title": "Picks",
+            "type": "array"
+          }
+        },
+        "required": [
+          "line"
+        ],
+        "title": "SuggestRequest",
+        "type": "object"
+      },
+      "Suggestion": {
+        "additionalProperties": false,
+        "properties": {
+          "line": {
+            "title": "Line",
+            "type": "integer"
+          },
+          "model_answer": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Model Answer"
+          },
+          "product_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Product Id"
+          },
+          "reason": {
+            "default": "",
+            "title": "Reason",
+            "type": "string"
+          },
+          "rejected": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rejected"
+          },
+          "unavailable": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Unavailable"
+          }
+        },
+        "required": [
+          "line",
+          "product_id"
+        ],
+        "title": "Suggestion",
+        "type": "object"
+      },
       "SupplementRequest": {
         "additionalProperties": false,
         "properties": {
@@ -2279,6 +2365,56 @@
           }
         },
         "summary": "Preview Bom"
+      }
+    },
+    "/api/boms/{bom_id}/suggest": {
+      "post": {
+        "description": "A product for a pending row: the model chooses, code verifies (D-112). Nothing is\nwritten but an audit row; the reviewer confirms the suggestion as a pick. 422 for a\nrow that is not pending, 503 when the model server cannot be reached.",
+        "operationId": "suggest_bom_row_api_boms__bom_id__suggest_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "bom_id",
+            "required": true,
+            "schema": {
+              "title": "Bom Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SuggestRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Suggestion"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Suggest Bom Row"
       }
     },
     "/api/display": {

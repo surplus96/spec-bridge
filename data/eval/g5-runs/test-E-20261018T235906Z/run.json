@@ -1,0 +1,24 @@
+{
+ "at": "20261018T235906Z",
+ "candidates_k": 10,
+ "config": "E",
+ "embedding": "bge-m3",
+ "examples_k": 3,
+ "files": {
+  "data/reference/bom-notation-patterns.yaml": "44351d7b293f0672d9558af9a0c159356b33f6f0cbaf0d500b188a0cfd9ff8be",
+  "data/synth/bom-rows/dev.json": "dd139569ac80b1bace5e826476a8458937a95aee86bb27cce49b0639a22cef87",
+  "data/synth/bom-rows/test.json": "d13c97988c68c9042a1bc0f6ab6d7fd59117bf2813add73cc63585ccb6aef786",
+  "data/synth/registry/dev.jsonl": "46d401b80ed5feb0738d2534f86a3dc9674502a3cbd074a4a3e5e39ef161af91",
+  "data/synth/registry/manufacturers.json": "c7b3b5a8ead644b24ed23ca8cfb062c724d0c6d46714251d8995634e221e63a4",
+  "data/synth/registry/test.jsonl": "8c623d1c17db4c997659ecb8902f2f979149696712c69cf526946375f2e7fa55",
+  "ontology/ontology.yaml": "78d3fea6309d1c8a98f4fc8d3f0a241e18ec6110c12f6ac8d53626fa1a158b69",
+  "spec_bridge/bom/g5/resolve.py": "53095cb50a24f7be9f0d6b85d5f2c34234b00e14346e7f46e0e2c751b822edf5",
+  "spec_bridge/bom/g5/rows.py": "803ed6074827855eb7ee3f7e357bfab6e62e5b09968f87ed4f1c41090f296c8a",
+  "spec_bridge/bom/g5/run.py": "78b492a41cbdcaa54959aa89597cb1c3e08bdb0cb7afa98a79f23ed6cf24bd27",
+  "spec_bridge/bom/linker.py": "aa07dc56dc4ffff0a791b27c0bf6b0be90f5e323cc37ce4af1870e9b496badb3",
+  "spec_bridge/bom/reader.py": "c75498ed317c54441e8ebf003de2de580008aa78c7ae22338ab8185a128760c1"
+ },
+ "model": "exaone3.5:7.8b",
+ "model_digest": "1b48a3a1c175294d574b9a024891c7921b4583fed48554102c8ebc011ba5dbe7",
+ "split": "test"
+}

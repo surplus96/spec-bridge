@@ -6,8 +6,9 @@ Three files (docs/dataset-plan.md 4-5):
 - data/reference/bom-notation-patterns.yaml  notation patterns with source refs (committed;
   descriptions only, never the original text)
 
-Only entries the user signed (`verified_by`) count. The patterns come from the sources the
-user collects, never from memory (H3); this module checks shape and counts, it adds none.
+Only signed entries (`verified_by`) count. Signatures are normally the user's; D-106
+authorizes Codex signatures for that BOM review only. Patterns come from collected
+sources, never from memory (H3); this module checks shape and counts, not usage rights.
 
     uv run python -m spec_bridge.bom.notation
 """
@@ -51,7 +52,7 @@ class Source(StrictModel):
     license_note: str | None = None
     file: str | None = None  # the local original's name in data/reference/bom/
     sha256: str | None = None  # of the original; none for a user's own record
-    verified_by: str | None = None  # the user only
+    verified_by: str | None = None  # user; scoped Codex exception recorded in D-106
 
 
 class SourceRef(StrictModel):

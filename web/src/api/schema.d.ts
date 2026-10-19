@@ -75,6 +75,28 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/boms/{bom_id}/suggest": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Suggest Bom Row
+         * @description A product for a pending row: the model chooses, code verifies (D-112). Nothing is
+         *     written but an audit row; the reviewer confirms the suggestion as a pick. 422 for a
+         *     row that is not pending, 503 when the model server cannot be reached.
+         */
+        post: operations["suggest_bom_row_api_boms__bom_id__suggest_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/display": {
         parameters: {
             query?: never;
@@ -930,6 +952,34 @@ export interface components {
              */
             unresolved_notes: components["schemas"]["UnresolvedNote"][];
         };
+        /** SuggestRequest */
+        SuggestRequest: {
+            /** Line */
+            line: number;
+            /**
+             * Picks
+             * @default []
+             */
+            picks: components["schemas"]["Pick"][];
+        };
+        /** Suggestion */
+        Suggestion: {
+            /** Line */
+            line: number;
+            /** Model Answer */
+            model_answer?: string | null;
+            /** Product Id */
+            product_id: string | null;
+            /**
+             * Reason
+             * @default
+             */
+            reason: string;
+            /** Rejected */
+            rejected?: string | null;
+            /** Unavailable */
+            unavailable?: string | null;
+        };
         /** SupplementRequest */
         SupplementRequest: {
             /** Class Id */
@@ -1152,6 +1202,41 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["BomView"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    suggest_bom_row_api_boms__bom_id__suggest_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                bom_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["SuggestRequest"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Suggestion"];
                 };
             };
             /** @description Validation Error */

@@ -8,6 +8,7 @@ Nothing is interpreted: the cells are kept as written and the linker identifies 
 A file that does not have this shape is refused with the reason.
 """
 
+import re
 from pathlib import Path
 from typing import Annotated
 
@@ -39,11 +40,30 @@ class BomDocument(StrictModel):
     rows: list[BomRow]
 
 
+WORDS = {
+    "one": 1,
+    "two": 2,
+    "three": 3,
+    "four": 4,
+    "five": 5,
+    "six": 6,
+    "seven": 7,
+    "eight": 8,
+    "nine": 9,
+    "ten": 10,
+}  # plain English number words, not a domain list
+# a number with the marks vessel machinery lists put around it (D-108): 2, 2 x, 2x, ×2,
+# (2), 2 pcs, 2 sets; or a number word
+QUANTITY = re.compile(r"\(?\s*[x×]?\s*(\d+)\s*[x×]?\s*\)?\s*(?:pcs?|sets?|units?|ea)?\.?", re.I)
+
+
 def _quantity(text: object, line: int) -> int:
     value = str(text).strip()
-    if not value.isdigit() or int(value) < 1:
+    match = QUANTITY.fullmatch(value)
+    number = int(match[1]) if match else WORDS.get(value.lower(), 0)
+    if number < 1:
         raise BomError(f"line {line}: quantity {value!r} is not a whole number of at least 1")
-    return int(value)
+    return number
 
 
 def _row(cells: list[str], line: int) -> BomRow:

@@ -1,11 +1,12 @@
 // Dev server and build for the review UI (W5-5, D-061).
-// Dev: `npm run dev` on 127.0.0.1:5173, API calls proxied to the FastAPI server on :8000.
+// Dev: `npm run dev` on 127.0.0.1:5173, API calls proxied to the FastAPI server on :8010
+// (8010, not 8000: 8000 is often taken by other local projects).
 // Build: `npm run build` → dist/, which FastAPI serves on the same origin (no CORS, no CDN).
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vitest/config";
 
-const api = "http://127.0.0.1:8000";
+const api = "http://127.0.0.1:8010";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],

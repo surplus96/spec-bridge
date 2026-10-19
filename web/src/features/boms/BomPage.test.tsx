@@ -125,4 +125,58 @@ describe("BomPage", () => {
     renderWithQuery(<BomPage bomId="BOM-UP-1" onOpen={() => {}} onBack={() => {}} />);
     expect(await screen.findByRole("button", { name: "적용" })).toBeDisabled();
   });
+
+  function serveSuggestion(reply: () => Response) {
+    serve();
+    server.use(http.post("*/api/boms/BOM-UP-1/suggest", reply));
+  }
+
+  it("fills the pick form with a verified suggestion for the reviewer to confirm (D-112)", async () => {
+    serveSuggestion(() =>
+      HttpResponse.json({
+        line: 10,
+        product_id: "REG-PUMP-001",
+        model_answer: "REG-PUMP-001",
+        reason: "same maker, letters swapped",
+        rejected: null,
+        unavailable: null,
+      }),
+    );
+    renderWithQuery(<BomPage bomId="BOM-UP-1" onOpen={() => {}} onBack={() => {}} />);
+    const pick = await screen.findByRole("form", { name: "줄 10 제품 지정" });
+    fireEvent.click(within(pick).getByRole("button", { name: "제안 받기" }));
+    expect(await within(pick).findByText(/제안: VX013-001/)).toBeInTheDocument();
+    expect((within(pick).getByLabelText("제품") as HTMLSelectElement).value).toBe("REG-PUMP-001");
+    expect((within(pick).getByLabelText("사유(필수)") as HTMLInputElement).value).toMatch(
+      /모델 제안 확인/,
+    );
+  });
+
+  it("says when there is no suggestion and why", async () => {
+    serveSuggestion(() =>
+      HttpResponse.json({
+        line: 10,
+        product_id: null,
+        model_answer: "REG-PUMP-001",
+        reason: "closest",
+        rejected: "the row's model cell does not hold VX013-001",
+        unavailable: null,
+      }),
+    );
+    renderWithQuery(<BomPage bomId="BOM-UP-1" onOpen={() => {}} onBack={() => {}} />);
+    const pick = await screen.findByRole("form", { name: "줄 10 제품 지정" });
+    fireEvent.click(within(pick).getByRole("button", { name: "제안 받기" }));
+    expect(await within(pick).findByText(/제안 없음/)).toHaveTextContent("does not hold");
+    expect((within(pick).getByLabelText("제품") as HTMLSelectElement).value).toBe("");
+  });
+
+  it("says when the model server cannot be reached", async () => {
+    serveSuggestion(() =>
+      HttpResponse.json({ detail: "the model server cannot be reached: down" }, { status: 503 }),
+    );
+    renderWithQuery(<BomPage bomId="BOM-UP-1" onOpen={() => {}} onBack={() => {}} />);
+    const pick = await screen.findByRole("form", { name: "줄 10 제품 지정" });
+    fireEvent.click(within(pick).getByRole("button", { name: "제안 받기" }));
+    expect(await within(pick).findByRole("alert")).toHaveTextContent("cannot be reached");
+  });
 });

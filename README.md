@@ -64,10 +64,10 @@ ollama pull exaone3.5:7.8b
 ollama pull bge-m3
 npm --prefix web ci
 npm --prefix web run build
-OFFLINE=1 SPEC_BRIDGE_APP_DIR=var/app uv run uvicorn spec_bridge.api.app:app --host 127.0.0.1 --port 8000
+OFFLINE=1 SPEC_BRIDGE_APP_DIR=var/app uv run uvicorn spec_bridge.api.app:app --host 127.0.0.1 --port 8010
 ```
 
-브라우저에서 `http://127.0.0.1:8000/`을 열고 `data/synth/inputs/`의 사양서를 올립니다. 모델 다운로드(Docling·Ollama)만 네트워크를 쓰고, 그 뒤로는 오프라인으로 동작합니다. Docling 모델이 없으면 PDF 처리가 거부됩니다(파싱 중 자동 다운로드 없음). 검사·W6 평가 재현·오프라인 확인 방법은 [실행 가이드](docs/run-guide.md)에 있습니다.
+브라우저에서 `http://127.0.0.1:8010/`을 열고 `data/synth/inputs/`의 사양서를 올립니다. 모델 다운로드(Docling·Ollama)만 네트워크를 쓰고, 그 뒤로는 오프라인으로 동작합니다. Docling 모델이 없으면 PDF 처리가 거부됩니다(파싱 중 자동 다운로드 없음). 검사·W6 평가 재현·오프라인 확인 방법은 [실행 가이드](docs/run-guide.md)에 있습니다.
 
 ## 문서
 
@@ -94,8 +94,10 @@ W6 평가 수치와 동결 기록에는 영향이 없습니다(`freeze verify`·
 - **BOM 1단계**(D-101): Excel·Markdown BOM 표의 행을 제조사·모델로 기존 제품에 식별하고 `has_component`(공급 범위 포함) 관계를 추가합니다. 명령줄 미리보기 뒤 `--apply`로 저장하고, 찾지 못한 행은 검토 대기로 남깁니다. 합성 BOM 4건 12행이 정답과 같게 식별됩니다(기능 확인).
 - **BOM 화면**(D-103): 검토 화면의 "BOM 연결"에서 업로드 → 미리보기 → 적용합니다. 검토 대기 행은 담당자가 같은 종류의 등록 제품을 사유와 함께 지정하고, 제품 상세에 구성품과 상위 제품이 보입니다.
 
+- **G5 후속 실험**(D-107~D-111, [보고서](docs/reports/g5-followup-bom.md)): 표기가 제각각인 BOM 행을 등록 제품에 연결하는 실험입니다. 테스트 80행(합성)에서 LLM + 코드 검증(C·E)이 규칙(R)보다 정확도가 +0.31 높고(1.000 대 0.688) 잘못 연결은 0입니다. 해결 사례 검색(E)은 C보다 낫지 않아 사전 등록 기준 (c)가 미달이고, 가설은 불성립입니다. 결론 범위는 선박 기계 목록에서 관찰한 표기 패턴 안입니다.
+- **BOM 후보 제안**(D-112): BOM 화면의 검토 대기 행에서 "제안 받기"를 누르면, 로컬 모델이 후보를 고르고 코드가 모델 코드와 클래스를 확인한 제안이 지정 양식을 채웁니다. 담당자가 "지정"으로 확정하고, 자동 연결은 하지 않습니다.
+
 ## 이후 확장 (미구현)
 
 - **BOM 행에서 새 제품 등록**: 하지 않습니다. 등록되지 않은 구성품은 사양서로 먼저 등록합니다(NFR-07).
-- **G5 후속 실험**(보류, D-102): 비정형 BOM 행 매핑에 해결 사례 RAG를 적용합니다. 실제 BOM 표기 사례를 확보한 뒤에 진행합니다([확보 절차](docs/dataset-plan.md)의 4-5).
 - **호스트 연동**: Atlas CMMS([설계안](docs/host-integration-design.md))와 연동합니다. 대안 호스트 openMAINT는 조사만 해 두었습니다.

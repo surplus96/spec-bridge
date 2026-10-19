@@ -4,6 +4,7 @@
     GET  /api/boms/{id}               the preview again, against the registry as it is now
     POST /api/boms/{id}/preview       the preview with the reviewer's picks for pending rows
     POST /api/boms/{id}/apply         plan_key + picks -> the new relations are written
+    POST /api/boms/{id}/suggest       a pending row's line -> a verified suggestion (D-112)
 
 The uploaded file is kept in <app>/boms/<id>/ and its hash goes with the event (D-103 7).
 Apply plans again and refuses (409) when the plan differs from the preview the reviewer
@@ -21,6 +22,7 @@ from fastapi import APIRouter, HTTPException, UploadFile
 from spec_bridge.api.jobs import Jobs, JobsDep
 from spec_bridge.bom.linker import BomPlan, Pick, apply, candidates, plan, plan_key
 from spec_bridge.bom.reader import BomError, read_bom
+from spec_bridge.bom.suggest import Suggestion, suggest_from
 from spec_bridge.ontology.facts import StrictModel
 
 ALLOWED = (".xlsx", ".md")
@@ -59,6 +61,11 @@ class BomView(StrictModel):
 
 
 class PreviewRequest(StrictModel):
+    picks: list[Pick] = []
+
+
+class SuggestRequest(StrictModel):
+    line: int
     picks: list[Pick] = []
 
 
@@ -164,3 +171,25 @@ def apply_bom(bom_id: str, request: ApplyRequest, jobs: JobsDep) -> BomView:
         extra = {"bom_id": bom_id, "file_name": path.name, "sha256": digest}
         added = apply(jobs.registry.store, result, "reviewer", extra)
         return _view(jobs, bom_id, path, _plan(jobs, path, request.picks), added)
+
+
+@router.post("/boms/{bom_id}/suggest")
+def suggest_bom_row(bom_id: str, request: SuggestRequest, jobs: JobsDep) -> Suggestion:
+    """A product for a pending row: the model chooses, code verifies (D-112). Nothing is
+    written but an audit row; the reviewer confirms the suggestion as a pick. 422 for a
+    row that is not pending, 503 when the model server cannot be reached."""
+    path = _file(jobs, bom_id)
+    store = jobs.registry.store
+    with jobs.registry.lock:  # copy what the model needs; do not hold the lock while it runs
+        result = _plan(jobs, path, request.picks)
+        products, aliases = store.identities(), store.maker_aliases()
+    found = next((r for r in result.rows if r.row.line == request.line), None)
+    if found is None or found.status != "pending":
+        raise HTTPException(422, f"line {request.line} is not a row waiting for review")
+    suggestion = suggest_from(
+        products, aliases, jobs.service.onto, jobs.service.provider, found.row, result.root_id
+    )
+    jobs.registry.audit(bom_id, "bom_suggestion", suggestion.model_dump(), "system")
+    if suggestion.unavailable is not None:
+        raise HTTPException(503, f"the model server cannot be reached: {suggestion.unavailable}")
+    return suggestion

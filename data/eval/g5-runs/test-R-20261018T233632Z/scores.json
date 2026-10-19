@@ -1,0 +1,95 @@
+{
+ "accuracy": 0.6875,
+ "by_kind": {
+  "driver": {
+   "accuracy": 1.0,
+   "n": 6,
+   "pending": 1.0,
+   "wrong_link": 0.0
+  },
+  "no_model": {
+   "accuracy": 1.0,
+   "n": 7,
+   "pending": 1.0,
+   "wrong_link": 0.0
+  },
+  "product": {
+   "accuracy": 0.5833333333333334,
+   "n": 60,
+   "pending": 0.4166666666666667,
+   "wrong_link": 0.0
+  },
+  "unregistered": {
+   "accuracy": 1.0,
+   "n": 7,
+   "pending": 1.0,
+   "wrong_link": 0.0
+  }
+ },
+ "by_pattern": {
+  "PAT-01": {
+   "accuracy": 0.6785714285714286,
+   "n": 28,
+   "pending": 0.4642857142857143,
+   "wrong_link": 0.0
+  },
+  "PAT-02": {
+   "accuracy": 0.7272727272727273,
+   "n": 22,
+   "pending": 0.5454545454545454,
+   "wrong_link": 0.0
+  },
+  "PAT-04": {
+   "accuracy": 0.6666666666666666,
+   "n": 9,
+   "pending": 0.3333333333333333,
+   "wrong_link": 0.0
+  },
+  "PAT-05": {
+   "accuracy": 0.5428571428571428,
+   "n": 35,
+   "pending": 0.7142857142857143,
+   "wrong_link": 0.0
+  },
+  "PAT-07": {
+   "accuracy": 1.0,
+   "n": 7,
+   "pending": 1.0,
+   "wrong_link": 0.0
+  },
+  "PAT-08": {
+   "accuracy": 1.0,
+   "n": 6,
+   "pending": 1.0,
+   "wrong_link": 0.0
+  },
+  "PAT-09": {
+   "accuracy": 0.6470588235294118,
+   "n": 17,
+   "pending": 0.35294117647058826,
+   "wrong_link": 0.0
+  },
+  "PAT-10": {
+   "accuracy": 0.0,
+   "n": 13,
+   "pending": 1.0,
+   "wrong_link": 0.0
+  },
+  "PAT-11": {
+   "accuracy": 0.6,
+   "n": 20,
+   "pending": 0.4,
+   "wrong_link": 0.0
+  },
+  "PAT-12": {
+   "accuracy": 0.6666666666666666,
+   "n": 30,
+   "pending": 0.6666666666666666,
+   "wrong_link": 0.0
+  }
+ },
+ "candidates_recall": null,
+ "n": 80,
+ "pending": 0.5625,
+ "wrong_link": 0.0
+}

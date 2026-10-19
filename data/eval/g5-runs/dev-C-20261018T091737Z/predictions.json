@@ -1,0 +1,1891 @@
+[
+ {
+  "answer": "REG-2S-001",
+  "examples": [],
+  "gold": "REG-2S-001",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-2S-001",
+  "patterns": [
+   "PAT-02",
+   "PAT-04",
+   "PAT-05",
+   "PAT-11"
+  ],
+  "reason": "The model code 'VX001/001' closely matches 'VX001-001' (ignoring minor formatting differences), and the maker matches exactly. The component class 'TwoStrokeMainEngine' also aligns with the candidate's class.",
+  "rejected": null,
+  "row_id": "dev-P000"
+ },
+ {
+  "answer": "REG-2S-002",
+  "examples": [],
+  "gold": "REG-2S-002",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-2S-002",
+  "patterns": [
+   "PAT-02",
+   "PAT-04",
+   "PAT-05",
+   "PAT-11"
+  ],
+  "reason": "The model code VX001-002 closely matches VX001.002 (ignoring minor formatting differences), and the maker matches exactly.",
+  "rejected": null,
+  "row_id": "dev-P001"
+ },
+ {
+  "answer": "REG-2S-003",
+  "examples": [],
+  "gold": "REG-2S-003",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-2S-003",
+  "patterns": [
+   "PAT-03",
+   "PAT-04",
+   "PAT-06"
+  ],
+  "reason": "The row specifies a model code 'VX001-003' which exactly matches the model code of REG-2S-003, and both share the same maker 'SGDW-20261007-A Synthetic Works / SGDW-A Synthetic Works'. The component class 'TwoStrokeMainEngine' also matches.",
+  "rejected": null,
+  "row_id": "dev-P002"
+ },
+ {
+  "answer": "REG-2S-004",
+  "examples": [],
+  "gold": "REG-2S-004",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-2S-004",
+  "patterns": [
+   "PAT-02",
+   "PAT-06",
+   "PAT-11"
+  ],
+  "reason": "The model code VX001/004 closely matches VX001-004 (considering acceptable variations in separators), and the maker matches exactly despite slight variation in spelling ('Works' vs 'Works').",
+  "rejected": null,
+  "row_id": "dev-P003"
+ },
+ {
+  "answer": "REG-2S-005",
+  "examples": [],
+  "gold": "REG-2S-005",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-2S-005",
+  "patterns": [
+   "PAT-04",
+   "PAT-06",
+   "PAT-12"
+  ],
+  "reason": "The row specifies a model code 'VX001-005' which exactly matches the model code of REG-2S-005, and both share the same maker 'SGDW-20261007-A Synthetic Works / SGDW-A Synthetic Works'. The slight variation in maker name ('Synthetic Works' vs 'Synthetic Worsk') is likely a typo and does not affect the match.",
+  "rejected": null,
+  "row_id": "dev-P004"
+ },
+ {
+  "answer": "REG-2S-006",
+  "examples": [],
+  "gold": "REG-2S-006",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-2S-006",
+  "patterns": [
+   "PAT-02",
+   "PAT-05",
+   "PAT-11"
+  ],
+  "reason": "The model code VX001-006 matches exactly with REG-2S-006's model code, and the maker matches exactly as well.",
+  "rejected": null,
+  "row_id": "dev-P005"
+ },
+ {
+  "answer": "REG-2S-007",
+  "examples": [],
+  "gold": "REG-2S-007",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-2S-007",
+  "patterns": [
+   "PAT-02",
+   "PAT-05",
+   "PAT-11"
+  ],
+  "reason": "The model code VX001-007 matches exactly with REG-2S-007's model code, and the maker matches SGDW-A Synthetic Works (considering variations in capitalization).",
+  "rejected": null,
+  "row_id": "dev-P006"
+ },
+ {
+  "answer": "REG-2S-008",
+  "examples": [],
+  "gold": "REG-2S-008",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-2S-008",
+  "patterns": [
+   "PAT-04",
+   "PAT-05",
+   "PAT-11",
+   "PAT-12"
+  ],
+  "reason": "The model code VX001-008 closely matches VX001.008 (considering minor formatting differences), and the maker matches exactly.",
+  "rejected": null,
+  "row_id": "dev-P007"
+ },
+ {
+  "answer": "REG-2S-009",
+  "examples": [],
+  "gold": "REG-2S-009",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-2S-009",
+  "patterns": [
+   "PAT-01",
+   "PAT-04",
+   "PAT-06",
+   "PAT-11"
+  ],
+  "reason": "The row specifies a model code 'VX002 009' (considering '009' as part of the model identifier) that matches exactly with the model 'VX002-009' listed under candidate REG-2S-009, and the maker matches closely with minor typo ('Syntehtic' instead of 'Synthetic').",
+  "rejected": null,
+  "row_id": "dev-P008"
+ },
+ {
+  "answer": "REG-2S-010",
+  "examples": [],
+  "gold": "REG-2S-010",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-2S-010",
+  "patterns": [
+   "PAT-05",
+   "PAT-12"
+  ],
+  "reason": "The row specifies a model code 'VX002-010' which exactly matches the model code of REG-2S-010, and the maker 'SGDW-B' matches exactly (considering potential variations in maker abbreviation).",
+  "rejected": null,
+  "row_id": "dev-P009"
+ },
+ {
+  "answer": "REG-2S-011",
+  "examples": [],
+  "gold": "REG-2S-011",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-2S-011",
+  "patterns": [
+   "PAT-01"
+  ],
+  "reason": "The row specifies a model code 'VX002-011' which exactly matches the model code of REG-2S-011, and the maker matches exactly (considering potential variations in maker abbreviation).",
+  "rejected": null,
+  "row_id": "dev-P010"
+ },
+ {
+  "answer": "REG-2S-012",
+  "examples": [],
+  "gold": "REG-2S-012",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-2S-012",
+  "patterns": [
+   "PAT-01",
+   "PAT-04",
+   "PAT-11"
+  ],
+  "reason": "The model code 'VX002 012' matches exactly with REG-2S-012's model code 'VX002-012', and the maker matches exactly (considering variations in abbreviation handling).",
+  "rejected": null,
+  "row_id": "dev-P011"
+ },
+ {
+  "answer": "REG-2S-013",
+  "examples": [],
+  "gold": "REG-2S-013",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-2S-013",
+  "patterns": [
+   "PAT-01",
+   "PAT-04",
+   "PAT-06"
+  ],
+  "reason": "The row specifies a model code 'VX002-013' which exactly matches the model code of REG-2S-013, and the maker matches within acceptable variation ('Synthetic Works' in row vs 'Synthetic Works' in candidate).",
+  "rejected": null,
+  "row_id": "dev-P012"
+ },
+ {
+  "answer": "REG-2S-014",
+  "examples": [],
+  "gold": "REG-2S-014",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-2S-014",
+  "patterns": [
+   "PAT-04",
+   "PAT-12"
+  ],
+  "reason": "The row specifies a model code 'VX002-014' which exactly matches the model code of REG-2S-014, and the maker 'SGDW-B Synthetic Works' matches exactly (considering variations in maker abbreviation).",
+  "rejected": null,
+  "row_id": "dev-P013"
+ },
+ {
+  "answer": "REG-2S-015",
+  "examples": [],
+  "gold": "REG-2S-015",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-2S-015",
+  "patterns": [
+   "PAT-06",
+   "PAT-12"
+  ],
+  "reason": "The row specifies a model code 'VX002-015' which exactly matches the model code of REG-2S-015, and the maker matches within acceptable variation (Snythetic Works is likely a typo for Synthetic Works).",
+  "rejected": null,
+  "row_id": "dev-P014"
+ },
+ {
+  "answer": "REG-4S-001",
+  "examples": [],
+  "gold": "REG-4S-001",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-4S-001",
+  "patterns": [
+   "PAT-03",
+   "PAT-04",
+   "PAT-05"
+  ],
+  "reason": "The model code VX005-001 matches exactly with REG-4S-001's model, and the maker SGDW-A aligns with the provided manufacturer information.",
+  "rejected": null,
+  "row_id": "dev-P015"
+ },
+ {
+  "answer": "REG-4S-002",
+  "examples": [],
+  "gold": "REG-4S-002",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-4S-002",
+  "patterns": [
+   "PAT-03",
+   "PAT-06",
+   "PAT-11"
+  ],
+  "reason": "The model code VX005/002 closely matches VX005-002 (considering acceptable variations in separators), and the maker matches exactly (ignoring minor typo in 'Works').",
+  "rejected": null,
+  "row_id": "dev-P016"
+ },
+ {
+  "answer": "REG-4S-003",
+  "examples": [],
+  "gold": "REG-4S-003",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-4S-003",
+  "patterns": [
+   "PAT-03",
+   "PAT-04",
+   "PAT-11"
+  ],
+  "reason": "The model code VX005-003 matches exactly with REG-4S-003's model code (considering variations in separators), and the maker SGDW-A Synthetic Works matches as well.",
+  "rejected": null,
+  "row_id": "dev-P017"
+ },
+ {
+  "answer": "REG-4S-004",
+  "examples": [],
+  "gold": "REG-4S-004",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-4S-004",
+  "patterns": [
+   "PAT-03",
+   "PAT-06"
+  ],
+  "reason": "The row specifies a FourStrokeEngine with model VX005-004 and matches the maker 'SGDW-A Synthetic Works'. The closest matching candidate product_id is REG-4S-004, assuming slight variation in naming conventions or numbering does not disqualify it based on the given criteria.",
+  "rejected": null,
+  "row_id": "dev-P018"
+ },
+ {
+  "answer": "REG-4S-005",
+  "examples": [],
+  "gold": "REG-4S-005",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-4S-005",
+  "patterns": [
+   "PAT-05",
+   "PAT-12"
+  ],
+  "reason": "The row specifies a model code 'VX005-005' and matches the maker 'SGDW-20261007-A Synthetic Works', aligning perfectly with candidate REG-4S-005.",
+  "rejected": null,
+  "row_id": "dev-P019"
+ },
+ {
+  "answer": "REG-4S-006",
+  "examples": [],
+  "gold": "REG-4S-006",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-4S-006",
+  "patterns": [
+   "PAT-03",
+   "PAT-04",
+   "PAT-06",
+   "PAT-11"
+  ],
+  "reason": "The model code VX005-006 closely matches VX005/006 (ignoring minor formatting differences), and the maker matches exactly (considering slight variation in spelling from 'Synthetic Works').",
+  "rejected": null,
+  "row_id": "dev-P020"
+ },
+ {
+  "answer": "REG-4S-007",
+  "examples": [],
+  "gold": "REG-4S-007",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-4S-007",
+  "patterns": [
+   "PAT-03",
+   "PAT-05"
+  ],
+  "reason": "The row specifies a model code 'VX005-007' which exactly matches the model code of REG-4S-007, and the maker 'SGDW-A' matches as well, fitting all criteria given.",
+  "rejected": null,
+  "row_id": "dev-P021"
+ },
+ {
+  "answer": "REG-4S-008",
+  "examples": [],
+  "gold": "REG-4S-008",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-4S-008",
+  "patterns": [
+   "PAT-03",
+   "PAT-04",
+   "PAT-05"
+  ],
+  "reason": "The row specifies a FourStrokeEngine with model VX005-008 (ignoring additional dimensions like '210 mm' which don't affect matching criteria), and the maker matches exactly with 'SGDW-20261007-A Synthetic Works'. The model code and maker criteria align perfectly with REG-4S-008.",
+  "rejected": null,
+  "row_id": "dev-P022"
+ },
+ {
+  "answer": "REG-4S-009",
+  "examples": [],
+  "gold": "REG-4S-009",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-4S-009",
+  "patterns": [
+   "PAT-04",
+   "PAT-05",
+   "PAT-11",
+   "PAT-12"
+  ],
+  "reason": "The model code VX006-009 closely matches VX006.009 (ignoring minor formatting difference), and the maker SGDW-B Synthetic Works aligns with the provided manufacturer information.",
+  "rejected": null,
+  "row_id": "dev-P023"
+ },
+ {
+  "answer": "REG-4S-010",
+  "examples": [],
+  "gold": "REG-4S-010",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-4S-010",
+  "patterns": [
+   "PAT-04",
+   "PAT-05",
+   "PAT-12"
+  ],
+  "reason": "The row specifies a model code 'VX006-010' which exactly matches the model code of REG-4S-010, and the maker 'SGDW-B Synthetic Works' aligns with the maker specified in the row, considering variations in maker abbreviation are acceptable.",
+  "rejected": null,
+  "row_id": "dev-P024"
+ },
+ {
+  "answer": "REG-4S-011",
+  "examples": [],
+  "gold": "REG-4S-011",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-4S-011",
+  "patterns": [
+   "PAT-03",
+   "PAT-06"
+  ],
+  "reason": "The row specifies a model code 'VX006-011' which exactly matches the model code of REG-4S-011, and the maker matches closely with a minor typo ('Synthethic' instead of 'Synthetic') in the row provided compared to the candidate's maker name.",
+  "rejected": null,
+  "row_id": "dev-P025"
+ },
+ {
+  "answer": "REG-4S-012",
+  "examples": [],
+  "gold": "REG-4S-012",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-4S-012",
+  "patterns": [
+   "PAT-01",
+   "PAT-04",
+   "PAT-11"
+  ],
+  "reason": "The model code VX006-012 closely matches the provided model 'VX006.012' (ignoring minor formatting difference), and the maker matches exactly with SGDW-20261007-B Synthetic Works.",
+  "rejected": null,
+  "row_id": "dev-P026"
+ },
+ {
+  "answer": "REG-4S-013",
+  "examples": [],
+  "gold": "REG-4S-013",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-4S-013",
+  "patterns": [
+   "PAT-02",
+   "PAT-04"
+  ],
+  "reason": "The row specifies a model code 'VX006-013' which exactly matches the model code of REG-4S-013, and the maker 'SGDW-B Synthetic Works' matches exactly (considering potential variations in maker abbreviation).",
+  "rejected": null,
+  "row_id": "dev-P027"
+ },
+ {
+  "answer": "REG-4S-014",
+  "examples": [],
+  "gold": "REG-4S-014",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-4S-014",
+  "patterns": [
+   "PAT-02",
+   "PAT-04",
+   "PAT-05",
+   "PAT-11"
+  ],
+  "reason": "The model code VX006-014 closely matches the row's model description (VX006.014), and the maker SGDW-B aligns with the row's manufacturer information.",
+  "rejected": null,
+  "row_id": "dev-P028"
+ },
+ {
+  "answer": "REG-4S-015",
+  "examples": [],
+  "gold": "REG-4S-015",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-4S-015",
+  "patterns": [
+   "PAT-03",
+   "PAT-05"
+  ],
+  "reason": "The model code VX006-015 exactly matches the model specified in the row, and the maker 'SGDW-B Synthetic Works' aligns with the manufacturer mentioned, making REG-4S-015 the correct candidate despite the slight discrepancy in the manufacturer code format (expected 'SGDW-B' vs provided 'SGDW-B SYNTHETIC WORKS'). However, given strict criteria, if exact match including maker code is required without variation, 'none' would be more appropriate due to slight formatting difference.",
+  "rejected": null,
+  "row_id": "dev-P029"
+ },
+ {
+  "answer": "REG-COMP-001",
+  "examples": [],
+  "gold": "REG-COMP-001",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-COMP-001",
+  "patterns": [
+   "PAT-02",
+   "PAT-06",
+   "PAT-11"
+  ],
+  "reason": "The model code VX009.001 closely matches VX009-001 (with a minor separator difference), and the maker SGDW-A Synthetic Works aligns with the provided manufacturer information.",
+  "rejected": null,
+  "row_id": "dev-P030"
+ },
+ {
+  "answer": "REG-COMP-002",
+  "examples": [],
+  "gold": "REG-COMP-002",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-COMP-002",
+  "patterns": [
+   "PAT-03",
+   "PAT-04",
+   "PAT-05"
+  ],
+  "reason": "The model code VX009-002 exactly matches the candidate REG-COMP-002, and the maker matches exactly despite slight formatting differences.",
+  "rejected": null,
+  "row_id": "dev-P031"
+ },
+ {
+  "answer": "REG-COMP-003",
+  "examples": [],
+  "gold": "REG-COMP-003",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-COMP-003",
+  "patterns": [
+   "PAT-04",
+   "PAT-05",
+   "PAT-11",
+   "PAT-12"
+  ],
+  "reason": "The model code 'VX009 003' matches exactly with REG-COMP-003's model code 'VX009-003', and the maker matches exactly despite slight formatting difference in capitalization.",
+  "rejected": null,
+  "row_id": "dev-P032"
+ },
+ {
+  "answer": "REG-COMP-004",
+  "examples": [],
+  "gold": "REG-COMP-004",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-COMP-004",
+  "patterns": [
+   "PAT-01",
+   "PAT-04",
+   "PAT-05",
+   "PAT-11"
+  ],
+  "reason": "The model code 'VX009 004' matches closely with 'VX009-004' from REG-COMP-004, considering potential formatting differences, and the maker matches exactly.",
+  "rejected": null,
+  "row_id": "dev-P033"
+ },
+ {
+  "answer": "REG-COMP-005",
+  "examples": [],
+  "gold": "REG-COMP-005",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-COMP-005",
+  "patterns": [
+   "PAT-05",
+   "PAT-12"
+  ],
+  "reason": "The model code VX009-005 exactly matches the candidate's model code, and the maker SGDW-A aligns with the shortened maker name provided in the row.",
+  "rejected": null,
+  "row_id": "dev-P034"
+ },
+ {
+  "answer": "REG-COMP-006",
+  "examples": [],
+  "gold": "REG-COMP-006",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-COMP-006",
+  "patterns": [
+   "PAT-03",
+   "PAT-04",
+   "PAT-05",
+   "PAT-11"
+  ],
+  "reason": "The model code VX009-006 closely matches the row's model code VX009/006 (ignoring the separator difference), and the maker SGDW-A matches exactly with the provided manufacturer information.",
+  "rejected": null,
+  "row_id": "dev-P035"
+ },
+ {
+  "answer": "REG-COMP-007",
+  "examples": [],
+  "gold": "REG-COMP-007",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-COMP-007",
+  "patterns": [
+   "PAT-03",
+   "PAT-04",
+   "PAT-05",
+   "PAT-11"
+  ],
+  "reason": "The model code 'VX009.007' closely matches 'VX009-007' listed in the candidates, and the maker 'SGDW-A' matches exactly despite minor formatting difference in the row (capitalization and separator). The class 'AirCompressor' also aligns with the candidates provided.",
+  "rejected": null,
+  "row_id": "dev-P036"
+ },
+ {
+  "answer": "REG-COMP-008",
+  "examples": [],
+  "gold": "REG-COMP-008",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-COMP-008",
+  "patterns": [
+   "PAT-06",
+   "PAT-12"
+  ],
+  "reason": "The model code VX009-008 exactly matches the candidate REG-COMP-008, and the maker matches despite slight variation in capitalization ('ySnthetic' instead of 'Synthetic').",
+  "rejected": null,
+  "row_id": "dev-P037"
+ },
+ {
+  "answer": "REG-COMP-009",
+  "examples": [],
+  "gold": "REG-COMP-009",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-COMP-009",
+  "patterns": [
+   "PAT-12"
+  ],
+  "reason": "The row specifies a model code 'VX010-009' and matches the maker 'SGDW-20261007-B Synthetic Works', aligning perfectly with candidate REG-COMP-009.",
+  "rejected": null,
+  "row_id": "dev-P038"
+ },
+ {
+  "answer": "REG-COMP-010",
+  "examples": [],
+  "gold": "REG-COMP-010",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-COMP-010",
+  "patterns": [
+   "PAT-04",
+   "PAT-05",
+   "PAT-11",
+   "PAT-12"
+  ],
+  "reason": "The model code VX010-010 closely matches VX010.010 (considering minor formatting difference), and the maker SGDW-20261007-B aligns with the row's manufacturer entry.",
+  "rejected": null,
+  "row_id": "dev-P039"
+ },
+ {
+  "answer": "REG-COMP-011",
+  "examples": [],
+  "gold": "REG-COMP-011",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-COMP-011",
+  "patterns": [
+   "PAT-01",
+   "PAT-04",
+   "PAT-11"
+  ],
+  "reason": "The model code 'VX010 011' closely matches 'VX010-011' listed under REG-COMP-011, and the manufacturer matches exactly.",
+  "rejected": null,
+  "row_id": "dev-P040"
+ },
+ {
+  "answer": "REG-COMP-012",
+  "examples": [],
+  "gold": "REG-COMP-012",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-COMP-012",
+  "patterns": [
+   "PAT-02",
+   "PAT-04",
+   "PAT-05",
+   "PAT-11"
+  ],
+  "reason": "The model code 'VX010/012' closely matches 'VX010-012' listed under REG-COMP-012, and the manufacturer name aligns with the provided manufacturer information, despite minor formatting differences.",
+  "rejected": null,
+  "row_id": "dev-P041"
+ },
+ {
+  "answer": "REG-COMP-013",
+  "examples": [],
+  "gold": "REG-COMP-013",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-COMP-013",
+  "patterns": [
+   "PAT-02",
+   "PAT-04",
+   "PAT-05"
+  ],
+  "reason": "The row specifies a model code 'VX010-013' and matches the maker 'SGDW-20261007-B', aligning perfectly with the candidate REG-COMP-013.",
+  "rejected": null,
+  "row_id": "dev-P042"
+ },
+ {
+  "answer": "REG-COMP-014",
+  "examples": [],
+  "gold": "REG-COMP-014",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-COMP-014",
+  "patterns": [
+   "PAT-02",
+   "PAT-04",
+   "PAT-11"
+  ],
+  "reason": "The model code 'VX010.014' closely matches 'VX010-014' listed in REG-COMP-014, and the manufacturer matches exactly.",
+  "rejected": null,
+  "row_id": "dev-P043"
+ },
+ {
+  "answer": "REG-COMP-015",
+  "examples": [],
+  "gold": "REG-COMP-015",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-COMP-015",
+  "patterns": [
+   "PAT-01",
+   "PAT-06"
+  ],
+  "reason": "The row specifies a model code 'VX010-015' and matches the maker 'SGDW-20261007-B Synthetic Works', which aligns perfectly with the candidate REG-COMP-015.",
+  "rejected": null,
+  "row_id": "dev-P044"
+ },
+ {
+  "answer": "REG-PUMP-001",
+  "examples": [],
+  "gold": "REG-PUMP-001",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-PUMP-001",
+  "patterns": [
+   "PAT-01",
+   "PAT-11"
+  ],
+  "reason": "The model code VX013/001 closely matches VX013-001 (with acceptable variation in separator), and the maker SGDW-A Synthetic Works matches exactly.",
+  "rejected": null,
+  "row_id": "dev-P045"
+ },
+ {
+  "answer": "REG-PUMP-002",
+  "examples": [],
+  "gold": "REG-PUMP-002",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-PUMP-002",
+  "patterns": [
+   "PAT-05",
+   "PAT-12"
+  ],
+  "reason": "The row specifies a Pump model VX013-002 manufactured by SGDW-20261007-A Synthetic Works, which exactly matches the criteria for REG-PUMP-002.",
+  "rejected": null,
+  "row_id": "dev-P046"
+ },
+ {
+  "answer": "REG-PUMP-003",
+  "examples": [],
+  "gold": "REG-PUMP-003",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-PUMP-003",
+  "patterns": [
+   "PAT-04",
+   "PAT-12"
+  ],
+  "reason": "The row specifies a Pump model VX013-003 manufactured by SGDW-A Synthetic Works, which exactly matches the candidate REG-PUMP-003.",
+  "rejected": null,
+  "row_id": "dev-P047"
+ },
+ {
+  "answer": "REG-PUMP-004",
+  "examples": [],
+  "gold": "REG-PUMP-004",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-PUMP-004",
+  "patterns": [
+   "PAT-03",
+   "PAT-04",
+   "PAT-06",
+   "PAT-11"
+  ],
+  "reason": "The model code 'VX013 004' closely matches 'VX013-004' listed under REG-PUMP-004, and the manufacturer matches exactly.",
+  "rejected": null,
+  "row_id": "dev-P048"
+ },
+ {
+  "answer": "REG-PUMP-005",
+  "examples": [],
+  "gold": "REG-PUMP-005",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-PUMP-005",
+  "patterns": [
+   "PAT-05",
+   "PAT-12"
+  ],
+  "reason": "The row specifies a Pump model VX013-005 manufactured by SGDW-20261007-A Synthetic Works, which exactly matches the maker and model code of REG-PUMP-005.",
+  "rejected": null,
+  "row_id": "dev-P049"
+ },
+ {
+  "answer": "REG-PUMP-006",
+  "examples": [],
+  "gold": "REG-PUMP-006",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-PUMP-006",
+  "patterns": [
+   "PAT-03",
+   "PAT-06"
+  ],
+  "reason": "The row specifies a Pump model VX013-006 manufactured by SGDW-A Synthetic Works, which matches exactly with the candidate REG-PUMP-006.",
+  "rejected": null,
+  "row_id": "dev-P050"
+ },
+ {
+  "answer": "REG-PUMP-007",
+  "examples": [],
+  "gold": "REG-PUMP-007",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-PUMP-007",
+  "patterns": [
+   "PAT-02",
+   "PAT-04"
+  ],
+  "reason": "The row specifies a Pump with the exact model code VX013-007 and matches the manufacturer name provided among the candidates.",
+  "rejected": null,
+  "row_id": "dev-P051"
+ },
+ {
+  "answer": "REG-PUMP-008",
+  "examples": [],
+  "gold": "REG-PUMP-008",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-PUMP-008",
+  "patterns": [
+   "PAT-01",
+   "PAT-06",
+   "PAT-11"
+  ],
+  "reason": "The model code VX013/008 closely matches VX013-008 (with acceptable variation in separator), and the maker matches exactly (considering slight variation in spelling from 'Synthetic Works' to 'Sytnhetic Works').",
+  "rejected": null,
+  "row_id": "dev-P052"
+ },
+ {
+  "answer": "REG-PUMP-009",
+  "examples": [],
+  "gold": "REG-PUMP-009",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-PUMP-009",
+  "patterns": [
+   "PAT-03",
+   "PAT-04",
+   "PAT-05"
+  ],
+  "reason": "The row specifies a model code 'VX014-009' which exactly matches the model code of REG-PUMP-009, and both share the same maker 'SGDW-B'. The additional specifications like flow rate do not affect the match criteria provided.",
+  "rejected": null,
+  "row_id": "dev-P053"
+ },
+ {
+  "answer": "REG-PUMP-010",
+  "examples": [],
+  "gold": "REG-PUMP-010",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-PUMP-010",
+  "patterns": [
+   "PAT-02",
+   "PAT-04",
+   "PAT-11"
+  ],
+  "reason": "The model code 'VX014/010' closely matches 'VX014-010' listed under REG-PUMP-010, and the manufacturer matches exactly.",
+  "rejected": null,
+  "row_id": "dev-P054"
+ },
+ {
+  "answer": "REG-PUMP-011",
+  "examples": [],
+  "gold": "REG-PUMP-011",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-PUMP-011",
+  "patterns": [
+   "PAT-02",
+   "PAT-06"
+  ],
+  "reason": "The row specifies a model code 'VX014-011' and matches the maker 'SGDW-B Synthetic Works', which aligns perfectly with candidate REG-PUMP-011.",
+  "rejected": null,
+  "row_id": "dev-P055"
+ },
+ {
+  "answer": "REG-PUMP-012",
+  "examples": [],
+  "gold": "REG-PUMP-012",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-PUMP-012",
+  "patterns": [
+   "PAT-02",
+   "PAT-04",
+   "PAT-11"
+  ],
+  "reason": "The model code 'VX014/012' closely matches 'VX014-012' from the candidate REG-PUMP-012, considering potential separator differences (slash vs. hyphen), and the manufacturer matches exactly.",
+  "rejected": null,
+  "row_id": "dev-P056"
+ },
+ {
+  "answer": "REG-PUMP-013",
+  "examples": [],
+  "gold": "REG-PUMP-013",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-PUMP-013",
+  "patterns": [
+   "PAT-03",
+   "PAT-04",
+   "PAT-05",
+   "PAT-11"
+  ],
+  "reason": "The model code 'VX014.013' closely matches 'VX014-013' from REG-PUMP-013, considering potential formatting differences, and the manufacturer matches exactly.",
+  "rejected": null,
+  "row_id": "dev-P057"
+ },
+ {
+  "answer": "REG-PUMP-014",
+  "examples": [],
+  "gold": "REG-PUMP-014",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-PUMP-014",
+  "patterns": [
+   "PAT-01"
+  ],
+  "reason": "The row specifies a model code 'VX014-014' and matches the maker 'SGDW-20261007-B Synthetic Works', aligning perfectly with the candidate REG-PUMP-014.",
+  "rejected": null,
+  "row_id": "dev-P058"
+ },
+ {
+  "answer": "REG-PUMP-015",
+  "examples": [],
+  "gold": "REG-PUMP-015",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-PUMP-015",
+  "patterns": [
+   "PAT-02",
+   "PAT-04",
+   "PAT-11"
+  ],
+  "reason": "The model code 'VX014/015' closely matches 'VX014-015' listed under REG-PUMP-015, considering potential formatting differences, and the manufacturer matches exactly.",
+  "rejected": null,
+  "row_id": "dev-P059"
+ },
+ {
+  "answer": "REG-SEP-001",
+  "examples": [],
+  "gold": "REG-SEP-001",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-SEP-001",
+  "patterns": [
+   "PAT-05",
+   "PAT-12"
+  ],
+  "reason": "The row specifies a model code 'VX017-001' which exactly matches the model code of REG-SEP-001, and both share the same maker 'SGDW-A Synthetic Works'. The component class 'Separator' aligns with the candidate being a class Separator.",
+  "rejected": null,
+  "row_id": "dev-P060"
+ },
+ {
+  "answer": "REG-SEP-002",
+  "examples": [],
+  "gold": "REG-SEP-002",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-SEP-002",
+  "patterns": [
+   "PAT-01",
+   "PAT-04",
+   "PAT-06",
+   "PAT-11"
+  ],
+  "reason": "The model code VX017.002 closely matches VX017-002 (ignoring minor formatting differences), and the maker matches exactly (considering slight variation in spelling from 'Works' to 'Works'). The component class 'Separator' fits with the candidate being a separator model.",
+  "rejected": null,
+  "row_id": "dev-P061"
+ },
+ {
+  "answer": "REG-SEP-003",
+  "examples": [],
+  "gold": "REG-SEP-003",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-SEP-003",
+  "patterns": [
+   "PAT-03",
+   "PAT-04",
+   "PAT-11"
+  ],
+  "reason": "The model code VX017/003 closely matches VX017-003 (ignoring minor formatting differences), and the maker matches exactly with SGDW-A Synthetic Works.",
+  "rejected": null,
+  "row_id": "dev-P062"
+ },
+ {
+  "answer": "REG-SEP-004",
+  "examples": [],
+  "gold": "REG-SEP-004",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-SEP-004",
+  "patterns": [
+   "PAT-03",
+   "PAT-11"
+  ],
+  "reason": "The model code VX017.004 closely matches VX017-004 (considering possible formatting differences), and the maker matches exactly.",
+  "rejected": null,
+  "row_id": "dev-P063"
+ },
+ {
+  "answer": "REG-SEP-005",
+  "examples": [],
+  "gold": "REG-SEP-005",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-SEP-005",
+  "patterns": [
+   "PAT-02",
+   "PAT-04",
+   "PAT-05",
+   "PAT-11"
+  ],
+  "reason": "The row specifies a model code 'VX017 005' which closely matches 'VX017-005' in the candidates list, and the maker matches exactly. The component class 'Separator' aligns with the candidate labeled as a 'class Separator'.",
+  "rejected": null,
+  "row_id": "dev-P064"
+ },
+ {
+  "answer": "REG-SEP-006",
+  "examples": [],
+  "gold": "REG-SEP-006",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-SEP-006",
+  "patterns": [
+   "PAT-02",
+   "PAT-06",
+   "PAT-11"
+  ],
+  "reason": "The model code VX017/006 closely matches VX017-006 (with acceptable variation in separator), and the maker matches exactly.",
+  "rejected": null,
+  "row_id": "dev-P065"
+ },
+ {
+  "answer": "REG-SEP-007",
+  "examples": [],
+  "gold": "REG-SEP-007",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-SEP-007",
+  "patterns": [
+   "PAT-05",
+   "PAT-11",
+   "PAT-12"
+  ],
+  "reason": "The model code VX017/007 closely matches VX017-007 (with acceptable variation in separator), and the maker SGDW-A aligns with the candidate's maker SGDW-20261007-A Synthetic Works / SGDW-A Synthetic Works.",
+  "rejected": null,
+  "row_id": "dev-P066"
+ },
+ {
+  "answer": "REG-SEP-008",
+  "examples": [],
+  "gold": "REG-SEP-008",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-SEP-008",
+  "patterns": [
+   "PAT-04",
+   "PAT-05",
+   "PAT-11",
+   "PAT-12"
+  ],
+  "reason": "The row specifies a model code 'VX017/008' which closely matches 'VX017-008' in the candidates list, and the maker matches exactly (SGDW-A). The component class 'Separator' aligns with the candidate labeled as 'class Separator'. The additional details like serial capacity ('2956.8 l/h') do not disqualify it based on the given criteria.",
+  "rejected": null,
+  "row_id": "dev-P067"
+ },
+ {
+  "answer": "REG-SEP-009",
+  "examples": [],
+  "gold": "REG-SEP-009",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-SEP-009",
+  "patterns": [
+   "PAT-05",
+   "PAT-12"
+  ],
+  "reason": "The row specifies a model code 'VX018-009' which exactly matches the model code of REG-SEP-009, and the maker 'SGDW-20261007-B' matches exactly (considering potential variations in maker abbreviation).",
+  "rejected": null,
+  "row_id": "dev-P068"
+ },
+ {
+  "answer": "REG-SEP-010",
+  "examples": [],
+  "gold": "REG-SEP-010",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-SEP-010",
+  "patterns": [
+   "PAT-04",
+   "PAT-06",
+   "PAT-11",
+   "PAT-12"
+  ],
+  "reason": "The row specifies a model code 'VX018.010' which closely matches 'VX018-010' in the candidates list, and the maker 'SGDW-B Synthetic Wokrs' closely aligns with 'SGDW-B Synthetic Works'. Considering slight variations in formatting and spelling, REG-SEP-010 is the most appropriate match.",
+  "rejected": null,
+  "row_id": "dev-P069"
+ },
+ {
+  "answer": "REG-SEP-011",
+  "examples": [],
+  "gold": "REG-SEP-011",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-SEP-011",
+  "patterns": [
+   "PAT-04",
+   "PAT-12"
+  ],
+  "reason": "The row specifies a model code 'VX018-011' which exactly matches the model code of REG-SEP-011, and both share the same maker 'SGDW-B Synthetic Works'. The additional details like flow rate do not affect the matching criteria provided.",
+  "rejected": null,
+  "row_id": "dev-P070"
+ },
+ {
+  "answer": "REG-SEP-012",
+  "examples": [],
+  "gold": "REG-SEP-012",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-SEP-012",
+  "patterns": [
+   "PAT-04",
+   "PAT-06",
+   "PAT-11",
+   "PAT-12"
+  ],
+  "reason": "The row specifies a model code 'VX018.012' which closely matches 'VX018-012' in the candidates list, and the maker 'SGDW-B Synthetic Works' aligns with one of the candidates' makers. The slight difference in the model code ('.012' vs '-012') is considered acceptable given the context.",
+  "rejected": null,
+  "row_id": "dev-P071"
+ },
+ {
+  "answer": "REG-SEP-013",
+  "examples": [],
+  "gold": "REG-SEP-013",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-SEP-013",
+  "patterns": [
+   "PAT-05",
+   "PAT-11",
+   "PAT-12"
+  ],
+  "reason": "The model code VX018.013 closely matches VX018-013 (ignoring minor formatting differences), and the maker matches exactly.",
+  "rejected": null,
+  "row_id": "dev-P072"
+ },
+ {
+  "answer": "REG-SEP-014",
+  "examples": [],
+  "gold": "REG-SEP-014",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-SEP-014",
+  "patterns": [
+   "PAT-03",
+   "PAT-06"
+  ],
+  "reason": "The row specifies a model code 'VX018-014' which exactly matches the model code of REG-SEP-014, and the maker 'SGDW-20261007-B Synthetic Works' matches despite slight variation in abbreviation ('Synthetic Works' vs 'Synthetic Works').",
+  "rejected": null,
+  "row_id": "dev-P073"
+ },
+ {
+  "answer": "REG-SEP-015",
+  "examples": [],
+  "gold": "REG-SEP-015",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-SEP-015",
+  "patterns": [
+   "PAT-03",
+   "PAT-11"
+  ],
+  "reason": "The row specifies a model code 'VX018.015' which closely matches 'VX018-015' in the candidates list, and the maker 'SGDW-20261007-B Synthetic Works' matches exactly. The slight difference in the model code separator ('.' vs '-') does not disqualify it based on the given criteria.",
+  "rejected": null,
+  "row_id": "dev-P074"
+ },
+ {
+  "answer": "REG-TC-001",
+  "examples": [],
+  "gold": "REG-TC-001",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-TC-001",
+  "patterns": [
+   "PAT-01",
+   "PAT-11"
+  ],
+  "reason": "The model code VX021.001 closely matches VX021-001 (with a minor separator difference), and the maker matches exactly.",
+  "rejected": null,
+  "row_id": "dev-P075"
+ },
+ {
+  "answer": "REG-TC-002",
+  "examples": [],
+  "gold": "REG-TC-002",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-TC-002",
+  "patterns": [
+   "PAT-03"
+  ],
+  "reason": "The row specifies a Turbocharger with the exact model code VX021-002 and matches the maker SGDW-20261007-A Synthetic Works, aligning perfectly with candidate REG-TC-002.",
+  "rejected": null,
+  "row_id": "dev-P076"
+ },
+ {
+  "answer": "REG-TC-003",
+  "examples": [],
+  "gold": "REG-TC-003",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-TC-003",
+  "patterns": [
+   "PAT-11",
+   "PAT-12"
+  ],
+  "reason": "The model code VX021.003 closely matches VX021-003 (with a minor separator difference), and the maker SGDW-A Synthetic Works matches exactly.",
+  "rejected": null,
+  "row_id": "dev-P077"
+ },
+ {
+  "answer": "REG-TC-004",
+  "examples": [],
+  "gold": "REG-TC-004",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-TC-004",
+  "patterns": [
+   "PAT-02",
+   "PAT-04",
+   "PAT-11"
+  ],
+  "reason": "The model code VX021-004 closely matches the provided model 'VX021/004' (considering possible formatting differences), and the maker SGDW-A Synthetic Works matches exactly.",
+  "rejected": null,
+  "row_id": "dev-P078"
+ },
+ {
+  "answer": "REG-TC-005",
+  "examples": [],
+  "gold": "REG-TC-005",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-TC-005",
+  "patterns": [
+   "PAT-01",
+   "PAT-04"
+  ],
+  "reason": "The row specifies a Turbocharger model VX021-005 manufactured by SGDW-A Synthetic Works, which exactly matches the criteria for the candidate REG-TC-005.",
+  "rejected": null,
+  "row_id": "dev-P079"
+ },
+ {
+  "answer": "REG-TC-006",
+  "examples": [],
+  "gold": "REG-TC-006",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-TC-006",
+  "patterns": [
+   "PAT-03",
+   "PAT-04",
+   "PAT-11"
+  ],
+  "reason": "The model code VX021-006 closely matches VX021.006 (ignoring minor formatting differences), and the maker SGDW-A Synthetic Works matches exactly.",
+  "rejected": null,
+  "row_id": "dev-P080"
+ },
+ {
+  "answer": "REG-TC-007",
+  "examples": [],
+  "gold": "REG-TC-007",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-TC-007",
+  "patterns": [
+   "PAT-03",
+   "PAT-04",
+   "PAT-05",
+   "PAT-11"
+  ],
+  "reason": "The model code VX021-007 closely matches the provided model 'VX021.007', and the maker matches exactly with 'SGDW-20261007-A Synthetic Works'. The slight difference in the decimal part (2202.9 kg) does not affect the model identification based on the given criteria.",
+  "rejected": null,
+  "row_id": "dev-P081"
+ },
+ {
+  "answer": "REG-TC-008",
+  "examples": [],
+  "gold": "REG-TC-008",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-TC-008",
+  "patterns": [
+   "PAT-05",
+   "PAT-11",
+   "PAT-12"
+  ],
+  "reason": "The model code VX021-008 closely matches VX021.008 (considering the minor formatting difference), and the maker matches exactly.",
+  "rejected": null,
+  "row_id": "dev-P082"
+ },
+ {
+  "answer": "REG-TC-009",
+  "examples": [],
+  "gold": "REG-TC-009",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-TC-009",
+  "patterns": [
+   "PAT-03",
+   "PAT-04",
+   "PAT-05",
+   "PAT-11"
+  ],
+  "reason": "The model code VX022/009 closely matches VX022-009 (ignoring minor formatting difference), and the maker matches exactly with SGDW-20261007-B Synthetic Works.",
+  "rejected": null,
+  "row_id": "dev-P083"
+ },
+ {
+  "answer": "REG-TC-010",
+  "examples": [],
+  "gold": "REG-TC-010",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-TC-010",
+  "patterns": [
+   "PAT-03",
+   "PAT-04",
+   "PAT-11"
+  ],
+  "reason": "The model code VX022-010 closely matches the provided model with acceptable variation in separator (dot instead of dash), and the maker matches exactly.",
+  "rejected": null,
+  "row_id": "dev-P084"
+ },
+ {
+  "answer": "REG-TC-011",
+  "examples": [],
+  "gold": "REG-TC-011",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-TC-011",
+  "patterns": [
+   "PAT-02",
+   "PAT-04",
+   "PAT-06",
+   "PAT-11"
+  ],
+  "reason": "The model code VX022/011 closely matches VX022-011 (considering possible separator differences), and the maker SGDW-B Synthetic Works aligns with the provided manufacturer information.",
+  "rejected": null,
+  "row_id": "dev-P085"
+ },
+ {
+  "answer": "REG-TC-012",
+  "examples": [],
+  "gold": "REG-TC-012",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-TC-012",
+  "patterns": [
+   "PAT-03",
+   "PAT-04",
+   "PAT-05",
+   "PAT-11"
+  ],
+  "reason": "The model code VX022-012 matches exactly with REG-TC-012, and the maker name 'SGDW-20261007-B Synthetic Works' closely aligns with the provided manufacturer information, despite slight differences in formatting.",
+  "rejected": null,
+  "row_id": "dev-P086"
+ },
+ {
+  "answer": "REG-TC-013",
+  "examples": [],
+  "gold": "REG-TC-013",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-TC-013",
+  "patterns": [
+   "PAT-11",
+   "PAT-12"
+  ],
+  "reason": "The model code VX022/013 closely matches VX022-013 (considering possible separator differences), and the maker SGDW-B Synthetic Works matches exactly.",
+  "rejected": null,
+  "row_id": "dev-P087"
+ },
+ {
+  "answer": "REG-TC-014",
+  "examples": [],
+  "gold": "REG-TC-014",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-TC-014",
+  "patterns": [
+   "PAT-03",
+   "PAT-05"
+  ],
+  "reason": "The row specifies a model code 'VX022-014' and matches the maker 'SGDW-20261007-B', aligning perfectly with the candidate REG-TC-014.",
+  "rejected": null,
+  "row_id": "dev-P088"
+ },
+ {
+  "answer": "REG-TC-015",
+  "examples": [],
+  "gold": "REG-TC-015",
+  "in_top": true,
+  "kind": "product",
+  "model_answer": "REG-TC-015",
+  "patterns": [
+   "PAT-02",
+   "PAT-04",
+   "PAT-11"
+  ],
+  "reason": "The model code 'VX022 015' closely matches 'VX022-015' listed in the candidates, and the manufacturer matches exactly.",
+  "rejected": null,
+  "row_id": "dev-P089"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "unregistered",
+  "model_answer": null,
+  "patterns": [
+   "PAT-06",
+   "PAT-12"
+  ],
+  "reason": "The model code VX125-977 does not match any of the provided candidates exactly, and there's no exact match for this specific model among the given options.",
+  "rejected": null,
+  "row_id": "dev-N000"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "no_model",
+  "model_answer": "REG-TC-010",
+  "patterns": [
+   "PAT-02",
+   "PAT-05",
+   "PAT-07"
+  ],
+  "reason": "While the model is not explicitly stated in the row provided, the closest matching candidate based on maker (SGDW-B Synthetic Works) and class (Turbocharger) is REG-TC-010, assuming a sequential model numbering pattern where REG-TC-010 would logically follow the pattern established by other numbered entries.",
+  "rejected": "the row's model cell does not hold VX022-010",
+  "row_id": "dev-N001"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "driver",
+  "model_answer": "REG-PUMP-007",
+  "patterns": [
+   "PAT-03",
+   "PAT-05",
+   "PAT-08"
+  ],
+  "reason": "Although the row specifies a model 'driven by VX013-007', the closest matching candidate based on class (TwoStrokeMainEngine) and maker (SGDW-A Synthetic Works) is REG-PUMP-007. The note about driving model doesn't disqualify it directly under given criteria, and no other candidate perfectly matches both class and maker while considering potential variations in naming or context provided.",
+  "rejected": "REG-PUMP-007 is a Pump, the row says TwoStrokeMainEngine",
+  "row_id": "dev-N002"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "unregistered",
+  "model_answer": null,
+  "patterns": [
+   "PAT-03"
+  ],
+  "reason": "The model code VX487-723 does not match any of the provided candidates' model codes exactly, which strictly adhere to the matching criteria given.",
+  "rejected": null,
+  "row_id": "dev-N003"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "no_model",
+  "model_answer": "REG-4S-010",
+  "patterns": [
+   "PAT-03",
+   "PAT-06",
+   "PAT-07"
+  ],
+  "reason": "While the model field is blank in the row provided, the closest matching candidate based on maker (SGDW-B Synthetic Works) and the sequential model numbering pattern suggests REG-4S-010 as a likely candidate, assuming the missing model code aligns with the VX006-010 pattern.",
+  "rejected": "the row's model cell does not hold VX006-010",
+  "row_id": "dev-N004"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "driver",
+  "model_answer": "REG-SEP-012",
+  "patterns": [
+   "PAT-02",
+   "PAT-06",
+   "PAT-08"
+  ],
+  "reason": "Although the row specifies a model 'driven by VX018-012', indicating this model is associated with driving another component rather than being a direct match for an AirCompressor model, none of the provided candidates exactly match this description under the given criteria. However, given the closest alignment in terms of class (AirCompressor) and manufacturer, REG-SEP-012 is selected acknowledging the limitation in direct model code match due to the driving component context.",
+  "rejected": "REG-SEP-012 is a Separator, the row says AirCompressor",
+  "row_id": "dev-N005"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "unregistered",
+  "model_answer": null,
+  "patterns": [
+   "PAT-01",
+   "PAT-05"
+  ],
+  "reason": "The model code VX645-278 does not match any of the models listed in the candidates (which all start with VX009 or VX10 series). Additionally, while the maker matches ('SGDW-A Synthetic Works'), the exact model code requirement does not align with any candidate entries provided.",
+  "rejected": null,
+  "row_id": "dev-N006"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "no_model",
+  "model_answer": "REG-TC-001",
+  "patterns": [
+   "PAT-03",
+   "PAT-05",
+   "PAT-07"
+  ],
+  "reason": "The row specifies a manufacturer code matching part of the candidates' maker ('SGDW-20261007-A'), though it lacks a specific model code. Given the pattern in candidates, REG-TC-001 is selected as a representative example fitting the criteria despite the missing explicit model, assuming the sequence implies a direct correspondence based on numbering and maker consistency.",
+  "rejected": "the row's model cell does not hold VX021-001",
+  "row_id": "dev-N007"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "driver",
+  "model_answer": "REG-SEP-006",
+  "patterns": [
+   "PAT-02",
+   "PAT-06",
+   "PAT-08"
+  ],
+  "reason": "Although the model mentioned in the row ('driven by VX009-006') does not exactly match any model code provided in the candidates due to the 'driven by' qualifier, the closest matching candidate based on class (Separator) and maker matches perfectly with REG-SEP-006. The model discrepancy might imply a contextual usage detail not directly reflected in the BOM mapping criteria provided, but given the strict adherence to name matching without contextual override instructions, REG-SEP-006 is selected as it best fits the provided criteria excluding other disqualifying factors.",
+  "rejected": "the row's model cell does not hold VX017-006",
+  "row_id": "dev-N008"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "unregistered",
+  "model_answer": null,
+  "patterns": [
+   "PAT-02",
+   "PAT-05"
+  ],
+  "reason": "The model code VX179-067 does not match any of the provided candidates' model codes.",
+  "rejected": null,
+  "row_id": "dev-N009"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "no_model",
+  "model_answer": "REG-PUMP-009",
+  "patterns": [
+   "PAT-02",
+   "PAT-07"
+  ],
+  "reason": "While the model is not explicitly stated in the row, given the pattern of model codes (VX014-XXX for REG-PUMP-009 series and VX013-XXX for REG-PUMP-001 series), and considering the manufacturer matches exactly with REG-PUMP-009, it's inferred as the closest match based on the provided candidates and criteria.",
+  "rejected": "the row's model cell does not hold VX014-009",
+  "row_id": "dev-N010"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "driver",
+  "model_answer": "REG-SEP-006",
+  "patterns": [
+   "PAT-08",
+   "PAT-12"
+  ],
+  "reason": "Although the model mentioned in the row ('driven by VX009-006') does not exactly match any model code provided in the candidates due to the 'driven by' qualifier, REG-SEP-006 is the closest match based on class (Separator) and manufacturer (SGDW-20261007-A Synthetic Works). However, strictly adhering to the criteria provided, no exact match is found due to the discrepancy in model identification, thus the closest but imperfect fit leads to reconsideration for strict adherence rules.",
+  "rejected": "the row's model cell does not hold VX017-006",
+  "row_id": "dev-N011"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "unregistered",
+  "model_answer": null,
+  "patterns": [
+   "PAT-03",
+   "PAT-06"
+  ],
+  "reason": "The model code VX895-648 does not match any of the provided candidates' model codes exactly.",
+  "rejected": null,
+  "row_id": "dev-N012"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "no_model",
+  "model_answer": "REG-PUMP-009",
+  "patterns": [
+   "PAT-06",
+   "PAT-07",
+   "PAT-12"
+  ],
+  "reason": "The row specifies a manufacturer that closely matches 'SGDW-20261007-B Synthetic Works' (with a minor typo in 'Syntehtic'), and while the model is not explicitly stated, the closest matching product ID based on the maker and class (Pump) is REG-PUMP-009.",
+  "rejected": "the row's model cell does not hold VX014-009",
+  "row_id": "dev-N013"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "driver",
+  "model_answer": "REG-PUMP-001",
+  "patterns": [
+   "PAT-03",
+   "PAT-06",
+   "PAT-08"
+  ],
+  "reason": "Although the model mentioned in the row ('driven by VX009-001') does not exactly match any of the models listed under the candidates due to the 'driven by' qualifier, the closest matching candidate based on class (Pump) and maker (SGDW-20261007-A Synthetic Works) is REG-PUMP-001. The instruction allows for some flexibility in matching based on broader criteria like class and maker when exact model codes don't align directly.",
+  "rejected": "the row's model cell does not hold VX013-001",
+  "row_id": "dev-N014"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "unregistered",
+  "model_answer": null,
+  "patterns": [
+   "PAT-02",
+   "PAT-05"
+  ],
+  "reason": "The model code VX425-303 does not match any of the provided candidates' model codes (which all start with VX001 or VX002).",
+  "rejected": null,
+  "row_id": "dev-N015"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "no_model",
+  "model_answer": "REG-2S-009",
+  "patterns": [
+   "PAT-01",
+   "PAT-06",
+   "PAT-07"
+  ],
+  "reason": "While the model is not explicitly stated in the row, given the pattern of models in the candidates (VX002-XXX), and matching the maker (SGDW-20261007-B Synthetic Works), REG-2S-009 fits as a likely candidate assuming the missing model follows the established sequence (VX002-009). However, strictly adhering to the instruction that the model code must exactly match or be clearly derivable without ambiguity, and considering the row explicitly states 'Model: —', the most accurate response given these constraints would lean towards 'none' due to the absence of a specified model code to confirm an exact match.",
+  "rejected": "the row's model cell does not hold VX002-009",
+  "row_id": "dev-N016"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "driver",
+  "model_answer": "REG-SEP-011",
+  "patterns": [
+   "PAT-02",
+   "PAT-06",
+   "PAT-08"
+  ],
+  "reason": "Although the row specifies a model 'driven by VX018-011', the instruction specifies matching the exact model code and maker precisely without deviation. Since 'REG-SEP-011' aligns with the maker name and conceptually fits as it's the only separator model listed among candidates, despite the model driving detail, no exact match model code is directly provided by other rows under Turbocharger class except for the closest conceptual alignment based on given criteria. However, strictly adhering to exact model code match without deviation leads to 'none' as no exact model code VX018-011 match is found among candidates under Turbocharger class.",
+  "rejected": "REG-SEP-011 is a Separator, the row says Turbocharger",
+  "row_id": "dev-N017"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "unregistered",
+  "model_answer": null,
+  "patterns": [
+   "PAT-02",
+   "PAT-05"
+  ],
+  "reason": "The model code VX353-133 does not match any of the provided candidates' model codes (which all start with VX005 or VX006).",
+  "rejected": null,
+  "row_id": "dev-N018"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "no_model",
+  "model_answer": "REG-SEP-009",
+  "patterns": [
+   "PAT-03",
+   "PAT-06",
+   "PAT-07"
+  ],
+  "reason": "Although the model field is blank ('—'), the closest matching candidate based on the manufacturer and the pattern of model codes (VX018-XXX) suggests REG-SEP-009 as it fits the sequence and manufacturer criteria provided. However, strictly adhering to the instruction that the model code must exactly match including variations in separators and additional details, and given the absence of a specific model code in the row, 'none' would technically be more accurate. Given the context and slight flexibility for pattern matching:",
+  "rejected": "the row's model cell does not hold VX018-009",
+  "row_id": "dev-N019"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "driver",
+  "model_answer": "REG-PUMP-002",
+  "patterns": [
+   "PAT-08",
+   "PAT-12"
+  ],
+  "reason": "Although the model specified in the row ('driven by VX009-002') does not exactly match any model listed under REG-PUMP-002, the closest match based on the maker and class (Pump) is chosen. The instruction allows for some flexibility in matching criteria, especially when exact model codes aren't directly aligned but the context (maker and class) aligns closely with a candidate. However, strictly adhering to the instruction which emphasizes exact model code matching without deviation, no perfect match is found under these strict criteria, suggesting 'none' might be more appropriate given the exact model discrepancy.",
+  "rejected": "the row's model cell does not hold VX013-002",
+  "row_id": "dev-N020"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "unregistered",
+  "model_answer": null,
+  "patterns": [
+   "PAT-03",
+   "PAT-06"
+  ],
+  "reason": "The model code VX266-252 does not match any of the models listed under the candidates (which are VX013 series). Additionally, there's a minor typo in the manufacturer name provided ('Wroks' instead of 'Works'), but assuming it refers to 'SGDW-A Synthetic Works', no exact match for this specific model code exists among the candidates.",
+  "rejected": null,
+  "row_id": "dev-N021"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "no_model",
+  "model_answer": "REG-2S-009",
+  "patterns": [
+   "PAT-01",
+   "PAT-07"
+  ],
+  "reason": "The row specifies a manufacturer that matches one of the candidates (SGDW-20261007-B Synthetic Works), though it lacks a specific model code. Given the pattern in the candidates' model codes (VX002-XXX), and assuming a sequential model assignment, REG-2S-009 fits as a likely candidate based on the sequence, despite the missing explicit model code in the row.",
+  "rejected": "the row's model cell does not hold VX002-009",
+  "row_id": "dev-N022"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "driver",
+  "model_answer": "REG-PUMP-007",
+  "patterns": [
+   "PAT-02",
+   "PAT-08"
+  ],
+  "reason": "Although the model specified in the row ('driven by VX009-007') indicates a dependency model rather than the component model itself, REG-PUMP-007 matches the class (Pump), manufacturer (SGDW-20261007-A Synthetic Works), and aligns closely with the naming convention and maker of the candidates provided. Given the instruction constraints and aiming to select based on closest matching criteria despite dependency model mention, REG-PUMP-007 is chosen as it fits the class and manufacturer criteria best among the candidates.",
+  "rejected": "the row's model cell does not hold VX013-007",
+  "row_id": "dev-N023"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "unregistered",
+  "model_answer": null,
+  "patterns": [
+   "PAT-02",
+   "PAT-06"
+  ],
+  "reason": "The model code VX771-451 does not match any of the provided candidates' model codes (which all start with VX022-). Additionally, there seems to be a typo in the manufacturer name provided ('Synthetic Wokrs' instead of 'Synthetic Works'), further complicating an exact match.",
+  "rejected": null,
+  "row_id": "dev-N024"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "no_model",
+  "model_answer": "REG-SEP-009",
+  "patterns": [
+   "PAT-02",
+   "PAT-05",
+   "PAT-07"
+  ],
+  "reason": "The row specifies a manufacturer that matches one of the candidates (SGDW-20261007-B) and indicates a model code of '—', which implies it could be any model from the candidate set provided, specifically aligning with REG-SEP-009 as it shares the exact manufacturer code and fits the criteria given despite the missing model detail.",
+  "rejected": "the row's model cell does not hold VX018-009",
+  "row_id": "dev-N025"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "driver",
+  "model_answer": "REG-COMP-007",
+  "patterns": [
+   "PAT-05",
+   "PAT-08",
+   "PAT-12"
+  ],
+  "reason": "The row specifies a 'FourStrokeEngine' driven by 'VX009-007', matching the model code exactly with the maker 'SGDW-20261007-A Synthetic Works'. This aligns with the criteria for naming a candidate based on the whole model code and matching maker.",
+  "rejected": "REG-COMP-007 is a AirCompressor, the row says FourStrokeEngine",
+  "row_id": "dev-N026"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "unregistered",
+  "model_answer": null,
+  "patterns": [
+   "PAT-01",
+   "PAT-06"
+  ],
+  "reason": "The model code in the row (VX501-133) does not match any model code provided in the candidates (all candidates have VX001-XXX or VX002-XXX).",
+  "rejected": null,
+  "row_id": "dev-N027"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "no_model",
+  "model_answer": "REG-SEP-009",
+  "patterns": [
+   "PAT-02",
+   "PAT-07"
+  ],
+  "reason": "Although the model is not explicitly stated in the row, given the pattern and the maker information matching REG-SEP-009's details, it's inferred as a likely candidate based on sequential model numbering and consistent maker information.",
+  "rejected": "the row's model cell does not hold VX018-009",
+  "row_id": "dev-N028"
+ },
+ {
+  "answer": null,
+  "examples": [],
+  "gold": null,
+  "in_top": null,
+  "kind": "driver",
+  "model_answer": "REG-SEP-010",
+  "patterns": [
+   "PAT-06",
+   "PAT-08",
+   "PAT-12"
+  ],
+  "reason": "Although the row specifies a model 'driven by VX014-010', indicating it might refer to a component used in conjunction with VX014-010 rather than being the exact match, the closest registered product ID matching the class (Separator), maker (SGDW-B Synthetic Works), and general model pattern (VX018 series typical for separators listed) is REG-SEP-010. However, it's important to note the discrepancy in the model description provided versus the candidates listed.",
+  "rejected": "the row's model cell does not hold VX018-010",
+  "row_id": "dev-N029"
+ }
+]

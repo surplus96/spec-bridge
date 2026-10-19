@@ -1,0 +1,909 @@
+[
+ {
+  "answer": "REG-2S-016",
+  "gold": "REG-2S-016",
+  "kind": "product",
+  "patterns": [
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-P000"
+ },
+ {
+  "answer": null,
+  "gold": "REG-2S-017",
+  "kind": "product",
+  "patterns": [
+   "PAT-01",
+   "PAT-05",
+   "PAT-09",
+   "PAT-11"
+  ],
+  "reason": "",
+  "row_id": "test-P001"
+ },
+ {
+  "answer": "REG-2S-018",
+  "gold": "REG-2S-018",
+  "kind": "product",
+  "patterns": [
+   "PAT-01"
+  ],
+  "reason": "",
+  "row_id": "test-P002"
+ },
+ {
+  "answer": null,
+  "gold": "REG-2S-019",
+  "kind": "product",
+  "patterns": [
+   "PAT-10",
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-P003"
+ },
+ {
+  "answer": null,
+  "gold": "REG-2S-020",
+  "kind": "product",
+  "patterns": [
+   "PAT-10",
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-P004"
+ },
+ {
+  "answer": null,
+  "gold": "REG-2S-021",
+  "kind": "product",
+  "patterns": [
+   "PAT-01",
+   "PAT-05"
+  ],
+  "reason": "",
+  "row_id": "test-P005"
+ },
+ {
+  "answer": "REG-2S-022",
+  "gold": "REG-2S-022",
+  "kind": "product",
+  "patterns": [
+   "PAT-02",
+   "PAT-09",
+   "PAT-11"
+  ],
+  "reason": "",
+  "row_id": "test-P006"
+ },
+ {
+  "answer": "REG-2S-023",
+  "gold": "REG-2S-023",
+  "kind": "product",
+  "patterns": [
+   "PAT-01",
+   "PAT-09"
+  ],
+  "reason": "",
+  "row_id": "test-P007"
+ },
+ {
+  "answer": null,
+  "gold": "REG-2S-024",
+  "kind": "product",
+  "patterns": [
+   "PAT-02",
+   "PAT-05",
+   "PAT-09",
+   "PAT-11"
+  ],
+  "reason": "",
+  "row_id": "test-P008"
+ },
+ {
+  "answer": null,
+  "gold": "REG-2S-025",
+  "kind": "product",
+  "patterns": [
+   "PAT-05",
+   "PAT-11",
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-P009"
+ },
+ {
+  "answer": "REG-4S-016",
+  "gold": "REG-4S-016",
+  "kind": "product",
+  "patterns": [
+   "PAT-01",
+   "PAT-05",
+   "PAT-11"
+  ],
+  "reason": "",
+  "row_id": "test-P010"
+ },
+ {
+  "answer": null,
+  "gold": "REG-4S-017",
+  "kind": "product",
+  "patterns": [
+   "PAT-01",
+   "PAT-10",
+   "PAT-11"
+  ],
+  "reason": "",
+  "row_id": "test-P011"
+ },
+ {
+  "answer": "REG-4S-018",
+  "gold": "REG-4S-018",
+  "kind": "product",
+  "patterns": [
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-P012"
+ },
+ {
+  "answer": "REG-4S-019",
+  "gold": "REG-4S-019",
+  "kind": "product",
+  "patterns": [
+   "PAT-02",
+   "PAT-05",
+   "PAT-11"
+  ],
+  "reason": "",
+  "row_id": "test-P013"
+ },
+ {
+  "answer": null,
+  "gold": "REG-4S-020",
+  "kind": "product",
+  "patterns": [
+   "PAT-05",
+   "PAT-09",
+   "PAT-11",
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-P014"
+ },
+ {
+  "answer": null,
+  "gold": "REG-4S-021",
+  "kind": "product",
+  "patterns": [
+   "PAT-02",
+   "PAT-05",
+   "PAT-10"
+  ],
+  "reason": "",
+  "row_id": "test-P015"
+ },
+ {
+  "answer": null,
+  "gold": "REG-4S-022",
+  "kind": "product",
+  "patterns": [
+   "PAT-10",
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-P016"
+ },
+ {
+  "answer": null,
+  "gold": "REG-4S-023",
+  "kind": "product",
+  "patterns": [
+   "PAT-02",
+   "PAT-05",
+   "PAT-09",
+   "PAT-11"
+  ],
+  "reason": "",
+  "row_id": "test-P017"
+ },
+ {
+  "answer": null,
+  "gold": "REG-4S-024",
+  "kind": "product",
+  "patterns": [
+   "PAT-05",
+   "PAT-10",
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-P018"
+ },
+ {
+  "answer": "REG-4S-025",
+  "gold": "REG-4S-025",
+  "kind": "product",
+  "patterns": [
+   "PAT-02",
+   "PAT-05",
+   "PAT-11"
+  ],
+  "reason": "",
+  "row_id": "test-P019"
+ },
+ {
+  "answer": "REG-COMP-016",
+  "gold": "REG-COMP-016",
+  "kind": "product",
+  "patterns": [
+   "PAT-02",
+   "PAT-09",
+   "PAT-11"
+  ],
+  "reason": "",
+  "row_id": "test-P020"
+ },
+ {
+  "answer": null,
+  "gold": "REG-COMP-017",
+  "kind": "product",
+  "patterns": [
+   "PAT-05",
+   "PAT-10",
+   "PAT-11",
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-P021"
+ },
+ {
+  "answer": "REG-COMP-018",
+  "gold": "REG-COMP-018",
+  "kind": "product",
+  "patterns": [
+   "PAT-01"
+  ],
+  "reason": "",
+  "row_id": "test-P022"
+ },
+ {
+  "answer": "REG-COMP-019",
+  "gold": "REG-COMP-019",
+  "kind": "product",
+  "patterns": [
+   "PAT-01",
+   "PAT-09"
+  ],
+  "reason": "",
+  "row_id": "test-P023"
+ },
+ {
+  "answer": "REG-COMP-020",
+  "gold": "REG-COMP-020",
+  "kind": "product",
+  "patterns": [
+   "PAT-04",
+   "PAT-09",
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-P024"
+ },
+ {
+  "answer": "REG-COMP-021",
+  "gold": "REG-COMP-021",
+  "kind": "product",
+  "patterns": [
+   "PAT-02",
+   "PAT-05"
+  ],
+  "reason": "",
+  "row_id": "test-P025"
+ },
+ {
+  "answer": null,
+  "gold": "REG-COMP-022",
+  "kind": "product",
+  "patterns": [
+   "PAT-10",
+   "PAT-11",
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-P026"
+ },
+ {
+  "answer": null,
+  "gold": "REG-COMP-023",
+  "kind": "product",
+  "patterns": [
+   "PAT-01",
+   "PAT-05"
+  ],
+  "reason": "",
+  "row_id": "test-P027"
+ },
+ {
+  "answer": "REG-COMP-024",
+  "gold": "REG-COMP-024",
+  "kind": "product",
+  "patterns": [
+   "PAT-02",
+   "PAT-04"
+  ],
+  "reason": "",
+  "row_id": "test-P028"
+ },
+ {
+  "answer": "REG-COMP-025",
+  "gold": "REG-COMP-025",
+  "kind": "product",
+  "patterns": [
+   "PAT-04",
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-P029"
+ },
+ {
+  "answer": null,
+  "gold": "REG-PUMP-016",
+  "kind": "product",
+  "patterns": [
+   "PAT-01",
+   "PAT-05",
+   "PAT-09"
+  ],
+  "reason": "",
+  "row_id": "test-P030"
+ },
+ {
+  "answer": "REG-PUMP-017",
+  "gold": "REG-PUMP-017",
+  "kind": "product",
+  "patterns": [
+   "PAT-01"
+  ],
+  "reason": "",
+  "row_id": "test-P031"
+ },
+ {
+  "answer": "REG-PUMP-018",
+  "gold": "REG-PUMP-018",
+  "kind": "product",
+  "patterns": [
+   "PAT-01",
+   "PAT-05",
+   "PAT-09",
+   "PAT-11"
+  ],
+  "reason": "",
+  "row_id": "test-P032"
+ },
+ {
+  "answer": "REG-PUMP-019",
+  "gold": "REG-PUMP-019",
+  "kind": "product",
+  "patterns": [
+   "PAT-05",
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-P033"
+ },
+ {
+  "answer": "REG-PUMP-020",
+  "gold": "REG-PUMP-020",
+  "kind": "product",
+  "patterns": [
+   "PAT-01",
+   "PAT-09"
+  ],
+  "reason": "",
+  "row_id": "test-P034"
+ },
+ {
+  "answer": "REG-PUMP-021",
+  "gold": "REG-PUMP-021",
+  "kind": "product",
+  "patterns": [
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-P035"
+ },
+ {
+  "answer": "REG-PUMP-022",
+  "gold": "REG-PUMP-022",
+  "kind": "product",
+  "patterns": [
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-P036"
+ },
+ {
+  "answer": null,
+  "gold": "REG-PUMP-023",
+  "kind": "product",
+  "patterns": [
+   "PAT-02",
+   "PAT-04",
+   "PAT-10"
+  ],
+  "reason": "",
+  "row_id": "test-P037"
+ },
+ {
+  "answer": null,
+  "gold": "REG-PUMP-024",
+  "kind": "product",
+  "patterns": [
+   "PAT-01",
+   "PAT-05"
+  ],
+  "reason": "",
+  "row_id": "test-P038"
+ },
+ {
+  "answer": "REG-PUMP-025",
+  "gold": "REG-PUMP-025",
+  "kind": "product",
+  "patterns": [
+   "PAT-01"
+  ],
+  "reason": "",
+  "row_id": "test-P039"
+ },
+ {
+  "answer": null,
+  "gold": "REG-SEP-016",
+  "kind": "product",
+  "patterns": [
+   "PAT-01",
+   "PAT-05"
+  ],
+  "reason": "",
+  "row_id": "test-P040"
+ },
+ {
+  "answer": "REG-SEP-017",
+  "gold": "REG-SEP-017",
+  "kind": "product",
+  "patterns": [
+   "PAT-02",
+   "PAT-05",
+   "PAT-09"
+  ],
+  "reason": "",
+  "row_id": "test-P041"
+ },
+ {
+  "answer": null,
+  "gold": "REG-SEP-018",
+  "kind": "product",
+  "patterns": [
+   "PAT-02",
+   "PAT-04",
+   "PAT-10"
+  ],
+  "reason": "",
+  "row_id": "test-P042"
+ },
+ {
+  "answer": "REG-SEP-019",
+  "gold": "REG-SEP-019",
+  "kind": "product",
+  "patterns": [
+   "PAT-02",
+   "PAT-09",
+   "PAT-11"
+  ],
+  "reason": "",
+  "row_id": "test-P043"
+ },
+ {
+  "answer": null,
+  "gold": "REG-SEP-020",
+  "kind": "product",
+  "patterns": [
+   "PAT-02",
+   "PAT-09",
+   "PAT-10"
+  ],
+  "reason": "",
+  "row_id": "test-P044"
+ },
+ {
+  "answer": "REG-SEP-021",
+  "gold": "REG-SEP-021",
+  "kind": "product",
+  "patterns": [
+   "PAT-01",
+   "PAT-04"
+  ],
+  "reason": "",
+  "row_id": "test-P045"
+ },
+ {
+  "answer": "REG-SEP-022",
+  "gold": "REG-SEP-022",
+  "kind": "product",
+  "patterns": [
+   "PAT-01",
+   "PAT-04",
+   "PAT-11"
+  ],
+  "reason": "",
+  "row_id": "test-P046"
+ },
+ {
+  "answer": null,
+  "gold": "REG-SEP-023",
+  "kind": "product",
+  "patterns": [
+   "PAT-05",
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-P047"
+ },
+ {
+  "answer": null,
+  "gold": "REG-SEP-024",
+  "kind": "product",
+  "patterns": [
+   "PAT-01",
+   "PAT-04",
+   "PAT-10"
+  ],
+  "reason": "",
+  "row_id": "test-P048"
+ },
+ {
+  "answer": "REG-SEP-025",
+  "gold": "REG-SEP-025",
+  "kind": "product",
+  "patterns": [
+   "PAT-11",
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-P049"
+ },
+ {
+  "answer": "REG-TC-016",
+  "gold": "REG-TC-016",
+  "kind": "product",
+  "patterns": [
+   "PAT-01",
+   "PAT-04",
+   "PAT-05"
+  ],
+  "reason": "",
+  "row_id": "test-P050"
+ },
+ {
+  "answer": "REG-TC-017",
+  "gold": "REG-TC-017",
+  "kind": "product",
+  "patterns": [
+   "PAT-11",
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-P051"
+ },
+ {
+  "answer": null,
+  "gold": "REG-TC-018",
+  "kind": "product",
+  "patterns": [
+   "PAT-05",
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-P052"
+ },
+ {
+  "answer": "REG-TC-019",
+  "gold": "REG-TC-019",
+  "kind": "product",
+  "patterns": [
+   "PAT-05",
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-P053"
+ },
+ {
+  "answer": "REG-TC-020",
+  "gold": "REG-TC-020",
+  "kind": "product",
+  "patterns": [
+   "PAT-01",
+   "PAT-05",
+   "PAT-09"
+  ],
+  "reason": "",
+  "row_id": "test-P054"
+ },
+ {
+  "answer": "REG-TC-021",
+  "gold": "REG-TC-021",
+  "kind": "product",
+  "patterns": [
+   "PAT-02"
+  ],
+  "reason": "",
+  "row_id": "test-P055"
+ },
+ {
+  "answer": "REG-TC-022",
+  "gold": "REG-TC-022",
+  "kind": "product",
+  "patterns": [
+   "PAT-01",
+   "PAT-11"
+  ],
+  "reason": "",
+  "row_id": "test-P056"
+ },
+ {
+  "answer": null,
+  "gold": "REG-TC-023",
+  "kind": "product",
+  "patterns": [
+   "PAT-01",
+   "PAT-05",
+   "PAT-10"
+  ],
+  "reason": "",
+  "row_id": "test-P057"
+ },
+ {
+  "answer": "REG-TC-024",
+  "gold": "REG-TC-024",
+  "kind": "product",
+  "patterns": [
+   "PAT-02"
+  ],
+  "reason": "",
+  "row_id": "test-P058"
+ },
+ {
+  "answer": "REG-TC-025",
+  "gold": "REG-TC-025",
+  "kind": "product",
+  "patterns": [
+   "PAT-01",
+   "PAT-09",
+   "PAT-11"
+  ],
+  "reason": "",
+  "row_id": "test-P059"
+ },
+ {
+  "answer": null,
+  "gold": null,
+  "kind": "unregistered",
+  "patterns": [
+   "PAT-02",
+   "PAT-05"
+  ],
+  "reason": "",
+  "row_id": "test-N000"
+ },
+ {
+  "answer": null,
+  "gold": null,
+  "kind": "no_model",
+  "patterns": [
+   "PAT-01",
+   "PAT-07"
+  ],
+  "reason": "",
+  "row_id": "test-N001"
+ },
+ {
+  "answer": null,
+  "gold": null,
+  "kind": "driver",
+  "patterns": [
+   "PAT-05",
+   "PAT-08",
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-N002"
+ },
+ {
+  "answer": null,
+  "gold": null,
+  "kind": "unregistered",
+  "patterns": [
+   "PAT-02"
+  ],
+  "reason": "",
+  "row_id": "test-N003"
+ },
+ {
+  "answer": null,
+  "gold": null,
+  "kind": "no_model",
+  "patterns": [
+   "PAT-02",
+   "PAT-07"
+  ],
+  "reason": "",
+  "row_id": "test-N004"
+ },
+ {
+  "answer": null,
+  "gold": null,
+  "kind": "driver",
+  "patterns": [
+   "PAT-05",
+   "PAT-08",
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-N005"
+ },
+ {
+  "answer": null,
+  "gold": null,
+  "kind": "unregistered",
+  "patterns": [
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-N006"
+ },
+ {
+  "answer": null,
+  "gold": null,
+  "kind": "no_model",
+  "patterns": [
+   "PAT-05",
+   "PAT-07",
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-N007"
+ },
+ {
+  "answer": null,
+  "gold": null,
+  "kind": "driver",
+  "patterns": [
+   "PAT-01",
+   "PAT-05",
+   "PAT-08"
+  ],
+  "reason": "",
+  "row_id": "test-N008"
+ },
+ {
+  "answer": null,
+  "gold": null,
+  "kind": "unregistered",
+  "patterns": [
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-N009"
+ },
+ {
+  "answer": null,
+  "gold": null,
+  "kind": "no_model",
+  "patterns": [
+   "PAT-02",
+   "PAT-05",
+   "PAT-07"
+  ],
+  "reason": "",
+  "row_id": "test-N010"
+ },
+ {
+  "answer": null,
+  "gold": null,
+  "kind": "driver",
+  "patterns": [
+   "PAT-08",
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-N011"
+ },
+ {
+  "answer": null,
+  "gold": null,
+  "kind": "unregistered",
+  "patterns": [
+   "PAT-02",
+   "PAT-05"
+  ],
+  "reason": "",
+  "row_id": "test-N012"
+ },
+ {
+  "answer": null,
+  "gold": null,
+  "kind": "no_model",
+  "patterns": [
+   "PAT-01",
+   "PAT-05",
+   "PAT-07"
+  ],
+  "reason": "",
+  "row_id": "test-N013"
+ },
+ {
+  "answer": null,
+  "gold": null,
+  "kind": "driver",
+  "patterns": [
+   "PAT-05",
+   "PAT-08",
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-N014"
+ },
+ {
+  "answer": null,
+  "gold": null,
+  "kind": "unregistered",
+  "patterns": [
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-N015"
+ },
+ {
+  "answer": null,
+  "gold": null,
+  "kind": "no_model",
+  "patterns": [
+   "PAT-02",
+   "PAT-07"
+  ],
+  "reason": "",
+  "row_id": "test-N016"
+ },
+ {
+  "answer": null,
+  "gold": null,
+  "kind": "driver",
+  "patterns": [
+   "PAT-08",
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-N017"
+ },
+ {
+  "answer": null,
+  "gold": null,
+  "kind": "unregistered",
+  "patterns": [
+   "PAT-01"
+  ],
+  "reason": "",
+  "row_id": "test-N018"
+ },
+ {
+  "answer": null,
+  "gold": null,
+  "kind": "no_model",
+  "patterns": [
+   "PAT-07",
+   "PAT-12"
+  ],
+  "reason": "",
+  "row_id": "test-N019"
+ }
+]

@@ -7,7 +7,7 @@ README에 넣을 화면 녹화 대본이다. 녹화는 사용자가 한다. 결�
 ```bash
 cd ~/projects/spec-bridge
 npm --prefix web run build
-OFFLINE=1 SPEC_BRIDGE_APP_DIR=var/demo uv run uvicorn spec_bridge.api.app:app --host 127.0.0.1 --port 8000
+OFFLINE=1 SPEC_BRIDGE_APP_DIR=var/demo uv run uvicorn spec_bridge.api.app:app --host 127.0.0.1 --port 8010
 ```
 
 - 새 작업 폴더(`var/demo`)를 쓴다. 작업 목록이 비고, 등록 목록은 개발 분할 기본값으로 시작한다.

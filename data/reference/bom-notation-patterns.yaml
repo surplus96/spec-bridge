@@ -2,7 +2,7 @@
 # 절차: docs/dataset-plan.md 4-5. 점검: uv run python -m spec_bridge.bom.notation
 #
 # - 수집한 출처(data/reference/bom/manifest.yaml)에서 관찰한 패턴만 적는다. 헬퍼가 기억으로
-#   패턴을 만들지 않는다(H3). verified_by는 사용자만 채운다.
+#   패턴을 만들지 않는다(H3). 이번 12개 패턴은 사용자 승인으로 Codex가 대조·서명했다(D-106).
 # - 원문 표기는 여기에 적지 않는다(raw_example 필드는 거부된다). 원문은 로컬 raw-examples.yaml에 둔다.
 # - pattern_type 이름은 수집한 행을 보고 정한다. 미리 정한 목록은 없다.
 #
@@ -16,4 +16,158 @@
 #     verified_by: null
 
 schema_version: 1
-patterns: []
+patterns:
+- id: PAT-01
+  pattern_type: quantity_multiplier_prefix
+  description: 수량 뒤에 x 또는 곱셈 기호를 붙여 장비 사양 앞에 둔다. 기호 주변 공백과 제조사 앞에 출력이 끼어드는지 여부가 다르다
+  source_refs:
+  - source_id: BOMSRC-01
+    location: p.1
+  - source_id: BOMSRC-02
+    location: p.1
+  - source_id: BOMSRC-05
+    location: p.1
+  - source_id: BOMSRC-07
+    location: p.1
+  verified_by: Codex (2026-10-17; 사용자 승인에 따른 이번 BOM 검토 한정, D-106)
+- id: PAT-02
+  pattern_type: quantity_in_parentheses
+  description: 수량이 괄호 안의 숫자로 구성품 이름 뒤나 제조사 앞에 온다. 괄호 뒤 공백이 없는 경우도 있다
+  source_refs:
+  - source_id: BOMSRC-03
+    location: p.2
+  - source_id: BOMSRC-03
+    location: p.3
+  - source_id: BOMSRC-06
+    location: p.1
+  - source_id: BOMSRC-08
+    location: p.1
+  verified_by: Codex (2026-10-17; 사용자 승인에 따른 이번 BOM 검토 한정, D-106)
+- id: PAT-03
+  pattern_type: quantity_bare_number
+  description: 수량이 기호 없이 숫자만으로 제조사 앞에 온다
+  source_refs:
+  - source_id: BOMSRC-03
+    location: p.2
+  - source_id: BOMSRC-04
+    location: p.2
+  verified_by: Codex (2026-10-17; 사용자 승인에 따른 이번 BOM 검토 한정, D-106)
+- id: PAT-04
+  pattern_type: specifications_in_same_entry
+  description: 제조사·모델 또는 장비 설명에 출력·전압·주파수·회전수·용량·치수·힘·감속비 등의 사양이 함께 적힌다. 표의 칸뿐 아니라 문단 내 항목도 포함하며 모두를 정격으로
+    단정하지 않는다
+  source_refs:
+  - source_id: BOMSRC-01
+    location: p.1
+  - source_id: BOMSRC-02
+    location: p.1
+  - source_id: BOMSRC-03
+    location: p.2
+  - source_id: BOMSRC-03
+    location: p.3
+  - source_id: BOMSRC-04
+    location: p.3
+  - source_id: BOMSRC-05
+    location: p.1
+  - source_id: BOMSRC-07
+    location: p.1
+  verified_by: Codex (2026-10-17; 사용자 승인에 따른 이번 BOM 검토 한정, D-106)
+- id: PAT-05
+  pattern_type: maker_label_case_and_abbreviation
+  description: 제조사 자리에 대문자 표기, 단어 첫 글자 대문자 표기, 짧은 대문자 명칭이 관찰된다. 표기 형태를 묶으며 약칭과 정식 명칭의 동일 제조사 여부를 이 자료만으로
+    확정하지 않는다
+  source_refs:
+  - source_id: BOMSRC-01
+    location: p.1
+  - source_id: BOMSRC-02
+    location: p.1
+  - source_id: BOMSRC-03
+    location: p.2
+  - source_id: BOMSRC-03
+    location: p.3
+  - source_id: BOMSRC-05
+    location: p.1
+  - source_id: BOMSRC-06
+    location: p.1
+  - source_id: BOMSRC-07
+    location: p.1
+  verified_by: Codex (2026-10-17; 사용자 승인에 따른 이번 BOM 검토 한정, D-106)
+- id: PAT-06
+  pattern_type: maker_label_spelling_variation
+  description: 한 문서의 관련 장비 문맥에서 제조사 자리의 비슷한 명칭에 철자 차이가 관찰된다. 원문 철자를 보존하며 동일 제조사 여부나 정답 철자를 확정하지 않는다
+  source_refs:
+  - source_id: BOMSRC-01
+    location: p.1
+  - source_id: BOMSRC-03
+    location: p.2
+  - source_id: BOMSRC-03
+    location: p.3
+  verified_by: Codex (2026-10-17; 사용자 승인에 따른 이번 BOM 검토 한정, D-106)
+- id: PAT-07
+  pattern_type: incomplete_equipment_identity
+  description: 해당 발췌에 제조사 명칭만 있고 모델이 명시되지 않거나, 제조사·모델 없이 장비 종류와 사양만 적힌다. 발췌 밖의 정보 유무는 판단하지 않는다
+  source_refs:
+  - source_id: BOMSRC-01
+    location: p.1
+  - source_id: BOMSRC-02
+    location: p.1
+  - source_id: BOMSRC-04
+    location: p.3
+  - source_id: BOMSRC-05
+    location: p.1
+  verified_by: Codex (2026-10-17; 사용자 승인에 따른 이번 BOM 검토 한정, D-106)
+- id: PAT-08
+  pattern_type: driver_named_separately
+  description: 장비 항목 안에 구동 기계 또는 부착 모터를 따로 지칭하고 그 제조사나 모델을 적는다. 주 장비와 부속 구동기의 식별 정보를 구분한다
+  source_refs:
+  - source_id: BOMSRC-03
+    location: p.3
+  - source_id: BOMSRC-05
+    location: p.1
+  verified_by: Codex (2026-10-17; 사용자 승인에 따른 이번 BOM 검토 한정, D-106)
+- id: PAT-09
+  pattern_type: serial_numbers_in_cell
+  description: 일련번호가 모델과 같은 칸에 붙는다
+  source_refs:
+  - source_id: BOMSRC-05
+    location: p.1
+  verified_by: Codex (2026-10-17; 사용자 승인에 따른 이번 BOM 검토 한정, D-106)
+- id: PAT-10
+  pattern_type: or_equal_substitute
+  description: 모델 뒤에 동등품으로 대체할 수 있다는 표기가 붙는다
+  source_refs:
+  - source_id: BOMSRC-08
+    location: p.1
+  verified_by: Codex (2026-10-17; 사용자 승인에 따른 이번 BOM 검토 한정, D-106)
+- id: PAT-11
+  pattern_type: model_code_separators
+  description: 모델·형식 표기 내부에 하이픈, 공백, 점, 슬래시 같은 구분자가 관찰된다. 장비 종류에 붙은 하이픈이나 제조사와 모델 사이 공백만으로는 이 유형에 넣지 않는다
+  source_refs:
+  - source_id: BOMSRC-01
+    location: p.1
+  - source_id: BOMSRC-02
+    location: p.1
+  - source_id: BOMSRC-03
+    location: p.2
+  - source_id: BOMSRC-03
+    location: p.3
+  - source_id: BOMSRC-04
+    location: p.2
+  - source_id: BOMSRC-05
+    location: p.1
+  - source_id: BOMSRC-06
+    location: p.1
+  - source_id: BOMSRC-07
+    location: p.1
+  - source_id: BOMSRC-08
+    location: p.1
+  verified_by: Codex (2026-10-17; 사용자 승인에 따른 이번 BOM 검토 한정, D-106)
+- id: PAT-12
+  pattern_type: quantity_in_words
+  description: 수량이 영어 단어로, 또는 단어와 괄호 숫자를 함께 써서 적힌다
+  source_refs:
+  - source_id: BOMSRC-04
+    location: p.3
+  - source_id: BOMSRC-08
+    location: p.1
+  verified_by: Codex (2026-10-17; 사용자 승인에 따른 이번 BOM 검토 한정, D-106)

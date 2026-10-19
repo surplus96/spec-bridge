@@ -97,3 +97,60 @@ def test_a_bom_that_cannot_be_read_or_linked_is_refused(
     other.write_text("a,b\n")
     assert upload(client, other).status_code == 415
     assert client.get("/api/boms/BOM-UP-none").status_code == 404
+
+
+# D-112: a suggestion for a pending row, confirmed by the reviewer as a pick ---------------
+def typo_upload(tmp_path: Path, client: TestClient, replies: list[Any]) -> tuple[Jobs, Any]:  # noqa: F811
+    jobs = use(jobs_for(tmp_path, replies))
+    with jobs.registry.store.conn as conn:
+        conn.execute("DELETE FROM relations WHERE relation_id = 'has_component'")
+    pump = answer("BOM-001")["items"][1]
+    text = (BOMS / "BOM-001.md").read_text()
+    line = next(r for r in text.splitlines() if f"| {pump['model_designation']} |" in r)
+    maker = line.split("|")[3].strip()
+    typo = line.replace(maker, f"{maker[:-2]}{maker[-1]}{maker[-2]}")
+    path = tmp_path / "maker.md"
+    path.write_text(text.replace(line, typo))
+    return jobs, upload(client, path).json()
+
+
+def test_a_pending_row_gets_a_verified_suggestion_and_the_reviewer_confirms_it(
+    tmp_path: Path,
+    client: TestClient,  # noqa: F811
+) -> None:
+    pump = answer("BOM-001")["items"][1]
+    jobs, view = typo_upload(
+        tmp_path, client, [{"product_id": pump["product_id"], "reason": "same maker"}]
+    )
+    pending = [r for r in view["rows"] if r["status"] == "pending"]
+    assert pending, view["rows"]
+    line = next(r["line"] for r in pending if r["component"] == pump["class"])
+    response = client.post(f"/api/boms/{view['bom_id']}/suggest", json={"line": line, "picks": []})
+    assert response.status_code == 200, response.json()
+    suggestion = response.json()
+    assert suggestion["product_id"] == pump["product_id"] and suggestion["rejected"] is None
+    audits = jobs.registry.store.conn.execute(
+        "SELECT COUNT(*) FROM audit_events WHERE kind = 'bom_suggestion'"
+    ).fetchone()
+    assert audits == (1,)
+    pick = {"line": line, "product_id": pump["product_id"], "reason": "모델 제안 확인"}
+    preview = client.post(f"/api/boms/{view['bom_id']}/preview", json={"picks": [pick]}).json()
+    row = next(r for r in preview["rows"] if r["line"] == line)
+    assert row["decided_by"] == "reviewer" and row["status"] == "new"
+
+
+def test_a_suggestion_is_only_for_a_pending_row(tmp_path: Path, client: TestClient) -> None:  # noqa: F811
+    _, view = typo_upload(tmp_path, client, [])
+    found = next(r["line"] for r in view["rows"] if r["status"] != "pending")
+    response = client.post(f"/api/boms/{view['bom_id']}/suggest", json={"line": found})
+    assert response.status_code == 422
+
+
+def test_without_the_model_server_the_suggestion_says_so(
+    tmp_path: Path,
+    client: TestClient,  # noqa: F811
+) -> None:
+    _, view = typo_upload(tmp_path, client, [ConnectionError("Failed to connect to Ollama")])
+    line = next(r["line"] for r in view["rows"] if r["status"] == "pending")
+    response = client.post(f"/api/boms/{view['bom_id']}/suggest", json={"line": line})
+    assert response.status_code == 503 and "model server" in response.json()["detail"]

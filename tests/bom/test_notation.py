@@ -119,14 +119,18 @@ def test_a_broken_file_is_refused(tmp_path: Path, broken: str) -> None:
         load(*write(tmp_path, sources, patterns, rows(2, 2)))
 
 
-def test_the_committed_templates_load_and_are_not_ready() -> None:
+def test_the_committed_catalog_without_local_rows_is_not_ready(tmp_path: Path) -> None:
     from tests.conftest import ROOT
 
     report = check(
         *load(
             ROOT / "data/reference/bom/manifest.yaml",
             ROOT / "data/reference/bom-notation-patterns.yaml",
-            ROOT / "data/reference/bom/raw-examples.yaml",
+            tmp_path / "raw-examples.yaml",
         )
     )
-    assert report["ready"] is False  # nothing collected yet (D-102)
+    # A checkout has metadata, but the original excerpts remain local (D-104, D-106).
+    # The test must not depend on whether this developer has those private files.
+    assert report["raw_rows"] == 0
+    assert report["ready"] is False
+    assert any("raw rows" in message for message in report["missing"])

@@ -7,6 +7,12 @@
   class (or a parent class), or when it is the root itself.
 - Found rows are "new" or "existing" (already a has_component of the root). Relations
   the root has but the BOM does not list are reported in `not_in_bom`, never removed.
+- When the maker and model cells are not an exact registered identity, the model cell is
+  searched (D-108): a run of 1-3 of its words that, without separators, equals a
+  registered model links the row only if the maker cell names that product's maker and
+  exactly one product fits. A model that matches but a maker written another way, an
+  "or equal" row, a row without a model and a model of several products all wait for
+  review with the reason; nothing is linked on resemblance.
 - A reviewer may resolve a pending row by picking a registered product of the row's
   class (D-103). The pick keeps its reason and is marked `decided_by: reviewer`, apart
   from what the rule found. A pick for a row the rule found, or of another class, is
@@ -16,6 +22,7 @@
 
 import hashlib
 import json
+import re
 from typing import Annotated, Any, Literal
 
 from pydantic import Field
@@ -26,6 +33,21 @@ from spec_bridge.ontology.facts import StrictModel
 from spec_bridge.registry.store import RegistryStore
 
 RELATION = "has_component"
+MIN_KEY = 4  # a shorter model code could match a fragment of an unrelated cell
+NO_MODEL = re.compile(r"[\s\-—–/.]*")  # the model cell holds no code at all
+OR_EQUAL = re.compile(r"\bor\s+(?:an\s+)?(?:equal|equivalent)\b", re.I)
+
+
+def search_key(text: str) -> str:
+    """'VX-021/002' -> 'VX021002': letters and digits only, for searching a cell."""
+    return re.sub(r"[^0-9A-Z]", "", text.upper())
+
+
+def _spans(cell: str) -> set[str]:
+    """Search keys of every run of 1-3 consecutive words of the cell."""
+    words = [w for w in re.split(r"[\s,;()]+", cell) if w]
+    runs = (words[i : i + n] for n in (1, 2, 3) for i in range(len(words) - n + 1))
+    return {k for run in runs if len(k := search_key("".join(run))) >= MIN_KEY}
 
 
 class Pick(StrictModel):
@@ -90,13 +112,15 @@ def _picked(
     )
 
 
-def _row(
-    store: RegistryStore, onto: Ontology, row: BomRow, root_id: str, existing: list[str]
+def _found(
+    store: RegistryStore,
+    onto: Ontology,
+    row: BomRow,
+    product_id: str,
+    root_id: str,
+    existing: list[str],
 ) -> RowResult:
-    product_id = store.find_by_identity(row.maker, row.model)
-    if product_id is None:
-        why = f"{row.maker} {row.model} is not in the registry (register it from its spec sheet)"
-        return RowResult(row=row, status="pending", reason=why)
+    """A product the rule identified: still refused if it is the root or another class."""
     if product_id == root_id:
         return RowResult(row=row, status="pending", reason="the root cannot be its own component")
     class_id = store.product_class(product_id) or ""
@@ -105,6 +129,49 @@ def _row(
         return RowResult(row=row, status="pending", reason=why)
     status: Literal["new", "existing"] = "existing" if product_id in existing else "new"
     return RowResult(row=row, status=status, product_id=product_id)
+
+
+def _searched(store: RegistryStore, row: BomRow, index: list[dict[str, Any]]) -> str:
+    """The product the model cell names, or why the row waits (a sentence, not an id)."""
+    if NO_MODEL.fullmatch(row.model):
+        return f"no model in the row (only {row.maker}): the product cannot be told"
+    spans = _spans(row.model)
+    matches = [p for p in index if search_key(p["model_designation"]) in spans]
+    if not matches:
+        return f"{row.maker} {row.model} is not in the registry (register it from its spec sheet)"
+    ids = ", ".join(p["product_id"] for p in matches)
+    if OR_EQUAL.search(row.model):
+        return f"'or equal': the supplied product may differ from {ids}; pick it if it is"
+    maker_id = store.resolve_maker(row.maker)
+    same = [p for p in matches if p["maker_id"] == maker_id]
+    if len(same) == 1:
+        return str(same[0]["product_id"])
+    if len(same) > 1:
+        return f"the model fits several products ({ids}); pick the right one"
+    makers = ", ".join(sorted({str(p["maker_name"]) for p in matches}))
+    if maker_id is None:
+        return (
+            f"the model matches {ids} ({makers}), but the maker {row.maker!r} is not a known "
+            "name of it; pick the product if it is the same maker"
+        )
+    return f"the model matches {ids} of another maker ({makers}); check the maker"
+
+
+def _row(
+    store: RegistryStore,
+    onto: Ontology,
+    row: BomRow,
+    root_id: str,
+    existing: list[str],
+    index: list[dict[str, Any]],
+) -> RowResult:
+    exact = store.find_by_identity(row.maker, row.model)
+    if exact is not None:
+        return _found(store, onto, row, exact, root_id, existing)
+    found = _searched(store, row, index)
+    if found in {p["product_id"] for p in index}:
+        return _found(store, onto, row, found, root_id, existing)
+    return RowResult(row=row, status="pending", reason=found)
 
 
 def plan(
@@ -118,7 +185,8 @@ def plan(
             "register it from its spec sheet first"
         )
     existing = store.relations_of(root_id, RELATION)
-    rows = [_row(store, onto, row, root_id, existing) for row in bom.rows]
+    index = store.identities()
+    rows = [_row(store, onto, row, root_id, existing, index) for row in bom.rows]
     lines = [r.row.line for r in rows]
     for pick in picks or []:
         if pick.line not in lines:

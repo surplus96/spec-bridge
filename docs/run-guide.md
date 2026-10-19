@@ -24,10 +24,10 @@ npm --prefix web run build      # web/dist → FastAPI가 같은 주소에서 �
 ## 2. 검토 화면 실행
 
 ```bash
-OFFLINE=1 SPEC_BRIDGE_APP_DIR=var/app uv run uvicorn spec_bridge.api.app:app --host 127.0.0.1 --port 8000
+OFFLINE=1 SPEC_BRIDGE_APP_DIR=var/app uv run uvicorn spec_bridge.api.app:app --host 127.0.0.1 --port 8010
 ```
 
-브라우저에서 `http://127.0.0.1:8000/`을 연다. 처음 요청 때 서비스(모델 연결, KB 임베딩)를 만들므로 몇 초 걸린다.
+브라우저에서 `http://127.0.0.1:8010/`을 연다. 처음 요청 때 서비스(모델 연결, KB 임베딩)를 만들므로 몇 초 걸린다.
 
 - 앱 데이터: `SPEC_BRIDGE_APP_DIR`(등록 DB, 체크포인트, 업로드 원본). 처음 실행 때 개발 분할의 기존 등록 목록으로 만든다.
 - 클라우드 모델로 바꾸기(비교용): `SPEC_BRIDGE_PROVIDER=openai`, `.env`에 `OPENAI_API_KEY`. 이때는 `OFFLINE=1`을 쓰지 않는다. 임베딩은 계속 로컬이다.
@@ -115,7 +115,7 @@ uv run python -m spec_bridge.llm.hosts var/app/registry.sqlite
 uv run python -m spec_bridge.llm.hosts var/w6-6/connections-<time>.log
 ```
 
-프로세스별(이름+PID) 상대 주소와 보인 시간이 나온다. 서버 PID는 `127.0.0.1:8000`에서 수신하는 프로세스다. Ollama 데스크톱 앱은 모델 서버와 다른 프로세스이고, 자체 외부 통신을 할 수 있다(보고서 §9).
+프로세스별(이름+PID) 상대 주소와 보인 시간이 나온다. 서버 PID는 `127.0.0.1:8010`에서 수신하는 프로세스다. Ollama 데스크톱 앱은 모델 서버와 다른 프로세스이고, 자체 외부 통신을 할 수 있다(보고서 §9).
 
 ## 6. Docker를 쓰지 않는 이유
 
@@ -132,6 +132,7 @@ uv run python -m spec_bridge.bom data/synth/boms/BOM-001.md --registry var/regis
 ```
 
 - 첫 실행은 미리보기다. 행마다 `new`(추가될 관계), `existing`(이미 있음), `pending`(검토 대기와 사유)을 보인다. `--apply`일 때만 저장한다.
+- 수량 칸은 `2`, `2 x`, `(2)`, `2 pcs`, `Two`처럼 써도 읽는다. 모델 칸에 구분자가 다르거나 정격·일련번호가 붙어 있어도, 모델 부분이 등록 모델과 정확히 같고 제조사가 맞으면 연결한다. 제조사 표기가 다르거나, `or equal`이 붙었거나, 모델이 없으면 검토 대기로 남기고 사유를 보인다(D-108).
 - 상위 제품(`Root model` + `Manufacturer`)이 저장소에 없으면 BOM 전체를 거부한다. 새 제품은 사양서 등록으로 만든다.
 - 기존 관계는 지우지 않는다. BOM에 없는 기존 관계는 `not_in_bom`으로 보고한다. 수량은 제품 이벤트 `bom_linked`와 감사 기록에 남는다.
 - 합성 BOM 4건의 관계는 seed에 이미 있으므로, seed 저장소에서는 모든 행이 `existing`이다. BOM-002·004는 테스트 분할 저장소(`test`)에 있다.
@@ -141,4 +142,5 @@ uv run python -m spec_bridge.bom data/synth/boms/BOM-001.md --registry var/regis
 - "BOM 올리기" → 미리보기. 검토 대기 행에는 사유와 같은 종류의 등록 제품 목록이 보인다. 제품을 고르고 사유를 적어 "지정"하면 그 행이 "담당자 지정"으로 바뀐다.
 - "적용"은 서버가 다시 계획한 결과가 미리보기와 같을 때만 저장한다. 그사이 저장소가 바뀌었으면 거부하고 새 미리보기를 보인다.
 - 제품 상세에 구성품(수량)과 상위 제품이 보인다. 업로드한 BOM 파일은 `<앱 폴더>/boms/`에 남는다.
+- 검토 대기 행의 "제안 받기"는 로컬 모델(`exaone3.5:7.8b`)을 부른다(D-112). 검증을 통과한 제안만 지정 양식을 채우고, 담당자가 "지정"으로 확정한다. 모델 서버가 꺼져 있으면 그 사실만 알리고, 나머지는 그대로 쓸 수 있다.
 

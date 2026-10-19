@@ -1,10 +1,10 @@
 """Upload API (W4-7, MVP) and the job API for the review UI (W5-4).
 
 Run on loopback only (local-first, NFR-01):
-    OFFLINE=1 uv run uvicorn spec_bridge.api.app:app --host 127.0.0.1 --port 8000
+    OFFLINE=1 uv run uvicorn spec_bridge.api.app:app --host 127.0.0.1 --port 8010
 Switch the model with one setting (NFR-05); embeddings for retrieval stay local:
     SPEC_BRIDGE_PROVIDER=openai uv run uvicorn spec_bridge.api.app:app --host 127.0.0.1
-    curl -F file=@data/synth/inputs/<a dev document> http://127.0.0.1:8000/documents
+    curl -F file=@data/synth/inputs/<a dev document> http://127.0.0.1:8010/documents
 
 The job API (/api/...) is in `spec_bridge.api.jobs`; the service wiring in `deps`.
 """
