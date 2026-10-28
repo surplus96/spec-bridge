@@ -1,4 +1,5 @@
 import { fireEvent, screen, waitFor, within } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { HttpResponse, http } from "msw";
 import { describe, expect, it } from "vitest";
 import type { components } from "../../api/schema";
@@ -467,5 +468,243 @@ describe("ReviewPage", () => {
     expect(sent).toMatchObject({
       command: { action: "acknowledge", revision: 3, keys: [note.key] },
     });
+  });
+});
+
+// The reviewer's decisions (D-063) and the edits besides "set", driven as a user would.
+function capture() {
+  const box: { sent?: { command: Record<string, unknown> } } = {};
+  const onResume = (body: unknown) => {
+    box.sent = body as { command: Record<string, unknown> };
+    return undefined;
+  };
+  return { box, onResume };
+}
+
+function linkable(): ReviewPrompt {
+  const base = review();
+  return review({
+    link_targets: ["REG-D-1", "REG-S-1"],
+    allowed: ["edit", "link", "cancel"],
+    blockers: ["first reason", "second reason"],
+    result: {
+      ...base.result,
+      matches: [
+        { registry_id: "REG-D-1", relation: "duplicate", evidence: {} },
+        { registry_id: "REG-S-1", relation: "similar", evidence: {} },
+      ],
+    },
+  });
+}
+
+describe("ReviewPage decisions", () => {
+  it("links to the target the reviewer picked, with the screen's revision", async () => {
+    const user = userEvent.setup();
+    const { box, onResume } = capture();
+    serve(job(linkable()), onResume);
+    renderWithQuery(<ReviewPage jobId="JOB-1" onBack={() => {}} />);
+    await user.selectOptions(await screen.findByLabelText("연결 대상"), "REG-S-1");
+    await user.click(screen.getByRole("button", { name: "기존 제품에 연결" }));
+    await waitFor(() => expect(box.sent).toBeDefined());
+    expect(box.sent?.command).toEqual({ action: "link", revision: 3, target_id: "REG-S-1" });
+  });
+
+  it("cancels only after the reviewer confirms, and can step back", async () => {
+    const user = userEvent.setup();
+    const { box, onResume } = capture();
+    serve(job(review()), onResume);
+    renderWithQuery(<ReviewPage jobId="JOB-1" onBack={() => {}} />);
+    await user.click(await screen.findByRole("button", { name: "취소" }));
+    expect(screen.getByText(/작업을 취소할까요/)).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "아니오" }));
+    expect(screen.queryByText(/작업을 취소할까요/)).not.toBeInTheDocument();
+    expect(box.sent).toBeUndefined();
+
+    await user.click(screen.getByRole("button", { name: "취소" }));
+    await user.click(screen.getByRole("button", { name: "예, 취소" }));
+    await waitFor(() => expect(box.sent).toBeDefined());
+    expect(box.sent?.command).toMatchObject({ action: "cancel" });
+  });
+
+  it("opens the full list of reasons registration is blocked", async () => {
+    const user = userEvent.setup();
+    serve(job(linkable()));
+    renderWithQuery(<ReviewPage jobId="JOB-1" onBack={() => {}} />);
+    const why = await screen.findByRole("region", { name: "등록할 수 없는 이유" });
+    const toggle = within(why).getByRole("button", { name: /2건: first reason/ });
+    expect(toggle).toHaveAttribute("aria-expanded", "false");
+    expect(within(why).queryByRole("listitem")).not.toBeInTheDocument();
+    await user.click(toggle);
+    expect(toggle).toHaveAttribute("aria-expanded", "true");
+    expect(
+      within(why)
+        .getAllByRole("listitem")
+        .map((li) => li.textContent),
+    ).toEqual(["first reason", "second reason"]);
+  });
+});
+
+describe("ReviewPage class choice", () => {
+  const choosing: JobView = {
+    ...job(null, "awaiting_class"),
+    class_id: null,
+    prompt: {
+      kind: "choose_class",
+      candidates: ["Pump", "FourStrokeEngine"],
+      classes: ["FourStrokeEngine", "Pump", "Separator"],
+      notice: null,
+    },
+  };
+
+  it("offers the classifier's candidates first and sends the chosen class", async () => {
+    const user = userEvent.setup();
+    const { box, onResume } = capture();
+    serve(choosing, onResume);
+    renderWithQuery(<ReviewPage jobId="JOB-1" onBack={() => {}} />);
+    const select = await screen.findByLabelText("클래스");
+    expect(select).toHaveValue("Pump"); // the top candidate
+    const groups = within(select).getAllByRole("group");
+    expect(
+      within(groups[0])
+        .getAllByRole("option")
+        .map((o) => o.textContent),
+    ).toEqual(["Pump", "FourStrokeEngine"]);
+    expect(
+      within(groups[1])
+        .getAllByRole("option")
+        .map((o) => o.textContent),
+    ).toEqual(["Separator"]);
+    await user.selectOptions(select, "FourStrokeEngine");
+    await user.click(screen.getByRole("button", { name: "이 클래스로 계속" }));
+    await waitFor(() => expect(box.sent).toBeDefined());
+    expect(box.sent?.command).toEqual({ action: "choose_class", class_id: "FourStrokeEngine" });
+  });
+
+  it("can cancel the job instead of choosing", async () => {
+    const user = userEvent.setup();
+    const { box, onResume } = capture();
+    serve(choosing, onResume);
+    renderWithQuery(<ReviewPage jobId="JOB-1" onBack={() => {}} />);
+    await user.click(await screen.findByRole("button", { name: "작업 취소" }));
+    await waitFor(() => expect(box.sent).toBeDefined());
+    expect(box.sent?.command).toMatchObject({ action: "cancel" });
+  });
+});
+
+describe("ReviewPage edits", () => {
+  it("adds a value read from a block the reviewer picked in the source", async () => {
+    const user = userEvent.setup();
+    const { box, onResume } = capture();
+    serve(job(review()), onResume);
+    renderWithQuery(<ReviewPage jobId="JOB-1" onBack={() => {}} />);
+    await user.click(await screen.findByRole("button", { name: /값 추가/ }));
+    const form = screen.getByRole("form", { name: "값 추가" });
+    const apply = within(form).getByRole("button", { name: "적용" });
+    await user.selectOptions(within(form).getByLabelText("속성"), "rated_power");
+    await user.type(within(form).getByLabelText("값"), "2221.25");
+    await user.type(within(form).getByLabelText("단위"), "kW");
+    await user.type(within(form).getByLabelText("사유(필수)"), "원문 확인");
+    expect(apply).toBeDisabled(); // no block picked yet
+    await user.click(within(form).getByRole("button", { name: "원문에서 선택" }));
+    await user.click(await screen.findByRole("button", { name: /Rated power 2221.25 kW/ }));
+    expect(within(form).getByText("Rated power 2221.25 kW (R1)")).toBeInTheDocument();
+    await user.click(apply);
+    await waitFor(() => expect(box.sent).toBeDefined());
+    expect(box.sent?.command).toEqual({
+      action: "edit",
+      revision: 3,
+      edit: {
+        op: "add",
+        attribute: "rated_power",
+        block: 1,
+        value_text: "2221.25",
+        unit_text: "kW",
+        reason: "원문 확인",
+      },
+    });
+  });
+
+  it("removes a value with only a reason", async () => {
+    const user = userEvent.setup();
+    const { box, onResume } = capture();
+    serve(job(review()), onResume);
+    renderWithQuery(<ReviewPage jobId="JOB-1" onBack={() => {}} />);
+    await user.click(await screen.findByRole("button", { name: "삭제" }));
+    const form = screen.getByRole("form", { name: "값 삭제" });
+    expect(within(form).queryByLabelText("값")).not.toBeInTheDocument();
+    await user.type(within(form).getByLabelText("사유(필수)"), "다른 제품의 값");
+    await user.click(within(form).getByRole("button", { name: "적용" }));
+    await waitFor(() => expect(box.sent).toBeDefined());
+    expect(box.sent?.command).toEqual({
+      action: "edit",
+      revision: 3,
+      edit: { op: "remove", target: "fact", index: 0, reason: "다른 제품의 값" },
+    });
+  });
+
+  it("sends a cleared unit as no unit, not an empty string", async () => {
+    const user = userEvent.setup();
+    const { box, onResume } = capture();
+    serve(job(review()), onResume);
+    renderWithQuery(<ReviewPage jobId="JOB-1" onBack={() => {}} />);
+    await user.click(await screen.findByRole("button", { name: "수정" }));
+    const form = screen.getByRole("form", { name: "값 수정" });
+    await user.clear(within(form).getByLabelText("단위"));
+    await user.type(within(form).getByLabelText("사유(필수)"), "단위 없는 값");
+    await user.click(within(form).getByRole("button", { name: "적용" }));
+    await waitFor(() => expect(box.sent).toBeDefined());
+    expect(box.sent?.command).toMatchObject({ edit: { op: "set", unit_text: null } });
+  });
+});
+
+describe("ReviewPage supplement request", () => {
+  it("lists what the document lacks, with the expected form of each value", async () => {
+    const user = userEvent.setup();
+    serve(job(review()));
+    server.use(
+      http.get("*/api/jobs/JOB-1/supplement", () =>
+        HttpResponse.json({
+          document_id: "UP-1",
+          file_name: "SYN-011.docx",
+          class_id: "FourStrokeEngine",
+          missing: [
+            {
+              attribute: "maker",
+              expected: { datatype: ["string"], dimension: "", unit: null, allowed_values: [] },
+              rule_ref: "ontology/ontology.yaml#classes/FourStrokeEngine/required_all",
+            },
+            {
+              attribute: "rated_power",
+              expected: {
+                datatype: ["quantity"],
+                dimension: "power",
+                unit: "kW",
+                allowed_values: [],
+              },
+              rule_ref: "ontology/ontology.yaml#classes/FourStrokeEngine/required_all",
+            },
+          ],
+          unreadable: [],
+          text: "maker\nrated_power\n",
+        }),
+      ),
+    );
+    renderWithQuery(<ReviewPage jobId="JOB-1" onBack={() => {}} />);
+    await user.click(await screen.findByRole("tab", { name: "보강 요청" }));
+    const items = await screen.findAllByRole("listitem");
+    const texts = items.map((li) => li.textContent);
+    expect(texts).toContain("maker — string");
+    expect(texts).toContain("rated_power — quantity, 단위 kW");
+  });
+
+  it("says when the request could not be made", async () => {
+    const user = userEvent.setup();
+    serve(job(review()));
+    server.use(
+      http.get("*/api/jobs/JOB-1/supplement", () => new HttpResponse(null, { status: 500 })),
+    );
+    renderWithQuery(<ReviewPage jobId="JOB-1" onBack={() => {}} />);
+    await user.click(await screen.findByRole("tab", { name: "보강 요청" }));
+    expect(await screen.findByText("보강 요청을 만들지 못했습니다")).toBeInTheDocument();
   });
 });
