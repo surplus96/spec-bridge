@@ -1,17 +1,17 @@
 // Upload a specification (.pdf, .xlsx, .docx); the job starts on the server.
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useRef } from "react";
+import { postFile } from "../../api/client";
+
+const FAILED = "업로드하지 못했습니다";
 
 export function UploadButton({ onUploaded }: { onUploaded: (jobId: string) => void }) {
   const input = useRef<HTMLInputElement>(null);
   const client = useQueryClient();
   const upload = useMutation({
     mutationFn: async (file: File) => {
-      const body = new FormData();
-      body.append("file", file);
-      const response = await fetch("/api/jobs", { method: "POST", body });
-      const data = (await response.json()) as { job_id?: string; detail?: string };
-      if (!response.ok || !data.job_id) throw new Error(data.detail ?? "업로드하지 못했습니다");
+      const data = (await postFile("/api/jobs", file, FAILED)) as { job_id?: string };
+      if (!data.job_id) throw new Error(FAILED);
       return data.job_id;
     },
     onSuccess: (jobId) => {

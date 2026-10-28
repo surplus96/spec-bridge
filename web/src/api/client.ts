@@ -10,5 +10,20 @@ export const api = createClient<paths>({
   fetch: (request) => globalThis.fetch(request),
 });
 
+/** POST one file as multipart (the typed client does not build multipart bodies). A refusal
+ * reads as the server's `detail`; a reply that is not JSON (a proxy's HTML error page) reads
+ * as the fallback with the HTTP status, never as a JSON parse error. */
+export async function postFile(url: string, file: File, fallback: string): Promise<unknown> {
+  const body = new FormData();
+  body.append("file", file);
+  const response = await fetch(url, { method: "POST", body });
+  const data: unknown = await response.json().catch(() => null);
+  const detail = (data as { detail?: unknown } | null)?.detail;
+  if (!response.ok || data === null) {
+    throw new Error(typeof detail === "string" ? detail : `${fallback} (HTTP ${response.status})`);
+  }
+  return data;
+}
+
 export type JobSummary = components["schemas"]["JobSummary"];
 export type JobView = components["schemas"]["JobView"];

@@ -39,4 +39,19 @@ describe("UploadButton", () => {
     expect(onUploaded).not.toHaveBeenCalled();
     expect(screen.getByRole("button", { name: "사양서 올리기" })).toBeEnabled(); // can retry
   });
+
+  it("says the upload failed, with the status, when the reply is not JSON", async () => {
+    const user = userEvent.setup();
+    server.use(
+      http.post("*/api/jobs", () =>
+        HttpResponse.text("<html>Bad Gateway</html>", {
+          status: 502,
+          headers: { "content-type": "text/html" },
+        }),
+      ),
+    );
+    renderWithQuery(<UploadButton onUploaded={vi.fn()} />);
+    await user.upload(screen.getByLabelText("사양서 파일"), spec());
+    expect(await screen.findByText("업로드하지 못했습니다 (HTTP 502)")).toBeInTheDocument();
+  });
 });

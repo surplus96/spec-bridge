@@ -238,6 +238,32 @@ def test_resuming_an_unknown_job_is_404(tmp_path: Path, client: TestClient) -> N
     assert send(client, "JOB-none", {"action": "cancel"}).status_code == 404
 
 
+def test_a_bug_inside_resume_is_a_server_error_not_a_missing_job(
+    tmp_path: Path, client: TestClient, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """Only an unknown job id is 404: a KeyError from a fault inside must not read as one."""
+    jobs, job_id = started(tmp_path, client, CLEAN)
+
+    def broken(job_id: str, request_id: str) -> bool:
+        raise KeyError("request_id")
+
+    monkeypatch.setattr(jobs.registry, "applied", broken)
+    response = send(TestClient(app, raise_server_exceptions=False), job_id, {"action": "cancel"})
+    assert response.status_code == 500
+
+
+def test_a_failed_job_is_logged_with_its_traceback(
+    tmp_path: Path, client: TestClient, caplog: pytest.LogCaptureFixture
+) -> None:
+    """The screen shows one line; the server log keeps where it failed."""
+    use(jobs_for(tmp_path, [RuntimeError("boom")]))
+    with caplog.at_level("ERROR", logger="spec_bridge.api.jobs"):
+        job_id = upload(client, CLEAN)["job_id"]
+    failed = [r for r in caplog.records if job_id in r.getMessage()]
+    assert failed and failed[0].exc_info is not None
+    assert "boom" in str(failed[0].exc_info[1])
+
+
 def test_a_class_choice_takes_only_a_class_or_a_cancel(tmp_path: Path, client: TestClient) -> None:
     unknown = {"product_class": "unknown", "reason": "test"}
     use(jobs_for(tmp_path, [unknown, {"facts": []}]))

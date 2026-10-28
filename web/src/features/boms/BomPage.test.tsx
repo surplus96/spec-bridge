@@ -1,6 +1,7 @@
 import { fireEvent, screen, waitFor, within } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { HttpResponse, http } from "msw";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import type { components } from "../../api/schema";
 import { renderWithQuery } from "../../test/render";
 import { server } from "../../test/server";
@@ -66,6 +67,44 @@ function serve(onPost: (url: string, body: unknown) => Response | undefined = ()
     }),
   );
 }
+
+describe("BomPage upload", () => {
+  const md = () => new File(["| a |"], "BOM-001.md");
+
+  it("opens the uploaded BOM", async () => {
+    const user = userEvent.setup();
+    const onOpen = vi.fn();
+    server.use(http.post("*/api/boms", () => HttpResponse.json({ bom_id: "BOM-UP-9" })));
+    renderWithQuery(<BomPage bomId={null} onOpen={onOpen} onBack={() => {}} />);
+    await user.upload(screen.getByLabelText("BOM 파일"), md());
+    await waitFor(() => expect(onOpen).toHaveBeenCalledOnce());
+    expect(onOpen.mock.calls[0][0]).toBe("BOM-UP-9");
+  });
+
+  it("shows the server's reason for a refusal", async () => {
+    const user = userEvent.setup();
+    const detail = "the file is larger than 52428800 bytes";
+    server.use(http.post("*/api/boms", () => HttpResponse.json({ detail }, { status: 413 })));
+    renderWithQuery(<BomPage bomId={null} onOpen={vi.fn()} onBack={() => {}} />);
+    await user.upload(screen.getByLabelText("BOM 파일"), md());
+    expect(await screen.findByText(detail)).toBeInTheDocument();
+  });
+
+  it("says the upload failed, with the status, when the reply is not JSON", async () => {
+    const user = userEvent.setup();
+    server.use(
+      http.post("*/api/boms", () =>
+        HttpResponse.text("<html>Bad Gateway</html>", {
+          status: 502,
+          headers: { "content-type": "text/html" },
+        }),
+      ),
+    );
+    renderWithQuery(<BomPage bomId={null} onOpen={vi.fn()} onBack={() => {}} />);
+    await user.upload(screen.getByLabelText("BOM 파일"), md());
+    expect(await screen.findByText("올리지 못했습니다 (HTTP 502)")).toBeInTheDocument();
+  });
+});
 
 describe("BomPage", () => {
   it("shows each row's outcome and why a row waits (D-103)", async () => {

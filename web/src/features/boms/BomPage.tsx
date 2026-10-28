@@ -7,7 +7,7 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { ArrowLeft, Upload, UserCheck } from "lucide-react";
 import { type FormEvent, useRef, useState } from "react";
-import { api } from "../../api/client";
+import { api, postFile } from "../../api/client";
 import type { components } from "../../api/schema";
 import { className, useLabels } from "../../lib/display";
 import { Badge, type Tone } from "../../ui/Badge";
@@ -59,15 +59,14 @@ export function BomPage({ bomId, onOpen, onBack }: Props) {
   );
 }
 
+const UPLOAD_FAILED = "올리지 못했습니다";
+
 function BomUpload({ onUploaded }: { onUploaded: (bomId: string) => void }) {
   const input = useRef<HTMLInputElement>(null);
   const upload = useMutation({
     mutationFn: async (file: File) => {
-      const body = new FormData();
-      body.append("file", file);
-      const response = await fetch("/api/boms", { method: "POST", body });
-      const data = (await response.json()) as { bom_id?: string; detail?: string };
-      if (!response.ok || !data.bom_id) throw new Error(data.detail ?? "올리지 못했습니다");
+      const data = (await postFile("/api/boms", file, UPLOAD_FAILED)) as { bom_id?: string };
+      if (!data.bom_id) throw new Error(UPLOAD_FAILED);
       return data.bom_id;
     },
     onSuccess: onUploaded,

@@ -19,6 +19,7 @@ and model call is written to the registry's audit table (NFR-02).
 
 import hashlib
 import json
+import logging
 import os
 import threading
 import uuid
@@ -56,6 +57,7 @@ from spec_bridge.registry.supplement import SupplementRequest, supplement_reques
 
 REGISTRY = ROOT / "data/synth/registry"
 CURRENT_JOB: ContextVar[str | None] = ContextVar("current_job", default=None)
+log = logging.getLogger(__name__)
 
 Status = Literal[
     "running",
@@ -159,6 +161,10 @@ class JobConflict(Exception):
     """The command does not fit the job's current state (HTTP 409)."""
 
 
+class UnknownJob(LookupError):
+    """No job has this id (HTTP 404). Its own type: a KeyError from a fault inside is a 500."""
+
+
 class LockedRegistry:
     """The registry store behind one lock: request threads and the worker share it."""
 
@@ -257,6 +263,7 @@ class Jobs:
             try:
                 work()
             except Exception as error:  # the job fails, the server does not
+                log.exception("job %s failed", job_id)  # the screen gets one line, the log all
                 self.errors[job_id] = f"{type(error).__name__}: {error}"
                 self.registry.audit(job_id, "failed", {"error": self.errors[job_id]})
             finally:
@@ -333,7 +340,7 @@ class Jobs:
         with self.lock:  # check + record + submit as one step: a double click is seen
             view = self.view(job_id)
             if view is None:
-                raise KeyError(job_id)
+                raise UnknownJob(job_id)
             if self.registry.applied(job_id, request.request_id):
                 return view
             command = request.command
@@ -432,7 +439,7 @@ def get_job(job_id: str, jobs: JobsDep) -> JobView:
 def resume_job(job_id: str, request: ResumeRequest, jobs: JobsDep) -> JobView:
     try:
         return jobs.resume(job_id, request)
-    except KeyError as error:
+    except UnknownJob as error:
         raise HTTPException(404, f"no job {job_id}") from error
     except JobConflict as error:
         raise HTTPException(409, str(error)) from error
