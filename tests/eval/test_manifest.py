@@ -126,3 +126,9 @@ def test_restore_puts_the_committed_w6_record_in_place_once(tmp_path: Path) -> N
 def test_the_committed_w6_record_matches_this_checkout(tmp_path: Path) -> None:
     freeze.restore(freeze.W6_COPY, tmp_path / "F")
     assert "guard" not in freeze.verify(tmp_path / "F")["hashes"]
+
+
+def test_a_commit_missing_from_history_is_refused_not_read_as_empty() -> None:
+    """Without the commit every guard file would look added since the freeze."""
+    with pytest.raises(ValueError, match="not in this checkout's history"):
+        manifest.at_commit("0000000000000000000000000000000000000000")

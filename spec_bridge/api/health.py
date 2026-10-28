@@ -6,6 +6,7 @@ service, no embeddings): it only lists the server's models and reads the registr
 schema version read-only.
 """
 
+import http.client
 import json
 import os
 import sqlite3
@@ -38,9 +39,11 @@ def model_server() -> dict[str, Any]:
     model = configured_model()
     try:
         names = ollama_models(host)
-    except (OSError, ValueError) as error:
+    except OSError as error:
         return {"ok": False, "detail": f"model server {host} cannot be reached: {error}"}
-    if model not in names:
+    except (ValueError, AttributeError, TypeError, http.client.HTTPException) as error:
+        return {"ok": False, "detail": f"the reply of {host} cannot be read: {error!r}"}
+    if model not in names and f"{model}:latest" not in names:  # an untagged name is :latest
         return {"ok": False, "detail": f"{model} is not on {host} (ollama pull {model})"}
     return {"ok": True, "detail": f"{model} on {host}"}
 

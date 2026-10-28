@@ -81,3 +81,10 @@ def test_the_committed_runs_re_score_to_their_recorded_metrics(tmp_path: Path) -
     assert rescored["facts_micro"] == recorded["facts_micro"]
     assert (rescored["context_tp"], rescored["context_fp"]) == (62, 8)
     assert release.scan(release.BUNDLE) == []
+
+
+def test_a_plain_gzip_file_is_scanned_not_a_crash(tmp_path: Path) -> None:
+    import gzip
+
+    (tmp_path / "rows.json.gz").write_bytes(gzip.compress(f"see {HOME}/x".encode()))
+    assert release.scan(tmp_path) == ["home path: rows.json.gz (rows.json.gz:rows.json)"]

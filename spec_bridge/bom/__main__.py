@@ -15,7 +15,13 @@ from pathlib import Path
 from spec_bridge.bom.linker import apply, plan, summary
 from spec_bridge.bom.reader import BomError, read_bom
 from spec_bridge.ontology.loader import load_ontology
-from spec_bridge.registry.store import ROOT, RegistryError, RegistryStore
+from spec_bridge.registry.store import (
+    ROOT,
+    SCHEMA_VERSION,
+    RegistryError,
+    RegistryStore,
+    stored_schema,
+)
 
 ONTOLOGY = ROOT / "ontology/ontology.yaml"
 REGISTRY = ROOT / "var/registry/dev.sqlite"
@@ -29,8 +35,17 @@ def main(argv: list[str] | None = None) -> None:
     args = parser.parse_args(argv)
     if not args.registry.is_file():
         sys.exit(f"{args.registry}: no registry (uv run python -m spec_bridge.registry.store dev)")
+    version = stored_schema(args.registry)
+    if not args.apply and version != SCHEMA_VERSION:  # opening it would migrate the file
+        sys.exit(
+            f"refused: {args.registry} has schema {version}, not {SCHEMA_VERSION}; a preview "
+            "writes nothing, so it does not migrate the file (--apply or the app migrates it)"
+        )
     onto = load_ontology(ONTOLOGY)
-    store = RegistryStore(args.registry, onto)
+    try:
+        store = RegistryStore(args.registry, onto)
+    except RegistryError as error:
+        sys.exit(f"refused: {error}")
     try:
         result = plan(store, onto, read_bom(args.bom))
         added = apply(store, result, "reviewer") if args.apply else 0

@@ -1,4 +1,5 @@
-import { fireEvent, screen, waitFor, within } from "@testing-library/react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { HttpResponse, http } from "msw";
 import { describe, expect, it, vi } from "vitest";
@@ -144,6 +145,58 @@ describe("BomPage", () => {
     expect(await screen.findByRole("status")).toHaveTextContent("관계 1개를 추가했습니다");
   });
 
+  it("starts a different BOM with no picks: a pick belongs to the BOM it was made on", async () => {
+    const user = userEvent.setup();
+    const toFirst: unknown[] = [];
+    serve((_url, body) => {
+      toFirst.push(body);
+      return undefined;
+    });
+    const toOther: unknown[] = [];
+    server.use(
+      http.post("*/api/boms/BOM-UP-2/preview", async ({ request }) => {
+        toOther.push(await request.json());
+        return HttpResponse.json(bom({ bom_id: "BOM-UP-2" }));
+      }),
+    );
+    const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+    const page = (bomId: string) => (
+      <QueryClientProvider client={client}>
+        <BomPage bomId={bomId} onOpen={() => {}} onBack={() => {}} />
+      </QueryClientProvider>
+    );
+    const { rerender } = render(page("BOM-UP-1"));
+    const pick = await screen.findByRole("form", { name: "줄 10 제품 지정" });
+    await user.selectOptions(within(pick).getByLabelText("제품"), "REG-PUMP-001");
+    await user.type(within(pick).getByLabelText("사유(필수)"), "BOM 오타");
+    await user.click(within(pick).getByRole("button", { name: "지정" }));
+    const picked = { line: 10, product_id: "REG-PUMP-001", reason: "BOM 오타" };
+    await waitFor(() => expect(toFirst).toContainEqual({ picks: [picked] }));
+
+    rerender(page("BOM-UP-2"));
+    await waitFor(() => expect(toOther).not.toHaveLength(0));
+    expect(toOther).toEqual([{ picks: [] }]);
+  });
+
+  it("keeps what the reviewer typed in another row while the preview updates", async () => {
+    const user = userEvent.setup();
+    const base = bom();
+    const second = { ...base.rows[1], component: "Valve", model: "VX998-998", line: 11 };
+    serve(() => HttpResponse.json(bom({ rows: [...base.rows, second] })));
+    renderWithQuery(<BomPage bomId="BOM-UP-1" onOpen={() => {}} onBack={() => {}} />);
+    const other = await screen.findByRole("form", { name: "줄 11 제품 지정" });
+    await user.type(within(other).getByLabelText("사유(필수)"), "작성 중인 사유");
+
+    const pick = screen.getByRole("form", { name: "줄 10 제품 지정" });
+    await user.selectOptions(within(pick).getByLabelText("제품"), "REG-PUMP-001");
+    await user.type(within(pick).getByLabelText("사유(필수)"), "BOM 오타");
+    await user.click(within(pick).getByRole("button", { name: "지정" }));
+
+    await waitFor(() => expect(screen.getByRole("button", { name: "적용" })).toBeEnabled());
+    const kept = screen.getByRole("form", { name: "줄 11 제품 지정" });
+    expect(within(kept).getByLabelText("사유(필수)")).toHaveValue("작성 중인 사유");
+  });
+
   it("says when the preview is out of date instead of applying", async () => {
     serve((url) =>
       url.endsWith("/apply")
@@ -189,6 +242,34 @@ describe("BomPage", () => {
     expect((within(pick).getByLabelText("사유(필수)") as HTMLInputElement).value).toMatch(
       /모델 제안 확인/,
     );
+  });
+
+  it("keeps a reason the reviewer already typed when a suggestion arrives", async () => {
+    const user = userEvent.setup();
+    serveSuggestion(() =>
+      HttpResponse.json({
+        line: 10,
+        product_id: "REG-PUMP-001",
+        model_answer: "REG-PUMP-001",
+        reason: "same maker, letters swapped",
+        rejected: null,
+        unavailable: null,
+      }),
+    );
+    renderWithQuery(<BomPage bomId="BOM-UP-1" onOpen={() => {}} onBack={() => {}} />);
+    const pick = await screen.findByRole("form", { name: "줄 10 제품 지정" });
+    await user.type(within(pick).getByLabelText("사유(필수)"), "도면과 대조함");
+    await user.click(within(pick).getByRole("button", { name: "제안 받기" }));
+    expect(await within(pick).findByText(/제안: VX013-001/)).toBeInTheDocument();
+    expect(within(pick).getByLabelText("제품")).toHaveValue("REG-PUMP-001"); // was empty
+    expect(within(pick).getByLabelText("사유(필수)")).toHaveValue("도면과 대조함");
+  });
+
+  it("names the row on each undo button", async () => {
+    const mine = { ...bom().rows[1], status: "new" as const, decided_by: "reviewer" as const };
+    serve(() => HttpResponse.json(bom({ rows: [bom().rows[0], mine] })));
+    renderWithQuery(<BomPage bomId="BOM-UP-1" onOpen={() => {}} onBack={() => {}} />);
+    expect(await screen.findByRole("button", { name: "줄 10 지정 취소" })).toBeInTheDocument();
   });
 
   it("says when there is no suggestion and why", async () => {

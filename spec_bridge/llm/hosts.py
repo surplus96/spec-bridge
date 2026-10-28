@@ -17,6 +17,7 @@ import json
 import sqlite3
 import sys
 from collections import Counter
+from contextlib import closing
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -46,7 +47,8 @@ def read_rows(path: Path) -> list[dict[str, Any]]:
     """Model-call rows of a JSONL audit file or of a registry database."""
     if path.suffix == ".jsonl":
         return [json.loads(line) for line in path.read_text().splitlines() if line]
-    with sqlite3.connect(f"file:{path}?mode=ro", uri=True) as conn:
+    uri = f"{path.resolve().as_uri()}?mode=ro"  # as_uri escapes '#', '?' and '%'
+    with closing(sqlite3.connect(uri, uri=True)) as conn:
         query = "SELECT payload_json FROM audit_events WHERE kind = 'llm_call'"
         return [json.loads(payload) for (payload,) in conn.execute(query)]
 

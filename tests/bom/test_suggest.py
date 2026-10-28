@@ -81,3 +81,12 @@ def test_maker_aliases_come_from_the_store(dev: RegistryStore) -> None:
     names = dev.maker_aliases()
     assert names and all(isinstance(v, list) for v in names.values())
     assert all(p["maker_name"] not in names[p["maker_id"]] for p in dev.identities())
+
+
+def test_no_other_registered_product_is_no_suggestion(onto: Ontology) -> None:
+    """A registry with only the BOM root has nothing to choose from: say so, ask no model."""
+    from spec_bridge.bom.suggest import suggest_from
+
+    only_root = [{"product_id": ROOT, "class_id": "x", "model_designation": "x"}]
+    result = suggest_from(only_root, {}, onto, FakeProvider([]), row("x"), ROOT)
+    assert result.product_id is None and result.rejected == "no other registered product"

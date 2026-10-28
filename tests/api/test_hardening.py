@@ -167,3 +167,27 @@ def test_read_upload_returns_a_file_within_the_limit(monkeypatch: pytest.MonkeyP
         file = io.BytesIO(b"x" * 10)
 
     assert deps.read_upload(Upload()) == b"x" * 10  # type: ignore[arg-type]
+
+
+def test_health_accepts_an_untagged_model_name_as_latest(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+) -> None:
+    from spec_bridge.api import health
+
+    monkeypatch.setenv("SPEC_BRIDGE_MODEL", "some-model")
+    monkeypatch.setattr(health, "ollama_models", lambda host: ["some-model:latest"])
+    assert health.model_server()["ok"]
+
+
+def test_health_reports_a_reply_it_cannot_read(monkeypatch: pytest.MonkeyPatch) -> None:
+    """A model server that answers something unexpected is a named failure, not a 500."""
+    import http.client
+
+    from spec_bridge.api import health
+
+    def odd(host: str) -> list[str]:
+        raise http.client.IncompleteRead(b"")
+
+    monkeypatch.setattr(health, "ollama_models", odd)
+    check = health.model_server()
+    assert not check["ok"] and "cannot be read" in check["detail"]

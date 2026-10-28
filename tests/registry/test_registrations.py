@@ -326,6 +326,30 @@ def schema_2_file(tmp_path: Path, onto: Ontology) -> Path:
     return path
 
 
+def test_a_migration_that_fails_part_way_leaves_the_file_as_it_was(
+    tmp_path: Path, onto: Ontology
+) -> None:
+    """The rename, the new table and the copy are one transaction: a failure in the copy
+    must not leave the edits stranded in a renamed table under an empty new one."""
+    path = schema_2_file(tmp_path, onto)
+    with sqlite3.connect(path) as conn:  # the copy step will fail: one column too many
+        conn.execute("ALTER TABLE human_edits ADD COLUMN unexpected TEXT")
+    conn.close()
+
+    with pytest.raises(sqlite3.OperationalError):
+        RegistryStore(path, onto)
+
+    with sqlite3.connect(path) as conn:
+        tables = {n for (n,) in conn.execute("SELECT name FROM sqlite_master")}
+        rows = conn.execute("SELECT edit_id, reason FROM human_edits").fetchall()
+        (version,) = conn.execute(
+            "SELECT value FROM schema_meta WHERE key = 'schema_version'"
+        ).fetchone()
+    conn.close()
+    assert "human_edits_schema2" not in tables
+    assert rows == [("J-E1", "old")] and version == "2"
+
+
 def test_a_migration_keeps_a_backup_of_the_file_as_it_was(tmp_path: Path, onto: Ontology) -> None:
     path = schema_2_file(tmp_path, onto)
     RegistryStore(path, onto).close()
@@ -348,3 +372,15 @@ def test_no_backup_without_a_migration(tmp_path: Path, onto: Ontology) -> None:
     RegistryStore(path, onto).close()  # a new file
     RegistryStore(path, onto).close()  # the current schema
     assert list(tmp_path.glob("*backup*")) == []
+
+
+def test_a_registry_in_a_folder_with_uri_characters_opens_again(
+    tmp_path: Path, onto: Ontology
+) -> None:
+    from spec_bridge.registry.store import stored_schema
+
+    path = tmp_path / "run #2?" / "registry.sqlite"
+    path.parent.mkdir()
+    RegistryStore(path, onto).close()
+    assert stored_schema(path) == SCHEMA_VERSION
+    RegistryStore(path, onto).close()  # reopening reads the version read-only first

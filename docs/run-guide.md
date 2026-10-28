@@ -39,11 +39,15 @@ OFFLINE=1 SPEC_BRIDGE_APP_DIR=var/app uv run uvicorn spec_bridge.api.app:app --h
 - **이 컴퓨터에서만 접속**: 로그인이 없는 단일 사용자 도구다. 다른 컴퓨터에서 온 요청은 접속 주소로 판단해 403으로 거부한다. `--host 0.0.0.0`으로 띄워도 열리지 않는다.
 - **상태 확인**: `curl http://127.0.0.1:8010/health`. 모델 서버에 설정한 모델이 있고 등록 저장소를 읽을 수 있으면 200이다. 아니면 503과 함께 무엇이 문제인지 보인다(예: `ollama pull …`이 필요함).
 - **업로드 한도**: 사양서·BOM 파일은 50 MB까지 받는다. 넘으면 413으로 거부하고 아무것도 저장하지 않는다.
+- **접속 주소를 바꾸는 옵션 주의**: uvicorn의 `--forwarded-allow-ips`는 기본값으로 둔다. `*`로 바꾸면 `X-Forwarded-For` 헤더로 접속 주소를 속여 위 제한을 넘을 수 있다.
+- **실패한 명령**: 검토 중 보낸 명령이 실패하면(예: 모델 서버 시간 초과) 작업은 멈춘 지점에 남는다. 검토 화면 위에 사유가 보이고 같은 명령을 다시 보낼 수 있다. 실패 위치(traceback)는 서버 로그에 남는다(D-118).
 - **저장소 백업과 복구**: 등록 저장소의 스키마를 올려야 하면(예: schema 2 → 3), 바꾸기 전에 같은 폴더에 `registry.sqlite.schema<옛 버전>-backup-<UTC 시각>` 사본을 만든다. 앱에서 등록한 제품과 수정 기록은 seed에 없으므로 이 사본이 유일한 되돌릴 길이다. 되돌리려면 다음 순서를 따른다.
   1. 서버를 끈다(Ctrl+C).
   2. 지금 파일을 다른 이름으로 옮긴다: `mv var/app/registry.sqlite var/app/registry.sqlite.after-migration`
   3. 사본을 원래 이름으로 복사한다: `cp var/app/registry.sqlite.schema2-backup-<시각> var/app/registry.sqlite`
   4. 이전 버전의 코드로 서버를 띄운다. 지금 코드로 띄우면 다시 스키마를 올리고 새 사본을 만든다.
+
+  스키마 변경은 하나의 트랜잭션이다. 도중에 실패하면 파일은 바꾸기 전 상태로 남는다(D-118).
 
 ## 3. 검사 (완료 기준)
 
@@ -156,7 +160,7 @@ uv run python -m spec_bridge.bom data/synth/boms/BOM-001.md --registry var/regis
 uv run python -m spec_bridge.bom data/synth/boms/BOM-001.md --registry var/registry/dev.sqlite --apply
 ```
 
-- 첫 실행은 미리보기다. 행마다 `new`(추가될 관계), `existing`(이미 있음), `pending`(검토 대기와 사유)을 보인다. `--apply`일 때만 저장한다.
+- 첫 실행은 미리보기다. 행마다 `new`(추가될 관계), `existing`(이미 있음), `pending`(검토 대기와 사유)을 보인다. `--apply`일 때만 저장한다. 미리보기는 파일을 바꾸지 않으므로, 스키마가 옛 버전인 저장소는 열지 않고 `refused:`로 알린다(`--apply`나 앱이 스키마를 올린다, D-118).
 - 수량 칸은 `2`, `2 x`, `(2)`, `2 pcs`, `Two`처럼 써도 읽는다. 모델 칸에 구분자가 다르거나 정격·일련번호가 붙어 있어도, 모델 부분이 등록 모델과 정확히 같고 제조사가 맞으면 연결한다. 제조사 표기가 다르거나, `or equal`이 붙었거나, 모델이 없으면 검토 대기로 남기고 사유를 보인다(D-108).
 - 상위 제품(`Root model` + `Manufacturer`)이 저장소에 없으면 BOM 전체를 거부한다. 새 제품은 사양서 등록으로 만든다.
 - 기존 관계는 지우지 않는다. BOM에 없는 기존 관계는 `not_in_bom`으로 보고한다. 수량은 제품 이벤트 `bom_linked`와 감사 기록에 남는다.

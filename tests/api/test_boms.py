@@ -154,3 +154,43 @@ def test_without_the_model_server_the_suggestion_says_so(
     line = next(r["line"] for r in view["rows"] if r["status"] == "pending")
     response = client.post(f"/api/boms/{view['bom_id']}/suggest", json={"line": line})
     assert response.status_code == 503 and "model server" in response.json()["detail"]
+
+
+def test_an_empty_folder_left_by_a_failed_write_does_not_block_the_bom(
+    tmp_path: Path,
+    client: TestClient,  # noqa: F811
+) -> None:
+    """The kept copy decides "already uploaded", not the folder: a write that failed after
+    the folder was made must not leave the BOM unreadable for good."""
+    import hashlib
+
+    fresh(tmp_path)
+    data = (BOMS / "BOM-001.md").read_bytes()
+    bom_id = f"BOM-UP-{hashlib.sha256(data).hexdigest()[:12]}"
+    (tmp_path / "app/boms" / bom_id).mkdir(parents=True)
+    response = upload(client, BOMS / "BOM-001.md")
+    assert response.status_code == 200, response.json()
+    assert (tmp_path / "app/boms" / bom_id / "BOM-001.md").read_bytes() == data
+
+
+def test_a_suggestion_s_model_call_is_audited_under_its_bom(
+    tmp_path: Path,
+    client: TestClient,  # noqa: F811
+) -> None:
+    """A model call outside a job is still written to the audit under the BOM it serves."""
+    from spec_bridge.api.jobs import CURRENT_JOB
+
+    pump = answer("BOM-001")["items"][1]
+    jobs, view = typo_upload(tmp_path, client, [])
+    seen: list[str | None] = []
+
+    class Recording:
+        def complete_json(self, **_: Any) -> dict[str, Any]:
+            seen.append(CURRENT_JOB.get())
+            return {"product_id": pump["product_id"], "reason": "same maker"}
+
+    jobs.service.provider = Recording()
+    line = next(r["line"] for r in view["rows"] if r["status"] == "pending")
+    client.post(f"/api/boms/{view['bom_id']}/suggest", json={"line": line, "picks": []})
+    assert seen == [view["bom_id"]]
+    assert CURRENT_JOB.get() is None  # reset after the call

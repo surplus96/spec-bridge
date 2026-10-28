@@ -1,7 +1,7 @@
 // ③ Findings, duplicates and the supplement request. Colours have one meaning each:
 // red blocks registration (E1–E5, duplicate), orange needs acknowledging (REVIEW, and a
 // value that did not become a dictionary term, D-091), grey is for reference (similar).
-import { useState } from "react";
+import { useId, useState } from "react";
 import { useSupplement } from "../../api/hooks";
 import type { Finding, ReviewPrompt, Selection, TermNote } from "./types";
 
@@ -22,6 +22,7 @@ function codeStyle(code: string): string {
 
 export function IssuesPane({ jobId, prompt, selection, onSelect, onAcknowledge, busy }: Props) {
   const [tab, setTab] = useState<Tab>("findings");
+  const ids = useId(); // ties each tab to the panel it shows
   const findings = prompt.result.validation.findings;
   const matches = prompt.result.matches;
   const terms = prompt.term_notes ?? [];
@@ -43,6 +44,8 @@ export function IssuesPane({ jobId, prompt, selection, onSelect, onAcknowledge, 
             key={id}
             type="button"
             role="tab"
+            id={`${ids}-tab-${id}`}
+            aria-controls={`${ids}-panel`}
             aria-selected={tab === id}
             className={`pb-1 ${tab === id ? "border-b-2 border-blue-700 font-semibold" : "text-gray-500"}`}
             onClick={() => setTab(id)}
@@ -51,7 +54,12 @@ export function IssuesPane({ jobId, prompt, selection, onSelect, onAcknowledge, 
           </button>
         ))}
       </div>
-      <div className="min-h-0 flex-1 overflow-auto p-3 text-sm">
+      <div
+        role="tabpanel"
+        id={`${ids}-panel`}
+        aria-labelledby={`${ids}-tab-${tab}`}
+        className="min-h-0 flex-1 overflow-auto p-3 text-sm"
+      >
         {tab === "findings" && (
           <>
             <Findings

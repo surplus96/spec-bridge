@@ -217,6 +217,24 @@ def test_the_command_previews_unless_asked_to_apply(
     assert len(dev.relations_of(root, "has_component")) == 3
 
 
+def test_a_preview_does_not_migrate_an_older_registry(
+    dev: RegistryStore, onto: Ontology, capsys: pytest.CaptureFixture[str]
+) -> None:
+    """A preview writes nothing, a schema migration (and its backup copy) included."""
+    path = Path(dev.conn.execute("PRAGMA database_list").fetchone()[2])
+    with dev.conn:
+        dev.conn.execute("UPDATE schema_meta SET value = '2' WHERE key = 'schema_version'")
+    dev.close()
+    before = path.read_bytes()
+    with pytest.raises(SystemExit, match="refused: .*schema 2"):
+        main([str(BOMS / "BOM-001.md"), "--registry", str(path)])
+    assert path.read_bytes() == before
+    assert list(path.parent.glob(f"{path.name}.schema*-backup-*")) == []
+
+    main([str(BOMS / "BOM-001.md"), "--registry", str(path), "--apply"])  # migrates, applies
+    assert json.loads(capsys.readouterr().out)["added"] == 3
+
+
 def test_a_bom_document_is_a_plain_model() -> None:
     bom = read_bom(BOMS / "BOM-001.md")
     assert BomDocument.model_validate(bom.model_dump()) == bom

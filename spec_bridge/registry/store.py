@@ -16,6 +16,7 @@ import json
 import sqlite3
 import sys
 import uuid
+from contextlib import closing
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
@@ -88,7 +89,8 @@ def stored_schema(path: Path) -> str | None:
     """The schema version a registry file was written with, without changing the file."""
     if not path.is_file():
         return None
-    with sqlite3.connect(f"file:{path}?mode=ro", uri=True) as conn:
+    uri = f"{path.resolve().as_uri()}?mode=ro"  # as_uri escapes '#', '?' and '%'
+    with closing(sqlite3.connect(uri, uri=True)) as conn:
         has_meta = conn.execute(
             "SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = 'schema_meta'"
         ).fetchone()
@@ -97,7 +99,6 @@ def stored_schema(path: Path) -> str | None:
             if has_meta
             else None
         )
-    conn.close()
     return None if row is None else str(row[0])
 
 
@@ -133,6 +134,9 @@ class RegistryStore:
             return
         if stored.get("schema_version") in MIGRATES_FROM:
             with self.conn:  # the CREATE IF NOT EXISTS above added the new tables
+                # sqlite3 opens no transaction before DDL: begin one, so a failed copy also
+                # undoes the rename and the new table (the edits stay where they were)
+                self.conn.execute("BEGIN")
                 self._rebuild_edit_table()
                 self._meta("schema_version", SCHEMA_VERSION)
             stored["schema_version"] = SCHEMA_VERSION

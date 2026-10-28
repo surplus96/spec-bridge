@@ -38,7 +38,8 @@ export function App() {
       />
     );
   const jobId = idOf(hash, "jobs");
-  if (jobId) return <ReviewPage jobId={jobId} onBack={() => open(null)} />;
+  // keyed: a selection, an open form or a notice belongs to one job
+  if (jobId) return <ReviewPage key={jobId} jobId={jobId} onBack={() => open(null)} />;
   return (
     <main className="min-h-screen bg-gray-50">
       <div className="mx-auto max-w-5xl p-6">

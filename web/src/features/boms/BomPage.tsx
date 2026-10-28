@@ -4,7 +4,7 @@
 // not registered is never created here: it comes in through its spec sheet. A pending row
 // can ask for a suggestion (D-112): the model chooses, code verifies, and the suggestion only
 // fills the pick form; the reviewer confirms it with "지정".
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { keepPreviousData, useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { ArrowLeft, Upload, UserCheck } from "lucide-react";
 import { type FormEvent, useRef, useState } from "react";
 import { api, postFile } from "../../api/client";
@@ -53,7 +53,8 @@ export function BomPage({ bomId, onOpen, onBack }: Props) {
           BOM 표의 행을 등록된 제품에 연결해 구성품 관계를 만듭니다. 미리보기를 확인한 뒤
           적용하세요. 등록되지 않은 제품은 여기서 만들지 않습니다.
         </p>
-        {bomId ? <BomPreview bomId={bomId} /> : null}
+        {/* keyed: picks belong to one BOM and must not carry over to the next */}
+        {bomId ? <BomPreview key={bomId} bomId={bomId} /> : null}
       </div>
     </main>
   );
@@ -112,6 +113,8 @@ function BomPreview({ bomId }: { bomId: string }) {
       if (error || !data) throw new Error(detailOf(error, "미리보기를 만들지 못했습니다"));
       return data;
     },
+    // a new pick re-plans; the table stays (and the other rows' forms keep their input)
+    placeholderData: keepPreviousData,
   });
   const applying = useMutation({
     mutationFn: async (view: BomView) => {
@@ -125,8 +128,12 @@ function BomPreview({ bomId }: { bomId: string }) {
     onSuccess: (view) => client.setQueryData(["bom", bomId, picks], view),
     onError: () => void client.invalidateQueries({ queryKey: ["bom", bomId] }),
   });
-  const choose = (pick: Pick) => setPicks([...picks.filter((p) => p.line !== pick.line), pick]);
-  const unpick = (line: number) => setPicks(picks.filter((p) => p.line !== line));
+  const repick = (next: Pick[]) => {
+    applying.reset(); // an earlier apply's message describes a different plan
+    setPicks(next);
+  };
+  const choose = (pick: Pick) => repick([...picks.filter((p) => p.line !== pick.line), pick]);
+  const unpick = (line: number) => repick(picks.filter((p) => p.line !== line));
 
   if (preview.isPending) return <p className="text-gray-500">미리보기를 만드는 중…</p>;
   if (preview.isError) return <p className="text-red-700">{preview.error.message}</p>;
@@ -182,6 +189,7 @@ function BomPreview({ bomId }: { bomId: string }) {
                   <button
                     type="button"
                     className="ml-2 text-xs text-gray-600"
+                    aria-label={`줄 ${row.line} 지정 취소`}
                     onClick={() => unpick(row.line)}
                   >
                     지정 취소
@@ -206,12 +214,13 @@ function BomPreview({ bomId }: { bomId: string }) {
       <div className="flex items-center gap-3">
         <button
           type="button"
-          disabled={adding === 0 || applying.isPending}
+          disabled={adding === 0 || applying.isPending || preview.isPlaceholderData}
           className="rounded bg-blue-700 px-3 py-1 text-white disabled:opacity-40"
           onClick={() => applying.mutate(view)}
         >
           적용
         </button>
+        {preview.isPlaceholderData && <span className="text-sm text-gray-500">갱신 중…</span>}
         {applying.isSuccess && (
           <span role="status" className="text-sm text-green-800">
             관계 {applying.data.added ?? 0}개를 추가했습니다
@@ -248,9 +257,11 @@ function PickForm({ bomId, picks, row, onPick }: PickProps) {
       return data;
     },
     onSuccess: (s) => {
-      if (s.product_id) {
-        setProductId(s.product_id);
-        setReason(`모델 제안 확인: ${s.reason}`);
+      const suggested = s.product_id;
+      if (suggested) {
+        // fill only what the reviewer has not written: their own choice and reason stay
+        setProductId((current) => current || suggested);
+        setReason((current) => (current.trim() ? current : `모델 제안 확인: ${s.reason}`));
       }
     },
   });

@@ -134,3 +134,8 @@ def test_the_committed_catalog_without_local_rows_is_not_ready(tmp_path: Path) -
     assert report["raw_rows"] == 0
     assert report["ready"] is False
     assert any("raw rows" in message for message in report["missing"])
+
+
+def test_a_missing_file_is_refused_not_a_traceback(tmp_path: Path) -> None:
+    with pytest.raises(NotationError, match="missing.yaml"):
+        load(manifest=tmp_path / "missing.yaml")

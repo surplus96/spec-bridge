@@ -74,6 +74,14 @@ def working_tree(root: Path = ROOT) -> Reader:
 
 
 def at_commit(commit: str, root: Path = ROOT) -> Reader:
+    """Files as they were at a commit; refuses a commit this checkout's history lacks (a
+    shallow or exported clone), where every file would otherwise read as absent."""
+    known = subprocess.run(
+        ["git", "cat-file", "-e", f"{commit}^{{commit}}"], cwd=root, capture_output=True
+    )
+    if known.returncode != 0:
+        raise ValueError(f"commit {commit} is not in this checkout's history")
+
     def read(path: str) -> bytes | None:
         done = subprocess.run(
             ["git", "show", f"{commit}:{path}"], cwd=root, capture_output=True, check=False

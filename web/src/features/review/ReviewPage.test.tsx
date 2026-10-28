@@ -1,6 +1,6 @@
 import { fireEvent, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { HttpResponse, http } from "msw";
+import { delay, HttpResponse, http } from "msw";
 import { describe, expect, it } from "vitest";
 import type { components } from "../../api/schema";
 import { renderWithQuery } from "../../test/render";
@@ -209,6 +209,24 @@ describe("ReviewPage", () => {
     });
   });
 
+  it("shows why the last command failed above the review it can be retried on", async () => {
+    serve({ ...job(review()), error: "RuntimeError: model server timeout" });
+    renderWithQuery(<ReviewPage jobId="JOB-1" onBack={() => {}} />);
+    expect(await screen.findByRole("alert")).toHaveTextContent("model server timeout");
+    expect(screen.getByRole("heading", { name: "원문" })).toBeInTheDocument();
+  });
+
+  it("ties each tab to the panel it shows", async () => {
+    const user = userEvent.setup();
+    serve(job(review()));
+    renderWithQuery(<ReviewPage jobId="JOB-1" onBack={() => {}} />);
+    const findings = await screen.findByRole("tab", { name: "오류 (1)" });
+    const panel = screen.getByRole("tabpanel", { name: "오류 (1)" });
+    expect(findings).toHaveAttribute("aria-controls", panel.id);
+    await user.click(screen.getByRole("tab", { name: "보강 요청" }));
+    expect(screen.getByRole("tabpanel", { name: "보강 요청" })).toBeInTheDocument();
+  });
+
   it("shows the server's refusal instead of failing silently", async () => {
     serve(job(review({ allowed: ["edit", "register_new", "cancel"], blockers: [] })), () =>
       HttpResponse.json(
@@ -291,6 +309,18 @@ describe("ReviewPage", () => {
         },
       },
     });
+  });
+
+  it("does not send a context edit twice while the first is on its way", async () => {
+    const user = userEvent.setup();
+    const form = await openContextForm(() => {});
+    const posts = slowResume();
+    await user.type(within(form).getByLabelText("사유(필수)"), "비고 확인");
+    await user.keyboard("{Enter}");
+    await waitFor(() => expect(posts.count).toBe(1));
+    await user.keyboard("{Enter}"); // still in the reason field, the first edit pending
+    await delay(50);
+    expect(posts.count).toBe(1);
   });
 
   it("clears an axis and types a scope phrase or a quantity as text", async () => {
@@ -472,6 +502,18 @@ describe("ReviewPage", () => {
 });
 
 // The reviewer's decisions (D-063) and the edits besides "set", driven as a user would.
+function slowResume() {
+  const posts = { count: 0 };
+  server.use(
+    http.post("*/api/jobs/JOB-1/resume", async () => {
+      posts.count += 1;
+      await delay(300); // the first command is still on its way
+      return HttpResponse.json(job(review({ revision: 4 })), { status: 202 });
+    }),
+  );
+  return posts;
+}
+
 function capture() {
   const box: { sent?: { command: Record<string, unknown> } } = {};
   const onResume = (body: unknown) => {
@@ -640,6 +682,21 @@ describe("ReviewPage edits", () => {
       revision: 3,
       edit: { op: "remove", target: "fact", index: 0, reason: "다른 제품의 값" },
     });
+  });
+
+  it("does not send a value edit twice while the first is on its way", async () => {
+    const user = userEvent.setup();
+    serve(job(review()));
+    const posts = slowResume();
+    renderWithQuery(<ReviewPage jobId="JOB-1" onBack={() => {}} />);
+    await user.click(await screen.findByRole("button", { name: "수정" }));
+    const form = screen.getByRole("form", { name: "값 수정" });
+    await user.type(within(form).getByLabelText("사유(필수)"), "표와 대조");
+    await user.keyboard("{Enter}");
+    await waitFor(() => expect(posts.count).toBe(1));
+    await user.keyboard("{Enter}");
+    await delay(50);
+    expect(posts.count).toBe(1);
   });
 
   it("sends a cleared unit as no unit, not an empty string", async () => {

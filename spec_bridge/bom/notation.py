@@ -95,7 +95,7 @@ Loaded = tuple[list[Source], list[Pattern], list[RawRow]]
 def _read[M: StrictModel](path: Path, model: type[M]) -> M:
     try:
         return model.model_validate(yaml.safe_load(path.read_text()) or {})
-    except (ValidationError, yaml.YAMLError) as error:
+    except (OSError, ValidationError, yaml.YAMLError) as error:
         raise NotationError(f"{path.name}: {error}") from error
 
 

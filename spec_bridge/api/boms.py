@@ -20,7 +20,7 @@ from typing import Literal
 from fastapi import APIRouter, HTTPException, UploadFile
 
 from spec_bridge.api import deps
-from spec_bridge.api.jobs import Jobs, JobsDep
+from spec_bridge.api.jobs import CURRENT_JOB, Jobs, JobsDep
 from spec_bridge.bom.linker import BomPlan, Pick, apply, candidates, plan, plan_key
 from spec_bridge.bom.reader import BomError, read_bom
 from spec_bridge.bom.suggest import Suggestion, suggest_from
@@ -140,9 +140,11 @@ def upload_bom(file: UploadFile, jobs: JobsDep) -> BomView:
     digest = hashlib.sha256(data).hexdigest()
     bom_id = f"BOM-UP-{digest[:12]}"
     folder = jobs.uploads_dir.parent / "boms" / bom_id
-    if not folder.is_dir():  # the same file again keeps its first copy
-        folder.mkdir(parents=True)
-        (folder / name).write_bytes(data)
+    folder.mkdir(parents=True, exist_ok=True)
+    if not any(folder.iterdir()):  # the same file again keeps its first copy
+        partial = folder.parent / f".{bom_id}.part"  # outside the folder _file reads
+        partial.write_bytes(data)
+        partial.replace(folder / name)  # the copy appears whole or not at all
         jobs.registry.audit(
             bom_id, "bom_uploaded", {"file_name": name, "sha256": digest}, "reviewer"
         )
@@ -187,9 +189,13 @@ def suggest_bom_row(bom_id: str, request: SuggestRequest, jobs: JobsDep) -> Sugg
     found = next((r for r in result.rows if r.row.line == request.line), None)
     if found is None or found.status != "pending":
         raise HTTPException(422, f"line {request.line} is not a row waiting for review")
-    suggestion = suggest_from(
-        products, aliases, jobs.service.onto, jobs.service.provider, found.row, result.root_id
-    )
+    token = CURRENT_JOB.set(bom_id)  # the model call is audited under the BOM it serves
+    try:
+        suggestion = suggest_from(
+            products, aliases, jobs.service.onto, jobs.service.provider, found.row, result.root_id
+        )
+    finally:
+        CURRENT_JOB.reset(token)
     jobs.registry.audit(bom_id, "bom_suggestion", suggestion.model_dump(), "system")
     if suggestion.unavailable is not None:
         raise HTTPException(503, f"the model server cannot be reached: {suggestion.unavailable}")

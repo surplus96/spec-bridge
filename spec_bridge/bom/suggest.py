@@ -63,6 +63,8 @@ def suggest_from(
     """The same, from a copy of the registry: the caller reads it under its lock and the
     slow model call runs without holding it."""
     index = [p for p in products if p["product_id"] != root_id]
+    if not index:  # nothing to choose from (and BM25 cannot index an empty list)
+        return Suggestion(line=row.line, product_id=None, rejected="no other registered product")
     case = _as_case(row)
     top = Candidates(index, aliases).top(case.line)
     try:

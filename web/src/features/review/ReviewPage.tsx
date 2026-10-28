@@ -78,8 +78,10 @@ export function ReviewPage({ jobId, onBack }: { jobId: string; onBack: () => voi
     picked === null
       ? null
       : { index: picked, text: blocks.data?.[picked]?.text ?? `블록 ${picked}` };
+  // a failed command leaves the job at its pause: say why, above the review to retry on
+  const failed = prompt ? view.error : null;
   const notice =
-    resume.error?.message ?? (prompt?.kind === "review" ? prompt.notice : prompt?.notice);
+    resume.error?.message ?? failed ?? (prompt?.kind === "review" ? prompt.notice : prompt?.notice);
 
   const summary = prompt?.kind === "review" ? summaryOf(prompt) : null;
   const status = STATUS[view.status];

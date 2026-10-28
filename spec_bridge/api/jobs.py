@@ -256,6 +256,7 @@ class Jobs:
             self.registry.audit(job_id, "llm_call", row)
 
     def _submit(self, job_id: str, work: Callable[[], None]) -> None:
+        self.errors.pop(job_id, None)  # a new attempt: the last one's error no longer holds
         self.running.add(job_id)
 
         def task() -> None:
@@ -281,10 +282,10 @@ class Jobs:
         state = state_of(self.graph, job_id)
         prompt = None
         status: Status
+        # A command that failed leaves the job at its pause: the review is shown again (with
+        # the error) so the reviewer can retry. Only a job with no pause to return to fails.
         if job_id in self.running:
             status = "running"
-        elif job_id in self.errors:
-            status = "failed"
         elif (value := prompt_of(self.graph, job_id)) is not None:
             prompt = PROMPT.validate_python(value)
             if prompt.kind == "review":
@@ -298,6 +299,8 @@ class Jobs:
                     self.service.normalizer.enums,
                 )
             status = "awaiting_class" if prompt.kind == "choose_class" else "awaiting_review"
+        elif job_id in self.errors:
+            status = "failed"
         elif (outcome := state.get("outcome")) is not None:
             status = outcome
         else:

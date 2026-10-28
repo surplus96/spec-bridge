@@ -252,6 +252,33 @@ def test_a_bug_inside_resume_is_a_server_error_not_a_missing_job(
     assert response.status_code == 500
 
 
+def test_a_failed_resume_shows_the_error_and_can_be_retried(
+    tmp_path: Path, client: TestClient, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """A command that fails leaves the job at its pause: the reviewer sees the error with
+    the same review and can send the command again; a later success clears the error."""
+    from spec_bridge.graph.registration import resume as real
+
+    _, job_id = started(tmp_path, client, CLEAN)
+    calls: list[Any] = []
+
+    def flaky(graph: Any, job_id: str, body: Any) -> Any:
+        calls.append(body)
+        if len(calls) == 1:
+            raise RuntimeError("model server timeout")
+        return real(graph, job_id, body)
+
+    monkeypatch.setattr("spec_bridge.api.jobs.resume", flaky)
+    assert send(client, job_id, {"action": "cancel"}).status_code == 202
+    shown = view(client, job_id)
+    assert shown["status"] == "awaiting_review" and shown["prompt"] is not None
+    assert "model server timeout" in shown["error"]
+
+    assert send(client, job_id, {"action": "cancel"}).status_code == 202
+    shown = view(client, job_id)
+    assert shown["status"] == "cancelled" and shown["error"] is None
+
+
 def test_a_failed_job_is_logged_with_its_traceback(
     tmp_path: Path, client: TestClient, caplog: pytest.LogCaptureFixture
 ) -> None:

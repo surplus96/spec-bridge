@@ -15,6 +15,7 @@ the result, archives included.
   the synthetic inputs.
 """
 
+import gzip
 import hashlib
 import io
 import json
@@ -127,11 +128,14 @@ def _members(path: Path) -> Iterator[tuple[str, bytes]]:
     data = path.read_bytes()
     yield path.name, data
     if path.suffix in (".tgz", ".gz"):
-        with tarfile.open(fileobj=io.BytesIO(data)) as archive:
-            for member in archive.getmembers():
-                extracted = archive.extractfile(member) if member.isfile() else None
-                if extracted is not None:
-                    yield f"{path.name}:{member.name}", extracted.read()
+        try:
+            with tarfile.open(fileobj=io.BytesIO(data)) as archive:
+                for member in archive.getmembers():
+                    extracted = archive.extractfile(member) if member.isfile() else None
+                    if extracted is not None:
+                        yield f"{path.name}:{member.name}", extracted.read()
+        except tarfile.ReadError:  # a single compressed file, not an archive
+            yield f"{path.name}:{path.stem}", gzip.decompress(data)
     elif path.suffix == ".zip" and zipfile.is_zipfile(path):
         with zipfile.ZipFile(path) as archive:
             for name in archive.namelist():

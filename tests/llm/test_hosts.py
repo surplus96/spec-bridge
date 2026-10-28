@@ -70,3 +70,14 @@ def test_connections_are_read_per_process_with_the_time_it_was_seen() -> None:
 def test_a_recording_with_only_loopback_is_clean() -> None:
     lines = [line for line in SAMPLE.splitlines() if "34.1.2.3" not in line]
     assert connection_report(lines).outside == []
+
+
+def test_a_registry_path_with_uri_characters_is_read(tmp_path: Path) -> None:
+    """The read-only URI is built from the path, so '#' or '?' in a folder name is kept."""
+    db = tmp_path / "run #2?" / "registry.sqlite"
+    db.parent.mkdir()
+    with sqlite3.connect(db) as conn:
+        conn.execute("CREATE TABLE audit_events (kind TEXT, payload_json TEXT)")
+        conn.execute("INSERT INTO audit_events VALUES ('llm_call', ?)", (json.dumps({}),))
+    conn.close()
+    assert read_rows(db) == [{}]
