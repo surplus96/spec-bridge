@@ -108,7 +108,15 @@ def test_bad_uploads_are_refused(name: str, data: bytes, status: int) -> None:
 
 
 def test_health() -> None:
-    assert TestClient(app).get("/health").json() == {"status": "ok"}
+    """The checks themselves are in tests/api/test_hardening.py (D-116); without a model
+    server, as in CI, the answer is "degraded" with the reason."""
+    response = TestClient(app).get("/health")
+    body = response.json()
+    assert body["status"] in ("ok", "degraded") and set(body["checks"]) == {
+        "model_server",
+        "registry",
+    }
+    assert response.status_code == (200 if body["status"] == "ok" else 503)
 
 
 def test_result_schema_is_exported(tmp_path: Path) -> None:

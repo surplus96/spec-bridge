@@ -32,6 +32,7 @@ from fastapi import APIRouter, Depends, HTTPException, UploadFile
 from fastapi.responses import FileResponse
 from pydantic import Field, TypeAdapter
 
+from spec_bridge.api import deps
 from spec_bridge.api.deps import ALLOWED_SUFFIXES, Service, built_once, get_service
 from spec_bridge.graph.registration import (
     GraphDeps,
@@ -411,7 +412,7 @@ def create_job(file: UploadFile, jobs: JobsDep) -> JobView:
     suffix = Path(name).suffix.lower()
     if suffix not in ALLOWED_SUFFIXES:
         raise HTTPException(415, f"unsupported file type {suffix!r}; use .pdf, .xlsx or .docx")
-    data = file.file.read()
+    data = deps.read_upload(file)
     if not data:
         raise HTTPException(400, "empty file")
     return _view(jobs, jobs.upload(name, data))

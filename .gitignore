@@ -195,3 +195,6 @@ data/reference/bom/*
 
 # Re-scoring the committed W6 runs writes next to them; keep only the committed files
 data/eval/w6-runs/*/rescored-*.json
+# Playwright end-to-end outputs (D-117)
+web/test-results/
+web/playwright-report/

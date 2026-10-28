@@ -6,6 +6,9 @@ Schema 2 (D-064) adds the reviewer's edits and an audit table. A schema-1 file i
 migrated in place: the new tables are created and nothing else changes.
 Schema 3 (D-100) lets the edit table hold context edits (op 'context'). SQLite cannot
 change a CHECK in place, so a schema-2 file gets its edit table rebuilt, rows kept.
+Before any migration the file is copied as it was, next to it
+(`<name>.schema<old>-backup-<UTC time>`, D-116): registrations and edits made in the app
+are not in the seed and could not be rebuilt otherwise.
 """
 
 import hashlib
@@ -81,9 +84,41 @@ def canonical(data: Any) -> str:
     return json.dumps(data, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
 
 
+def stored_schema(path: Path) -> str | None:
+    """The schema version a registry file was written with, without changing the file."""
+    if not path.is_file():
+        return None
+    with sqlite3.connect(f"file:{path}?mode=ro", uri=True) as conn:
+        has_meta = conn.execute(
+            "SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = 'schema_meta'"
+        ).fetchone()
+        row = (
+            conn.execute("SELECT value FROM schema_meta WHERE key = 'schema_version'").fetchone()
+            if has_meta
+            else None
+        )
+    conn.close()
+    return None if row is None else str(row[0])
+
+
+def backup_before_migration(path: Path) -> Path | None:
+    """A consistent copy of a file about to be migrated (D-116); None when nothing migrates."""
+    old = stored_schema(path)
+    if old is None or old not in MIGRATES_FROM:
+        return None
+    stamp = datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
+    target = path.with_name(f"{path.name}.schema{old}-backup-{stamp}")
+    with sqlite3.connect(path) as source, sqlite3.connect(target) as copy:
+        source.backup(copy)
+    source.close()
+    copy.close()
+    return target
+
+
 class RegistryStore:
     def __init__(self, path: Path, onto: Ontology) -> None:
         self.onto = onto
+        self.backup = backup_before_migration(path)  # before anything touches the file
         # The job API calls from request and worker threads, one at a time (a lock in
         # spec_bridge.api.jobs); sqlite3 only needs to be told it may.
         self.conn = sqlite3.connect(path, check_same_thread=False)

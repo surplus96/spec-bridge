@@ -19,6 +19,7 @@ from typing import Literal
 
 from fastapi import APIRouter, HTTPException, UploadFile
 
+from spec_bridge.api import deps
 from spec_bridge.api.jobs import Jobs, JobsDep
 from spec_bridge.bom.linker import BomPlan, Pick, apply, candidates, plan, plan_key
 from spec_bridge.bom.reader import BomError, read_bom
@@ -133,7 +134,7 @@ def upload_bom(file: UploadFile, jobs: JobsDep) -> BomView:
     name = Path(file.filename or "").name
     if Path(name).suffix.lower() not in ALLOWED:
         raise HTTPException(415, f"unsupported BOM type {Path(name).suffix!r}; use .xlsx or .md")
-    data = file.file.read()
+    data = deps.read_upload(file)
     if not data:
         raise HTTPException(400, "empty file")
     digest = hashlib.sha256(data).hexdigest()

@@ -12,6 +12,8 @@ from dataclasses import dataclass, field
 from functools import wraps
 from typing import Any
 
+from fastapi import HTTPException, UploadFile
+
 from spec_bridge.envfile import load_env_file
 from spec_bridge.llm.audit import AuditLog
 from spec_bridge.llm.provider import JsonProvider
@@ -30,6 +32,20 @@ from spec_bridge.service import (
 )
 
 ALLOWED_SUFFIXES = {".pdf", ".xlsx", ".docx"}
+# 50 MB: above the largest manufacturer document read during the project (33 MB, D-116);
+# a larger upload is refused before anything is kept
+MAX_UPLOAD_BYTES = 50 * 1024 * 1024
+
+
+def read_upload(file: UploadFile) -> bytes:
+    """The uploaded bytes, or 413 when the file is over MAX_UPLOAD_BYTES (read at most one
+    byte past the limit, so an oversized file is never held whole)."""
+    data = file.file.read(MAX_UPLOAD_BYTES + 1)
+    if len(data) > MAX_UPLOAD_BYTES:
+        raise HTTPException(413, f"file is over the {MAX_UPLOAD_BYTES} byte upload limit")
+    return data
+
+
 REGISTRY = ROOT / "data/synth/registry"
 ONTOLOGY = ROOT / "ontology/ontology.yaml"
 

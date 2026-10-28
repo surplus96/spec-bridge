@@ -265,3 +265,43 @@ def test_an_edit_row_the_table_refuses_is_an_error_not_skipped(store: RegistrySt
     assert store.count("human_edits") == 1
     with pytest.raises(sqlite3.IntegrityError), store.conn:
         store._edit_rows("J", None, [edit_row("J-E2", "not an op")], "reviewer")
+
+
+# production audit 1 (D-116): a copy of the file is kept before a schema migration -------
+def schema_2_file(tmp_path: Path, onto: Ontology) -> Path:
+    path = tmp_path / "old.sqlite"
+    RegistryStore(path, onto).close()
+    with sqlite3.connect(path) as conn:
+        conn.execute("DROP TABLE human_edits")
+        conn.execute(SCHEMA_2_EDITS)
+        conn.execute(
+            "INSERT INTO human_edits VALUES ('J-E1', 'J', NULL, 'rated_power', 'set',"
+            " 'null', 'null', 'fact', 'old', 'reviewer', 't')"
+        )
+        conn.execute("UPDATE schema_meta SET value = '2' WHERE key = 'schema_version'")
+    conn.close()
+    return path
+
+
+def test_a_migration_keeps_a_backup_of_the_file_as_it_was(tmp_path: Path, onto: Ontology) -> None:
+    path = schema_2_file(tmp_path, onto)
+    RegistryStore(path, onto).close()
+    (backup,) = list(tmp_path.glob("old.sqlite.schema2-backup-*"))
+    with sqlite3.connect(backup) as conn:
+        version = conn.execute(
+            "SELECT value FROM schema_meta WHERE key = 'schema_version'"
+        ).fetchone()
+        rows = conn.execute("SELECT edit_id, reason FROM human_edits").fetchall()
+        (create,) = conn.execute(
+            "SELECT sql FROM sqlite_master WHERE type = 'table' AND name = 'human_edits'"
+        ).fetchone()
+    conn.close()
+    assert version == ("2",) and rows == [("J-E1", "old")]
+    assert "'context'" not in create  # the copy is from before the migration
+
+
+def test_no_backup_without_a_migration(tmp_path: Path, onto: Ontology) -> None:
+    path = tmp_path / "new.sqlite"
+    RegistryStore(path, onto).close()  # a new file
+    RegistryStore(path, onto).close()  # the current schema
+    assert list(tmp_path.glob("*backup*")) == []
