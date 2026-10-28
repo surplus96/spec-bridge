@@ -22,6 +22,14 @@ def test_a_client_from_another_machine_is_refused(peer: str) -> None:
     assert response.status_code == 403 and "127.0.0.1" in response.json()["detail"]
 
 
+@pytest.mark.parametrize("peer", [None, "", "localhost", "/run/spec-bridge.sock"])
+def test_a_peer_that_is_not_an_address_is_not_local(peer: str | None) -> None:
+    """A Unix socket path or a missing peer gives no address to trust: refused, not served."""
+    from spec_bridge.api.app import is_local
+
+    assert not is_local(peer)
+
+
 # health (D-116): say which dependency is missing instead of always "ok" ------------------
 def fresh_client() -> TestClient:
     return TestClient(app, client=("127.0.0.1", 50000))
@@ -81,6 +89,47 @@ def test_health_says_the_registry_cannot_be_read(
     monkeypatch.setattr(health, "ollama_models", lambda host: [health.configured_model()])
     response = fresh_client().get("/health")
     assert response.status_code == 503 and not response.json()["checks"]["registry"]["ok"]
+
+
+def test_health_does_not_probe_ollama_for_a_cloud_provider(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+) -> None:
+    from spec_bridge.api import health
+
+    def probed(host: str) -> list[str]:
+        raise AssertionError("the cloud option must not be checked against Ollama")
+
+    monkeypatch.setenv("SPEC_BRIDGE_PROVIDER", "openai")
+    monkeypatch.setenv("SPEC_BRIDGE_APP_DIR", str(tmp_path / "app"))
+    monkeypatch.setattr(health, "ollama_models", probed)
+    response = fresh_client().get("/health")
+    assert response.status_code == 200
+    assert "not checked" in response.json()["checks"]["model_server"]["detail"]
+
+
+@pytest.mark.parametrize("version", ["99", None])
+def test_health_says_the_registry_schema_is_unknown(
+    version: str | None, monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+) -> None:
+    """A registry from a newer build (or not a registry at all) is reported, not opened."""
+    import sqlite3
+
+    from spec_bridge.api import health
+    from spec_bridge.registry.store import SCHEMA_VERSION
+
+    folder = tmp_path / "app"
+    folder.mkdir()
+    with sqlite3.connect(folder / "registry.sqlite") as conn:
+        conn.execute("CREATE TABLE schema_meta (key TEXT PRIMARY KEY, value TEXT)")
+        if version is not None:
+            conn.execute("INSERT INTO schema_meta VALUES ('schema_version', ?)", (version,))
+    conn.close()
+    monkeypatch.setenv("SPEC_BRIDGE_APP_DIR", str(folder))
+    monkeypatch.setattr(health, "ollama_models", lambda host: [health.configured_model()])
+    response = fresh_client().get("/health")
+    assert response.status_code == 503
+    check = response.json()["checks"]["registry"]
+    assert not check["ok"] and f"expected {SCHEMA_VERSION}" in check["detail"]
 
 
 # uploads (D-116): a file over the limit is refused before it is kept ---------------------

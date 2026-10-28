@@ -1,12 +1,14 @@
 """CP-S4 R5: files that decide a result beyond the W6 freeze record are guarded."""
 
 import json
+import subprocess
 from pathlib import Path
 
 import pytest
 
 from spec_bridge.eval import freeze, manifest
 from spec_bridge.eval.freeze import FreezeError
+from tests.conftest import ROOT
 
 SERVICE = 'RAG_EMBEDDING = "bge-m3"\nRAG_K = 3\n'
 
@@ -49,6 +51,46 @@ def test_dataset_files_are_checked_against_their_listed_hashes(tmp_path: Path) -
 
 def test_the_repository_dataset_matches_its_sums() -> None:
     assert manifest.dataset_check()["differ"] == []
+
+
+def test_check_names_a_changed_guard_file_and_a_changed_dataset_file(tmp_path: Path) -> None:
+    root = tree(tmp_path)
+    (root / "data/synth").mkdir(parents=True)
+    (root / "data/synth/a.txt").write_text("a")
+    (root / manifest.SUMS).write_text(f"{manifest.sha256(b'a')}  data/synth/a.txt\n")
+    written = root / "manifest.json"
+    written.write_text(json.dumps({"guard": {"hashes": manifest.guard_hashes(root)}}))
+    assert manifest.check(written, root) == []
+
+    (root / "uv.lock").write_text("other lock\n")
+    (root / "data/synth/a.txt").write_text("changed")
+    assert manifest.check(written, root) == [
+        "guard changed: uv.lock",
+        "dataset file differs: data/synth/a.txt",
+    ]
+
+
+def test_the_committed_manifest_matches_this_checkout() -> None:
+    assert manifest.check() == []
+
+
+def _has_commit(commit: str) -> bool:
+    found = subprocess.run(
+        ["git", "cat-file", "-e", f"{commit}^{{commit}}"], cwd=ROOT, capture_output=True
+    )
+    return found.returncode == 0
+
+
+@pytest.mark.skipif(
+    not _has_commit(manifest.W6_FREEZE_COMMIT),
+    reason="needs the W6 freeze commit in history (not in a shallow or exported clone)",
+)
+def test_the_guard_set_is_unchanged_since_the_w6_freeze_commit() -> None:
+    """What docs/reports/w6-repro-manifest.json claims, recomputed from git."""
+    assert manifest.at_commit("HEAD")("no/such/file") is None
+    report = manifest.w6_manifest()
+    assert report["guard"]["changed_since_freeze"] == []
+    assert report["model_digest"] == manifest.W6_MODEL_DIGEST
 
 
 def test_a_new_freeze_record_refuses_a_guard_change(

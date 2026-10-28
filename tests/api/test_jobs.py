@@ -233,6 +233,48 @@ def test_unknown_ids_are_404(tmp_path: Path, client: TestClient, path: str) -> N
     assert client.get(path).status_code == 404
 
 
+def test_resuming_an_unknown_job_is_404(tmp_path: Path, client: TestClient) -> None:
+    use(jobs_for(tmp_path, []))
+    assert send(client, "JOB-none", {"action": "cancel"}).status_code == 404
+
+
+def test_a_class_choice_takes_only_a_class_or_a_cancel(tmp_path: Path, client: TestClient) -> None:
+    unknown = {"product_class": "unknown", "reason": "test"}
+    use(jobs_for(tmp_path, [unknown, {"facts": []}]))
+    job_id = upload(client, CLEAN)["job_id"]
+    assert view(client, job_id)["status"] == "awaiting_class"
+
+    refused = send(client, job_id, {"action": "register_new", "revision": 0})
+    assert refused.status_code == 409 and "class choice" in refused.json()["detail"]
+
+    expected = FAST[CLEAN][1]["expected_class"]
+    chosen = send(client, job_id, {"action": "choose_class", "class_id": expected})
+    assert chosen.status_code == 202
+    shown = view(client, job_id)
+    assert shown["status"] == "awaiting_review" and shown["class_id"] == expected
+
+
+def test_a_job_still_at_work_is_running_and_takes_no_command(
+    tmp_path: Path, client: TestClient
+) -> None:
+    service = service_with([])
+    service.rag = None
+    use(Jobs(service, tmp_path / "app", run=lambda task: None))  # the worker never finishes
+    job_id = upload(client, CLEAN)["job_id"]
+    assert view(client, job_id)["status"] == "running"
+    response = send(client, job_id, {"action": "cancel"})
+    assert response.status_code == 409 and "running" in response.json()["detail"]
+
+
+def test_a_job_cut_off_by_a_restart_is_stalled(tmp_path: Path, client: TestClient) -> None:
+    service = service_with([])
+    service.rag = None
+    use(Jobs(service, tmp_path / "app", run=lambda task: None))
+    job_id = upload(client, CLEAN)["job_id"]
+    use(jobs_for(tmp_path, []))  # a new server on the same app folder: the upload, no state
+    assert view(client, job_id)["status"] == "stalled"
+
+
 @pytest.mark.parametrize(
     "name, data, status", [("spec.txt", b"text", 415), ("spec.xlsx", b"", 400)]
 )

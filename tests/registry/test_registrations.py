@@ -145,6 +145,49 @@ def test_a_value_without_a_document_place_is_refused(tmp_path: Path, store: Regi
         store.register("J", stripped, [])
 
 
+def _without(facts: list[dict[str, Any]], attribute: str) -> list[dict[str, Any]]:
+    return [f for f in facts if f["attribute"] != attribute]
+
+
+def _replaced(facts: list[dict[str, Any]], attribute: str, value: Any) -> list[dict[str, Any]]:
+    return [{**f, "value": value} if f["attribute"] == attribute else f for f in facts]
+
+
+@pytest.mark.parametrize(
+    ("change", "refusal"),
+    [
+        (lambda r, o: {"facts": _without(r.facts, "maker")}, "식별할 수 없음"),
+        (lambda r, o: {"facts": _without(r.facts, "model_designation")}, "식별할 수 없음"),
+        (
+            lambda r, o: {"facts": _replaced(r.facts, "maker", "No Such Maker")},
+            "제조사 목록에 없음",
+        ),
+        (
+            lambda r, o: {"class_id": next(c for c, v in o.classes.items() if v.abstract)},
+            "말단 클래스가 아님",
+        ),
+        (lambda r, o: {"class_id": "NoSuchClass"}, "말단 클래스가 아님"),
+        (
+            lambda r, o: {"facts": _replaced(r.facts, "number_of_cylinders", "six")},
+            "정의에 맞지 않음",
+        ),
+    ],
+    ids=["no-maker", "no-model", "unknown-maker", "abstract-class", "unknown-class", "bad-value"],
+)
+def test_register_itself_refuses_what_review_should_have_blocked(
+    tmp_path: Path, store: RegistryStore, onto: Ontology, change: Any, refusal: str
+) -> None:
+    """The store is the last guard: a result that slipped past the review is still refused
+    and nothing is written."""
+    graph, _ = reviewed(tmp_path, store, CLEAN, "J")
+    result = result_of(state_of(graph, "J"), {})
+    broken = result.model_copy(update=change(result, onto))
+    counts = [store.count(t) for t in ("products", "product_facts", "registration_events")]
+    with pytest.raises(RegistryError, match=refusal):
+        store.register("J", broken, [])
+    assert [store.count(t) for t in ("products", "product_facts", "registration_events")] == counts
+
+
 def test_link_is_idempotent_and_needs_a_registered_target(
     tmp_path: Path, store: RegistryStore
 ) -> None:
