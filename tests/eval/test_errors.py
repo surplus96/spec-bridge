@@ -4,9 +4,13 @@ Values come from a development answer (H3: no domain numbers written here); each
 changes one predicted fact and checks the cause it is given.
 """
 
+import json
+from pathlib import Path
 from typing import Any
 
-from spec_bridge.eval.errors import document_errors, summary
+import pytest
+
+from spec_bridge.eval.errors import document_errors, run_errors, summary
 from spec_bridge.eval.scoring import Prediction, score_document
 from spec_bridge.normalize.dictionary import dev_answers
 
@@ -110,3 +114,28 @@ def test_a_failed_document_misses_every_gold_key() -> None:
         causes = _causes(prediction)
         assert len(causes) == gold_keys
         assert set(causes) <= {"not_extracted", "parse"}
+
+
+# a run folder (D-120): a prediction file is missing only for a document the run did not parse
+def _run(tmp_path: Path, failures: dict[str, str]) -> Path:
+    (tmp_path / "predictions").mkdir()
+    (tmp_path / "run.json").write_text(json.dumps({"split": "dev", "failures": failures}))
+    return tmp_path
+
+
+def test_a_run_missing_a_prediction_file_it_does_not_explain_is_refused(tmp_path: Path) -> None:
+    """A partial copy or an interrupted run would otherwise read as parse failures."""
+    ids = [a["input_id"] for a in dev_answers()]
+    run = _run(tmp_path, {ids[0]: "not_parsed"})
+    with pytest.raises(ValueError, match=ids[1]) as refused:
+        run_errors(run)
+    assert ids[0] not in str(refused.value)
+
+
+def test_a_document_the_run_did_not_parse_is_analysed_as_a_failure(tmp_path: Path) -> None:
+    answers = dev_answers()
+    run = _run(tmp_path, {a["input_id"]: "not_parsed" for a in answers})
+    documents = run_errors(run)
+    assert [d.document_id for d in documents] == [a["input_id"] for a in answers]
+    expected = sum(c.fn for a in answers for c in score_document(a, None).facts.values())
+    assert summary(documents)["fn"] == expected

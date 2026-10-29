@@ -150,9 +150,26 @@ def _prediction(path: Path) -> Prediction | None:
     return Prediction.model_validate(json.loads(path.read_text())["prediction"])
 
 
+def _unexplained_gaps(run_dir: Path, ids: list[str], failures: dict[str, str]) -> list[str]:
+    """Documents without a prediction file that the run did not record as unparsed: the run
+    writes a file for every parsed document, so these mean an incomplete folder."""
+    return [
+        doc
+        for doc in ids
+        if failures.get(doc) != "not_parsed"
+        and not (run_dir / "predictions" / f"{doc}.json").exists()
+    ]
+
+
 def run_errors(run_dir: Path) -> list[DocumentErrors]:
-    split = json.loads((run_dir / "run.json").read_text()).get("split", "dev")
+    """Refuses (ValueError) a folder missing a prediction its run.json does not explain:
+    counting it as a parse failure would make the analysis disagree with scores.json."""
+    run = json.loads((run_dir / "run.json").read_text())
+    split = run.get("split", "dev")
     answers = handwritten.answers() if split == "handwritten" else split_answers(split)
+    gaps = _unexplained_gaps(run_dir, [a["input_id"] for a in answers], run.get("failures", {}))
+    if gaps:
+        raise ValueError(f"{run_dir} is incomplete: no prediction file for {', '.join(gaps)}")
     return [
         document_errors(
             answer,
