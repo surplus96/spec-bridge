@@ -8,6 +8,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from spec_bridge.api.app import Service, app, get_service, load_registry, service_provider
+from spec_bridge.api.errors import ErrorDetail
 from spec_bridge.llm.audit import AuditLog
 from spec_bridge.llm.openai_compat import OpenAIProvider
 from spec_bridge.normalize.dictionary import load_dictionary
@@ -105,6 +106,7 @@ def test_unknown_class_is_needs_review() -> None:
 def test_bad_uploads_are_refused(name: str, data: bytes, status: int) -> None:
     response = client_for(service_with([])).post("/documents", files={"file": (name, data)})
     assert response.status_code == status
+    ErrorDetail.model_validate(response.json())  # the shape the contract documents
 
 
 def test_health() -> None:

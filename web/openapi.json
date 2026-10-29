@@ -332,6 +332,40 @@
         "title": "Cancel",
         "type": "object"
       },
+      "Check": {
+        "properties": {
+          "detail": {
+            "title": "Detail",
+            "type": "string"
+          },
+          "ok": {
+            "title": "Ok",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "ok",
+          "detail"
+        ],
+        "title": "Check",
+        "type": "object"
+      },
+      "Checks": {
+        "properties": {
+          "model_server": {
+            "$ref": "#/components/schemas/Check"
+          },
+          "registry": {
+            "$ref": "#/components/schemas/Check"
+          }
+        },
+        "required": [
+          "model_server",
+          "registry"
+        ],
+        "title": "Checks",
+        "type": "object"
+      },
       "ChooseClass": {
         "additionalProperties": false,
         "properties": {
@@ -558,6 +592,19 @@
         "title": "Edit",
         "type": "object"
       },
+      "ErrorDetail": {
+        "properties": {
+          "detail": {
+            "title": "Detail",
+            "type": "string"
+          }
+        },
+        "required": [
+          "detail"
+        ],
+        "title": "ErrorDetail",
+        "type": "object"
+      },
       "Expected": {
         "additionalProperties": false,
         "properties": {
@@ -767,6 +814,46 @@
           }
         },
         "title": "HTTPValidationError",
+        "type": "object"
+      },
+      "HealthReport": {
+        "description": "The reply for both 200 (ok) and 503 (degraded).",
+        "properties": {
+          "checks": {
+            "$ref": "#/components/schemas/Checks"
+          },
+          "status": {
+            "enum": [
+              "ok",
+              "degraded"
+            ],
+            "title": "Status",
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "checks"
+        ],
+        "title": "HealthReport",
+        "type": "object"
+      },
+      "InvalidRequest": {
+        "description": "FastAPI's reply to a request that does not match the route's parameters or body.",
+        "properties": {
+          "detail": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Detail",
+            "type": "array"
+          }
+        },
+        "required": [
+          "detail"
+        ],
+        "title": "InvalidRequest",
         "type": "object"
       },
       "JobSummary": {
@@ -2216,15 +2303,53 @@
             },
             "description": "Successful Response"
           },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetail"
+                }
+              }
+            },
+            "description": "the file is empty"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetail"
+                }
+              }
+            },
+            "description": "the file is over the upload limit"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetail"
+                }
+              }
+            },
+            "description": "not an .xlsx or .md file"
+          },
           "422": {
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HTTPValidationError"
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/ErrorDetail"
+                    },
+                    {
+                      "$ref": "#/components/schemas/InvalidRequest"
+                    }
+                  ],
+                  "title": "Response 422 Upload Bom Api Boms Post"
                 }
               }
             },
-            "description": "Validation Error"
+            "description": "the BOM cannot be read, its root is unknown or a pick does not fit"
           }
         },
         "summary": "Upload Bom"
@@ -2255,15 +2380,33 @@
             },
             "description": "Successful Response"
           },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetail"
+                }
+              }
+            },
+            "description": "no such BOM"
+          },
           "422": {
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HTTPValidationError"
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/ErrorDetail"
+                    },
+                    {
+                      "$ref": "#/components/schemas/InvalidRequest"
+                    }
+                  ],
+                  "title": "Response 422 Get Bom Api Boms  Bom Id  Get"
                 }
               }
             },
-            "description": "Validation Error"
+            "description": "the BOM cannot be read, its root is unknown or a pick does not fit"
           }
         },
         "summary": "Get Bom"
@@ -2304,15 +2447,43 @@
             },
             "description": "Successful Response"
           },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetail"
+                }
+              }
+            },
+            "description": "no such BOM"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetail"
+                }
+              }
+            },
+            "description": "the preview is out of date; preview again"
+          },
           "422": {
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HTTPValidationError"
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/ErrorDetail"
+                    },
+                    {
+                      "$ref": "#/components/schemas/InvalidRequest"
+                    }
+                  ],
+                  "title": "Response 422 Apply Bom Api Boms  Bom Id  Apply Post"
                 }
               }
             },
-            "description": "Validation Error"
+            "description": "the BOM cannot be read, its root is unknown or a pick does not fit"
           }
         },
         "summary": "Apply Bom"
@@ -2353,15 +2524,33 @@
             },
             "description": "Successful Response"
           },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetail"
+                }
+              }
+            },
+            "description": "no such BOM"
+          },
           "422": {
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HTTPValidationError"
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/ErrorDetail"
+                    },
+                    {
+                      "$ref": "#/components/schemas/InvalidRequest"
+                    }
+                  ],
+                  "title": "Response 422 Preview Bom Api Boms  Bom Id  Preview Post"
                 }
               }
             },
-            "description": "Validation Error"
+            "description": "the BOM cannot be read, its root is unknown or a pick does not fit"
           }
         },
         "summary": "Preview Bom"
@@ -2403,15 +2592,43 @@
             },
             "description": "Successful Response"
           },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetail"
+                }
+              }
+            },
+            "description": "no such BOM"
+          },
           "422": {
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HTTPValidationError"
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/ErrorDetail"
+                    },
+                    {
+                      "$ref": "#/components/schemas/InvalidRequest"
+                    }
+                  ],
+                  "title": "Response 422 Suggest Bom Row Api Boms  Bom Id  Suggest Post"
                 }
               }
             },
-            "description": "Validation Error"
+            "description": "the BOM cannot be read, or the line is not a row waiting for review"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetail"
+                }
+              }
+            },
+            "description": "the model server cannot be reached"
           }
         },
         "summary": "Suggest Bom Row"
@@ -2481,6 +2698,36 @@
             },
             "description": "Successful Response"
           },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetail"
+                }
+              }
+            },
+            "description": "the file is empty"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetail"
+                }
+              }
+            },
+            "description": "the file is over the upload limit"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetail"
+                }
+              }
+            },
+            "description": "not a .pdf, .xlsx or .docx file"
+          },
           "422": {
             "content": {
               "application/json": {
@@ -2519,6 +2766,16 @@
               }
             },
             "description": "Successful Response"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetail"
+                }
+              }
+            },
+            "description": "no such job"
           },
           "422": {
             "content": {
@@ -2562,6 +2819,16 @@
               }
             },
             "description": "Successful Response"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetail"
+                }
+              }
+            },
+            "description": "no parsed document"
           },
           "422": {
             "content": {
@@ -2612,6 +2879,26 @@
             },
             "description": "Successful Response"
           },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetail"
+                }
+              }
+            },
+            "description": "no such job"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetail"
+                }
+              }
+            },
+            "description": "the job is not waiting for this command (the reason)"
+          },
           "422": {
             "content": {
               "application/json": {
@@ -2648,6 +2935,16 @@
               }
             },
             "description": "Successful Response"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetail"
+                }
+              }
+            },
+            "description": "no file for the job"
           },
           "422": {
             "content": {
@@ -2688,6 +2985,16 @@
             },
             "description": "Successful Response"
           },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetail"
+                }
+              }
+            },
+            "description": "no such job"
+          },
           "422": {
             "content": {
               "application/json": {
@@ -2726,6 +3033,16 @@
               }
             },
             "description": "Successful Response"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetail"
+                }
+              }
+            },
+            "description": "no such product"
           },
           "422": {
             "content": {
@@ -2768,6 +3085,36 @@
             },
             "description": "Successful Response"
           },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetail"
+                }
+              }
+            },
+            "description": "the file is empty"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetail"
+                }
+              }
+            },
+            "description": "the file is over the upload limit"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetail"
+                }
+              }
+            },
+            "description": "not a .pdf, .xlsx or .docx file"
+          },
           "422": {
             "content": {
               "application/json": {
@@ -2784,21 +3131,28 @@
     },
     "/health": {
       "get": {
+        "description": "200 when the model server and the registry are usable, else 503 naming which (D-116).",
         "operationId": "health_health_get",
         "responses": {
           "200": {
             "content": {
               "application/json": {
                 "schema": {
-                  "additionalProperties": {
-                    "type": "string"
-                  },
-                  "title": "Response Health Health Get",
-                  "type": "object"
+                  "$ref": "#/components/schemas/HealthReport"
                 }
               }
             },
             "description": "Successful Response"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthReport"
+                }
+              }
+            },
+            "description": "a dependency is not usable"
           }
         },
         "summary": "Health"

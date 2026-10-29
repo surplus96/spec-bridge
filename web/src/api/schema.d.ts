@@ -268,7 +268,10 @@ export interface paths {
             path?: never;
             cookie?: never;
         };
-        /** Health */
+        /**
+         * Health
+         * @description 200 when the model server and the registry are usable, else 503 naming which (D-116).
+         */
         get: operations["health_health_get"];
         put?: never;
         post?: never;
@@ -407,6 +410,18 @@ export interface components {
              */
             reason: string;
         };
+        /** Check */
+        Check: {
+            /** Detail */
+            detail: string;
+            /** Ok */
+            ok: boolean;
+        };
+        /** Checks */
+        Checks: {
+            model_server: components["schemas"]["Check"];
+            registry: components["schemas"]["Check"];
+        };
         /** ChooseClass */
         ChooseClass: {
             /**
@@ -510,6 +525,11 @@ export interface components {
             /** Revision */
             revision: number;
         };
+        /** ErrorDetail */
+        ErrorDetail: {
+            /** Detail */
+            detail: string;
+        };
         /** Expected */
         Expected: {
             /**
@@ -570,6 +590,28 @@ export interface components {
         HTTPValidationError: {
             /** Detail */
             detail?: components["schemas"]["ValidationError"][];
+        };
+        /**
+         * HealthReport
+         * @description The reply for both 200 (ok) and 503 (degraded).
+         */
+        HealthReport: {
+            checks: components["schemas"]["Checks"];
+            /**
+             * Status
+             * @enum {string}
+             */
+            status: "ok" | "degraded";
+        };
+        /**
+         * InvalidRequest
+         * @description FastAPI's reply to a request that does not match the route's parameters or body.
+         */
+        InvalidRequest: {
+            /** Detail */
+            detail: {
+                [key: string]: unknown;
+            }[];
         };
         /** JobSummary */
         JobSummary: {
@@ -1103,13 +1145,40 @@ export interface operations {
                     "application/json": components["schemas"]["BomView"];
                 };
             };
-            /** @description Validation Error */
+            /** @description the file is empty */
+            400: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorDetail"];
+                };
+            };
+            /** @description the file is over the upload limit */
+            413: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorDetail"];
+                };
+            };
+            /** @description not an .xlsx or .md file */
+            415: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorDetail"];
+                };
+            };
+            /** @description the BOM cannot be read, its root is unknown or a pick does not fit */
             422: {
                 headers: {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": components["schemas"]["HTTPValidationError"];
+                    "application/json": components["schemas"]["ErrorDetail"] | components["schemas"]["InvalidRequest"];
                 };
             };
         };
@@ -1134,13 +1203,22 @@ export interface operations {
                     "application/json": components["schemas"]["BomView"];
                 };
             };
-            /** @description Validation Error */
+            /** @description no such BOM */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorDetail"];
+                };
+            };
+            /** @description the BOM cannot be read, its root is unknown or a pick does not fit */
             422: {
                 headers: {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": components["schemas"]["HTTPValidationError"];
+                    "application/json": components["schemas"]["ErrorDetail"] | components["schemas"]["InvalidRequest"];
                 };
             };
         };
@@ -1169,13 +1247,31 @@ export interface operations {
                     "application/json": components["schemas"]["BomView"];
                 };
             };
-            /** @description Validation Error */
+            /** @description no such BOM */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorDetail"];
+                };
+            };
+            /** @description the preview is out of date; preview again */
+            409: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorDetail"];
+                };
+            };
+            /** @description the BOM cannot be read, its root is unknown or a pick does not fit */
             422: {
                 headers: {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": components["schemas"]["HTTPValidationError"];
+                    "application/json": components["schemas"]["ErrorDetail"] | components["schemas"]["InvalidRequest"];
                 };
             };
         };
@@ -1204,13 +1300,22 @@ export interface operations {
                     "application/json": components["schemas"]["BomView"];
                 };
             };
-            /** @description Validation Error */
+            /** @description no such BOM */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorDetail"];
+                };
+            };
+            /** @description the BOM cannot be read, its root is unknown or a pick does not fit */
             422: {
                 headers: {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": components["schemas"]["HTTPValidationError"];
+                    "application/json": components["schemas"]["ErrorDetail"] | components["schemas"]["InvalidRequest"];
                 };
             };
         };
@@ -1239,13 +1344,31 @@ export interface operations {
                     "application/json": components["schemas"]["Suggestion"];
                 };
             };
-            /** @description Validation Error */
+            /** @description no such BOM */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorDetail"];
+                };
+            };
+            /** @description the BOM cannot be read, or the line is not a row waiting for review */
             422: {
                 headers: {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": components["schemas"]["HTTPValidationError"];
+                    "application/json": components["schemas"]["ErrorDetail"] | components["schemas"]["InvalidRequest"];
+                };
+            };
+            /** @description the model server cannot be reached */
+            503: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorDetail"];
                 };
             };
         };
@@ -1312,6 +1435,33 @@ export interface operations {
                     "application/json": components["schemas"]["JobView"];
                 };
             };
+            /** @description the file is empty */
+            400: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorDetail"];
+                };
+            };
+            /** @description the file is over the upload limit */
+            413: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorDetail"];
+                };
+            };
+            /** @description not a .pdf, .xlsx or .docx file */
+            415: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorDetail"];
+                };
+            };
             /** @description Validation Error */
             422: {
                 headers: {
@@ -1343,6 +1493,15 @@ export interface operations {
                     "application/json": components["schemas"]["JobView"];
                 };
             };
+            /** @description no such job */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorDetail"];
+                };
+            };
             /** @description Validation Error */
             422: {
                 headers: {
@@ -1372,6 +1531,15 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["BlockView"][];
+                };
+            };
+            /** @description no parsed document */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorDetail"];
                 };
             };
             /** @description Validation Error */
@@ -1409,6 +1577,24 @@ export interface operations {
                     "application/json": components["schemas"]["JobView"];
                 };
             };
+            /** @description no such job */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorDetail"];
+                };
+            };
+            /** @description the job is not waiting for this command (the reason) */
+            409: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorDetail"];
+                };
+            };
             /** @description Validation Error */
             422: {
                 headers: {
@@ -1438,6 +1624,15 @@ export interface operations {
                 };
                 content: {
                     "application/json": unknown;
+                };
+            };
+            /** @description no file for the job */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorDetail"];
                 };
             };
             /** @description Validation Error */
@@ -1471,6 +1666,15 @@ export interface operations {
                     "application/json": components["schemas"]["SupplementRequest"];
                 };
             };
+            /** @description no such job */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorDetail"];
+                };
+            };
             /** @description Validation Error */
             422: {
                 headers: {
@@ -1500,6 +1704,15 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["ProductView"];
+                };
+            };
+            /** @description no such product */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorDetail"];
                 };
             };
             /** @description Validation Error */
@@ -1537,6 +1750,33 @@ export interface operations {
                     };
                 };
             };
+            /** @description the file is empty */
+            400: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorDetail"];
+                };
+            };
+            /** @description the file is over the upload limit */
+            413: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorDetail"];
+                };
+            };
+            /** @description not a .pdf, .xlsx or .docx file */
+            415: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorDetail"];
+                };
+            };
             /** @description Validation Error */
             422: {
                 headers: {
@@ -1563,9 +1803,16 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": {
-                        [key: string]: string;
-                    };
+                    "application/json": components["schemas"]["HealthReport"];
+                };
+            };
+            /** @description a dependency is not usable */
+            503: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HealthReport"];
                 };
             };
         };

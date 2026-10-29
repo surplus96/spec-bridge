@@ -33,6 +33,8 @@ from spec_bridge.api.deps import (
     load_registry,
     service_provider,
 )
+from spec_bridge.api.errors import UPLOAD, refusals
+from spec_bridge.api.health import HealthReport
 from spec_bridge.api.health import report as health_report
 from spec_bridge.api.jobs import router as jobs_router
 from spec_bridge.normalize.dictionary import ROOT
@@ -71,14 +73,18 @@ app.include_router(jobs_router)
 app.include_router(boms_router)
 
 
-@app.get("/health")
+@app.get(
+    "/health",
+    response_model=HealthReport,
+    responses={503: {"model": HealthReport, "description": "a dependency is not usable"}},
+)
 def health() -> JSONResponse:
     """200 when the model server and the registry are usable, else 503 naming which (D-116)."""
     status, body = health_report()
     return JSONResponse(body, status_code=status)
 
 
-@app.post("/documents")
+@app.post("/documents", responses=refusals(UPLOAD | {415: "not a .pdf, .xlsx or .docx file"}))
 def upload(file: UploadFile, service: Annotated[Service, Depends(get_service)]) -> dict[str, Any]:
     """Unsupported type: 415. Empty file: 400. Anything else: 200 with the result JSON,
     whose status is needs_review when the file could not be parsed or understood."""

@@ -12,13 +12,32 @@ import os
 import sqlite3
 import urllib.request
 from pathlib import Path
-from typing import Any
+from typing import Any, Literal
+
+from pydantic import BaseModel
 
 from spec_bridge.llm.provider import DEFAULT_HOST, DEFAULT_MODEL
 from spec_bridge.normalize.dictionary import ROOT
 from spec_bridge.registry.store import MIGRATES_FROM, SCHEMA_VERSION, stored_schema
 
 TIMEOUT_S = 2.0
+
+
+class Check(BaseModel):
+    ok: bool
+    detail: str
+
+
+class Checks(BaseModel):
+    model_server: Check
+    registry: Check
+
+
+class HealthReport(BaseModel):
+    """The reply for both 200 (ok) and 503 (degraded)."""
+
+    status: Literal["ok", "degraded"]
+    checks: Checks
 
 
 def configured_model() -> str:

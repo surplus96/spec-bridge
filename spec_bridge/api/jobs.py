@@ -35,6 +35,7 @@ from pydantic import Field, TypeAdapter
 
 from spec_bridge.api import deps
 from spec_bridge.api.deps import ALLOWED_SUFFIXES, Service, built_once, get_service
+from spec_bridge.api.errors import UPLOAD, refusals
 from spec_bridge.graph.registration import (
     GraphDeps,
     build_graph,
@@ -415,7 +416,11 @@ def _view(jobs: Jobs, job_id: str) -> JobView:
     return view
 
 
-@router.post("/jobs", status_code=202)
+@router.post(
+    "/jobs",
+    status_code=202,
+    responses=refusals(UPLOAD | {415: "not a .pdf, .xlsx or .docx file"}),
+)
 def create_job(file: UploadFile, jobs: JobsDep) -> JobView:
     """Unsupported type: 415. Empty file: 400. Otherwise the job starts in the background."""
     name = file.filename or ""
@@ -433,12 +438,18 @@ def list_jobs(jobs: JobsDep) -> list[JobSummary]:
     return jobs.summaries()
 
 
-@router.get("/jobs/{job_id}")
+@router.get("/jobs/{job_id}", responses=refusals({404: "no such job"}))
 def get_job(job_id: str, jobs: JobsDep) -> JobView:
     return _view(jobs, job_id)
 
 
-@router.post("/jobs/{job_id}/resume", status_code=202)
+@router.post(
+    "/jobs/{job_id}/resume",
+    status_code=202,
+    responses=refusals(
+        {404: "no such job", 409: "the job is not waiting for this command (the reason)"}
+    ),
+)
 def resume_job(job_id: str, request: ResumeRequest, jobs: JobsDep) -> JobView:
     try:
         return jobs.resume(job_id, request)
@@ -448,7 +459,7 @@ def resume_job(job_id: str, request: ResumeRequest, jobs: JobsDep) -> JobView:
         raise HTTPException(409, str(error)) from error
 
 
-@router.get("/jobs/{job_id}/source")
+@router.get("/jobs/{job_id}/source", responses=refusals({404: "no file for the job"}))
 def job_source(job_id: str, jobs: JobsDep) -> FileResponse:
     path = jobs.source(job_id)
     if path is None or not path.is_file():
@@ -456,7 +467,7 @@ def job_source(job_id: str, jobs: JobsDep) -> FileResponse:
     return FileResponse(path)
 
 
-@router.get("/jobs/{job_id}/blocks")
+@router.get("/jobs/{job_id}/blocks", responses=refusals({404: "no parsed document"}))
 def job_blocks(job_id: str, jobs: JobsDep) -> list[BlockView]:
     blocks = jobs.blocks(job_id)
     if blocks is None:
@@ -464,7 +475,7 @@ def job_blocks(job_id: str, jobs: JobsDep) -> list[BlockView]:
     return blocks
 
 
-@router.get("/jobs/{job_id}/supplement")
+@router.get("/jobs/{job_id}/supplement", responses=refusals({404: "no such job"}))
 def job_supplement(job_id: str, jobs: JobsDep) -> SupplementRequest:
     request = jobs.supplement(job_id)
     if request is None:
@@ -472,7 +483,7 @@ def job_supplement(job_id: str, jobs: JobsDep) -> SupplementRequest:
     return request
 
 
-@router.get("/products/{product_id}")
+@router.get("/products/{product_id}", responses=refusals({404: "no such product"}))
 def get_product(product_id: str, jobs: JobsDep) -> ProductView:
     product = jobs.registry.product(product_id)
     if product is None:

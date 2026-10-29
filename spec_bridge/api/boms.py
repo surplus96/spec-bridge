@@ -20,6 +20,7 @@ from typing import Literal
 from fastapi import APIRouter, HTTPException, UploadFile
 
 from spec_bridge.api import deps
+from spec_bridge.api.errors import UPLOAD, refusals
 from spec_bridge.api.jobs import CURRENT_JOB, Jobs, JobsDep
 from spec_bridge.bom.linker import BomPlan, Pick, apply, candidates, plan, plan_key
 from spec_bridge.bom.reader import BomError, read_bom
@@ -126,9 +127,14 @@ def _preview(jobs: Jobs, bom_id: str, picks: list[Pick]) -> BomView:
 
 
 router = APIRouter(prefix="/api")
+NO_BOM = {404: "no such BOM"}
+UNREADABLE = {422: "the BOM cannot be read, its root is unknown or a pick does not fit"}
 
 
-@router.post("/boms")
+@router.post(
+    "/boms",
+    responses=refusals(UPLOAD | {415: "not an .xlsx or .md file"} | UNREADABLE),
+)
 def upload_bom(file: UploadFile, jobs: JobsDep) -> BomView:
     """Unsupported type: 415. Empty: 400. Unreadable or unknown root: 422."""
     name = Path(file.filename or "").name
@@ -151,17 +157,20 @@ def upload_bom(file: UploadFile, jobs: JobsDep) -> BomView:
     return _preview(jobs, bom_id, [])
 
 
-@router.get("/boms/{bom_id}")
+@router.get("/boms/{bom_id}", responses=refusals(NO_BOM | UNREADABLE))
 def get_bom(bom_id: str, jobs: JobsDep) -> BomView:
     return _preview(jobs, bom_id, [])
 
 
-@router.post("/boms/{bom_id}/preview")
+@router.post("/boms/{bom_id}/preview", responses=refusals(NO_BOM | UNREADABLE))
 def preview_bom(bom_id: str, request: PreviewRequest, jobs: JobsDep) -> BomView:
     return _preview(jobs, bom_id, request.picks)
 
 
-@router.post("/boms/{bom_id}/apply")
+@router.post(
+    "/boms/{bom_id}/apply",
+    responses=refusals(NO_BOM | UNREADABLE | {409: "the preview is out of date; preview again"}),
+)
 def apply_bom(bom_id: str, request: ApplyRequest, jobs: JobsDep) -> BomView:
     path = _file(jobs, bom_id)
     with jobs.registry.lock:  # plan, compare and write as one step
@@ -176,7 +185,14 @@ def apply_bom(bom_id: str, request: ApplyRequest, jobs: JobsDep) -> BomView:
         return _view(jobs, bom_id, path, _plan(jobs, path, request.picks), added)
 
 
-@router.post("/boms/{bom_id}/suggest")
+@router.post(
+    "/boms/{bom_id}/suggest",
+    responses=refusals(
+        NO_BOM
+        | {422: "the BOM cannot be read, or the line is not a row waiting for review"}
+        | {503: "the model server cannot be reached"}
+    ),
+)
 def suggest_bom_row(bom_id: str, request: SuggestRequest, jobs: JobsDep) -> Suggestion:
     """A product for a pending row: the model chooses, code verifies (D-112). Nothing is
     written but an audit row; the reviewer confirms the suggestion as a pick. 422 for a
